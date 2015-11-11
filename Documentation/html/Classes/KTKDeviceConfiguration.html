@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>KTKDeviceConfiguration Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/prism.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/format.js"></script>
+	<script src="../js/prism.js" data-manual></script>
+	<script>
+		jQuery.noConflict();
+		jQuery( document ).ready(function( $ ) {
+ 			$("pre code").each(function(i, block) {
+				$(this).addClass("language-objectivec")
+				$(this).formatObjectiveC();
+			});
+
+			Prism.highlightAll()
+		});
+	</script>
+
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">KontaktSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Kontakt.io</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/URL">URL</option>
+		
+		<option value="//api/name/advertisingInterval">advertisingInterval</option>
+		
+		<option value="//api/name/instanceID">instanceID</option>
+		
+		<option value="//api/name/major">major</option>
+		
+		<option value="//api/name/minor">minor</option>
+		
+		<option value="//api/name/name">name</option>
+		
+		<option value="//api/name/namespaceID">namespaceID</option>
+		
+		<option value="//api/name/password">password</option>
+		
+		<option value="//api/name/profile">profile</option>
+		
+		<option value="//api/name/proximityUUID">proximityUUID</option>
+		
+		<option value="//api/name/shuffled">shuffled</option>
+		
+		<option value="//api/name/transmissionPower">transmissionPower</option>
+		
+		<option value="//api/name/uniqueID">uniqueID</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">KTKDeviceConfiguration Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/KTKCloudModel.html">KTKCloudModel</a></td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>KTKDeviceConfiguration.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/uniqueID" title="uniqueID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/uniqueID">&nbsp;&nbsp;uniqueID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readonly) NSString *uniqueID</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) NSString *name</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/password" title="password"></a>
+	<h3 class="method-title"><code><a href="#//api/name/password">&nbsp;&nbsp;password</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) NSString *password</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shuffled" title="shuffled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shuffled">&nbsp;&nbsp;shuffled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite, getter=isShuffled) BOOL shuffled</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/transmissionPower" title="transmissionPower"></a>
+	<h3 class="method-title"><code><a href="#//api/name/transmissionPower">&nbsp;&nbsp;transmissionPower</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) KTKDeviceTransmissionPower transmissionPower</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/profile" title="profile"></a>
+	<h3 class="method-title"><code><a href="#//api/name/profile">&nbsp;&nbsp;profile</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) KTKDeviceAdvertisingProfile profile</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/advertisingInterval" title="advertisingInterval"></a>
+	<h3 class="method-title"><code><a href="#//api/name/advertisingInterval">&nbsp;&nbsp;advertisingInterval</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSNumber *advertisingInterval</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/proximityUUID" title="proximityUUID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/proximityUUID">&nbsp;&nbsp;proximityUUID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) NSUUID *proximityUUID</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/major" title="major"></a>
+	<h3 class="method-title"><code><a href="#//api/name/major">&nbsp;&nbsp;major</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSNumber *major</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/minor" title="minor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minor">&nbsp;&nbsp;minor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSNumber *minor</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/instanceID" title="instanceID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/instanceID">&nbsp;&nbsp;instanceID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) NSString *instanceID</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/namespaceID" title="namespaceID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/namespaceID">&nbsp;&nbsp;namespaceID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) NSString *namespaceID</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/URL" title="URL"></a>
+	<h3 class="method-title"><code><a href="#//api/name/URL">&nbsp;&nbsp;URL</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) NSURL *URL</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-11-11</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
