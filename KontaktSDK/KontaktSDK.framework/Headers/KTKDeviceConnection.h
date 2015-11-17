@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.0
+//  Version: 0.9.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -12,6 +12,8 @@
 #import "KTKNearbyDevice.h"
 #import "KTKDeviceConfiguration.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 extern NSString * const KTKDeviceConnectionErrorDomain;
 
 typedef NS_ENUM(NSInteger, KTKDeviceConnectionErrorCode) {
@@ -22,9 +24,15 @@ typedef NS_ENUM(NSInteger, KTKDeviceConnectionErrorCode) {
 #pragma mark - KTKDeviceConnection (Interface)
 @interface KTKDeviceConnection : NSObject
 
+/**
+ *  <#Description#>
+ */
 @property (nonatomic, assign, readwrite) NSTimeInterval connectionTimeout;
-@property (nonatomic, assign, readwrite) NSUInteger connectionAttempts;
 
+/**
+ *  <#Description#>
+ */
+@property (nonatomic, assign, readwrite) NSUInteger connectionAttempts;
 
 /**
  *  Creates instance of KTKDeviceConnection with given KTKNearbyDevice
@@ -43,10 +51,37 @@ typedef NS_ENUM(NSInteger, KTKDeviceConnectionErrorCode) {
  *  @return New instance of KTKDeviceConnection
  */
 - (instancetype)initWithNearbyDevice:(KTKNearbyDevice*)device;
-- (void)start;
 
-- (void)writeDeviceConfiguration:(KTKDeviceConfiguration*)configuration completion:(void(^)(NSError *))completion;
+/**
+ *  <#Description#>
+ *
+ *  @param configuration <#configuration description#>
+ *  @param completion    <#completion description#>
+ */
+- (void)writeConfiguration:(KTKDeviceConfiguration*)configuration completion:(void(^)(NSError * _Nullable))completion;
 
-- (void)readDeviceConfigurationWithCompletion:(void(^)(KTKDeviceConfiguration *configuration, NSError *))completion;
+/**
+ *  <#Description#>
+ *
+ *  @param completion <#completion description#>
+ */
+- (void)readConfigurationWithCompletion:(void(^)(KTKDeviceConfiguration *configuration, NSError * _Nullable))completion;
+
+/**
+ *  <#Description#>
+ *
+ *  @param completion <#completion description#>
+ */
+- (void)checkFirmwareUpdateWithCompletion:(void(^)(BOOL isAvailable, NSString * _Nullable firmwareVersion, NSError * _Nullable))completion;
+
+/**
+ *  <#Description#>
+ *
+ *  @param progress   <#progress description#>
+ *  @param completion <#completion description#>
+ */
+- (void)updateFirmwareWithProgress:(void(^)(double))progress completion:(NSError * _Nullable)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

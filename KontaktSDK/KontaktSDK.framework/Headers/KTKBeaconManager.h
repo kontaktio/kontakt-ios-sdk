@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.0
+//  Version: 0.9.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -42,7 +42,7 @@ extern NSUUID * KTKKontaktProximityUUID();
 /**
  *  Initializes and returns a beacon manager object with the specified delegate.
  *
- *  @param delegate The delegate that will receive events.
+ *  @param delegate The delegate object to receive update events.
  *
  *  @return An initialized beacon manager object.
  *
@@ -133,6 +133,16 @@ extern NSUUID * KTKKontaktProximityUUID();
  */
 - (void)stopMonitoringForAllRegions;
 
+/**
+ *  Retrieves the state of a region asynchronously.
+ *
+ *  @param region The region whose state you want to know.
+ *
+ *  @see KTKBeaconManagerDelegate
+ *  @see [[CLLocationManager requestStateForRegion:]](http://apple.co/1MWG5NO)
+ */
+- (void)requestStateForRegion:(__kindof KTKBeaconRegion*)region;
+
 #pragma mark - Ranging Beacons
 ///--------------------------------------------------------------------
 /// @name Ranging Beacons
@@ -184,22 +194,11 @@ extern NSUUID * KTKKontaktProximityUUID();
  */
 - (void)stopRangingBeaconsInAllRegions;
 
-/**
- *  Retrieves the state of a region asynchronously.
- *
- *  @param region The region whose state you want to know.
- *
- *  @see KTKBeaconManagerDelegate
- *  @see [[CLLocationManager requestStateForRegion:]](http://apple.co/1MWG5NO)
- */
-- (void)requestStateForRegion:(__kindof KTKBeaconRegion*)region;
-
 @end
 
 #pragma mark - KTKBeaconManagerDelegate
 /**
  *  The delegate of a KTKBeaconManager object must adopt the KTKBeaconManagerDelegate protocol.
- *
  */
 @protocol KTKBeaconManagerDelegate <NSObject>
 
@@ -222,9 +221,9 @@ extern NSUUID * KTKKontaktProximityUUID();
  */
 - (void)beaconManager:(KTKBeaconManager*)manager didChangeLocationAuthorizationStatus:(CLAuthorizationStatus)status;
 
-#pragma mark - Monitoring Beacon Regions
+#pragma mark - Monitoring Beacon Regions Reporting
 ///--------------------------------------------------------------------
-/// @name Monitoring Beacon Regions
+/// @name Monitoring Beacon Regions Reporting
 ///--------------------------------------------------------------------
 
 /**
@@ -271,7 +270,19 @@ extern NSUUID * KTKKontaktProximityUUID();
  */
 - (void)beaconManager:(KTKBeaconManager*)manager didExitRegion:(__kindof KTKBeaconRegion*)region;
 
-#pragma mark - Ranging Beacons
+/**
+ *  Tells the delegate about the state of the specified region. (required)
+ *
+ *  @param manager The beacon manager object reporting the event.
+ *  @param state   The state of the specified region. For a list of possible values, see the CLRegionState type.
+ *  @param region  The region whose state was determined.
+ *
+ *  @see [KTKBeaconManager requestStateForRegion:]
+ *  @see [CLRegionState](http://apple.co/1PCibWE)
+ */
+- (void)beaconManager:(KTKBeaconManager*)manager didDetermineState:(CLRegionState)state forRegion:(__kindof KTKBeaconRegion*)region;
+
+#pragma mark - Ranging Beacons Reporting
 ///--------------------------------------------------------------------
 /// @name Ranging Beacons
 ///--------------------------------------------------------------------
@@ -300,18 +311,6 @@ extern NSUUID * KTKKontaktProximityUUID();
  *  @see [KTKBeaconManager stopRangingBeaconsInRegion:]
  */
 - (void)beaconManager:(KTKBeaconManager*)manager rangingBeaconsDidFailForRegion:(__kindof KTKBeaconRegion* _Nullable)region withError:(NSError* _Nullable)error;
-
-/**
- *  Tells the delegate about the state of the specified region. (required)
- *
- *  @param manager The beacon manager object reporting the event.
- *  @param state   The state of the specified region. For a list of possible values, see the CLRegionState type.
- *  @param region  The region whose state was determined.
- *
- *  @see [KTKBeaconManager requestStateForRegion:]
- *  @see [CLRegionState](http://apple.co/1PCibWE)
- */
-- (void)beaconManager:(KTKBeaconManager*)manager didDetermineState:(CLRegionState)state forRegion:(__kindof KTKBeaconRegion*)region;
 
 @end
 

@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.0
+//  Version: 0.9.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -12,46 +12,41 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - KTKCloudClient (Interface)
-/** 
- Kontakt.io's Cloud Client
-  
-    #import <KontaktSDK/KontaktSDK.h>
- 
-    [Kontakt setCloudAPIKey:@"API_KEY"];
-
-    KTKCloudClient *client = [KTKCloudClient new];
-
-    [client POST: @"path" parameters: @{} completionHandler:^(KTKKontaktResponse *response, NSError *error) {
-        
-    }];
- */
-
 @interface KTKCloudClient : NSObject
 
-#pragma mark - Generic API Request
+/**
+ *  A shared instance of Cloud client, used by the low-level SDK request methods, and suitable for use directly for any ad-hoc requests.
+ *
+ *  @return A shared instance of a Cloud client.
+ */
++ (nonnull instancetype)sharedInstance;
+
+#pragma mark - API Request Methods
 ///--------------------------------------------------------------------
-/// @name Generic API Request
+/// @name API Request Methods
 ///--------------------------------------------------------------------
 
 /**
- *  Sends Cloud request using GET HTTP Method
+ *  Runs a cloud API call with a GET request.
  *
- *  @param endpoint   Path of resource or endpoint from Cloud API
- *  @param dictionary Dictionary of parameters
- *  @param completion Completion Block
- * 
- *  @see KTKCloudClientCompletionHandler
+ *  @param endpoint   The cloud API endpoint/resource.
+ *  @param dictionary The parameters to be serialized for the request.
+ *  @param completion A block object to be executed when the request finishes.
+ *
+ *  @see KTKKontaktResponseCompletionBlock
+ *  @see KTKKontaktResponse
  */
 - (void)GET:(NSString*)endpoint parameters:(NSDictionary* _Nullable)dictionary completion:(KTKKontaktResponseCompletionBlock)completion;
 
 /**
- *  Sends Cloud request using POST HTTP Method
+ *  Runs a cloud API call with a POST request.
  *
- *  @param endpoint   Path of resource or endpoint from Cloud API
- *  @param dictionary Dictionary of parameters
- *  @param completion Completion Block
+ *  @param endpoint   The cloud API endpoint/resource.
+ *  @param dictionary The parameters to be serialized for the request.
+ *  @param completion A block object to be executed when the request finishes.
  *
- *  @see KTKCloudClientCompletionHandler
+ *  @see KTKKontaktResponseCompletionBlock
+ *  @see KTKKontaktResponse
  */
 - (void)POST:(NSString*)endpoint parameters:(NSDictionary* _Nullable)dictionary completion:(KTKKontaktResponseCompletionBlock)completion;;
 

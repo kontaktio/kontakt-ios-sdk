@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.0
+//  Version: 0.9.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -16,18 +16,18 @@
 ///--------------------------------------------------------------------
 
 /**
- *  Converts data object to hex string object representation.
+ *  Converts a data object to a hex string object representation.
  *
- *  @return String object representation.
+ *  @return A string object representation.
  */
 - (NSString*)ktk_hexString;
 
 /**
- *  Converts HEX string object to data object representation.
+ *  Converts a HEX string object to a data object representation.
  *
- *  @param HEX string object.
+ *  @param hexString The string object.
  *
- *  @return Data object representation.
+ *  @return A data object representation.
  */
 + (NSData*)ktk_dataFromHexString:(NSString*)hexString;
 

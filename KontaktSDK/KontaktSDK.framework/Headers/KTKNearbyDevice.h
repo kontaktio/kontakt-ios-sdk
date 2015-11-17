@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.0
+//  Version: 0.9.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -41,34 +41,38 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, assign) NSUInteger batteryLevel;
 
 /**
- *  Tranmission power. (read-only)
+ *  Transmission power. (read-only)
+ *  
+ *  @see KTKDeviceTransmissionPower
  */
 @property (nonatomic, readonly, assign) KTKDeviceTransmissionPower transmissionPower;
 
 /**
- *  Flag indicating if device is currently in Shuffle mode. (read-only)
+ *  A Boolean indicating whether the device is currently in Shuffle mode. (read-only)
  *  
  *  @see http://kontakt.io/blog/beacon-security/
  */
 @property (nonatomic, readonly, assign, getter=isShuffled) BOOL shuffled;
 
 /**
- *  Flag indicating if device is currently in DFU mode. (read-only)
+ *  A Boolean indicating whether the  device is currently in DFU mode. (read-only)
  */
 @property (nonatomic, readonly, assign, getter=isDFU) BOOL DFU;
 
 /**
- *  Flag indicating if device is locked/nonconnectable mode. (read-only)
+ *  A Boolean indicating whether the device is locked/non-connectable mode. (read-only)
  */
 @property (nonatomic, readonly, assign, getter=isLocked) BOOL locked;
 
 /**
  *  Current advertising profile. (read-only)
+ *
+ *  @see KTKDeviceAdvertisingProfile
  */
 @property (nonatomic, readonly, assign) KTKDeviceAdvertisingProfile advertisingProfile;
 
 /**
- *  CoreBluetooth Perihperal object assosiated with the device. (read-only)
+ *  CoreBluetooth Peripheral object associated with the device. (read-only)
  */
 @property (nonatomic, readonly, strong) CBPeripheral *peripheral;
 

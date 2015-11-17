@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.0
+//  Version: 0.9.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///--------------------------------------------------------------------
 
 /**
- *  Flag indicating if manager is currently discovering eddystones.
+ *  A Boolean indicating whether the eddystone manager is currently discovering eddy stones.
  */
 @property (nonatomic, assign, readonly, getter=isDiscovering) BOOL discovering;
 
@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Initializes and returns an eddystone manager object with the specified delegate.
  *
- *  @param delegate The delegate that will receive events.
+ *  @param delegate The delegate object that will receive events.
  *
  *  @return An initialized eddystone manager object.
  *
@@ -90,21 +90,10 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - KTKEddystoneManagerDelegate
 @protocol KTKEddystoneManagerDelegate <NSObject>
 
-#pragma mark - Optional Methods
+#pragma mark - Required Methods
 ///--------------------------------------------------------------------
-/// @name Optional Methods
+/// @name Required Methods
 ///--------------------------------------------------------------------
-
-@optional
-/**
- *  Tells the delegate that an error occurred while gathering discovery information for a set of eddystones.
- *
- *  @param manager The eddystone manager object reporting the event.
- *  @param error   An error object containing the error code that indicates why discovery failed.
- *
- *  @see KTKEddystoneManager
- */
-- (void)eddystoneManagerDidFailToStartDiscovery:(KTKEddystoneManager*)manager withError:(NSError*)error;
 
 /**
  *  Tells the delegate that one or more eddystones were discovered.
@@ -115,7 +104,24 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see KTKEddystoneManager
  */
+@required
 - (void)eddystoneManager:(KTKEddystoneManager *)manager didDiscoverEddystones:(NSSet <KTKEddystone*>*)eddystones inRegion:(__kindof KTKEddystoneRegion* _Nullable)region;
+
+#pragma mark - Optional Methods
+///--------------------------------------------------------------------
+/// @name Optional Methods
+///--------------------------------------------------------------------
+
+/**
+ *  Tells the delegate that an error occurred while gathering discovery information for a set of eddystones.
+ *
+ *  @param manager The eddystone manager object reporting the event.
+ *  @param error   An error object containing the error code that indicates why discovery failed.
+ *
+ *  @see KTKEddystoneManager
+ */
+@optional
+- (void)eddystoneManagerDidFailToStartDiscovery:(KTKEddystoneManager*)manager withError:(NSError* _Nullable)error;
 
 /**
  *  Tells the delegate that eddystone's frame was updated.
@@ -126,6 +132,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see KTKEddystoneManager
  */
+@optional
 - (void)eddystoneManager:(KTKEddystoneManager*)manager didUpdateEddystone:(KTKEddystone*)eddystone withFrame:(KTKEddystoneFrameType)frameType;
 
 @end

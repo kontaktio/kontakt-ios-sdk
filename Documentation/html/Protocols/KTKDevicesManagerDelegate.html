@@ -23,7 +23,7 @@
 	</script>
 
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -115,27 +115,11 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						
-						
+						<a title="Required Methods" name="task_Required Methods"></a>
+						<h2 class="task-title">Required Methods</h2>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/devicesManagerDidFailToStartDiscovery:withError:" title="devicesManagerDidFailToStartDiscovery:withError:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/devicesManagerDidFailToStartDiscovery:withError:">&ndash;&nbsp;devicesManagerDidFailToStartDiscovery:withError:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-
-			<div class="method-subsection method-declaration"><pre><code>- (void)devicesManagerDidFailToStartDiscovery:(KTKDevicesManager *)<em>manager</em> withError:(NSError *)<em>error</em></code></pre></div>
-
-		    
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/devicesManager:didDiscoverDevices:" title="devicesManager:didDiscoverDevices:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/devicesManager:didDiscoverDevices:">&ndash;&nbsp;devicesManager:didDiscoverDevices:</a></code>
 <span class="task-item-suffix">required method</span></h3>
@@ -145,10 +129,128 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the delegate that one or more devices were discovered.</p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (void)devicesManager:(KTKDevicesManager *)<em>manager</em> didDiscoverDevices:(NSArray *)<em>devices</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>- (void)devicesManager:(KTKDevicesManager *)<em>manager</em> didDiscoverDevices:(NSArray&lt;KTKNearbyDevice*&gt; *_Nullable)<em>devices</em></code></pre></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>manager</code></th>
+						<td><p>The devices manager object reporting the event.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>devices</code></th>
+						<td><p>An list of discovered nearby devices.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Tells the delegate that one or more devices were discovered.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDevicesManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Optional Methods" name="task_Optional Methods"></a>
+						<h2 class="task-title">Optional Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/devicesManagerDidFailToStartDiscovery:withError:" title="devicesManagerDidFailToStartDiscovery:withError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/devicesManagerDidFailToStartDiscovery:withError:">&ndash;&nbsp;devicesManagerDidFailToStartDiscovery:withError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the delegate that a devices discovery error occurred.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>- (void)devicesManagerDidFailToStartDiscovery:(KTKDevicesManager *)<em>manager</em> withError:(NSError *_Nullable)<em>error</em></code></pre></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>manager</code></th>
+						<td><p>The devices manager object reporting the event.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>An error object containing the error code that indicates why discovery failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Tells the delegate that a devices discovery error occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDevicesManager.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>
@@ -166,10 +268,10 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-11-11</p>
+						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-11-17</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

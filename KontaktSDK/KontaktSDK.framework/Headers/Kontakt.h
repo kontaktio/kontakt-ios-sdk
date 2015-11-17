@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.0
+//  Version: 0.9.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -16,11 +16,11 @@ extern unsigned long KTKAPIVersion;
  */
 typedef NS_OPTIONS(NSUInteger, KTKMonitoringOptions) {
     /**
-     *  Battery Status monitoring
+     *  The battery Status monitoring
      */
     KTKMonitoringOptionsBatteryStatus = 1 << 0,
     /**
-     *  Devices GPS Position/Location monitoring
+     *  The devices GPS Position/Location monitoring
      */
     KTKMonitoringOptionsGPSLocation   = 1 << 1
 };
@@ -36,7 +36,7 @@ typedef NS_OPTIONS(NSUInteger, KTKMonitoringOptions) {
 /**
  *  Sets the Cloud API Key.
  *
- *  @param key API Key string.
+ *  @param key The API Key string.
  *
  *  @see APIKey
  */
@@ -45,25 +45,25 @@ typedef NS_OPTIONS(NSUInteger, KTKMonitoringOptions) {
 /**
  *  Returns a string value of the Cloud API Key.
  *
- *  @return String value of API Key.
+ *  @return A string value of the API Key.
  *
  *  @see setAPIKey:
  */
 + (NSString*)APIKey;
 
 /**
- *  Sets devices monitoring options.
+ *  Sets the devices monitoring options.
  *
- *  @param options Devices monitoring options.
+ *  @param options The devices monitoring options.
  */
 + (void)setMonitoringOptions:(KTKMonitoringOptions)options;
 
 /**
- *  Returns devices monitoring options.
+ *  Returns a devices monitoring options.
  * 
  *  Default value is KTKMonitoringOptionsBatteryStatus
  *
- *  @return Devices monitoring options.
+ *  @return A devices monitoring options.
  */
 + (KTKMonitoringOptions)monitoringOptions;
 

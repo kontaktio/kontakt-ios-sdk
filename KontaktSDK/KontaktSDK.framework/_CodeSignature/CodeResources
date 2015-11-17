@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/KTKBeaconManager.h</key>
 		<data>
-		vKMzKkAixDYJ/ucl4+JnBWTQ9cY=
+		yFl5IqpTMND7mzNtyR26Y2ZJ17M=
 		</data>
 		<key>Headers/KTKBeaconRegion.h</key>
 		<data>
@@ -14,31 +14,31 @@
 		</data>
 		<key>Headers/KTKCloudClient.h</key>
 		<data>
-		vTVmrU1FxuS/NHsO7wfM3GT8kR0=
+		GzDicyjWokqYfWcHbbaAkDvtPIc=
 		</data>
 		<key>Headers/KTKCloudModel.h</key>
 		<data>
-		1M9RcLIPupoX8OHVT57mK7j78aE=
+		pax89F92E0BSR0llMn3TjQndG80=
 		</data>
 		<key>Headers/KTKDevice.h</key>
 		<data>
-		AFLbVGexluiarTPStMu8+3XAtgg=
+		fL4g8QkjzbIF+AMAUlMS4kUBrwY=
 		</data>
 		<key>Headers/KTKDeviceConfiguration.h</key>
 		<data>
-		k3N4ZW9/9FnCyV+wsLF6O39R4RY=
+		SJWUvCgbSoVAny/1uKvp2CXRS/o=
 		</data>
 		<key>Headers/KTKDeviceConnection.h</key>
 		<data>
-		yspRpjATYqRXxZ3RGOFlK064u8s=
+		+/SvmQi8IQ0G5m78AyC8wwf61HY=
 		</data>
 		<key>Headers/KTKDeviceDefinitions.h</key>
 		<data>
-		WMBXacxat0yZzdqyeUtR3dRqN0M=
+		tEFBzLTGDHVJ0KFsCXKJJOeC934=
 		</data>
 		<key>Headers/KTKDevicesManager.h</key>
 		<data>
-		mtYld2b/vU1jd/XmWPE9xtz1hC4=
+		MgNaqnnTU27kSnzlUn8SOiyUuts=
 		</data>
 		<key>Headers/KTKEddystone.h</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Headers/KTKEddystoneManager.h</key>
 		<data>
-		bzRRQS6U4HsBFTlo1Ob8sU/XmSk=
+		gMN1cib7C7MD9aNs9LQwa9Yk5EU=
 		</data>
 		<key>Headers/KTKEddystoneRegion.h</key>
 		<data>
-		BBSaWfnYKE6fq1taLs3D9pKMrj8=
+		KJ221FeU6w+CwFg7jGLn4bxbbv8=
 		</data>
 		<key>Headers/KTKEddystoneTLM.h</key>
 		<data>
@@ -70,15 +70,15 @@
 		</data>
 		<key>Headers/KTKKontaktResponse.h</key>
 		<data>
-		ZkZ57PME50ufNykz+XqC4hAtlcM=
+		kRO7eVRIgSt5oH0wbPQidqIij24=
 		</data>
 		<key>Headers/KTKManager.h</key>
 		<data>
-		spZHCzrdX7hGap46vQIU29FcIYU=
+		iP8BXAAfM2JZ0kY/nbjCSA2/i3g=
 		</data>
 		<key>Headers/KTKNearbyDevice.h</key>
 		<data>
-		sy3k1XMEgXLJnz3mQAxP2npy8HA=
+		ZwwPiVCPGlevI4yZbNKYeAw1x34=
 		</data>
 		<key>Headers/KTKSecureBeaconRegion.h</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Headers/Kontakt.h</key>
 		<data>
-		PtrH5Ux23DC17LsLcbqpPYMm5zQ=
+		iG158PO/8VW9njt9+iC1IH7XAMw=
 		</data>
 		<key>Headers/KontaktSDK.h</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>Headers/NSData+Kontakt.h</key>
 		<data>
-		TQSzPsGwc/oChQk4RJeOkfcQvv8=
+		TRdX7fYGNsZyD+3djuq1wosC8oE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4fvVsxcEVaooL02oyLSXFvQJFS8=
+		JQVikVxhwcbxqaTfC0GQelMhKkw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -113,7 +113,7 @@
 	<dict>
 		<key>Headers/KTKBeaconManager.h</key>
 		<data>
-		vKMzKkAixDYJ/ucl4+JnBWTQ9cY=
+		yFl5IqpTMND7mzNtyR26Y2ZJ17M=
 		</data>
 		<key>Headers/KTKBeaconRegion.h</key>
 		<data>
@@ -121,31 +121,31 @@
 		</data>
 		<key>Headers/KTKCloudClient.h</key>
 		<data>
-		vTVmrU1FxuS/NHsO7wfM3GT8kR0=
+		GzDicyjWokqYfWcHbbaAkDvtPIc=
 		</data>
 		<key>Headers/KTKCloudModel.h</key>
 		<data>
-		1M9RcLIPupoX8OHVT57mK7j78aE=
+		pax89F92E0BSR0llMn3TjQndG80=
 		</data>
 		<key>Headers/KTKDevice.h</key>
 		<data>
-		AFLbVGexluiarTPStMu8+3XAtgg=
+		fL4g8QkjzbIF+AMAUlMS4kUBrwY=
 		</data>
 		<key>Headers/KTKDeviceConfiguration.h</key>
 		<data>
-		k3N4ZW9/9FnCyV+wsLF6O39R4RY=
+		SJWUvCgbSoVAny/1uKvp2CXRS/o=
 		</data>
 		<key>Headers/KTKDeviceConnection.h</key>
 		<data>
-		yspRpjATYqRXxZ3RGOFlK064u8s=
+		+/SvmQi8IQ0G5m78AyC8wwf61HY=
 		</data>
 		<key>Headers/KTKDeviceDefinitions.h</key>
 		<data>
-		WMBXacxat0yZzdqyeUtR3dRqN0M=
+		tEFBzLTGDHVJ0KFsCXKJJOeC934=
 		</data>
 		<key>Headers/KTKDevicesManager.h</key>
 		<data>
-		mtYld2b/vU1jd/XmWPE9xtz1hC4=
+		MgNaqnnTU27kSnzlUn8SOiyUuts=
 		</data>
 		<key>Headers/KTKEddystone.h</key>
 		<data>
@@ -157,11 +157,11 @@
 		</data>
 		<key>Headers/KTKEddystoneManager.h</key>
 		<data>
-		bzRRQS6U4HsBFTlo1Ob8sU/XmSk=
+		gMN1cib7C7MD9aNs9LQwa9Yk5EU=
 		</data>
 		<key>Headers/KTKEddystoneRegion.h</key>
 		<data>
-		BBSaWfnYKE6fq1taLs3D9pKMrj8=
+		KJ221FeU6w+CwFg7jGLn4bxbbv8=
 		</data>
 		<key>Headers/KTKEddystoneTLM.h</key>
 		<data>
@@ -177,15 +177,15 @@
 		</data>
 		<key>Headers/KTKKontaktResponse.h</key>
 		<data>
-		ZkZ57PME50ufNykz+XqC4hAtlcM=
+		kRO7eVRIgSt5oH0wbPQidqIij24=
 		</data>
 		<key>Headers/KTKManager.h</key>
 		<data>
-		spZHCzrdX7hGap46vQIU29FcIYU=
+		iP8BXAAfM2JZ0kY/nbjCSA2/i3g=
 		</data>
 		<key>Headers/KTKNearbyDevice.h</key>
 		<data>
-		sy3k1XMEgXLJnz3mQAxP2npy8HA=
+		ZwwPiVCPGlevI4yZbNKYeAw1x34=
 		</data>
 		<key>Headers/KTKSecureBeaconRegion.h</key>
 		<data>
@@ -197,7 +197,7 @@
 		</data>
 		<key>Headers/Kontakt.h</key>
 		<data>
-		PtrH5Ux23DC17LsLcbqpPYMm5zQ=
+		iG158PO/8VW9njt9+iC1IH7XAMw=
 		</data>
 		<key>Headers/KontaktSDK.h</key>
 		<data>
@@ -205,7 +205,7 @@
 		</data>
 		<key>Headers/NSData+Kontakt.h</key>
 		<data>
-		TQSzPsGwc/oChQk4RJeOkfcQvv8=
+		TRdX7fYGNsZyD+3djuq1wosC8oE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

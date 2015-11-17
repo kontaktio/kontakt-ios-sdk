@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.0
+//  Version: 0.9.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -9,86 +9,162 @@
 
 #import "KTKNearbyDevice.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol KTKDevicesManagerDelegate;
 
 #pragma mark - External Constants
 extern NSTimeInterval const KTKDeviceInvalidationAgeNever;
 
 #pragma mark - Type Definition
+/**
+ *  Nearby devices discovery mode.
+ */
 typedef NS_ENUM(NSUInteger, KTKDevicesManagerDiscoveryMode) {
+    /**
+     *  Discovery mode Auto deliveres devices notifications as the devices becoming valid or invalid.
+     *  There is no limit to these notifications so please make sure when working with hundreds of
+     *  nearby devices this may impact performance. It is better to use discovery with interval then.
+     */
     KTKDevicesManagerDiscoveryModeAuto = 0,
+    
+    /**
+     *  Discovery mode Interval deliveres devices notifications with the specified time inverval.
+     *  When working with hundreds of nearby devices this is preferred mode.
+     *  When just few nearby devices have been discovered in a close time span it is better to use mode auto, as it is responding faster to changes.
+     */
     KTKDevicesManagerDiscoveryModeInterval
 };
 
 #pragma mark - KTKDevicesManager (Interface)
 @interface KTKDevicesManager : NSObject
 
+#pragma mark - Other Properties
+///--------------------------------------------------------------------
+/// @name Other Properties
+///--------------------------------------------------------------------
+
 /**
- *  Flag indicating if manager is currently scanning for eddystones.
+ *  A Boolean indicating whether the devices manager is currently discovering.
  */
 @property (nonatomic, assign, readonly, getter=isDiscovering) BOOL discovering;
 
 /**
  *  The delegate object that will receive events.
  */
-@property (nonatomic, weak, readonly) id<KTKDevicesManagerDelegate> delegate;
+@property (nonatomic, weak, readonly) id<KTKDevicesManagerDelegate> _Nullable delegate;
+
+#pragma mark - Initialization Methods
+///--------------------------------------------------------------------
+/// @name Initialization Methods
+///--------------------------------------------------------------------
 
 /**
- *  <#Description#>
+ *  Initializes and returns an devices manager object with the specified delegate.
  *
- *  @param delegate <#delegate description#>
+ *  @param delegate The delegate object that will receive events.
  *
- *  @return <#return value description#>
+ *  @return An initialized devices manager object.
+ *
+ *  @see KTKDevicesManagerDelegate
  */
-- (instancetype)initWithDelegate:(id<KTKDevicesManagerDelegate>)delegate;
+- (instancetype)initWithDelegate:(id<KTKDevicesManagerDelegate> _Nullable)delegate;
+
+#pragma mark - Configuration Properties
+///--------------------------------------------------------------------
+/// @name Configuration Properties
+///--------------------------------------------------------------------
 
 /**
- *  <#Description#>
+ *  A time interval after which nearby device will be invalidated if not re-discovered.
+ *
+ *  Each time nearby device advertising is discovered its <code>updateAt</code> property is updated.
+ *  If <code>updateAt</code> property is updated for longer than <code>invalidationAge</code> value
+ *  a nearby device will be invalidated/removed from current devices list.
+ *
+ *  Default value is 10.0 seconds.
  */
 @property (nonatomic, assign, readwrite) NSTimeInterval invalidationAge;
 
 /**
- *  <#Description#>
+ *  A mode in which nearby devices discovery is done.
+ *  
+ *  If <code>discoveryInterval</code> property is set or discovery is started with <code>startDevicesDiscoveryWithInterval:</code> method
+ *  mode is automatically set to <code>KTKDevicesManagerDiscoveryModeInterval</code>.
+ * 
+ *  When discovery is started with <code>startDevicesDiscovery</code> mode will be set to <code>KTKDevicesManagerDiscoveryModeAuto</code>.
+ *
+ *  @see KTKDevicesManagerDiscoveryMode
  */
 @property (nonatomic, assign, readwrite) KTKDevicesManagerDiscoveryMode discoveryMode;
 
 /**
- *  <#Description#>
+ *  A time interval after which discovered notifications will be delivered.
  */
 @property (nonatomic, assign, readwrite) NSTimeInterval discoveryInterval;
 
+#pragma mark - Discovery Methods
+///--------------------------------------------------------------------
+/// @name Discovery Methods
+///--------------------------------------------------------------------
+
 /**
- *  <#Description#>
+ *  Starts discovery of Kontakt.io's nearby devices.
  */
 - (void)startDevicesDiscovery;
 
 /**
- *  <#Description#>
+ *  Starts discovery of Kontakt.io's nearby devices with specified time interval.
  *
- *  @param interval <#interval description#>
+ *  @param interval A time interval after which discovered notifications will be delivered.
  */
 - (void)startDevicesDiscoveryWithInterval:(NSTimeInterval)interval;
 
 /**
- *  <#Description#>
+ *  Stops discovery of Kontakt.io's nearby devices.
  */
 - (void)stopDevicesDiscovery;
 
 /**
- *  <#Description#>
+ *  Restarts discovery of Kontakt.io's nearby devices.
  *
- *  @param completion <#completion description#>
+ *  @param completion A block object to be executed when manager restarts the discovery.
  */
-- (void)restartDeviceDiscoveryWithCompletion:(void(^)( NSError * ))completion;
+- (void)restartDeviceDiscoveryWithCompletion:(void(^)( NSError * _Nullable))completion;
 
 @end
 
 #pragma mark - KTKDevicesManagerDelegate
 @protocol KTKDevicesManagerDelegate <NSObject>
 
-- (void)devicesManagerDidFailToStartDiscovery:(KTKDevicesManager*)manager withError:(NSError*)error;
+#pragma mark - Required Methods
+///--------------------------------------------------------------------
+/// @name Required Methods
+///--------------------------------------------------------------------
 
+/**
+ *  Tells the delegate that one or more devices were discovered.
+ *
+ *  @param manager The devices manager object reporting the event.
+ *  @param devices An list of discovered nearby devices.
+ */
 @required
-- (void)devicesManager:(KTKDevicesManager*)manager didDiscoverDevices:(NSArray*)devices;
+- (void)devicesManager:(KTKDevicesManager*)manager didDiscoverDevices:(NSArray <KTKNearbyDevice*>* _Nullable)devices;
+
+#pragma mark - Optional Methods
+///--------------------------------------------------------------------
+/// @name Optional Methods
+///--------------------------------------------------------------------
+
+/**
+ *  Tells the delegate that a devices discovery error occurred.
+ *
+ *  @param manager The devices manager object reporting the event.
+ *  @param error   An error object containing the error code that indicates why discovery failed.
+ */
+@optional
+- (void)devicesManagerDidFailToStartDiscovery:(KTKDevicesManager*)manager withError:(NSError* _Nullable)error;
 
 @end
+
+NS_ASSUME_NONNULL_END

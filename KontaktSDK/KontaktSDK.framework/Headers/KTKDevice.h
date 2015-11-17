@@ -1,35 +1,95 @@
 //
 //  KontaktSDK
-//  Version: 0.9.0
+//  Version: 0.9.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
 
 #import "KTKDeviceDefinitions.h"
-
 #import "KTKCloudModel.h"
 #import "KTKDeviceConfiguration.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
+#pragma mark - KTKDevice (Interface)
 @interface KTKDevice : NSObject <KTKCloudModel>
 
+#pragma mark - Device Object Properties
+///--------------------------------------------------------------------
+/// @name Device Object Properties
+///--------------------------------------------------------------------
+
+/**
+ *  Kontakt unique identifier. (read-only)
+ */
 @property (nonatomic, strong, readonly) NSString *uniqueID;
 
+/**
+ *  Secure iBeacon proximity UUID. (read-only)
+ */
 @property (nonatomic, strong, readonly) NSUUID *secureProximity;
+
+/**
+ *  Secure Eddystone namespace ID. (read-only)
+ */
 @property (nonatomic, strong, readonly) NSString *secureNamespace;
 
+/**
+ *  The current device configuration object. (read-only)
+ */
 @property (nonatomic, strong, readonly) KTKDeviceConfiguration *currentConfiguration;
 
-@property (nonatomic, strong, readonly) NSString *alias;
-@property (nonatomic, strong, readonly) NSDictionary *meta;
+/**
+ *  An alias of the device. (read-only)
+ */
+@property (nonatomic, strong, readonly) NSString * _Nullable alias;
+
+/**
+ *  Meta dictionary object. (read-only)
+ */
+@property (nonatomic, strong, readonly) NSDictionary * _Nullable meta;
+
+/**
+ *  The current firmware version. (read-only)
+ */
 @property (nonatomic, strong, readonly) NSString *firmwareVersion;
 
+/**
+ *  Device type. (read-only)
+ *
+ *  @see KTKDeviceType
+ */
 @property (nonatomic, assign, readonly) KTKDeviceType type;
+
+/**
+ *  Device specification. (read-only)
+ *
+ *  @see KTKDeviceSpecification
+ */
 @property (nonatomic, assign, readonly) KTKDeviceSpecification specification;
 
+/**
+ *  Device manager's ID. (read-only)
+ */
 @property (nonatomic, strong, readonly) NSUUID *managerID;
+
+/**
+ *  Device access rights. (read-only)
+ *
+ *  @see KTKDeviceAccess
+ */
 @property (nonatomic, assign, readonly) KTKDeviceAccess access;
 
-@property (nonatomic, strong, readwrite) NSNumber *latitude;
-@property (nonatomic, strong, readwrite) NSNumber *longitude;
+/**
+ *  The latitude of the device.
+ */
+@property (nonatomic, strong, readwrite) NSNumber * _Nullable latitude;
+
+/**
+ *  The longitude of the device.
+ */
+@property (nonatomic, strong, readwrite) NSNumber * _Nullable longitude;
 
 @end
+
+NS_ASSUME_NONNULL_END
