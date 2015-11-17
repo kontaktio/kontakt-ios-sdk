@@ -23,7 +23,7 @@
 	</script>
 
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -82,15 +82,17 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/checkFirmwareUpdateWithCompletion:">- checkFirmwareUpdateWithCompletion:</option>
+		
 		<option value="//api/name/initWithBeacon:">- initWithBeacon:</option>
 		
 		<option value="//api/name/initWithNearbyDevice:">- initWithNearbyDevice:</option>
 		
-		<option value="//api/name/readDeviceConfigurationWithCompletion:">- readDeviceConfigurationWithCompletion:</option>
+		<option value="//api/name/readConfigurationWithCompletion:">- readConfigurationWithCompletion:</option>
 		
-		<option value="//api/name/start">- start</option>
+		<option value="//api/name/updateFirmwareWithProgress:completion:">- updateFirmwareWithProgress:completion:</option>
 		
-		<option value="//api/name/writeDeviceConfiguration:completion:">- writeDeviceConfiguration:completion:</option>
+		<option value="//api/name/writeConfiguration:completion:">- writeConfiguration:completion:</option>
 		
 	</optgroup>
 	
@@ -143,10 +145,40 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>&lt;#Description#></p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) NSTimeInterval connectionTimeout</code></pre></div>
 
 		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>&lt;#Description#></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -159,10 +191,40 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>&lt;#Description#></p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) NSUInteger connectionAttempts</code></pre></div>
 
 		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>&lt;#Description#></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
@@ -292,8 +354,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/start" title="start"></a>
-	<h3 class="method-title"><code><a href="#//api/name/start">&ndash;&nbsp;start</a></code>
+	<a name="//api/name/writeConfiguration:completion:" title="writeConfiguration:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/writeConfiguration:completion:">&ndash;&nbsp;writeConfiguration:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -301,15 +363,62 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>&lt;#Description#></p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (void)start</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>- (void)writeConfiguration:(KTKDeviceConfiguration *)<em>configuration</em> completion:(void ( ^ ) ( NSError *_Nullable ))<em>completion</em></code></pre></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>configuration</code></th>
+						<td><p>&lt;#configuration description#></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>&lt;#completion description#></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>&lt;#Description#></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/writeDeviceConfiguration:completion:" title="writeDeviceConfiguration:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/writeDeviceConfiguration:completion:">&ndash;&nbsp;writeDeviceConfiguration:completion:</a></code>
+	<a name="//api/name/readConfigurationWithCompletion:" title="readConfigurationWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readConfigurationWithCompletion:">&ndash;&nbsp;readConfigurationWithCompletion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -317,15 +426,57 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>&lt;#Description#></p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (void)writeDeviceConfiguration:(KTKDeviceConfiguration *)<em>configuration</em> completion:(void ( ^ ) ( NSError *))<em>completion</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>- (void)readConfigurationWithCompletion:(void ( ^ ) ( KTKDeviceConfiguration *configuration , NSError *_Nullable ))<em>completion</em></code></pre></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>&lt;#completion description#></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>&lt;#Description#></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/readDeviceConfigurationWithCompletion:" title="readDeviceConfigurationWithCompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/readDeviceConfigurationWithCompletion:">&ndash;&nbsp;readDeviceConfigurationWithCompletion:</a></code>
+	<a name="//api/name/checkFirmwareUpdateWithCompletion:" title="checkFirmwareUpdateWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/checkFirmwareUpdateWithCompletion:">&ndash;&nbsp;checkFirmwareUpdateWithCompletion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -333,10 +484,115 @@
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>&lt;#Description#></p>
+			</div>
+			
+		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (void)readDeviceConfigurationWithCompletion:(void ( ^ ) ( KTKDeviceConfiguration *configuration , NSError *))<em>completion</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>- (void)checkFirmwareUpdateWithCompletion:(void ( ^ ) ( BOOL isAvailable , NSString *_Nullable firmwareVersion , NSError *_Nullable ))<em>completion</em></code></pre></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>&lt;#completion description#></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>&lt;#Description#></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateFirmwareWithProgress:completion:" title="updateFirmwareWithProgress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateFirmwareWithProgress:completion:">&ndash;&nbsp;updateFirmwareWithProgress:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>&lt;#Description#></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>- (void)updateFirmwareWithProgress:(void ( ^ ) ( double ))<em>progress</em> completion:(NSError *_Nullable)<em>completion</em></code></pre></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>progress</code></th>
+						<td><p>&lt;#progress description#></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>&lt;#completion description#></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>&lt;#Description#></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>
@@ -354,10 +610,10 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-11-11</p>
+						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-11-17</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>
