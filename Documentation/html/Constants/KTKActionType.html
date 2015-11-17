@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceType Constants Reference</title>
+	<title>KTKActionType Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,13 +75,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceType Constants Reference</h1>
+					<h1 class="title">KTKActionType Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKDeviceDefinitions.h</td>
+	<td>KTKAction.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -91,11 +91,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKDeviceType</h3>
+                    <h3 class="subsubtitle method-title">KTKActionType</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>A Kontakt device type.</p>
+                        <p>Action type.</p>
 					</div>
 					
 					
@@ -103,10 +103,10 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSInteger, KTKDeviceType ) { 
-	<a href="">KTKDeviceTypeInvalid</a> = -1,
-	<a href="">KTKDeviceTypeBeacon</a> = 1,
-	<a href="">KTKDeviceTypeCloudBeacon</a> = 2,
+                        <pre><code>typedef NS_ENUM(NSInteger, KTKActionType ) { 
+	<a href="">KTKActionTypeInvalid</a> = -1,
+	<a href="">KTKActionTypeContent</a> = 1,
+	<a href="">KTKActionTypeBrowser</a> = 2,
 };</code></pre>
                     
                     </div>
@@ -115,11 +115,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKDeviceTypeInvalid"></a><code>KTKDeviceTypeInvalid</code></dt>
+                            <dt><a name="" title="KTKActionTypeInvalid"></a><code>KTKActionTypeInvalid</code></dt>
 <dd>
 
 
-<p>Invalid device type.</p>
+<p>Action type is invalid.</p>
 
 
 
@@ -127,16 +127,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKAction.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceTypeBeacon"></a><code>KTKDeviceTypeBeacon</code></dt>
+                            <dt><a name="" title="KTKActionTypeContent"></a><code>KTKActionTypeContent</code></dt>
 <dd>
 
 
-<p>Beacon device type.</p>
+<p>Content action type.</p>
 
 
 
@@ -144,16 +144,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKAction.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceTypeCloudBeacon"></a><code>KTKDeviceTypeCloudBeacon</code></dt>
+                            <dt><a name="" title="KTKActionTypeBrowser"></a><code>KTKActionTypeBrowser</code></dt>
 <dd>
 
 
-<p>Cloud Beacon device type.</p>
+<p>Browser/URL action type.</p>
 
 
 
@@ -161,7 +161,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKAction.h</code>.
 	</p>
 	
 </dd>
@@ -178,7 +178,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKDeviceDefinitions.h</code></p>
+                        <p><code class="declared-in-ref">KTKAction.h</code></p>
                     </div>
                     
                     

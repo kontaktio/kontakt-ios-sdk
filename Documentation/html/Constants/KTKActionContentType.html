@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceType Constants Reference</title>
+	<title>KTKActionContentType Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,13 +75,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceType Constants Reference</h1>
+					<h1 class="title">KTKActionContentType Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKDeviceDefinitions.h</td>
+	<td>KTKActionContent.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -91,11 +91,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKDeviceType</h3>
+                    <h3 class="subsubtitle method-title">KTKActionContentType</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>A Kontakt device type.</p>
+                        <p>Action content type.</p>
 					</div>
 					
 					
@@ -103,10 +103,12 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSInteger, KTKDeviceType ) { 
-	<a href="">KTKDeviceTypeInvalid</a> = -1,
-	<a href="">KTKDeviceTypeBeacon</a> = 1,
-	<a href="">KTKDeviceTypeCloudBeacon</a> = 2,
+                        <pre><code>typedef NS_ENUM(NSInteger, KTKActionContentType ) { 
+	<a href="">KTKActionContentTypeInvalid</a> = -1,
+	<a href="">KTKActionContentTypeImage</a> = 1,
+	<a href="">KTKActionContentTypeVideo</a> = 2,
+	<a href="">KTKActionContentTypeAudio</a> = 3,
+	<a href="">KTKActionContentTypeText</a> = 4,
 };</code></pre>
                     
                     </div>
@@ -115,11 +117,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKDeviceTypeInvalid"></a><code>KTKDeviceTypeInvalid</code></dt>
+                            <dt><a name="" title="KTKActionContentTypeInvalid"></a><code>KTKActionContentTypeInvalid</code></dt>
 <dd>
 
 
-<p>Invalid device type.</p>
+<p>Content type is invalid.</p>
 
 
 
@@ -127,16 +129,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKActionContent.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceTypeBeacon"></a><code>KTKDeviceTypeBeacon</code></dt>
+                            <dt><a name="" title="KTKActionContentTypeImage"></a><code>KTKActionContentTypeImage</code></dt>
 <dd>
 
 
-<p>Beacon device type.</p>
+<p>Image content type.</p>
 
 
 
@@ -144,16 +146,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKActionContent.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceTypeCloudBeacon"></a><code>KTKDeviceTypeCloudBeacon</code></dt>
+                            <dt><a name="" title="KTKActionContentTypeVideo"></a><code>KTKActionContentTypeVideo</code></dt>
 <dd>
 
 
-<p>Cloud Beacon device type.</p>
+<p>Video content type.</p>
 
 
 
@@ -161,7 +163,41 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKActionContent.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKActionContentTypeAudio"></a><code>KTKActionContentTypeAudio</code></dt>
+<dd>
+
+
+<p>Audio content type.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKActionContent.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKActionContentTypeText"></a><code>KTKActionContentTypeText</code></dt>
+<dd>
+
+
+<p>Text file content type.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKActionContent.h</code>.
 	</p>
 	
 </dd>
@@ -178,7 +214,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKDeviceDefinitions.h</code></p>
+                        <p><code class="declared-in-ref">KTKActionContent.h</code></p>
                     </div>
                     
                     
