@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.1
+//  Version: 0.9.2
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -12,8 +12,10 @@
     #import <KontaktSDK/NSData+Kontakt.h>
 
     #import <KontaktSDK/KTKCloudClient.h>
-    #import <KontaktSDK/KTKManager.h>
     #import <KontaktSDK/KTKDevice.h>
+    #import <KontaktSDK/KTKAction.h>
+    #import <KontaktSDK/KTKManager.h>
+    #import <KontaktSDK/KTKVenue.h>
 
     #import <KontaktSDK/KTKBeaconManager.h>
     #import <KontaktSDK/KTKEddystoneManager.h>

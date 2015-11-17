@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.1
+//  Version: 0.9.2
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface KTKCloudClient : NSObject
 
 /**
- *  A shared instance of Cloud client, used by the low-level SDK request methods, and suitable for use directly for any ad-hoc requests.
+ *  A shared instance of Cloud client, used by the low-level SDK methods, and suitable for use directly for any ad-hoc requests.
  *
  *  @return A shared instance of a Cloud client.
  */

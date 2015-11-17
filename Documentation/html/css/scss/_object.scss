@@ -110,3 +110,12 @@ a[href^="http://"] {
 .subsubtitle.method-title {
 	margin-left: 0;
 }
+
+.discussion-section code {
+	font-size:12px;
+  	background-color: rgba(209, 227, 237, 0.5);
+  	border-radius: 3px;
+  	color: rgba(0, 0, 0, 0.5);
+  	display: inline-block;
+  	padding: 1px 3px;
+}

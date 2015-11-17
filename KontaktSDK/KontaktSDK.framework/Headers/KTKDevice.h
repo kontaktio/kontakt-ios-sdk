@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.1
+//  Version: 0.9.2
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -72,6 +72,16 @@ NS_ASSUME_NONNULL_BEGIN
  *  Device manager's ID. (read-only)
  */
 @property (nonatomic, strong, readonly) NSUUID *managerID;
+
+/**
+ *  Device venue ID. (read-only)
+ */
+@property (nonatomic, strong, readonly) NSUUID * _Nullable venueID;
+
+/**
+ *  The number of actions assigned to the device.
+ */
+@property (nonatomic, strong, readonly) NSNumber * _Nullable actionsCount;
 
 /**
  *  Device access rights. (read-only)

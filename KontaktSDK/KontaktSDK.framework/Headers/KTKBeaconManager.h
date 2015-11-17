@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.1
+//  Version: 0.9.2
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -97,7 +97,7 @@ extern NSUUID * KTKKontaktProximityUUID();
 /**
  *  Starts monitoring the specified region.
  *
- *  For more details read Apple Documentation for startMonitoringForRegion: http://apple.co/1KbW5cY
+ *  For more details read Apple Documentation for startMonitoringForRegion: <http://apple.co/1KbW5cY>
  *
  *  @param region The region object that defines the boundary to monitor. This parameter must not be nil.
  *
@@ -112,7 +112,7 @@ extern NSUUID * KTKKontaktProximityUUID();
  *  Stops monitoring the specified region.
  *
  *  If the specified region object is not currently being monitored, this method has no effect.
- *  For more details read Apple Documentation for stopMonitoringForRegion: http://apple.co/1ODGt3L
+ *  For more details read Apple Documentation for stopMonitoringForRegion: <http://apple.co/1ODGt3L>
  *
  *  @param region The region object currently being monitored. This parameter must not be nil.
  *

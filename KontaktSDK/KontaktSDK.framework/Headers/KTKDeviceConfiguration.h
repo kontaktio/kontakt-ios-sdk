@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.1
+//  Version: 0.9.2
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -29,10 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readwrite) NSString *name;
 
 /**
- *  Kontakt device password. 
+ *  Kontakt device's password.
  *
  *  Please note pasword property is nil when accessing it trough currentConfiguration on KTKDevice.
- *  You should only use it to change the device password.
+ *  You should only use it to change the device's password.
  */
 @property (nonatomic, copy, readwrite) NSString * _Nullable password;
 
