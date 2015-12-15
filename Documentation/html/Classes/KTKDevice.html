@@ -76,7 +76,7 @@
 		
 		<option value="//api/name/alias">alias</option>
 		
-		<option value="//api/name/currentConfiguration">currentConfiguration</option>
+		<option value="//api/name/configuration">configuration</option>
 		
 		<option value="//api/name/firmwareVersion">firmwareVersion</option>
 		
@@ -105,6 +105,14 @@
 
 	
 
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/getCredentialsWithCompletion:">- getCredentialsWithCompletion:</option>
+		
+		<option value="//api/name/initWithUniqueID:">- initWithUniqueID:</option>
+		
+	</optgroup>
 	
 	
 </select>
@@ -145,8 +153,8 @@
 						
 
 						<a title="Device Object Properties" name="task_Device Object Properties"></a>
-						
-<h2 class="task-title">Device Object Properties</h2>
+						<h2 class="task-title">Device Object Properties</h2>
+
 						<div class="task-list">
 							<div class="section-method">
 	<a name="//api/name/uniqueID" title="uniqueID"></a>
@@ -287,8 +295,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/currentConfiguration" title="currentConfiguration"></a>
-	<h3 class="method-title"><code><a href="#//api/name/currentConfiguration">&nbsp;&nbsp;currentConfiguration</a></code>
+	<a name="//api/name/configuration" title="configuration"></a>
+	<h3 class="method-title"><code><a href="#//api/name/configuration">&nbsp;&nbsp;configuration</a></code>
 </h3>
 
 	<div class="method-info">
@@ -298,12 +306,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The current device configuration object. (read-only)</p>
+				<p>The device configuration object.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) KTKDeviceConfiguration *currentConfiguration</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) KTKDeviceConfiguration *configuration</code></pre></div>
 
 		    
 			
@@ -315,7 +323,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The current device configuration object. (read-only)</p>
+				<p>The device configuration object.</p>
 			</div>
 			
 
@@ -344,12 +352,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An alias of the device. (read-only)</p>
+				<p>An alias of the device.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *alias</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSString *alias</code></pre></div>
 
 		    
 			
@@ -361,7 +369,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>An alias of the device. (read-only)</p>
+				<p>An alias of the device.</p>
 			</div>
 			
 
@@ -390,12 +398,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Meta dictionary object. (read-only)</p>
+				<p>Meta dictionary object.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSDictionary *meta</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSDictionary *meta</code></pre></div>
 
 		    
 			
@@ -407,7 +415,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Meta dictionary object. (read-only)</p>
+				<p>Meta dictionary object.</p>
 			</div>
 			
 
@@ -436,12 +444,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The current firmware version. (read-only)</p>
+				<p>The firmware version.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *firmwareVersion</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSString *firmwareVersion</code></pre></div>
 
 		    
 			
@@ -453,7 +461,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The current firmware version. (read-only)</p>
+				<p>The firmware version.</p>
 			</div>
 			
 
@@ -868,6 +876,143 @@
 </div>
 						</div>
 						
+
+						<a title="Initialization Methods" name="task_Initialization Methods"></a>
+						<h2 class="task-title">Initialization Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithUniqueID:" title="initWithUniqueID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithUniqueID:">&ndash;&nbsp;initWithUniqueID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns a device with the specified unique identifier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>- (instancetype)initWithUniqueID:(NSString *)<em>uniqueID</em></code></pre></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uniqueID</code></th>
+						<td><p>The unique identifier.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized device object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes and returns a device with the specified unique identifier.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Model Methods" name="task_Model Methods"></a>
+						<h2 class="task-title">Model Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/getCredentialsWithCompletion:" title="getCredentialsWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getCredentialsWithCompletion:">&ndash;&nbsp;getCredentialsWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets device credentails from the Cloud API.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>- (void)getCredentialsWithCompletion:(void ( ^ ) ( KTKDeviceCredentials *_Nullable , NSError *_Nullable ))<em>completion</em></code></pre></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A block object to be executed when the request finishes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Gets device credentails from the Cloud API.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
 					</div>
 					
 					
@@ -880,7 +1025,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-11-17</p>
+						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-12-15</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

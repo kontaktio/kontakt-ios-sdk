@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKVenue Class Reference</title>
+	<title>KTKFirmware Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -70,33 +70,37 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/access">access</option>
+		<option value="//api/name/firmwareDescription">firmwareDescription</option>
 		
-		<option value="//api/name/devicesCount">devicesCount</option>
+		<option value="//api/name/firmwareID">firmwareID</option>
 		
-		<option value="//api/name/latitude">latitude</option>
+		<option value="//api/name/firmwareVersion">firmwareVersion</option>
 		
-		<option value="//api/name/longitude">longitude</option>
+		<option value="//api/name/important">important</option>
 		
-		<option value="//api/name/managerID">managerID</option>
+		<option value="//api/name/optional">optional</option>
 		
-		<option value="//api/name/meta">meta</option>
+		<option value="//api/name/scheduled">scheduled</option>
 		
-		<option value="//api/name/venueDescription">venueDescription</option>
+		<option value="//api/name/validDevicesUniqueID">validDevicesUniqueID</option>
 		
-		<option value="//api/name/venueID">venueID</option>
-		
-		<option value="//api/name/venueName">venueName</option>
+		<option value="//api/name/validVersions">validVersions</option>
 		
 	</optgroup>
 	
 
 	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/getFirmwaresForUniqueIDs:completion:">+ getFirmwaresForUniqueIDs:completion:</option>
+		
+	</optgroup>
+	
 
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/venueCoverImageWithCompletion:">- venueCoverImageWithCompletion:</option>
+		<option value="//api/name/downloadWithCompletion:">- downloadWithCompletion:</option>
 		
 	</optgroup>
 	
@@ -113,7 +117,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKVenue Class Reference</h1>
+					<h1 class="title">KTKFirmware Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -125,7 +129,7 @@
 	<td><a href="../Protocols/KTKCloudModel.html">KTKCloudModel</a></td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>KTKVenue.h</td>
+	<td>KTKFirmware.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -138,13 +142,13 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						<a title="Venue Properties" name="task_Venue Properties"></a>
-						<h2 class="task-title">Venue Properties</h2>
+						<a title="Firmware Properties" name="task_Firmware Properties"></a>
+						<h2 class="task-title">Firmware Properties</h2>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/venueID" title="venueID"></a>
-	<h3 class="method-title"><code><a href="#//api/name/venueID">&nbsp;&nbsp;venueID</a></code>
+	<a name="//api/name/firmwareID" title="firmwareID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/firmwareID">&nbsp;&nbsp;firmwareID</a></code>
 </h3>
 
 	<div class="method-info">
@@ -154,12 +158,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Venue identifier. (read-only)</p>
+				<p>The firmware ID.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSUUID *venueID</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *firmwareID</code></pre></div>
 
 		    
 			
@@ -171,7 +175,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue identifier. (read-only)</p>
+				<p>The firmware ID.</p>
 			</div>
 			
 
@@ -182,15 +186,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKFirmware.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/venueName" title="venueName"></a>
-	<h3 class="method-title"><code><a href="#//api/name/venueName">&nbsp;&nbsp;venueName</a></code>
+	<a name="//api/name/firmwareVersion" title="firmwareVersion"></a>
+	<h3 class="method-title"><code><a href="#//api/name/firmwareVersion">&nbsp;&nbsp;firmwareVersion</a></code>
 </h3>
 
 	<div class="method-info">
@@ -200,12 +204,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Venue name. (read-only)</p>
+				<p>The firmware version string.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *venueName</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *firmwareVersion</code></pre></div>
 
 		    
 			
@@ -217,7 +221,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue name. (read-only)</p>
+				<p>The firmware version string.</p>
 			</div>
 			
 
@@ -228,15 +232,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKFirmware.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/venueDescription" title="venueDescription"></a>
-	<h3 class="method-title"><code><a href="#//api/name/venueDescription">&nbsp;&nbsp;venueDescription</a></code>
+	<a name="//api/name/firmwareDescription" title="firmwareDescription"></a>
+	<h3 class="method-title"><code><a href="#//api/name/firmwareDescription">&nbsp;&nbsp;firmwareDescription</a></code>
 </h3>
 
 	<div class="method-info">
@@ -246,12 +250,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Venue description text. (read-only)</p>
+				<p>Description text.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *venueDescription</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *firmwareDescription</code></pre></div>
 
 		    
 			
@@ -263,7 +267,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue description text. (read-only)</p>
+				<p>Description text.</p>
 			</div>
 			
 
@@ -274,15 +278,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKFirmware.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/meta" title="meta"></a>
-	<h3 class="method-title"><code><a href="#//api/name/meta">&nbsp;&nbsp;meta</a></code>
+	<a name="//api/name/validVersions" title="validVersions"></a>
+	<h3 class="method-title"><code><a href="#//api/name/validVersions">&nbsp;&nbsp;validVersions</a></code>
 </h3>
 
 	<div class="method-info">
@@ -292,12 +296,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Venue meta data. (read-only)</p>
+				<p>An array of firmware versions which can be updated to this firmware version.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSDictionary *meta</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSArray&lt;NSString*&gt; *validVersions</code></pre></div>
 
 		    
 			
@@ -309,7 +313,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue meta data. (read-only)</p>
+				<p>An array of firmware versions which can be updated to this firmware version.</p>
 			</div>
 			
 
@@ -320,15 +324,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKFirmware.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/devicesCount" title="devicesCount"></a>
-	<h3 class="method-title"><code><a href="#//api/name/devicesCount">&nbsp;&nbsp;devicesCount</a></code>
+	<a name="//api/name/validDevicesUniqueID" title="validDevicesUniqueID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/validDevicesUniqueID">&nbsp;&nbsp;validDevicesUniqueID</a></code>
 </h3>
 
 	<div class="method-info">
@@ -338,12 +342,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The number of devices assigned to the venue. (read-only)</p>
+				<p>An array of devices unique IDs which can be updated to this firmware version.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *devicesCount</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSArray&lt;NSString*&gt; *validDevicesUniqueID</code></pre></div>
 
 		    
 			
@@ -355,7 +359,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The number of devices assigned to the venue. (read-only)</p>
+				<p>An array of devices unique IDs which can be updated to this firmware version.</p>
 			</div>
 			
 
@@ -366,15 +370,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKFirmware.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/managerID" title="managerID"></a>
-	<h3 class="method-title"><code><a href="#//api/name/managerID">&nbsp;&nbsp;managerID</a></code>
+	<a name="//api/name/scheduled" title="scheduled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/scheduled">&nbsp;&nbsp;scheduled</a></code>
 </h3>
 
 	<div class="method-info">
@@ -384,12 +388,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Venue manager&rsquo;s identifier. (read-only)</p>
+				<p>A Boolean indicating whether firmware can be applied or not.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSUUID *managerID</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly, getter=isScheduled) BOOL scheduled</code></pre></div>
 
 		    
 			
@@ -401,7 +405,11 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue manager&rsquo;s identifier. (read-only)</p>
+				<p>A Boolean indicating whether firmware can be applied or not.</p>
+
+<p>It&rsquo;s possible that latest firmware release can require administrator confirmation through the web panel.
+Before the administrator allows this version to be installed on the devices this flag will be set to <code>NO</code>.
+Only the latest firmware where <code>scheduled</code> value is <code>YES</code> should be used to update devices.</p>
 			</div>
 			
 
@@ -412,15 +420,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKFirmware.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/access" title="access"></a>
-	<h3 class="method-title"><code><a href="#//api/name/access">&nbsp;&nbsp;access</a></code>
+	<a name="//api/name/important" title="important"></a>
+	<h3 class="method-title"><code><a href="#//api/name/important">&nbsp;&nbsp;important</a></code>
 </h3>
 
 	<div class="method-info">
@@ -430,12 +438,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Venue access rights. (read-only)</p>
+				<p>A Boolean indicating whether the firmware is important release or not.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) KTKVenueAccess access</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly, getter=isImportant) BOOL important</code></pre></div>
 
 		    
 			
@@ -447,35 +455,26 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue access rights. (read-only)</p>
+				<p>A Boolean indicating whether the firmware is important release or not.</p>
 			</div>
 			
 
 			
 
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="../Constants/KTKVenueAccess.html">KTKVenueAccess</a></p></code></li>
-					
-				</ul>
-			</div>
 			
 
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKFirmware.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/latitude" title="latitude"></a>
-	<h3 class="method-title"><code><a href="#//api/name/latitude">&nbsp;&nbsp;latitude</a></code>
+	<a name="//api/name/optional" title="optional"></a>
+	<h3 class="method-title"><code><a href="#//api/name/optional">&nbsp;&nbsp;optional</a></code>
 </h3>
 
 	<div class="method-info">
@@ -485,12 +484,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The latitude of the venue.</p>
+				<p>A Boolean indicating whether the firmware is optional or not.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *latitude</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly, getter=isOptional) BOOL optional</code></pre></div>
 
 		    
 			
@@ -502,7 +501,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The latitude of the venue.</p>
+				<p>A Boolean indicating whether the firmware is optional or not.</p>
 			</div>
 			
 
@@ -513,53 +512,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/longitude" title="longitude"></a>
-	<h3 class="method-title"><code><a href="#//api/name/longitude">&nbsp;&nbsp;longitude</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The longitude of the venue.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *longitude</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The longitude of the venue.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKFirmware.h</code></p>
 			</div>
 			
 			
@@ -574,8 +527,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/venueCoverImageWithCompletion:" title="venueCoverImageWithCompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/venueCoverImageWithCompletion:">&ndash;&nbsp;venueCoverImageWithCompletion:</a></code>
+	<a name="//api/name/downloadWithCompletion:" title="downloadWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadWithCompletion:">&ndash;&nbsp;downloadWithCompletion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -590,7 +543,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (void)venueCoverImageWithCompletion:(void ( ^ ) ( KTKImage *_Nullable , NSError *_Nullable ))<em>completion</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>- (void)downloadWithCompletion:(void ( ^ ) ( NSData *_Nullable , NSError *_Nullable ))<em>completion</em></code></pre></div>
 
 		    
 			
@@ -625,7 +578,70 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKFirmware.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getFirmwaresForUniqueIDs:completion:" title="getFirmwaresForUniqueIDs:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getFirmwaresForUniqueIDs:completion:">+&nbsp;getFirmwaresForUniqueIDs:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets a firmware objects for the specified kontakt unique IDs.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>+ (void)getFirmwaresForUniqueIDs:(NSArray *)<em>uniqueIDs</em> completion:(void ( ^ ) ( NSArray&lt;KTKFirmware*&gt; *_Nullable , NSError *_Nullable ))<em>completion</em></code></pre></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uniqueIDs</code></th>
+						<td><p>An array of kontakt unique identifiers.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A block object to be executed when the request finishes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Gets a firmware objects for the specified kontakt unique IDs.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKFirmware.h</code></p>
 			</div>
 			
 			

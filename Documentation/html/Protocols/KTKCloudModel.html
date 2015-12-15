@@ -72,11 +72,9 @@
 	
 	<optgroup label="Class Methods">
 		
-		<option value="//api/name/collectionKeyPath">+ collectionKeyPath</option>
+		<option value="//api/name/availableRequests">+ availableRequests</option>
 		
-		<option value="//api/name/instanceFromResponseObject:">+ instanceFromResponseObject:</option>
-		
-		<option value="//api/name/mappingPaths">+ mappingPaths</option>
+		<option value="//api/name/primaryKey">+ primaryKey</option>
 		
 	</optgroup>
 	
@@ -118,83 +116,12 @@
 						
 
 						
-						<h2 class="task-title">Other Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/instanceFromResponseObject:" title="instanceFromResponseObject:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/instanceFromResponseObject:">+&nbsp;instanceFromResponseObject:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates an instance of a model Class from the specified response object.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>+ (instancetype)instanceFromResponseObject:(id)<em>responseObject</em></code></pre></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>responseObject</code></th>
-						<td><p>The response object from the Cloud API.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>An instance of a model object.</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates an instance of a model Class from the specified response object.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKCloudModel.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
 						
 
-						<a title="Mapping Methods" name="task_Mapping Methods"></a>
-						<h2 class="task-title">Mapping Methods</h2>
-
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/mappingPaths" title="mappingPaths"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mappingPaths">+&nbsp;mappingPaths</a></code>
+	<a name="//api/name/primaryKey" title="primaryKey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/primaryKey">+&nbsp;primaryKey</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -204,12 +131,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Set of paths to map response to the specific model Class.</p>
+				<p>Returns a key path for the object&rsquo;s primary key.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>+ (NSSet *)mappingPaths</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>+ (NSString *)primaryKey</code></pre></div>
 
 		    
 			
@@ -217,7 +144,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A set of string objects.</p>
+				<p>A key path string object.</p>
 			</div>
 			
 
@@ -226,7 +153,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Set of paths to map response to the specific model Class.</p>
+				<p>Returns a key path for the object&rsquo;s primary key.</p>
 			</div>
 			
 
@@ -244,8 +171,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/collectionKeyPath" title="collectionKeyPath"></a>
-	<h3 class="method-title"><code><a href="#//api/name/collectionKeyPath">+&nbsp;collectionKeyPath</a></code>
+	<a name="//api/name/availableRequests" title="availableRequests"></a>
+	<h3 class="method-title"><code><a href="#//api/name/availableRequests">+&nbsp;availableRequests</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -255,12 +182,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Key path string object to use for mapping collections of the objects.</p>
+				<p>Returns the allowed actions options.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>+ (NSString *)collectionKeyPath</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>+ (KTKCloudModelRequests)availableRequests</code></pre></div>
 
 		    
 			
@@ -268,7 +195,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A key path string object.</p>
+				<p>An allowed actions options.</p>
 			</div>
 			
 
@@ -277,7 +204,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Key path string object to use for mapping collections of the objects.</p>
+				<p>Returns the allowed actions options.</p>
 			</div>
 			
 
@@ -309,7 +236,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-11-17</p>
+						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-12-15</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
