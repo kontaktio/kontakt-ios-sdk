@@ -1,51 +1,36 @@
 //
 //  KontaktSDK
-//  Version: 0.9.2
+//  Version: 0.9.9
 //
-//  Copyright (c) 2015 Kontakt.io. All rights reserved.
+//  Copyright © 2015 Kontakt.io. All rights reserved.
 //
 
 @import Foundation;
 
-NS_ASSUME_NONNULL_BEGIN
+typedef NS_ENUM(NSInteger, KTKCloudModelRequests) {
+    KTKCloudModelRequestGet    = 1 << 1,
+    KTKCloudModelRequestCreate = 1 << 2,
+    KTKCloudModelRequestUpdate = 1 << 3,
+    KTKCloudModelRequestDelete = 1 << 4,
+};
 
 #pragma mark - KTKCloudModel protocol
 @protocol KTKCloudModel <NSObject, NSCopying, NSSecureCoding>
 
-#pragma mark - Initialization Methods
-///--------------------------------------------------------------------
-/// @name Initialization Methods
-///--------------------------------------------------------------------
-
-@required
 /**
- *  Creates an instance of a model Class from the specified response object.
- *
- *  @param responseObject The response object from the Cloud API.
- *
- *  @return An instance of a model object.
- */
-+ (instancetype)instanceFromResponseObject:(id)responseObject;
-
-#pragma mark - Mapping Methods
-///--------------------------------------------------------------------
-/// @name Mapping Methods
-///--------------------------------------------------------------------
-
-/**
- *  Set of paths to map response to the specific model Class.
- *
- *  @return A set of string objects.
- */
-+ (NSSet*)mappingPaths;
-
-/**
- *  Key path string object to use for mapping collections of the objects.
+ *  Returns a key path for the object's primary key.
  *
  *  @return A key path string object.
  */
-+ (NSString*)collectionKeyPath;
+@required
++ (NSString*)primaryKey;
+
+/**
+ *  Returns the allowed actions options.
+ *
+ *  @return An allowed actions options.
+ */
+@required
++ (KTKCloudModelRequests)availableRequests;
 
 @end
-
-NS_ASSUME_NONNULL_END

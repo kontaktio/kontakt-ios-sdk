@@ -70,6 +70,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/ETag">ETag</option>
+		
 		<option value="//api/name/maxResult">maxResult</option>
 		
 		<option value="//api/name/nextResultsURL">nextResultsURL</option>
@@ -80,19 +82,17 @@
 		
 		<option value="//api/name/previousResultsURL">previousResultsURL</option>
 		
+		<option value="//api/name/rawResponse">rawResponse</option>
+		
 		<option value="//api/name/startIndex">startIndex</option>
 		
+		<option value="//api/name/statusCode">statusCode</option>
+		
 	</optgroup>
 	
 
 	
 
-	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/moreResultsWithCompletion:">- moreResultsWithCompletion:</option>
-		
-	</optgroup>
 	
 	
 </select>
@@ -130,8 +130,8 @@
 						
 
 						<a title="Properties" name="task_Properties"></a>
-						<h2 class="task-title">Properties</h2>
-
+						
+<h2 class="task-title">Properties</h2>
 						<div class="task-list">
 							<div class="section-method">
 	<a name="//api/name/startIndex" title="startIndex"></a>
@@ -409,17 +409,9 @@
 			
 		</div>
 	</div>
-</div>
-						</div>
-						
-
-						<a title="Pagination Methods" name="task_Pagination Methods"></a>
-						<h2 class="task-title">Pagination Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/moreResultsWithCompletion:" title="moreResultsWithCompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/moreResultsWithCompletion:">&ndash;&nbsp;moreResultsWithCompletion:</a></code>
+</div><div class="section-method">
+	<a name="//api/name/statusCode" title="statusCode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/statusCode">&nbsp;&nbsp;statusCode</a></code>
 </h3>
 
 	<div class="method-info">
@@ -429,26 +421,14 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Performs following request if there are more objects to get from the cloud API.</p>
+				<p>An HTTP status code of the response.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (void)moreResultsWithCompletion:(KTKKontaktResponseCompletionBlock)<em>completion</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *statusCode</code></pre></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>completion</code></th>
-						<td><p>A block object to be executed when the cloud API request finishes.</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
@@ -458,7 +438,101 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Performs following request if there are more objects to get from the cloud API.</p>
+				<p>An HTTP status code of the response.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKKontaktResponse.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ETag" title="ETag"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ETag">&nbsp;&nbsp;ETag</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An ETag HTTP header value of the response.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *ETag</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>An ETag HTTP header value of the response.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKKontaktResponse.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rawResponse" title="rawResponse"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rawResponse">&nbsp;&nbsp;rawResponse</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A raw object of the response.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) id _Nullable rawResponse</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A raw object of the response.</p>
+
+<p>When objects property is nil its worth checking raw response.</p>
 			</div>
 			
 
@@ -490,7 +564,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-11-17</p>
+						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-12-15</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

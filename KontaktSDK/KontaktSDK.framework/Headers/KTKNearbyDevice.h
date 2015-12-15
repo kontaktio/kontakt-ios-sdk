@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.2
+//  Version: 0.9.9
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, assign, getter=isShuffled) BOOL shuffled;
 
 /**
- *  A Boolean indicating whether the  device is currently in DFU mode. (read-only)
+ *  A Boolean indicating whether the device is currently in DFU mode. (read-only)
  */
 @property (nonatomic, readonly, assign, getter=isDFU) BOOL DFU;
 

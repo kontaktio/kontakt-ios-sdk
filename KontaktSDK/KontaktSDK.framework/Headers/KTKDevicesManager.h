@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.2
+//  Version: 0.9.9
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -43,6 +43,11 @@ typedef NS_ENUM(NSUInteger, KTKDevicesManagerDiscoveryMode) {
 ///--------------------------------------------------------------------
 /// @name Other Properties
 ///--------------------------------------------------------------------
+
+/**
+ *  The current state of the bluetooth central.
+ */
+@property (nonatomic, assign, readonly) CBCentralManagerState centralState;
 
 /**
  *  A Boolean indicating whether the devices manager is currently discovering.
@@ -89,8 +94,8 @@ typedef NS_ENUM(NSUInteger, KTKDevicesManagerDiscoveryMode) {
 /**
  *  A mode in which nearby devices discovery is done.
  *  
- *  If <code>discoveryInterval</code> property is set or discovery is started with <code>startDevicesDiscoveryWithInterval:</code> method
- *  mode is automatically set to <code>KTKDevicesManagerDiscoveryModeInterval</code>.
+ *  If <code>discoveryInterval</code> property is set or discovery is started with <code>startDevicesDiscoveryWithInterval:</code> method,
+ *  <code>discoveryMode</code> is automatically set to <code>KTKDevicesManagerDiscoveryModeInterval</code>.
  * 
  *  When discovery is started with <code>startDevicesDiscovery</code> mode will be set to <code>KTKDevicesManagerDiscoveryModeAuto</code>.
  *

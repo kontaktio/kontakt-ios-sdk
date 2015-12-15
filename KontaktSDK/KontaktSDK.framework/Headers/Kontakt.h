@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.2
+//  Version: 0.9.9
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -50,6 +50,13 @@ typedef NS_OPTIONS(NSUInteger, KTKMonitoringOptions) {
  *  @see setAPIKey:
  */
 + (NSString*)APIKey;
+
+/**
+ *  Removes caches created by the SDK.
+ * 
+ *  Cache should be removed every time <code>APIKey</code> is changed.
+ */
++ (void)removeCaches;
 
 /**
  *  Sets the devices monitoring options.

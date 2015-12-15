@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.2
+//  Version: 0.9.9
 //
 //  Copyright © 2015 Kontakt.io. All rights reserved.
 //
@@ -55,17 +55,17 @@ typedef NS_ENUM(NSInteger, KTKVenueAccess) {
 /**
  *  Venue name. (read-only)
  */
-@property (nonatomic, strong, readonly) NSString *venueName;
+@property (nonatomic, strong, readonly) NSString * _Nullable venueName;
 
 /**
  *  Venue description text. (read-only)
  */
-@property (nonatomic, strong, readonly) NSString *venueDescription;
+@property (nonatomic, strong, readonly) NSString * _Nullable venueDescription;
 
 /**
  *  Venue meta data. (read-only)
  */
-@property (nonatomic, strong, readonly) NSDictionary *meta;
+@property (nonatomic, strong, readonly) NSDictionary * _Nullable meta;
 
 /**
  *  The number of devices assigned to the venue. (read-only)

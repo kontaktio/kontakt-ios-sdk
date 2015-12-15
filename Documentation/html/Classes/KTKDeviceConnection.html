@@ -74,6 +74,10 @@
 		
 		<option value="//api/name/connectionTimeout">connectionTimeout</option>
 		
+		<option value="//api/name/credentials">credentials</option>
+		
+		<option value="//api/name/delegate">delegate</option>
+		
 	</optgroup>
 	
 
@@ -82,15 +86,11 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/checkFirmwareUpdateWithCompletion:">- checkFirmwareUpdateWithCompletion:</option>
-		
-		<option value="//api/name/initWithBeacon:">- initWithBeacon:</option>
-		
 		<option value="//api/name/initWithNearbyDevice:">- initWithNearbyDevice:</option>
 		
 		<option value="//api/name/readConfigurationWithCompletion:">- readConfigurationWithCompletion:</option>
 		
-		<option value="//api/name/updateFirmwareWithProgress:completion:">- updateFirmwareWithProgress:completion:</option>
+		<option value="//api/name/updateWithFirmware:progress:completion:">- updateWithFirmware:progress:completion:</option>
 		
 		<option value="//api/name/writeConfiguration:completion:">- writeConfiguration:completion:</option>
 		
@@ -131,8 +131,8 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						
-						
+						<a title="Connection Properties" name="task_Connection Properties"></a>
+						<h2 class="task-title">Connection Properties</h2>
 
 						<div class="task-list">
 							<div class="section-method">
@@ -147,7 +147,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>&lt;#Description#></p>
+				<p>A timeout interval for the connection.</p>
 			</div>
 			
 		    
@@ -164,7 +164,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>&lt;#Description#></p>
+				<p>A timeout interval for the connection.</p>
 			</div>
 			
 
@@ -193,7 +193,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>&lt;#Description#></p>
+				<p>A number of maxium connection attempts if one failed.</p>
 			</div>
 			
 		    
@@ -210,7 +210,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>&lt;#Description#></p>
+				<p>A number of maxium connection attempts if one failed.</p>
 			</div>
 			
 
@@ -228,8 +228,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/initWithBeacon:" title="initWithBeacon:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithBeacon:">&ndash;&nbsp;initWithBeacon:</a></code>
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
 </h3>
 
 	<div class="method-info">
@@ -239,33 +239,16 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Creates instance of KTKDeviceConnection with given KTKNearbyDevice</p>
+				<p>The delegate object that will receive events.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (instancetype)initWithBeacon:(CLBeacon *)<em>beacon</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, weak, readwrite) id&lt;KTKDeviceConnectionDelegate&gt; delegate</code></pre></div>
 
 		    
 			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>device</code></th>
-						<td><p>KTKNearbyDevice Object</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>New instance of KTKDeviceConnection</p>
-			</div>
 			
 
 			
@@ -273,7 +256,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates instance of KTKDeviceConnection with given KTKNearbyDevice</p>
+				<p>The delegate object that will receive events.</p>
 			</div>
 			
 
@@ -290,7 +273,77 @@
 			
 		</div>
 	</div>
-</div><div class="section-method">
+</div>
+						</div>
+						
+
+						<a title="Other Properties" name="task_Other Properties"></a>
+						<h2 class="task-title">Other Properties</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/credentials" title="credentials"></a>
+	<h3 class="method-title"><code><a href="#//api/name/credentials">&nbsp;&nbsp;credentials</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A credentails object to be forced over Cloud API credentials.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) KTKDeviceCredentials *credentials</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A credentails object to be forced over Cloud API credentials.</p>
+
+<p>This property should be only used to connect to legacy devices (fw &lt; 4.0) while offline.
+Devices with firmware >= 4.0 are not using password for the connection so this property will be ignored.
+By default credentials are automatically fetched from the Cloud API just before the connection opertation.
+If connection to the device while offline is not required this property should be ignored.</p>
+
+<p>If password is changed through <code>KTKDeviceConfiguration</code> on the device while in offline it must be stored
+and then synchronized to the cloud API when possible.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Initialization Methods" name="task_Initialization Methods"></a>
+						<h2 class="task-title">Initialization Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
 	<a name="//api/name/initWithNearbyDevice:" title="initWithNearbyDevice:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/initWithNearbyDevice:">&ndash;&nbsp;initWithNearbyDevice:</a></code>
 </h3>
@@ -307,7 +360,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (instancetype)initWithNearbyDevice:(KTKNearbyDevice *)<em>device</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>- (instancetype)initWithNearbyDevice:(KTKNearbyDevice *)<em>nearbyDevice</em></code></pre></div>
 
 		    
 			
@@ -353,7 +406,15 @@
 			
 		</div>
 	</div>
-</div><div class="section-method">
+</div>
+						</div>
+						
+
+						<a title="Connection Methods" name="task_Connection Methods"></a>
+						<h2 class="task-title">Connection Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
 	<a name="//api/name/writeConfiguration:completion:" title="writeConfiguration:completion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/writeConfiguration:completion:">&ndash;&nbsp;writeConfiguration:completion:</a></code>
 </h3>
@@ -365,12 +426,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>&lt;#Description#></p>
+				<p>Writes the specified configuration to the connection device.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (void)writeConfiguration:(KTKDeviceConfiguration *)<em>configuration</em> completion:(void ( ^ ) ( NSError *_Nullable ))<em>completion</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>- (void)writeConfiguration:(KTKDeviceConfiguration *)<em>configuration</em> completion:(void ( ^ ) ( BOOL synchronized , KTKDeviceConfiguration *_Nullable , NSError *_Nullable ))<em>completion</em></code></pre></div>
 
 		    
 			
@@ -380,12 +441,12 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>configuration</code></th>
-						<td><p>&lt;#configuration description#></p></td>
+						<td><p>The configuration object to write.</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>completion</code></th>
-						<td><p>&lt;#completion description#></p></td>
+						<td><p>A block object to be executed when the write operation finishes.</p></td>
 					</tr>
 				
 				</table>
@@ -399,7 +460,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>&lt;#Description#></p>
+				<p>Writes the specified configuration to the connection device.</p>
 			</div>
 			
 
@@ -428,12 +489,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>&lt;#Description#></p>
+				<p>Reads the configuration from the connection device.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (void)readConfigurationWithCompletion:(void ( ^ ) ( KTKDeviceConfiguration *configuration , NSError *_Nullable ))<em>completion</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>- (void)readConfigurationWithCompletion:(void ( ^ ) ( KTKDeviceConfiguration *_Nullable , NSError *_Nullable ))<em>completion</em></code></pre></div>
 
 		    
 			
@@ -443,7 +504,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>completion</code></th>
-						<td><p>&lt;#completion description#></p></td>
+						<td><p>A block object to be executed when the read operation finishes.</p></td>
 					</tr>
 				
 				</table>
@@ -457,7 +518,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>&lt;#Description#></p>
+				<p>Reads the configuration from the connection device.</p>
 			</div>
 			
 
@@ -475,8 +536,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/checkFirmwareUpdateWithCompletion:" title="checkFirmwareUpdateWithCompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/checkFirmwareUpdateWithCompletion:">&ndash;&nbsp;checkFirmwareUpdateWithCompletion:</a></code>
+	<a name="//api/name/updateWithFirmware:progress:completion:" title="updateWithFirmware:progress:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateWithFirmware:progress:completion:">&ndash;&nbsp;updateWithFirmware:progress:completion:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -486,12 +547,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>&lt;#Description#></p>
+				<p>Updates a device to the latest available firmware.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (void)checkFirmwareUpdateWithCompletion:(void ( ^ ) ( BOOL isAvailable , NSString *_Nullable firmwareVersion , NSError *_Nullable ))<em>completion</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>- (void)updateWithFirmware:(KTKFirmware *)<em>firmware</em> progress:(void ( ^ ) ( double ))<em>progress</em> completion:(void ( ^ ) ( BOOL synchronized , NSError *_Nullable ))<em>completion</em></code></pre></div>
 
 		    
 			
@@ -500,71 +561,18 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>completion</code></th>
-						<td><p>&lt;#completion description#></p></td>
+						<th scope="row" class="argument-name"><code>firmware</code></th>
+						<td><p>The firmware object you want to update device to. <code>Has to be equal or grater than current firmware version.</code></p></td>
 					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>&lt;#Description#></p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/updateFirmwareWithProgress:completion:" title="updateFirmwareWithProgress:completion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updateFirmwareWithProgress:completion:">&ndash;&nbsp;updateFirmwareWithProgress:completion:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>&lt;#Description#></p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>- (void)updateFirmwareWithProgress:(void ( ^ ) ( double ))<em>progress</em> completion:(NSError *_Nullable)<em>completion</em></code></pre></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>progress</code></th>
-						<td><p>&lt;#progress description#></p></td>
+						<td><p>A block object to be executed when the progress of an update operation is recieved.</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>completion</code></th>
-						<td><p>&lt;#completion description#></p></td>
+						<td><p>A block object to be executed when the update operation finishes.</p></td>
 					</tr>
 				
 				</table>
@@ -578,7 +586,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>&lt;#Description#></p>
+				<p>Updates a device to the latest available firmware.</p>
 			</div>
 			
 
@@ -610,7 +618,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-11-17</p>
+						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-12-15</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

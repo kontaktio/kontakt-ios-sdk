@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.2
+//  Version: 0.9.9
 //
 //  Copyright © 2015 Kontakt.io. All rights reserved.
 //
@@ -56,7 +56,7 @@ typedef NS_ENUM(NSInteger, KTKActionType) {
 /**
  *  An array of devices unique identifiers assigned to the action. (read-only)
  */
-@property (nonatomic, strong, readonly) NSArray <NSString*>* devicesUniqueID;
+@property (nonatomic, strong, readonly) NSArray <NSString*>* _Nullable devicesUniqueID;
 
 #pragma mark - Action Type URL
 ///--------------------------------------------------------------------

@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.2
+//  Version: 0.9.9
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -81,6 +81,28 @@ typedef NS_ENUM(NSInteger, KTKDeviceSpecification) {
      *  Standard specification.
      */
     KTKDeviceSpecificationStandard = 1
+};
+
+/**
+ *  A kontakt device shuffle status.
+ */
+typedef NS_ENUM(NSInteger, KTKDeviceShuffleStatus) {
+    /**
+     *  Status is unknown.
+     */
+    KTKDeviceShuffleStatusUknown        = -1,
+    /**
+     *  Device shuffle is not supported.
+     */
+    KTKDeviceShuffleStatusNotSupported  = 0,
+    /**
+     *  Device shuffle status is ON.
+     */
+    KTKDeviceShuffleStatusON            = 1,
+    /**
+     *  Device shuffle status is OFF.
+     */
+    KTKDeviceShuffleStatusOFF           = 2
 };
 
 /**

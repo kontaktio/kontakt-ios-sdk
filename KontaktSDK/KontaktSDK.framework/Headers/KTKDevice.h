@@ -1,13 +1,14 @@
 //
 //  KontaktSDK
-//  Version: 0.9.2
+//  Version: 0.9.9
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
 
-#import "KTKDeviceDefinitions.h"
 #import "KTKCloudModel.h"
+#import "KTKDeviceDefinitions.h"
 #import "KTKDeviceConfiguration.h"
+#import "KTKDeviceCredentials.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -35,24 +36,24 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSString *secureNamespace;
 
 /**
- *  The current device configuration object. (read-only)
+ *  The device configuration object.
  */
-@property (nonatomic, strong, readonly) KTKDeviceConfiguration *currentConfiguration;
+@property (nonatomic, strong, readwrite) KTKDeviceConfiguration *configuration;
 
 /**
- *  An alias of the device. (read-only)
+ *  An alias of the device.
  */
-@property (nonatomic, strong, readonly) NSString * _Nullable alias;
+@property (nonatomic, strong, readwrite) NSString * _Nullable alias;
 
 /**
- *  Meta dictionary object. (read-only)
+ *  Meta dictionary object.
  */
-@property (nonatomic, strong, readonly) NSDictionary * _Nullable meta;
+@property (nonatomic, strong, readwrite) NSDictionary * _Nullable meta;
 
 /**
- *  The current firmware version. (read-only)
+ *  The firmware version.
  */
-@property (nonatomic, strong, readonly) NSString *firmwareVersion;
+@property (nonatomic, strong, readwrite) NSString *firmwareVersion;
 
 /**
  *  Device type. (read-only)
@@ -99,6 +100,32 @@ NS_ASSUME_NONNULL_BEGIN
  *  The longitude of the device.
  */
 @property (nonatomic, strong, readwrite) NSNumber * _Nullable longitude;
+
+#pragma mark - Initialization Methods
+///--------------------------------------------------------------------
+/// @name Initialization Methods
+///--------------------------------------------------------------------
+
+/**
+ *  Initializes and returns a device with the specified unique identifier.
+ *
+ *  @param uniqueID The unique identifier.
+ *
+ *  @return An initialized device object.
+ */
+- (instancetype)initWithUniqueID:(NSString *)uniqueID;
+
+#pragma mark - Model Methods
+///--------------------------------------------------------------------
+/// @name Model Methods
+///--------------------------------------------------------------------
+
+/**
+ *  Gets device credentails from the Cloud API.
+ *
+ *  @param completion A block object to be executed when the request finishes.
+ */
+- (void)getCredentialsWithCompletion:(void(^)(KTKDeviceCredentials * _Nullable, NSError * _Nullable))completion;
 
 @end
 

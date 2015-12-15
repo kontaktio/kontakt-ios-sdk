@@ -74,6 +74,8 @@
 		
 		<option value="//api/name/advertisingInterval">advertisingInterval</option>
 		
+		<option value="//api/name/forceOverwrite">forceOverwrite</option>
+		
 		<option value="//api/name/instanceID">instanceID</option>
 		
 		<option value="//api/name/major">major</option>
@@ -90,7 +92,17 @@
 		
 		<option value="//api/name/proximityUUID">proximityUUID</option>
 		
-		<option value="//api/name/shuffled">shuffled</option>
+		<option value="//api/name/referenceTXPowerEddystone">referenceTXPowerEddystone</option>
+		
+		<option value="//api/name/referenceTXPowerIBeacon">referenceTXPowerIBeacon</option>
+		
+		<option value="//api/name/secureRequest">secureRequest</option>
+		
+		<option value="//api/name/secureResponse">secureResponse</option>
+		
+		<option value="//api/name/secureResponseTime">secureResponseTime</option>
+		
+		<option value="//api/name/shuffleStatus">shuffleStatus</option>
 		
 		<option value="//api/name/transmissionPower">transmissionPower</option>
 		
@@ -101,6 +113,12 @@
 
 	
 
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithUniqueID:">- initWithUniqueID:</option>
+		
+	</optgroup>
 	
 	
 </select>
@@ -267,7 +285,7 @@
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Kontakt device&rsquo;s password.</p>
 
-<p>Please note pasword property is nil when accessing it trough currentConfiguration on KTKDevice.
+<p>Please note pasword property is nil when accessing it through <code>configuration</code> on <a href="../Classes/KTKDevice.html">KTKDevice</a>.
 You should only use it to change the device&rsquo;s password.</p>
 			</div>
 			
@@ -286,8 +304,8 @@ You should only use it to change the device&rsquo;s password.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/shuffled" title="shuffled"></a>
-	<h3 class="method-title"><code><a href="#//api/name/shuffled">&nbsp;&nbsp;shuffled</a></code>
+	<a name="//api/name/shuffleStatus" title="shuffleStatus"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shuffleStatus">&nbsp;&nbsp;shuffleStatus</a></code>
 </h3>
 
 	<div class="method-info">
@@ -297,12 +315,12 @@ You should only use it to change the device&rsquo;s password.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A Boolean indicating whether device is in shuffle mode.</p>
+				<p>A status indicating whether device is in shuffle mode.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite, getter=isShuffled) BOOL shuffled</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) KTKDeviceShuffleStatus shuffleStatus</code></pre></div>
 
 		    
 			
@@ -314,7 +332,7 @@ You should only use it to change the device&rsquo;s password.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>A Boolean indicating whether device is in shuffle mode.</p>
+				<p>A status indicating whether device is in shuffle mode.</p>
 			</div>
 			
 
@@ -496,6 +514,52 @@ You should only use it to change the device&rsquo;s password.</p>
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/forceOverwrite" title="forceOverwrite"></a>
+	<h3 class="method-title"><code><a href="#//api/name/forceOverwrite">&nbsp;&nbsp;forceOverwrite</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Boolean indicating whether any other pending configuration should be overwritten when posting to the cloud API.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) BOOL forceOverwrite</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A Boolean indicating whether any other pending configuration should be overwritten when posting to the cloud API.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -626,6 +690,52 @@ You should only use it to change the device&rsquo;s password.</p>
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>An iBeacon minor value.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/referenceTXPowerIBeacon" title="referenceTXPowerIBeacon"></a>
+	<h3 class="method-title"><code><a href="#//api/name/referenceTXPowerIBeacon">&nbsp;&nbsp;referenceTXPowerIBeacon</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A reference transmission power for iBeacon advertising (measured at 1 meter).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSNumber *referenceTXPowerIBeacon</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A reference transmission power for iBeacon advertising (measured at 1 meter).</p>
 			</div>
 			
 
@@ -788,6 +898,275 @@ You should only use it to change the device&rsquo;s password.</p>
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/referenceTXPowerEddystone" title="referenceTXPowerEddystone"></a>
+	<h3 class="method-title"><code><a href="#//api/name/referenceTXPowerEddystone">&nbsp;&nbsp;referenceTXPowerEddystone</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A reference transmission power for Eddystone advertising (measured at 0 meters).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSNumber *referenceTXPowerEddystone</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A reference transmission power for Eddystone advertising (measured at 0 meters).</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Secure Configuration" name="task_Secure Configuration"></a>
+						<h2 class="task-title">Secure Configuration</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/secureRequest" title="secureRequest"></a>
+	<h3 class="method-title"><code><a href="#//api/name/secureRequest">&nbsp;&nbsp;secureRequest</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A response data object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSData *secureRequest</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A response data object.</p>
+
+<p>Response object contains data recieved from the device after configuration.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/secureResponse" title="secureResponse"></a>
+	<h3 class="method-title"><code><a href="#//api/name/secureResponse">&nbsp;&nbsp;secureResponse</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A response data object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSData *secureResponse</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A response data object.</p>
+
+<p>Response object contains data recieved from the device after configuration.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/secureResponseTime" title="secureResponseTime"></a>
+	<h3 class="method-title"><code><a href="#//api/name/secureResponseTime">&nbsp;&nbsp;secureResponseTime</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A response date object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSDate *secureResponseTime</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A response date object.</p>
+
+<p>A date and time of when the response was recieved.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Initialization Methods" name="task_Initialization Methods"></a>
+						<h2 class="task-title">Initialization Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithUniqueID:" title="initWithUniqueID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithUniqueID:">&ndash;&nbsp;initWithUniqueID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns a device configuration object for device with the specified unique identifier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>- (instancetype)initWithUniqueID:(NSString *)<em>uniqueID</em></code></pre></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uniqueID</code></th>
+						<td><p>The unique identifier.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized device configuration object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes and returns a device configuration object for device with the specified unique identifier.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -803,7 +1182,7 @@ You should only use it to change the device&rsquo;s password.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-11-17</p>
+						<p class="copyright">Copyright &copy; 2015 Kontakt.io. All rights reserved. Updated: 2015-12-15</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

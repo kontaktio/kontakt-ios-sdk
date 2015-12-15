@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.2
+//  Version: 0.9.9
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param error    An error object.
  */
 typedef void (^KTKKontaktResponseCompletionBlock)(KTKKontaktResponse * _Nullable response, NSError * _Nullable error);
+
 
 #pragma mark - KTKKontaktResponse (Interface)
 @interface KTKKontaktResponse: NSObject
@@ -57,17 +58,22 @@ typedef void (^KTKKontaktResponseCompletionBlock)(KTKKontaktResponse * _Nullable
  */
 @property (nonatomic, strong, readwrite) NSURL * _Nullable nextResultsURL;
 
-#pragma mark - Pagination Methods
-///--------------------------------------------------------------------
-/// @name Pagination Methods
-///--------------------------------------------------------------------
+/**
+ *  An HTTP status code of the response.
+ */
+@property (nonatomic, strong, readonly) NSNumber * _Nullable statusCode;
 
 /**
- *  Performs following request if there are more objects to get from the cloud API.
- *
- *  @param completion A block object to be executed when the cloud API request finishes.
+ *  An ETag HTTP header value of the response.
  */
-- (void)moreResultsWithCompletion:(KTKKontaktResponseCompletionBlock)completion;
+@property (nonatomic, strong, readonly) NSString * _Nullable ETag;
+
+/**
+ *  A raw object of the response. 
+ *
+ *  When objects property is nil its worth checking raw response.
+ */
+@property (nonatomic, strong, readonly) id _Nullable rawResponse;
 
 @end
 

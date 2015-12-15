@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.2
+//  Version: 0.9.9
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -28,6 +28,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  A Boolean indicating whether the eddystone manager is currently discovering eddy stones.
  */
 @property (nonatomic, assign, readonly, getter=isDiscovering) BOOL discovering;
+
+/**
+ *  The current state of the bluetooth central.
+ */
+@property (nonatomic, assign, readonly) CBCentralManagerState centralState;
 
 /**
  *  The delegate object that will receive events.
