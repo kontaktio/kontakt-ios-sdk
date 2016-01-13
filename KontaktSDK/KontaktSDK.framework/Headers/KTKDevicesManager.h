@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.9
+//  Version: 1.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -53,6 +53,11 @@ typedef NS_ENUM(NSUInteger, KTKDevicesManagerDiscoveryMode) {
  *  A Boolean indicating whether the devices manager is currently discovering.
  */
 @property (nonatomic, assign, readonly, getter=isDiscovering) BOOL discovering;
+
+/**
+ *  A Boolean indicating whether the devices manager should detect devices locked status.
+ */
+@property (nonatomic, assign, readwrite, getter=isDetectingLocks) BOOL detectingLocks;
 
 /**
  *  The delegate object that will receive events.

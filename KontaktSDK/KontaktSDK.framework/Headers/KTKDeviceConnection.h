@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 0.9.9
+//  Version: 1.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -37,6 +37,34 @@ typedef NS_ENUM(NSInteger, KTKDeviceConnectionOperationType) {
      */
     KTKDeviceConnectionOperationTypeDFU     = 3
 };
+
+#pragma mark - Completion Blocks
+/**
+ *  A completion block object to be executed when the write operation finishes.
+ *
+ *  @param synchronized  A Boolean indicating whether the configuration was synchronized to the Cloud API.
+ *  @param configuration The configuration object containing write operation details. Please not that configuration object will be nil for devices with firmware < 4.0.
+ *                       If <code>synchronized</code> is false you have to keep copy of the configuration and synchronize it with the cloud when possible.
+ *                       When the device firmware is 4.0 or higher configuration object will contain <code>secureResponse</code> and <code>secureResponseTime</code>.
+ *  @param error         An error object containing the error that indicates why the operation failed.
+ */
+typedef void (^KTKDeviceConnectionWriteCompletion)(BOOL synchronized, KTKDeviceConfiguration * _Nullable configuration, NSError * _Nullable error);
+
+/**
+ *  A completion block object to be executed when the read operation finishes.
+ *
+ *  @param configuration The configuration object. Result of the read operation.
+ *  @param error         An error object containing the error that indicates why the operation failed.
+ */
+typedef void (^KTKDeviceConnectionReadCompletion)(KTKDeviceConfiguration * _Nullable configuration, NSError * _Nullable error);
+
+/**
+ *  A completion block object to be executed when the update operation finishes.
+ *
+ *  @param synchronized A Boolean indicating whether the configuration was synchronized to the Cloud API.
+ *  @param error        An error object containing the error that indicates why the operation failed.
+ */
+typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError * _Nullable error);
 
 @protocol KTKDeviceConnectionDelegate;
 
@@ -106,14 +134,14 @@ typedef NS_ENUM(NSInteger, KTKDeviceConnectionOperationType) {
  *  @param configuration The configuration object to write.
  *  @param completion    A block object to be executed when the write operation finishes.
  */
-- (void)writeConfiguration:(KTKDeviceConfiguration*)configuration completion:(void(^)(BOOL synchronized, KTKDeviceConfiguration * _Nullable, NSError * _Nullable))completion;
+- (void)writeConfiguration:(KTKDeviceConfiguration*)configuration completion:(KTKDeviceConnectionWriteCompletion)completion;
 
 /**
  *  Reads the configuration from the connection device.
  *
  *  @param completion A block object to be executed when the read operation finishes.
  */
-- (void)readConfigurationWithCompletion:(void(^)(KTKDeviceConfiguration * _Nullable, NSError * _Nullable))completion;
+- (void)readConfigurationWithCompletion:(KTKDeviceConnectionReadCompletion)completion;
 
 /**
  *  Updates a device to the latest available firmware.
@@ -122,7 +150,12 @@ typedef NS_ENUM(NSInteger, KTKDeviceConnectionOperationType) {
  *  @param progress   A block object to be executed when the progress of an update operation is recieved.
  *  @param completion A block object to be executed when the update operation finishes.
  */
-- (void)updateWithFirmware:(KTKFirmware*)firmware progress:(void (^)(double))progress completion:(void (^)(BOOL synchronized, NSError * _Nullable))completion;
+- (void)updateWithFirmware:(KTKFirmware*)firmware progress:(void (^)(double))progress completion:(KTKDeviceConnectionUpdateCompletion)completion;
+
+/**
+ *  Cancels all operations on this connection.
+ */
+- (void)cancel;
 
 @end
 
