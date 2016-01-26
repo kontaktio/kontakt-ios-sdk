@@ -250,9 +250,7 @@ Now we'll start monitoring a specific region.
 
 For more information on [KTKBeaconRegion](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKBeaconRegion.html) see Appledoc.
 
-{% note|info %}
-Regions define a set of beacons that your application is aware of, so the beacon manager will interact only with those beacons.
-{% endnote %}
+> Regions define a set of beacons that your application is aware of, so the beacon manager will interact only with those beacons.
 
 ``` Objective-C
 // Kontakt.io proximity UUID
@@ -275,9 +273,7 @@ For more information on [KTKSecureBeaconRegion](http://kontaktio.github.io/konta
 
 Read more about security and shuffling on our [support page](https://support.kontakt.io/hc/en-gb/sections/201612029).
 
-{% note|info %}
-You can find your beacon's Secure Proximity UUID in Kontakt.io Web Panel (in the Security Section).
-{% endnote %}
+> You can find your beacon's Secure Proximity UUID in Kontakt.io Web Panel (in the Security Section).
 
 ``` Objective-C
 // Your secure proximity UUID
