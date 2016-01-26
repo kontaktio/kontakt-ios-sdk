@@ -1,16 +1,16 @@
 # iOS SDK Quickstart
 
 > This is a quickstart page for the **new** iOS SDK. As it is re-written completely, we have set the versioning back to 1.0. 
-> This new SDK is not backwards compatible with our [previous iOS SDK](/ios-sdk/quickstart-old/).
+> This new SDK is not backwards compatible with our [previous iOS SDK](http://developer.kontakt.io/ios-sdk/quickstart-old/).
 
 ## Overview
 
 This document shows you a quick way to start using the Kontkat.io iOS SDK in location-aware apps. You will find code examples for core features and best practices that we recommend developers follow.
 
-You can find more detailed information in the [Appledocs](/ios-sdk/appledocs/).
+You can find more detailed information in the [Appledocs](http://developer.kontakt.io/ios-sdk/appledocs/).
 
 ##Changes
-This version of the SDK has been completely re-written from scratch since version 6.2. It contains a number of new features which you can read about more compleyely in the  [Appledocs](/ios-sdk/appledocs/), but a high level review of what's changed includes:
+This version of the SDK has been completely re-written from scratch since version 6.2. It contains a number of new features which you can read about more compleyely in the  [Appledocs](http://developer.kontakt.io/ios-sdk/appledocs/), but a high level review of what's changed includes:
 
 * Improved Swift 2.0 support
 * All classes are thread safe
