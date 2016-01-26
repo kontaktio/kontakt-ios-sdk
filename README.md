@@ -3,6 +3,12 @@
 > This is a quickstart page for the **new** iOS SDK. As it is re-written completely, we have set the versioning back to 1.0. 
 > This new SDK is not backwards compatible with our [previous iOS SDK](http://developer.kontakt.io/ios-sdk/quickstart-old/).
 
+## Administration App
+
+To configure Kontakt.io Devices please use our new [iOS Administration App](https://itunes.apple.com/pl/app/kontakt.io-administration/id1067320511).
+
+![screen](http://kontakt-io-dev.s3.amazonaws.com/1.png)
+
 ## Overview
 
 This document shows you a quick way to start using the Kontkat.io iOS SDK in location-aware apps. You will find code examples for core features and best practices that we recommend developers follow.
