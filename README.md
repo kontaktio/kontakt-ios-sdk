@@ -11,7 +11,7 @@ To configure Kontakt.io Devices please use our new [iOS Administration App](http
 
 ## Overview
 
-This document shows you a quick way to start using the Kontkat.io iOS SDK in location-aware apps. You will find code examples for core features and best practices that we recommend developers follow.
+This document shows you a quick way to start using the Kontakt.io iOS SDK in location-aware apps. You will find code examples for core features and best practices that we recommend developers follow.
 
 You can find more detailed information in the [Appledocs](http://developer.kontakt.io/ios-sdk/appledocs/).
 
