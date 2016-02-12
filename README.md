@@ -664,6 +664,10 @@ More code samples and scenarios will be covered in our sample project on [github
 Kontakt.io iOS SDK makes extensive use of two native iOS frameworks: [Core Location](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html "Core Location Framework Reference") and [Core Bluetooth](https://developer.apple.com/library/ios/documentation/CoreBluetooth/Reference/CoreBluetooth_Framework/_index.html "Core Bluetooth Framework Reference"). It is important to understand that although both of them use Bluetooth Low Energy, they are separate technologies and do not have much in common. 
 
 ## Changelog
+### iOS SDK V1.0.2-1.0.5 - Released 26 January 2016
+* Bitcode Fixes
+* Fixes around an [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216).
+
 ### iOS SDK V1.0.1 - Released 26 January 2016
 * First release of the new iOS SDK
 
