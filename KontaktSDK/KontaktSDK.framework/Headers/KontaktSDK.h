@@ -1,30 +1,30 @@
 //
 //  KontaktSDK
-//  Version: 1.0.4
+//  Version: 1.0.5
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
 
-#ifndef _KONTAKTSDK_    
-    #define _KONTAKTSDK_
+#import <Foundation/Foundation.h>
 
-    #import <KontaktSDK/Kontakt.h>
-    #import <KontaktSDK/NSData+Kontakt.h>
-    #import <KontaktSDK/NSString+Kontakt.h>
+//! Project version number for KontaktSDK.
+FOUNDATION_EXPORT double KontaktSDKVersionNumber;
 
-    #import <KontaktSDK/KTKCloudClient.h>
-    #import <KontaktSDK/KTKDevice.h>
-    #import <KontaktSDK/KTKDeviceCredentials.h>
-    #import <KontaktSDK/KTKDeviceConfiguration.h>
-    #import <KontaktSDK/KTKFirmware.h>
-    #import <KontaktSDK/KTKAction.h>
-    #import <KontaktSDK/KTKManager.h>
-    #import <KontaktSDK/KTKVenue.h>
+//! Project version string for KontaktSDK.
+FOUNDATION_EXPORT const unsigned char KontaktSDKVersionString[];
 
-    #import <KontaktSDK/KTKBeaconManager.h>
-    #import <KontaktSDK/KTKEddystoneManager.h>
-
-    #import <KontaktSDK/KTKDevicesManager.h>
-    #import <KontaktSDK/KTKDeviceConnection.h>
-
-#endif
+#import "Kontakt.h"
+#import "NSData+Kontakt.h"
+#import "NSString+Kontakt.h"
+#import "KTKCloudClient.h"
+#import "KTKDevice.h"
+#import "KTKDeviceCredentials.h"
+#import "KTKDeviceConfiguration.h"
+#import "KTKFirmware.h"
+#import "KTKAction.h"
+#import "KTKManager.h"
+#import "KTKVenue.h"
+#import "KTKBeaconManager.h"
+#import "KTKEddystoneManager.h"
+#import "KTKDevicesManager.h"
+#import "KTKDeviceConnection.h"
