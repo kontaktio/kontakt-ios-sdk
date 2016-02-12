@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     :flatten => true
   }
 
-  s.vendored_frameworks     = "KontaktSDK/KontaktSDK.framework"
+  s.vendored_frameworks     = "KontaktSDK.framework"
   s.module_name             = 'KontaktSDK'
 
   s.platform                = :ios
