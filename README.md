@@ -67,13 +67,31 @@ $ brew update
 $ brew install carthage
 ```
 
-To integrate Kontakt.io iOS SDK into your Xcode project using Carthage, specify it in your `Cartfile`:
+1. To integrate Kontakt.io iOS SDK into your Xcode project using Carthage, specify it in your `Cartfile`:
 
-``` bash
-github "kontaktio/kontakt-ios-sdk" ~> 1.0
-```
+  ``` bash
+  github "kontaktio/kontakt-ios-sdk" ~> 1.0
+  ```
 
-Run `carthage update` to build the framework and drag the built `KontaktSDK.framework` into your Xcode project.
+2. Run `carthage update` to build the framework.
+3. On your application targets `General` settings tab, in the `Linked Frameworks and Libraries` section, drag the `KontaktSDK.framework` from the `Carthage/Build/iOS` folder on disk.
+4. On your application targets’ `Build Phases` settings tab, click the `+` icon and choose `New Run Script Phase`. Create a Run Script with the following contents:
+
+  ```sh
+  /usr/local/bin/carthage copy-frameworks
+  ```
+
+  and add the paths to the frameworks you want to use under `Input Files`, e.g.:
+
+  ```
+  $(SRCROOT)/Carthage/Build/iOS/KontaktSDK.framework
+  ```
+  
+  This script works around an [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216) triggered by universal binaries and ensures that necessary bitcode-related files and dSYMs are copied when archiving.
+
+With the debug information copied into the built products directory, Xcode will be able to symbolicate the stack trace whenever you stop at a breakpoint. This will also enable you to step through third-party code in the debugger.
+
+When archiving your application for submission to the App Store or TestFlight, Xcode will also copy these files into the dSYMs subdirectory of your application’s `.xcarchive` bundle.
 
 ---
 
@@ -101,7 +119,13 @@ $ git submodule add https://github.com/kontaktio/kontakt-ios-sdk.git
     
 - Select the `KontaktSDK.framework` and click `Add` button.
 
-- And that is it!
+- In the Build Phases tab, click the + button at the top and select “New Run Script Phase”. Enter the following code into the script text field:
+
+```bash
+bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/KontaktSDK.framework/strip-frameworks.sh"
+```
+
+(The last step, courtesy of [Realm](https://github.com/realm/realm-cocoa/), is required for working around an [iOS App Store bug](http://www.openradar.me/radar?id=6409498411401216) when archiving universal binaries.)
 
 ---
 
