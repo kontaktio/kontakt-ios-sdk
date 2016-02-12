@@ -1,17 +1,22 @@
 Pod::Spec.new do |s|
   s.name                    = "KontaktSDK"
-  s.version                 = "1.0.4"
+  s.version                 = "1.0.5"
   s.license                 = { :type => 'CC-ND', :file => 'LICENSE' }
-  s.summary                 = "iOS library for Kontakt.io devices"
+  s.summary                 = "Kontakt.io iOS SDK"
   s.homepage                = "http://kontakt.io"
   s.author                  = { "Kontakt.io" => "ios@kontakt.io" }
-  s.platform                = :ios
-  s.source                  = { :git => "https://github.com/kontaktio/kontakt-ios-sdk.git", :tag => "v#{s.version}" }
-  s.source_files            = "KontaktSDK/KontaktSDK.framework/Headers/*.h"
+
+  s.source = {
+    :http    => "http://omg.kontakt.io.s3.amazonaws.com/ios/builds/kontakt-ios-sdk-#{s.version.to_s}.zip",
+    :flatten => true
+  }
+
   s.vendored_frameworks     = "KontaktSDK/KontaktSDK.framework"
+  s.module_name             = 'KontaktSDK'
+
+  s.platform                = :ios
   s.ios.deployment_target   = "8.0"
   s.frameworks              = "UIKit", "Foundation", "SystemConfiguration", "MobileCoreServices", "CoreLocation", "CoreBluetooth"
+
   s.requires_arc            = true
-  s.xcconfig                = { "LIBRARY_SEARCH_PATHS" => '"$(PODS_ROOT)/KontaktSDK"',
-                                "HEADER_SEARCH_PATHS"  => '"${PODS_ROOT}/Headers/KontaktSDK"' }
 end
