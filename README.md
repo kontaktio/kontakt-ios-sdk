@@ -9,6 +9,10 @@ To configure Kontakt.io Devices please use our new [iOS Administration App](http
 
 ![screen](http://kontakt-io-dev.s3.amazonaws.com/1.png)
 
+## Sample Code
+You can find sample code from our workshop webinar here:  [kontaktio/kontakt-ios-sdk-workshop](https://github.com/kontaktio/kontakt-ios-sdk-workshop).
+Video will be posted soon.
+
 ## Overview
 
 This document shows you a quick way to start using the Kontakt.io iOS SDK in location-aware apps. You will find code examples for core features and best practices that we recommend developers follow.
