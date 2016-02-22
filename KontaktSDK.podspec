@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = "KontaktSDK"
-  s.version                 = "1.0.8"
+  s.version                 = "1.0.9"
   s.license                 = { :type => 'CC-ND', :file => 'LICENSE' }
   s.summary                 = "Kontakt.io iOS SDK"
   s.homepage                = "http://kontakt.io"
