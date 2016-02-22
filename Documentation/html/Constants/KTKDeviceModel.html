@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKManagerRole Constants Reference</title>
+	<title>KTKDeviceModel Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,16 +75,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKManagerRole Constants Reference</h1>
+					<h1 class="title">KTKDeviceModel Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKManager.h</td>
-</tr><tr>
-	<th>References</th>
-	<td>https://support.kontakt.io/hc/en-gb/articles/204897781-6-User-types-roles-Managers</td>
+	<td>KTKDeviceDefinitions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -94,11 +91,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKManagerRole</h3>
+                    <h3 class="subsubtitle method-title">KTKDeviceModel</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Manager roles</p>
+                        <p>A kontakt device models.</p>
 					</div>
 					
 					
@@ -106,11 +103,12 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSUInteger, KTKManagerRole ) { 
-	<a href="">KTKManagerRoleUnknown</a>,
-	<a href="">KTKManagerRoleSuperuser</a>,
-	<a href="">KTKManagerRoleAdmin</a>,
-	<a href="">KTKManagerRoleOperator</a>,
+                        <pre><code>typedef NS_ENUM(NSInteger, KTKDeviceModel ) { 
+	<a href="">KTKDeviceModelInvalid</a> = -1,
+	<a href="">KTKDeviceModelSmartBeacon</a> = 1,
+	<a href="">KTKDeviceModelUSBBeacon</a> = 2,
+	<a href="">KTKDeviceModelSensorBeacon</a> = 3,
+	<a href="">KTKDeviceModelCloudBeacon</a> = 4,
 };</code></pre>
                     
                     </div>
@@ -119,11 +117,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKManagerRoleUnknown"></a><code>KTKManagerRoleUnknown</code></dt>
+                            <dt><a name="" title="KTKDeviceModelInvalid"></a><code>KTKDeviceModelInvalid</code></dt>
 <dd>
 
 
-<p>Unknown Role</p>
+<p>Invalid value.</p>
 
 
 
@@ -131,16 +129,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKManager.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKManagerRoleSuperuser"></a><code>KTKManagerRoleSuperuser</code></dt>
+                            <dt><a name="" title="KTKDeviceModelSmartBeacon"></a><code>KTKDeviceModelSmartBeacon</code></dt>
 <dd>
 
 
-<p>Superuser Role</p>
+<p>Smart Beacon</p>
 
 
 
@@ -148,16 +146,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKManager.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKManagerRoleAdmin"></a><code>KTKManagerRoleAdmin</code></dt>
+                            <dt><a name="" title="KTKDeviceModelUSBBeacon"></a><code>KTKDeviceModelUSBBeacon</code></dt>
 <dd>
 
 
-<p>Administrator Role</p>
+<p>USB Beacon</p>
 
 
 
@@ -165,16 +163,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKManager.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKManagerRoleOperator"></a><code>KTKManagerRoleOperator</code></dt>
+                            <dt><a name="" title="KTKDeviceModelSensorBeacon"></a><code>KTKDeviceModelSensorBeacon</code></dt>
 <dd>
 
 
-<p>Operator Role</p>
+<p>Sensor Beacon</p>
 
 
 
@@ -182,7 +180,24 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKManager.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelCloudBeacon"></a><code>KTKDeviceModelCloudBeacon</code></dt>
+<dd>
+
+
+<p>Cloud Beacon</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
@@ -195,20 +210,11 @@
                     
 
                     
-                    <div class="method-subsection see-also-section">
-                        <h4 class="method-subtitle">See Also</h4>
-                        <ul>
-                            
-                            <li><code><p><a href="https://support.kontakt.io/hc/en-gb/articles/204897781-6-User-types-roles-Managers">https://support.kontakt.io/hc/en-gb/articles/204897781-6-User-types-roles-Managers</a></p></code></li>
-                            
-                        </ul>
-                    </div>
-                    
 
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKManager.h</code></p>
+                        <p><code class="declared-in-ref">KTKDeviceDefinitions.h</code></p>
                     </div>
                     
                     
