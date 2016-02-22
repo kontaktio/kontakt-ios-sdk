@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.0.8
+//  Version: 1.0.9
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -81,6 +81,32 @@ typedef NS_ENUM(NSInteger, KTKDeviceSpecification) {
      *  Standard specification.
      */
     KTKDeviceSpecificationStandard = 1
+};
+
+/**
+ *  A kontakt device models.
+ */
+typedef NS_ENUM(NSInteger, KTKDeviceModel) {
+    /**
+     *  Invalid value.
+     */
+    KTKDeviceModelInvalid  = -1,
+    /**
+     *  Smart Beacon
+     */
+    KTKDeviceModelSmartBeacon = 1,
+    /**
+     *  USB Beacon
+     */
+    KTKDeviceModelUSBBeacon = 2,
+    /**
+     *  Sensor Beacon
+     */
+    KTKDeviceModelSensorBeacon = 3,
+    /**
+     *  Cloud Beacon
+     */
+    KTKDeviceModelCloudBeacon = 4
 };
 
 /**
