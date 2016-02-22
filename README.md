@@ -664,6 +664,12 @@ More code samples and scenarios will be covered in our sample project on [github
 Kontakt.io iOS SDK makes extensive use of two native iOS frameworks: [Core Location](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html "Core Location Framework Reference") and [Core Bluetooth](https://developer.apple.com/library/ios/documentation/CoreBluetooth/Reference/CoreBluetooth_Framework/_index.html "Core Bluetooth Framework Reference"). It is important to understand that although both of them use Bluetooth Low Energy, they are separate technologies and do not have much in common. 
 
 ## Changelog
+### iOS SDK V1.0.9 - Released 22 February 2016
+* Added model property to KTKDevice (USB beacon support)
+* SDK now uses API version 9
+* KTKDevice minor improvements    
+* USB beacon management support
+
 ### iOS SDK V1.0.8 - Released 19 February 2016
 * Secure beacon region fix
 
