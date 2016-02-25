@@ -1,6 +1,6 @@
-# iOS SDK Quickstart
+# ~~iOS~~ iOS/tvOS/OSX SDK Quickstart
 
-> This is a quickstart page for the **new** iOS SDK. As it is re-written completely, we have set the versioning back to 1.0. 
+> This is a quickstart page for the **new** ~~iOS~~ iOS/tvOS/OSX SDK. As it is re-written completely, we have set the versioning back to 1.0. 
 > This new SDK is not backwards compatible with our [previous iOS SDK](http://developer.kontakt.io/ios-sdk/quickstart-old/).
 
 ## Administration App
@@ -15,13 +15,14 @@ Video will be posted soon.
 
 ## Overview
 
-This document shows you a quick way to start using the Kontakt.io iOS SDK in location-aware apps. You will find code examples for core features and best practices that we recommend developers follow.
+This document shows you a quick way to start using the Kontakt.io SDK in location-aware apps. You will find code examples for core features and best practices that we recommend developers follow.
 
 You can find more detailed information in the [Appledocs](http://developer.kontakt.io/ios-sdk/appledocs/).
 
 ##Changes
 This version of the SDK has been completely re-written from scratch since version 6.2. It contains a number of new features which you can read about more compleyely in the  [Appledocs](http://developer.kontakt.io/ios-sdk/appledocs/), but a high level review of what's changed includes:
 
+* **Added support for iOS, tvOS and OSX**
 * Improved Swift 2.0 support
 * All classes are thread safe
 * Support for Kontakt.io Secure Communication and Kontakt.io Secure Shuffling. Better security throughout the app as well to help suppport this. 
@@ -31,9 +32,9 @@ This version of the SDK has been completely re-written from scratch since versio
 * All calls are now ascynchronous; before they were all synchronous
 * Suport for Carthage
 
-## Installing the iOS SDK
+## Installing the ~~iOS~~ iOS/tvOS/OSX SDK
 
-To use the Kontakt.io iOS SDK in your project, the minimum deployment target must be iOS 8.0.
+To use the Kontakt.io SDK in your project, the minimum deployment target must be iOS 8.0 or OSX 10.9 or tvOS 9.0.
 
 ### CocoaPods
 
@@ -43,7 +44,7 @@ To use the Kontakt.io iOS SDK in your project, the minimum deployment target mus
 $ gem install cocoapods
 ```
 
-To integrate the Kontakt.io iOS SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate the Kontakt.io ~~iOS~~ iOS/tvOS/OSX SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ``` ruby
 platform :ios, '8.0'
@@ -71,14 +72,14 @@ $ brew update
 $ brew install carthage
 ```
 
-1. To integrate Kontakt.io iOS SDK into your Xcode project using Carthage, specify it in your `Cartfile`:
+1. To integrate Kontakt.io SDK into your Xcode project using Carthage, specify it in your `Cartfile`:
 
   ``` bash
   github "kontaktio/kontakt-ios-sdk" ~> 1.0
   ```
 
 2. Run `carthage update` to build the framework.
-3. On your application targets `General` settings tab, in the `Linked Frameworks and Libraries` section, drag the `KontaktSDK.framework` from the `Carthage/Build/iOS` folder on disk.
+3. On your application targets `General` settings tab, in the `Linked Frameworks and Libraries` section, drag the `KontaktSDK.framework` from the `Carthage/Build/(iOS/tvOS/Mac)` folder on disk.
 4. On your application targets’ `Build Phases` settings tab, click the `+` icon and choose `New Run Script Phase`. Create a Run Script with the following contents:
 
   ```sh
@@ -89,6 +90,18 @@ $ brew install carthage
 
   ```
   $(SRCROOT)/Carthage/Build/iOS/KontaktSDK.framework
+  ```
+  
+  or 
+  
+  ```
+  $(SRCROOT)/Carthage/Build/tvOS/KontaktSDK.framework
+  ```
+  
+  or 
+  
+  ```
+  $(SRCROOT)/Carthage/Build/Mac/KontaktSDK.framework
   ```
   
   This script works around an [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216) triggered by universal binaries and ensures that necessary bitcode-related files and dSYMs are copied when archiving.
@@ -107,7 +120,7 @@ When archiving your application for submission to the App Store or TestFlight, X
 $ git init
 ```
 
-- Add Kontakt.io iOS SDK as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+- Add Kontakt.io SDK as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
 
 ``` bash
 $ git submodule add https://github.com/kontaktio/kontakt-ios-sdk.git
@@ -203,7 +216,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 
 ## Interacting with Beacons - monitoring a region
-In the following example we'll show you how to can create a simple application to monitor beacons for a specific region using the Kontakt.io iOS SDK.
+In the following example we'll show you how to can create a simple application to monitor beacons for a specific region using the Kontakt.io SDK.
 
 ---
 
@@ -668,6 +681,9 @@ More code samples and scenarios will be covered in our sample project on [github
 Kontakt.io iOS SDK makes extensive use of two native iOS frameworks: [Core Location](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html "Core Location Framework Reference") and [Core Bluetooth](https://developer.apple.com/library/ios/documentation/CoreBluetooth/Reference/CoreBluetooth_Framework/_index.html "Core Bluetooth Framework Reference"). It is important to understand that although both of them use Bluetooth Low Energy, they are separate technologies and do not have much in common. 
 
 ## Changelog
+### ~~iOS~~ iOS/tvOS/OSX SDK V1.1.0-V1.1.1 - Released 25 February 2016
+* We have added support to our SDK for iOS/tvOS/OSX
+
 ### iOS SDK V1.0.9 - Released 22 February 2016
 * Added model property to KTKDevice (USB beacon support)
 * SDK now uses API version 9
