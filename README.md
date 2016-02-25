@@ -50,7 +50,7 @@ To integrate the Kontakt.io ~~iOS~~ iOS/tvOS/OSX SDK into your Xcode project usi
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'KontaktSDK', '~> 1.0'
+pod 'KontaktSDK', '~> 1.1'
 ```
 
 Then, run the following command:
@@ -75,7 +75,7 @@ $ brew install carthage
 1. To integrate Kontakt.io SDK into your Xcode project using Carthage, specify it in your `Cartfile`:
 
   ``` bash
-  github "kontaktio/kontakt-ios-sdk" ~> 1.0
+  github "kontaktio/kontakt-ios-sdk" ~> 1.1
   ```
 
 2. Run `carthage update` to build the framework.
