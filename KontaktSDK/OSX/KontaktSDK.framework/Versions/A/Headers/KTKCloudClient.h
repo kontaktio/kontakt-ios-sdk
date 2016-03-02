@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.1.1
+//  Version: 1.1.2
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -59,7 +59,7 @@ extern NSDictionary * _Nullable KTKCloudErrorFromError(NSError * _Nullable error
  *  @see KTKKontaktResponseCompletionBlock
  *  @see KTKKontaktResponse
  */
-- (void)GET:(NSString*)endpoint parameters:(NSDictionary* _Nullable)dictionary completion:(KTKKontaktResponseCompletionBlock)completion;
+- (void)GET:(NSString*)endpoint parameters:(NSDictionary* _Nullable)dictionary completion:(KTKKontaktResponseCompletionBlock _Nullable)completion;
 
 /**
  *  Runs a cloud API call with a GET request for the specified url object.
@@ -75,7 +75,7 @@ extern NSDictionary * _Nullable KTKCloudErrorFromError(NSError * _Nullable error
  *  @see [KTKKontaktResponse previousResultsURL]
  *  @see [KTKKontaktResponse nextResultsURL]
  */
-- (void)GET:(NSURL*)url completion:(KTKKontaktResponseCompletionBlock)completion;
+- (void)GET:(NSURL*)url completion:(KTKKontaktResponseCompletionBlock _Nullable)completion;
 
 /**
  *  Runs a cloud API call with a POST request.
@@ -87,7 +87,7 @@ extern NSDictionary * _Nullable KTKCloudErrorFromError(NSError * _Nullable error
  *  @see KTKKontaktResponseCompletionBlock
  *  @see KTKKontaktResponse
  */
-- (void)POST:(NSString*)endpoint parameters:(NSDictionary* _Nullable)dictionary completion:(KTKKontaktResponseCompletionBlock)completion;
+- (void)POST:(NSString*)endpoint parameters:(NSDictionary* _Nullable)dictionary completion:(KTKKontaktResponseCompletionBlock _Nullable)completion;
 
 #pragma mark - Objects Request Methods
 ///--------------------------------------------------------------------

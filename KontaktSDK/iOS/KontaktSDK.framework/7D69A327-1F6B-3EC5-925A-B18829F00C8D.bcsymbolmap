@@ -1926,8 +1926,9 @@ _unnamed_cfstring_18
 -[KTKCloudClientSessionManager tasks]
 __37-[KTKCloudClientSessionManager tasks]_block_invoke
 -[KTKCloudClientSessionManager POST:parameters:completionHandler:]
+-[KTKCloudClientSessionManager JSON:parameters:completionHandler:]
 -[KTKCloudClientSessionManager GET:parameters:completionHandler:]
--[KTKCloudClientSessionManager dataTaskWithMethod:path:parameters:completionHandler:]
+-[KTKCloudClientSessionManager dataTaskWithMethod:path:parameters:encoder:completionHandler:]
 -[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:]
 __70-[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:]_block_invoke
 __copy_helper_block_71
@@ -2010,10 +2011,8 @@ OBJC_CLASS_NAME_167
 l_OBJC_CLASS_PROTOCOLS_$_KTKCloudClientSessionManager
 l_OBJC_METACLASS_RO_$_KTKCloudClientSessionManager
 OBJC_METH_VAR_NAME_169
-OBJC_METH_VAR_NAME_179
 l_OBJC_$_INSTANCE_METHODS_KTKCloudClientSessionManager
-OBJC_METH_VAR_TYPE_188
-OBJC_METH_VAR_TYPE_190
+OBJC_METH_VAR_TYPE_191
 l_OBJC_$_INSTANCE_VARIABLES_KTKCloudClientSessionManager
 l_OBJC_$_PROP_LIST_KTKCloudClientSessionManager
 l_OBJC_CLASS_RO_$_KTKCloudClientSessionManager
@@ -2033,8 +2032,9 @@ OBJC_METH_VAR_TYPE_190
 -[KTKCloudClientSessionManager URLSession:didBecomeInvalidWithError:]
 -[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]
 -[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:]
--[KTKCloudClientSessionManager dataTaskWithMethod:path:parameters:completionHandler:]
+-[KTKCloudClientSessionManager dataTaskWithMethod:path:parameters:encoder:completionHandler:]
 -[KTKCloudClientSessionManager GET:parameters:completionHandler:]
+-[KTKCloudClientSessionManager JSON:parameters:completionHandler:]
 -[KTKCloudClientSessionManager POST:parameters:completionHandler:]
 -[KTKCloudClientSessionManager tasks]
 -[KTKCloudClientSessionManager initWithBaseURL:configuration:]
@@ -2742,12 +2742,72 @@ kEddystoneURLSchemeArray
 -[KTKEddystoneURLValueTransformer transformedValue:]
 +[KTKEddystoneURLValueTransformer allowsReverseTransformation]
 +[KTKEddystoneURLValueTransformer transformedValueClass]
-+[KTKCloudEventsManager reportEvent:]
++[KTKCloudEventsManager sharedInstance]
+__39+[KTKCloudEventsManager sharedInstance]_block_invoke
+-[KTKCloudEventsManager init]
+-[KTKCloudEventsManager dealloc]
+-[KTKCloudEventsManager processEvents]
+__38-[KTKCloudEventsManager processEvents]_block_invoke
+__copy_helper_block_36
+__destroy_helper_block_37
+__38-[KTKCloudEventsManager processEvents]_block_invoke60
+__38-[KTKCloudEventsManager processEvents]_block_invoke_2
+__copy_helper_block_63
+__destroy_helper_block_64
+-[KTKCloudEventsManager reportEvent:]
+__37-[KTKCloudEventsManager reportEvent:]_block_invoke
+__37-[KTKCloudEventsManager reportEvent:]_block_invoke_2
+__copy_helper_block_76
+__destroy_helper_block_77
+__copy_helper_block_79
+__destroy_helper_block_80
+-[KTKCloudEventsManager cloudEventsManagerQueue]
+-[KTKCloudEventsManager setCloudEventsManagerQueue:]
+-[KTKCloudEventsManager events]
+-[KTKCloudEventsManager setEvents:]
+-[KTKCloudEventsManager synchronizationTime]
+-[KTKCloudEventsManager setSynchronizationTime:]
+-[KTKCloudEventsManager .cxx_destruct]
+sharedInstance._sharedInstance
+sharedInstance.onceToken
+__block_descriptor_tmp38
+.str48
+_unnamed_cfstring_49
+OBJC_CLASSLIST_REFERENCES_$_55
+__block_descriptor_tmp65
+__block_descriptor_tmp69
+OBJC_IVAR_$_KTKCloudEventsManager._cloudEventsManagerQueue
+__block_descriptor_tmp78
+OBJC_IVAR_$_KTKCloudEventsManager._events
+OBJC_IVAR_$_KTKCloudEventsManager._synchronizationTime
+OBJC_CLASS_NAME_82
 l_OBJC_$_CLASS_METHODS_KTKCloudEventsManager
 l_OBJC_METACLASS_RO_$_KTKCloudEventsManager
+OBJC_CLASS_NAME_83
+OBJC_METH_VAR_TYPE_86
+OBJC_METH_VAR_TYPE_89
+l_OBJC_$_INSTANCE_METHODS_KTKCloudEventsManager
+OBJC_METH_VAR_TYPE_91
+l_OBJC_$_INSTANCE_VARIABLES_KTKCloudEventsManager
+OBJC_PROP_NAME_ATTR_97
+OBJC_PROP_NAME_ATTR_98
+OBJC_PROP_NAME_ATTR_99
+OBJC_PROP_NAME_ATTR_100
+l_OBJC_$_PROP_LIST_KTKCloudEventsManager
 l_OBJC_CLASS_RO_$_KTKCloudEventsManager
-+[KTKCloudEventsManager reportEvent:]
+-[KTKCloudEventsManager .cxx_destruct]
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Events/KTKCloudEventsManager.m
+-[KTKCloudEventsManager setSynchronizationTime:]
+-[KTKCloudEventsManager synchronizationTime]
+-[KTKCloudEventsManager setEvents:]
+-[KTKCloudEventsManager events]
+-[KTKCloudEventsManager setCloudEventsManagerQueue:]
+-[KTKCloudEventsManager cloudEventsManagerQueue]
+-[KTKCloudEventsManager reportEvent:]
+-[KTKCloudEventsManager processEvents]
+-[KTKCloudEventsManager dealloc]
+-[KTKCloudEventsManager init]
++[KTKCloudEventsManager sharedInstance]
 -[KTKDevice initWithUniqueID:]
 -[KTKDevice getCredentialsWithCompletion:]
 __42-[KTKDevice getCredentialsWithCompletion:]_block_invoke
@@ -2945,6 +3005,8 @@ _unnamed_cfstring_354
 _unnamed_cfstring_356
 .str357
 _unnamed_cfstring_358
+.str359
+_unnamed_cfstring_360
 KTKDeviceStringFromType
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Model/KTKDevice.m
 KTKDeviceAccessFromString
@@ -3037,7 +3099,6 @@ OBJC_IVAR_$_KTKProximityID._securityProximityUUID
 OBJC_IVAR_$_KTKProximityID._shuffled
 OBJC_IVAR_$_KTKProximityID._shared
 OBJC_METH_VAR_TYPE_81
-OBJC_METH_VAR_TYPE_89
 l_OBJC_$_CLASS_METHODS_KTKProximityID
 OBJC_METH_VAR_TYPE_92
 OBJC_METH_VAR_TYPE_94
@@ -3150,6 +3211,7 @@ OBJC_PROP_NAME_ATTR_73
 -[KTKCloudEventBattery init]
 -[KTKCloudEventBattery dictionaryRepresentation]
 -[KTKCloudEventBattery hash]
+-[KTKCloudEventBattery isEqual:]
 -[KTKCloudEventBattery type]
 -[KTKCloudEventBattery setType:]
 -[KTKCloudEventBattery date]
@@ -3165,16 +3227,14 @@ OBJC_IVAR_$_KTKCloudEventBattery._type
 OBJC_IVAR_$_KTKCloudEventBattery._date
 OBJC_IVAR_$_KTKCloudEventBattery._uniqueID
 OBJC_IVAR_$_KTKCloudEventBattery._batteryLevel
-OBJC_METH_VAR_TYPE_35
 OBJC_METH_VAR_TYPE_37
 OBJC_METH_VAR_TYPE_39
-OBJC_CLASS_NAME_40
-OBJC_METH_VAR_TYPE_42
-OBJC_METH_VAR_TYPE_47
+OBJC_METH_VAR_TYPE_41
+OBJC_CLASS_NAME_42
+OBJC_METH_VAR_TYPE_46
 OBJC_METH_VAR_TYPE_49
 OBJC_METH_VAR_TYPE_51
-OBJC_CLASS_NAME_72
-OBJC_PROP_NAME_ATTR_74
+OBJC_CLASS_NAME_74
 OBJC_PROP_NAME_ATTR_75
 OBJC_PROP_NAME_ATTR_76
 OBJC_PROP_NAME_ATTR_77
@@ -3187,14 +3247,12 @@ OBJC_PROP_NAME_ATTR_78
 l_OBJC_LABEL_PROTOCOL_$_KTKCloudEvent
 l_OBJC_CLASS_PROTOCOLS_$_KTKCloudEventBattery
 l_OBJC_METACLASS_RO_$_KTKCloudEventBattery
-OBJC_CLASS_NAME_83
+OBJC_CLASS_NAME_85
+OBJC_METH_VAR_TYPE_87
 l_OBJC_$_INSTANCE_METHODS_KTKCloudEventBattery
-OBJC_METH_VAR_TYPE_91
 l_OBJC_$_INSTANCE_VARIABLES_KTKCloudEventBattery
-OBJC_PROP_NAME_ATTR_97
-OBJC_PROP_NAME_ATTR_98
-OBJC_PROP_NAME_ATTR_99
-OBJC_PROP_NAME_ATTR_100
+OBJC_PROP_NAME_ATTR_101
+OBJC_PROP_NAME_ATTR_102
 l_OBJC_$_PROP_LIST_KTKCloudEventBattery
 l_OBJC_CLASS_RO_$_KTKCloudEventBattery
 -[KTKCloudEventBattery .cxx_destruct]
@@ -3209,6 +3267,7 @@ OBJC_PROP_NAME_ATTR_100
 -[KTKCloudEventBattery date]
 -[KTKCloudEventBattery setType:]
 -[KTKCloudEventBattery type]
+-[KTKCloudEventBattery isEqual:]
 -[KTKCloudEventBattery hash]
 -[KTKCloudEventBattery dictionaryRepresentation]
 -[KTKCloudEventBattery init]
@@ -3365,16 +3424,12 @@ OBJC_PROP_NAME_ATTR_170
 __48-[KTKDeviceFirmwareUpdateOperation setFirmware:]_block_invoke
 -[KTKDeviceFirmwareUpdateOperation execute]
 __43-[KTKDeviceFirmwareUpdateOperation execute]_block_invoke
-__copy_helper_block_36
-__destroy_helper_block_37
 __43-[KTKDeviceFirmwareUpdateOperation execute]_block_invoke42
 __copy_helper_block_45
 __destroy_helper_block_46
 -[KTKDeviceFirmwareUpdateOperation cancel]
 -[KTKDeviceFirmwareUpdateOperation finished:]
 __45-[KTKDeviceFirmwareUpdateOperation finished:]_block_invoke
-__copy_helper_block_63
-__destroy_helper_block_64
 -[KTKDeviceFirmwareUpdateOperation evaluateConditions]
 __54-[KTKDeviceFirmwareUpdateOperation evaluateConditions]_block_invoke
 __copy_helper_block_70
@@ -3424,7 +3479,6 @@ OBJC_IVAR_$_KTKDeviceFirmwareUpdateOperation._firmware
 OBJC_CLASSLIST_REFERENCES_$_20
 __block_descriptor_tmp39
 __block_descriptor_tmp48
-__block_descriptor_tmp65
 __block_descriptor_tmp72
 OBJC_CLASSLIST_REFERENCES_$_73
 OBJC_CLASSLIST_REFERENCES_$_84
@@ -3530,7 +3584,6 @@ __destroy_helper_block_135
 -[KTKShuffleObject type]
 -[KTKShuffleObject setType:]
 -[KTKShuffleObject .cxx_destruct]
-__block_descriptor_tmp38
 OBJC_CLASSLIST_REFERENCES_$_94
 OBJC_CLASSLIST_REFERENCES_$_119
 OBJC_IVAR_$_KTKShuffleObject._type
@@ -3554,6 +3607,7 @@ OBJC_METH_VAR_TYPE_156
 l_OBJC_$_INSTANCE_METHODS_KTKShuffleObject
 OBJC_METH_VAR_NAME_167
 OBJC_METH_VAR_TYPE_168
+OBJC_METH_VAR_NAME_179
 OBJC_METH_VAR_TYPE_180
 l_OBJC_$_INSTANCE_VARIABLES_KTKShuffleObject
 l_OBJC_$_PROP_LIST_KTKShuffleObject
@@ -3647,6 +3701,7 @@ kDeviceSecureMinorRange
 OBJC_CLASSLIST_REFERENCES_$_30
 kDeviceUniqueIDRange
 OBJC_IVAR_$_KTKNearbyDevice._updatedAt
+OBJC_CLASSLIST_REFERENCES_$_78
 OBJC_IVAR_$_KTKNearbyDevice._name
 OBJC_IVAR_$_KTKNearbyDevice._uniqueID
 OBJC_IVAR_$_KTKNearbyDevice._firmwareVersion
@@ -3663,8 +3718,10 @@ OBJC_IVAR_$_KTKNearbyDevice._major
 OBJC_IVAR_$_KTKNearbyDevice._minor
 OBJC_IVAR_$_KTKNearbyDevice._reported
 l_OBJC_$_CLASS_METHODS_KTKNearbyDevice
+OBJC_CLASS_NAME_145
 l_OBJC_CLASS_PROTOCOLS_$_KTKNearbyDevice
 l_OBJC_METACLASS_RO_$_KTKNearbyDevice
+OBJC_CLASS_NAME_146
 l_OBJC_$_INSTANCE_METHODS_KTKNearbyDevice
 l_OBJC_$_INSTANCE_VARIABLES_KTKNearbyDevice
 OBJC_PROP_NAME_ATTR_208
@@ -3679,6 +3736,8 @@ OBJC_PROP_NAME_ATTR_216
 OBJC_PROP_NAME_ATTR_217
 OBJC_PROP_NAME_ATTR_218
 OBJC_PROP_NAME_ATTR_219
+OBJC_PROP_NAME_ATTR_220
+OBJC_PROP_NAME_ATTR_221
 l_OBJC_$_PROP_LIST_KTKNearbyDevice
 l_OBJC_CLASS_RO_$_KTKNearbyDevice
 -[KTKNearbyDevice .cxx_destruct]
@@ -3849,7 +3908,6 @@ KTKKontaktProximityUUID.onceToken
 OBJC_IVAR_$_KTKBeaconManager._rangedRegions
 OBJC_IVAR_$_KTKBeaconManager._monitoredRegions
 OBJC_CLASSLIST_REFERENCES_$_48
-OBJC_CLASSLIST_REFERENCES_$_55
 OBJC_IVAR_$_KTKBeaconManager._regionsMapping
 __block_descriptor_tmp66
 __block_descriptor_tmp73
@@ -4117,6 +4175,7 @@ OBJC_PROP_NAME_ATTR_65
 OBJC_PROP_NAME_ATTR_66
 OBJC_PROP_NAME_ATTR_67
 OBJC_PROP_NAME_ATTR_68
+OBJC_PROP_NAME_ATTR_74
 l_OBJC_$_PROP_LIST_KTKKontaktResponse
 l_OBJC_CLASS_RO_$_KTKKontaktResponse
 -[KTKKontaktResponse .cxx_destruct]
@@ -4155,9 +4214,7 @@ OBJC_IVAR_$_KTKNumberValueTransformer._type
 OBJC_IVAR_$_KTKNumberValueTransformer._validRange
 l_OBJC_$_CLASS_METHODS_KTKNumberValueTransformer
 l_OBJC_METACLASS_RO_$_KTKNumberValueTransformer
-OBJC_METH_VAR_TYPE_41
 OBJC_METH_VAR_TYPE_43
-OBJC_METH_VAR_TYPE_46
 l_OBJC_$_INSTANCE_METHODS_KTKNumberValueTransformer
 OBJC_METH_VAR_TYPE_48
 l_OBJC_$_INSTANCE_VARIABLES_KTKNumberValueTransformer
@@ -4215,12 +4272,11 @@ OBJC_IVAR_$_FileOperations._writingPacketNumber
 OBJC_IVAR_$_FileOperations._bluetoothPeripheral
 OBJC_IVAR_$_FileOperations._dfuPacketCharacteristic
 l_OBJC_METACLASS_RO_$_FileOperations
+OBJC_CLASS_NAME_72
 OBJC_METH_VAR_TYPE_75
 OBJC_METH_VAR_TYPE_77
 OBJC_METH_VAR_TYPE_78
 OBJC_METH_VAR_TYPE_80
-OBJC_METH_VAR_TYPE_86
-OBJC_METH_VAR_TYPE_87
 l_OBJC_$_INSTANCE_METHODS_FileOperations
 OBJC_METH_VAR_TYPE_90
 OBJC_METH_VAR_TYPE_100
@@ -4451,6 +4507,7 @@ OBJC_CLASS_NAME_285
 OBJC_IVAR_$_KTKDeviceCredentials._uniqueID
 OBJC_IVAR_$_KTKDeviceCredentials._password
 OBJC_IVAR_$_KTKDeviceCredentials._masterPassword
+OBJC_METH_VAR_TYPE_47
 l_OBJC_$_CLASS_METHODS_KTKDeviceCredentials
 OBJC_CLASS_NAME_61
 OBJC_CLASS_NAME_62
@@ -4515,8 +4572,6 @@ OBJC_IVAR_$_KTKEddystoneTLM._type
 .str44
 _unnamed_cfstring_45
 OBJC_IVAR_$_KTKEddystoneTLM._version
-.str48
-_unnamed_cfstring_49
 OBJC_IVAR_$_KTKEddystoneTLM._batteryVoltage
 OBJC_IVAR_$_KTKEddystoneTLM._temperature
 OBJC_IVAR_$_KTKEddystoneTLM._advertisingCount
@@ -4579,7 +4634,6 @@ OBJC_CLASS_NAME_68
 OBJC_CLASS_NAME_73
 l_OBJC_CLASS_PROTOCOLS_$_KTKSecureEddystoneRegion
 l_OBJC_METACLASS_RO_$_KTKSecureEddystoneRegion
-OBJC_CLASS_NAME_74
 l_OBJC_$_INSTANCE_METHODS_KTKSecureEddystoneRegion
 l_OBJC_$_INSTANCE_VARIABLES_KTKSecureEddystoneRegion
 l_OBJC_$_PROP_LIST_KTKSecureEddystoneRegion
@@ -4768,7 +4822,7 @@ KTKPercentEscapedQueryStringKeyFromStringWithEncoding
 -[KTKQueryStringPair value]
 -[KTKQueryStringPair setValue:]
 -[KTKQueryStringPair .cxx_destruct]
-+[NSURLRequest(Kontakt) ktk_HTTPRequestBySerializingRequest:withParameters:]
++[NSURLRequest(Kontakt) ktk_HTTPRequestBySerializingRequest:encoder:withParameters:]
 OBJC_IVAR_$_KTKQueryStringPair._field
 OBJC_IVAR_$_KTKQueryStringPair._value
 l_OBJC_METACLASS_RO_$_KTKQueryStringPair
@@ -4784,17 +4838,18 @@ OBJC_PROP_NAME_ATTR_33
 l_OBJC_CLASS_RO_$_KTKQueryStringPair
 OBJC_CLASSLIST_REFERENCES_$_37
 OBJC_CLASSLIST_REFERENCES_$_44
-OBJC_CLASS_NAME_122
+.str122
+_unnamed_cfstring_123
 l_OBJC_$_CATEGORY_CLASS_METHODS_NSURLRequest_$_Kontakt
 l_OBJC_$_CATEGORY_NSURLRequest_$_Kontakt
-.str124
-_unnamed_cfstring_125
+.str130
+_unnamed_cfstring_131
 /var/folders/m4/4lk8ngxd0t33kt55gyy0wkd40000gn/C/org.llvm.clang.stoprocent/ModuleCache/64599VMJPC1M/CoreFoundation-10I2D2XL7L7X9.pcm
 CoreFoundation
 KTKQueryStringFromParametersWithEncoding
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Extension/NSURLRequest+Kontakt.m
 KTKPercentEscapedQueryStringValueFromStringWithEncoding
-+[NSURLRequest(Kontakt) ktk_HTTPRequestBySerializingRequest:withParameters:]
++[NSURLRequest(Kontakt) ktk_HTTPRequestBySerializingRequest:encoder:withParameters:]
 KTKQueryStringPairsFromKeyAndValue
 KTKQueryStringPairsFromDictionary
 -[KTKQueryStringPair .cxx_destruct]
@@ -4850,6 +4905,7 @@ OBJC_IVAR_$_KTKEddystoneRegion._URLDomain
 l_OBJC_$_CLASS_METHODS_KTKEddystoneRegion
 OBJC_CLASS_NAME_38
 OBJC_CLASS_NAME_39
+OBJC_METH_VAR_TYPE_42
 OBJC_CLASS_NAME_46
 l_OBJC_CLASS_PROTOCOLS_$_KTKEddystoneRegion
 l_OBJC_METACLASS_RO_$_KTKEddystoneRegion
@@ -5362,8 +5418,6 @@ OBJC_IVAR_$_KTKGroupOperation._totalOperations
 OBJC_CLASS_NAME_66
 l_OBJC_$_INSTANCE_METHODS_KTKGroupOperation
 l_OBJC_$_INSTANCE_VARIABLES_KTKGroupOperation
-OBJC_PROP_NAME_ATTR_101
-OBJC_PROP_NAME_ATTR_102
 l_OBJC_$_PROP_LIST_KTKGroupOperation
 l_OBJC_CLASS_RO_$_KTKGroupOperation
 -[KTKGroupOperation .cxx_destruct]
@@ -5425,8 +5479,8 @@ OBJC_IVAR_$_KTKDeviceWriteLegacyConfigurationOperation._configuration
 OBJC_IVAR_$_KTKDeviceWriteLegacyConfigurationOperation._synchronized
 l_OBJC_METACLASS_RO_$_KTKDeviceWriteLegacyConfigurationOperation
 OBJC_CLASS_NAME_179
+OBJC_METH_VAR_TYPE_188
 l_OBJC_$_INSTANCE_METHODS_KTKDeviceWriteLegacyConfigurationOperation
-OBJC_METH_VAR_TYPE_191
 OBJC_METH_VAR_TYPE_193
 l_OBJC_$_INSTANCE_VARIABLES_KTKDeviceWriteLegacyConfigurationOperation
 l_OBJC_$_PROP_LIST_KTKDeviceWriteLegacyConfigurationOperation
@@ -6023,6 +6077,7 @@ OBJC_IVAR_$_DFUOperations._dfuVersionCharacteristic
 OBJC_IVAR_$_DFUOperations._dfuFirmwareType
 OBJC_IVAR_$_DFUOperations._uploadTimeInSeconds
 OBJC_IVAR_$_DFUOperations._firmwareFileMetaData
+OBJC_METH_VAR_TYPE_190
 OBJC_CLASS_NAME_191
 l_OBJC_$_PROTOCOL_INSTANCE_METHODS_FileOperationsDelegate
 l_OBJC_$_PROTOCOL_METHOD_TYPES_FileOperationsDelegate
@@ -6152,8 +6207,6 @@ __destroy_helper_block_69
 -[KTKDevicesManager restartDeviceDiscoveryWithCompletion:]
 __58-[KTKDevicesManager restartDeviceDiscoveryWithCompletion:]_block_invoke
 __58-[KTKDevicesManager restartDeviceDiscoveryWithCompletion:]_block_invoke_2
-__copy_helper_block_76
-__destroy_helper_block_77
 -[KTKDevicesManager setDiscoveryInterval:]
 -[KTKDevicesManager validationTimer]
 -[KTKDevicesManager validateDevicesAge]
@@ -6228,7 +6281,6 @@ OBJC_IVAR_$_KTKDevicesManager._discoveryInterval
 OBJC_IVAR_$_KTKDevicesManager._discoveryMode
 __block_descriptor_tmp70
 __block_descriptor_tmp75
-__block_descriptor_tmp78
 OBJC_IVAR_$_KTKDevicesManager._validationTimer
 OBJC_IVAR_$_KTKDevicesManager._devicesManagerUtilityQueue
 __block_descriptor_tmp104
@@ -6492,6 +6544,11 @@ __copy_helper_block_144
 __destroy_helper_block_145
 __copy_helper_block_147
 __destroy_helper_block_148
+-[KTKCloudClient JSON:parameters:completion:]
+__45-[KTKCloudClient JSON:parameters:completion:]_block_invoke
+__45-[KTKCloudClient JSON:parameters:completion:]_block_invoke_2
+__copy_helper_block_152
+__destroy_helper_block_153
 -[KTKCloudClient getObjects:completion:]
 -[KTKCloudClient getObjects:parameters:completion:]
 -[KTKCloudClient getObject:primaryKey:completion:]
@@ -6506,33 +6563,27 @@ __destroy_helper_block_148
 -[KTKCloudClient responseSerializer]
 -[KTKCloudClient setResponseSerializer:]
 -[KTKCloudClient .cxx_destruct]
-sharedInstance._sharedInstance
-sharedInstance.onceToken
-OBJC_CLASSLIST_REFERENCES_$_78
 OBJC_CLASSLIST_REFERENCES_$_81
 OBJC_CLASSLIST_REFERENCES_$_114
 __block_descriptor_tmp138
 __block_descriptor_tmp141
 __block_descriptor_tmp149
-OBJC_CLASSLIST_REFERENCES_$_166
-.str169
-_unnamed_cfstring_170
+__block_descriptor_tmp154
+__block_descriptor_tmp157
 .str177
 _unnamed_cfstring_178
-.str181
-_unnamed_cfstring_182
+_unnamed_cfstring_186
 OBJC_IVAR_$_KTKCloudClient._manager
 OBJC_IVAR_$_KTKCloudClient._sessionConfiguration
 OBJC_IVAR_$_KTKCloudClient._responseSerializer
-OBJC_CLASS_NAME_183
 l_OBJC_$_CLASS_METHODS_KTKCloudClient
-OBJC_CLASS_NAME_194
-OBJC_METH_VAR_TYPE_236
+OBJC_METH_VAR_TYPE_195
+OBJC_METH_VAR_TYPE_224
+OBJC_CLASS_NAME_235
 l_OBJC_CLASS_PROTOCOLS_$_KTKCloudClient
 l_OBJC_METACLASS_RO_$_KTKCloudClient
-l_OBJC_$_INSTANCE_METHODS_KTKCloudClient
 OBJC_METH_VAR_TYPE_265
-OBJC_METH_VAR_TYPE_267
+l_OBJC_$_INSTANCE_METHODS_KTKCloudClient
 l_OBJC_$_INSTANCE_VARIABLES_KTKCloudClient
 l_OBJC_$_PROP_LIST_KTKCloudClient
 l_OBJC_CLASS_RO_$_KTKCloudClient
@@ -6552,6 +6603,7 @@ OBJC_METH_VAR_TYPE_267
 -[KTKCloudClient getObject:primaryKey:completion:]
 -[KTKCloudClient getObjects:parameters:completion:]
 -[KTKCloudClient getObjects:completion:]
+-[KTKCloudClient JSON:parameters:completion:]
 -[KTKCloudClient POST:parameters:completion:]
 -[KTKCloudClient GET:completion:]
 -[KTKCloudClient GET:parameters:completion:]
