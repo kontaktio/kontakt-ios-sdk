@@ -14,6 +14,7 @@ class ViewController: NSViewController {
     // =========================================================================
     // MARK: - Outlets
     
+    @IBOutlet weak var deviceUniqueID: NSTextField!    
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var searchItem: NSToolbarItem!
     @IBOutlet weak var arrayController: NSArrayController!
@@ -26,7 +27,9 @@ class ViewController: NSViewController {
     var devicesList: [KTKNearbyDevice] = []
     
     var selectedDevice: KTKNearbyDevice?
-
+    
+    var deviceConfiguration: [[String:AnyObject]] = [[:]]
+    
     var sortDescriptors = [
         NSSortDescriptor(key: "uniqueID", ascending: true),
         NSSortDescriptor(key: "name", ascending: true),
@@ -58,35 +61,44 @@ class ViewController: NSViewController {
             }
         }
     }
-    
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
 }
 
 // =========================================================================
-// MARK: - KTKDevicesManagerDelegate
+// MARK: - NSTableViewDelegate
 
 extension ViewController: NSTableViewDelegate {
     
     func tableViewSelectionDidChange(notification: NSNotification) {
         if let nearbyDevice = arrayController.selectedObjects.first as? KTKNearbyDevice where nearbyDevice != selectedDevice {
-            // Assign
-            selectedDevice = nearbyDevice
-            
-            // Call Cloud
-            if let uniqueID = selectedDevice?.uniqueID {
-                KTKCloudClient.sharedInstance().getObject(KTKDevice.self, primaryKey: uniqueID) { response, error in
+
+            if let uniqueID = nearbyDevice.uniqueID {
+
+                // Update Unique ID field
+                self.deviceUniqueID.stringValue = uniqueID
+                
+                // Fetch Device from the Cloud API
+                KTKCloudClient.sharedInstance().getObject(KTKDevice.self, primaryKey: uniqueID) { [weak self] response, error in
+                    guard let strongSelf = self else { return }
+                    
                     if let device = response?.objects?.first as? KTKDevice {
-                        
+                    
+                        strongSelf.willChangeValueForKey("deviceConfiguration")
+                        strongSelf.deviceConfiguration = [
+                            ["label": "Unique ID", "value": device.uniqueID],
+                            ["label": "Proximity UUID", "value": device.configuration.proximityUUID!.UUIDString],
+                            ["label": "Major", "value": device.configuration.major!],
+                            ["label": "Minor", "value": device.configuration.minor!],
+                            ["label": "Interval", "value": device.configuration.advertisingInterval!],
+                            ["label": "TX Power", "value": device.configuration.transmissionPower.rawValue],
+                            ["label": "Namespace ID", "value": device.configuration.namespaceID!],
+                            ["label": "Instance ID", "value": device.configuration.instanceID!]
+                        ]
+                        strongSelf.didChangeValueForKey("deviceConfiguration")
                     }
                 }
             }
-        }
-        else if arrayController.selectedObjects.count == 0 {
             
+            selectedDevice = nearbyDevice
         }
     }
 }
@@ -108,17 +120,15 @@ extension ViewController: NSToolbarDelegate {
 // MARK: - KTKDevicesManagerDelegate
 
 extension ViewController: KTKDevicesManagerDelegate {
-    
-    func devicesManagerDidFailToStartDiscovery(manager: KTKDevicesManager, withError error: NSError?) {
-        
-    }
-    
+
     func devicesManager(manager: KTKDevicesManager, didDiscoverDevices devices: [KTKNearbyDevice]?) {
         dispatch_async(dispatch_get_main_queue()) {
             if let devices = devices {
+                
                 self.willChangeValueForKey("devicesList")
                 self.devicesList = devices.map { ($0.copy() as! KTKNearbyDevice) }
                 self.didChangeValueForKey("devicesList")
+                
             }
         }
     }
