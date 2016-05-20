@@ -434,7 +434,7 @@ Check out Apple's guide to [Launching Your App on Devices](https://developer.app
 
 ``` Objective-C
 
-@interface ViewController () <KTKBluetoothManagerDelegate>
+@interface ViewController () <KTKEddystoneManagerDelegate>
 
 @property KTKEddystoneManager *eddystoneManager;
 
@@ -612,7 +612,7 @@ The Kontakt.io iOS SDK contains classes and methods that let you easily connect 
 ``` Objective-C
 @property KTKDevicesManager *devicesManager;
 ...
-self.devicesManager = [[KTKBluetoothManager alloc] initWithDelegate: self];
+self.devicesManager = [[KTKDevicesManager alloc] initWithDelegate: self];
 
 // Calling `startDevicesDiscoveryWithInterval:` will report devices every `interval` value you specify.
 [self.devicesManager startDevicesDiscoveryWithInterval:2.0];
