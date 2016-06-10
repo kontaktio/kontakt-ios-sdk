@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/KTKAction.h</key>
 		<data>
-		nv1kEkjnPhyn1Cqw42e34qI9AYg=
+		NNWn30NVAshViittCrVtZltqkJA=
 		</data>
 		<key>Headers/KTKActionContent.h</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Headers/KTKDevice.h</key>
 		<data>
-		UM/5vbHMrVGAFRyU/kuXUf5j4M8=
+		3vbbBty8ojRTR3EW+67g5oAVsHQ=
 		</data>
 		<key>Headers/KTKDeviceConfiguration.h</key>
 		<data>
-		PHdoA4mEKAm6zJi83Jq86jPKysw=
+		slGw+2bAjhQpugaGIJM3Dve3EGQ=
 		</data>
 		<key>Headers/KTKDeviceConnection.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/KTKDeviceDefinitions.h</key>
 		<data>
-		74E+bfi/2gwHhsjx1+mGTMFjYUs=
+		0Y6CdhjT9SeBtRFvWFlc8icFk30=
 		</data>
 		<key>Headers/KTKDevicesManager.h</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Headers/KTKFirmware.h</key>
 		<data>
-		tULJ+cYomYvJmJvAokYTtyHpYOc=
+		sUcDojC+bzvDQwFj4uCE/BB7+9c=
 		</data>
 		<key>Headers/KTKKontaktResponse.h</key>
 		<data>
@@ -87,10 +87,6 @@
 		<key>Headers/KTKNearbyDevice.h</key>
 		<data>
 		nyRf5bWsBwjP/YAGfe1+mgdTFu4=
-		</data>
-		<key>Headers/KTKProximity.h</key>
-		<data>
-		xhlY7H+z0nYf2/+zNBFaqG4x3nU=
 		</data>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
 		<data>
@@ -110,7 +106,7 @@
 		</data>
 		<key>Headers/NSData+Kontakt.h</key>
 		<data>
-		TRdX7fYGNsZyD+3djuq1wosC8oE=
+		MshPCyXTypqBb7mgryZ7Q7Wf0Nw=
 		</data>
 		<key>Headers/NSString+Kontakt.h</key>
 		<data>
@@ -118,7 +114,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		O5JGfmRr0O4pLZD7ovXtlt0ymDc=
+		1BBkRZ+awxvKjRlM8TlJfM4Jsv4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -128,121 +124,313 @@
 	<key>files2</key>
 	<dict>
 		<key>Headers/KTKAction.h</key>
-		<data>
-		nv1kEkjnPhyn1Cqw42e34qI9AYg=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			NNWn30NVAshViittCrVtZltqkJA=
+			</data>
+			<key>hash2</key>
+			<data>
+			LHZvior+g06b2wEe4E3VO+2GUTf7T1u6uYg4ZvZYouU=
+			</data>
+		</dict>
 		<key>Headers/KTKActionContent.h</key>
-		<data>
-		qjl48agM4upwPdnNN7APcT92ohc=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			qjl48agM4upwPdnNN7APcT92ohc=
+			</data>
+			<key>hash2</key>
+			<data>
+			AsNapEre4kXOeI0NwxrsquJjzCroBRJvAn9IMH9J0so=
+			</data>
+		</dict>
 		<key>Headers/KTKCloudClient.h</key>
-		<data>
-		0sUrDyDCo5iOxqmwMkVYkNi9uuk=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			0sUrDyDCo5iOxqmwMkVYkNi9uuk=
+			</data>
+			<key>hash2</key>
+			<data>
+			Qh+4AmPn532X4SFFPazCA90N0MJPxNaf3ge7B4WYM20=
+			</data>
+		</dict>
 		<key>Headers/KTKCloudModel.h</key>
-		<data>
-		eZX3f2Y4AVFR9v9QezU+RW19Qb8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			eZX3f2Y4AVFR9v9QezU+RW19Qb8=
+			</data>
+			<key>hash2</key>
+			<data>
+			BkWTJmr3wwkWeV6c3WsSwI98JSAUYRmdQBMCNjbVd4U=
+			</data>
+		</dict>
 		<key>Headers/KTKDevice.h</key>
-		<data>
-		UM/5vbHMrVGAFRyU/kuXUf5j4M8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			3vbbBty8ojRTR3EW+67g5oAVsHQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			k1zjmXnXzAMVV8ionG5raRWKvfVktRNT5eKPhecLo5s=
+			</data>
+		</dict>
 		<key>Headers/KTKDeviceConfiguration.h</key>
-		<data>
-		PHdoA4mEKAm6zJi83Jq86jPKysw=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			slGw+2bAjhQpugaGIJM3Dve3EGQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			Q4QcT8A23yeyON1nnyg9VcTuxCqDJxfcWbVZ4OWB4EA=
+			</data>
+		</dict>
 		<key>Headers/KTKDeviceConnection.h</key>
-		<data>
-		evIbyykm+21/hguw6C45ZMbI+1E=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			evIbyykm+21/hguw6C45ZMbI+1E=
+			</data>
+			<key>hash2</key>
+			<data>
+			5eg48OLbKpsoS45XTrkOKl3VQ4nFMuwXBofsEum5zZk=
+			</data>
+		</dict>
 		<key>Headers/KTKDeviceCredentials.h</key>
-		<data>
-		f7JO/ZkSybmBFyeM4Bxrdbc/144=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			f7JO/ZkSybmBFyeM4Bxrdbc/144=
+			</data>
+			<key>hash2</key>
+			<data>
+			LE+kD4Vm2cK1mkXoiGsDKvwlkOq3NvtQTuMdT5Qq6oY=
+			</data>
+		</dict>
 		<key>Headers/KTKDeviceDefinitions.h</key>
-		<data>
-		74E+bfi/2gwHhsjx1+mGTMFjYUs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			0Y6CdhjT9SeBtRFvWFlc8icFk30=
+			</data>
+			<key>hash2</key>
+			<data>
+			Lwgp0IjDZSM2h13sSqdxRX3MRYdavJrL07XT6Y2+JRA=
+			</data>
+		</dict>
 		<key>Headers/KTKDevicesManager.h</key>
-		<data>
-		8Dtyp9PvPqp2Xn02jkhK3Ai3P+Y=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			8Dtyp9PvPqp2Xn02jkhK3Ai3P+Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			D0ie+o8Fn2Khci+4HdymWbBPFMYxxWAi1UF8jW8onm8=
+			</data>
+		</dict>
 		<key>Headers/KTKEddystone.h</key>
-		<data>
-		i04i/3HmXJi0djfrVTQuPdnhEOE=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			i04i/3HmXJi0djfrVTQuPdnhEOE=
+			</data>
+			<key>hash2</key>
+			<data>
+			GoW4H+S2zpYIo+SC0QotlROBj7vg9mgSPSS6mzJbulo=
+			</data>
+		</dict>
 		<key>Headers/KTKEddystoneFrame.h</key>
-		<data>
-		MQDnVhobThSpdDeJXeQO49I3xjA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			MQDnVhobThSpdDeJXeQO49I3xjA=
+			</data>
+			<key>hash2</key>
+			<data>
+			wD+DeBIKe5u051FnKeYLGnG9/vQzEgTjFBjDhm4baQ8=
+			</data>
+		</dict>
 		<key>Headers/KTKEddystoneManager.h</key>
-		<data>
-		lSBc9Ub/7jQzrkgr/O89RGJEVu4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			lSBc9Ub/7jQzrkgr/O89RGJEVu4=
+			</data>
+			<key>hash2</key>
+			<data>
+			JG7HMe3D1nYnxHh46qmQbln0Le9PSnVGThEa3LUmOdg=
+			</data>
+		</dict>
 		<key>Headers/KTKEddystoneRegion.h</key>
-		<data>
-		KJ221FeU6w+CwFg7jGLn4bxbbv8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			KJ221FeU6w+CwFg7jGLn4bxbbv8=
+			</data>
+			<key>hash2</key>
+			<data>
+			hH0wN1WHEjKXOxGts8XlPV72hWSyMWh0PVuruuBJVrw=
+			</data>
+		</dict>
 		<key>Headers/KTKEddystoneTLM.h</key>
-		<data>
-		XBkvvEuIygyqJXs/Gx38GqMHyTA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			XBkvvEuIygyqJXs/Gx38GqMHyTA=
+			</data>
+			<key>hash2</key>
+			<data>
+			5QDNKf/mI5QHGXGQ9EVnl/+VPqBc+qfd4zOJ3YYdoD0=
+			</data>
+		</dict>
 		<key>Headers/KTKEddystoneUID.h</key>
-		<data>
-		9DuOJnNAOfSTzO1boFnmNIaThoI=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			9DuOJnNAOfSTzO1boFnmNIaThoI=
+			</data>
+			<key>hash2</key>
+			<data>
+			R0HPla1th9IbU6V81TS473KE0H3ytOUiRUncKKC6Urc=
+			</data>
+		</dict>
 		<key>Headers/KTKEddystoneURL.h</key>
-		<data>
-		Ord42YQmWp++XB2ncaPfWyImEPQ=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ord42YQmWp++XB2ncaPfWyImEPQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			1oTA6mS5DF5T52zPcVqaTaKjGrXCX/W8lefflfV/KBg=
+			</data>
+		</dict>
 		<key>Headers/KTKFirmware.h</key>
-		<data>
-		tULJ+cYomYvJmJvAokYTtyHpYOc=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			sUcDojC+bzvDQwFj4uCE/BB7+9c=
+			</data>
+			<key>hash2</key>
+			<data>
+			KfEuW1SXB7YvbjUw6iCqSw3eMO1skTbZ6I1l2xF4+eA=
+			</data>
+		</dict>
 		<key>Headers/KTKKontaktResponse.h</key>
-		<data>
-		kzhgBK/QFtqHSsmCQPracg7L8Oo=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			kzhgBK/QFtqHSsmCQPracg7L8Oo=
+			</data>
+			<key>hash2</key>
+			<data>
+			/MWVwWJK7CetFQlAyjcKs+k8SaLQbrnHZumx4ChM1ZM=
+			</data>
+		</dict>
 		<key>Headers/KTKManager.h</key>
-		<data>
-		iP8BXAAfM2JZ0kY/nbjCSA2/i3g=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			iP8BXAAfM2JZ0kY/nbjCSA2/i3g=
+			</data>
+			<key>hash2</key>
+			<data>
+			+XpoXg7yohnR5aOMyXIdvnkL8sz4aDSpzBkUutbGfMQ=
+			</data>
+		</dict>
 		<key>Headers/KTKNearbyDevice.h</key>
-		<data>
-		nyRf5bWsBwjP/YAGfe1+mgdTFu4=
-		</data>
-		<key>Headers/KTKProximity.h</key>
-		<data>
-		xhlY7H+z0nYf2/+zNBFaqG4x3nU=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			nyRf5bWsBwjP/YAGfe1+mgdTFu4=
+			</data>
+			<key>hash2</key>
+			<data>
+			VFE8hLjPT4LKr+vwvWp8PRvzoPCr3rKQRi4UkDsECmk=
+			</data>
+		</dict>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
-		<data>
-		Ul5qCaZWd2T7jG7lap455qKxeI4=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ul5qCaZWd2T7jG7lap455qKxeI4=
+			</data>
+			<key>hash2</key>
+			<data>
+			aDIXWPilJ+iQ+aOXiKlYmkbKRbsnZWvnWBgR0M7tR4I=
+			</data>
+		</dict>
 		<key>Headers/KTKVenue.h</key>
-		<data>
-		YEdf2W7WnUzKIYLEkla5W7lDv5s=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			YEdf2W7WnUzKIYLEkla5W7lDv5s=
+			</data>
+			<key>hash2</key>
+			<data>
+			jWSAsMpX8SlRcnSqLwJigqIDmejjHAm9p+BjQxnQo9A=
+			</data>
+		</dict>
 		<key>Headers/Kontakt.h</key>
-		<data>
-		6w+q2tLp7Re+b5zfIyNbyoSPZTQ=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			6w+q2tLp7Re+b5zfIyNbyoSPZTQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			Lr+QZaL13vK5Y8GG/l8CLCutLN5byi4SAtCyVJJ6tUw=
+			</data>
+		</dict>
 		<key>Headers/KontaktSDK.h</key>
-		<data>
-		4a5kYRe0nHDj9wLpYPpWhcwpwOc=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			4a5kYRe0nHDj9wLpYPpWhcwpwOc=
+			</data>
+			<key>hash2</key>
+			<data>
+			9mqH9kDXarSPobS3EUN3liQHMLkFC81I2lhT2R50lLI=
+			</data>
+		</dict>
 		<key>Headers/NSData+Kontakt.h</key>
-		<data>
-		TRdX7fYGNsZyD+3djuq1wosC8oE=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			MshPCyXTypqBb7mgryZ7Q7Wf0Nw=
+			</data>
+			<key>hash2</key>
+			<data>
+			SwrqAqgANzpi/rnjcTd6NAH5kYiN5jAF8FJO5aU2x9M=
+			</data>
+		</dict>
 		<key>Headers/NSString+Kontakt.h</key>
-		<data>
-		jbEKImuGKwEFAwg1ukMQLt1WYJc=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			jbEKImuGKwEFAwg1ukMQLt1WYJc=
+			</data>
+			<key>hash2</key>
+			<data>
+			KdZgTM3Qby/IZFWlduh2vW0ersIHJIFAyFy/fYNhnxQ=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		mvcq2xFz2/tES98qRIw4zcQAFQw=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			mvcq2xFz2/tES98qRIw4zcQAFQw=
+			</data>
+			<key>hash2</key>
+			<data>
+			/Ftcn9Cdd80jYPYAwQv3cNDHPr+uf+ns1mWLdDlTdgc=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

@@ -1,11 +1,13 @@
 //
 //  KontaktSDK
-//  Version: 1.1.3
+//  Version: 1.2.0-beta1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
 
 @import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - NSData (Kontakt)
 @interface NSData (Kontakt)
@@ -32,3 +34,5 @@
 + (NSData*)ktk_dataFromHexString:(NSString*)hexString;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.1.3
+//  Version: 1.2.0-beta1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -24,6 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  Kontakt unique identifier. (read-only)
  */
 @property (nonatomic, strong, readonly) NSString *uniqueID;
+
+/**
+ *  Mac Address of the device. (read-only)
+ */
+@property (nonatomic, strong, readonly) NSString *macAddress;
 
 /**
  *  Secure iBeacon proximity UUID. (read-only)

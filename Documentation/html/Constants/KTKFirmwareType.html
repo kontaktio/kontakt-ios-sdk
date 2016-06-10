@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceModel Constants Reference</title>
+	<title>KTKFirmwareType Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,13 +75,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceModel Constants Reference</h1>
+					<h1 class="title">KTKFirmwareType Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKDeviceDefinitions.h</td>
+	<td>KTKFirmware.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -91,24 +91,16 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKDeviceModel</h3>
+                    <h3 class="subsubtitle method-title">KTKFirmwareType</h3>
                     
-					
-					<div class="section section-overview">
-                        <p>A kontakt device models.</p>
-					</div>
-					
-					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSInteger, KTKDeviceModel ) { 
-	<a href="">KTKDeviceModelInvalid</a> = -1,
-	<a href="">KTKDeviceModelSmartBeacon</a> = 1,
-	<a href="">KTKDeviceModelUSBBeacon</a> = 2,
-	<a href="">KTKDeviceModelSensorBeacon</a> = 3,
-	<a href="">KTKDeviceModelCloudBeacon</a> = 4,
+                        <pre><code>typedef NS_ENUM(NSInteger, KTKFirmwareType ) { 
+	<a href="">KTKFirmwareTypeInvalid</a> = -1,
+	<a href="">KTKFirmwareTypeDefault</a> = 0,
+	<a href="">KTKFirmwareTypeArchive</a> = 1,
 };</code></pre>
                     
                     </div>
@@ -117,87 +109,32 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKDeviceModelInvalid"></a><code>KTKDeviceModelInvalid</code></dt>
+                            <dt><a name="" title="KTKFirmwareTypeInvalid"></a><code>KTKFirmwareTypeInvalid</code></dt>
 <dd>
-
-
-<p>Invalid value.</p>
-
-
-
-
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKFirmware.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelSmartBeacon"></a><code>KTKDeviceModelSmartBeacon</code></dt>
+                            <dt><a name="" title="KTKFirmwareTypeDefault"></a><code>KTKFirmwareTypeDefault</code></dt>
 <dd>
-
-
-<p>Smart Beacon</p>
-
-
-
-
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKFirmware.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelUSBBeacon"></a><code>KTKDeviceModelUSBBeacon</code></dt>
+                            <dt><a name="" title="KTKFirmwareTypeArchive"></a><code>KTKFirmwareTypeArchive</code></dt>
 <dd>
-
-
-<p>USB Beacon</p>
-
-
-
-
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDeviceModelSensorBeacon"></a><code>KTKDeviceModelSensorBeacon</code></dt>
-<dd>
-
-
-<p>Sensor Beacon</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDeviceModelCloudBeacon"></a><code>KTKDeviceModelCloudBeacon</code></dt>
-<dd>
-
-
-<p>Cloud Beacon</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKFirmware.h</code>.
 	</p>
 	
 </dd>
@@ -206,17 +143,6 @@
                     </div>
                     
 
-                    
-                    
-
-                    
-
-                    
-                    <div class="method-subsection declared-in-section">
-                        <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKDeviceDefinitions.h</code></p>
-                    </div>
-                    
                     
                     
                     

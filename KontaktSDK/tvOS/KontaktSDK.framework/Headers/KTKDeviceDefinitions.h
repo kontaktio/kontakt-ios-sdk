@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.1.3
+//  Version: 1.2.0-beta1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -41,6 +41,32 @@ typedef NS_ENUM(NSInteger, KTKDeviceAdvertisingProfile) {
      *  Eddystone Profile.
      */
     KTKDeviceAdvertisingProfileEddystone = 2
+};
+
+/**
+ *  A device Advertising Packets
+ */
+typedef NS_OPTIONS(NSInteger, KTKDeviceAdvertisingPackets) {
+    /**
+     *  iBeacon packet.
+     */
+    KTKDeviceAdvertisingPacketsIBeacon        = 1 << 1,
+    /**
+     *  Eddystone UID packet.
+     */
+    KTKDeviceAdvertisingPacketsEddystoneUID   = 2 << 2,
+    /**
+     *  Eddystone URL packet.
+     */
+    KTKDeviceAdvertisingPacketsEddystoneURL   = 2 << 3,
+    /**
+     *  Eddystone Telemetry packet.
+     */
+    KTKDeviceAdvertisingPacketsEddystoneTLM   = 2 << 4,
+    /**
+     *  All supprted Eddystone packets.
+     */
+    KTKDeviceAdvertisingPacketsEddystoneAll   = KTKDeviceAdvertisingPacketsEddystoneUID | KTKDeviceAdvertisingPacketsEddystoneURL | KTKDeviceAdvertisingPacketsEddystoneTLM,
 };
 
 /**
@@ -177,4 +203,33 @@ typedef NS_ENUM(NSInteger, KTKDeviceTransmissionPower) {
      *  Transmission power level 7 (4dBm).
      */
     KTKDeviceTransmissionPower7,
+};
+
+/**
+ *  A device motion detection modes.
+ */
+typedef NS_ENUM(NSInteger, KTKDeviceMotionDetectionMode) {
+    /**
+     *  Invalid mode.
+     */
+    KTKDeviceMotionDetectionModeInvalid  = -1,
+    /**
+     *  Motion detection is off.
+     */
+    KTKDeviceMotionDetectionModeOff      = 0,
+    /**
+     *  Motion detection is set in counting mode.
+     * 
+     *  You can access counter value by reading device configuration.
+     *  
+     *  @see [KTKDeviceConfiguration motionCounter]
+     */
+    KTKDeviceMotionDetectionModeCounting = 1,
+    /**
+     *  Motion detection is set in alarm mode.
+     *
+     *  When motion is detected device will advertise `4b6f6e74-616b-742e-696f-4d6f74696f6e` proximity UUID.
+     *  Major and minor values will remain the same.
+     */
+    KTKDeviceMotionDetectionModeAlarm    = 2
 };

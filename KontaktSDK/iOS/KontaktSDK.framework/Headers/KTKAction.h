@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.1.3
+//  Version: 1.2.0-beta1
 //
 //  Copyright © 2015 Kontakt.io. All rights reserved.
 //
@@ -10,7 +10,12 @@
 #if TARGET_OS_IOS
 typedef CLProximity Proximity;
 #else
-#import "KTKProximity.h"
+typedef NS_ENUM(NSInteger, KTKProximity) {
+    KTKProximityUnknown,
+    KTKProximityImmediate,
+    KTKProximityNear,
+    KTKProximityFar
+};
 typedef KTKProximity Proximity;
 #endif
 

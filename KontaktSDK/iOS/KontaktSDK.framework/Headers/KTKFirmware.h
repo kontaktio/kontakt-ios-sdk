@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.1.3
+//  Version: 1.2.0-beta1
 //
 //  Copyright © 2015 Kontakt.io. All rights reserved.
 //
@@ -8,6 +8,12 @@
 #import "KTKCloudModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef NS_ENUM(NSInteger, KTKFirmwareType) {
+    KTKFirmwareTypeInvalid = -1,
+    KTKFirmwareTypeDefault = 0,
+    KTKFirmwareTypeArchive = 1
+};
 
 #pragma mark - KTKFirmware (Interface)
 @interface KTKFirmware : NSObject <KTKCloudModel>
@@ -40,7 +46,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  An array of devices unique IDs which can be updated to this firmware version.
  */
-@property (nonatomic, strong, readonly) NSArray <NSString*> * _Nullable validDevicesUniqueID;
+@property (nonatomic, strong, readonly) NSArray <NSString*> * _Nullable validDevicesUniqueID __attribute__((deprecated("Please use `devicesUniqueID` property instead")));
+
+/**
+ *  An array of devices unique IDs which can be updated to this firmware version.
+ */
+@property (nonatomic, strong, readonly) NSArray <NSString*> * _Nullable devicesUniqueID;
 
 /**
  *  A Boolean indicating whether firmware can be applied or not.
@@ -62,13 +73,18 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign, readonly, getter=isOptional) BOOL optional;
 
+/**
+ *  The firmware type.
+ */
+@property (nonatomic, assign, readonly) KTKFirmwareType type;
+
 #pragma mark - Model Methods
 ///--------------------------------------------------------------------
 /// @name Model Methods
 ///--------------------------------------------------------------------
 
 /**
- *  Downloads the firmware bin data.
+ *  Downloads the firmware data. You can store
  *
  *  @param completion A block object to be executed when a download process finishes.
  */

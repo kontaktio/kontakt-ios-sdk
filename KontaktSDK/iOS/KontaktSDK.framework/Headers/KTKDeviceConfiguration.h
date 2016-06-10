@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.1.3
+//  Version: 1.2.0-beta1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Kontakt unique identifier. (read-only)
  */
-@property (nonatomic, copy, readonly) NSString *uniqueID;
+@property (nonatomic, copy, readonly) NSString * _Nullable uniqueID;
 
 /**
  *  Kontakt device local name.
@@ -53,7 +53,14 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see KTKDeviceAdvertisingProfile
  */
-@property (nonatomic, assign, readwrite) KTKDeviceAdvertisingProfile profile;
+@property (nonatomic, assign, readwrite) KTKDeviceAdvertisingProfile profile __attribute__((deprecated("Please use `packets` property instead")));
+
+/**
+ *  Advertising packets.
+ *
+ *  @see KTKDeviceAdvertisingPacket
+ */
+@property (nonatomic, assign, readwrite) KTKDeviceAdvertisingPackets packets;
 
 /**
  *  Advertising interval in milliseconds.
@@ -142,6 +149,31 @@ NS_ASSUME_NONNULL_BEGIN
  *  A date and time of when the response was recieved.
  */
 @property (nonatomic, strong, readonly) NSDate * _Nullable secureResponseTime;
+
+#pragma mark - Motion Sensor ( Selected Devices Only)
+///--------------------------------------------------------------------
+/// @name Motion Sensor ( Selected Devices Only)
+///--------------------------------------------------------------------
+
+/**
+ *  A motion detection mode.
+ */
+@property (nonatomic, assign, readwrite) KTKDeviceMotionDetectionMode motionDetectionMode;
+
+/**
+ *  A motion detection threshold.
+ *
+ *  Accepted values are 1-127. Threshold in units of 16 mg (0.1568 m/s2).
+ *  For value 10, motion will be detected when acceleration exceeds 1.568 m/s2 on any axis.
+ */
+@property (nonatomic, strong, readwrite) NSNumber * _Nullable motionDetectionThreshold;
+
+/**
+ *  A motion counter.
+ *
+ *  A current value of Motion Event counter.
+ */
+@property (nonatomic, strong, readonly) NSNumber * _Nullable motionCounter;
 
 #pragma mark - Initialization Methods
 ///--------------------------------------------------------------------
