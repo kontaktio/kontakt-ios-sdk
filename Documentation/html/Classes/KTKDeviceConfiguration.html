@@ -82,9 +82,17 @@
 		
 		<option value="//api/name/minor">minor</option>
 		
+		<option value="//api/name/motionCounter">motionCounter</option>
+		
+		<option value="//api/name/motionDetectionMode">motionDetectionMode</option>
+		
+		<option value="//api/name/motionDetectionThreshold">motionDetectionThreshold</option>
+		
 		<option value="//api/name/name">name</option>
 		
 		<option value="//api/name/namespaceID">namespaceID</option>
+		
+		<option value="//api/name/packets">packets</option>
 		
 		<option value="//api/name/password">password</option>
 		
@@ -448,6 +456,52 @@ You should only use it to change the device&rsquo;s password.</p>
 					
 				</ul>
 			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/packets" title="packets"></a>
+	<h3 class="method-title"><code><a href="#//api/name/packets">&nbsp;&nbsp;packets</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Advertising packets.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) KTKDeviceAdvertisingPackets packets</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Advertising packets.</p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -1100,6 +1154,157 @@ You should only use it to change the device&rsquo;s password.</p>
 						</div>
 						
 
+						<a title="Motion Sensor ( Selected Devices Only)" name="task_Motion Sensor ( Selected Devices Only)"></a>
+						<h2 class="task-title">Motion Sensor ( Selected Devices Only)</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/motionDetectionMode" title="motionDetectionMode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/motionDetectionMode">&nbsp;&nbsp;motionDetectionMode</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A motion detection mode.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) KTKDeviceMotionDetectionMode motionDetectionMode</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A motion detection mode.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/motionDetectionThreshold" title="motionDetectionThreshold"></a>
+	<h3 class="method-title"><code><a href="#//api/name/motionDetectionThreshold">&nbsp;&nbsp;motionDetectionThreshold</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A motion detection threshold.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSNumber *motionDetectionThreshold</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A motion detection threshold.</p>
+
+<p>Accepted values are 1-127. Threshold in units of 16 mg (0.1568 m/s2).
+For value 10, motion will be detected when acceleration exceeds 1.568 m/s2 on any axis.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/motionCounter" title="motionCounter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/motionCounter">&nbsp;&nbsp;motionCounter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A motion counter.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *motionCounter</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A motion counter.</p>
+
+<p>A current value of Motion Event counter.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
 						<a title="Initialization Methods" name="task_Initialization Methods"></a>
 						<h2 class="task-title">Initialization Methods</h2>
 
@@ -1182,7 +1387,7 @@ You should only use it to change the device&rsquo;s password.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Kontakt.io. All rights reserved. Updated: 2016-03-04</p>
+						<p class="copyright">Copyright &copy; 2016 Kontakt.io. All rights reserved. Updated: 2016-06-11</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

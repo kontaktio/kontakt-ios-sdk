@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceModel Constants Reference</title>
+	<title>KTKDeviceAdvertisingPackets Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,7 +75,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceModel Constants Reference</h1>
+					<h1 class="title">KTKDeviceAdvertisingPackets Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -91,11 +91,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKDeviceModel</h3>
+                    <h3 class="subsubtitle method-title">KTKDeviceAdvertisingPackets</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>A kontakt device models.</p>
+                        <p>A device Advertising Packets</p>
 					</div>
 					
 					
@@ -103,12 +103,12 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSInteger, KTKDeviceModel ) { 
-	<a href="">KTKDeviceModelInvalid</a> = -1,
-	<a href="">KTKDeviceModelSmartBeacon</a> = 1,
-	<a href="">KTKDeviceModelUSBBeacon</a> = 2,
-	<a href="">KTKDeviceModelSensorBeacon</a> = 3,
-	<a href="">KTKDeviceModelCloudBeacon</a> = 4,
+                        <pre><code>typedef NS_OPTIONS(NSInteger, KTKDeviceAdvertisingPackets ) { 
+	<a href="">KTKDeviceAdvertisingPacketsIBeacon</a> = 1 &lt; &lt; 1,
+	<a href="">KTKDeviceAdvertisingPacketsEddystoneUID</a> = 2 &lt; &lt; 2,
+	<a href="">KTKDeviceAdvertisingPacketsEddystoneURL</a> = 2 &lt; &lt; 3,
+	<a href="">KTKDeviceAdvertisingPacketsEddystoneTLM</a> = 2 &lt; &lt; 4,
+	<a href="">KTKDeviceAdvertisingPacketsEddystoneAll</a> = KTKDeviceAdvertisingPacketsEddystoneUID | KTKDeviceAdvertisingPacketsEddystoneURL | KTKDeviceAdvertisingPacketsEddystoneTLM,
 };</code></pre>
                     
                     </div>
@@ -117,11 +117,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKDeviceModelInvalid"></a><code>KTKDeviceModelInvalid</code></dt>
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsIBeacon"></a><code>KTKDeviceAdvertisingPacketsIBeacon</code></dt>
 <dd>
 
 
-<p>Invalid value.</p>
+<p>iBeacon packet.</p>
 
 
 
@@ -134,11 +134,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelSmartBeacon"></a><code>KTKDeviceModelSmartBeacon</code></dt>
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsEddystoneUID"></a><code>KTKDeviceAdvertisingPacketsEddystoneUID</code></dt>
 <dd>
 
 
-<p>Smart Beacon</p>
+<p>Eddystone UID packet.</p>
 
 
 
@@ -151,11 +151,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelUSBBeacon"></a><code>KTKDeviceModelUSBBeacon</code></dt>
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsEddystoneURL"></a><code>KTKDeviceAdvertisingPacketsEddystoneURL</code></dt>
 <dd>
 
 
-<p>USB Beacon</p>
+<p>Eddystone URL packet.</p>
 
 
 
@@ -168,11 +168,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelSensorBeacon"></a><code>KTKDeviceModelSensorBeacon</code></dt>
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsEddystoneTLM"></a><code>KTKDeviceAdvertisingPacketsEddystoneTLM</code></dt>
 <dd>
 
 
-<p>Sensor Beacon</p>
+<p>Eddystone Telemetry packet.</p>
 
 
 
@@ -185,11 +185,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelCloudBeacon"></a><code>KTKDeviceModelCloudBeacon</code></dt>
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsEddystoneAll"></a><code>KTKDeviceAdvertisingPacketsEddystoneAll</code></dt>
 <dd>
 
 
-<p>Cloud Beacon</p>
+<p>All supprted Eddystone packets.</p>
 
 
 

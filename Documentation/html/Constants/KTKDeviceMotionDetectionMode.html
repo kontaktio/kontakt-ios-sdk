@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceModel Constants Reference</title>
+	<title>KTKDeviceMotionDetectionMode Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,7 +75,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceModel Constants Reference</h1>
+					<h1 class="title">KTKDeviceMotionDetectionMode Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -91,11 +91,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKDeviceModel</h3>
+                    <h3 class="subsubtitle method-title">KTKDeviceMotionDetectionMode</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>A kontakt device models.</p>
+                        <p>A device motion detection modes.</p>
 					</div>
 					
 					
@@ -103,12 +103,11 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSInteger, KTKDeviceModel ) { 
-	<a href="">KTKDeviceModelInvalid</a> = -1,
-	<a href="">KTKDeviceModelSmartBeacon</a> = 1,
-	<a href="">KTKDeviceModelUSBBeacon</a> = 2,
-	<a href="">KTKDeviceModelSensorBeacon</a> = 3,
-	<a href="">KTKDeviceModelCloudBeacon</a> = 4,
+                        <pre><code>typedef NS_ENUM(NSInteger, KTKDeviceMotionDetectionMode ) { 
+	<a href="">KTKDeviceMotionDetectionModeInvalid</a> = -1,
+	<a href="">KTKDeviceMotionDetectionModeOff</a> = 0,
+	<a href="">KTKDeviceMotionDetectionModeCounting</a> = 1,
+	<a href="">KTKDeviceMotionDetectionModeAlarm</a> = 2,
 };</code></pre>
                     
                     </div>
@@ -117,11 +116,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKDeviceModelInvalid"></a><code>KTKDeviceModelInvalid</code></dt>
+                            <dt><a name="" title="KTKDeviceMotionDetectionModeInvalid"></a><code>KTKDeviceMotionDetectionModeInvalid</code></dt>
 <dd>
 
 
-<p>Invalid value.</p>
+<p>Invalid mode.</p>
 
 
 
@@ -134,11 +133,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelSmartBeacon"></a><code>KTKDeviceModelSmartBeacon</code></dt>
+                            <dt><a name="" title="KTKDeviceMotionDetectionModeOff"></a><code>KTKDeviceMotionDetectionModeOff</code></dt>
 <dd>
 
 
-<p>Smart Beacon</p>
+<p>Motion detection is off.</p>
 
 
 
@@ -151,11 +150,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelUSBBeacon"></a><code>KTKDeviceModelUSBBeacon</code></dt>
+                            <dt><a name="" title="KTKDeviceMotionDetectionModeCounting"></a><code>KTKDeviceMotionDetectionModeCounting</code></dt>
 <dd>
 
 
-<p>USB Beacon</p>
+<p>Motion detection is set in counting mode.</p>
 
 
 
@@ -168,28 +167,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelSensorBeacon"></a><code>KTKDeviceModelSensorBeacon</code></dt>
+                            <dt><a name="" title="KTKDeviceMotionDetectionModeAlarm"></a><code>KTKDeviceMotionDetectionModeAlarm</code></dt>
 <dd>
 
 
-<p>Sensor Beacon</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDeviceModelCloudBeacon"></a><code>KTKDeviceModelCloudBeacon</code></dt>
-<dd>
-
-
-<p>Cloud Beacon</p>
+<p>Motion detection is set in alarm mode.</p>
 
 
 
