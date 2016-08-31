@@ -682,7 +682,7 @@ Kontakt.io iOS SDK makes extensive use of two native iOS frameworks: [Core Locat
 
 ## Changelog
 
-### v1.2.1 - 31 August 2016
+### v1.2.2 - 31 August 2016
 - Added support for Kontakt.io's new products
 - KTKDeviceConnection instance doesnt require assigning to class var anymore
 - Added support to read device configuration from devices with firmware >= 4.0
