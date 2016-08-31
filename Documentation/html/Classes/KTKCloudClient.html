@@ -84,6 +84,8 @@
 		
 		<option value="//api/name/GET:parameters:completion:">- GET:parameters:completion:</option>
 		
+		<option value="//api/name/JSON:parameters:completion:">- JSON:parameters:completion:</option>
+		
 		<option value="//api/name/POST:parameters:completion:">- POST:parameters:completion:</option>
 		
 		<option value="//api/name/createObject:completion:">- createObject:completion:</option>
@@ -477,6 +479,85 @@ Please note <code>url</code> must be withing kontakt.io domain.</p>
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Runs a cloud API call with a POST request.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Blocks/KTKKontaktResponseCompletionBlock.html">KTKKontaktResponseCompletionBlock</a></p></code></li>
+					
+					<li><code><p><a href="../Classes/KTKKontaktResponse.html">KTKKontaktResponse</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKCloudClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/JSON:parameters:completion:" title="JSON:parameters:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/JSON:parameters:completion:">&ndash;&nbsp;JSON:parameters:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Runs a cloud API call with a POST request encoded for JSON payload.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>- (void)JSON:(NSString *)<em>endpoint</em> parameters:(NSDictionary *_Nullable)<em>dictionary</em> completion:(KTKKontaktResponseCompletionBlock _Nullable)<em>completion</em></code></pre></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>endpoint</code></th>
+						<td><p>The cloud API endpoint/resource.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dictionary</code></th>
+						<td><p>The parameters to be serialized for the request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A block object to be executed when the request finishes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Runs a cloud API call with a POST request encoded for JSON payload.</p>
 			</div>
 			
 

@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.2.1
+//  Version: 1.2.2
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -88,6 +88,18 @@ extern NSDictionary * _Nullable KTKCloudErrorFromError(NSError * _Nullable error
  *  @see KTKKontaktResponse
  */
 - (void)POST:(NSString*)endpoint parameters:(NSDictionary* _Nullable)dictionary completion:(KTKKontaktResponseCompletionBlock _Nullable)completion;
+
+/**
+ *  Runs a cloud API call with a POST request encoded for JSON payload.
+ *
+ *  @param endpoint   The cloud API endpoint/resource.
+ *  @param dictionary The parameters to be serialized for the request.
+ *  @param completion A block object to be executed when the request finishes.
+ *
+ *  @see KTKKontaktResponseCompletionBlock
+ *  @see KTKKontaktResponse
+ */
+- (void)JSON:(NSString*)endpoint parameters:(NSDictionary* _Nullable)dictionary completion:(KTKKontaktResponseCompletionBlock _Nullable)completion;
 
 #pragma mark - Objects Request Methods
 ///--------------------------------------------------------------------

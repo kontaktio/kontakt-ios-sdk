@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/KTKCloudClient.h</key>
 		<data>
-		0sUrDyDCo5iOxqmwMkVYkNi9uuk=
+		mRZumlGsF7HJtrs2gPZBd4BqGJw=
 		</data>
 		<key>Headers/KTKCloudModel.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/KTKDeviceDefinitions.h</key>
 		<data>
-		0Y6CdhjT9SeBtRFvWFlc8icFk30=
+		4E3NNF8oSfv441g7ODakiLy61hI=
 		</data>
 		<key>Headers/KTKDevicesManager.h</key>
 		<data>
@@ -76,10 +76,6 @@
 		<data>
 		sUcDojC+bzvDQwFj4uCE/BB7+9c=
 		</data>
-		<key>Headers/KTKGatewayManager.h</key>
-		<data>
-		UFmvkvvHHRwwXGGrK4cz3pEGieI=
-		</data>
 		<key>Headers/KTKKontaktResponse.h</key>
 		<data>
 		kzhgBK/QFtqHSsmCQPracg7L8Oo=
@@ -90,11 +86,11 @@
 		</data>
 		<key>Headers/KTKNearbyDevice.h</key>
 		<data>
-		rTAQQUn1kBYaNf8h44eZnDoYA98=
+		NM4peyuJ8LhZcXotxV4yzfLG/pM=
 		</data>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
 		<data>
-		Ul5qCaZWd2T7jG7lap455qKxeI4=
+		In7WAdwnBtnoc09VAtmte3gaCmU=
 		</data>
 		<key>Headers/KTKVenue.h</key>
 		<data>
@@ -106,7 +102,7 @@
 		</data>
 		<key>Headers/KontaktSDK.h</key>
 		<data>
-		8OGZeTaCNKDiKnDw+NDSYU+rGuw=
+		HgpVOXTFjNOhF84t1zytTcEPhiQ=
 		</data>
 		<key>Headers/NSData+Kontakt.h</key>
 		<data>
@@ -118,12 +114,21 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3F+VmbsYJh6PtIY+WUkjErIPcf8=
+		HQ9Jz0v8lgA+8gwKCOm5k9F9t6s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		mvcq2xFz2/tES98qRIw4zcQAFQw=
 		</data>
+		<key>en.lproj/Localization.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			u9UpGEbc128u6L8DOazqWX8HaNc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -153,11 +158,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0sUrDyDCo5iOxqmwMkVYkNi9uuk=
+			mRZumlGsF7HJtrs2gPZBd4BqGJw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Qh+4AmPn532X4SFFPazCA90N0MJPxNaf3ge7B4WYM20=
+			U2YffXMrCViRE7Ll6ptFF6r+6pKWtWvu3YzKsvEKFK0=
 			</data>
 		</dict>
 		<key>Headers/KTKCloudModel.h</key>
@@ -219,11 +224,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0Y6CdhjT9SeBtRFvWFlc8icFk30=
+			4E3NNF8oSfv441g7ODakiLy61hI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Lwgp0IjDZSM2h13sSqdxRX3MRYdavJrL07XT6Y2+JRA=
+			kVRwe4vWvy2vFXqZqxzSEIDwC6hqlgQWBkDmVr7hn+w=
 			</data>
 		</dict>
 		<key>Headers/KTKDevicesManager.h</key>
@@ -325,17 +330,6 @@
 			KfEuW1SXB7YvbjUw6iCqSw3eMO1skTbZ6I1l2xF4+eA=
 			</data>
 		</dict>
-		<key>Headers/KTKGatewayManager.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UFmvkvvHHRwwXGGrK4cz3pEGieI=
-			</data>
-			<key>hash2</key>
-			<data>
-			ePXhHt+MHFvHSBbZ3ph/zxgYW2V4xafgTMCQE7qvtuM=
-			</data>
-		</dict>
 		<key>Headers/KTKKontaktResponse.h</key>
 		<dict>
 			<key>hash</key>
@@ -362,22 +356,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rTAQQUn1kBYaNf8h44eZnDoYA98=
+			NM4peyuJ8LhZcXotxV4yzfLG/pM=
 			</data>
 			<key>hash2</key>
 			<data>
-			I65SwxGNn/dXSfh38xjGW8YG0ZsNuPgHYbfToTsPjzk=
+			C2XzhM/QC0RBl/dn+zRFbA767e8Sb3xsHd6pqHunHfM=
 			</data>
 		</dict>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ul5qCaZWd2T7jG7lap455qKxeI4=
+			In7WAdwnBtnoc09VAtmte3gaCmU=
 			</data>
 			<key>hash2</key>
 			<data>
-			aDIXWPilJ+iQ+aOXiKlYmkbKRbsnZWvnWBgR0M7tR4I=
+			TF1wfy8FkKKFkJmv6yHh9yoEsbFoQ7GdbvjKOgrQ6KI=
 			</data>
 		</dict>
 		<key>Headers/KTKVenue.h</key>
@@ -406,11 +400,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8OGZeTaCNKDiKnDw+NDSYU+rGuw=
+			HgpVOXTFjNOhF84t1zytTcEPhiQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			CjyQQSecHxhkfH1HQ0p49ynEhjLZUNajvs0g/m+OujY=
+			q12Ok6BCorL98gBB4uhNKVZxlfmfXv6NasJSBHwxcuM=
 			</data>
 		</dict>
 		<key>Headers/NSData+Kontakt.h</key>
@@ -445,6 +439,19 @@
 			<data>
 			/Ftcn9Cdd80jYPYAwQv3cNDHPr+uf+ns1mWLdDlTdgc=
 			</data>
+		</dict>
+		<key>en.lproj/Localization.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			u9UpGEbc128u6L8DOazqWX8HaNc=
+			</data>
+			<key>hash2</key>
+			<data>
+			S0tdh2VAUeBWCN/Eg/g4WicpSBuP0tS+lGRMl0g4Chg=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>

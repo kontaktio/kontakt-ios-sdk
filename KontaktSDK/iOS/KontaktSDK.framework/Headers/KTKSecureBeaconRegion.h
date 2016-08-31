@@ -1,11 +1,12 @@
 //
 //  KontaktSDK
-//  Version: 1.2.1
+//  Version: 1.2.2
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
 
 #import "KTKBeaconRegion.h"
+#import "CLBeacon+Kontakt.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

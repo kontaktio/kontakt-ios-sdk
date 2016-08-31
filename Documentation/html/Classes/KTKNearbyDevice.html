@@ -557,7 +557,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Current advertising profile. (read-only)</p>
+				<p>Current advertising profile. (read-only)</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> advertisingProfile property is not compatible with firmware 4.1 as devices can advertise multiple packets at the same time.
+advertisingProfile will return <code>KTKDeviceAdvertisingProfileInvalid</code> when nearby device&rsquo;s firmware is >= 4.1.
+Please note advertisingProfile most probably will soon be removed in favor of packets. Please keep it in mind when planing future projects.</p></div>
 			</div>
 			
 

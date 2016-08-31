@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.2.1
+//  Version: 1.2.2
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -67,10 +67,13 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Current advertising profile. (read-only)
  *
+ *  @warning *Important:* advertisingProfile property is not compatible with firmware 4.1 as devices can advertise multiple packets at the same time.
+ *  advertisingProfile will return `KTKDeviceAdvertisingProfileInvalid` when nearby device's firmware is >= 4.1.
+ *  Please note advertisingProfile most probably will soon be removed in favor of packets. Please keep it in mind when planing future projects.
+ *
  *  @see KTKDeviceAdvertisingProfile
  */
-@property (nonatomic, readonly, assign) KTKDeviceAdvertisingProfile advertisingProfile
-__attribute__((deprecated("Please consider using KTKCloudClient to query API for current advertising profile/packets settings.")));
+@property (nonatomic, readonly, assign) KTKDeviceAdvertisingProfile advertisingProfile;
 
 /**
  *  CoreBluetooth Peripheral object associated with the device. (read-only)

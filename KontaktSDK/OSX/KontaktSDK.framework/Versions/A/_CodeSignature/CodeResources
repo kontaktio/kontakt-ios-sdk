@@ -6,8 +6,17 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		WkiKFEHY5skEHNUWYpJ1QExXB2w=
+		GA/kEOrpBbwyjNLixE3X8/iVMHk=
 		</data>
+		<key>Resources/en.lproj/Localization.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jiUOydOh/Ka7LynTUUS+woMkMOo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -37,11 +46,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0sUrDyDCo5iOxqmwMkVYkNi9uuk=
+			mRZumlGsF7HJtrs2gPZBd4BqGJw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Qh+4AmPn532X4SFFPazCA90N0MJPxNaf3ge7B4WYM20=
+			U2YffXMrCViRE7Ll6ptFF6r+6pKWtWvu3YzKsvEKFK0=
 			</data>
 		</dict>
 		<key>Headers/KTKCloudModel.h</key>
@@ -103,11 +112,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0Y6CdhjT9SeBtRFvWFlc8icFk30=
+			4E3NNF8oSfv441g7ODakiLy61hI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Lwgp0IjDZSM2h13sSqdxRX3MRYdavJrL07XT6Y2+JRA=
+			kVRwe4vWvy2vFXqZqxzSEIDwC6hqlgQWBkDmVr7hn+w=
 			</data>
 		</dict>
 		<key>Headers/KTKDevicesManager.h</key>
@@ -235,22 +244,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rTAQQUn1kBYaNf8h44eZnDoYA98=
+			NM4peyuJ8LhZcXotxV4yzfLG/pM=
 			</data>
 			<key>hash2</key>
 			<data>
-			I65SwxGNn/dXSfh38xjGW8YG0ZsNuPgHYbfToTsPjzk=
+			C2XzhM/QC0RBl/dn+zRFbA767e8Sb3xsHd6pqHunHfM=
 			</data>
 		</dict>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ul5qCaZWd2T7jG7lap455qKxeI4=
+			In7WAdwnBtnoc09VAtmte3gaCmU=
 			</data>
 			<key>hash2</key>
 			<data>
-			aDIXWPilJ+iQ+aOXiKlYmkbKRbsnZWvnWBgR0M7tR4I=
+			TF1wfy8FkKKFkJmv6yHh9yoEsbFoQ7GdbvjKOgrQ6KI=
 			</data>
 		</dict>
 		<key>Headers/KTKVenue.h</key>
@@ -279,11 +288,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6Cf88B8D4fvgekDlNmQTb7DNvWQ=
+			0ukgvacjRq3jQoAtpdHBtJxv9FY=
 			</data>
 			<key>hash2</key>
 			<data>
-			pTK/0GLaZ3KaE3TJc2f9VuCLT7T/5tBPRQqa25RFI44=
+			y7qNV5qGFDHcSV1cibXJsWbYDgzs5/Bm3DhnGZcxPgk=
 			</data>
 		</dict>
 		<key>Headers/NSData+Kontakt.h</key>
@@ -323,12 +332,25 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WkiKFEHY5skEHNUWYpJ1QExXB2w=
+			GA/kEOrpBbwyjNLixE3X8/iVMHk=
 			</data>
 			<key>hash2</key>
 			<data>
-			UVENZ1HmDEGByeH0P9PATuyCVezNTevDNkkbGvadx6E=
+			pXAWOmbwy4slW1JG8NBainhNPYgOgxQJ7z5h7BxpjYg=
 			</data>
+		</dict>
+		<key>Resources/en.lproj/Localization.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jiUOydOh/Ka7LynTUUS+woMkMOo=
+			</data>
+			<key>hash2</key>
+			<data>
+			KEwD3eW3p5Ku0yMK1e0nEjm830sS6tAAjKYrfTRMdDI=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>
