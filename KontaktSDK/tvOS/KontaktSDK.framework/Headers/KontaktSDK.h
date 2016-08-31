@@ -34,3 +34,4 @@ FOUNDATION_EXPORT const unsigned char KontaktSDKVersionString[];
 #import "KTKEddystoneManager.h"
 #import "KTKDevicesManager.h"
 #import "KTKDeviceConnection.h"
+#import "KTKGatewayManager.h"

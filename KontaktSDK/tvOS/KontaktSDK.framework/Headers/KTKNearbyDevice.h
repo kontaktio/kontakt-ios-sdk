@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.2.0-beta1
+//  Version: 1.2.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -69,7 +69,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see KTKDeviceAdvertisingProfile
  */
-@property (nonatomic, readonly, assign) KTKDeviceAdvertisingProfile advertisingProfile;
+@property (nonatomic, readonly, assign) KTKDeviceAdvertisingProfile advertisingProfile
+__attribute__((deprecated("Please consider using KTKCloudClient to query API for current advertising profile/packets settings.")));
 
 /**
  *  CoreBluetooth Peripheral object associated with the device. (read-only)

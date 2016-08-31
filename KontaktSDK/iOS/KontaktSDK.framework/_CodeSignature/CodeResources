@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/KTKDeviceConfiguration.h</key>
 		<data>
-		slGw+2bAjhQpugaGIJM3Dve3EGQ=
+		7fv8GsOCwMhIUH/euxLM5cY/p6g=
 		</data>
 		<key>Headers/KTKDeviceConnection.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/KTKNearbyDevice.h</key>
 		<data>
-		nyRf5bWsBwjP/YAGfe1+mgdTFu4=
+		rTAQQUn1kBYaNf8h44eZnDoYA98=
 		</data>
 		<key>Headers/KTKSecureBeaconRegion.h</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3/aJJSNwDFGKnNd1fc/AdUIjMiQ=
+		tkCzvgpdsrjaMLebNIVu/5Mf00w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -216,11 +216,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			slGw+2bAjhQpugaGIJM3Dve3EGQ=
+			7fv8GsOCwMhIUH/euxLM5cY/p6g=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q4QcT8A23yeyON1nnyg9VcTuxCqDJxfcWbVZ4OWB4EA=
+			RHxKnLekW8WiV36z76/BIbOWBIqa68cvqLgE1lw0Lhk=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceConnection.h</key>
@@ -381,11 +381,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nyRf5bWsBwjP/YAGfe1+mgdTFu4=
+			rTAQQUn1kBYaNf8h44eZnDoYA98=
 			</data>
 			<key>hash2</key>
 			<data>
-			VFE8hLjPT4LKr+vwvWp8PRvzoPCr3rKQRi4UkDsECmk=
+			I65SwxGNn/dXSfh38xjGW8YG0ZsNuPgHYbfToTsPjzk=
 			</data>
 		</dict>
 		<key>Headers/KTKSecureBeaconRegion.h</key>

@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/KTKDeviceConfiguration.h</key>
 		<data>
-		slGw+2bAjhQpugaGIJM3Dve3EGQ=
+		7fv8GsOCwMhIUH/euxLM5cY/p6g=
 		</data>
 		<key>Headers/KTKDeviceConnection.h</key>
 		<data>
@@ -76,6 +76,10 @@
 		<data>
 		sUcDojC+bzvDQwFj4uCE/BB7+9c=
 		</data>
+		<key>Headers/KTKGatewayManager.h</key>
+		<data>
+		UFmvkvvHHRwwXGGrK4cz3pEGieI=
+		</data>
 		<key>Headers/KTKKontaktResponse.h</key>
 		<data>
 		kzhgBK/QFtqHSsmCQPracg7L8Oo=
@@ -86,7 +90,7 @@
 		</data>
 		<key>Headers/KTKNearbyDevice.h</key>
 		<data>
-		nyRf5bWsBwjP/YAGfe1+mgdTFu4=
+		rTAQQUn1kBYaNf8h44eZnDoYA98=
 		</data>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
 		<data>
@@ -102,7 +106,7 @@
 		</data>
 		<key>Headers/KontaktSDK.h</key>
 		<data>
-		4a5kYRe0nHDj9wLpYPpWhcwpwOc=
+		8OGZeTaCNKDiKnDw+NDSYU+rGuw=
 		</data>
 		<key>Headers/NSData+Kontakt.h</key>
 		<data>
@@ -114,7 +118,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1BBkRZ+awxvKjRlM8TlJfM4Jsv4=
+		3F+VmbsYJh6PtIY+WUkjErIPcf8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -182,11 +186,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			slGw+2bAjhQpugaGIJM3Dve3EGQ=
+			7fv8GsOCwMhIUH/euxLM5cY/p6g=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q4QcT8A23yeyON1nnyg9VcTuxCqDJxfcWbVZ4OWB4EA=
+			RHxKnLekW8WiV36z76/BIbOWBIqa68cvqLgE1lw0Lhk=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceConnection.h</key>
@@ -321,6 +325,17 @@
 			KfEuW1SXB7YvbjUw6iCqSw3eMO1skTbZ6I1l2xF4+eA=
 			</data>
 		</dict>
+		<key>Headers/KTKGatewayManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UFmvkvvHHRwwXGGrK4cz3pEGieI=
+			</data>
+			<key>hash2</key>
+			<data>
+			ePXhHt+MHFvHSBbZ3ph/zxgYW2V4xafgTMCQE7qvtuM=
+			</data>
+		</dict>
 		<key>Headers/KTKKontaktResponse.h</key>
 		<dict>
 			<key>hash</key>
@@ -347,11 +362,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nyRf5bWsBwjP/YAGfe1+mgdTFu4=
+			rTAQQUn1kBYaNf8h44eZnDoYA98=
 			</data>
 			<key>hash2</key>
 			<data>
-			VFE8hLjPT4LKr+vwvWp8PRvzoPCr3rKQRi4UkDsECmk=
+			I65SwxGNn/dXSfh38xjGW8YG0ZsNuPgHYbfToTsPjzk=
 			</data>
 		</dict>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
@@ -391,11 +406,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4a5kYRe0nHDj9wLpYPpWhcwpwOc=
+			8OGZeTaCNKDiKnDw+NDSYU+rGuw=
 			</data>
 			<key>hash2</key>
 			<data>
-			9mqH9kDXarSPobS3EUN3liQHMLkFC81I2lhT2R50lLI=
+			CjyQQSecHxhkfH1HQ0p49ynEhjLZUNajvs0g/m+OujY=
 			</data>
 		</dict>
 		<key>Headers/NSData+Kontakt.h</key>

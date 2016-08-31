@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.2.0-beta1
+//  Version: 1.2.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -53,7 +53,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see KTKDeviceAdvertisingProfile
  */
-@property (nonatomic, assign, readwrite) KTKDeviceAdvertisingProfile profile __attribute__((deprecated("Please use `packets` property instead")));
+@property (nonatomic, assign, readwrite) KTKDeviceAdvertisingProfile profile
+__attribute__((deprecated("Please use `packets` property instead")));
 
 /**
  *  Advertising packets.
