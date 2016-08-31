@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = "KontaktSDK"
-  s.version                 = "1.2.0-beta1"
+  s.version                 = "1.2.1"
   s.license                 = { :type => 'CC-ND', :file => 'LICENSE' }
   s.summary                 = "Kontakt.io SDK for iOS, tvOS and OSX"
   s.homepage                = "http://kontakt.io"
@@ -22,8 +22,13 @@ Pod::Spec.new do |s|
   }
 
   s.ios.vendored_frameworks = "Cocoapods/iOS/KontaktSDK.framework"
+  s.ios.public_header_files = 'Cocoapods/iOS/KontaktSDK.framework/Headers/*.h'
+
   s.tvos.vendored_frameworks = "Cocoapods/tvOS/KontaktSDK.framework"
+  s.tvos.public_header_files = 'Cocoapods/tvOS/KontaktSDK.framework/Headers/*.h'
+
   s.osx.vendored_frameworks = "Cocoapods/OSX/KontaktSDK.framework"
+  s.osx.public_header_files = 'Cocoapods/OSX/KontaktSDK.framework/Versions/A/Headers/*.h'
 
   s.requires_arc  = true
 end
