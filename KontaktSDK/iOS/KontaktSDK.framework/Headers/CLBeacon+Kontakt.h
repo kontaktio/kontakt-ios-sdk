@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.2.2
+//  Version: 1.2.3
 //
 //  Copyright © 2016 Kontakt.io. All rights reserved.
 //
@@ -25,12 +25,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Most significant value associated with the beacon.
  */
-@property (nonatomic, strong, readonly) NSNumber * _Nullable ktk_major;
+@property (nonatomic, strong, readonly) NSNumber * ktk_major;
 
 /**
  *  Least significant value associated with the beacon.
  */
-@property (nonatomic, strong, readonly) NSNumber * _Nullable ktk_minor;
+@property (nonatomic, strong, readonly) NSNumber * ktk_minor;
 
 @end
 

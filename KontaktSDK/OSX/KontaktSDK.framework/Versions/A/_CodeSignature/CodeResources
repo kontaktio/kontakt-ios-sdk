@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		GA/kEOrpBbwyjNLixE3X8/iVMHk=
+		8JP7F9YQWEYsykeCrq99tH429Fo=
 		</data>
 		<key>Resources/en.lproj/Localization.strings</key>
 		<dict>
@@ -332,11 +332,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GA/kEOrpBbwyjNLixE3X8/iVMHk=
+			8JP7F9YQWEYsykeCrq99tH429Fo=
 			</data>
 			<key>hash2</key>
 			<data>
-			pXAWOmbwy4slW1JG8NBainhNPYgOgxQJ7z5h7BxpjYg=
+			I4BSqe021PcvKTfRpLggc4Fkwb+++S53cSNWa+B2CxI=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Localization.strings</key>
@@ -370,6 +370,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^version.plist$</key>
 		<true/>
@@ -429,6 +434,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Resources/Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^[^/]+$</key>
 		<dict>

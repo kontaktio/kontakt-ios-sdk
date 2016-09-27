@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CLBeacon+Kontakt.h</key>
 		<data>
-		uXJVwGCYRpJB8lDyX/tWt650kvc=
+		K5hNSaW/RSs+/3dMG/8dBnS+RoI=
 		</data>
 		<key>Headers/KTKAction.h</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+Rjnm6GQxx5IdjBhBOa6pFBogQo=
+		B67oWN/ZXd4Libu77BZQj2I/4Pg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -152,11 +152,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uXJVwGCYRpJB8lDyX/tWt650kvc=
+			K5hNSaW/RSs+/3dMG/8dBnS+RoI=
 			</data>
 			<key>hash2</key>
 			<data>
-			lEGuUs//rvPFI2MLoHEUaCEeJSuKTtoVIKc2L2lkt04=
+			f2O4jBTpRieRLIe5zz7YBZJVRuYT9234clpn8+kZwu0=
 			</data>
 		</dict>
 		<key>Headers/KTKAction.h</key>
@@ -532,6 +532,11 @@
 			<key>weight</key>
 			<real>1100</real>
 		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
 		<key>^version.plist$</key>
 		<true/>
 	</dict>
@@ -576,6 +581,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>
