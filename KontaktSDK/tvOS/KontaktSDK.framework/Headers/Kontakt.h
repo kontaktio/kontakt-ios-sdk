@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.3.1
+//  Version: 1.3.2
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -24,6 +24,16 @@ typedef NS_OPTIONS(NSUInteger, KTKMonitoringOptions) {
      */
     KTKMonitoringOptionsGPSLocation   = 1 << 1
 };
+
+/**
+ *  Calculates distance to device from specified TX Power and RSSI.
+ *
+ *  @param TXPower Transmission power.
+ *  @param RSSI    RSSI value.
+ *
+ *  @return Distance in meters as double value.
+ */
+extern double KTKCalculateDistanceFrom(int TXPower, double RSSI);
 
 #pragma mark - Kontakt
 @interface Kontakt : NSObject
