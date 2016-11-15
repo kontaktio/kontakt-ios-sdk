@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKCloudModelRequests Constants Reference</title>
+	<title>KTKDevicePowerSaving Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -61,7 +61,25 @@
 	
 
 	
+	
+	<option value="tasks">Tasks</option>
+	
+	
 
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/features">features</option>
+		
+		<option value="//api/name/lightBrightnessLevel">lightBrightnessLevel</option>
+		
+	</optgroup>
+	
+
+	
+
+	
 	
 </select>
 						</label>
@@ -75,13 +93,19 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKCloudModelRequests Constants Reference</h1>
+					<h1 class="title">KTKDevicePowerSaving Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>NSCopying<br />NSObject<br />NSSecureCoding</td>
+</tr><tr>
 	<th>Declared in</th>
-	<td>KTKCloudModel.h</td>
+	<td>KTKDevicePowerSaving.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -89,72 +113,62 @@
                     
 
 					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
 
-                    
-                    <h3 class="subsubtitle method-title">KTKCloudModelRequests</h3>
-                    
-                    <div class="section">
-                        <!-- display enum values -->
-                        
-                        <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSInteger, KTKCloudModelRequests ) { 
-	<a href="">KTKCloudModelRequestGet</a> = 1 &lt; &lt; 1,
-	<a href="">KTKCloudModelRequestCreate</a> = 1 &lt; &lt; 2,
-	<a href="">KTKCloudModelRequestUpdate</a> = 1 &lt; &lt; 3,
-	<a href="">KTKCloudModelRequestDelete</a> = 1 &lt; &lt; 4,
-};</code></pre>
-                    
-                    </div>
-                    
-                    <div class="section section-methods">
-                        <h4 class="method-subtitle">Constants</h4>
-                        <dl class="termdef">
-                            
-                            <dt><a name="" title="KTKCloudModelRequestGet"></a><code>KTKCloudModelRequestGet</code></dt>
-<dd>
+						<a title="General Properties" name="task_General Properties"></a>
+						<h2 class="task-title">General Properties</h2>
 
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKCloudModel.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKCloudModelRequestCreate"></a><code>KTKCloudModelRequestCreate</code></dt>
-<dd>
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/features" title="features"></a>
+	<h3 class="method-title"><code><a href="#//api/name/features">&nbsp;&nbsp;features</a></code>
+</h3>
 
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKCloudModel.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKCloudModelRequestUpdate"></a><code>KTKCloudModelRequestUpdate</code></dt>
-<dd>
+	<div class="method-info">
+		<div class="pointy-thing"></div>
 
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKCloudModel.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKCloudModelRequestDelete"></a><code>KTKCloudModelRequestDelete</code></dt>
-<dd>
+		<div class="method-info-container">
+			
 
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKCloudModel.h</code>.
-	</p>
-	
-</dd>
-                            
-                        </dl>
-                    </div>
-                    
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) KTKDevicePowerSavingFeatures features</code></pre></div>
 
-                    
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Light Sensor Properties" name="task_Light Sensor Properties"></a>
+						<h2 class="task-title">Light Sensor Properties</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/lightBrightnessLevel" title="lightBrightnessLevel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lightBrightnessLevel">&nbsp;&nbsp;lightBrightnessLevel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) NSInteger lightBrightnessLevel</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
                     
                     
           
