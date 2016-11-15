@@ -4,6 +4,7 @@
 - Beacon Pro Support
 - Power Saving features support (Card, Beacon Pro)
 - Connection and beacons configuration will be 50% more stable now
+- Requesting state for specified region is working again
 - Remove warnings on iOS 10
 - macOS Fixes
 
