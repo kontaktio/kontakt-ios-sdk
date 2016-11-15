@@ -1,5 +1,9 @@
 ## Changelog
 
+### v1.3.2 - 15 November 2016
+- Making distance calculation method public
+- Fixing EID and ETLM packets definitions
+
 ### v1.3.1 - 15 November 2016
 - Beacon Pro Support
 - Power Saving features support (Card, Beacon Pro)
