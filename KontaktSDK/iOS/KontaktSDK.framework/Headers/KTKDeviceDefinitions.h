@@ -1,11 +1,43 @@
 //
 //  KontaktSDK
-//  Version: 1.2.3
+//  Version: 1.3.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
 
 @import Foundation;
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_9_3
+#define CBManagerState CBCentralManagerState
+#define CBManagerStateUnknown CBCentralManagerStateUnknown
+#define CBManagerStateResetting CBCentralManagerStateResetting
+#define CBManagerStateUnsupported CBCentralManagerStateUnsupported
+#define CBManagerStateUnauthorized CBCentralManagerStateUnauthorized
+#define CBManagerStatePoweredOff CBCentralManagerStatePoweredOff
+#define CBManagerStatePoweredOn CBCentralManagerStatePoweredOn
+#endif
+
+/**
+ *  Device Connection Operation Types
+ */
+typedef NS_ENUM(NSInteger, KTKDeviceConnectionOperationType) {
+    /**
+     *  Type Unknown.
+     */
+    KTKDeviceConnectionOperationTypeUnknown = -1,
+    /**
+     *  Read Operation.
+     */
+    KTKDeviceConnectionOperationTypeRead    = 1,
+    /**
+     *  Write Operation.
+     */
+    KTKDeviceConnectionOperationTypeWrite   = 2,
+    /**
+     *  DFU Operation.
+     */
+    KTKDeviceConnectionOperationTypeDFU     = 3
+};
 
 /**
  *  A Kontakt device type.
@@ -26,7 +58,7 @@ typedef NS_ENUM(NSInteger, KTKDeviceType) {
 };
 
 /**
- *  A device Advertising Profile
+ *  Legacy devices Advertising Profile
  */
 typedef NS_ENUM(NSInteger, KTKDeviceAdvertisingProfile) {
     /**
@@ -48,25 +80,49 @@ typedef NS_ENUM(NSInteger, KTKDeviceAdvertisingProfile) {
  */
 typedef NS_OPTIONS(NSInteger, KTKDeviceAdvertisingPackets) {
     /**
+     *  Ivalid packet.
+     */
+    KTKDeviceAdvertisingPacketsInvalid         = 1 << 0,
+    /**
      *  iBeacon packet.
      */
-    KTKDeviceAdvertisingPacketsIBeacon        = 1 << 1,
+    KTKDeviceAdvertisingPacketsIBeacon         = 1 << 1,
     /**
      *  Eddystone UID packet.
      */
-    KTKDeviceAdvertisingPacketsEddystoneUID   = 2 << 2,
+    KTKDeviceAdvertisingPacketsEddystoneUID    = 1 << 2,
     /**
      *  Eddystone URL packet.
      */
-    KTKDeviceAdvertisingPacketsEddystoneURL   = 2 << 3,
+    KTKDeviceAdvertisingPacketsEddystoneURL    = 1 << 3,
     /**
      *  Eddystone Telemetry packet.
      */
-    KTKDeviceAdvertisingPacketsEddystoneTLM   = 2 << 4,
+    KTKDeviceAdvertisingPacketsEddystoneTLM    = 1 << 4,
+    /**
+     *  Eddystone Telemetry packet.
+     */
+    KTKDeviceAdvertisingPacketsEddystoneEID    = 1 << 5,
+    /**
+     *  Eddystone Telemetry packet.
+     */
+    KTKDeviceAdvertisingPacketsEddystoneETLM   = 1 << 6,
+    /**
+     *  Kontakt identification packet.
+     */
+    KTKDeviceAdvertisingPacketsKontakt         = 1 << 7,
     /**
      *  All supprted Eddystone packets.
      */
-    KTKDeviceAdvertisingPacketsEddystoneAll   = KTKDeviceAdvertisingPacketsEddystoneUID | KTKDeviceAdvertisingPacketsEddystoneURL | KTKDeviceAdvertisingPacketsEddystoneTLM,
+    KTKDeviceAdvertisingPacketsEddystoneAll    = (NSInteger)0b00000000000000000000000000011100,
+    /**
+     *  All supprted Eddystone Secure (EID + ETLM).
+     */
+    KTKDeviceAdvertisingPacketsEddystoneSecure = (NSInteger)0b00000000000000000000000001100000,
+    /**
+     *  All supprted packets.
+     */
+    KTKDeviceAdvertisingPacketsAll             = (NSInteger)0b11111111111111111111111111111110
 };
 
 /**
@@ -121,6 +177,10 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
      *  Invalid value.
      */
     KTKDeviceModelInvalid  = -1,
+    /**
+     *  Unknown model.
+     */
+    KTKDeviceModelUnknown  = 0,
     /**
      *  Smart Beacon
      */

@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.2.3
+//  Version: 1.3.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -41,6 +41,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, assign) NSUInteger batteryLevel;
 
 /**
+ *  A Boolean indicating whether the device is powered with battery or power supply. (read-only)
+ */
+@property (nonatomic, readonly, assign, getter=isBatteryPowered) BOOL batteryPowered;
+
+/**
  *  Transmission power. (read-only)
  *  
  *  @see KTKDeviceTransmissionPower
@@ -48,16 +53,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, assign) KTKDeviceTransmissionPower transmissionPower;
 
 /**
+ *  A Boolean indicating whether the device has configuration profile ( Kontakt.io Secure Communication ). (read-only)
+ *  All Kontakt.io's devices with firmware >= 4.0 and all devices since Beacon Pro support configuration profile.
+ *
+ *  @see https://kontakt.io/products-and-solutions/complete-beacon-security/
+ */
+@property (nonatomic, readonly, assign) BOOL hasConfigurationProfile;
+
+/**
  *  A Boolean indicating whether the device is currently in Shuffle mode. (read-only)
  *  
  *  @see http://kontakt.io/blog/beacon-security/
  */
 @property (nonatomic, readonly, assign, getter=isShuffled) BOOL shuffled;
-
-/**
- *  A Boolean indicating whether the device is currently in DFU mode. (read-only)
- */
-@property (nonatomic, readonly, assign, getter=isDFU) BOOL DFU;
 
 /**
  *  A Boolean indicating whether the device is locked/non-connectable mode. (read-only)
@@ -74,6 +82,16 @@ NS_ASSUME_NONNULL_BEGIN
  *  @see KTKDeviceAdvertisingProfile
  */
 @property (nonatomic, readonly, assign) KTKDeviceAdvertisingProfile advertisingProfile;
+
+/**
+ *  Nearby device model. (read-only)
+ *
+ *  @warning *Important:* Only devices advertising using Kontakt.io's Secure Profile (UUID: 0xFE6A) (Basically NONE of the devices prior to Beacon Pro model) will provide model information.
+ *  In all other cases `model` property will be set to KTKDeviceModelUnknown or KTKDeviceModelInvalid.
+ *
+ *  @see KTKDeviceModel
+ */
+@property (nonatomic, readonly, assign) KTKDeviceModel model;
 
 /**
  *  CoreBluetooth Peripheral object associated with the device. (read-only)

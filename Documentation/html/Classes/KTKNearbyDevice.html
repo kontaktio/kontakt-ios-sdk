@@ -70,17 +70,21 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/DFU">DFU</option>
-		
 		<option value="//api/name/RSSI">RSSI</option>
 		
 		<option value="//api/name/advertisingProfile">advertisingProfile</option>
 		
 		<option value="//api/name/batteryLevel">batteryLevel</option>
 		
+		<option value="//api/name/batteryPowered">batteryPowered</option>
+		
 		<option value="//api/name/firmwareVersion">firmwareVersion</option>
 		
+		<option value="//api/name/hasConfigurationProfile">hasConfigurationProfile</option>
+		
 		<option value="//api/name/locked">locked</option>
+		
+		<option value="//api/name/model">model</option>
 		
 		<option value="//api/name/name">name</option>
 		
@@ -327,6 +331,52 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/batteryPowered" title="batteryPowered"></a>
+	<h3 class="method-title"><code><a href="#//api/name/batteryPowered">&nbsp;&nbsp;batteryPowered</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Boolean indicating whether the device is powered with battery or power supply. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, assign, getter=isBatteryPowered) BOOL batteryPowered</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A Boolean indicating whether the device is powered with battery or power supply. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/transmissionPower" title="transmissionPower"></a>
 	<h3 class="method-title"><code><a href="#//api/name/transmissionPower">&nbsp;&nbsp;transmissionPower</a></code>
 </h3>
@@ -367,6 +417,63 @@
 				<ul>
 					
 					<li><code><p><a href="../Constants/KTKDeviceTransmissionPower.html">KTKDeviceTransmissionPower</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasConfigurationProfile" title="hasConfigurationProfile"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasConfigurationProfile">&nbsp;&nbsp;hasConfigurationProfile</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Boolean indicating whether the device has configuration profile ( Kontakt.io Secure Communication ). (read-only)
+All Kontakt.io&rsquo;s devices with firmware >= 4.0 and all devices since Beacon Pro support configuration profile.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, assign) BOOL hasConfigurationProfile</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A Boolean indicating whether the device has configuration profile ( Kontakt.io Secure Communication ). (read-only)
+All Kontakt.io&rsquo;s devices with firmware >= 4.0 and all devices since Beacon Pro support configuration profile.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="https://kontakt.io/products-and-solutions/complete-beacon-security/">https://kontakt.io/products-and-solutions/complete-beacon-security/</a></p></code></li>
 					
 				</ul>
 			</div>
@@ -425,52 +532,6 @@
 					
 				</ul>
 			</div>
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKNearbyDevice.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/DFU" title="DFU"></a>
-	<h3 class="method-title"><code><a href="#//api/name/DFU">&nbsp;&nbsp;DFU</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A Boolean indicating whether the device is currently in DFU mode. (read-only)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, assign, getter=isDFU) BOOL DFU</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>A Boolean indicating whether the device is currently in DFU mode. (read-only)</p>
-			</div>
-			
-
-			
-
 			
 
 			
@@ -571,6 +632,62 @@ Please note advertisingProfile most probably will soon be removed in favor of pa
 				<ul>
 					
 					<li><code><p><a href="../Constants/KTKDeviceAdvertisingProfile.html">KTKDeviceAdvertisingProfile</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/model" title="model"></a>
+	<h3 class="method-title"><code><a href="#//api/name/model">&nbsp;&nbsp;model</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Nearby device model. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, assign) KTKDeviceModel model</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Nearby device model. (read-only)</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> Only devices advertising using Kontakt.io&rsquo;s Secure Profile (UUID: 0xFE6A) (Basically NONE of the devices prior to Beacon Pro model) will provide model information.
+In all other cases <code>model</code> property will be set to KTKDeviceModelUnknown or KTKDeviceModelInvalid.</p></div>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Constants/KTKDeviceModel.html">KTKDeviceModel</a></p></code></li>
 					
 				</ul>
 			</div>
@@ -738,7 +855,7 @@ Please note advertisingProfile most probably will soon be removed in favor of pa
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Kontakt.io. All rights reserved. Updated: 2016-09-27</p>
+						<p class="copyright">Copyright &copy; 2016 Kontakt.io. All rights reserved. Updated: 2016-11-15</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

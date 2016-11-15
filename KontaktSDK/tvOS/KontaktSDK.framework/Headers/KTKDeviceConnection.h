@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.2.3
+//  Version: 1.3.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -15,28 +15,6 @@
 #import "KTKDeviceConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-/**
- *  Device Connection Operation Types
- */
-typedef NS_ENUM(NSInteger, KTKDeviceConnectionOperationType) {
-    /**
-     *  Type Unknown.
-     */
-    KTKDeviceConnectionOperationTypeUnknown = -1,
-    /**
-     *  Read Operation.
-     */
-    KTKDeviceConnectionOperationTypeRead    = 1,
-    /**
-     *  Write Operation.
-     */
-    KTKDeviceConnectionOperationTypeWrite   = 2,
-    /**
-     *  DFU Operation.
-     */
-    KTKDeviceConnectionOperationTypeDFU     = 3
-};
 
 #pragma mark - Completion Blocks
 /**
@@ -109,6 +87,23 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  */
 @property (nonatomic, copy, readwrite) KTKDeviceCredentials *credentials;
 
+/**
+ *  A Boolean value indicating whether the operation is currently executing.
+ */
+@property (nonatomic, readonly, getter=isExecuting) BOOL executing;
+
+#pragma mark - Static Methods
+///--------------------------------------------------------------------
+/// @name Static Methods
+///--------------------------------------------------------------------
+
+/**
+ *  Returns number of all connection operations scheduled in internal connection queue.
+ *
+ *  @return Number of all connection operations scheduled.
+ */
++ (NSUInteger)connectionOperationsCount;
+    
 #pragma mark - Initialization Methods
 ///--------------------------------------------------------------------
 /// @name Initialization Methods

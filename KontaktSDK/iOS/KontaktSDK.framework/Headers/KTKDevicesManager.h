@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.2.3
+//  Version: 1.3.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -47,7 +47,7 @@ typedef NS_ENUM(NSUInteger, KTKDevicesManagerDiscoveryMode) {
 /**
  *  The current state of the bluetooth central.
  */
-@property (nonatomic, assign, readonly) CBCentralManagerState centralState;
+@property (nonatomic, assign, readonly) CBManagerState centralState;
 
 /**
  *  A Boolean indicating whether the devices manager is currently discovering.

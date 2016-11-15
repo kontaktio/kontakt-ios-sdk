@@ -1,12 +1,13 @@
 //
 //  KontaktSDK
-//  Version: 1.2.3
+//  Version: 1.3.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
 
 #import "KTKDeviceDefinitions.h"
 #import "KTKCloudModel.h"
+#import "KTKDevicePowerSaving.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -69,6 +70,13 @@ __attribute__((deprecated("Please use `packets` property instead")));
  *  @see https://support.kontakt.io/hc/en-gb/articles/201567802-Advertising-Interval-best-practise
  */
 @property (nonatomic, strong, readwrite) NSNumber * _Nullable advertisingInterval;
+
+/**
+ *  Device's power saving configuration.
+ *
+ *  @see KTKDevicePowerSaving
+ */
+@property (nonatomic, strong, readwrite) KTKDevicePowerSaving * _Nullable powerSaving;
 
 /**
  *  A Boolean indicating whether any other pending configuration should be overwritten when posting to the cloud API.
@@ -189,6 +197,20 @@ __attribute__((deprecated("Please use `packets` property instead")));
  *  @return An initialized device configuration object.
  */
 - (instancetype)initWithUniqueID:(NSString *)uniqueID;
+
+#pragma mark - Additional Methods
+///--------------------------------------------------------------------
+/// @name Additional Methods
+///--------------------------------------------------------------------
+
+/**
+ *  Returns a set of property keys modified when compared with given configuration object.
+ *
+ *  @param config The config object being compared with this object.
+ *
+ *  @return A set of property keys.
+ */
+- (NSSet <NSString *>*)modifiedKeysComparedTo:(KTKDeviceConfiguration *)config;
 
 @end
 
