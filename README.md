@@ -1,6 +1,6 @@
-# ~~iOS~~ iOS/tvOS/OSX SDK Quickstart
+# iOS/tvOS/macOS SDK Quickstart
 
-> This is a quickstart page for the **new** ~~iOS~~ iOS/tvOS/OSX SDK. As it is re-written completely, we have set the versioning back to 1.0. 
+> This is a quickstart page for the iOS/tvOS/macOS SDK.
 > This new SDK is not backwards compatible with our [previous iOS SDK](http://developer.kontakt.io/ios-sdk/quickstart-old/).
 
 ## Administration App
@@ -22,8 +22,8 @@ You can find more detailed information in the [Appledocs](http://developer.konta
 ##Changes
 This version of the SDK has been completely re-written from scratch since version 6.2. It contains a number of new features which you can read about more compleyely in the  [Appledocs](http://developer.kontakt.io/ios-sdk/appledocs/), but a high level review of what's changed includes:
 
-* **Added support for iOS, tvOS and OSX**
-* Improved Swift 2.0 support
+* **Added support for iOS, tvOS and macOS**
+* Improved Swift 2.0 and 3.0 support
 * All classes are thread safe
 * Support for Kontakt.io Secure Communication and Kontakt.io Secure Shuffling. Better security throughout the app as well to help suppport this. 
 * Better management of core Bluetooth stack to be faster and more efficient.
@@ -32,9 +32,9 @@ This version of the SDK has been completely re-written from scratch since versio
 * All calls are now ascynchronous; before they were all synchronous
 * Suport for Carthage
 
-## Installing the ~~iOS~~ iOS/tvOS/OSX SDK
+## Installing the iOS/tvOS/macOS SDK
 
-To use the Kontakt.io SDK in your project, the minimum deployment target must be iOS 8.0 or OSX 10.9 or tvOS 9.0.
+To use the Kontakt.io SDK in your project, the minimum deployment target must be iOS 8.0 or macOS 10.9 or tvOS 9.0.
 
 ### CocoaPods
 
@@ -44,13 +44,13 @@ To use the Kontakt.io SDK in your project, the minimum deployment target must be
 $ gem install cocoapods
 ```
 
-To integrate the Kontakt.io ~~iOS~~ iOS/tvOS/OSX SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate the Kontakt.io iOS/tvOS/macOS SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ``` ruby
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'KontaktSDK', '~> 1.1'
+pod 'KontaktSDK', '~> 1.3'
 ```
 
 Then, run the following command:
@@ -75,7 +75,7 @@ $ brew install carthage
 1. To integrate Kontakt.io SDK into your Xcode project using Carthage, specify it in your `Cartfile`:
 
   ``` bash
-  github "kontaktio/kontakt-ios-sdk" ~> 1.1
+  github "kontaktio/kontakt-ios-sdk" ~> 1.3
   ```
 
 2. Run `carthage update` to build the framework.
@@ -679,44 +679,4 @@ More code samples and scenarios will be covered in our sample project on [github
 ## Microlocating vs Bluetooth
 
 Kontakt.io iOS SDK makes extensive use of two native iOS frameworks: [Core Location](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html "Core Location Framework Reference") and [Core Bluetooth](https://developer.apple.com/library/ios/documentation/CoreBluetooth/Reference/CoreBluetooth_Framework/_index.html "Core Bluetooth Framework Reference"). It is important to understand that although both of them use Bluetooth Low Energy, they are separate technologies and do not have much in common. 
-
-## Changelog
-
-### v1.2.2 - 31 August 2016
-- Added support for Kontakt.io's new products
-- KTKDeviceConnection instance doesnt require assigning to class var anymore
-- Added support to read device configuration from devices with firmware >= 4.0
-- Rewritten firmware update
-- Added support for USB Beacon Firmware update
-- Added sensored beacon basic support (Specific Devices Only)
-- KTKDeviceConfiguration can be now used without uniqueID when using with KTKDeviceConnection
-- Cloud client fixes
-- Added Tough Beacon specification
-- Battery monitoring fix
-- Other minor bug-fixes and stability improvements
-
-### ~~iOS~~ iOS/tvOS/OSX SDK V1.1.0-V1.1.1 - Released 25 February 2016
-* We have added support to our SDK for iOS/tvOS/OSX
-
-### iOS SDK V1.0.9 - Released 22 February 2016
-* Added model property to KTKDevice (USB beacon support)
-* SDK now uses API version 9
-* KTKDevice minor improvements    
-* USB beacon management support
-
-### iOS SDK V1.0.8 - Released 19 February 2016
-* Secure beacon region fix
-
-### iOS SDK V1.0.7 - Released 18 February 2016
-* Eddystone URL fix
-
-### iOS SDK V1.0.6 - Released 15 February 2016
-* Regions monitoring fix
-
-### iOS SDK V1.0.2-1.0.5 - Released 12 February 2016
-* Bitcode Fixes
-* Fixes around an [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216).
-
-### iOS SDK V1.0.1 - Released 26 January 2016
-* First release of the new iOS SDK
-
+	
