@@ -4,7 +4,7 @@
 
 To configure Kontakt.io Devices please use our new [iOS Administration App](https://itunes.apple.com/pl/app/kontakt.io-administration/id1067320511).
 
-![screen](http://kontakt-mobile.s3.amazonaws.com/stich.png)
+![screen](http://kontakt-mobile.s3.amazonaws.com/stich.png?1)
 
 ## Sample Code
 You can find sample code from our workshop webinar here:  [kontaktio/kontakt-ios-sdk-workshop](https://github.com/kontaktio/kontakt-ios-sdk-workshop).
