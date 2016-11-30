@@ -1,13 +1,10 @@
 # iOS/tvOS/macOS SDK Quickstart
 
-> This is a quickstart page for the iOS/tvOS/macOS SDK.
-> This new SDK is not backwards compatible with our [previous iOS SDK](http://developer.kontakt.io/ios-sdk/quickstart-old/).
-
 ## Administration App
 
 To configure Kontakt.io Devices please use our new [iOS Administration App](https://itunes.apple.com/pl/app/kontakt.io-administration/id1067320511).
 
-![screen](http://kontakt-io-dev.s3.amazonaws.com/1.png)
+![screen](http://kontakt-mobile.s3.amazonaws.com/stich.png)
 
 ## Sample Code
 You can find sample code from our workshop webinar here:  [kontaktio/kontakt-ios-sdk-workshop](https://github.com/kontaktio/kontakt-ios-sdk-workshop).
