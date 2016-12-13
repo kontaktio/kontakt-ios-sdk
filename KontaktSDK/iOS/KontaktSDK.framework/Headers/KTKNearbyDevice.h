@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.3.2
+//  Version: 1.3.3
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -23,12 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Advertised device name. (read-only)
  */
-@property (nonatomic, readonly, strong) NSString * _Nullable name;
+@property (nonatomic, readonly, copy) NSString * _Nullable name;
 
 /**
  *  Kontakt unique identifier. (read-only)
  */
-@property (nonatomic, readonly, strong) NSString * _Nullable uniqueID;
+@property (nonatomic, readonly, copy) NSString * _Nullable uniqueID;
 
 /**
  *  Device firmware version. (read-only)
@@ -101,7 +101,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Current RSSI value for the device. (read-only)
  */
-@property (nonatomic, readonly, strong) NSNumber *RSSI;
+@property (nonatomic, readonly, copy) NSNumber *RSSI;
 
 /**
  *  Last discovery update timestamp. (read-only) 

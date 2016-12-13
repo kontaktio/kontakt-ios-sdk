@@ -4,10 +4,23 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/Base.lproj/Localizable.strings</key>
+		<data>
+		6RHnSEpxj8SDoUU33sq+/njM2C4=
+		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		YPCFXP12RPfuuN8KawMIzq2dr68=
+		iP9PaWctcgTldcu9M5eaT7fSBKc=
 		</data>
+		<key>Resources/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6RHnSEpxj8SDoUU33sq+/njM2C4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Resources/en.lproj/Localization.strings</key>
 		<dict>
 			<key>hash</key>
@@ -90,11 +103,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2m9R/4nLnIaWeXfdOtxOZscHxpo=
+			ZRRUDb53mzk2RxPK5ZzNo0D/Uek=
 			</data>
 			<key>hash2</key>
 			<data>
-			aRYus6FUmJ4T2qv2Z0AW0GXeHjTGUgSVUt19cRXRR5s=
+			682AImQrSdr/jk4/TLpmZXOuk4zaQmjUst8Z9giValU=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceCredentials.h</key>
@@ -112,11 +125,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A4qOK1LO8+h7a/vttKVOXmpSP/E=
+			RiYRwMlJ6rclMC1eRujdK6eEkF0=
 			</data>
 			<key>hash2</key>
 			<data>
-			5NwVQs2cNkFkDcSvDk93R4oXHvHrjeFzcKDmvHKS76c=
+			c1xWGA8EQWIwPsrEgnJh66+N52PtlSEq3GoUHQN1n7Y=
 			</data>
 		</dict>
 		<key>Headers/KTKDevicePowerSaving.h</key>
@@ -255,11 +268,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			K6Fz+b3TziTB+jCIaOMpdr9jivM=
+			rWB8FB4VX/wRpdaN+/d6XqF8zkw=
 			</data>
 			<key>hash2</key>
 			<data>
-			pemY1As7tfuiSV1dqvyjwT93bYUaiONXB06Pi6AY+nY=
+			HDowOCWv3A7qMUJzmBVijX0udmEYMSLIAZe2vhWdhQI=
 			</data>
 		</dict>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
@@ -339,16 +352,40 @@
 			/Ftcn9Cdd80jYPYAwQv3cNDHPr+uf+ns1mWLdDlTdgc=
 			</data>
 		</dict>
+		<key>Resources/Base.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6RHnSEpxj8SDoUU33sq+/njM2C4=
+			</data>
+			<key>hash2</key>
+			<data>
+			dn4LyXDSt/0zTuPEW7/KXnBrxEGTc2dkTaL9r57NJ1E=
+			</data>
+		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YPCFXP12RPfuuN8KawMIzq2dr68=
+			iP9PaWctcgTldcu9M5eaT7fSBKc=
 			</data>
 			<key>hash2</key>
 			<data>
-			H+gXfJoi1izsD8kl88VfchWoZ6wyWXvvdbiKvteYEEk=
+			8qG6UZ70DImqsCTG/dAj1+Xe7JkEUcne6wwvn65IxVI=
 			</data>
+		</dict>
+		<key>Resources/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6RHnSEpxj8SDoUU33sq+/njM2C4=
+			</data>
+			<key>hash2</key>
+			<data>
+			dn4LyXDSt/0zTuPEW7/KXnBrxEGTc2dkTaL9r57NJ1E=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>Resources/en.lproj/Localization.strings</key>
 		<dict>

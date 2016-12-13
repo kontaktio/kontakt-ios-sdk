@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.3.2
+//  Version: 1.3.3
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -55,6 +55,12 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
 ///--------------------------------------------------------------------
 
 /**
+*  A nearby device of this connection instance.
+*/
+
+@property (nonatomic, strong, readonly) KTKNearbyDevice *nearbyDevice;
+
+/**
  *  A timeout interval for the connection.
  */
 @property (nonatomic, assign, readwrite) NSTimeInterval connectionTimeout;
@@ -92,6 +98,14 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  */
 @property (nonatomic, readonly, getter=isExecuting) BOOL executing;
 
+/**
+ *  A Boolean value indicating whether the connection to the device should be kept alive.
+ *  
+ *  If any operation is scheduled and keepAlive flag is set to `YES` this class will keep connection alive even after scheduled operation is completed.
+ *  To close the connection you have to either call `cancel` method or change `keepalive` to NO and if no more operations are scheduled connection will be closed immediately.
+ */
+@property (nonatomic, readwrite, getter=isKeepAlive) BOOL keepAlive;
+
 #pragma mark - Static Methods
 ///--------------------------------------------------------------------
 /// @name Static Methods
@@ -103,6 +117,11 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  *  @return Number of all connection operations scheduled.
  */
 + (NSUInteger)connectionOperationsCount;
+
+/**
+ *  Cancels all connection operations scheduled in internal connection queue.
+ */
++ (void)cancelAllOperations;
     
 #pragma mark - Initialization Methods
 ///--------------------------------------------------------------------

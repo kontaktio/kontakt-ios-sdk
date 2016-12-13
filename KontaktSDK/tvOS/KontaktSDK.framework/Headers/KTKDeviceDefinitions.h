@@ -1,13 +1,14 @@
 //
 //  KontaktSDK
-//  Version: 1.3.2
+//  Version: 1.3.3
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
 
 @import Foundation;
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_10_0 || __TV_OS_VERSION_MAX_ALLOWED < __TVOS_10_0 || TARGET_OS_MAC
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000 || __TV_OS_VERSION_MAX_ALLOWED >= 100000
+#else
 #define CBManagerState CBCentralManagerState
 #define CBManagerStateUnknown CBCentralManagerStateUnknown
 #define CBManagerStateResetting CBCentralManagerStateResetting

@@ -80,11 +80,17 @@
 		
 		<option value="//api/name/executing">executing</option>
 		
+		<option value="//api/name/keepAlive">keepAlive</option>
+		
+		<option value="//api/name/nearbyDevice">nearbyDevice</option>
+		
 	</optgroup>
 	
 
 	
 	<optgroup label="Class Methods">
+		
+		<option value="//api/name/cancelAllOperations">+ cancelAllOperations</option>
 		
 		<option value="//api/name/connectionOperationsCount">+ connectionOperationsCount</option>
 		
@@ -146,6 +152,52 @@
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/nearbyDevice" title="nearbyDevice"></a>
+	<h3 class="method-title"><code><a href="#//api/name/nearbyDevice">&nbsp;&nbsp;nearbyDevice</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A nearby device of this connection instance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) KTKNearbyDevice *nearbyDevice</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A nearby device of this connection instance.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/connectionTimeout" title="connectionTimeout"></a>
 	<h3 class="method-title"><code><a href="#//api/name/connectionTimeout">&nbsp;&nbsp;connectionTimeout</a></code>
 </h3>
@@ -391,6 +443,55 @@ and then synchronized to the cloud API when possible.</p>
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/keepAlive" title="keepAlive"></a>
+	<h3 class="method-title"><code><a href="#//api/name/keepAlive">&nbsp;&nbsp;keepAlive</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Boolean value indicating whether the connection to the device should be kept alive.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readwrite, getter=isKeepAlive) BOOL keepAlive</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A Boolean value indicating whether the connection to the device should be kept alive.</p>
+
+<p>If any operation is scheduled and keepAlive flag is set to <code>YES</code> this class will keep connection alive even after scheduled operation is completed.
+To close the connection you have to either call <code>cancel</code> method or change <code>keepalive</code> to NO and if no more operations are scheduled connection will be closed immediately.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -434,6 +535,52 @@ and then synchronized to the cloud API when possible.</p>
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Returns number of all connection operations scheduled in internal connection queue.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelAllOperations" title="cancelAllOperations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelAllOperations">+&nbsp;cancelAllOperations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancels all connection operations scheduled in internal connection queue.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>+ (void)cancelAllOperations</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Cancels all connection operations scheduled in internal connection queue.</p>
 			</div>
 			
 
@@ -779,7 +926,7 @@ and then synchronized to the cloud API when possible.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Kontakt.io. All rights reserved. Updated: 2016-11-15</p>
+						<p class="copyright">Copyright &copy; 2016 Kontakt.io. All rights reserved. Updated: 2016-12-13</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
