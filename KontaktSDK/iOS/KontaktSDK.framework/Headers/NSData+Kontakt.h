@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.3.3
+//  Version: 1.4.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -32,6 +32,29 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return A data object representation.
  */
 + (NSData*)ktk_dataFromHexString:(NSString*)hexString;
+
+#pragma mark - Other Methods
+///--------------------------------------------------------------------
+/// @name Other Methods
+///--------------------------------------------------------------------
+
+- (NSData *)ktk_dataSwapInt16;
+
+- (NSData *)ktk_dataSwapInt32;
+
+- (uint16_t)CRC16Modbus;
+
+#pragma mark - Extracting Primitives
+///--------------------------------------------------------------------
+/// @name Extracting Primitives
+///--------------------------------------------------------------------
+
+- (uint8_t)UInt8;
+
+- (uint16_t)UInt16;
+
+- (uint32_t)UInt32;
+
 
 @end
 

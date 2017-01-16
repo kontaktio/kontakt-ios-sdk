@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.3.3
+//  Version: 1.4.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -76,7 +76,7 @@ __attribute__((deprecated("Please use `packets` property instead")));
  *
  *  @see KTKDevicePowerSaving
  */
-@property (nonatomic, strong, readwrite) KTKDevicePowerSaving * _Nullable powerSaving;
+@property (nonatomic, copy, readwrite) KTKDevicePowerSaving * _Nullable powerSaving;
 
 /**
  *  A Boolean indicating whether any other pending configuration should be overwritten when posting to the cloud API.
@@ -158,31 +158,6 @@ __attribute__((deprecated("Please use `packets` property instead")));
  *  A date and time of when the response was recieved.
  */
 @property (nonatomic, strong, readonly) NSDate * _Nullable secureResponseTime;
-
-#pragma mark - Motion Sensor ( Selected Devices Only)
-///--------------------------------------------------------------------
-/// @name Motion Sensor ( Selected Devices Only)
-///--------------------------------------------------------------------
-
-/**
- *  A motion detection mode.
- */
-@property (nonatomic, assign, readwrite) KTKDeviceMotionDetectionMode motionDetectionMode;
-
-/**
- *  A motion detection threshold.
- *
- *  Accepted values are 1-127. Threshold in units of 16 mg (0.1568 m/s2).
- *  For value 10, motion will be detected when acceleration exceeds 1.568 m/s2 on any axis.
- */
-@property (nonatomic, strong, readwrite) NSNumber * _Nullable motionDetectionThreshold;
-
-/**
- *  A motion counter.
- *
- *  A current value of Motion Event counter.
- */
-@property (nonatomic, strong, readonly) NSNumber * _Nullable motionCounter;
 
 #pragma mark - Initialization Methods
 ///--------------------------------------------------------------------

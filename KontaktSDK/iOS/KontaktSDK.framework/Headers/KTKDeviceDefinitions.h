@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.3.3
+//  Version: 1.4.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -38,6 +38,21 @@ typedef NS_ENUM(NSInteger, KTKDeviceConnectionOperationType) {
      *  DFU Operation.
      */
     KTKDeviceConnectionOperationTypeDFU     = 3
+};
+
+/**
+ *  Configuration Profile Generator Types
+ */
+typedef NS_ENUM(NSInteger, KTKConfigProfileGenerator) {
+    /**
+     *  Generate using Cloud Only API Key required.
+     */
+    KTKConfigProfileGeneratorUsingCloud       = 1,
+    
+    /**
+     *  Generate using KTKDeviceCredentails.
+     */
+    KTKConfigProfileGeneratorUsingCredentials = 2
 };
 
 /**

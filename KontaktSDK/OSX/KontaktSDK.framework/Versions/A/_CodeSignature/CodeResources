@@ -6,17 +6,17 @@
 	<dict>
 		<key>Resources/Base.lproj/Localizable.strings</key>
 		<data>
-		6RHnSEpxj8SDoUU33sq+/njM2C4=
+		WCxBXSvbqrPyi6E6X+jZ8d/SLqc=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		iP9PaWctcgTldcu9M5eaT7fSBKc=
+		oJV9vd+sFTKTQbrsO/uA4B3eeTs=
 		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6RHnSEpxj8SDoUU33sq+/njM2C4=
+			WCxBXSvbqrPyi6E6X+jZ8d/SLqc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -92,55 +92,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7J59ZKBoDVUnI2Wx/dxGHY7+Fow=
+			1Ic9AcoYNrE+wOi9gT8p1jvcCPM=
 			</data>
 			<key>hash2</key>
 			<data>
-			vgUBsgoFJVCSyfbBXhPuy0eKctw15ewpBHE3Y0vYM0A=
+			YJGHlHUdRc7kOOpGfljjdEJm1uuXZbB2RRy8iDupkiU=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceConnection.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZRRUDb53mzk2RxPK5ZzNo0D/Uek=
+			0A1vTSuuYX7k7TbGvJFXdHR8ggo=
 			</data>
 			<key>hash2</key>
 			<data>
-			682AImQrSdr/jk4/TLpmZXOuk4zaQmjUst8Z9giValU=
+			O6ItzDsmc+BbNLh2t83Mxw+l9XpHxmwR4hkXVq5EL8Q=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceCredentials.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			f7JO/ZkSybmBFyeM4Bxrdbc/144=
+			VS6inBeEphkaR834stBsnrQ9aZI=
 			</data>
 			<key>hash2</key>
 			<data>
-			LE+kD4Vm2cK1mkXoiGsDKvwlkOq3NvtQTuMdT5Qq6oY=
+			aIpx4awutSqA5uuMyH3Ysc3bBUkgkA0biR0Zk0IV1/I=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceDefinitions.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RiYRwMlJ6rclMC1eRujdK6eEkF0=
+			kcRSew0mIHGisHs+xSeouuKkpvU=
 			</data>
 			<key>hash2</key>
 			<data>
-			c1xWGA8EQWIwPsrEgnJh66+N52PtlSEq3GoUHQN1n7Y=
+			jGWXkONPED3kOdut/7xp6PTC7RCZN0OVjb4qUmd+1Pk=
 			</data>
 		</dict>
 		<key>Headers/KTKDevicePowerSaving.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jlS/U4xA7KK2FUq0nWyyHNnc0Og=
+			I0w6CdGCaP1RWUpKK4+vnEAtP+0=
 			</data>
 			<key>hash2</key>
 			<data>
-			gMnErm/O4bcatqliik/I1Xmt4/JYb4Ony+0fT+E3RSI=
+			tZQHwoPjEC3GMUcCOyU95OcS7f5mM2jY2jfriTnXptQ=
 			</data>
 		</dict>
 		<key>Headers/KTKDevicesManager.h</key>
@@ -323,11 +323,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MshPCyXTypqBb7mgryZ7Q7Wf0Nw=
+			ST3ErZdyRV/N/cXm8+icOdLSM14=
 			</data>
 			<key>hash2</key>
 			<data>
-			SwrqAqgANzpi/rnjcTd6NAH5kYiN5jAF8FJO5aU2x9M=
+			pUTGHfqmQZO3qtANdO8IMTsrwKgj/JfBhXPeEH6fAIk=
 			</data>
 		</dict>
 		<key>Headers/NSString+Kontakt.h</key>
@@ -356,33 +356,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6RHnSEpxj8SDoUU33sq+/njM2C4=
+			WCxBXSvbqrPyi6E6X+jZ8d/SLqc=
 			</data>
 			<key>hash2</key>
 			<data>
-			dn4LyXDSt/0zTuPEW7/KXnBrxEGTc2dkTaL9r57NJ1E=
+			w4xS6E4LVRm/an8675RWXkwE3M0huIWgsUTp6wlXtS8=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iP9PaWctcgTldcu9M5eaT7fSBKc=
+			oJV9vd+sFTKTQbrsO/uA4B3eeTs=
 			</data>
 			<key>hash2</key>
 			<data>
-			8qG6UZ70DImqsCTG/dAj1+Xe7JkEUcne6wwvn65IxVI=
+			cUk06uMICoWtFepcYszJpuH7RjBW6Vdm0dDf3i0MEO0=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6RHnSEpxj8SDoUU33sq+/njM2C4=
+			WCxBXSvbqrPyi6E6X+jZ8d/SLqc=
 			</data>
 			<key>hash2</key>
 			<data>
-			dn4LyXDSt/0zTuPEW7/KXnBrxEGTc2dkTaL9r57NJ1E=
+			w4xS6E4LVRm/an8675RWXkwE3M0huIWgsUTp6wlXtS8=
 			</data>
 			<key>optional</key>
 			<true/>

@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.3.3
+//  Version: 1.4.0
 //
 //  Copyright © 2015 Kontakt.io. All rights reserved.
 //
@@ -31,6 +31,20 @@ NS_ASSUME_NONNULL_BEGIN
  *  A Kontakt device's master password. (read-only)
  */
 @property (nonatomic, strong, readonly) NSString *masterPassword;
+
+#pragma mark - Initialization Methods
+///--------------------------------------------------------------------
+/// @name Initialization Methods- (void)readConfigurationWithCompletion:(void (^)(KTKDeviceConfiguration * _Nullable, NSError * _Nullable))completion
+///--------------------------------------------------------------------
+
+/**
+ *  Initializes and returns a device credentials object with just password.
+ *
+ *  @param password A Kontakt device's password string object.
+ *
+ *  @return An initialized device credentials object.
+ */
+- (instancetype)initWithPassword:(NSString *)password;
 
 @end
 

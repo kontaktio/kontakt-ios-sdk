@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.3.3
+//  Version: 1.4.0
 //
 //  Copyright © 2016 Kontakt.io. All rights reserved.
 //
@@ -43,6 +43,13 @@ typedef NS_OPTIONS(NSInteger, KTKDevicePowerSavingFeatures) {
 ///--------------------------------------------------------------------
 
 @property (nonatomic, assign, readwrite) NSInteger lightBrightnessLevel;
+
+#pragma mark - RTC Properties
+///--------------------------------------------------------------------
+/// @name RTC Properties
+///--------------------------------------------------------------------
+
+@property (nonatomic, copy, readwrite) NSDictionary<NSNumber *, NSIndexSet *> * _Nullable rtcHours;
 
 @end
 

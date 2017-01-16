@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.3.3
+//  Version: 1.4.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -75,23 +75,35 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  */
 @property (nonatomic, weak, readwrite) id<KTKDeviceConnectionDelegate> delegate;
 
-#pragma mark - Other Properties
+#pragma mark - Configuration Profile Properties
 ///--------------------------------------------------------------------
-/// @name Other Properties
+/// @name Configuration Profile Properties
 ///--------------------------------------------------------------------
 
 /**
  *  A credentails object to be forced over Cloud API credentials.
  *
- *  This property should be only used to connect to legacy devices (fw < 4.0) while offline.
- *  Devices with firmware >= 4.0 are not using password for the connection so this property will be ignored.
+ *  This property should be only used to connect to legacy devices (fw < 4.0) while offline or when using Credentials Config Profile Generator.
+ *  In general devices with firmware >= 4.0 are not using password for the connection so this property will be ignored 
+ *  unless you set `configProfileGenerator` property to `KTKConfigProfileGeneratorUsingCredentials`.
  *  By default credentials are automatically fetched from the Cloud API just before the connection opertation.
  *  If connection to the device while offline is not required this property should be ignored.
  *
  *  If password is changed through <code>KTKDeviceConfiguration</code> on the device while in offline it must be stored
  *  and then synchronized to the cloud API when possible.
+ *
  */
 @property (nonatomic, copy, readwrite) KTKDeviceCredentials *credentials;
+
+/**
+ *  A preferred configuration profile packets generator.
+ */
+@property (nonatomic, assign, readwrite) KTKConfigProfileGenerator configProfileGenerator;
+
+#pragma mark - Other Properties
+///--------------------------------------------------------------------
+/// @name Other Properties
+///--------------------------------------------------------------------
 
 /**
  *  A Boolean value indicating whether the operation is currently executing.
