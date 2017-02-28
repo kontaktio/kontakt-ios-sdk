@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "53B99CFFB878EC488CFEF59FD0C17CE1CEDDC83B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D11B63B973EB8A7C761C690871E90A757920B0EA" : 9223372036854775807,
+    "53B99CFFB878EC488CFEF59FD0C17CE1CEDDC83B" : 9223372036854775807,
+    "C4B5373439854BEE1FB18156879B01E0F23C851B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E2BEE111-925E-4077-8CAD-CD5A17E3384F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D11B63B973EB8A7C761C690871E90A757920B0EA" : "",
+    "53B99CFFB878EC488CFEF59FD0C17CE1CEDDC83B" : "Release\/",
+    "C4B5373439854BEE1FB18156879B01E0F23C851B" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Developer Samples",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Examples\/iOS\/Developer Samples.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:kontaktio\/kontakt-ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "53B99CFFB878EC488CFEF59FD0C17CE1CEDDC83B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:kontaktio\/ios-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C4B5373439854BEE1FB18156879B01E0F23C851B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:kontaktio\/ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D11B63B973EB8A7C761C690871E90A757920B0EA"
+    }
+  ]
+}

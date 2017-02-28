@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D6557711E6579FF00A21FCE /* UIColor+Kontakt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557701E6579FF00A21FCE /* UIColor+Kontakt.swift */; };
+		0D6557741E657A3100A21FCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557721E657A3100A21FCE /* Constants.swift */; };
+		0D6557751E657A3100A21FCE /* SamplesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557731E657A3100A21FCE /* SamplesTableViewController.swift */; };
+		0D6557841E6584E600A21FCE /* KontaktSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6557761E657DA400A21FCE /* KontaktSDK.framework */; };
+		0D6557851E6584E600A21FCE /* KontaktSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6557761E657DA400A21FCE /* KontaktSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A30813881E0955BD00DA7841 /* InfiniteScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30813871E0955BD00DA7841 /* InfiniteScanViewController.swift */; };
+		A308138A1E0955EE00DA7841 /* InfiniteScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30813891E0955EE00DA7841 /* InfiniteScan.storyboard */; };
+		A31E99431E38BB56005E73E7 /* LaunchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31E99421E38BB56005E73E7 /* LaunchButton.swift */; };
+		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
+		A322BB9D1DFEA7C400C847AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9B1DFEA7C400C847AF /* Main.storyboard */; };
+		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
+		A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */; };
+		A331F2EC1E0A8767000E443E /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A331F2EB1E0A8767000E443E /* BorderedButton.swift */; };
+		A35DA1E31E37884600929021 /* ApplyDeviceConfig.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35DA1E21E37884600929021 /* ApplyDeviceConfig.storyboard */; };
+		A384A2541E08176100A92F6A /* ScanningEddystonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A384A2531E08176100A92F6A /* ScanningEddystonesViewController.swift */; };
+		A384A2571E08178900A92F6A /* MonitoringBeaconRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A384A2561E08178900A92F6A /* MonitoringBeaconRegionViewController.swift */; };
+		A384A25A1E08179E00A92F6A /* NearbyDevicesScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A384A2591E08179E00A92F6A /* NearbyDevicesScanningViewController.swift */; };
+		A384A25D1E0818B100A92F6A /* KontaktCloudShowcaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A384A25C1E0818B100A92F6A /* KontaktCloudShowcaseViewController.swift */; };
+		A384A2621E0819E000A92F6A /* MonitoringBeaconRegion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A384A2611E0819E000A92F6A /* MonitoringBeaconRegion.storyboard */; };
+		A384A2641E081A1600A92F6A /* ScanningEddystones.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A384A2631E081A1600A92F6A /* ScanningEddystones.storyboard */; };
+		A384A2661E081A4F00A92F6A /* NearbyDevicesScanning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A384A2651E081A4F00A92F6A /* NearbyDevicesScanning.storyboard */; };
+		A384A26A1E081AB300A92F6A /* KontaktCloudShowcase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A384A2691E081AB300A92F6A /* KontaktCloudShowcase.storyboard */; };
+		A384A26F1E08288300A92F6A /* BeaconScanningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A384A26E1E08288300A92F6A /* BeaconScanningManager.swift */; };
+		A39B0CEC1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B0CEB1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift */; };
+		A3A4A35F1E07E9D6005E15A1 /* RangingBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4A35E1E07E9D6005E15A1 /* RangingBeaconsViewController.swift */; };
+		A3A4A3621E07EEB8005E15A1 /* RangingBeacons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A4A3611E07EEB8005E15A1 /* RangingBeacons.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D6557861E6584E600A21FCE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0D6557851E6584E600A21FCE /* KontaktSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0D6557701E6579FF00A21FCE /* UIColor+Kontakt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Kontakt.swift"; sourceTree = "<group>"; };
+		0D6557721E657A3100A21FCE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0D6557731E657A3100A21FCE /* SamplesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplesTableViewController.swift; sourceTree = "<group>"; };
+		0D6557761E657DA400A21FCE /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KontaktSDK.framework; path = ../../KontaktSDK/iOS/KontaktSDK.framework; sourceTree = "<group>"; };
+		0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		A30813871E0955BD00DA7841 /* InfiniteScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScanViewController.swift; sourceTree = "<group>"; };
+		A30813891E0955EE00DA7841 /* InfiniteScan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfiniteScan.storyboard; sourceTree = "<group>"; };
+		A31E99421E38BB56005E73E7 /* LaunchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchButton.swift; sourceTree = "<group>"; };
+		A322BB941DFEA7C400C847AF /* Developer Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Developer Samples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A322BB971DFEA7C400C847AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A322BB9C1DFEA7C400C847AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A322BB9E1DFEA7C400C847AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A322BBA11DFEA7C400C847AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A322BBA31DFEA7C400C847AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A331F2EB1E0A8767000E443E /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		A35DA1E21E37884600929021 /* ApplyDeviceConfig.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ApplyDeviceConfig.storyboard; sourceTree = "<group>"; };
+		A384A2531E08176100A92F6A /* ScanningEddystonesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanningEddystonesViewController.swift; sourceTree = "<group>"; };
+		A384A2561E08178900A92F6A /* MonitoringBeaconRegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitoringBeaconRegionViewController.swift; sourceTree = "<group>"; };
+		A384A2591E08179E00A92F6A /* NearbyDevicesScanningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyDevicesScanningViewController.swift; sourceTree = "<group>"; };
+		A384A25C1E0818B100A92F6A /* KontaktCloudShowcaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KontaktCloudShowcaseViewController.swift; sourceTree = "<group>"; };
+		A384A2611E0819E000A92F6A /* MonitoringBeaconRegion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MonitoringBeaconRegion.storyboard; sourceTree = "<group>"; };
+		A384A2631E081A1600A92F6A /* ScanningEddystones.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScanningEddystones.storyboard; sourceTree = "<group>"; };
+		A384A2651E081A4F00A92F6A /* NearbyDevicesScanning.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NearbyDevicesScanning.storyboard; sourceTree = "<group>"; };
+		A384A2691E081AB300A92F6A /* KontaktCloudShowcase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KontaktCloudShowcase.storyboard; sourceTree = "<group>"; };
+		A384A26E1E08288300A92F6A /* BeaconScanningManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconScanningManager.swift; sourceTree = "<group>"; };
+		A39B0CEB1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyDeviceConfigViewController.swift; sourceTree = "<group>"; };
+		A3A4A35E1E07E9D6005E15A1 /* RangingBeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangingBeaconsViewController.swift; sourceTree = "<group>"; };
+		A3A4A3611E07EEB8005E15A1 /* RangingBeacons.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RangingBeacons.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A322BB911DFEA7C400C847AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D6557841E6584E600A21FCE /* KontaktSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FC20239CADD742496626DDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D6557761E657DA400A21FCE /* KontaktSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A322BB8B1DFEA7C400C847AF = {
+			isa = PBXGroup;
+			children = (
+				A322BB961DFEA7C400C847AF /* Developer Samples */,
+				1FC20239CADD742496626DDD /* Frameworks */,
+				A322BB951DFEA7C400C847AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A322BB951DFEA7C400C847AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A322BB941DFEA7C400C847AF /* Developer Samples.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A322BB961DFEA7C400C847AF /* Developer Samples */ = {
+			isa = PBXGroup;
+			children = (
+				A3A4A35D1E07E9D6005E15A1 /* Ranging */,
+				A384A2551E08178900A92F6A /* Monitoring */,
+				A384A2521E08176100A92F6A /* Eddystone */,
+				A384A2581E08179E00A92F6A /* Nearby */,
+				A384A25E1E0818DF00A92F6A /* Configuration */,
+				A384A25B1E0818B100A92F6A /* Kontakt Cloud */,
+				A384A26B1E0827AC00A92F6A /* Infinite Scan */,
+				A331F2EA1E0A874C000E443E /* Common */,
+				A322BB971DFEA7C400C847AF /* AppDelegate.swift */,
+				A322BB9B1DFEA7C400C847AF /* Main.storyboard */,
+				A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */,
+				A322BB9E1DFEA7C400C847AF /* Assets.xcassets */,
+				A322BBA31DFEA7C400C847AF /* Info.plist */,
+				0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */,
+			);
+			path = "Developer Samples";
+			sourceTree = "<group>";
+		};
+		A331F2EA1E0A874C000E443E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0D6557721E657A3100A21FCE /* Constants.swift */,
+				0D6557731E657A3100A21FCE /* SamplesTableViewController.swift */,
+				0D6557701E6579FF00A21FCE /* UIColor+Kontakt.swift */,
+				A331F2EB1E0A8767000E443E /* BorderedButton.swift */,
+				A31E99421E38BB56005E73E7 /* LaunchButton.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A384A2521E08176100A92F6A /* Eddystone */ = {
+			isa = PBXGroup;
+			children = (
+				A384A2531E08176100A92F6A /* ScanningEddystonesViewController.swift */,
+				A384A2631E081A1600A92F6A /* ScanningEddystones.storyboard */,
+			);
+			path = Eddystone;
+			sourceTree = "<group>";
+		};
+		A384A2551E08178900A92F6A /* Monitoring */ = {
+			isa = PBXGroup;
+			children = (
+				A384A2561E08178900A92F6A /* MonitoringBeaconRegionViewController.swift */,
+				A384A2611E0819E000A92F6A /* MonitoringBeaconRegion.storyboard */,
+			);
+			path = Monitoring;
+			sourceTree = "<group>";
+		};
+		A384A2581E08179E00A92F6A /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				A384A2591E08179E00A92F6A /* NearbyDevicesScanningViewController.swift */,
+				A384A2651E081A4F00A92F6A /* NearbyDevicesScanning.storyboard */,
+			);
+			path = Nearby;
+			sourceTree = "<group>";
+		};
+		A384A25B1E0818B100A92F6A /* Kontakt Cloud */ = {
+			isa = PBXGroup;
+			children = (
+				A384A25C1E0818B100A92F6A /* KontaktCloudShowcaseViewController.swift */,
+				A384A2691E081AB300A92F6A /* KontaktCloudShowcase.storyboard */,
+			);
+			path = "Kontakt Cloud";
+			sourceTree = "<group>";
+		};
+		A384A25E1E0818DF00A92F6A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A39B0CEB1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift */,
+				A35DA1E21E37884600929021 /* ApplyDeviceConfig.storyboard */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		A384A26B1E0827AC00A92F6A /* Infinite Scan */ = {
+			isa = PBXGroup;
+			children = (
+				A384A26E1E08288300A92F6A /* BeaconScanningManager.swift */,
+				A30813871E0955BD00DA7841 /* InfiniteScanViewController.swift */,
+				A30813891E0955EE00DA7841 /* InfiniteScan.storyboard */,
+			);
+			path = "Infinite Scan";
+			sourceTree = "<group>";
+		};
+		A3A4A35D1E07E9D6005E15A1 /* Ranging */ = {
+			isa = PBXGroup;
+			children = (
+				A3A4A35E1E07E9D6005E15A1 /* RangingBeaconsViewController.swift */,
+				A3A4A3611E07EEB8005E15A1 /* RangingBeacons.storyboard */,
+			);
+			path = Ranging;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A322BB931DFEA7C400C847AF /* Developer Samples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A322BBA61DFEA7C400C847AF /* Build configuration list for PBXNativeTarget "Developer Samples" */;
+			buildPhases = (
+				A322BB901DFEA7C400C847AF /* Sources */,
+				A322BB911DFEA7C400C847AF /* Frameworks */,
+				A322BB921DFEA7C400C847AF /* Resources */,
+				0D6557861E6584E600A21FCE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Developer Samples";
+			productName = "Developer Samples";
+			productReference = A322BB941DFEA7C400C847AF /* Developer Samples.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A322BB8C1DFEA7C400C847AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = kontakt.io;
+				TargetAttributes = {
+					A322BB931DFEA7C400C847AF = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 7DNS7SBDH9;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = A322BB8F1DFEA7C400C847AF /* Build configuration list for PBXProject "Developer Samples" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A322BB8B1DFEA7C400C847AF;
+			productRefGroup = A322BB951DFEA7C400C847AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A322BB931DFEA7C400C847AF /* Developer Samples */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A322BB921DFEA7C400C847AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */,
+				A35DA1E31E37884600929021 /* ApplyDeviceConfig.storyboard in Resources */,
+				A384A26A1E081AB300A92F6A /* KontaktCloudShowcase.storyboard in Resources */,
+				A3A4A3621E07EEB8005E15A1 /* RangingBeacons.storyboard in Resources */,
+				A384A2621E0819E000A92F6A /* MonitoringBeaconRegion.storyboard in Resources */,
+				A384A2641E081A1600A92F6A /* ScanningEddystones.storyboard in Resources */,
+				A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */,
+				A384A2661E081A4F00A92F6A /* NearbyDevicesScanning.storyboard in Resources */,
+				A322BB9D1DFEA7C400C847AF /* Main.storyboard in Resources */,
+				A308138A1E0955EE00DA7841 /* InfiniteScan.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A322BB901DFEA7C400C847AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A384A25D1E0818B100A92F6A /* KontaktCloudShowcaseViewController.swift in Sources */,
+				A331F2EC1E0A8767000E443E /* BorderedButton.swift in Sources */,
+				A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */,
+				A3A4A35F1E07E9D6005E15A1 /* RangingBeaconsViewController.swift in Sources */,
+				A30813881E0955BD00DA7841 /* InfiniteScanViewController.swift in Sources */,
+				A384A26F1E08288300A92F6A /* BeaconScanningManager.swift in Sources */,
+				A39B0CEC1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift in Sources */,
+				0D6557741E657A3100A21FCE /* Constants.swift in Sources */,
+				0D6557711E6579FF00A21FCE /* UIColor+Kontakt.swift in Sources */,
+				A384A2541E08176100A92F6A /* ScanningEddystonesViewController.swift in Sources */,
+				0D6557751E657A3100A21FCE /* SamplesTableViewController.swift in Sources */,
+				A384A2571E08178900A92F6A /* MonitoringBeaconRegionViewController.swift in Sources */,
+				A384A25A1E08179E00A92F6A /* NearbyDevicesScanningViewController.swift in Sources */,
+				A31E99431E38BB56005E73E7 /* LaunchButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A322BB9B1DFEA7C400C847AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A322BB9C1DFEA7C400C847AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A322BBA11DFEA7C400C847AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A322BBA41DFEA7C400C847AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../KontaktSDK/iOS/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Developer Samples/BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A322BBA51DFEA7C400C847AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../KontaktSDK/iOS/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Developer Samples/BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A322BBA71DFEA7C400C847AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7DNS7SBDH9;
+				INFOPLIST_FILE = "Developer Samples/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kontakt.Developer-Samples";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A322BBA81DFEA7C400C847AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7DNS7SBDH9;
+				INFOPLIST_FILE = "Developer Samples/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.kontakt.Developer-Samples";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A322BB8F1DFEA7C400C847AF /* Build configuration list for PBXProject "Developer Samples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A322BBA41DFEA7C400C847AF /* Debug */,
+				A322BBA51DFEA7C400C847AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A322BBA61DFEA7C400C847AF /* Build configuration list for PBXNativeTarget "Developer Samples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A322BBA71DFEA7C400C847AF /* Debug */,
+				A322BBA81DFEA7C400C847AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A322BB8C1DFEA7C400C847AF /* Project object */;
+}

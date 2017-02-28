@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iDU-ch-OlT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kontakt Cloud Showcase View Controller-->
+        <scene sceneID="RLd-wj-5IH">
+            <objects>
+                <viewController storyboardIdentifier="KontaktCloudShowcase" id="iDU-ch-OlT" customClass="KontaktCloudShowcaseViewController" customModule="Developer_Samples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SVk-EC-gpL"/>
+                        <viewControllerLayoutGuide type="bottom" id="OAs-ey-Xh9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hAe-5c-Cjw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXk-QE-J06">
+                                <rect key="frame" x="-4" y="20" width="383" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvo-6F-LRy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9J-pF-089" customClass="BorderedButton" customModule="Developer_Samples" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="237" width="355" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="3Qz-WA-e5f"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <state key="normal" title="FETCH DEVICES"/>
+                                                <connections>
+                                                    <action selector="fetchDevices:" destination="iDU-ch-OlT" eventType="touchUpInside" id="X6E-o5-HKB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AV6-bv-ib2" customClass="BorderedButton" customModule="Developer_Samples" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="317" width="355" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <state key="normal" title="FETCH CONFIGS"/>
+                                                <connections>
+                                                    <action selector="fetchConfigs:" destination="iDU-ch-OlT" eventType="touchUpInside" id="xyV-sM-Zu1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdU-Kv-EfT" customClass="BorderedButton" customModule="Developer_Samples" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="397" width="355" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <state key="normal" title="FETCH MANAGERS"/>
+                                                <connections>
+                                                    <action selector="fetchManagers:" destination="iDU-ch-OlT" eventType="touchUpInside" id="aJe-wm-cDk"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="1Ga-Jj-lpP">
+                                                <rect key="frame" x="162" y="20" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="3Xh-Co-ubh"/>
+                                                    <constraint firstAttribute="height" constant="50" id="KKH-kc-jR0"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkM-5e-KwW">
+                                                <rect key="frame" x="10" y="80" width="355" height="117"/>
+                                                <string key="text">This sample presents exemplary Kontakt Cloud usage. Click buttons below to fetch devices, configs or managers. Results will be displayed as alerts with message about downloaded data.  Implementation details are places in KontaktCloudShowcaseViewController class.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="o9J-pF-089" firstAttribute="top" secondItem="BkM-5e-KwW" secondAttribute="bottom" constant="40" id="0t1-GI-tny"/>
+                                            <constraint firstItem="AV6-bv-ib2" firstAttribute="top" secondItem="o9J-pF-089" secondAttribute="bottom" constant="30" id="1NE-eH-G10"/>
+                                            <constraint firstItem="AV6-bv-ib2" firstAttribute="height" secondItem="o9J-pF-089" secondAttribute="height" id="5it-cv-UxG"/>
+                                            <constraint firstItem="BkM-5e-KwW" firstAttribute="centerX" secondItem="zvo-6F-LRy" secondAttribute="centerX" id="AMt-dK-IeO"/>
+                                            <constraint firstItem="BkM-5e-KwW" firstAttribute="top" secondItem="1Ga-Jj-lpP" secondAttribute="bottom" constant="10" id="HtR-RL-Wac"/>
+                                            <constraint firstItem="cdU-Kv-EfT" firstAttribute="centerX" secondItem="zvo-6F-LRy" secondAttribute="centerX" id="P2X-MM-CrR"/>
+                                            <constraint firstItem="cdU-Kv-EfT" firstAttribute="height" secondItem="AV6-bv-ib2" secondAttribute="height" id="V0v-V4-BpW"/>
+                                            <constraint firstItem="1Ga-Jj-lpP" firstAttribute="top" secondItem="zvo-6F-LRy" secondAttribute="top" constant="20" id="WoS-rU-W9j"/>
+                                            <constraint firstAttribute="trailing" secondItem="o9J-pF-089" secondAttribute="trailing" constant="10" id="ZWV-YH-c2R"/>
+                                            <constraint firstItem="cdU-Kv-EfT" firstAttribute="top" secondItem="AV6-bv-ib2" secondAttribute="bottom" constant="30" id="aL5-tv-Wjr"/>
+                                            <constraint firstItem="AV6-bv-ib2" firstAttribute="width" secondItem="o9J-pF-089" secondAttribute="width" id="bq4-9f-xDV"/>
+                                            <constraint firstItem="BkM-5e-KwW" firstAttribute="leading" secondItem="zvo-6F-LRy" secondAttribute="leading" constant="10" id="eXN-OE-lKy"/>
+                                            <constraint firstItem="1Ga-Jj-lpP" firstAttribute="centerX" secondItem="zvo-6F-LRy" secondAttribute="centerX" id="fEx-DH-Ci0"/>
+                                            <constraint firstItem="AV6-bv-ib2" firstAttribute="centerX" secondItem="zvo-6F-LRy" secondAttribute="centerX" id="gdP-zW-6Of"/>
+                                            <constraint firstItem="cdU-Kv-EfT" firstAttribute="width" secondItem="AV6-bv-ib2" secondAttribute="width" id="hu5-6p-Qes"/>
+                                            <constraint firstItem="o9J-pF-089" firstAttribute="leading" secondItem="zvo-6F-LRy" secondAttribute="leading" constant="10" id="mCa-Nh-gZ3"/>
+                                            <constraint firstAttribute="trailing" secondItem="BkM-5e-KwW" secondAttribute="trailing" constant="10" id="mDm-FN-G8U"/>
+                                            <constraint firstAttribute="bottom" secondItem="cdU-Kv-EfT" secondAttribute="bottom" constant="20" id="xNL-nL-Ngo"/>
+                                            <constraint firstItem="o9J-pF-089" firstAttribute="centerX" secondItem="zvo-6F-LRy" secondAttribute="centerX" id="xRz-nO-Ypm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zvo-6F-LRy" secondAttribute="trailing" id="Kbe-j0-WLM"/>
+                                    <constraint firstItem="zvo-6F-LRy" firstAttribute="top" secondItem="XXk-QE-J06" secondAttribute="top" id="dRb-Lu-WGw"/>
+                                    <constraint firstAttribute="bottom" secondItem="zvo-6F-LRy" secondAttribute="bottom" id="uCG-lE-ZMf"/>
+                                    <constraint firstItem="zvo-6F-LRy" firstAttribute="leading" secondItem="XXk-QE-J06" secondAttribute="leading" id="yiO-FB-B0n"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zvo-6F-LRy" firstAttribute="height" secondItem="hAe-5c-Cjw" secondAttribute="height" priority="250" id="7vA-GB-QuQ"/>
+                            <constraint firstItem="zvo-6F-LRy" firstAttribute="width" secondItem="hAe-5c-Cjw" secondAttribute="width" id="WZl-pv-TBD"/>
+                            <constraint firstItem="XXk-QE-J06" firstAttribute="leading" secondItem="hAe-5c-Cjw" secondAttribute="leadingMargin" constant="-20" id="hFK-Q9-Ux5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XXk-QE-J06" secondAttribute="trailing" constant="-20" id="iwm-nV-LtC"/>
+                            <constraint firstItem="OAs-ey-Xh9" firstAttribute="top" secondItem="XXk-QE-J06" secondAttribute="bottom" id="jNo-JX-eFV"/>
+                            <constraint firstItem="XXk-QE-J06" firstAttribute="top" secondItem="SVk-EC-gpL" secondAttribute="bottom" id="nMN-ln-4Zp"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="BkM-5e-KwW" id="Na4-Ux-Wt0"/>
+                        <outlet property="fetchConfigsButton" destination="AV6-bv-ib2" id="fiH-WO-UqA"/>
+                        <outlet property="fetchDevicesButton" destination="o9J-pF-089" id="21K-cm-xew"/>
+                        <outlet property="fetchManagersButton" destination="cdU-Kv-EfT" id="gSH-jf-I07"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rci-hc-NA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016.8" y="-850.52473763118451"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info" width="50" height="50"/>
+    </resources>
+</document>

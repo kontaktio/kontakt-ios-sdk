@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KS2-BX-Sn0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nearby Devices Scanning View Controller-->
+        <scene sceneID="G0y-R1-xlP">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="KS2-BX-Sn0" customClass="NearbyDevicesScanningViewController" customModule="Developer_Samples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kXr-Xg-CfZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="bXJ-DF-cnl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="12N-g4-a2g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndA-xS-Hhy" customClass="LaunchButton" customModule="Developer_Samples" customModuleProvider="target">
+                                <rect key="frame" x="10" y="597" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="erk-Ba-91S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="launchButtonClicked:" destination="KS2-BX-Sn0" eventType="touchUpInside" id="r5m-sR-9gk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="4qm-Ju-sxn">
+                                <rect key="frame" x="162" y="40" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="001-dy-5mY"/>
+                                    <constraint firstAttribute="width" constant="50" id="ulN-Rm-sw0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6I-qL-gDq">
+                                <rect key="frame" x="10" y="100" width="355" height="134"/>
+                                <string key="text">This sample presents nearby devices discovery functionality. To start and stop discovery please use the button below. Scanned device contains info about device without iBeacon or Eddystone frame data. Results will be printed as logs in IDE.  Implementation details are places in NearbyDevicesScanningViewController class.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ndA-xS-Hhy" firstAttribute="centerX" secondItem="12N-g4-a2g" secondAttribute="centerX" id="ERv-5C-8oB"/>
+                            <constraint firstItem="t6I-qL-gDq" firstAttribute="centerX" secondItem="12N-g4-a2g" secondAttribute="centerX" id="O6a-gy-BPc"/>
+                            <constraint firstAttribute="trailing" secondItem="t6I-qL-gDq" secondAttribute="trailing" constant="10" id="ZGQ-W4-hfC"/>
+                            <constraint firstItem="4qm-Ju-sxn" firstAttribute="centerX" secondItem="12N-g4-a2g" secondAttribute="centerX" id="ayd-yf-zrz"/>
+                            <constraint firstItem="t6I-qL-gDq" firstAttribute="top" secondItem="4qm-Ju-sxn" secondAttribute="bottom" constant="10" id="bYe-Dd-YOA"/>
+                            <constraint firstItem="4qm-Ju-sxn" firstAttribute="top" secondItem="kXr-Xg-CfZ" secondAttribute="bottom" constant="20" id="c0g-51-eKO"/>
+                            <constraint firstItem="t6I-qL-gDq" firstAttribute="leading" secondItem="12N-g4-a2g" secondAttribute="leading" constant="10" id="fNU-cP-SzE"/>
+                            <constraint firstItem="ndA-xS-Hhy" firstAttribute="leading" secondItem="12N-g4-a2g" secondAttribute="leading" constant="10" id="i2c-sz-wW8"/>
+                            <constraint firstAttribute="trailing" secondItem="ndA-xS-Hhy" secondAttribute="trailing" constant="10" id="qLg-dU-jWW"/>
+                            <constraint firstItem="bXJ-DF-cnl" firstAttribute="top" secondItem="ndA-xS-Hhy" secondAttribute="bottom" constant="20" id="uAf-b7-3Ej"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="t6I-qL-gDq" id="ejN-Sc-BBS"/>
+                        <outlet property="launchButton" destination="ndA-xS-Hhy" id="deD-sb-Qs7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQc-lc-pMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102" y="986"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info" width="50" height="50"/>
+    </resources>
+</document>

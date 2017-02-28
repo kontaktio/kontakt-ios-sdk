@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hIw-7f-mFn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Monitoring Beacon Region View Controller-->
+        <scene sceneID="z69-sC-jp8">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="hIw-7f-mFn" customClass="MonitoringBeaconRegionViewController" customModule="Developer_Samples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eEr-Yv-jyS"/>
+                        <viewControllerLayoutGuide type="bottom" id="X6Q-4N-dYt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="woB-NJ-jc7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlN-xW-V20" customClass="LaunchButton" customModule="Developer_Samples" customModuleProvider="target">
+                                <rect key="frame" x="10" y="597" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FkB-ns-fNi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="launchButtonClicked:" destination="hIw-7f-mFn" eventType="touchUpInside" id="7kq-XF-2I6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-fq-sCk">
+                                <rect key="frame" x="162" y="40" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8k0-3S-E5H"/>
+                                    <constraint firstAttribute="width" constant="50" id="iHj-xc-BwU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4W-oy-McO">
+                                <rect key="frame" x="10" y="100" width="355" height="100.5"/>
+                                <string key="text">This sample presents iBeacon regions monitoring. To start and stop monitoring process please use the button below. Results will be presented as logs in IDE.  Implementation details could be found in MonitoringBeaconsViewController class.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dlN-xW-V20" firstAttribute="leading" secondItem="woB-NJ-jc7" secondAttribute="leading" constant="10" id="8v5-hy-7Pg"/>
+                            <constraint firstItem="h4W-oy-McO" firstAttribute="centerX" secondItem="woB-NJ-jc7" secondAttribute="centerX" id="BMu-AH-LgW"/>
+                            <constraint firstItem="h4W-oy-McO" firstAttribute="top" secondItem="pD8-fq-sCk" secondAttribute="bottom" constant="10" id="Zw1-Ut-vBE"/>
+                            <constraint firstAttribute="trailing" secondItem="h4W-oy-McO" secondAttribute="trailing" constant="10" id="b4C-Sw-dDL"/>
+                            <constraint firstItem="h4W-oy-McO" firstAttribute="leading" secondItem="woB-NJ-jc7" secondAttribute="leading" constant="10" id="cwn-zB-k0F"/>
+                            <constraint firstItem="dlN-xW-V20" firstAttribute="centerX" secondItem="woB-NJ-jc7" secondAttribute="centerX" id="dxz-Oo-utl"/>
+                            <constraint firstAttribute="trailing" secondItem="dlN-xW-V20" secondAttribute="trailing" constant="10" id="enM-7O-e1h"/>
+                            <constraint firstItem="pD8-fq-sCk" firstAttribute="centerX" secondItem="woB-NJ-jc7" secondAttribute="centerX" id="gWi-KA-r4t"/>
+                            <constraint firstItem="X6Q-4N-dYt" firstAttribute="top" secondItem="dlN-xW-V20" secondAttribute="bottom" constant="20" id="gfW-U4-J8I"/>
+                            <constraint firstItem="pD8-fq-sCk" firstAttribute="top" secondItem="eEr-Yv-jyS" secondAttribute="bottom" constant="20" id="mMe-DU-QSz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="h4W-oy-McO" id="rVp-Ey-d6Z"/>
+                        <outlet property="launchButton" destination="dlN-xW-V20" id="zet-Yp-eRK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojH-Qz-l8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="985"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info" width="50" height="50"/>
+    </resources>
+</document>

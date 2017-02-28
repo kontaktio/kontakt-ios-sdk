@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="09r-ml-Xv7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Infinite Scan View Controller-->
+        <scene sceneID="h5f-3v-sVg">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="09r-ml-Xv7" customClass="InfiniteScanViewController" customModule="Developer_Samples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tyT-el-ubg"/>
+                        <viewControllerLayoutGuide type="bottom" id="EeA-8F-ZeH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Q4-cQ-OUr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHS-4T-KZN" customClass="LaunchButton" customModule="Developer_Samples" customModuleProvider="target">
+                                <rect key="frame" x="10" y="597" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Q6q-VR-GVJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="launchButtonClicked:" destination="09r-ml-Xv7" eventType="touchUpInside" id="6Jn-5e-n9N"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="XZE-PP-p2b">
+                                <rect key="frame" x="162" y="40" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gQx-bJ-jA3"/>
+                                    <constraint firstAttribute="width" constant="50" id="hXG-dc-Lsk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuM-mf-jil">
+                                <rect key="frame" x="10" y="100" width="355" height="217.5"/>
+                                <string key="text">This sample presents infinite scan accomplished by iBeacon region monitoring. Click button to launch scanning. Scan will be started when given iBeacon region is entered. Afterward Eddystones will be scanned until the button is clicked again. Results will be presented as logs if app is in foreground or as a notification otherwise when Eddystone from region is scanned. Notifications will be shown even if app was terminated.  Implementation details could be found in BeaconScanningManager and InfiniteScanViewController classes. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xuM-mf-jil" firstAttribute="leading" secondItem="9Q4-cQ-OUr" secondAttribute="leading" constant="10" id="70z-f1-x5z"/>
+                            <constraint firstAttribute="trailing" secondItem="xuM-mf-jil" secondAttribute="trailing" constant="10" id="F4d-GJ-2qT"/>
+                            <constraint firstItem="XHS-4T-KZN" firstAttribute="leading" secondItem="9Q4-cQ-OUr" secondAttribute="leading" constant="10" id="IyQ-8I-i7v"/>
+                            <constraint firstItem="EeA-8F-ZeH" firstAttribute="top" secondItem="XHS-4T-KZN" secondAttribute="bottom" constant="20" id="Kzh-46-TPC"/>
+                            <constraint firstAttribute="trailing" secondItem="XHS-4T-KZN" secondAttribute="trailing" constant="10" id="NxM-u8-BU9"/>
+                            <constraint firstItem="xuM-mf-jil" firstAttribute="centerX" secondItem="9Q4-cQ-OUr" secondAttribute="centerX" id="ZwQ-gc-2GN"/>
+                            <constraint firstItem="xuM-mf-jil" firstAttribute="top" secondItem="XZE-PP-p2b" secondAttribute="bottom" constant="10" id="o7T-e3-xI3"/>
+                            <constraint firstItem="XZE-PP-p2b" firstAttribute="centerX" secondItem="9Q4-cQ-OUr" secondAttribute="centerX" id="phZ-XD-CJK"/>
+                            <constraint firstItem="XZE-PP-p2b" firstAttribute="top" secondItem="tyT-el-ubg" secondAttribute="bottom" constant="20" id="pt1-67-la2"/>
+                            <constraint firstItem="XHS-4T-KZN" firstAttribute="centerX" secondItem="9Q4-cQ-OUr" secondAttribute="centerX" id="xF8-uw-pUF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="xuM-mf-jil" id="rT6-AF-12A"/>
+                        <outlet property="launchButton" destination="XHS-4T-KZN" id="I7G-te-H67"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edL-Rk-S7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info" width="50" height="50"/>
+    </resources>
+</document>

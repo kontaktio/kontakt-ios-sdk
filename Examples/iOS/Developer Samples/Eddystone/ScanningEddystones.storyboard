@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vZh-88-ZW6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scanning Eddystones View Controller-->
+        <scene sceneID="Qts-Bx-ane">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="vZh-88-ZW6" customClass="ScanningEddystonesViewController" customModule="Developer_Samples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PrJ-aO-Z1J"/>
+                        <viewControllerLayoutGuide type="bottom" id="tEM-5y-Ho8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h5Y-Lx-iy5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgj-Jt-YAG" customClass="LaunchButton" customModule="Developer_Samples" customModuleProvider="target">
+                                <rect key="frame" x="10" y="597" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gcT-Lc-qRE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="launchButtonClicked:" destination="vZh-88-ZW6" eventType="touchUpInside" id="wkB-3D-V51"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="Hwk-3R-c5g">
+                                <rect key="frame" x="162" y="40" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bqe-2k-tUL"/>
+                                    <constraint firstAttribute="width" constant="50" id="u3S-Mu-Lrv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uu-vZ-TQG">
+                                <rect key="frame" x="10" y="100" width="355" height="150.5"/>
+                                <string key="text">This sample presents detecting Eddystones functionality. To start and stop scanning please use the button below. Results will be presented as logs in IDE. In case of background scanning, when specified Eddystone URL is discovered, a local notification will be send if user accept permissions.  Implementation details could be found in ScanningEddystonesViewController class.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6uu-vZ-TQG" firstAttribute="centerX" secondItem="h5Y-Lx-iy5" secondAttribute="centerX" id="4XI-WM-oHN"/>
+                            <constraint firstItem="hgj-Jt-YAG" firstAttribute="centerX" secondItem="h5Y-Lx-iy5" secondAttribute="centerX" id="BCB-oM-rWx"/>
+                            <constraint firstAttribute="trailing" secondItem="6uu-vZ-TQG" secondAttribute="trailing" constant="10" id="GnZ-Qd-32a"/>
+                            <constraint firstItem="hgj-Jt-YAG" firstAttribute="leading" secondItem="h5Y-Lx-iy5" secondAttribute="leading" constant="10" id="Ka5-RA-tzj"/>
+                            <constraint firstItem="tEM-5y-Ho8" firstAttribute="top" secondItem="hgj-Jt-YAG" secondAttribute="bottom" constant="20" id="QM8-Kc-uov"/>
+                            <constraint firstItem="Hwk-3R-c5g" firstAttribute="top" secondItem="PrJ-aO-Z1J" secondAttribute="bottom" constant="20" id="f1P-4g-W2X"/>
+                            <constraint firstItem="6uu-vZ-TQG" firstAttribute="leading" secondItem="h5Y-Lx-iy5" secondAttribute="leading" constant="10" id="gRK-kH-1Dp"/>
+                            <constraint firstItem="6uu-vZ-TQG" firstAttribute="top" secondItem="Hwk-3R-c5g" secondAttribute="bottom" constant="10" id="hno-5P-vfD"/>
+                            <constraint firstAttribute="trailing" secondItem="hgj-Jt-YAG" secondAttribute="trailing" constant="10" id="mJe-fP-KrS"/>
+                            <constraint firstItem="Hwk-3R-c5g" firstAttribute="centerX" secondItem="h5Y-Lx-iy5" secondAttribute="centerX" id="wAN-7B-8se"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="6uu-vZ-TQG" id="rtf-7C-gq5"/>
+                        <outlet property="launchButton" destination="hgj-Jt-YAG" id="Tc3-DT-4Kk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHl-hT-o0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="186"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info" width="50" height="50"/>
+    </resources>
+</document>

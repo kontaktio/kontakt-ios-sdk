@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jov-k5-Ipj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ranging Beacons View Controller-->
+        <scene sceneID="GpT-XG-tHb">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="jov-k5-Ipj" customClass="RangingBeaconsViewController" customModule="Developer_Samples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ul9-ib-wk3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kj8-mt-D9v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fJX-7i-vMu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odL-BE-HBj" customClass="LaunchButton" customModule="Developer_Samples" customModuleProvider="target">
+                                <rect key="frame" x="10" y="597" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1l7-jT-c19"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="launchButtonClicked:" destination="jov-k5-Ipj" eventType="touchUpInside" id="w8M-3X-0Rw"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="FKf-aj-thd">
+                                <rect key="frame" x="162" y="40" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0kO-BS-Wxl"/>
+                                    <constraint firstAttribute="width" constant="50" id="JlJ-nc-cV0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEG-mn-xGn">
+                                <rect key="frame" x="10" y="100" width="355" height="100.5"/>
+                                <string key="text">This sample presents beacons ranging. To start and stop ranging process please use the button below. Results will be presented as logs in IDE.  Implementation details could be found in RangingBeaconsViewController class. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="odL-BE-HBj" secondAttribute="trailing" constant="10" id="C3F-L4-5CX"/>
+                            <constraint firstItem="qEG-mn-xGn" firstAttribute="centerX" secondItem="fJX-7i-vMu" secondAttribute="centerX" id="MWb-f6-zpy"/>
+                            <constraint firstItem="odL-BE-HBj" firstAttribute="leading" secondItem="fJX-7i-vMu" secondAttribute="leading" constant="10" id="PwT-s5-Ot6"/>
+                            <constraint firstItem="FKf-aj-thd" firstAttribute="top" secondItem="ul9-ib-wk3" secondAttribute="bottom" constant="20" id="UhM-4D-qpS"/>
+                            <constraint firstAttribute="trailing" secondItem="qEG-mn-xGn" secondAttribute="trailing" constant="10" id="X2o-44-s5O"/>
+                            <constraint firstItem="qEG-mn-xGn" firstAttribute="top" secondItem="FKf-aj-thd" secondAttribute="bottom" constant="10" id="ceY-wi-KOx"/>
+                            <constraint firstItem="Kj8-mt-D9v" firstAttribute="top" secondItem="odL-BE-HBj" secondAttribute="bottom" constant="20" id="rQm-Ch-vbn"/>
+                            <constraint firstItem="qEG-mn-xGn" firstAttribute="leading" secondItem="fJX-7i-vMu" secondAttribute="leading" constant="10" id="rvV-GW-lLJ"/>
+                            <constraint firstItem="odL-BE-HBj" firstAttribute="centerX" secondItem="fJX-7i-vMu" secondAttribute="centerX" id="suW-aA-56o"/>
+                            <constraint firstItem="FKf-aj-thd" firstAttribute="centerX" secondItem="fJX-7i-vMu" secondAttribute="centerX" id="xF9-2n-z8u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="qEG-mn-xGn" id="2Wd-bO-XDC"/>
+                        <outlet property="launchButton" destination="odL-BE-HBj" id="Cj3-d7-qeN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xiX-oe-LRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="-557"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info" width="50" height="50"/>
+    </resources>
+</document>
