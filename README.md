@@ -7,8 +7,7 @@ To configure Kontakt.io Devices please use our new [iOS Administration App](http
 ![screen](http://kontakt-mobile.s3.amazonaws.com/stich.png?1)
 
 ## Sample Code
-You can find sample code from our workshop webinar here:  [kontaktio/kontakt-ios-sdk-workshop](https://github.com/kontaktio/kontakt-ios-sdk-workshop).
-Video will be posted soon.
+You can find our demos and sample code in [Examples folder](https://github.com/kontaktio/kontakt-ios-sdk/tree/master/Examples).
 
 ## Overview
 
