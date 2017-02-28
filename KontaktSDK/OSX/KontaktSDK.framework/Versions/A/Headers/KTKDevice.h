@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.4.0
+//  Version: 1.4.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -49,6 +49,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  An alias of the device.
  */
 @property (nonatomic, strong, readwrite) NSString * _Nullable alias;
+
+/**
+ *  An array of device tags.
+ */
+@property (nonatomic, strong, readwrite) NSArray <NSString *>* _Nullable tags;
 
 /**
  *  Meta dictionary object.

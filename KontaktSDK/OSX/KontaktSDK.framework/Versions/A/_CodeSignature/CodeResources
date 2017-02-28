@@ -10,22 +10,13 @@
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		oJV9vd+sFTKTQbrsO/uA4B3eeTs=
+		vKbL4rNeZ4BezqsCkq83wKGEQfs=
 		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
 			WCxBXSvbqrPyi6E6X+jZ8d/SLqc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Resources/en.lproj/Localization.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jiUOydOh/Ka7LynTUUS+woMkMOo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -81,22 +72,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3vbbBty8ojRTR3EW+67g5oAVsHQ=
+			0zVnaB1XDpVvgXaoMNtPQCIWQ7U=
 			</data>
 			<key>hash2</key>
 			<data>
-			k1zjmXnXzAMVV8ionG5raRWKvfVktRNT5eKPhecLo5s=
+			34XFTZueL12DaLQ6cLphFF+gqe6glMESf333HLXfg2Q=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceConfiguration.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1Ic9AcoYNrE+wOi9gT8p1jvcCPM=
+			b/abhxGFwMrz1pr0jiXu1MzYA5E=
 			</data>
 			<key>hash2</key>
 			<data>
-			YJGHlHUdRc7kOOpGfljjdEJm1uuXZbB2RRy8iDupkiU=
+			gwR5TAFck2Wr1e0af3DxtaKoLJz1i21nhhFn/sn8M4U=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceConnection.h</key>
@@ -367,11 +358,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oJV9vd+sFTKTQbrsO/uA4B3eeTs=
+			vKbL4rNeZ4BezqsCkq83wKGEQfs=
 			</data>
 			<key>hash2</key>
 			<data>
-			cUk06uMICoWtFepcYszJpuH7RjBW6Vdm0dDf3i0MEO0=
+			lqF8BxJYTTzwU/DWr3IWV3RCPqCAK2zMALyZpF0456I=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Localizable.strings</key>
@@ -383,19 +374,6 @@
 			<key>hash2</key>
 			<data>
 			w4xS6E4LVRm/an8675RWXkwE3M0huIWgsUTp6wlXtS8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Resources/en.lproj/Localization.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jiUOydOh/Ka7LynTUUS+woMkMOo=
-			</data>
-			<key>hash2</key>
-			<data>
-			KEwD3eW3p5Ku0yMK1e0nEjm830sS6tAAjKYrfTRMdDI=
 			</data>
 			<key>optional</key>
 			<true/>
