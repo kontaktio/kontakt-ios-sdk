@@ -1819,30 +1819,30 @@ ___destroy_helper_block_.223
 -[KTKBeaconManager locationManager:monitoringDidFailForRegion:withError:]
 -[KTKBeaconManager locationManager:didEnterRegion:]
 ___51-[KTKBeaconManager locationManager:didEnterRegion:]_block_invoke
-___copy_helper_block_.241
-___destroy_helper_block_.242
+___copy_helper_block_.243
+___destroy_helper_block_.244
 -[KTKBeaconManager locationManager:didExitRegion:]
 -[KTKBeaconManager locationManager:didDetermineState:forRegion:]
 ___64-[KTKBeaconManager locationManager:didDetermineState:forRegion:]_block_invoke
 ___64-[KTKBeaconManager locationManager:didDetermineState:forRegion:]_block_invoke_2
-___copy_helper_block_.254
-___destroy_helper_block_.255
-___copy_helper_block_.259
-___destroy_helper_block_.260
+___copy_helper_block_.256
+___destroy_helper_block_.257
+___copy_helper_block_.261
+___destroy_helper_block_.262
 -[KTKBeaconManager locationManager:rangingBeaconsDidFailForRegion:withError:]
 -[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]
 ___61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke
-___copy_helper_block_.262
-___destroy_helper_block_.263
-___61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke.271
-___copy_helper_block_.272
-___destroy_helper_block_.273
-___61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke.276
+___copy_helper_block_.264
+___destroy_helper_block_.265
+___61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke.273
+___copy_helper_block_.274
+___destroy_helper_block_.275
+___61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke.278
 ___61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke_2
-___copy_helper_block_.277
-___destroy_helper_block_.278
-___copy_helper_block_.280
-___destroy_helper_block_.281
+___copy_helper_block_.279
+___destroy_helper_block_.280
+___copy_helper_block_.282
+___destroy_helper_block_.283
 -[KTKBeaconManager delegate]
 -[KTKBeaconManager setDelegate:]
 -[KTKBeaconManager locationManager]
@@ -1879,13 +1879,13 @@ ___block_descriptor_tmp.213
 ___block_descriptor_tmp.217
 ___block_descriptor_tmp.220
 ___block_descriptor_tmp.224
-___block_descriptor_tmp.243
-___block_descriptor_tmp.256
-___block_descriptor_tmp.261
-___block_descriptor_tmp.264
-___block_descriptor_tmp.274
-___block_descriptor_tmp.279
-___block_descriptor_tmp.283
+___block_descriptor_tmp.245
+___block_descriptor_tmp.258
+___block_descriptor_tmp.263
+___block_descriptor_tmp.266
+___block_descriptor_tmp.276
+___block_descriptor_tmp.281
+___block_descriptor_tmp.285
 _OBJC_IVAR_$_KTKBeaconManager._delegate
 _OBJC_IVAR_$_KTKBeaconManager._locationManager
 _OBJC_IVAR_$_KTKBeaconManager._managerOperationQueue
@@ -1896,15 +1896,15 @@ l_OBJC_PROTOCOL_$_KTKShuffleManagerDelegate
 l_OBJC_LABEL_PROTOCOL_$_KTKShuffleManagerDelegate
 _ktk_beacon_manager_queue._ktk_beacon_manager_queue
 _ktk_beacon_manager_queue.onceToken
-___block_descriptor_tmp.410
-___block_literal_global.411
+___block_descriptor_tmp.411
+___block_literal_global.412
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Proximity/iBeacon/KTKBeaconManager.m
 __ktk_beacon_manager_queue_block_invoke
 ktk_beacon_manager_queue
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Proximity/iBeacon/KTKBeaconManager.h
 __61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke_2
-__61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke.276
-__61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke.271
+__61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke.278
+__61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke.273
 __61-[KTKBeaconManager locationManager:didRangeBeacons:inRegion:]_block_invoke
 __64-[KTKBeaconManager locationManager:didDetermineState:forRegion:]_block_invoke_2
 __64-[KTKBeaconManager locationManager:didDetermineState:forRegion:]_block_invoke
@@ -2675,10 +2675,6 @@ ___copy_helper_block_.270
 ___destroy_helper_block_.271
 ___52-[KTKEddystoneManager eddystone:didUpdateFrameType:]_block_invoke.273
 ___52-[KTKEddystoneManager eddystone:didUpdateFrameType:]_block_invoke_2.278
-___copy_helper_block_.279
-___destroy_helper_block_.280
-___copy_helper_block_.282
-___destroy_helper_block_.283
 ___52-[KTKEddystoneManager eddystone:didUpdateFrameType:]_block_invoke.286
 ___copy_helper_block_.287
 ___destroy_helper_block_.288
@@ -2753,8 +2749,6 @@ ___block_descriptor_tmp.248
 ___block_descriptor_tmp.254
 ___block_descriptor_tmp.262
 ___block_descriptor_tmp.272
-___block_descriptor_tmp.281
-___block_descriptor_tmp.285
 ___block_descriptor_tmp.289
 ___block_descriptor_tmp.300
 ___block_descriptor_tmp.311
