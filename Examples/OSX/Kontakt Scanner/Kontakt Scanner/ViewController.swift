@@ -28,7 +28,7 @@ class ViewController: NSViewController {
     
     var selectedDevice: KTKNearbyDevice?
     
-    var deviceConfiguration: [[String:AnyObject]] = [[:]]
+    var deviceConfiguration: [[String:Any]] = [[:]]
     
     var sortDescriptors = [
         NSSortDescriptor(key: "uniqueID", ascending: true),
@@ -46,18 +46,18 @@ class ViewController: NSViewController {
         
         // Devices Manager
         devicesManager = KTKDevicesManager(delegate: self)
-        devicesManager.startDevicesDiscoveryWithInterval(3.0)
+        devicesManager.startDevicesDiscovery(withInterval: 3.0)
     }
     
     override func viewWillAppear() {
         super.viewWillAppear()
         
         if let window = view.window {
-            window.titleVisibility = .Hidden
+            window.titleVisibility = .hidden
 
             if let toolbar = window.toolbar {
                 toolbar.delegate = self
-                toolbar.insertItemWithItemIdentifier("search", atIndex: toolbar.items.count)
+                toolbar.insertItem(withItemIdentifier: "search", at: toolbar.items.count)
             }
         }
     }
@@ -68,8 +68,8 @@ class ViewController: NSViewController {
 
 extension ViewController: NSTableViewDelegate {
     
-    func tableViewSelectionDidChange(notification: NSNotification) {
-        if let nearbyDevice = arrayController.selectedObjects.first as? KTKNearbyDevice where nearbyDevice != selectedDevice {
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if let nearbyDevice = arrayController.selectedObjects.first as? KTKNearbyDevice, nearbyDevice != selectedDevice {
 
             if let uniqueID = nearbyDevice.uniqueID {
 
@@ -82,10 +82,10 @@ extension ViewController: NSTableViewDelegate {
                     
                     if let device = response?.objects?.first as? KTKDevice {
                     
-                        strongSelf.willChangeValueForKey("deviceConfiguration")
+                        strongSelf.willChangeValue(forKey: "deviceConfiguration")
                         strongSelf.deviceConfiguration = [
                             ["label": "Unique ID", "value": device.uniqueID],
-                            ["label": "Proximity UUID", "value": device.configuration.proximityUUID!.UUIDString],
+                            ["label": "Proximity UUID", "value": device.configuration.proximityUUID!.uuidString],
                             ["label": "Major", "value": device.configuration.major!],
                             ["label": "Minor", "value": device.configuration.minor!],
                             ["label": "Interval", "value": device.configuration.advertisingInterval!],
@@ -93,7 +93,7 @@ extension ViewController: NSTableViewDelegate {
                             ["label": "Namespace ID", "value": device.configuration.namespaceID!],
                             ["label": "Instance ID", "value": device.configuration.instanceID!]
                         ]
-                        strongSelf.didChangeValueForKey("deviceConfiguration")
+                        strongSelf.didChangeValue(forKey: "deviceConfiguration")
                     }
                 }
             }
@@ -108,7 +108,7 @@ extension ViewController: NSTableViewDelegate {
 
 extension ViewController: NSToolbarDelegate {
     
-    func toolbar(toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: String, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
+    func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: String, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
         if itemIdentifier == "search" {
             return searchItem
         }
@@ -121,13 +121,13 @@ extension ViewController: NSToolbarDelegate {
 
 extension ViewController: KTKDevicesManagerDelegate {
 
-    func devicesManager(manager: KTKDevicesManager, didDiscoverDevices devices: [KTKNearbyDevice]?) {
-        dispatch_async(dispatch_get_main_queue()) {
+    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]?) {
+        DispatchQueue.main.async {
             if let devices = devices {
                 
-                self.willChangeValueForKey("devicesList")
+                self.willChangeValue(forKey: "devicesList")
                 self.devicesList = devices.map { ($0.copy() as! KTKNearbyDevice) }
-                self.didChangeValueForKey("devicesList")
+                self.didChangeValue(forKey: "devicesList")
                 
             }
         }
