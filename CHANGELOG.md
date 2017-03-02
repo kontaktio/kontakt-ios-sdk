@@ -1,5 +1,25 @@
 ## Changelog
 
+### v1.4.2 - 2 March 2017
+- Fixing `KTKDeviceManager` random crashing when Gateway is around.
+- Fixing Github Issue [#40](https://github.com/kontaktio/kontakt-ios-sdk/issues/40)
+
+### v1.4.1 - 28 February 2017
+- Device Connection will be more stable now
+- Faster firmware updates
+- Bug fixes and other improvements
+
+### v1.4.0 - 16 January 2017
+- Device Connection improvements
+- Beacon PRO Firmware Update
+- Localized Errors
+- Other Fixes and improvements
+
+### v1.3.3 - 13 December 2016
+- Fixes and stability improvements
+- keepAlive flag added to KTKDeviceConnection
+- Improve events collection
+
 ### v1.3.2 - 15 November 2016
 - Making distance calculation method public
 - Fixing EID and ETLM packets definitions

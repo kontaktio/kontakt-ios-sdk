@@ -46,7 +46,7 @@ To integrate the Kontakt.io iOS/tvOS/macOS SDK into your Xcode project using Coc
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'KontaktSDK', '~> 1.3'
+pod 'KontaktSDK', '~> 1.4'
 ```
 
 Then, run the following command:
