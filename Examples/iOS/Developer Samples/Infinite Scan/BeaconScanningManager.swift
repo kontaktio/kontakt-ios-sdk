@@ -91,25 +91,24 @@ class BeaconScanningManager: NSObject {
     
     private func restoreWakeUpRegion() -> KTKBeaconRegion? {
         // Get UUID and identifier from defaults
-        let uuidString = UserDefaults.standard.value(forKey: WakeUpRegionProximityUuidKey)
-        let identifier = UserDefaults.standard.value(forKey: WakeUpRegionIdentifierKey)
+        let uuidString = UserDefaults.standard.string(forKey: WakeUpRegionProximityUuidKey)
+        let identifier = UserDefaults.standard.string(forKey: WakeUpRegionIdentifierKey)
         
         // If not nil then create and return region, otherwise return nil
         if let uuidString = uuidString, let identifier = identifier {
-            let proximityUUID = NSUUID(uuidString: uuidString as! String)
-            return KTKBeaconRegion(proximityUUID: proximityUUID as! UUID, identifier: identifier as! String)
+            return KTKBeaconRegion(proximityUUID: UUID(uuidString: uuidString)!, identifier: identifier)
         }
         return nil
     }
     
     private func restoreEddystoneRegion() -> KTKEddystoneRegion? {
         // Get namespace and instance ID from defaults
-        let namespaceID = UserDefaults.standard.value(forKey: EddystoneRegionNamespaceIdKey)
-        let instanceID = UserDefaults.standard.value(forKey: EddystoneRegionInstanceIdKey)
+        let namespaceID = UserDefaults.standard.string(forKey: EddystoneRegionNamespaceIdKey)
+        let instanceID = UserDefaults.standard.string(forKey: EddystoneRegionInstanceIdKey)
         
         // If not nil then create and return region, otherwise return nil
         if let namespaceID = namespaceID {
-            return KTKEddystoneRegion(namespaceID: namespaceID as! String, instanceID: instanceID as? String)
+            return KTKEddystoneRegion(namespaceID: namespaceID, instanceID: instanceID)
         }
         return nil
     }

@@ -37,8 +37,7 @@ class RangingBeaconsViewController: UIViewController {
         beaconManager.requestLocationAlwaysAuthorization()
         
         // Create Beacon Region
-        let proximityUUID = NSUUID(uuidString: KontaktProximityUUID)
-        region = KTKBeaconRegion(proximityUUID: proximityUUID as! UUID, identifier: "region-identifier")
+        region = KTKBeaconRegion(proximityUUID: UUID(uuidString: KontaktProximityUUID)!, identifier: "region-identifier")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
