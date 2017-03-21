@@ -6,17 +6,17 @@
 	<dict>
 		<key>Resources/Base.lproj/Localizable.strings</key>
 		<data>
-		WCxBXSvbqrPyi6E6X+jZ8d/SLqc=
+		baokuS7KhU5BA3zgYoDeS7zXmGU=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		gHWEDjyNGQRrszBGZphWMadUrkI=
+		ylP5I+obT+P0qpnE6uUYG8J7bSE=
 		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WCxBXSvbqrPyi6E6X+jZ8d/SLqc=
+			baokuS7KhU5BA3zgYoDeS7zXmGU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -28,11 +28,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NNWn30NVAshViittCrVtZltqkJA=
+			oWnHRJRRpu0SweTSbxdeMnm1V3A=
 			</data>
 			<key>hash2</key>
 			<data>
-			LHZvior+g06b2wEe4E3VO+2GUTf7T1u6uYg4ZvZYouU=
+			I9+UXP091diGbcBM3PM8V/W8b0M0zvP9kPzoYzCK54M=
 			</data>
 		</dict>
 		<key>Headers/KTKActionContent.h</key>
@@ -55,6 +55,17 @@
 			<key>hash2</key>
 			<data>
 			U2YffXMrCViRE7Ll6ptFF6r+6pKWtWvu3YzKsvEKFK0=
+			</data>
+		</dict>
+		<key>Headers/KTKCloudDefinitions.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1CzSMpmgpC9qEy01dG9mWI4zn3k=
+			</data>
+			<key>hash2</key>
+			<data>
+			vlWAKPob3oTmwQBr5WL6SoiWOxY1Px81sYUj+dsq60Q=
 			</data>
 		</dict>
 		<key>Headers/KTKCloudModel.h</key>
@@ -94,11 +105,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0A1vTSuuYX7k7TbGvJFXdHR8ggo=
+			63tknJw9ylm74lxSd3naYIy4+Zc=
 			</data>
 			<key>hash2</key>
 			<data>
-			O6ItzDsmc+BbNLh2t83Mxw+l9XpHxmwR4hkXVq5EL8Q=
+			qOfp5e5vXeJNcB54c6eMDcz9Iw5YZeQfBWYIkV/FGvI=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceCredentials.h</key>
@@ -171,11 +182,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3/bgdlhjF9ImeZftVkQ4Kyvj1YM=
+			3MmXzu+WOv935teXG2TeZSgO0ZY=
 			</data>
 			<key>hash2</key>
 			<data>
-			K4WTwNxZooIQZKZAP0QEQ47qNtOHau8XNdFmswWDako=
+			UF+epouOWi1jP2nRhKfbk6yo9wRpZRrZa4/05nHQ6r0=
 			</data>
 		</dict>
 		<key>Headers/KTKEddystoneRegion.h</key>
@@ -270,11 +281,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			In7WAdwnBtnoc09VAtmte3gaCmU=
+			1BlN4azdVtaiYN356vOsObDp0J8=
 			</data>
 			<key>hash2</key>
 			<data>
-			TF1wfy8FkKKFkJmv6yHh9yoEsbFoQ7GdbvjKOgrQ6KI=
+			IeoUgBxHytEKaYvM55E5IgzcaXWUYO6UWPJPWQ3vLYU=
+			</data>
+		</dict>
+		<key>Headers/KTKTrigger.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pbVRp9O+qYZYcYn6hFL4o3zX7Go=
+			</data>
+			<key>hash2</key>
+			<data>
+			fyCoCAfpL+/3/b9LkqXDb66mudhy27Xkp/ZMdB2fUXc=
+			</data>
+		</dict>
+		<key>Headers/KTKTriggerContext.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4maIT1tDTAJzfCkKZqy5JAPphcY=
+			</data>
+			<key>hash2</key>
+			<data>
+			TmwISK2bboI38wRsVTaZGfFWdGECP/DhD4ho30VpVOU=
 			</data>
 		</dict>
 		<key>Headers/KTKVenue.h</key>
@@ -303,11 +336,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0ukgvacjRq3jQoAtpdHBtJxv9FY=
+			brue2pmpTO5rqtG8SsmWKktpuFw=
 			</data>
 			<key>hash2</key>
 			<data>
-			y7qNV5qGFDHcSV1cibXJsWbYDgzs5/Bm3DhnGZcxPgk=
+			XnWi3zkRGV92PCTi20+6HpiDtr/nRQXhjeKoGUxFsWk=
 			</data>
 		</dict>
 		<key>Headers/NSData+Kontakt.h</key>
@@ -347,33 +380,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WCxBXSvbqrPyi6E6X+jZ8d/SLqc=
+			baokuS7KhU5BA3zgYoDeS7zXmGU=
 			</data>
 			<key>hash2</key>
 			<data>
-			w4xS6E4LVRm/an8675RWXkwE3M0huIWgsUTp6wlXtS8=
+			4ndg6xnTyZXaUHgPDHNdtIATXJOtblf/pY6yUPyvPDQ=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gHWEDjyNGQRrszBGZphWMadUrkI=
+			ylP5I+obT+P0qpnE6uUYG8J7bSE=
 			</data>
 			<key>hash2</key>
 			<data>
-			oVMcAqM79zHo2SWOxuXpTzmk0NFcnXyZCok8iy94huM=
+			CntnzvojyQQRpk7zuETPB83FjtBW4zLwmySpdmqoPGk=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WCxBXSvbqrPyi6E6X+jZ8d/SLqc=
+			baokuS7KhU5BA3zgYoDeS7zXmGU=
 			</data>
 			<key>hash2</key>
 			<data>
-			w4xS6E4LVRm/an8675RWXkwE3M0huIWgsUTp6wlXtS8=
+			4ndg6xnTyZXaUHgPDHNdtIATXJOtblf/pY6yUPyvPDQ=
 			</data>
 			<key>optional</key>
 			<true/>

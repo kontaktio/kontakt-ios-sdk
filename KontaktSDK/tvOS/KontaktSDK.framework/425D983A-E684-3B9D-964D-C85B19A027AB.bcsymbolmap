@@ -818,26 +818,32 @@ __57-[KTKShuffleCache objectForDomain:subdomain:unserialize:]_block_invoke
 ___97-[KTKShuffleManager scheduleResolvingObjectWithType:domain:subdomain:queryString:withIdentifier:]_block_invoke
 -[KTKShuffleManager scheduleCloudResolvingObjectWithType:queryString:withIdentifier:]
 ___85-[KTKShuffleManager scheduleCloudResolvingObjectWithType:queryString:withIdentifier:]_block_invoke
-___copy_helper_block_.71
-___destroy_helper_block_.72
+___copy_helper_block_.76
+___destroy_helper_block_.77
 -[KTKShuffleManager performCloudResolvingWithType:interval:]
 ___60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke
-___60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.83
-___copy_helper_block_.94
-___destroy_helper_block_.95
-___60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.100
+___60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.88
+___copy_helper_block_.99
+___destroy_helper_block_.100
+___60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.105
 ___60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke_2
-___60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.116
-___copy_helper_block_.121
-___destroy_helper_block_.122
-___copy_helper_block_.127
-___destroy_helper_block_.128
+___copy_helper_block_.110
+___destroy_helper_block_.111
+___60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.118
+___copy_helper_block_.123
+___destroy_helper_block_.124
+___copy_helper_block_.129
+___destroy_helper_block_.130
 -[KTKShuffleManager fetchObjectsWithType:queries:completion:]
 ___61-[KTKShuffleManager fetchObjectsWithType:queries:completion:]_block_invoke
 ___61-[KTKShuffleManager fetchObjectsWithType:queries:completion:]_block_invoke_2
 ___61-[KTKShuffleManager fetchObjectsWithType:queries:completion:]_block_invoke_3
-___copy_helper_block_.154
-___destroy_helper_block_.155
+___copy_helper_block_.156
+___destroy_helper_block_.157
+___copy_helper_block_.162
+___destroy_helper_block_.163
+___copy_helper_block_.165
+___destroy_helper_block_.166
 -[KTKShuffleManager delegate]
 -[KTKShuffleManager shuffleManagerQueue]
 -[KTKShuffleManager setShuffleManagerQueue:]
@@ -849,33 +855,35 @@ ___destroy_helper_block_.155
 -[KTKShuffleManager setCloudClient:]
 -[KTKShuffleManager pendingQueries]
 -[KTKShuffleManager setPendingQueries:]
+-[KTKShuffleManager ignoredQueries]
+-[KTKShuffleManager setIgnoredQueries:]
 -[KTKShuffleManager bufferingTypes]
 -[KTKShuffleManager setBufferingTypes:]
 -[KTKShuffleManager .cxx_destruct]
 _OBJC_IVAR_$_KTKShuffleManager._delegate
 _OBJC_IVAR_$_KTKShuffleManager._resolvingQueue
 _OBJC_IVAR_$_KTKShuffleManager._shuffleManagerQueue
-___block_descriptor_tmp.73
-___block_descriptor_tmp.96
-___block_descriptor_tmp.111
-___block_descriptor_tmp.118
-___block_descriptor_tmp.124
-___block_descriptor_tmp.129
-___block_descriptor_tmp.157
-___block_descriptor_tmp.166
+___block_descriptor_tmp.78
+___block_descriptor_tmp.101
+___block_descriptor_tmp.113
+___block_descriptor_tmp.126
+___block_descriptor_tmp.131
+___block_descriptor_tmp.159
+___block_descriptor_tmp.164
 _OBJC_IVAR_$_KTKShuffleManager._cache
 _OBJC_IVAR_$_KTKShuffleManager._cloudClient
 _OBJC_IVAR_$_KTKShuffleManager._pendingQueries
+_OBJC_IVAR_$_KTKShuffleManager._ignoredQueries
 _OBJC_IVAR_$_KTKShuffleManager._bufferingTypes
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Shuffle/KTKShuffleManager.m
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Shuffle/KTKShuffleManager.h
 __61-[KTKShuffleManager fetchObjectsWithType:queries:completion:]_block_invoke_3
 __61-[KTKShuffleManager fetchObjectsWithType:queries:completion:]_block_invoke_2
 __61-[KTKShuffleManager fetchObjectsWithType:queries:completion:]_block_invoke
-__60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.116
+__60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.118
 __60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke_2
-__60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.100
-__60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.83
+__60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.105
+__60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke.88
 __60-[KTKShuffleManager performCloudResolvingWithType:interval:]_block_invoke
 __85-[KTKShuffleManager scheduleCloudResolvingObjectWithType:queryString:withIdentifier:]_block_invoke
 __97-[KTKShuffleManager scheduleResolvingObjectWithType:domain:subdomain:queryString:withIdentifier:]_block_invoke
@@ -1509,7 +1517,6 @@ ___block_descriptor_tmp.80
 _OBJC_IVAR_$_KTKDevicesManager._validationTimer
 _OBJC_IVAR_$_KTKDevicesManager._devicesManagerUtilityQueue
 ___block_descriptor_tmp.106
-___block_descriptor_tmp.113
 ___block_descriptor_tmp.121
 ___block_descriptor_tmp.128
 ___block_descriptor_tmp.133
@@ -2305,8 +2312,6 @@ ___destroy_helper_block_.64
 -[KTKCloudEventsManager reportEvent:]
 ___37-[KTKCloudEventsManager reportEvent:]_block_invoke
 ___37-[KTKCloudEventsManager reportEvent:]_block_invoke_2
-___copy_helper_block_.76
-___destroy_helper_block_.77
 ___copy_helper_block_.79
 ___destroy_helper_block_.80
 -[KTKCloudEventsManager cloudEventsManagerQueue]
@@ -2321,7 +2326,6 @@ _sharedInstance.onceToken
 ___block_descriptor_tmp.65
 ___block_descriptor_tmp.69
 _OBJC_IVAR_$_KTKCloudEventsManager._cloudEventsManagerQueue
-___block_descriptor_tmp.78
 ___block_descriptor_tmp.81
 _OBJC_IVAR_$_KTKCloudEventsManager._events
 _OBJC_IVAR_$_KTKCloudEventsManager._synchronizationTime
@@ -2387,6 +2391,8 @@ ___68-[KTKCloudClientKontaktResponseSerializer registerMappingsForClass:]_block_
 -[KTKCloudClientKontaktResponseSerializer responseObjectForResponse:data:error:]
 ___80-[KTKCloudClientKontaktResponseSerializer responseObjectForResponse:data:error:]_block_invoke
 ___80-[KTKCloudClientKontaktResponseSerializer responseObjectForResponse:data:error:]_block_invoke.89
+___copy_helper_block_.94
+___destroy_helper_block_.95
 -[KTKCloudClientKontaktResponseSerializer mappings]
 -[KTKCloudClientKontaktResponseSerializer setMappings:]
 -[KTKCloudClientKontaktResponseSerializer .cxx_destruct]
@@ -2405,13 +2411,19 @@ ___37-[KTKCloudClientSessionManager tasks]_block_invoke
 -[KTKCloudClientSessionManager GET:parameters:completionHandler:]
 -[KTKCloudClientSessionManager dataTaskWithMethod:path:parameters:encoder:completionHandler:]
 -[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:]
-___70-[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:]_block_invoke
+-[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:shouldRetry:]
+___82-[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:shouldRetry:]_block_invoke
+___82-[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:shouldRetry:]_block_invoke_2
+___copy_helper_block_.71
+___destroy_helper_block_.72
 -[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]
 ___74-[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]_block_invoke
 ___74-[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]_block_invoke_2
-___74-[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]_block_invoke.82
-___copy_helper_block_.86
-___destroy_helper_block_.87
+___copy_helper_block_.88
+___destroy_helper_block_.89
+___74-[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]_block_invoke.91
+___copy_helper_block_.95
+___destroy_helper_block_.96
 -[KTKCloudClientSessionManager URLSession:didBecomeInvalidWithError:]
 -[KTKCloudClientSessionManager baseURL]
 -[KTKCloudClientSessionManager setBaseURL:]
@@ -2424,7 +2436,9 @@ ___destroy_helper_block_.87
 -[KTKCloudClientSessionManager sessionConfiguration]
 -[KTKCloudClientSessionManager setSessionConfiguration:]
 -[KTKCloudClientSessionManager .cxx_destruct]
-___block_descriptor_tmp.89
+___block_descriptor_tmp.82
+___block_descriptor_tmp.90
+___block_descriptor_tmp.98
 _OBJC_IVAR_$_KTKCloudClientSessionManager._baseURL
 _OBJC_IVAR_$_KTKCloudClientSessionManager._URLSession
 _OBJC_IVAR_$_KTKCloudClientSessionManager._sessionDelegateQueue
@@ -2438,10 +2452,11 @@ l_OBJC_PROTOCOL_$_NSURLSessionDataDelegate
 l_OBJC_LABEL_PROTOCOL_$_NSURLSessionDataDelegate
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Session/KTKCloudClientSessionManager.m
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Session/KTKCloudClientSessionManager.h
-__74-[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]_block_invoke.82
+__74-[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]_block_invoke.91
 __74-[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]_block_invoke_2
 __74-[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]_block_invoke
-__70-[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:]_block_invoke
+__82-[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:shouldRetry:]_block_invoke_2
+__82-[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:shouldRetry:]_block_invoke
 __37-[KTKCloudClientSessionManager tasks]_block_invoke
 -[KTKDeviceBootloaderLegacyOperation createOperations]
 -[KTKDeviceBootloaderLegacyOperation type]
@@ -2484,8 +2499,6 @@ ___destroy_helper_block_.146
 -[KTKDeviceNordicDFUOperation onBootloaderUploadCompleted]
 -[KTKDeviceNordicDFUOperation onTransferPercentage:]
 ___52-[KTKDeviceNordicDFUOperation onTransferPercentage:]_block_invoke
-___copy_helper_block_.156
-___destroy_helper_block_.157
 -[KTKDeviceNordicDFUOperation onSuccessfulFileTranferred]
 ___57-[KTKDeviceNordicDFUOperation onSuccessfulFileTranferred]_block_invoke
 ___copy_helper_block_.161
@@ -2582,6 +2595,7 @@ ___destroy_helper_block_.167
 ___block_descriptor_tmp.139
 ___block_descriptor_tmp.149
 ___block_descriptor_tmp.152
+___block_descriptor_tmp.157
 _OBJC_IVAR_$_KTKCloudClient._sessionConfiguration
 _OBJC_IVAR_$_KTKCloudClient._responseSerializer
 _OBJC_IVAR_$_KTKCloudClient._manager
@@ -2738,8 +2752,6 @@ ___42-[KTKDevicePowerSaving JSONRepresentation]_block_invoke
 ___42-[KTKDevicePowerSaving JSONRepresentation]_block_invoke_2
 ___copy_helper_block_.93
 ___destroy_helper_block_.94
-___copy_helper_block_.99
-___destroy_helper_block_.100
 -[KTKDevicePowerSaving rtcHoursDataRepresentation]
 +[KTKDevicePowerSaving supportsSecureCoding]
 -[KTKDevicePowerSaving encodeWithCoder:]
@@ -2757,6 +2769,7 @@ ___destroy_helper_block_.100
 -[KTKDevicePowerSaving lightHysteresis]
 -[KTKDevicePowerSaving setLightHysteresis:]
 -[KTKDevicePowerSaving .cxx_destruct]
+___block_descriptor_tmp.96
 ___block_descriptor_tmp.102
 _OBJC_IVAR_$_KTKDevicePowerSaving._features
 _OBJC_IVAR_$_KTKDevicePowerSaving._motionSuspendTimeout

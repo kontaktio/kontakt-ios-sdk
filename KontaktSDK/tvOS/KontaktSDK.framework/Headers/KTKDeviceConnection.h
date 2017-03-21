@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.4.2
+//  Version: 1.4.3
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -143,7 +143,7 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
 /**
  *  Creates instance of KTKDeviceConnection with given KTKNearbyDevice
  *
- *  @param device KTKNearbyDevice Object
+ *  @param nearbyDevice KTKNearbyDevice Object
  *
  *  @return New instance of KTKDeviceConnection
  */

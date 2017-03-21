@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.4.2
+//  Version: 1.4.3
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Initializes and returns a region object that targets an eddystone with the specified secure namespace ID.
  *
- *  @param namespaceID Secure namespace ID string of the eddystone being targeted.
+ *  @param secureNamespaceID Secure namespace ID string of the eddystone being targeted.
  *
  *  @return An initialized secure eddystone region object.
  */

@@ -1,26 +1,21 @@
 //
 //  KontaktSDK
-//  Version: 1.4.2
+//  Version: 1.4.3
 //
 //  Copyright © 2015 Kontakt.io. All rights reserved.
 //
 
 @import CoreLocation;
 
+#import "KTKCloudModel.h"
+#import "KTKActionContent.h"
+#import "KTKCloudDefinitions.h"
+
 #if TARGET_OS_IOS
 typedef CLProximity Proximity;
 #else
-typedef NS_ENUM(NSInteger, KTKProximity) {
-    KTKProximityUnknown,
-    KTKProximityImmediate,
-    KTKProximityNear,
-    KTKProximityFar
-};
 typedef KTKProximity Proximity;
 #endif
-
-#import "KTKCloudModel.h"
-#import "KTKActionContent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

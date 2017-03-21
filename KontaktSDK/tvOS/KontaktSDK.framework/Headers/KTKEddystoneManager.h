@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.4.2
+//  Version: 1.4.3
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -71,6 +71,16 @@ NS_ASSUME_NONNULL_BEGIN
  *  Set of regions currently being tracked using discovery. (read-only)
  */
 @property (nonatomic, strong, readonly) NSSet *discoveryRegions;
+
+/**
+ *  Threshold after which eddystone device is interpreted as lost in foreground mode. (read-write)
+ */
+@property (nonatomic, assign, readwrite) NSTimeInterval invalidationAgeForeground;
+
+/**
+ *  Threshold after which eddystone device is interpreted as lost in background mode. (read-write)
+ */
+@property (nonatomic, assign, readwrite) NSTimeInterval invalidationAgeBackground;
 
 /**
  *  Starts the delivery of discovery notifications for eddystones in the specified region.
