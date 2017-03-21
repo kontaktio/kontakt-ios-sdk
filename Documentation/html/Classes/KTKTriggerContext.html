@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKVenue Class Reference</title>
+	<title>KTKTriggerContext Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -70,35 +70,29 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/access">access</option>
+		<option value="//api/name/cooldown">cooldown</option>
 		
-		<option value="//api/name/devicesCount">devicesCount</option>
+		<option value="//api/name/instanceID">instanceID</option>
 		
-		<option value="//api/name/latitude">latitude</option>
+		<option value="//api/name/major">major</option>
 		
-		<option value="//api/name/longitude">longitude</option>
+		<option value="//api/name/minor">minor</option>
 		
-		<option value="//api/name/managerID">managerID</option>
+		<option value="//api/name/namespaceID">namespaceID</option>
 		
-		<option value="//api/name/meta">meta</option>
+		<option value="//api/name/proximity">proximity</option>
 		
-		<option value="//api/name/venueDescription">venueDescription</option>
+		<option value="//api/name/proximityUUID">proximityUUID</option>
 		
-		<option value="//api/name/venueID">venueID</option>
+		<option value="//api/name/sourceID">sourceID</option>
 		
-		<option value="//api/name/venueName">venueName</option>
+		<option value="//api/name/trackingID">trackingID</option>
 		
 	</optgroup>
 	
 
 	
 
-	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/venueCoverImageWithCompletion:">- venueCoverImageWithCompletion:</option>
-		
-	</optgroup>
 	
 	
 </select>
@@ -113,7 +107,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKVenue Class Reference</h1>
+					<h1 class="title">KTKTriggerContext Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -122,10 +116,10 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Conforms to</th>
-	<td><a href="../Protocols/KTKCloudModel.html">KTKCloudModel</a></td>
+	<td>NSCopying<br />NSObject<br />NSSecureCoding</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>KTKVenue.h</td>
+	<td>KTKTriggerContext.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -138,13 +132,13 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						<a title="Venue Properties" name="task_Venue Properties"></a>
-						<h2 class="task-title">Venue Properties</h2>
+						<a title="TriggerContext Properties" name="task_TriggerContext Properties"></a>
+						<h2 class="task-title">TriggerContext Properties</h2>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/venueID" title="venueID"></a>
-	<h3 class="method-title"><code><a href="#//api/name/venueID">&nbsp;&nbsp;venueID</a></code>
+	<a name="//api/name/cooldown" title="cooldown"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cooldown">&nbsp;&nbsp;cooldown</a></code>
 </h3>
 
 	<div class="method-info">
@@ -154,12 +148,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Venue identifier. (read-only)</p>
+				<p>Cooldown property. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSUUID *venueID</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *cooldown</code></pre></div>
 
 		    
 			
@@ -171,7 +165,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue identifier. (read-only)</p>
+				<p>Cooldown property. (read-only)</p>
 			</div>
 			
 
@@ -182,15 +176,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKTriggerContext.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/venueName" title="venueName"></a>
-	<h3 class="method-title"><code><a href="#//api/name/venueName">&nbsp;&nbsp;venueName</a></code>
+	<a name="//api/name/sourceID" title="sourceID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sourceID">&nbsp;&nbsp;sourceID</a></code>
 </h3>
 
 	<div class="method-info">
@@ -200,12 +194,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Venue name. (read-only)</p>
+				<p>Source ID property. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *venueName</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *sourceID</code></pre></div>
 
 		    
 			
@@ -217,7 +211,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue name. (read-only)</p>
+				<p>Source ID property. (read-only)</p>
 			</div>
 			
 
@@ -228,15 +222,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKTriggerContext.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/venueDescription" title="venueDescription"></a>
-	<h3 class="method-title"><code><a href="#//api/name/venueDescription">&nbsp;&nbsp;venueDescription</a></code>
+	<a name="//api/name/proximity" title="proximity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/proximity">&nbsp;&nbsp;proximity</a></code>
 </h3>
 
 	<div class="method-info">
@@ -246,12 +240,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Venue description text. (read-only)</p>
+				<p>Proximity property. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *venueDescription</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) KTKProximity proximity</code></pre></div>
 
 		    
 			
@@ -263,7 +257,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue description text. (read-only)</p>
+				<p>Proximity property. (read-only)</p>
 			</div>
 			
 
@@ -274,15 +268,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKTriggerContext.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/meta" title="meta"></a>
-	<h3 class="method-title"><code><a href="#//api/name/meta">&nbsp;&nbsp;meta</a></code>
+	<a name="//api/name/trackingID" title="trackingID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackingID">&nbsp;&nbsp;trackingID</a></code>
 </h3>
 
 	<div class="method-info">
@@ -292,12 +286,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Venue meta data. (read-only)</p>
+				<p>Unique ID of device that we want to track. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSDictionary *meta</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *trackingID</code></pre></div>
 
 		    
 			
@@ -309,7 +303,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue meta data. (read-only)</p>
+				<p>Unique ID of device that we want to track. (read-only)</p>
 			</div>
 			
 
@@ -320,246 +314,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/devicesCount" title="devicesCount"></a>
-	<h3 class="method-title"><code><a href="#//api/name/devicesCount">&nbsp;&nbsp;devicesCount</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The number of devices assigned to the venue. (read-only)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *devicesCount</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The number of devices assigned to the venue. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/managerID" title="managerID"></a>
-	<h3 class="method-title"><code><a href="#//api/name/managerID">&nbsp;&nbsp;managerID</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Venue manager&rsquo;s identifier. (read-only)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSUUID *managerID</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue manager&rsquo;s identifier. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/access" title="access"></a>
-	<h3 class="method-title"><code><a href="#//api/name/access">&nbsp;&nbsp;access</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Venue access rights. (read-only)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) KTKVenueAccess access</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Venue access rights. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="../Constants/KTKVenueAccess.html">KTKVenueAccess</a></p></code></li>
-					
-				</ul>
-			</div>
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/latitude" title="latitude"></a>
-	<h3 class="method-title"><code><a href="#//api/name/latitude">&nbsp;&nbsp;latitude</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The latitude of the venue.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *latitude</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The latitude of the venue.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/longitude" title="longitude"></a>
-	<h3 class="method-title"><code><a href="#//api/name/longitude">&nbsp;&nbsp;longitude</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The longitude of the venue.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *longitude</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The longitude of the venue.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKTriggerContext.h</code></p>
 			</div>
 			
 			
@@ -569,13 +324,13 @@
 						</div>
 						
 
-						<a title="Model Methods" name="task_Model Methods"></a>
-						<h2 class="task-title">Model Methods</h2>
+						<a title="iBeacon Properties" name="task_iBeacon Properties"></a>
+						<h2 class="task-title">iBeacon Properties</h2>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/venueCoverImageWithCompletion:" title="venueCoverImageWithCompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/venueCoverImageWithCompletion:">&ndash;&nbsp;venueCoverImageWithCompletion:</a></code>
+	<a name="//api/name/proximityUUID" title="proximityUUID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/proximityUUID">&nbsp;&nbsp;proximityUUID</a></code>
 </h3>
 
 	<div class="method-info">
@@ -585,26 +340,14 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Downloads the firmware bin data.</p>
+				<p>Proximity UUID transmitted by tracked device. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>- (void)venueCoverImageWithCompletion:(void ( ^ ) ( KTKImage *_Nullable , NSError *_Nullable ))<em>completion</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSUUID *proximityUUID</code></pre></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>completion</code></th>
-						<td><p>A block object to be executed when a download process finishes.</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
@@ -614,7 +357,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Downloads the firmware bin data.</p>
+				<p>Proximity UUID transmitted by tracked device. (read-only)</p>
 			</div>
 			
 
@@ -625,7 +368,199 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKVenue.h</code></p>
+				<p><code class="declared-in-ref">KTKTriggerContext.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/major" title="major"></a>
+	<h3 class="method-title"><code><a href="#//api/name/major">&nbsp;&nbsp;major</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Major value transmitted by tracked device. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *major</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Major value transmitted by tracked device. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKTriggerContext.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/minor" title="minor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minor">&nbsp;&nbsp;minor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Minor value transmitted by tracked device. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *minor</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Minor value transmitted by tracked device. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKTriggerContext.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Eddystone Properties" name="task_Eddystone Properties"></a>
+						<h2 class="task-title">Eddystone Properties</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/namespaceID" title="namespaceID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/namespaceID">&nbsp;&nbsp;namespaceID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Namespace ID transmitted by tracked device. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *namespaceID</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Namespace ID transmitted by tracked device. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKTriggerContext.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/instanceID" title="instanceID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/instanceID">&nbsp;&nbsp;instanceID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Instance ID transmitted by tracked device. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *instanceID</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Instance ID transmitted by tracked device. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKTriggerContext.h</code></p>
 			</div>
 			
 			

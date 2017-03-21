@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKActionContentType Constants Reference</title>
+	<title>KTKTriggerExecutor Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,13 +75,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKActionContentType Constants Reference</h1>
+					<h1 class="title">KTKTriggerExecutor Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKActionContent.h</td>
+	<td>KTKTrigger.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -91,11 +91,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKActionContentType</h3>
+                    <h3 class="subsubtitle method-title">KTKTriggerExecutor</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Action content type.</p>
+                        <p>Trigger executor.</p>
 					</div>
 					
 					
@@ -103,12 +103,11 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSInteger, KTKActionContentType ) { 
-	<a href="">KTKActionContentTypeInvalid</a> = -1,
-	<a href="">KTKActionContentTypeImage</a> = 1,
-	<a href="">KTKActionContentTypeVideo</a> = 2,
-	<a href="">KTKActionContentTypeAudio</a> = 3,
-	<a href="">KTKActionContentTypeText</a> = 4,
+                        <pre><code>typedef NS_ENUM(NSInteger, KTKTriggerExecutor ) { 
+	<a href="">KTKTriggerExecutorInvalid</a> = -1,
+	<a href="">KTKTriggerExecutorLocal</a> = 1,
+	<a href="">KTKTriggerExecutorCloud</a> = 2,
+	<a href="">KTKTriggerExecutorProximitySDK</a> = 3,
 };</code></pre>
                     
                     </div>
@@ -117,11 +116,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKActionContentTypeInvalid"></a><code>KTKActionContentTypeInvalid</code></dt>
+                            <dt><a name="" title="KTKTriggerExecutorInvalid"></a><code>KTKTriggerExecutorInvalid</code></dt>
 <dd>
 
 
-<p>Content type is invalid.</p>
+<p>Executor type is invalid.</p>
 
 
 
@@ -129,16 +128,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKActionContent.h</code>.
+		Declared In <code class="declared-in-ref">KTKTrigger.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKActionContentTypeImage"></a><code>KTKActionContentTypeImage</code></dt>
+                            <dt><a name="" title="KTKTriggerExecutorLocal"></a><code>KTKTriggerExecutorLocal</code></dt>
 <dd>
 
 
-<p>Image content type.</p>
+<p>Local executor type.</p>
 
 
 
@@ -146,16 +145,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKActionContent.h</code>.
+		Declared In <code class="declared-in-ref">KTKTrigger.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKActionContentTypeVideo"></a><code>KTKActionContentTypeVideo</code></dt>
+                            <dt><a name="" title="KTKTriggerExecutorCloud"></a><code>KTKTriggerExecutorCloud</code></dt>
 <dd>
 
 
-<p>Video content type.</p>
+<p>Cloud executor type.</p>
 
 
 
@@ -163,16 +162,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKActionContent.h</code>.
+		Declared In <code class="declared-in-ref">KTKTrigger.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKActionContentTypeAudio"></a><code>KTKActionContentTypeAudio</code></dt>
+                            <dt><a name="" title="KTKTriggerExecutorProximitySDK"></a><code>KTKTriggerExecutorProximitySDK</code></dt>
 <dd>
 
 
-<p>Audio content type.</p>
+<p>Proximity SDK executor type.</p>
 
 
 
@@ -180,24 +179,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKActionContent.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKActionContentTypeText"></a><code>KTKActionContentTypeText</code></dt>
-<dd>
-
-
-<p>Text file content type.</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKActionContent.h</code>.
+		Declared In <code class="declared-in-ref">KTKTrigger.h</code>.
 	</p>
 	
 </dd>
@@ -214,7 +196,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKActionContent.h</code></p>
+                        <p><code class="declared-in-ref">KTKTrigger.h</code></p>
                     </div>
                     
                     

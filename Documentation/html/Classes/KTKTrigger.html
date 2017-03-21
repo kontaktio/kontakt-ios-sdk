@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Kontakt Class Reference</title>
+	<title>KTKTrigger Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -59,8 +59,6 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
-	<option value="overview">Overview</option>
-	
 
 	
 	
@@ -70,21 +68,23 @@
 
 	
 	
-
-	
-	<optgroup label="Class Methods">
+	<optgroup label="Properties">
 		
-		<option value="//api/name/APIKey">+ APIKey</option>
+		<option value="//api/name/activitiesIDs">activitiesIDs</option>
 		
-		<option value="//api/name/monitoringOptions">+ monitoringOptions</option>
+		<option value="//api/name/context">context</option>
 		
-		<option value="//api/name/removeCaches">+ removeCaches</option>
+		<option value="//api/name/executor">executor</option>
 		
-		<option value="//api/name/setAPIKey:">+ setAPIKey:</option>
+		<option value="//api/name/name">name</option>
 		
-		<option value="//api/name/setMonitoringOptions:">+ setMonitoringOptions:</option>
+		<option value="//api/name/triggerID">triggerID</option>
+		
+		<option value="//api/name/type">type</option>
 		
 	</optgroup>
+	
+
 	
 
 	
@@ -101,7 +101,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">Kontakt Class Reference</h1>
+					<h1 class="title">KTKTrigger Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -109,21 +109,16 @@
 	<th>Inherits from</th>
 	<td>NSObject</td>
 </tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/KTKCloudModel.html">KTKCloudModel</a></td>
+</tr><tr>
 	<th>Declared in</th>
-	<td>Kontakt.h</td>
+	<td>KTKTrigger.h</td>
 </tr>
 						</tbody></table></div>
 					
 
                     
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Calculates distance to device from specified TX Power and RSSI.</p>
-					</div>
-					
-					
 
 					
 					
@@ -131,13 +126,13 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						<a title="Configuration" name="task_Configuration"></a>
+						<a title="Trigger Properties" name="task_Trigger Properties"></a>
 						
-<h2 class="task-title">Configuration</h2>
+<h2 class="task-title">Trigger Properties</h2>
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/setAPIKey:" title="setAPIKey:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setAPIKey:">+&nbsp;setAPIKey:</a></code>
+	<a name="//api/name/triggerID" title="triggerID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/triggerID">&nbsp;&nbsp;triggerID</a></code>
 </h3>
 
 	<div class="method-info">
@@ -147,26 +142,14 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Sets the Cloud API Key.</p>
+				<p>Trigger identifier. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>+ (void)setAPIKey:(NSString *)<em>key</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSUUID *triggerID</code></pre></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>key</code></th>
-						<td><p>The API Key string.</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
@@ -176,35 +159,26 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sets the Cloud API Key.</p>
+				<p>Trigger identifier. (read-only)</p>
 			</div>
 			
 
 			
 
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="#//api/name/APIKey">+ APIKey</a></p></code></li>
-					
-				</ul>
-			</div>
 			
 
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">Kontakt.h</code></p>
+				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/APIKey" title="APIKey"></a>
-	<h3 class="method-title"><code><a href="#//api/name/APIKey">+&nbsp;APIKey</a></code>
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
 </h3>
 
 	<div class="method-info">
@@ -214,21 +188,16 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Returns a string value of the Cloud API Key.</p>
+				<p>Trigger&rsquo;s name. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>+ (NSString *)APIKey</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *name</code></pre></div>
 
 		    
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A string value of the API Key.</p>
-			</div>
 			
 
 			
@@ -236,35 +205,26 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns a string value of the Cloud API Key.</p>
+				<p>Trigger&rsquo;s name. (read-only)</p>
 			</div>
 			
 
 			
 
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="#//api/name/setAPIKey:">+ setAPIKey:</a></p></code></li>
-					
-				</ul>
-			</div>
 			
 
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">Kontakt.h</code></p>
+				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/removeCaches" title="removeCaches"></a>
-	<h3 class="method-title"><code><a href="#//api/name/removeCaches">+&nbsp;removeCaches</a></code>
+	<a name="//api/name/activitiesIDs" title="activitiesIDs"></a>
+	<h3 class="method-title"><code><a href="#//api/name/activitiesIDs">&nbsp;&nbsp;activitiesIDs</a></code>
 </h3>
 
 	<div class="method-info">
@@ -274,12 +234,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Removes caches created by the SDK.</p>
+				<p>An array of activities identifiers assigned to the trigger. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>+ (void)removeCaches</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSArray&lt;NSString*&gt; *activitiesIDs</code></pre></div>
 
 		    
 			
@@ -291,9 +251,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Removes caches created by the SDK.</p>
-
-<p>Cache should be removed every time <code>APIKey</code> is changed.</p>
+				<p>An array of activities identifiers assigned to the trigger. (read-only)</p>
 			</div>
 			
 
@@ -304,15 +262,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">Kontakt.h</code></p>
+				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/setMonitoringOptions:" title="setMonitoringOptions:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/setMonitoringOptions:">+&nbsp;setMonitoringOptions:</a></code>
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
 </h3>
 
 	<div class="method-info">
@@ -322,26 +280,14 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Sets the devices monitoring options.</p>
+				<p>Type of the trigger. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>+ (void)setMonitoringOptions:(KTKMonitoringOptions)<em>options</em></code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) KTKTriggerType type</code></pre></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>options</code></th>
-						<td><p>The devices monitoring options.</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
@@ -351,7 +297,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sets the devices monitoring options.</p>
+				<p>Type of the trigger. (read-only)</p>
 			</div>
 			
 
@@ -362,15 +308,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">Kontakt.h</code></p>
+				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/monitoringOptions" title="monitoringOptions"></a>
-	<h3 class="method-title"><code><a href="#//api/name/monitoringOptions">+&nbsp;monitoringOptions</a></code>
+	<a name="//api/name/context" title="context"></a>
+	<h3 class="method-title"><code><a href="#//api/name/context">&nbsp;&nbsp;context</a></code>
 </h3>
 
 	<div class="method-info">
@@ -380,21 +326,16 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Returns a devices monitoring options.</p>
+				<p>Trigger&rsquo;s context. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>+ (KTKMonitoringOptions)monitoringOptions</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) KTKTriggerContext *context</code></pre></div>
 
 		    
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A devices monitoring options.</p>
-			</div>
 			
 
 			
@@ -402,9 +343,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns a devices monitoring options.</p>
-
-<p>Default value is KTKMonitoringOptionsBatteryStatus</p>
+				<p>Trigger&rsquo;s context. (read-only)</p>
 			</div>
 			
 
@@ -415,7 +354,53 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">Kontakt.h</code></p>
+				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/executor" title="executor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/executor">&nbsp;&nbsp;executor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Trigger&rsquo;s executor. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) KTKTriggerExecutor executor</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Trigger&rsquo;s executor. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
 			</div>
 			
 			
