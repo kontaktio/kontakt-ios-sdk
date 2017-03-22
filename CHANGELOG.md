@@ -1,5 +1,10 @@
 ## Changelog
 
+### v1.4.3 - 21 March 2017
+- Secure regions fixes for large deployments
+- New API models for Kontakt.io Triggers
+- Other fixes and improvements
+
 ### v1.4.2 - 2 March 2017
 - Fixing `KTKDeviceManager` random crashing when Gateway is around.
 - Fixing Github Issue [#40](https://github.com/kontaktio/kontakt-ios-sdk/issues/40)
