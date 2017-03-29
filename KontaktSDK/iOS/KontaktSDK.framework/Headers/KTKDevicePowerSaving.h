@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.4.3
+//  Version: 1.4.4
 //
 //  Copyright © 2016 Kontakt.io. All rights reserved.
 //
@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
  *  Power saving features.
  */
 typedef NS_OPTIONS(NSInteger, KTKDevicePowerSavingFeatures) {
+    /**
+     *  Power saving turned Off.
+     */
+    KTKDevicePowerSavingFeaturesOff    = 1 << 0,
     /**
      *  Power saving based on motion sensor.
      */
