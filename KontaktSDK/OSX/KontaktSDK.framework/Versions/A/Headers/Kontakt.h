@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.5.0
+//  Version: 1.5.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -85,7 +85,7 @@ extern double KTKCalculateDistanceFrom(int TXPower, double RSSI);
 + (KTKMonitoringOptions)monitoringOptions;
 
 /**
- *  Sets the CBCentralManagerOptionShowPowerAlertKey option for shared Central Manager.
+ *  Sets the CBCentralManagerOptionShowPowerAlertKey option for internal Central Manager.
  *
  *  @param alert A Boolean value that specifies whether the system should display a warning dialog to the user if Bluetooth is powered off when the central manager is instantiated.
  */
