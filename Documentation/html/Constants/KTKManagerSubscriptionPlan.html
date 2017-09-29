@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceAccess Constants Reference</title>
+	<title>KTKManagerSubscriptionPlan Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,13 +75,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceAccess Constants Reference</h1>
+					<h1 class="title">KTKManagerSubscriptionPlan Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKDeviceDefinitions.h</td>
+	<td>KTKManager.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -91,11 +91,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKDeviceAccess</h3>
+                    <h3 class="subsubtitle method-title">KTKManagerSubscriptionPlan</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>A device access rights.</p>
+                        <p>Subscription Plans</p>
 					</div>
 					
 					
@@ -103,12 +103,12 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSInteger, KTKDeviceAccess ) { 
-	<a href="">KTKDeviceAccessInvalid</a> = -1,
-	<a href="">KTKDeviceAccessOwner</a> = 1,
-	<a href="">KTKDeviceAccessSupervisor</a> = 2,
-	<a href="">KTKDeviceAccessEditor</a> = 3,
-	<a href="">KTKDeviceAccessViewer</a> = 4,
+                        <pre><code>typedef NS_OPTIONS(NSUInteger, KTKManagerSubscriptionPlan ) { 
+	<a href="">KTKManagerSubscriptionPlanNotApplicable</a> = 0,
+	<a href="">KTKManagerSubscriptionPlanNone</a> = 1 &lt; &lt; 0,
+	<a href="">KTKManagerSubscriptionPlanLegacy</a> = 1 &lt; &lt; 1,
+	<a href="">KTKManagerSubscriptionPlanManagement</a> = 1 &lt; &lt; 2,
+	<a href="">KTKManagerSubscriptionPlanLocationEngine</a> = 1 &lt; &lt; 3,
 };</code></pre>
                     
                     </div>
@@ -117,11 +117,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKDeviceAccessInvalid"></a><code>KTKDeviceAccessInvalid</code></dt>
+                            <dt><a name="" title="KTKManagerSubscriptionPlanNotApplicable"></a><code>KTKManagerSubscriptionPlanNotApplicable</code></dt>
 <dd>
 
 
-<p>Invalid value.</p>
+<p>Not Applicable</p>
 
 
 
@@ -129,16 +129,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKManager.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceAccessOwner"></a><code>KTKDeviceAccessOwner</code></dt>
+                            <dt><a name="" title="KTKManagerSubscriptionPlanNone"></a><code>KTKManagerSubscriptionPlanNone</code></dt>
 <dd>
 
 
-<p>Owner</p>
+<p>None</p>
 
 
 
@@ -146,16 +146,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKManager.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceAccessSupervisor"></a><code>KTKDeviceAccessSupervisor</code></dt>
+                            <dt><a name="" title="KTKManagerSubscriptionPlanLegacy"></a><code>KTKManagerSubscriptionPlanLegacy</code></dt>
 <dd>
 
 
-<p>Supervisor</p>
+<p>Legacy</p>
 
 
 
@@ -163,16 +163,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKManager.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceAccessEditor"></a><code>KTKDeviceAccessEditor</code></dt>
+                            <dt><a name="" title="KTKManagerSubscriptionPlanManagement"></a><code>KTKManagerSubscriptionPlanManagement</code></dt>
 <dd>
 
 
-<p>Editor</p>
+<p>Management</p>
 
 
 
@@ -180,16 +180,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKManager.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceAccessViewer"></a><code>KTKDeviceAccessViewer</code></dt>
+                            <dt><a name="" title="KTKManagerSubscriptionPlanLocationEngine"></a><code>KTKManagerSubscriptionPlanLocationEngine</code></dt>
 <dd>
 
 
-<p>Viewer</p>
+<p>Location Engine</p>
 
 
 
@@ -197,7 +197,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKManager.h</code>.
 	</p>
 	
 </dd>
@@ -214,7 +214,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKDeviceDefinitions.h</code></p>
+                        <p><code class="declared-in-ref">KTKManager.h</code></p>
                     </div>
                     
                     

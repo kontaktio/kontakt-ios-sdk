@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKTrigger Class Reference</title>
+	<title>KTKDeviceGatewayConfiguration Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -70,17 +70,15 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/activitiesIDs">activitiesIDs</option>
+		<option value="//api/name/apiKey">apiKey</option>
 		
-		<option value="//api/name/context">context</option>
+		<option value="//api/name/wifiLogin">wifiLogin</option>
 		
-		<option value="//api/name/executor">executor</option>
+		<option value="//api/name/wifiPassword">wifiPassword</option>
 		
-		<option value="//api/name/name">name</option>
+		<option value="//api/name/wifiProtocol">wifiProtocol</option>
 		
-		<option value="//api/name/triggerID">triggerID</option>
-		
-		<option value="//api/name/type">type</option>
+		<option value="//api/name/wifiSSID">wifiSSID</option>
 		
 	</optgroup>
 	
@@ -101,19 +99,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKTrigger Class Reference</h1>
+					<h1 class="title">KTKDeviceGatewayConfiguration Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Inherits from</th>
-	<td>NSObject</td>
-</tr><tr>
-	<th>Conforms to</th>
-	<td><a href="../Protocols/KTKCloudModel.html">KTKCloudModel</a></td>
+	<td><a href="../Classes/KTKDeviceConfiguration.html">KTKDeviceConfiguration</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>KTKTrigger.h</td>
+	<td>KTKDeviceGatewayConfiguration.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -126,13 +121,13 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						<a title="Trigger Properties" name="task_Trigger Properties"></a>
+						<a title="General Properties" name="task_General Properties"></a>
 						
-<h2 class="task-title">Trigger Properties</h2>
+<h2 class="task-title">General Properties</h2>
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/triggerID" title="triggerID"></a>
-	<h3 class="method-title"><code><a href="#//api/name/triggerID">&nbsp;&nbsp;triggerID</a></code>
+	<a name="//api/name/wifiSSID" title="wifiSSID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/wifiSSID">&nbsp;&nbsp;wifiSSID</a></code>
 </h3>
 
 	<div class="method-info">
@@ -142,12 +137,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Trigger identifier. (read-only)</p>
+				<p>WiFi SSID.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSUUID *triggerID</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) NSString *wifiSSID</code></pre></div>
 
 		    
 			
@@ -159,7 +154,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Trigger identifier. (read-only)</p>
+				<p>WiFi SSID.</p>
 			</div>
 			
 
@@ -170,15 +165,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
+				<p><code class="declared-in-ref">KTKDeviceGatewayConfiguration.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/name" title="name"></a>
-	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+	<a name="//api/name/wifiLogin" title="wifiLogin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/wifiLogin">&nbsp;&nbsp;wifiLogin</a></code>
 </h3>
 
 	<div class="method-info">
@@ -188,12 +183,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Trigger&rsquo;s name. (read-only)</p>
+				<p>WiFi login.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSString *name</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) NSString *wifiLogin</code></pre></div>
 
 		    
 			
@@ -205,7 +200,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Trigger&rsquo;s name. (read-only)</p>
+				<p>WiFi login.</p>
 			</div>
 			
 
@@ -216,15 +211,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
+				<p><code class="declared-in-ref">KTKDeviceGatewayConfiguration.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/activitiesIDs" title="activitiesIDs"></a>
-	<h3 class="method-title"><code><a href="#//api/name/activitiesIDs">&nbsp;&nbsp;activitiesIDs</a></code>
+	<a name="//api/name/wifiPassword" title="wifiPassword"></a>
+	<h3 class="method-title"><code><a href="#//api/name/wifiPassword">&nbsp;&nbsp;wifiPassword</a></code>
 </h3>
 
 	<div class="method-info">
@@ -234,12 +229,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>An array of activities identifiers assigned to the trigger. (read-only)</p>
+				<p>WiFi password.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSArray&lt;NSString*&gt; *activitiesIDs</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) NSString *wifiPassword</code></pre></div>
 
 		    
 			
@@ -251,7 +246,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>An array of activities identifiers assigned to the trigger. (read-only)</p>
+				<p>WiFi password.</p>
 			</div>
 			
 
@@ -262,15 +257,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
+				<p><code class="declared-in-ref">KTKDeviceGatewayConfiguration.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/type" title="type"></a>
-	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+	<a name="//api/name/wifiProtocol" title="wifiProtocol"></a>
+	<h3 class="method-title"><code><a href="#//api/name/wifiProtocol">&nbsp;&nbsp;wifiProtocol</a></code>
 </h3>
 
 	<div class="method-info">
@@ -280,12 +275,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Type of the trigger. (read-only)</p>
+				<p>WiFi protocol.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) KTKTriggerType type</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readwrite) KTKGatewayWiFiProtocol wifiProtocol</code></pre></div>
 
 		    
 			
@@ -297,7 +292,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Type of the trigger. (read-only)</p>
+				<p>WiFi protocol.</p>
 			</div>
 			
 
@@ -308,15 +303,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
+				<p><code class="declared-in-ref">KTKDeviceGatewayConfiguration.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/context" title="context"></a>
-	<h3 class="method-title"><code><a href="#//api/name/context">&nbsp;&nbsp;context</a></code>
+	<a name="//api/name/apiKey" title="apiKey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/apiKey">&nbsp;&nbsp;apiKey</a></code>
 </h3>
 
 	<div class="method-info">
@@ -326,12 +321,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Trigger&rsquo;s context. (read-only)</p>
+				<p>Gateway&rsquo;s API Key.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) KTKTriggerContext *context</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, copy, readwrite) NSString *apiKey</code></pre></div>
 
 		    
 			
@@ -343,7 +338,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Trigger&rsquo;s context. (read-only)</p>
+				<p>Gateway&rsquo;s API Key.</p>
 			</div>
 			
 
@@ -354,53 +349,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/executor" title="executor"></a>
-	<h3 class="method-title"><code><a href="#//api/name/executor">&nbsp;&nbsp;executor</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Trigger&rsquo;s executor. (read-only)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) KTKTriggerExecutor executor</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Trigger&rsquo;s executor. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKTrigger.h</code></p>
+				<p><code class="declared-in-ref">KTKDeviceGatewayConfiguration.h</code></p>
 			</div>
 			
 			

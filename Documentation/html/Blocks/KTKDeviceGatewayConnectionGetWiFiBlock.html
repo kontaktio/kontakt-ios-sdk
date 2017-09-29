@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceConnectionUpdateCompletion Block Reference</title>
+	<title>KTKDeviceGatewayConnectionGetWiFiBlock Block Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,13 +75,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceConnectionUpdateCompletion Block Reference</h1>
+					<h1 class="title">KTKDeviceGatewayConnectionGetWiFiBlock Block Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKDeviceConnection.h</td>
+	<td>KTKDeviceGatewayConnection.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -95,22 +95,22 @@
           
           <a title="Block Definition" name="instance_methods"></a>
           <h4 class="method-subtitle parameter-title">Block Definition</h4>
-          <h3 class="subsubtitle method-title">KTKDeviceConnectionUpdateCompletion</h3>
+          <h3 class="subsubtitle method-title">KTKDeviceGatewayConnectionGetWiFiBlock</h3>
 
 
 <div class="method-subsection brief-description">
-  <p>A completion block object to be executed when the update operation finishes.</p>
+  <p>A completion block object to be executed when the reading WiFi networks operation finishes.</p>
 </div>
 
 
 
-<code>typedef void (^KTKDeviceConnectionUpdateCompletion) (BOOL synchronized, NSError *_Nullable, error )</code>
+<code>typedef void (^KTKDeviceGatewayConnectionGetWiFiBlock) (NSSet <, KTKDeviceGatewayWiFiNetwork *>, * _Nullable, networks , __kindof KTKDeviceGatewayConfiguration, * _Nullable, configuration , NSError *_Nullable, error )</code>
   
   
   
   <div class="method-subsection discussion-section">
   <h4 class="method-subtitle">Discussion</h4>
-  <p>A completion block object to be executed when the update operation finishes.</p>
+  <p>A completion block object to be executed when the reading WiFi networks operation finishes.</p>
   </div>
   
   
@@ -123,7 +123,7 @@
   
   <div class="method-subsection declared-in-section">
   <h4 class="method-subtitle">Declared In</h4>
-  <code class="declared-in-ref">KTKDeviceConnection.h</code><br />
+  <code class="declared-in-ref">KTKDeviceGatewayConnection.h</code><br />
   </div>
   
   

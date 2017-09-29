@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKEddystoneFrame Protocol Reference</title>
+	<title>KTKDeviceGatewayConnection Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -68,15 +68,15 @@
 
 	
 	
-	<optgroup label="Properties">
+
+	
+
+	
+	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/type">type</option>
+		<option value="//api/name/getWiFiNetworks:">- getWiFiNetworks:</option>
 		
 	</optgroup>
-	
-
-	
-
 	
 	
 </select>
@@ -91,16 +91,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKEddystoneFrame Protocol Reference</h1>
+					<h1 class="title">KTKDeviceGatewayConnection Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<th>Conforms to</th>
-	<td>NSObject</td>
+	<th>Inherits from</th>
+	<td><a href="../Classes/KTKDeviceConnection.html">KTKDeviceConnection</a> : NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>KTKEddystoneFrame.h</td>
+	<td>KTKDeviceGatewayConnection.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -113,14 +113,14 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						<a title="Frame Protocol Properties" name="task_Frame Protocol Properties"></a>
+						<a title="Connection Methods" name="task_Connection Methods"></a>
 						
-<h2 class="task-title">Frame Protocol Properties</h2>
+<h2 class="task-title">Connection Methods</h2>
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/type" title="type"></a>
-	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
-<span class="task-item-suffix">required method</span></h3>
+	<a name="//api/name/getWiFiNetworks:" title="getWiFiNetworks:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getWiFiNetworks:">&ndash;&nbsp;getWiFiNetworks:</a></code>
+</h3>
 
 	<div class="method-info">
 		<div class="pointy-thing"></div>
@@ -129,14 +129,26 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Frame type. (read-only)</p>
+				<p>Reads the configuration from the connection device.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) KTKEddystoneFrameType type</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>- (void)getWiFiNetworks:(KTKDeviceGatewayConnectionGetWiFiBlock)<em>completion</em></code></pre></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A block object to be executed when the read operation finishes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
 			
 
 			
@@ -146,27 +158,18 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Frame type. (read-only)</p>
+				<p>Reads the configuration from the connection device.</p>
 			</div>
 			
 
 			
 
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="../Constants/KTKEddystoneFrameType.html">KTKEddystoneFrameType</a></p></code></li>
-					
-				</ul>
-			</div>
 			
 
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKEddystoneFrame.h</code></p>
+				<p><code class="declared-in-ref">KTKDeviceGatewayConnection.h</code></p>
 			</div>
 			
 			
