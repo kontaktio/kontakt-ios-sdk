@@ -120,8 +120,8 @@ class BeaconScanningManager: NSObject {
 extension BeaconScanningManager: KTKBeaconManagerDelegate {
     
     func beaconManager(_ manager: KTKBeaconManager, monitoringDidFailFor region: KTKBeaconRegion?, withError error: Error?) {
-        print("Monitoring did fail for region: \(region)")
-        print("Error: \(error)")
+        print("Monitoring did fail for region: \(String(describing: region))")
+        print("Error: \(String(describing: error))")
     }
     
     func beaconManager(_ manager: KTKBeaconManager, didStartMonitoringFor region: KTKBeaconRegion) {
@@ -147,7 +147,7 @@ extension BeaconScanningManager: KTKBeaconManagerDelegate {
 extension BeaconScanningManager: KTKEddystoneManagerDelegate {
     
     func eddystoneManagerDidFail(toStartDiscovery manager: KTKEddystoneManager, withError error: Error?) {
-        print("Did fail to start discovery: \(error)")
+        print("Did fail to start discovery: \(String(describing: error))")
     }
     
     func eddystoneManager(_ manager: KTKEddystoneManager, didDiscover eddystones: Set<KTKEddystone>, in region: KTKEddystoneRegion?) {

@@ -164,13 +164,10 @@ class ApplyDeviceConfigViewController: UITableViewController {
 
 extension ApplyDeviceConfigViewController: KTKDevicesManagerDelegate {
     
-    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]?) {
-        guard let nearbyDevices = devices else {
-            return
-        }
+    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]) {
         
         // Filter for desired device
-        if let device = nearbyDevices.filter({$0.uniqueID == configuration.uniqueID}).first {
+        if let device = devices.filter({$0.uniqueID == configuration.uniqueID}).first {
             // Device found - stop discovery
             devicesManager.stopDevicesDiscovery()
             
@@ -197,8 +194,8 @@ extension ApplyDeviceConfigViewController: KTKDevicesManagerDelegate {
         }
     }
     
-    func devicesManagerDidFail(toStartDiscovery manager: KTKDevicesManager, withError error: Error?) {
-        print("Discovery did fail with error: \(error)")
+    func devicesManagerDidFail(toStartDiscovery manager: KTKDevicesManager, withError error: Error) {
+        print("Discovery did fail with error: \(String(describing: error))")
         self.showError(error: "Device discovery did fail")
     }
     
