@@ -25,6 +25,8 @@ class MonitoringBeaconRegionViewController: UIViewController {
     
     var region: KTKBeaconRegion!
     
+    static let regionIdentifier = "region-identifier"
+    
     // =========================================================================
     // MARK: - UIViewController
     
@@ -37,16 +39,14 @@ class MonitoringBeaconRegionViewController: UIViewController {
         beaconManager.requestLocationAlwaysAuthorization()
         
         // Create Beacon Region
-        region = KTKBeaconRegion(proximityUUID: UUID(uuidString: KontaktProximityUUID)!, identifier: "region-identifier")
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        if self.navigationController?.viewControllers.index(of: self) == nil {
-            // Back button pressed because self is no longer in the navigation stack.
-            // Stop monitoring if needed
-            beaconManager.stopMonitoring(for: region)
+        if let region = beaconManager.monitoredRegions.filter ({ $0.identifier == MonitoringBeaconRegionViewController.regionIdentifier }).first {
+            self.region = region
+            self.launchButton.currentState = .Stop
         }
-        super.viewWillDisappear(animated)
+        else {
+            region = KTKBeaconRegion(proximityUUID: UUID(uuidString: KontaktProximityUUID)!, identifier: MonitoringBeaconRegionViewController.regionIdentifier)
+            self.launchButton.currentState = .Start
+        }
     }
     
     // =========================================================================
@@ -82,8 +82,8 @@ class MonitoringBeaconRegionViewController: UIViewController {
 extension MonitoringBeaconRegionViewController: KTKBeaconManagerDelegate {
     
     func beaconManager(_ manager: KTKBeaconManager, monitoringDidFailFor region: KTKBeaconRegion?, withError error: Error?) {
-        print("Monitoring did fail for region: \(region)")
-        print("Error: \(error)")
+        print("Monitoring did fail for region: \(String(describing: region))")
+        print("Error: \(String(describing: error))")
     }
     
     func beaconManager(_ manager: KTKBeaconManager, didStartMonitoringFor region: KTKBeaconRegion) {
