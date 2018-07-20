@@ -1,5 +1,9 @@
 # iOS/tvOS/macOS SDK Quickstart
 
+## Important Note
+Please make sure before updating to SDK `2.0.0` that you don't need to support devices with firmware **< 3.0**. 
+As of version `2.0.0` only devices with firmware `4.0` or higher will be supported. 
+
 ## Administration App
 
 To configure Kontakt.io Devices please use our new [iOS Administration App](https://itunes.apple.com/pl/app/kontakt.io-administration/id1067320511).
@@ -33,7 +37,7 @@ To integrate the Kontakt.io iOS/tvOS/macOS SDK into your Xcode project using Coc
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'KontaktSDK', '~> 1.4'
+pod 'KontaktSDK', '~> 2.0'
 ```
 
 Then, run the following command:
@@ -58,7 +62,7 @@ $ brew install carthage
 1. To integrate Kontakt.io SDK into your Xcode project using Carthage, specify it in your `Cartfile`:
 
   ``` bash
-  github "kontaktio/kontakt-ios-sdk" ~> 1.4
+  github "kontaktio/kontakt-ios-sdk" ~> 2.0
   ```
 
 2. Run `carthage update` to build the framework.
@@ -129,11 +133,11 @@ bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/KontaktSDK.framework/strip
 
 ---
 
-###Swift
+### Swift
 
 #### Generics and Nullability
 
-Our SDK uses nullability and generics annotations added in Xcode 7 which means that the Kontakt.io iOS SDK is very easy to use with swift 2.0.
+Our SDK uses nullability and generics annotations added in Xcode 7 which means that the Kontakt.io iOS SDK is very easy to use with swift.
 
 #### Bridging Header
 Create a new header file from the **File** menu and name it **<i>YourProjectName</i>-Bridging-Header.h**.
@@ -188,7 +192,7 @@ import KontaktSDK
 ```
 
 ``` Swift
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	
 	// Set API Key
 	Kontakt.setAPIKey("Your API Key")
@@ -359,7 +363,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var beaconManager: KTKBeaconManager!
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Set API Key
         Kontakt.setAPIKey("API Key")
