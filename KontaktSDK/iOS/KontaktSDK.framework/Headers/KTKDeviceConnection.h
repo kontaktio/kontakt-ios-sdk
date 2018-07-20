@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.5.1
+//  Version: 2.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -128,6 +128,11 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  */
 @property (nonatomic, readwrite, getter=isKeepAlive) BOOL keepAlive;
 
+/**
+ *  A Boolean value indicating whether the devices rtc time should be updated automatically. Defaults to `YES`.
+ */
+@property (nonatomic, readwrite, getter=isUpdateTimeAutomatically) BOOL updateTimeAutomatically;
+
 #pragma mark - Static Methods
 ///--------------------------------------------------------------------
 /// @name Static Methods
@@ -184,12 +189,12 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  *
  *  @param updateBlock A block object to be executed when the sensors values are update.
  */
-- (void)sensorsUpdatesWithBlock:(KTKDeviceConnectionSensorsUpdate)updateBlock;
+- (void)sensorsUpdatesWithBlock:(KTKDeviceConnectionSensorsUpdate)updateBlock __attribute__((deprecated("Please use [KTKNearbyDevice telemetry] property instead")));
 
 /**
  *  Stops listening for sensors updates.
  */
-- (void)stopSensorsUpdates;
+- (void)stopSensorsUpdates __attribute__((deprecated("Please use [KTKNearbyDevice telemetry] property instead")));
 
 /**
  *  Updates a device to the latest available firmware.

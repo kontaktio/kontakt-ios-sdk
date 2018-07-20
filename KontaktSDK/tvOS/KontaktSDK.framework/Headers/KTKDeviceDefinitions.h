@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.5.1
+//  Version: 2.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -221,7 +221,6 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
      *  Cloud Beacon
      */
     KTKDeviceModelCloudBeacon = 4,
-    
     /**
      *  Card Beacon
      */
@@ -233,7 +232,23 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
     /**
      *  Gateway
      */
-    KTKDeviceModelGateway = 7
+    KTKDeviceModelGateway = 7,
+    /**
+     *  Tag Beacon
+     */
+    KTKDeviceModelTagBeacon = 8,
+    /**
+     *  Smart Beacon 3 (Retrofit)
+     */
+    KTKDeviceModelSmartBeacon3 = 9,
+    /**
+     *  Heavy Duty Beacon
+     */
+    KTKDeviceModelHeavyDutyBeacon = 10,
+    /**
+     *  Card Beacon 2
+     */
+    KTKDeviceModelCardBeacon2 = 11,
 };
 
 /**

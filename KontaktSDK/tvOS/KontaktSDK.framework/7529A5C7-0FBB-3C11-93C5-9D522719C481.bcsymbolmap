@@ -7,7 +7,7 @@ BCSymbolMap Version: 2.0
 +[Kontakt setCentralManagerPowerAlert:]
 __APIKey
 __monitoringOptions
-Apple LLVM version 9.0.0 (clang-900.0.37)
+Apple LLVM version 9.1.0 (clang-902.0.39.2)
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Kontakt.m
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK
 KTKCalculateDistanceFrom
@@ -93,8 +93,7 @@ ___block_literal_global
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Extension/NSData+Gzip.m
 __libzOpen_block_invoke
 libzOpen
-_dispatch_once
-/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.0.sdk/usr/include/dispatch/once.h
+/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.4.sdk/usr/include/dispatch/once.h
 -[KTKDeviceWriteSecureConfigurationOperationOffline initWithConfiguration:credentials:]
 -[KTKDeviceWriteSecureConfigurationOperationOffline setDevice:]
 -[KTKDeviceWriteSecureConfigurationOperationOffline type]
@@ -142,7 +141,7 @@ _OBJC_IVAR_$_KTKEddystoneURL._type
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Proximity/Eddystone/Model/Frames/KTKEddystoneURL.m
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Proximity/Eddystone/Model/Frames/KTKEddystoneURL.h
 NSMakeRange
-/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
 -[KTKConfigProfileRequest initWithPayload:]
 -[KTKConfigProfileRequest initWithPayload:token:]
 -[KTKConfigProfileRequest initWithPayload:password:]
@@ -531,6 +530,7 @@ ___destroy_helper_block_.349
 -[KTKEddystoneManager .cxx_destruct]
 _OBJC_IVAR_$_KTKEddystoneManager._discoveryRegions
 _OBJC_IVAR_$_KTKEddystoneManager._eddystoneManagerQueue
+___block_descriptor_tmp.46
 ___block_descriptor_tmp.53
 ___block_descriptor_tmp.57
 ___block_descriptor_tmp.65
@@ -685,9 +685,9 @@ __KTKShuffleSubdomainsSetFromBeaconFutureIDs_block_invoke
 KTKShuffleSubdomainsSetFromBeaconFutureIDs
 KTKShuffleSubdomainFromInstanceID
 CFSwapInt32
-/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h
+/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.4.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h
 _OSSwapInt32
-/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.0.sdk/usr/include/libkern/arm/OSByteOrder.h
+/Applications/Xcode.app/Contents/Developer/Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.4.sdk/usr/include/libkern/arm/OSByteOrder.h
 KTKShuffleSubdomainFromMajorMinor
 KTKShuffleDomainTypeResultKey
 KTKShuffleDomainTypeQueryKey
@@ -778,8 +778,13 @@ __54-[KTKDeviceReadWiFiNetworksDetailsOperation finished:]_block_invoke
 -[KTKDeviceReadSecureConfigurationOperationOffline .cxx_destruct]
 _OBJC_IVAR_$_KTKDeviceReadSecureConfigurationOperationOffline._credentials
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Configuration/KTKDeviceReadSecureConfigurationOperationOffline.m
-+[KTKNearbyDeviceTelemetry telemetryFromData:]
+-[KTKNearbyDeviceTelemetry updateWithData:]
+-[KTKNearbyDeviceTelemetry description]
 -[KTKNearbyDeviceTelemetry copyWithZone:]
+-[KTKNearbyDeviceTelemetry uniqueID]
+-[KTKNearbyDeviceTelemetry setUniqueID:]
+-[KTKNearbyDeviceTelemetry RSSI]
+-[KTKNearbyDeviceTelemetry setRSSI:]
 -[KTKNearbyDeviceTelemetry date]
 -[KTKNearbyDeviceTelemetry setDate:]
 -[KTKNearbyDeviceTelemetry batteryLevel]
@@ -798,6 +803,8 @@ _OBJC_IVAR_$_KTKDeviceReadSecureConfigurationOperationOffline._credentials
 -[KTKNearbyDeviceTelemetry setLastDoubleTap:]
 -[KTKNearbyDeviceTelemetry lastThreshold]
 -[KTKNearbyDeviceTelemetry setLastThreshold:]
+-[KTKNearbyDeviceTelemetry lastSingleClick]
+-[KTKNearbyDeviceTelemetry setLastSingleClick:]
 -[KTKNearbyDeviceTelemetry lightSensor]
 -[KTKNearbyDeviceTelemetry setLightSensor:]
 -[KTKNearbyDeviceTelemetry temperature]
@@ -809,6 +816,8 @@ _OBJC_IVAR_$_KTKDeviceReadSecureConfigurationOperationOffline._credentials
 -[KTKNearbyDeviceTelemetry wifiScans]
 -[KTKNearbyDeviceTelemetry setWifiScans:]
 -[KTKNearbyDeviceTelemetry .cxx_destruct]
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._uniqueID
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._RSSI
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._date
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._batteryLevel
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._uptime
@@ -818,6 +827,7 @@ _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._sensitivity
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._acceleration
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._lastDoubleTap
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._lastThreshold
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._lastSingleClick
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._lightSensor
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._temperature
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._bleScans
@@ -1200,87 +1210,11 @@ __71-[KTKDeviceWriteSecureConfigurationOperation writeAcknowledgeOperation]_bloc
 __66-[KTKDeviceWriteSecureConfigurationOperation encryptConfiguration]_block_invoke_2
 __66-[KTKDeviceWriteSecureConfigurationOperation encryptConfiguration]_block_invoke
 __62-[KTKDeviceWriteSecureConfigurationOperation createOperations]_block_invoke
--[KTKDeviceNotifySensorsOperation setDevice:]
--[KTKDeviceNotifySensorsOperation type]
--[KTKDeviceNotifySensorsOperation createOperations]
-___51-[KTKDeviceNotifySensorsOperation createOperations]_block_invoke
--[KTKDeviceNotifySensorsOperation operationDidFinish:errors:]
--[KTKDeviceNotifySensorsOperation finished:]
-___44-[KTKDeviceNotifySensorsOperation finished:]_block_invoke
-___copy_helper_block_.145
-___destroy_helper_block_.146
--[KTKDeviceNotifySensorsOperation notificationBlock]
--[KTKDeviceNotifySensorsOperation setNotificationBlock:]
--[KTKDeviceNotifySensorsOperation .cxx_destruct]
-_OBJC_IVAR_$_KTKDeviceNotifySensorsOperation._notificationBlock
-/Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Configuration/KTKDeviceNotifySensorsOperation.m
-/Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Configuration/KTKDeviceNotifySensorsOperation.h
-__44-[KTKDeviceNotifySensorsOperation finished:]_block_invoke
-__51-[KTKDeviceNotifySensorsOperation createOperations]_block_invoke
--[KTKDeviceWriteLegacyConfigurationOperation initWithConfiguration:]
--[KTKDeviceWriteLegacyConfigurationOperation setDevice:]
--[KTKDeviceWriteLegacyConfigurationOperation type]
--[KTKDeviceWriteLegacyConfigurationOperation createOperations]
--[KTKDeviceWriteLegacyConfigurationOperation writeAcknowledgeOperation]
-___71-[KTKDeviceWriteLegacyConfigurationOperation writeAcknowledgeOperation]_block_invoke
-___71-[KTKDeviceWriteLegacyConfigurationOperation writeAcknowledgeOperation]_block_invoke_2
-___copy_helper_block_.196
-___destroy_helper_block_.197
--[KTKDeviceWriteLegacyConfigurationOperation operationDidFinish:errors:]
--[KTKDeviceWriteLegacyConfigurationOperation finished:]
-___55-[KTKDeviceWriteLegacyConfigurationOperation finished:]_block_invoke
--[KTKDeviceWriteLegacyConfigurationOperation configuration]
--[KTKDeviceWriteLegacyConfigurationOperation setConfiguration:]
--[KTKDeviceWriteLegacyConfigurationOperation isSynchronized]
--[KTKDeviceWriteLegacyConfigurationOperation setSynchronized:]
--[KTKDeviceWriteLegacyConfigurationOperation .cxx_destruct]
-_OBJC_IVAR_$_KTKDeviceWriteLegacyConfigurationOperation._configuration
-_OBJC_IVAR_$_KTKDeviceWriteLegacyConfigurationOperation._synchronized
-/Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Configuration/KTKDeviceWriteLegacyConfigurationOperation.m
-__55-[KTKDeviceWriteLegacyConfigurationOperation finished:]_block_invoke
-__71-[KTKDeviceWriteLegacyConfigurationOperation writeAcknowledgeOperation]_block_invoke_2
-__71-[KTKDeviceWriteLegacyConfigurationOperation writeAcknowledgeOperation]_block_invoke
 +[KTKBLECurrentTimeValueTransformer transformedValueClass]
 +[KTKBLECurrentTimeValueTransformer allowsReverseTransformation]
 -[KTKBLECurrentTimeValueTransformer transformedValue:]
 -[KTKBLECurrentTimeValueTransformer reverseTransformedValue:]
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Transformers/KTKBLECurrentTimeValueTransformer.m
--[KTKDeviceReadLegacyConfigurationOperation setDevice:]
--[KTKDeviceReadLegacyConfigurationOperation type]
--[KTKDeviceReadLegacyConfigurationOperation createOperations]
--[KTKDeviceReadLegacyConfigurationOperation operationDidFinish:errors:]
--[KTKDeviceReadLegacyConfigurationOperation finished:]
-___54-[KTKDeviceReadLegacyConfigurationOperation finished:]_block_invoke
-+[KTKDeviceReadLegacyConfigurationOperation configurationKeyPaths]
-___66+[KTKDeviceReadLegacyConfigurationOperation configurationKeyPaths]_block_invoke
--[KTKDeviceReadLegacyConfigurationOperation configuration]
--[KTKDeviceReadLegacyConfigurationOperation setConfiguration:]
--[KTKDeviceReadLegacyConfigurationOperation .cxx_destruct]
-_configurationKeyPaths._keyPaths
-_configurationKeyPaths.onceToken
-___block_descriptor_tmp.200
-_OBJC_IVAR_$_KTKDeviceReadLegacyConfigurationOperation._configuration
-/Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Configuration/KTKDeviceReadLegacyConfigurationOperation.m
-__66+[KTKDeviceReadLegacyConfigurationOperation configurationKeyPaths]_block_invoke
-__54-[KTKDeviceReadLegacyConfigurationOperation finished:]_block_invoke
--[KTKDeviceLegacyAuthorizationOperation initWithCredentials:]
--[KTKDeviceLegacyAuthorizationOperation setDevice:]
--[KTKDeviceLegacyAuthorizationOperation createOperations]
--[KTKDeviceLegacyAuthorizationOperation downloadCredentails]
-___60-[KTKDeviceLegacyAuthorizationOperation downloadCredentails]_block_invoke
--[KTKDeviceLegacyAuthorizationOperation operationDidFinish:errors:]
--[KTKDeviceLegacyAuthorizationOperation finished:]
-___50-[KTKDeviceLegacyAuthorizationOperation finished:]_block_invoke
-___copy_helper_block_.191
-___destroy_helper_block_.192
--[KTKDeviceLegacyAuthorizationOperation credentials]
--[KTKDeviceLegacyAuthorizationOperation setCredentials:]
--[KTKDeviceLegacyAuthorizationOperation .cxx_destruct]
-_OBJC_IVAR_$_KTKDeviceLegacyAuthorizationOperation._credentials
-/Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Configuration/KTKDeviceLegacyAuthorizationOperation.m
-/Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Configuration/KTKDeviceLegacyAuthorizationOperation.h
-__50-[KTKDeviceLegacyAuthorizationOperation finished:]_block_invoke
-__60-[KTKDeviceLegacyAuthorizationOperation downloadCredentails]_block_invoke
 -[KTKDeviceConnection dealloc]
 -[KTKDeviceConnection initWithNearbyDevice:]
 -[KTKDeviceConnection init]
@@ -1290,104 +1224,93 @@ __60-[KTKDeviceLegacyAuthorizationOperation downloadCredentails]_block_invoke
 +[KTKDeviceConnection cancelAllOperations]
 -[KTKDeviceConnection writeConfiguration:completion:]
 ___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke
-___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.174
+___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.171
+___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.183
 ___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke_2
-___copy_helper_block_.177
-___destroy_helper_block_.178
-___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.192
-___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.203
-___copy_helper_block_.204
-___destroy_helper_block_.205
+___copy_helper_block_.189
+___destroy_helper_block_.190
+___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.200
+___copy_helper_block_.203
+___destroy_helper_block_.204
 -[KTKDeviceConnection readConfigurationWithCompletion:]
 ___55-[KTKDeviceConnection readConfigurationWithCompletion:]_block_invoke
-___copy_helper_block_.216
-___destroy_helper_block_.217
-___55-[KTKDeviceConnection readConfigurationWithCompletion:]_block_invoke.222
+___copy_helper_block_.211
+___destroy_helper_block_.212
+___55-[KTKDeviceConnection readConfigurationWithCompletion:]_block_invoke.220
 ___copy_helper_block_.223
 ___destroy_helper_block_.224
--[KTKDeviceConnection sensorsUpdatesWithBlock:]
-___47-[KTKDeviceConnection sensorsUpdatesWithBlock:]_block_invoke
-___47-[KTKDeviceConnection sensorsUpdatesWithBlock:]_block_invoke_2
-___copy_helper_block_.232
-___destroy_helper_block_.233
-___47-[KTKDeviceConnection sensorsUpdatesWithBlock:]_block_invoke.238
-___copy_helper_block_.239
-___destroy_helper_block_.240
--[KTKDeviceConnection stopSensorsUpdates]
-___41-[KTKDeviceConnection stopSensorsUpdates]_block_invoke
 -[KTKDeviceConnection updateWithFirmware:progress:completion:]
 ___62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke
-___copy_helper_block_.263
-___destroy_helper_block_.264
-___62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke.273
+___copy_helper_block_.231
+___destroy_helper_block_.232
+___62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke.243
 ___62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke_2
-___copy_helper_block_.285
-___destroy_helper_block_.286
-___62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke.294
-___copy_helper_block_.297
-___destroy_helper_block_.298
--[KTKDeviceConnection updateNordicWithFirmware:progress:completion:]
-___68-[KTKDeviceConnection updateNordicWithFirmware:progress:completion:]_block_invoke
-___68-[KTKDeviceConnection updateNordicWithFirmware:progress:completion:]_block_invoke.314
-___68-[KTKDeviceConnection updateNordicWithFirmware:progress:completion:]_block_invoke_2
-___copy_helper_block_.315
-___destroy_helper_block_.316
-___copy_helper_block_.318
-___destroy_helper_block_.319
-___68-[KTKDeviceConnection updateNordicWithFirmware:progress:completion:]_block_invoke.327
-___copy_helper_block_.328
-___destroy_helper_block_.329
+___copy_helper_block_.255
+___destroy_helper_block_.256
+___copy_helper_block_.258
+___destroy_helper_block_.259
+___62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke.264
+___copy_helper_block_.267
+___destroy_helper_block_.268
+-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]
+___71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke
+___copy_helper_block_.272
+___destroy_helper_block_.273
+___71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke.276
+___71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke.287
+___71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke_2
+___copy_helper_block_.291
+___destroy_helper_block_.292
 -[KTKDeviceConnection cancel]
 ___29-[KTKDeviceConnection cancel]_block_invoke
-___copy_helper_block_.333
-___destroy_helper_block_.334
+___copy_helper_block_.300
+___destroy_helper_block_.301
 -[KTKDeviceConnection isExecuting]
 -[KTKDeviceConnection scheduleSessionOperation:]
 ___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke
 ___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke_2
-___copy_helper_block_.351
-___destroy_helper_block_.352
-___copy_helper_block_.354
-___destroy_helper_block_.355
-___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.365
-___copy_helper_block_.366
-___destroy_helper_block_.367
-___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.370
-___copy_helper_block_.371
-___destroy_helper_block_.372
-___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.380
-___copy_helper_block_.385
-___destroy_helper_block_.386
+___copy_helper_block_.322
+___destroy_helper_block_.323
+___copy_helper_block_.325
+___destroy_helper_block_.326
+___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.332
+___copy_helper_block_.333
+___destroy_helper_block_.334
+___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.342
+___copy_helper_block_.347
+___destroy_helper_block_.348
 -[KTKDeviceConnection startConnectionWithTimeout:]
 ___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke
 ___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2
-___copy_helper_block_.397
-___destroy_helper_block_.398
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.400
+___copy_helper_block_.359
+___destroy_helper_block_.360
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.362
+___copy_helper_block_.367
+___destroy_helper_block_.368
+___copy_helper_block_.372
+___destroy_helper_block_.373
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.375
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2.380
+___copy_helper_block_.381
+___destroy_helper_block_.382
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.384
+___copy_helper_block_.387
+___destroy_helper_block_.388
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.392
+___copy_helper_block_.393
+___destroy_helper_block_.394
+___copy_helper_block_.396
+___destroy_helper_block_.397
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.402
 ___copy_helper_block_.405
 ___destroy_helper_block_.406
-___copy_helper_block_.410
-___destroy_helper_block_.411
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.413
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2.418
-___copy_helper_block_.419
-___destroy_helper_block_.420
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.422
-___copy_helper_block_.425
-___destroy_helper_block_.426
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.430
-___copy_helper_block_.431
-___destroy_helper_block_.432
-___copy_helper_block_.434
-___destroy_helper_block_.435
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.440
-___copy_helper_block_.443
-___destroy_helper_block_.444
 -[KTKDeviceConnection cancelConnection]
 -[KTKDeviceConnection connectionOperation:progress:]
 ___52-[KTKDeviceConnection connectionOperation:progress:]_block_invoke
-___copy_helper_block_.454
-___destroy_helper_block_.455
+___copy_helper_block_.416
+___destroy_helper_block_.417
+-[KTKDeviceConnection sensorsUpdatesWithBlock:]
+-[KTKDeviceConnection stopSensorsUpdates]
 -[KTKDeviceConnection nearbyDevice]
 -[KTKDeviceConnection setNearbyDevice:]
 -[KTKDeviceConnection connectionTimeout]
@@ -1400,6 +1323,8 @@ ___destroy_helper_block_.455
 -[KTKDeviceConnection configProfileGenerator]
 -[KTKDeviceConnection setConfigProfileGenerator:]
 -[KTKDeviceConnection isKeepAlive]
+-[KTKDeviceConnection isUpdateTimeAutomatically]
+-[KTKDeviceConnection setUpdateTimeAutomatically:]
 -[KTKDeviceConnection sessionOperation]
 -[KTKDeviceConnection setSessionOperation:]
 -[KTKDeviceConnection nordicFirmwareUpdateOperation]
@@ -1422,42 +1347,35 @@ ___ktk_device_connections_hashtable_block_invoke
 _OBJC_IVAR_$_KTKDeviceConnection._connectionAttempts
 _OBJC_IVAR_$_KTKDeviceConnection._connectionAttemptsLeft
 _OBJC_IVAR_$_KTKDeviceConnection._keepAlive
-___block_descriptor_tmp.180
-___block_descriptor_tmp.183
+___block_descriptor_tmp.191
 ___block_descriptor_tmp.206
-___block_descriptor_tmp.219
-___block_descriptor_tmp.225
-___block_descriptor_tmp.230
-___block_descriptor_tmp.235
-___block_descriptor_tmp.241
-___block_literal_global.256
-___block_descriptor_tmp.265
-___block_descriptor_tmp.287
-___block_descriptor_tmp.291
-___block_descriptor_tmp.299
-___block_descriptor_tmp.317
-___block_descriptor_tmp.320
-___block_descriptor_tmp.330
-___block_descriptor_tmp.335
-___block_descriptor_tmp.353
-___block_descriptor_tmp.357
-___block_descriptor_tmp.368
+___block_descriptor_tmp.213
+___block_descriptor_tmp.226
+___block_descriptor_tmp.233
+___block_descriptor_tmp.257
+___block_descriptor_tmp.261
+___block_descriptor_tmp.269
+___block_descriptor_tmp.274
+___block_descriptor_tmp.285
+___block_descriptor_tmp.293
+___block_descriptor_tmp.302
+___block_descriptor_tmp.324
+___block_descriptor_tmp.349
+___block_descriptor_tmp.361
+___block_descriptor_tmp.369
 ___block_descriptor_tmp.374
-___block_descriptor_tmp.387
+___block_descriptor_tmp.383
+___block_descriptor_tmp.389
+___block_descriptor_tmp.395
 ___block_descriptor_tmp.399
 ___block_descriptor_tmp.407
-___block_descriptor_tmp.412
-___block_descriptor_tmp.421
-___block_descriptor_tmp.427
-___block_descriptor_tmp.433
-___block_descriptor_tmp.437
-___block_descriptor_tmp.445
-___block_descriptor_tmp.456
+___block_descriptor_tmp.418
 _OBJC_IVAR_$_KTKDeviceConnection._nearbyDevice
 _OBJC_IVAR_$_KTKDeviceConnection._connectionTimeout
 _OBJC_IVAR_$_KTKDeviceConnection._delegate
 _OBJC_IVAR_$_KTKDeviceConnection._credentials
 _OBJC_IVAR_$_KTKDeviceConnection._configProfileGenerator
+_OBJC_IVAR_$_KTKDeviceConnection._updateTimeAutomatically
 _OBJC_IVAR_$_KTKDeviceConnection._sessionOperation
 _OBJC_IVAR_$_KTKDeviceConnection._nordicFirmwareUpdateOperation
 _OBJC_IVAR_$_KTKDeviceConnection._disconnectOperation
@@ -1468,12 +1386,11 @@ l_OBJC_PROTOCOL_$_KTKDeviceConnectionOperationDelegate
 l_OBJC_LABEL_PROTOCOL_$_KTKDeviceConnectionOperationDelegate
 _ktk_device_connection_operation_queue.ktk_device_connection_operation_queue
 _ktk_device_connection_operation_queue.onceToken
-___block_descriptor_tmp.578
-___block_literal_global.579
+___block_descriptor_tmp.545
 _ktk_device_connections_hashtable.ktk_device_connections_hashtable
 _ktk_device_connections_hashtable.onceToken
-___block_descriptor_tmp.583
-___block_literal_global.584
+___block_descriptor_tmp.549
+___block_literal_global.550
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/KTKDeviceConnection.m
 __ktk_device_connections_hashtable_block_invoke
 ktk_device_connections_hashtable
@@ -1481,38 +1398,33 @@ __ktk_device_connection_operation_queue_block_invoke
 ktk_device_connection_operation_queue
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/KTKDeviceConnection.h
 __52-[KTKDeviceConnection connectionOperation:progress:]_block_invoke
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.440
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.430
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.422
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2.418
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.413
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.400
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.402
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.392
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.384
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2.380
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.375
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.362
 __50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2
 __50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke
-__48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.380
-__48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.370
-__48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.365
+__48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.342
+__48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.332
 __48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke_2
 __48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke
 __29-[KTKDeviceConnection cancel]_block_invoke
-__68-[KTKDeviceConnection updateNordicWithFirmware:progress:completion:]_block_invoke.327
-__68-[KTKDeviceConnection updateNordicWithFirmware:progress:completion:]_block_invoke_2
-__68-[KTKDeviceConnection updateNordicWithFirmware:progress:completion:]_block_invoke.314
-__68-[KTKDeviceConnection updateNordicWithFirmware:progress:completion:]_block_invoke
-__62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke.294
+__71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke_2
+__71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke.287
+__71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke.276
+__71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke
+__62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke.264
 __62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke_2
-__62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke.273
+__62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke.243
 __62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke
-__41-[KTKDeviceConnection stopSensorsUpdates]_block_invoke
-__47-[KTKDeviceConnection sensorsUpdatesWithBlock:]_block_invoke.238
-__47-[KTKDeviceConnection sensorsUpdatesWithBlock:]_block_invoke_2
-__47-[KTKDeviceConnection sensorsUpdatesWithBlock:]_block_invoke
-__55-[KTKDeviceConnection readConfigurationWithCompletion:]_block_invoke.222
+__55-[KTKDeviceConnection readConfigurationWithCompletion:]_block_invoke.220
 __55-[KTKDeviceConnection readConfigurationWithCompletion:]_block_invoke
-__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.203
-__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.192
+__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.200
 __53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke_2
-__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.174
+__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.183
+__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.171
 __53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke
 -[KTKNearbyDevice init]
 -[KTKNearbyDevice updateWithAdvertisementDictionary:]
@@ -1683,9 +1595,12 @@ ___block_descriptor_tmp.117
 ___block_descriptor_tmp.122
 ___block_descriptor_tmp.130
 ___block_descriptor_tmp.165
+___block_descriptor_tmp.180
 ___block_descriptor_tmp.208
 ___block_descriptor_tmp.211
+___block_descriptor_tmp.219
 ___block_descriptor_tmp.222
+___block_descriptor_tmp.225
 ___block_descriptor_tmp.228
 _OBJC_IVAR_$_KTKDevicesManager._discovering
 _OBJC_IVAR_$_KTKDevicesManager._detectingLocks
@@ -1752,6 +1667,8 @@ ___61-[KTKCloudReportsManager processLocationUpdatesWithLocation:]_block_invoke.
 -[KTKCloudReportsManager locationManager:didChangeAuthorizationStatus:]
 -[KTKCloudReportsManager locationManager:didUpdateLocations:]
 ___61-[KTKCloudReportsManager locationManager:didUpdateLocations:]_block_invoke
+___copy_helper_block_.145
+___destroy_helper_block_.146
 -[KTKCloudReportsManager cloudReportsManagerQueue]
 -[KTKCloudReportsManager setCloudReportsManagerQueue:]
 -[KTKCloudReportsManager reports]
@@ -1857,8 +1774,6 @@ ___copy_helper_block_.179
 ___destroy_helper_block_.180
 -[KTKCentralManager centralManager:didDiscoverPeripheral:advertisementData:RSSI:]
 ___81-[KTKCentralManager centralManager:didDiscoverPeripheral:advertisementData:RSSI:]_block_invoke
-___copy_helper_block_.189
-___destroy_helper_block_.190
 ___81-[KTKCentralManager centralManager:didDiscoverPeripheral:advertisementData:RSSI:]_block_invoke.193
 ___copy_helper_block_.194
 ___destroy_helper_block_.195
@@ -1907,7 +1822,6 @@ ___block_descriptor_tmp.145
 ___block_descriptor_tmp.162
 ___block_descriptor_tmp.172
 ___block_descriptor_tmp.181
-___block_descriptor_tmp.191
 ___block_descriptor_tmp.197
 ___block_descriptor_tmp.201
 ___block_descriptor_tmp.209
@@ -2069,6 +1983,9 @@ __42-[KTKDevice getCredentialsWithCompletion:]_block_invoke
 +[KTKDeviceConfiguration collectionKeyPath]
 -[KTKDeviceConfiguration JSONRepresentation]
 ___44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke
+___44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke.289
+___copy_helper_block_.295
+___destroy_helper_block_.296
 +[KTKDeviceConfiguration availableRequests]
 +[KTKDeviceConfiguration requestBasePath]
 +[KTKDeviceConfiguration primaryKeyQueryKey]
@@ -2103,8 +2020,6 @@ ___44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke
 -[KTKDeviceConfiguration setMajor:]
 -[KTKDeviceConfiguration minor]
 -[KTKDeviceConfiguration setMinor:]
--[KTKDeviceConfiguration referenceTXPowerIBeacon]
--[KTKDeviceConfiguration setReferenceTXPowerIBeacon:]
 -[KTKDeviceConfiguration rssiAt1Meter]
 -[KTKDeviceConfiguration setRssiAt1Meter:]
 -[KTKDeviceConfiguration namespaceID]
@@ -2113,12 +2028,14 @@ ___44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke
 -[KTKDeviceConfiguration setInstanceID:]
 -[KTKDeviceConfiguration URL]
 -[KTKDeviceConfiguration setURL:]
--[KTKDeviceConfiguration referenceTXPowerEddystone]
--[KTKDeviceConfiguration setReferenceTXPowerEddystone:]
 -[KTKDeviceConfiguration rssiAt0Meter]
 -[KTKDeviceConfiguration setRssiAt0Meter:]
+-[KTKDeviceConfiguration temperatureOffset]
+-[KTKDeviceConfiguration setTemperatureOffset:]
 -[KTKDeviceConfiguration rtcDate]
 -[KTKDeviceConfiguration setRtcDate:]
+-[KTKDeviceConfiguration rawProperties]
+-[KTKDeviceConfiguration setRawProperties:]
 -[KTKDeviceConfiguration secureRequest]
 -[KTKDeviceConfiguration setSecureRequest:]
 -[KTKDeviceConfiguration secureResponse]
@@ -2130,9 +2047,14 @@ ___44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke
 -[KTKDeviceConfiguration networksCount]
 -[KTKDeviceConfiguration setNetworksCount:]
 -[KTKDeviceConfiguration .cxx_destruct]
+_kKTKDevicePowerSavingMappings
 ___kKTKDevicePowerSavingMappings_block_invoke
+___KTKDeviceRawPropertiesFromDictionary_block_invoke
+___copy_helper_block_.557
+___destroy_helper_block_.558
 _OBJC_IVAR_$_KTKDeviceConfiguration._packets
 _OBJC_IVAR_$_KTKDeviceConfiguration._profile
+___block_descriptor_tmp.298
 _OBJC_IVAR_$_KTKDeviceConfiguration._uniqueID
 _OBJC_IVAR_$_KTKDeviceConfiguration._name
 _OBJC_IVAR_$_KTKDeviceConfiguration._password
@@ -2145,13 +2067,13 @@ _OBJC_IVAR_$_KTKDeviceConfiguration._proximityUUID
 _OBJC_IVAR_$_KTKDeviceConfiguration._major
 _OBJC_IVAR_$_KTKDeviceConfiguration._minor
 _OBJC_IVAR_$_KTKDeviceConfiguration._rssiAt1Meter
-_OBJC_IVAR_$_KTKDeviceConfiguration._referenceTXPowerIBeacon
 _OBJC_IVAR_$_KTKDeviceConfiguration._instanceID
 _OBJC_IVAR_$_KTKDeviceConfiguration._namespaceID
 _OBJC_IVAR_$_KTKDeviceConfiguration._URL
 _OBJC_IVAR_$_KTKDeviceConfiguration._rssiAt0Meter
-_OBJC_IVAR_$_KTKDeviceConfiguration._referenceTXPowerEddystone
+_OBJC_IVAR_$_KTKDeviceConfiguration._temperatureOffset
 _OBJC_IVAR_$_KTKDeviceConfiguration._rtcDate
+_OBJC_IVAR_$_KTKDeviceConfiguration._rawProperties
 _OBJC_IVAR_$_KTKDeviceConfiguration._secureRequest
 _OBJC_IVAR_$_KTKDeviceConfiguration._secureResponse
 _OBJC_IVAR_$_KTKDeviceConfiguration._secureResponseTime
@@ -2159,19 +2081,23 @@ _OBJC_IVAR_$_KTKDeviceConfiguration._motionCounter
 _OBJC_IVAR_$_KTKDeviceConfiguration._networksCount
 _kKTKDevicePowerSavingMappings._KTKDevicePowerSavingMappings
 _kKTKDevicePowerSavingMappings.onceToken
-___block_descriptor_tmp.516
+___block_descriptor_tmp.524
+___block_descriptor_tmp.560
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Model/KTKDeviceConfiguration.m
+__KTKDeviceRawPropertiesFromDictionary_block_invoke
 __kKTKDevicePowerSavingMappings_block_invoke
+kKTKDevicePowerSavingMappings
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Model/KTKDeviceConfiguration+Protected.h
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Model/KTKDeviceConfiguration.h
+__44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke.289
 __44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke
 KTKDeviceAdvertisingSetFromPackets
 KTKDeviceAdvertisingStringFromProfile
 KTKDeviceShuffleObjectFromStatus
+KTKDeviceRawPropertiesFromDictionary
 KTKDeviceAdvertisingPacketsFromArray
 KTKDeviceAdvertisingProfileFromString
 KTKDeviceShuffleStatusFromObject
-kKTKDevicePowerSavingMappings
 +[KTKRssiCalibrationValueTransformer transformedValueClass]
 +[KTKRssiCalibrationValueTransformer allowsReverseTransformation]
 -[KTKRssiCalibrationValueTransformer transformedValue:]
@@ -2753,13 +2679,6 @@ __74-[KTKCloudClientSessionManager downloadTaskWithRequest:completionHandler:]_b
 __82-[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:shouldRetry:]_block_invoke_2
 __82-[KTKCloudClientSessionManager dataTaskWithRequest:completionHandler:shouldRetry:]_block_invoke
 __37-[KTKCloudClientSessionManager tasks]_block_invoke
--[KTKDeviceBootloaderLegacyOperation createOperations]
--[KTKDeviceBootloaderLegacyOperation type]
--[KTKDeviceBootloaderLegacyOperation operationDidFinish:errors:]
--[KTKDeviceBootloaderLegacyOperation finished:]
-___47-[KTKDeviceBootloaderLegacyOperation finished:]_block_invoke
-/Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Firmware/Nordic/KTKDeviceBootloaderLegacyOperation.m
-__47-[KTKDeviceBootloaderLegacyOperation finished:]_block_invoke
 +[KTKDeviceNordicDFUOperation hasBootloader]
 -[KTKDeviceNordicDFUOperation init]
 -[KTKDeviceNordicDFUOperation setFirmware:]
@@ -3050,9 +2969,13 @@ _OBJC_IVAR_$_KTKBlockOperation._block
 +[KTKDevicePowerSaving instanceFromResponseObject:]
 ___51+[KTKDevicePowerSaving instanceFromResponseObject:]_block_invoke
 ___51+[KTKDevicePowerSaving instanceFromResponseObject:]_block_invoke_2
+___copy_helper_block_.78
+___destroy_helper_block_.79
 -[KTKDevicePowerSaving JSONRepresentation]
 ___42-[KTKDevicePowerSaving JSONRepresentation]_block_invoke
 ___42-[KTKDevicePowerSaving JSONRepresentation]_block_invoke_2
+___copy_helper_block_.105
+___destroy_helper_block_.106
 -[KTKDevicePowerSaving rtcHoursDataRepresentation]
 +[KTKDevicePowerSaving supportsSecureCoding]
 -[KTKDevicePowerSaving encodeWithCoder:]
@@ -3063,6 +2986,10 @@ ___42-[KTKDevicePowerSaving JSONRepresentation]_block_invoke_2
 -[KTKDevicePowerSaving setLightBrightnessLevel:]
 -[KTKDevicePowerSaving rtcHours]
 -[KTKDevicePowerSaving setRtcHours:]
+-[KTKDevicePowerSaving burstOn]
+-[KTKDevicePowerSaving setBurstOn:]
+-[KTKDevicePowerSaving burstOff]
+-[KTKDevicePowerSaving setBurstOff:]
 -[KTKDevicePowerSaving motionSuspendTimeout]
 -[KTKDevicePowerSaving setMotionSuspendTimeout:]
 -[KTKDevicePowerSaving lightSamplingInterval]
@@ -3070,14 +2997,17 @@ ___42-[KTKDevicePowerSaving JSONRepresentation]_block_invoke_2
 -[KTKDevicePowerSaving lightHysteresis]
 -[KTKDevicePowerSaving setLightHysteresis:]
 -[KTKDevicePowerSaving .cxx_destruct]
-___block_descriptor_tmp.69
-___block_descriptor_tmp.96
+___block_descriptor_tmp.81
+___block_descriptor_tmp.108
+___block_descriptor_tmp.114
 _OBJC_IVAR_$_KTKDevicePowerSaving._features
 _OBJC_IVAR_$_KTKDevicePowerSaving._motionSuspendTimeout
 _OBJC_IVAR_$_KTKDevicePowerSaving._lightSamplingInterval
 _OBJC_IVAR_$_KTKDevicePowerSaving._lightHysteresis
 _OBJC_IVAR_$_KTKDevicePowerSaving._lightBrightnessLevel
 _OBJC_IVAR_$_KTKDevicePowerSaving._rtcHours
+_OBJC_IVAR_$_KTKDevicePowerSaving._burstOn
+_OBJC_IVAR_$_KTKDevicePowerSaving._burstOff
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Model/KTKDevicePowerSaving.m
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Model/KTKDevicePowerSaving+Protected.h
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Model/KTKDevicePowerSaving.h
@@ -3243,20 +3173,23 @@ ___copy_helper_block_.26
 ___destroy_helper_block_.27
 -[KTKEddystoneURLValueTransformer reverseTransformedValue:]
 ___59-[KTKEddystoneURLValueTransformer reverseTransformedValue:]_block_invoke
+_kEddystoneURLSchemeArray
 _kEddystoneURLExtensionsArray
 ___kEddystoneURLExtensionsDictionary_block_invoke
 ___kEddystoneURLExtensionsDictionary_block_invoke_2
+___copy_helper_block_.106
+___destroy_helper_block_.107
 ___block_descriptor_tmp.28
-___block_descriptor_tmp.46
 _kEddystoneURLExtensionsDictionary._sharedExtensionsDictionary
 _kEddystoneURLExtensionsDictionary.onceToken
+___block_descriptor_tmp.100
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/Transformers/KTKEddystoneURLValueTransformer.m
 __kEddystoneURLExtensionsDictionary_block_invoke_2
 __kEddystoneURLExtensionsDictionary_block_invoke
 kEddystoneURLExtensionsArray
+kEddystoneURLSchemeArray
 __59-[KTKEddystoneURLValueTransformer reverseTransformedValue:]_block_invoke
 kEddystoneURLExtensionsDictionary
-kEddystoneURLSchemeArray
 __52-[KTKEddystoneURLValueTransformer transformedValue:]_block_invoke.25
 __52-[KTKEddystoneURLValueTransformer transformedValue:]_block_invoke
 +[KTKUUIDValueTransformer transformedValueClass]
@@ -3348,7 +3281,8 @@ _KTKPrintableASCICharacterSet._sharedCharacterSet
 _KTKPrintableASCICharacterSet.onceToken
 _KTKWhitespaceCharacterSet._sharedCharacterSet
 _KTKWhitespaceCharacterSet.onceToken
-___block_literal_global.20
+___block_descriptor_tmp.7
+___block_literal_global.8
 _OBJC_IVAR_$_KTKStringValueTransformer._encoding
 _OBJC_IVAR_$_KTKStringValueTransformer._validRange
 _OBJC_IVAR_$_KTKStringValueTransformer._shouldTrimWhitespace
@@ -3361,6 +3295,7 @@ __KTKPrintableASCICharacterSet_block_invoke
 KTKPrintableASCICharacterSet
 +[KTKConfigProfileConverter propertiesFromGatewayConfiguration:]
 +[KTKConfigProfileConverter propertiesFromConfiguration:]
+___57+[KTKConfigProfileConverter propertiesFromConfiguration:]_block_invoke
 +[KTKConfigProfileConverter configurationFromProperties:]
 +[KTKConfigProfileConverter gatewayConfigurationFromProperties:]
 +[KTKConfigProfileConverter updateConfiguration:withProperties:]
@@ -3371,6 +3306,7 @@ _KTKConfigProfileWpaEapPropertyValue
 _KTKConfigProfileWpaPskPropertyValue
 _KTKConfigProfileEmptyPropertyValue
 /Users/stoprocent/Development/Kontakt.io/KontaktSDK/KontaktSDK/KontaktSDK/ConfigProfile/KTKConfigProfileConverter.m
+__57+[KTKConfigProfileConverter propertiesFromConfiguration:]_block_invoke
 -[KTKHexValueTransformer init]
 +[KTKHexValueTransformer transformedValueClass]
 +[KTKHexValueTransformer allowsReverseTransformation]
@@ -3498,6 +3434,8 @@ ___copy_helper_block_.180
 ___destroy_helper_block_.181
 ___46-[DFUOperations processStartDFUResponseStatus]_block_invoke.191
 ___46-[DFUOperations processStartDFUResponseStatus]_block_invoke.195
+___copy_helper_block_.196
+___destroy_helper_block_.197
 -[DFUOperations processInitPacketResponseStatus]
 ___48-[DFUOperations processInitPacketResponseStatus]_block_invoke
 ___48-[DFUOperations processInitPacketResponseStatus]_block_invoke.204
@@ -3507,6 +3445,8 @@ ___destroy_helper_block_.206
 -[DFUOperations processValidateFirmwareResponseStatus]
 ___54-[DFUOperations processValidateFirmwareResponseStatus]_block_invoke
 ___54-[DFUOperations processValidateFirmwareResponseStatus]_block_invoke.231
+___copy_helper_block_.232
+___destroy_helper_block_.233
 -[DFUOperations processRequestImageSize]
 ___40-[DFUOperations processRequestImageSize]_block_invoke
 -[DFUOperations processPacketNotification]
@@ -3521,8 +3461,6 @@ ___copy_helper_block_.284
 ___destroy_helper_block_.285
 -[DFUOperations onDeviceConnected:withPacketCharacteristic:controlPointCharacteristic:]
 ___87-[DFUOperations onDeviceConnected:withPacketCharacteristic:controlPointCharacteristic:]_block_invoke
-___copy_helper_block_.291
-___destroy_helper_block_.292
 -[DFUOperations onDeviceDisconnected:]
 ___38-[DFUOperations onDeviceDisconnected:]_block_invoke
 ___copy_helper_block_.296
@@ -3536,6 +3474,8 @@ ___destroy_helper_block_.302
 ___38-[DFUOperations onTransferPercentage:]_block_invoke
 -[DFUOperations onAllPacketsTranferred]
 ___39-[DFUOperations onAllPacketsTranferred]_block_invoke
+___copy_helper_block_.315
+___destroy_helper_block_.316
 ___39-[DFUOperations onAllPacketsTranferred]_block_invoke.322
 -[DFUOperations onFileOpened:]
 -[DFUOperations onError:]
@@ -3585,9 +3525,8 @@ ___block_descriptor_tmp.138
 ___block_descriptor_tmp.182
 ___block_descriptor_tmp.207
 ___block_descriptor_tmp.234
-___block_descriptor_tmp.293
-___block_descriptor_tmp.298
 ___block_descriptor_tmp.303
+___block_descriptor_tmp.317
 _OBJC_IVAR_$_DFUOperations._peripheral
 _OBJC_IVAR_$_DFUOperations._packetCharacteristic
 _OBJC_IVAR_$_DFUOperations._controlPointCharacteristic

@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.5.1
+//  Version: 2.0.0
 //
 //  Copyright © 2016 Kontakt.io. All rights reserved.
 //
@@ -29,6 +29,13 @@ typedef NS_OPTIONS(NSInteger, KTKDevicePowerSavingFeatures) {
      *  Power saving based on real time clock.
      */
     KTKDevicePowerSavingFeaturesRTC    = 1 << 3,
+    /**
+     *  Burst mode Power Saving.
+     *
+     *  Beacon by default advertises continuously.
+     *  When `Burst Mode` is enabled Beacon periodically advertises all configured frames for set amount seconds, then it sleeps.
+     */
+    KTKDevicePowerSavingFeaturesBurst  = 1 << 5,
 };
 
 #pragma mark - KTKDevicePowerSaving (Interface)
@@ -54,6 +61,23 @@ typedef NS_OPTIONS(NSInteger, KTKDevicePowerSavingFeatures) {
 ///--------------------------------------------------------------------
 
 @property (nonatomic, copy, readwrite) NSDictionary<NSNumber *, NSIndexSet *> * _Nullable rtcHours;
+
+#pragma mark - Burst Mode Properties
+///--------------------------------------------------------------------
+/// @name Burst Mode Properties
+///--------------------------------------------------------------------
+
+/**
+ *  Time interval in which the beacon will be in advertising mode.
+ */
+@property (nonatomic, assign, readwrite) NSTimeInterval burstOn;
+
+/**
+ *  Time interval in which the beacon will be in sleep mode.
+ *
+ *  This value will be rounded to full minutes.
+ */
+@property (nonatomic, assign, readwrite) NSTimeInterval burstOff;
 
 @end
 

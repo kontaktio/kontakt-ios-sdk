@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 1.5.1
+//  Version: 2.0.0
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
@@ -11,9 +11,9 @@
 
 #pragma mark -
 typedef struct {
-    uint8_t x;
-    uint8_t y;
-    uint8_t z;
+    int8_t x;
+    int8_t y;
+    int8_t z;
 } KTKAcceleration;
 
 typedef NS_OPTIONS(NSUInteger, KTKNearbyDeviceTelemetryError) {
@@ -32,10 +32,22 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - KTKNearbyDeviceTelemetry (Interface)
 @interface KTKNearbyDeviceTelemetry : NSObject <NSCopying>
 
+#pragma mark - Identification
+///--------------------------------------------------------------------
+/// @name Identification
+///--------------------------------------------------------------------
+
+@property (nonatomic, readonly, copy) NSString * _Nullable uniqueID;
+
 #pragma mark - Basic System Health
 ///--------------------------------------------------------------------
 /// @name Basic System Health
 ///--------------------------------------------------------------------
+
+/**
+ *  Current RSSI value for the device. (read-only)
+ */
+@property (nonatomic, readonly, copy) NSNumber * _Nullable RSSI;
 
 /**
  *  The current value of real time clock. (read-only)
@@ -95,6 +107,18 @@ NS_ASSUME_NONNULL_BEGIN
  *  Saturates on 65535 (0xFFFF) value. 65535 (0xFFFF) default value when Doubletap is disabled.
  */
 @property (nonatomic, readonly, copy) NSNumber * _Nullable lastThreshold;
+
+#pragma mark - Button
+///--------------------------------------------------------------------
+/// @name Button
+///--------------------------------------------------------------------
+
+/**
+ * Seconds since last Click event. Click event is specified in Button Specification Behavior. (read-only)
+ *
+ *  Saturates on 65535 (0xFFFF) value. 65535 (0xFFFF) default value when button click is disabled.
+ */
+@property (nonatomic, readonly, copy) NSNumber * _Nullable lastSingleClick;
 
 #pragma mark - Sensors
 ///--------------------------------------------------------------------

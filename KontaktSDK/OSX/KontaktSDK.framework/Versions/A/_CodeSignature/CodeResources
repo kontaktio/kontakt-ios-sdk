@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		XQMVQvQB20F55Nuf1Vy22MvppGQ=
+		FSt1xFJUgj8OtIiKCE0BQOmc290=
 		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
@@ -94,22 +94,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6xRXUSTaA0ET4dSMETEM6W0BCkk=
+			HmT+AZ4lEARNUKjltjsKVVuGOZ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			gywciExvq+zvFjoUm6IwgzcTiIcoYQIkErqgDKeLpdg=
+			Bqp7SbzHHmdPXC+DLntrovQ30tU1O0SFrb0qwjtm8w4=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceConnection.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a0uvmto//v1u7AsirMx161pdHF4=
+			t/7gE8V+Rdo3UGa+nAo3hRyFCwM=
 			</data>
 			<key>hash2</key>
 			<data>
-			jmVUBgNp4KHfJY54tzEaiXh6y4dF0BLm7hGq8fgFOjc=
+			J5Qen1ovVwZA6VCGs9kRMk9CRVo0JIn4dVKehkmuiro=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceCredentials.h</key>
@@ -127,11 +127,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9Rt9Q2TDI/Wbej/I2DPZhLKnpSE=
+			I96QbaXov1E+O2UUPfTd6Q2ifMg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Thhsc8Ekf3ALu3ZIvU8VaRnMQV8sC9IYjXLl5BAxKME=
+			qK9ebyyI8IgJOC1VP3wXQ8ifpX5/nuqIpTeUlJk+8V8=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceGatewayConfiguration.h</key>
@@ -171,11 +171,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rsa7MrrB0xp/3wbHP7wrvmw9izM=
+			TCwf6ypJJl/fGRexBqEBWcCruRU=
 			</data>
 			<key>hash2</key>
 			<data>
-			iCYSV9iTT2sEJylQGV2AZzX7WGBbYNc086Wx4KsepTo=
+			uAsSuofkG5a+s7D8G0Ldcj8B4WZ50nL0jGMkDfCfSEM=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceSensorsReading.h</key>
@@ -325,11 +325,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sXvcFcM81N9O4mKfsHnsSCwtsRI=
+			S/pRgVkJL2w+PIynVOqCPeoObqI=
 			</data>
 			<key>hash2</key>
 			<data>
-			GZNu5c07hv3Ad03vOx5lOVMzJAK6Vn3iBf4e273TYAI=
+			X5JA+iJpzSTMK745KtcysgKzaJbYxw5+QiDS1tyrckU=
 			</data>
 		</dict>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
@@ -446,11 +446,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XQMVQvQB20F55Nuf1Vy22MvppGQ=
+			FSt1xFJUgj8OtIiKCE0BQOmc290=
 			</data>
 			<key>hash2</key>
 			<data>
-			XgquLJQA6QTmZ2a4npic4pjB1syDw3YhUqWLHmUqDrQ=
+			6t/OoEIrl6PhknNl+WJ1lyDF4Mxl+Lq4xl44EPcRE0o=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Localizable.strings</key>
