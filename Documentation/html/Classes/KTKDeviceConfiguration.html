@@ -96,9 +96,7 @@
 		
 		<option value="//api/name/proximityUUID">proximityUUID</option>
 		
-		<option value="//api/name/referenceTXPowerEddystone">referenceTXPowerEddystone</option>
-		
-		<option value="//api/name/referenceTXPowerIBeacon">referenceTXPowerIBeacon</option>
+		<option value="//api/name/rawProperties">rawProperties</option>
 		
 		<option value="//api/name/rssiAt0Meter">rssiAt0Meter</option>
 		
@@ -113,6 +111,8 @@
 		<option value="//api/name/secureResponseTime">secureResponseTime</option>
 		
 		<option value="//api/name/shuffleStatus">shuffleStatus</option>
+		
+		<option value="//api/name/temperatureOffset">temperatureOffset</option>
 		
 		<option value="//api/name/transmissionPower">transmissionPower</option>
 		
@@ -820,52 +820,6 @@ You should only use it to change the device&rsquo;s password.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/referenceTXPowerIBeacon" title="referenceTXPowerIBeacon"></a>
-	<h3 class="method-title"><code><a href="#//api/name/referenceTXPowerIBeacon">&nbsp;&nbsp;referenceTXPowerIBeacon</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A reference transmission power for iBeacon advertising (measured at 1 meter).</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSNumber *referenceTXPowerIBeacon</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>A reference transmission power for iBeacon advertising (measured at 1 meter).</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/rssiAt1Meter" title="rssiAt1Meter"></a>
 	<h3 class="method-title"><code><a href="#//api/name/rssiAt1Meter">&nbsp;&nbsp;rssiAt1Meter</a></code>
 </h3>
@@ -1058,52 +1012,6 @@ You should only use it to change the device&rsquo;s password.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/referenceTXPowerEddystone" title="referenceTXPowerEddystone"></a>
-	<h3 class="method-title"><code><a href="#//api/name/referenceTXPowerEddystone">&nbsp;&nbsp;referenceTXPowerEddystone</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A reference transmission power for Eddystone advertising (measured at 0 meters).</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSNumber *referenceTXPowerEddystone</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>A reference transmission power for Eddystone advertising (measured at 0 meters).</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/rssiAt0Meter" title="rssiAt0Meter"></a>
 	<h3 class="method-title"><code><a href="#//api/name/rssiAt0Meter">&nbsp;&nbsp;rssiAt0Meter</a></code>
 </h3>
@@ -1153,6 +1061,62 @@ You should only use it to change the device&rsquo;s password.</p>
 						</div>
 						
 
+						<a title="Telemetry Properties" name="task_Telemetry Properties"></a>
+						<h2 class="task-title">Telemetry Properties</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/temperatureOffset" title="temperatureOffset"></a>
+	<h3 class="method-title"><code><a href="#//api/name/temperatureOffset">&nbsp;&nbsp;temperatureOffset</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Telemetry temperature offset value. This property is currently available only on NRF52 chipset devices.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSNumber *temperatureOffset</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Telemetry temperature offset value. This property is currently available only on NRF52 chipset devices.</p>
+
+<p>This property can be used to calibrate temperature readings.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
 						<a title="Features Properties" name="task_Features Properties"></a>
 						<h2 class="task-title">Features Properties</h2>
 
@@ -1169,7 +1133,7 @@ You should only use it to change the device&rsquo;s password.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The current value of real time clock. This property is currently available only on Beacon PRO device.</p>
+				<p>The current value of real time clock. This property is currently available only on NRF52 chipset devices.</p>
 			</div>
 			
 		    
@@ -1186,7 +1150,7 @@ You should only use it to change the device&rsquo;s password.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The current value of real time clock. This property is currently available only on Beacon PRO device.</p>
+				<p>The current value of real time clock. This property is currently available only on NRF52 chipset devices.</p>
 			</div>
 			
 
@@ -1212,6 +1176,55 @@ You should only use it to change the device&rsquo;s password.</p>
 
 						<div class="task-list">
 							<div class="section-method">
+	<a name="//api/name/rawProperties" title="rawProperties"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rawProperties">&nbsp;&nbsp;rawProperties</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Raw properties dictionary.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readwrite) NSDictionary&lt;NSString*NSData*&gt; *rawProperties</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Raw properties dictionary.</p>
+
+<p>Raw Secure Configuration Key Value storage.
+This is represented in the Cloud API as <code>customConfiguration</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/secureRequest" title="secureRequest"></a>
 	<h3 class="method-title"><code><a href="#//api/name/secureRequest">&nbsp;&nbsp;secureRequest</a></code>
 </h3>
@@ -1512,7 +1525,7 @@ You should only use it to change the device&rsquo;s password.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Kontakt.io. All rights reserved. Updated: 2017-09-29</p>
+						<p class="copyright">Copyright &copy; 2018 Kontakt.io. All rights reserved. Updated: 2018-07-20</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
