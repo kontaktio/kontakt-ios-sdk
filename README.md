@@ -1,8 +1,8 @@
 # iOS/tvOS/macOS SDK Quickstart
 
 ## Important Note
-Please make sure before updating to SDK `2.0.0` that you don't need to support devices with firmware **< 3.0**. 
-As of version `2.0.0` only devices with firmware `4.0` or higher will be supported. 
+Please make sure before updating to SDK `2.0.0` that you don't need to support devices with firmware **`< 3.0`**. 
+As of version `2.0.0` only devices with firmware **`4.0`** or higher will be supported. 
 
 ## Administration App
 
