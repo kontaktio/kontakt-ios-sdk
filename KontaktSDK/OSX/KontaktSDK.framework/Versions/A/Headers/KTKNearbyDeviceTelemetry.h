@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 2.0.0
+//  Version: 2.0.1
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
@@ -16,15 +16,11 @@ typedef struct {
     int8_t z;
 } KTKAcceleration;
 
-typedef NS_OPTIONS(NSUInteger, KTKNearbyDeviceTelemetryError) {
-    /**
-     *  Internal error, Gateway does not operate correctly, other flags can be cleared despite errors occur.
-     */
-    KTKNearbyDeviceTelemetryErrorInternal      = 1 << 0,
+typedef NS_OPTIONS(uint16_t, KTKNearbyDeviceTelemetryError) {
     /**
      *  No Internet Connection
      */
-    KTKNearbyDeviceTelemetryErrorNoInternet    = 1 << 1
+    KTKNearbyDeviceTelemetryErrorNoInternet    = 1 << 15
 };
 
 NS_ASSUME_NONNULL_BEGIN
