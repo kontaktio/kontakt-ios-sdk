@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKAction Class Reference</title>
+	<title>KTKDeviceDataLoggerReading Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -70,17 +70,17 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/actionID">actionID</option>
+		<option value="//api/name/acceleration">acceleration</option>
 		
-		<option value="//api/name/content">content</option>
+		<option value="//api/name/batteryLevel">batteryLevel</option>
 		
-		<option value="//api/name/devicesUniqueID">devicesUniqueID</option>
+		<option value="//api/name/date">date</option>
 		
-		<option value="//api/name/proximity">proximity</option>
+		<option value="//api/name/humidity">humidity</option>
 		
-		<option value="//api/name/type">type</option>
+		<option value="//api/name/lightLevel">lightLevel</option>
 		
-		<option value="//api/name/url">url</option>
+		<option value="//api/name/temperature">temperature</option>
 		
 	</optgroup>
 	
@@ -101,7 +101,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKAction Class Reference</h1>
+					<h1 class="title">KTKDeviceDataLoggerReading Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -110,10 +110,10 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Conforms to</th>
-	<td><a href="../Protocols/KTKCloudModel.html">KTKCloudModel</a></td>
+	<td>NSCopying</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>KTKAction.h</td>
+	<td>KTKDeviceDataLoggerReading.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -126,205 +126,13 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						<a title="Content Properties" name="task_Content Properties"></a>
-						<h2 class="task-title">Content Properties</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/actionID" title="actionID"></a>
-	<h3 class="method-title"><code><a href="#//api/name/actionID">&nbsp;&nbsp;actionID</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Action identifier. (read-only)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSUUID *actionID</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Action identifier. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKAction.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/type" title="type"></a>
-	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Type of the action. (read-only)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) KTKActionType type</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Type of the action. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKAction.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/proximity" title="proximity"></a>
-	<h3 class="method-title"><code><a href="#//api/name/proximity">&nbsp;&nbsp;proximity</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The proximity on which action should be triggered. (read-only)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) Proximity proximity</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The proximity on which action should be triggered. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKAction.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/devicesUniqueID" title="devicesUniqueID"></a>
-	<h3 class="method-title"><code><a href="#//api/name/devicesUniqueID">&nbsp;&nbsp;devicesUniqueID</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>An array of devices unique identifiers assigned to the action. (read-only)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSArray&lt;NSString*&gt; *devicesUniqueID</code></pre></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>An array of devices unique identifiers assigned to the action. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKAction.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
+						
 						
 
-						<a title="Action Type URL" name="task_Action Type URL"></a>
-						<h2 class="task-title">Action Type URL</h2>
-
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/url" title="url"></a>
-	<h3 class="method-title"><code><a href="#//api/name/url">&nbsp;&nbsp;url</a></code>
+	<a name="//api/name/temperature" title="temperature"></a>
+	<h3 class="method-title"><code><a href="#//api/name/temperature">&nbsp;&nbsp;temperature</a></code>
 </h3>
 
 	<div class="method-info">
@@ -334,12 +142,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A url of the action. Nil when action type is equal to <code><KTKActionTypeContent></code> (read-only)</p>
+				<p>Temperature in degree Celsius. (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSURL *url</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *temperature</code></pre></div>
 
 		    
 			
@@ -351,7 +159,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>A url of the action. Nil when action type is equal to <code><KTKActionTypeContent></code> (read-only)</p>
+				<p>Temperature in degree Celsius. (read-only)</p>
 			</div>
 			
 
@@ -362,23 +170,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKAction.h</code></p>
+				<p><code class="declared-in-ref">KTKDeviceDataLoggerReading.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
-</div>
-						</div>
-						
-
-						<a title="Action Type Content" name="task_Action Type Content"></a>
-						<h2 class="task-title">Action Type Content</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/content" title="content"></a>
-	<h3 class="method-title"><code><a href="#//api/name/content">&nbsp;&nbsp;content</a></code>
+</div><div class="section-method">
+	<a name="//api/name/humidity" title="humidity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/humidity">&nbsp;&nbsp;humidity</a></code>
 </h3>
 
 	<div class="method-info">
@@ -388,12 +188,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A content object of the action. Nil when action type is equal to <code><KTKActionTypeBrowser></code> (read-only)</p>
+				<p>Humidity in percentage (0-100). (read-only)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) KTKActionContent *content</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *humidity</code></pre></div>
 
 		    
 			
@@ -405,7 +205,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>A content object of the action. Nil when action type is equal to <code><KTKActionTypeBrowser></code> (read-only)</p>
+				<p>Humidity in percentage (0-100). (read-only)</p>
 			</div>
 			
 
@@ -416,7 +216,191 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKAction.h</code></p>
+				<p><code class="declared-in-ref">KTKDeviceDataLoggerReading.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lightLevel" title="lightLevel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lightLevel">&nbsp;&nbsp;lightLevel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Light Sensor Percentage (0-100). (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *lightLevel</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Light Sensor Percentage (0-100). (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceDataLoggerReading.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acceleration" title="acceleration"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acceleration">&nbsp;&nbsp;acceleration</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Raw Accelerometer data filtered with lowpass filter. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, assign, readonly) KTKDeviceAcceleration acceleration</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Raw Accelerometer data filtered with lowpass filter. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceDataLoggerReading.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/date" title="date"></a>
+	<h3 class="method-title"><code><a href="#//api/name/date">&nbsp;&nbsp;date</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A date of the reading. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSDate *date</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A date of the reading. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceDataLoggerReading.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/batteryLevel" title="batteryLevel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/batteryLevel">&nbsp;&nbsp;batteryLevel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Battery Percentage (0-100). (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, strong, readonly) NSNumber *batteryLevel</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Battery Percentage (0-100). (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceDataLoggerReading.h</code></p>
 			</div>
 			
 			

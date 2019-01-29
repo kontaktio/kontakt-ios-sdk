@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKEddystoneProximity Constants Reference</title>
+	<title>KTKDeviceDataLoggerStatus Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,13 +75,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKEddystoneProximity Constants Reference</h1>
+					<h1 class="title">KTKDeviceDataLoggerStatus Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKEddystone.h</td>
+	<td>KTKNearbyDeviceTelemetry.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -91,23 +91,16 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKEddystoneProximity</h3>
+                    <h3 class="subsubtitle method-title">KTKDeviceDataLoggerStatus</h3>
                     
-					
-					<div class="section section-overview">
-                        <p>Represents the current proximity of an entity.</p>
-					</div>
-					
-					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSInteger, KTKEddystoneProximity ) { 
-	<a href="">KTKEddystoneProximityUnknown</a>,
-	<a href="">KTKEddystoneProximityImmediate</a>,
-	<a href="">KTKEddystoneProximityNear</a>,
-	<a href="">KTKEddystoneProximityFar</a>,
+                        <pre><code>typedef NS_ENUM(uint8_t, KTKDeviceDataLoggerStatus ) { 
+	<a href="">KTKDeviceDataLoggerStatusUnavailable</a> = 0,
+	<a href="">KTKDeviceDataLoggerStatusDisabled</a>,
+	<a href="">KTKDeviceDataLoggerStatusEnabled</a>,
 };</code></pre>
                     
                     </div>
@@ -116,70 +109,32 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKEddystoneProximityUnknown"></a><code>KTKEddystoneProximityUnknown</code></dt>
+                            <dt><a name="" title="KTKDeviceDataLoggerStatusUnavailable"></a><code>KTKDeviceDataLoggerStatusUnavailable</code></dt>
 <dd>
-
-
-<p>Proximity Unknown</p>
-
-
-
-
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystone.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneProximityImmediate"></a><code>KTKEddystoneProximityImmediate</code></dt>
+                            <dt><a name="" title="KTKDeviceDataLoggerStatusDisabled"></a><code>KTKDeviceDataLoggerStatusDisabled</code></dt>
 <dd>
-
-
-<p>Proximity Immediate (± 0-1 meter range)</p>
-
-
-
-
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystone.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneProximityNear"></a><code>KTKEddystoneProximityNear</code></dt>
+                            <dt><a name="" title="KTKDeviceDataLoggerStatusEnabled"></a><code>KTKDeviceDataLoggerStatusEnabled</code></dt>
 <dd>
-
-
-<p>Proximity Near (± 1-8 meters range)</p>
-
-
-
-
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystone.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKEddystoneProximityFar"></a><code>KTKEddystoneProximityFar</code></dt>
-<dd>
-
-
-<p>Proximity Far (± 8 and more meters range)</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKEddystone.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
@@ -188,17 +143,6 @@
                     </div>
                     
 
-                    
-                    
-
-                    
-
-                    
-                    <div class="method-subsection declared-in-section">
-                        <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKEddystone.h</code></p>
-                    </div>
-                    
                     
                     
                     

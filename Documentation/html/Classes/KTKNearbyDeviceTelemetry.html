@@ -70,6 +70,8 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/GPIOStates">GPIOStates</option>
+		
 		<option value="//api/name/RSSI">RSSI</option>
 		
 		<option value="//api/name/acceleration">acceleration</option>
@@ -80,9 +82,15 @@
 		
 		<option value="//api/name/bleScans">bleScans</option>
 		
+		<option value="//api/name/channel">channel</option>
+		
+		<option value="//api/name/dataLoggerStatus">dataLoggerStatus</option>
+		
 		<option value="//api/name/date">date</option>
 		
 		<option value="//api/name/errors">errors</option>
+		
+		<option value="//api/name/humidity">humidity</option>
 		
 		<option value="//api/name/lastDoubleTap">lastDoubleTap</option>
 		
@@ -93,6 +101,8 @@
 		<option value="//api/name/lightSensor">lightSensor</option>
 		
 		<option value="//api/name/sensitivity">sensitivity</option>
+		
+		<option value="//api/name/singleClickCount">singleClickCount</option>
 		
 		<option value="//api/name/systemLoad">systemLoad</option>
 		
@@ -164,6 +174,22 @@
 			
 
 			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, copy) NSString *uniqueID</code></pre></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/channel" title="channel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/channel">&nbsp;&nbsp;channel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, copy) NSNumber *channel</code></pre></div>
 
 		    
 		</div>
@@ -531,7 +557,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, assign) KTKAcceleration acceleration</code></pre></div>
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, assign) KTKDeviceAcceleration acceleration</code></pre></div>
 
 		    
 			
@@ -712,6 +738,52 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/singleClickCount" title="singleClickCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/singleClickCount">&nbsp;&nbsp;singleClickCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A number of Click events. Click event is specified in Button Specification Behavior. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, copy) NSNumber *singleClickCount</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A number of Click events. Click event is specified in Button Specification Behavior. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -796,6 +868,98 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>Temperature in degree Celsius. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/humidity" title="humidity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/humidity">&nbsp;&nbsp;humidity</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Relative Humidity Percentage (0-100). (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, copy) NSNumber *humidity</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Relative Humidity Percentage (0-100). (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/GPIOStates" title="GPIOStates"></a>
+	<h3 class="method-title"><code><a href="#//api/name/GPIOStates">&nbsp;&nbsp;GPIOStates</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>States of GPIOs. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, assign) struct KTKNearbyDeviceGPIOStates GPIOStates</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>States of GPIOs. (read-only)</p>
 			</div>
 			
 
@@ -953,6 +1117,60 @@
 </div>
 						</div>
 						
+
+						<a title="Data Logger" name="task_Data Logger"></a>
+						<h2 class="task-title">Data Logger</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/dataLoggerStatus" title="dataLoggerStatus"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLoggerStatus">&nbsp;&nbsp;dataLoggerStatus</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Boolean value indicating whether the data logger functionality is turned <code>ON</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><pre><code>@property (nonatomic, readonly, assign) KTKDeviceDataLoggerStatus dataLoggerStatus</code></pre></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A Boolean value indicating whether the data logger functionality is turned <code>ON</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
 					</div>
 					
 					
@@ -965,7 +1183,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Kontakt.io. All rights reserved. Updated: 2018-07-30</p>
+						<p class="copyright">Copyright &copy; 2019 Kontakt.io. All rights reserved. Updated: 2019-01-29</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

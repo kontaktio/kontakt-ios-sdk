@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKEddystoneProximity Constants Reference</title>
+	<title>KTKDeviceDataLoggerFields Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/prism.css">
@@ -75,13 +75,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKEddystoneProximity Constants Reference</h1>
+					<h1 class="title">KTKDeviceDataLoggerFields Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKEddystone.h</td>
+	<td>KTKDeviceDefinitions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -91,11 +91,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKEddystoneProximity</h3>
+                    <h3 class="subsubtitle method-title">KTKDeviceDataLoggerFields</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Represents the current proximity of an entity.</p>
+                        <p>A device data logger fields.</p>
 					</div>
 					
 					
@@ -103,11 +103,15 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <pre><code>typedef NS_ENUM(NSInteger, KTKEddystoneProximity ) { 
-	<a href="">KTKEddystoneProximityUnknown</a>,
-	<a href="">KTKEddystoneProximityImmediate</a>,
-	<a href="">KTKEddystoneProximityNear</a>,
-	<a href="">KTKEddystoneProximityFar</a>,
+                        <pre><code>typedef NS_OPTIONS(uint32_t, KTKDeviceDataLoggerFields ) { 
+	<a href="">KTKDeviceDataLoggerFieldsTemperature8</a> = 1 &lt; &lt; 0,
+	<a href="">KTKDeviceDataLoggerFieldsTemperature16</a> = 1 &lt; &lt; 1,
+	<a href="">KTKDeviceDataLoggerFieldsHumidity</a> = 1 &lt; &lt; 2,
+	<a href="">KTKDeviceDataLoggerFieldsLightLevel</a> = 1 &lt; &lt; 3,
+	<a href="">KTKDeviceDataLoggerFieldsAccelerometer</a> = 1 &lt; &lt; 4,
+	<a href="">KTKDeviceDataLoggerFieldsDebugCounter</a> = 1 &lt; &lt; 5,
+	<a href="">KTKDeviceDataLoggerFieldsTimestamp</a> = 1 &lt; &lt; 6,
+	<a href="">KTKDeviceDataLoggerFieldsBattery</a> = 1 &lt; &lt; 7,
 };</code></pre>
                     
                     </div>
@@ -116,11 +120,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKEddystoneProximityUnknown"></a><code>KTKEddystoneProximityUnknown</code></dt>
+                            <dt><a name="" title="KTKDeviceDataLoggerFieldsTemperature8"></a><code>KTKDeviceDataLoggerFieldsTemperature8</code></dt>
 <dd>
 
 
-<p>Proximity Unknown</p>
+<p>A device data logger fields.</p>
 
 
 
@@ -128,16 +132,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystone.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneProximityImmediate"></a><code>KTKEddystoneProximityImmediate</code></dt>
+                            <dt><a name="" title="KTKDeviceDataLoggerFieldsTemperature16"></a><code>KTKDeviceDataLoggerFieldsTemperature16</code></dt>
 <dd>
 
 
-<p>Proximity Immediate (± 0-1 meter range)</p>
+<p>A device data logger fields.</p>
 
 
 
@@ -145,16 +149,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystone.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneProximityNear"></a><code>KTKEddystoneProximityNear</code></dt>
+                            <dt><a name="" title="KTKDeviceDataLoggerFieldsHumidity"></a><code>KTKDeviceDataLoggerFieldsHumidity</code></dt>
 <dd>
 
 
-<p>Proximity Near (± 1-8 meters range)</p>
+<p>A device data logger fields.</p>
 
 
 
@@ -162,16 +166,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystone.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneProximityFar"></a><code>KTKEddystoneProximityFar</code></dt>
+                            <dt><a name="" title="KTKDeviceDataLoggerFieldsLightLevel"></a><code>KTKDeviceDataLoggerFieldsLightLevel</code></dt>
 <dd>
 
 
-<p>Proximity Far (± 8 and more meters range)</p>
+<p>A device data logger fields.</p>
 
 
 
@@ -179,7 +183,75 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystone.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceDataLoggerFieldsAccelerometer"></a><code>KTKDeviceDataLoggerFieldsAccelerometer</code></dt>
+<dd>
+
+
+<p>A device data logger fields.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceDataLoggerFieldsDebugCounter"></a><code>KTKDeviceDataLoggerFieldsDebugCounter</code></dt>
+<dd>
+
+
+<p>A device data logger fields.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceDataLoggerFieldsTimestamp"></a><code>KTKDeviceDataLoggerFieldsTimestamp</code></dt>
+<dd>
+
+
+<p>A device data logger fields.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceDataLoggerFieldsBattery"></a><code>KTKDeviceDataLoggerFieldsBattery</code></dt>
+<dd>
+
+
+<p>A device data logger fields.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
@@ -196,7 +268,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKEddystone.h</code></p>
+                        <p><code class="declared-in-ref">KTKDeviceDefinitions.h</code></p>
                     </div>
                     
                     
