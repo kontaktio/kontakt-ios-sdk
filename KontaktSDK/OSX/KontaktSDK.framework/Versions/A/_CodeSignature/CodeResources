@@ -6,17 +6,17 @@
 	<dict>
 		<key>Resources/Base.lproj/Localizable.strings</key>
 		<data>
-		fcIoIOxlU3Ra5P/EFYKwvYlDzu8=
+		N96WY5gV8DrZKozgK/R6kOjcMME=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		5mcpPbOfAmN4UME8i6fCq1hNg8c=
+		gJldfEL/5kRpKuATCqjVJooS8qs=
 		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fcIoIOxlU3Ra5P/EFYKwvYlDzu8=
+			qVb0RWIOpyOLCN28OkA0xzn9PXs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -83,33 +83,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QPnY5O/9hZ1JyEDfI2QBSNl/PX4=
+			ZkwyL1yFm1R2Ty9W25Nc+IdYGcI=
 			</data>
 			<key>hash2</key>
 			<data>
-			t9JIKDELYQOgg/ywW9wUj9NscMEGejhIiPwLWbmGSds=
+			31fciwkL0RInclQWuLJ4W5mR4oz9HGqttUJvRP22R/4=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceConfiguration.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HmT+AZ4lEARNUKjltjsKVVuGOZ8=
+			3VWtxRtAfYBmap2zc8y0G94avFM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bqp7SbzHHmdPXC+DLntrovQ30tU1O0SFrb0qwjtm8w4=
+			65qa2lDIPTxyOO4bZEdk8cQhHbGu/xo7m88BIisEVJQ=
+			</data>
+		</dict>
+		<key>Headers/KTKDeviceConfigurationGPIO.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gBc7vZtdsMltZk/Z0DOdXy1g2b4=
+			</data>
+			<key>hash2</key>
+			<data>
+			8bieMMixIkB5oeHwSUm4goa1A709t0OZ2bLjvKoMYb0=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceConnection.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			t/7gE8V+Rdo3UGa+nAo3hRyFCwM=
+			SjT3wgiVdf6dlkySDll/lrohPdI=
 			</data>
 			<key>hash2</key>
 			<data>
-			J5Qen1ovVwZA6VCGs9kRMk9CRVo0JIn4dVKehkmuiro=
+			+caw/Vxbi4k2I/8+J2ZiP7Kaxj5bNEQcXHaZYpo0AOY=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceCredentials.h</key>
@@ -123,15 +134,37 @@
 			aIpx4awutSqA5uuMyH3Ysc3bBUkgkA0biR0Zk0IV1/I=
 			</data>
 		</dict>
+		<key>Headers/KTKDeviceDataLoggerConnection.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			frnPP1MAgM1cPgwcNlmI9sqVvTI=
+			</data>
+			<key>hash2</key>
+			<data>
+			QbVbGSxxGZN+aN1ak1pxUb4lGAMRFmdNfbCvkopGUGc=
+			</data>
+		</dict>
+		<key>Headers/KTKDeviceDataLoggerReading.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UlrpqPnVvs80zOSPLPYJMREzboE=
+			</data>
+			<key>hash2</key>
+			<data>
+			Y35G4P6reex90B42OTp9N2D7m6YnJMwVMJA0QCrlRNQ=
+			</data>
+		</dict>
 		<key>Headers/KTKDeviceDefinitions.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I96QbaXov1E+O2UUPfTd6Q2ifMg=
+			oPX9No1NJJ8LIurxwgL5ftIc8UE=
 			</data>
 			<key>hash2</key>
 			<data>
-			qK9ebyyI8IgJOC1VP3wXQ8ifpX5/nuqIpTeUlJk+8V8=
+			m90rjBE6HD/+kOsRyXIDjyzmL/dY5NKuIq+qydzAizU=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceGatewayConfiguration.h</key>
@@ -149,11 +182,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xEwbkLZOwPIUpngz0AN1mZodHgw=
+			lYswTOe+w9lOBU1RmSkPuI80TrQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			JkmIPpQxa9tVHG2Qajwlgv9uF4rgs6XT5Lmq5D12D8M=
+			e2KFQPwK7g15lX1k7pSz5R8cKTX3f/GrXgsdAIlL1qk=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceGatewayWiFiNetwork.h</key>
@@ -176,17 +209,6 @@
 			<key>hash2</key>
 			<data>
 			uAsSuofkG5a+s7D8G0Ldcj8B4WZ50nL0jGMkDfCfSEM=
-			</data>
-		</dict>
-		<key>Headers/KTKDeviceSensorsReading.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			XaAdpfy6q/mhEqwZe+ytnnhwEa4=
-			</data>
-			<key>hash2</key>
-			<data>
-			kIav+RA99O/uKXT6c3dLYG5NMI6U513K4eUc9WLI69M=
 			</data>
 		</dict>
 		<key>Headers/KTKDevicesManager.h</key>
@@ -314,22 +336,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			k62hA367DUnDC+bQbxv8GgpPu/I=
+			UV/6sPxiuKwxCoEFlgR5sZOCc5E=
 			</data>
 			<key>hash2</key>
 			<data>
-			mevTYd3ae+O82zzc4peyj5P5luXdgZ8kV/lDFw1mZCw=
+			MT9pbNWz7riDIqbMt7D24OQgy7vKdJ5ZTXdMmQyYjjw=
 			</data>
 		</dict>
 		<key>Headers/KTKNearbyDeviceTelemetry.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Hye9KqqsAKdMlXFaWj0Qo+i1N2Y=
+			gbLRkovnhhz0Xt2hKuPsWxV20PI=
 			</data>
 			<key>hash2</key>
 			<data>
-			lZF2tNtLMqwJI+HhwUPGBr6onzFcoJYjXuiS5frDk98=
+			WZdjtkCiiYzQnMCLLHcZSwwLne5PPHFTrepHJ5jZ9iw=
 			</data>
 		</dict>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
@@ -435,33 +457,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fcIoIOxlU3Ra5P/EFYKwvYlDzu8=
+			N96WY5gV8DrZKozgK/R6kOjcMME=
 			</data>
 			<key>hash2</key>
 			<data>
-			EasrnAshcMeNFLCHPgkIHDiQl6BYJ2rRgDpHo8tIZrA=
+			0kF1gChywWmjq56APc0mGUCFspvoMxPi/TLRS2AwIoY=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5mcpPbOfAmN4UME8i6fCq1hNg8c=
+			gJldfEL/5kRpKuATCqjVJooS8qs=
 			</data>
 			<key>hash2</key>
 			<data>
-			zPRQzapnPQ13Y8wgjApU1yXSiR9AvkQyCavOM2LGsBg=
+			Y4Sfsui923/eGLXsw58L179qOzllEzGkLvYfIlH5zH8=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fcIoIOxlU3Ra5P/EFYKwvYlDzu8=
+			qVb0RWIOpyOLCN28OkA0xzn9PXs=
 			</data>
 			<key>hash2</key>
 			<data>
-			EasrnAshcMeNFLCHPgkIHDiQl6BYJ2rRgDpHo8tIZrA=
+			XQx8/dS7jGiDHLk8mpFW4FTIl/ZB4wFdSi6a1r/AKTs=
 			</data>
 			<key>optional</key>
 			<true/>

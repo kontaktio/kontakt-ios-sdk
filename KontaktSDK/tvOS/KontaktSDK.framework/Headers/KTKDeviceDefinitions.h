@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 2.0.1
+//  Version: 3.0.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -136,6 +136,10 @@ typedef NS_OPTIONS(NSInteger, KTKDeviceAdvertisingPackets) {
      */
     KTKDeviceAdvertisingPacketsKontaktTLM      = 1 << 8,
     /**
+     *  iBeacon Button packet.
+     */
+    KTKDeviceAdvertisingPacketsIBeaconButton   = 1 << 9,
+    /**
      *  All supprted Eddystone packets.
      */
     KTKDeviceAdvertisingPacketsEddystoneAll    = (NSInteger)0b00000000000000000000000000011100,
@@ -252,6 +256,29 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
 };
 
 /**
+ *  A kontakt device symbols.
+ */
+typedef NS_ENUM(NSInteger, KTKDeviceSymbol) {
+    KTKDeviceSymbolInvalid  = -1,
+    KTKDeviceSymbolUnknown,
+    KTKDeviceSymbolSB16_2,
+    KTKDeviceSymbolTB15_1,
+    KTKDeviceSymbolGW14_1,
+    KTKDeviceSymbolUB16_2,
+    KTKDeviceSymbolCT16_2,
+    KTKDeviceSymbolGW16_2,
+    KTKDeviceSymbolBP16_3,
+    KTKDeviceSymbolS18_3,
+    KTKDeviceSymbolSB18_3,
+    KTKDeviceSymbolHD18_3,
+    KTKDeviceSymbolCT18_3,
+    KTKDeviceSymbolC18_3,
+    KTKDeviceSymbolSB18_3H,
+    KTKDeviceSymbolTB18_2,
+    KTKDeviceSymbolBT18_3,
+};
+
+/**
  *  A kontakt device shuffle status.
  */
 typedef NS_ENUM(NSInteger, KTKDeviceShuffleStatus) {
@@ -345,3 +372,43 @@ typedef NS_ENUM(NSInteger, KTKDeviceMotionDetectionMode) {
      */
     KTKDeviceMotionDetectionModeAlarm    = 2
 };
+
+/**
+ *  A device data logger fields.
+ */
+typedef NS_OPTIONS(uint32_t, KTKDeviceDataLoggerFields) {
+    KTKDeviceDataLoggerFieldsTemperature8   = 1 << 0,
+    KTKDeviceDataLoggerFieldsTemperature16  = 1 << 1,
+    KTKDeviceDataLoggerFieldsHumidity       = 1 << 2,
+    KTKDeviceDataLoggerFieldsLightLevel     = 1 << 3,
+    KTKDeviceDataLoggerFieldsAccelerometer  = 1 << 4,
+    KTKDeviceDataLoggerFieldsDebugCounter   = 1 << 5,
+    KTKDeviceDataLoggerFieldsTimestamp      = 1 << 6,
+    KTKDeviceDataLoggerFieldsBattery        = 1 << 7,
+};
+
+/**
+ *  A kontakt GPIO state options.
+ */
+typedef NS_ENUM(int8_t, KTKGPIOState) {
+    KTKGPIOStateOff = -1,
+    KTKGPIOStateLow,
+    KTKGPIOStateHigh,
+    KTKGPIOStateInput,
+};
+
+/**
+ *  A kontakt device GPIOs states.
+ */
+struct KTKNearbyDeviceGPIOStates {
+    KTKGPIOState pin[8];
+};
+
+/**
+ *  A device acceleration structure.
+ */
+typedef struct {
+    int8_t x;
+    int8_t y;
+    int8_t z;
+} KTKDeviceAcceleration;

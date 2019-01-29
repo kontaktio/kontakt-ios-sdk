@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 2.0.1
+//  Version: 3.0.1
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -8,6 +8,7 @@
 #import "KTKDeviceDefinitions.h"
 #import "KTKCloudModel.h"
 #import "KTKDevicePowerSaving.h"
+#import "KTKDeviceConfigurationGPIO.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -144,6 +145,15 @@ __attribute__((deprecated("Please use `packets` property instead")));
  *  This property can be used to calibrate temperature readings.
  */
 @property (nonatomic, strong, readwrite) NSNumber * _Nullable temperatureOffset;
+
+#pragma mark - Data Logger Properties
+///--------------------------------------------------------------------
+/// @name Data Logger Properties
+///--------------------------------------------------------------------
+
+@property (nonatomic, strong, readwrite) NSNumber *dataLoggerSamplingInterval;
+
+@property (nonatomic, assign, readwrite) KTKDeviceDataLoggerFields dataLoggerFields;
     
 #pragma mark - Features Properties
 ///--------------------------------------------------------------------
@@ -154,6 +164,8 @@ __attribute__((deprecated("Please use `packets` property instead")));
  *  The current value of real time clock. This property is currently available only on NRF52 chipset devices.
  */
 @property (nonatomic, strong, readwrite) NSDate * _Nullable rtcDate;
+
+@property (nonatomic, strong, readwrite) NSArray<KTKDeviceConfigurationGPIO *> * _Nullable GPIOStates;
 
 #pragma mark - Secure Configuration
 ///--------------------------------------------------------------------

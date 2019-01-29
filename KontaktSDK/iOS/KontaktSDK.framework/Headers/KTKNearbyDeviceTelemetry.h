@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 2.0.1
+//  Version: 3.0.1
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
@@ -9,18 +9,17 @@
 
 #import "KTKDeviceDefinitions.h"
 
-#pragma mark -
-typedef struct {
-    int8_t x;
-    int8_t y;
-    int8_t z;
-} KTKAcceleration;
-
 typedef NS_OPTIONS(uint16_t, KTKNearbyDeviceTelemetryError) {
     /**
      *  No Internet Connection
      */
     KTKNearbyDeviceTelemetryErrorNoInternet    = 1 << 15
+};
+
+typedef NS_ENUM(uint8_t, KTKDeviceDataLoggerStatus) {
+    KTKDeviceDataLoggerStatusUnavailable = 0,
+    KTKDeviceDataLoggerStatusDisabled,
+    KTKDeviceDataLoggerStatusEnabled,
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -34,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///--------------------------------------------------------------------
 
 @property (nonatomic, readonly, copy) NSString * _Nullable uniqueID;
+
+@property (nonatomic, readonly, copy) NSNumber * _Nullable channel;
 
 #pragma mark - Basic System Health
 ///--------------------------------------------------------------------
@@ -88,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Raw Accelerometer data filtered with lowpass filter. (read-only)
  */
-@property (nonatomic, readonly, assign) KTKAcceleration acceleration;
+@property (nonatomic, readonly, assign) KTKDeviceAcceleration acceleration;
 
 /**
  *  Seconds since last doubletap event. Doubletap event occurs when doubletap pattern is detected by accelerometer. (read-only)
@@ -116,6 +117,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly, copy) NSNumber * _Nullable lastSingleClick;
 
+/**
+ * A number of Click events. Click event is specified in Button Specification Behavior. (read-only)
+ */
+@property (nonatomic, readonly, copy) NSNumber * _Nullable singleClickCount;
+
 #pragma mark - Sensors
 ///--------------------------------------------------------------------
 /// @name Sensors
@@ -130,6 +136,16 @@ NS_ASSUME_NONNULL_BEGIN
  *  Temperature in degree Celsius. (read-only)
  */
 @property (nonatomic, readonly, copy) NSNumber * _Nullable temperature;
+
+/**
+ *  Relative Humidity Percentage (0-100). (read-only)
+ */
+@property (nonatomic, readonly, copy) NSNumber * _Nullable humidity;
+
+/**
+ *  States of GPIOs. (read-only)
+ */
+@property (nonatomic, readonly, assign) struct KTKNearbyDeviceGPIOStates GPIOStates;
 
 #pragma mark - Scanning
 ///--------------------------------------------------------------------
@@ -160,6 +176,17 @@ NS_ASSUME_NONNULL_BEGIN
  *  WiFi scanning statistics. Scans/s, 10 seconds average. (read-only)
  */
 @property (nonatomic, readonly, copy) NSNumber * _Nullable wifiScans;
+
+
+#pragma mark - Data Logger
+///--------------------------------------------------------------------
+/// @name Data Logger
+///--------------------------------------------------------------------
+
+/**
+ *  A Boolean value indicating whether the data logger functionality is turned `ON`.
+ */
+@property (nonatomic, readonly, assign) KTKDeviceDataLoggerStatus dataLoggerStatus;
 
 
 @end
