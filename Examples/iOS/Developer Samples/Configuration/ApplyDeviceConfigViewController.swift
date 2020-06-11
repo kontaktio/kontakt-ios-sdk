@@ -72,7 +72,7 @@ class ApplyDeviceConfigViewController: UITableViewController {
         }
     }
     
-    func onDeviceNotFound() {
+    @objc func onDeviceNotFound() {
         devicesManager.stopDevicesDiscovery()
         showError(error: "Device not found")
     }
@@ -111,7 +111,7 @@ class ApplyDeviceConfigViewController: UITableViewController {
         
         // Validate unique ID length
         let uniqueID = uniqueIdField.text!
-        if uniqueID.characters.count == 4 {
+        if uniqueID.count == 4 {
             configuration = KTKDeviceConfiguration(uniqueID: uniqueID)
         } else {
             showError(error: "Unique ID must be 4-char length")

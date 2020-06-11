@@ -41,7 +41,7 @@ class RangingBeaconsViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        if self.navigationController?.viewControllers.index(of: self) == nil {
+        if self.navigationController?.viewControllers.firstIndex(of: self) == nil {
             // Back button pressed because self is no longer in the navigation stack.
             // Stop ranging if needed
             beaconManager.stopRangingBeacons(in: region)

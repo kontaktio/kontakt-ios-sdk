@@ -57,7 +57,7 @@ class ViewController: NSViewController {
 
             if let toolbar = window.toolbar {
                 toolbar.delegate = self
-                toolbar.insertItem(withItemIdentifier: "search", at: toolbar.items.count)
+                toolbar.insertItem(withItemIdentifier: NSToolbarItem.Identifier(rawValue: "search"), at: toolbar.items.count)
             }
         }
     }
@@ -108,7 +108,7 @@ extension ViewController: NSTableViewDelegate {
 
 extension ViewController: NSToolbarDelegate {
     
-    func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: String, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
+    private func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: String, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
         if itemIdentifier == "search" {
             return searchItem
         }
@@ -121,9 +121,9 @@ extension ViewController: NSToolbarDelegate {
 
 extension ViewController: KTKDevicesManagerDelegate {
 
-    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]?) {
+    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]) {
         DispatchQueue.main.async {
-            if let devices = devices {
+            if devices.count > 0 {
                 
                 self.willChangeValue(forKey: "devicesList")
                 self.devicesList = devices.map { ($0.copy() as! KTKNearbyDevice) }

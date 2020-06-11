@@ -34,13 +34,13 @@ class LaunchButton: BorderedButton {
         removeObserver(self, forKeyPath: stateKey)
     }
     
-    override var state: UIControlState {
-        return UIControlState(rawValue: (super.state.rawValue | currentState.rawValue))
+    override var state: UIControl.State {
+        return UIControl.State(rawValue: (super.state.rawValue | currentState.rawValue))
     }
     
     override func awakeFromNib() {
-        let uiControlStateStart = UIControlState(rawValue: State.Start.rawValue)
-        let uiControlStateStop = UIControlState(rawValue: State.Stop.rawValue)
+        let uiControlStateStart = UIControl.State(rawValue: State.Start.rawValue)
+        let uiControlStateStop = UIControl.State(rawValue: State.Stop.rawValue)
         
         self.setBackgroundColor(color: UIColor.kontaktMainDarkBlue, forState: uiControlStateStart)
         self.setBackgroundColor(color: UIColor.white, forState: uiControlStateStop)
@@ -72,7 +72,7 @@ class LaunchButton: BorderedButton {
 
 extension LaunchButton {
     
-    func setBackgroundColor(color: UIColor, forState: UIControlState) {
+    func setBackgroundColor(color: UIColor, forState: UIControl.State) {
         // Generate Image
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         UIGraphicsGetCurrentContext()!.setFillColor(color.cgColor)
