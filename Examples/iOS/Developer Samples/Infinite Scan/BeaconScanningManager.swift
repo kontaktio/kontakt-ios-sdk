@@ -163,7 +163,7 @@ extension BeaconScanningManager: KTKEddystoneManagerDelegate {
         let content = UNMutableNotificationContent()
         content.title = "Scan result"
         content.body = "Eddystone \(updatedEddystone.identifier) updated"
-        content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound.default
         content.categoryIdentifier = KontaktLocalNotificationCategoryID
         
         // Deliver the notification in five seconds.
