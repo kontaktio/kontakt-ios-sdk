@@ -60,7 +60,7 @@ class ScanningEddystonesViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        if self.navigationController?.viewControllers.index(of: self) == nil {
+        if self.navigationController?.viewControllers.firstIndex(of: self) == nil {
             // Back button pressed because self is no longer in the navigation stack.
             // Stop scanning if needed
             eddystoneManager.stopEddystoneDiscovery(in: region)
@@ -96,7 +96,7 @@ class ScanningEddystonesViewController: UIViewController {
         let content = UNMutableNotificationContent()
         content.title = "Eddystone URL discovered"
         content.body = url
-        content.sound = UNNotificationSound.default()
+        content.sound = UNNotificationSound.default
         content.categoryIdentifier = KontaktLocalNotificationCategoryID
         
         // Deliver the notification in five seconds.
@@ -121,14 +121,14 @@ class ScanningEddystonesViewController: UIViewController {
     
     private func observeOnAppWorkingModes() {
         // Observe on entering background mode
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationDidEnterBackground, object: nil, queue:nil) {
+        NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue:nil) {
             notification in
             // App enter foreground mode - set background mode flag to true
             self.backgroundMode = true
         }
         
         // Observe on entering foreground mode
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationWillEnterForeground, object: nil, queue:nil) {
+        NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue:nil) {
             notification in
             // App enter foreground mode - set background mode flag to false
             self.backgroundMode = false
@@ -143,7 +143,7 @@ class ScanningEddystonesViewController: UIViewController {
 extension ScanningEddystonesViewController: KTKEddystoneManagerDelegate {
     
     func eddystoneManagerDidFail(toStartDiscovery manager: KTKEddystoneManager, withError error: Error?) {
-        print("Did fail to start discovery: \(error)")
+        print("Did fail to start discovery: \(String(describing: error))")
     }
     
     func eddystoneManager(_ manager: KTKEddystoneManager, didDiscover eddystones: Set<KTKEddystone>, in region: KTKEddystoneRegion?) {
@@ -187,10 +187,15 @@ extension ScanningEddystonesViewController: UNUserNotificationCenterDelegate {
             let body = content.body
             
             if let url = URL(string: body) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             }
         }
         completionHandler()
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

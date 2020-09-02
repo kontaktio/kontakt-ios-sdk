@@ -35,7 +35,7 @@ class NearbyDevicesScanningViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        if self.navigationController?.viewControllers.index(of: self) == nil {
+        if self.navigationController?.viewControllers.firstIndex(of: self) == nil {
             // Back button pressed because self is no longer in the navigation stack.
             // Stop scanning if needed
             devicesManager.stopDevicesDiscovery()
@@ -75,12 +75,9 @@ class NearbyDevicesScanningViewController: UIViewController {
 
 extension NearbyDevicesScanningViewController: KTKDevicesManagerDelegate {
     
-    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]?) {
-        guard let nearbyDevices = devices else {
-            return
-        }
-        
-        for device in nearbyDevices {
+    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]) {
+
+        for device in devices {
             if let uniqueID = device.uniqueID {
                 print("Detected a beacon \(uniqueID)")
             } else {
@@ -89,8 +86,8 @@ extension NearbyDevicesScanningViewController: KTKDevicesManagerDelegate {
         }
     }
     
-    func devicesManagerDidFail(toStartDiscovery manager: KTKDevicesManager, withError error: Error?) {
-        print("Discovery did fail with error: \(error)")
+    func devicesManagerDidFail(toStartDiscovery manager: KTKDevicesManager, withError error: Error) {
+        print("Discovery did fail with error: \(String(describing: error))")
     }
     
 }
