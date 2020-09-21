@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = "KontaktSDK"
-  s.version                 = "3.0.1"
+  s.version                 = "3.0.4"
   s.license                 = { :type => 'CC-ND', :file => 'LICENSE' }
   s.summary                 = "Kontakt.io SDK for iOS, tvOS and OSX"
   s.homepage                = "http://kontakt.io"
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.osx.frameworks          = "AppKit", "Foundation", "SystemConfiguration", "CoreServices", "CoreBluetooth"
 
   s.source = {
-    :http    => "https://kontakt-mobile.s3.amazonaws.com/kontakt-ios-sdk-3.0.1.zip",
+    :http    => "http://omg.kontakt.io.s3.amazonaws.com/ios/builds/kontakt-ios-sdk-#{s.version.to_s}.zip",
     :flatten => true
   }
 
