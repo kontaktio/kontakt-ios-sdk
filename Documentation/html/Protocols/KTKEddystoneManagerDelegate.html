@@ -3,27 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKEddystoneManagerDelegate Protocol Reference</title>
+	<title></title>
 
 	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/prism.css">
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/format.js"></script>
-	<script src="../js/prism.js" data-manual></script>
-	<script>
-		jQuery.noConflict();
-		jQuery( document ).ready(function( $ ) {
- 			$("pre code").each(function(i, block) {
-				$(this).addClass("language-objectivec")
-				$(this).formatObjectiveC();
-			});
-
-			Prism.highlightAll()
-		});
-	</script>
-
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+	
 </head>
 <body class="appledoc">
 	<header>
@@ -61,27 +45,7 @@
 	
 
 	
-	
-	<option value="tasks">Tasks</option>
-	
-	
 
-	
-	
-
-	
-
-	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/eddystoneManager:didDiscoverEddystones:inRegion:">- eddystoneManager:didDiscoverEddystones:inRegion:</option>
-		
-		<option value="//api/name/eddystoneManager:didUpdateEddystone:withFrame:">- eddystoneManager:didUpdateEddystone:withFrame:</option>
-		
-		<option value="//api/name/eddystoneManagerDidFailToStartDiscovery:withError:">- eddystoneManagerDidFailToStartDiscovery:withError:</option>
-		
-	</optgroup>
-	
 	
 </select>
 						</label>
@@ -95,285 +59,22 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKEddystoneManagerDelegate Protocol Reference</h1>
+					<h1 class="title"></h1>
 
-					
-					<div class="section section-specification"><table cellspacing="0"><tbody>
-						<tr>
-	<th>Conforms to</th>
-	<td>NSObject</td>
-</tr><tr>
-	<th>Declared in</th>
-	<td>KTKEddystoneManager.h</td>
-</tr>
-						</tbody></table></div>
 					
 
                     
 
 					
-					
-					<div class="section section-tasks">
-						<a title="Tasks" name="tasks"></a>
-						
-
-						<a title="Required Methods" name="task_Required Methods"></a>
-						<h2 class="task-title">Required Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/eddystoneManager:didDiscoverEddystones:inRegion:" title="eddystoneManager:didDiscoverEddystones:inRegion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/eddystoneManager:didDiscoverEddystones:inRegion:">&ndash;&nbsp;eddystoneManager:didDiscoverEddystones:inRegion:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Tells the delegate that one or more eddystones were discovered.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>- (void)eddystoneManager:(KTKEddystoneManager *)<em>manager</em> didDiscoverEddystones:(NSSet&lt;KTKEddystone*&gt; *)<em>eddystones</em> inRegion:(__kindof KTKEddystoneRegion *_Nullable)<em>region</em></code></pre></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>manager</code></th>
-						<td><p>The eddystone manager object reporting the event.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>eddystones</code></th>
-						<td><p>Set of KTKEddystone objects representing eddystones currently discovered in the specified region.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>region</code></th>
-						<td><p>The region object containing the parameters that were used to locate the eddystones.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Tells the delegate that one or more eddystones were discovered.</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="../Classes/KTKEddystoneManager.html">KTKEddystoneManager</a></p></code></li>
-					
-				</ul>
-			</div>
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKEddystoneManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						<a title="Optional Methods" name="task_Optional Methods"></a>
-						<h2 class="task-title">Optional Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/eddystoneManagerDidFailToStartDiscovery:withError:" title="eddystoneManagerDidFailToStartDiscovery:withError:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/eddystoneManagerDidFailToStartDiscovery:withError:">&ndash;&nbsp;eddystoneManagerDidFailToStartDiscovery:withError:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Tells the delegate that an error occurred while gathering discovery information for a set of eddystones.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>- (void)eddystoneManagerDidFailToStartDiscovery:(KTKEddystoneManager *)<em>manager</em> withError:(NSError *_Nullable)<em>error</em></code></pre></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>manager</code></th>
-						<td><p>The eddystone manager object reporting the event.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>An error object containing the error code that indicates why discovery failed.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Tells the delegate that an error occurred while gathering discovery information for a set of eddystones.</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="../Classes/KTKEddystoneManager.html">KTKEddystoneManager</a></p></code></li>
-					
-				</ul>
-			</div>
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKEddystoneManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/eddystoneManager:didUpdateEddystone:withFrame:" title="eddystoneManager:didUpdateEddystone:withFrame:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/eddystoneManager:didUpdateEddystone:withFrame:">&ndash;&nbsp;eddystoneManager:didUpdateEddystone:withFrame:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Tells the delegate that eddystone&rsquo;s frame was updated.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><pre><code>- (void)eddystoneManager:(KTKEddystoneManager *)<em>manager</em> didUpdateEddystone:(KTKEddystone *)<em>eddystone</em> withFrame:(KTKEddystoneFrameType)<em>frameType</em></code></pre></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>manager</code></th>
-						<td><p>The eddystone manager object reporting the event.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>eddystone</code></th>
-						<td><p>Eddystone object of which frame was updated.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>frameType</code></th>
-						<td><p>Frame type of the updated frame.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Tells the delegate that eddystone&rsquo;s frame was updated.</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="../Classes/KTKEddystoneManager.html">KTKEddystoneManager</a></p></code></li>
-					
-				</ul>
-			</div>
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKEddystoneManager.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-					</div>
-					
-					
 
                     
-                    
-          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2019 Kontakt.io. All rights reserved. Updated: 2019-01-29</p>
+						<p class="copyright">Copyright &copy; 2020 Kontakt.io. All rights reserved. Updated: 2020-09-21</p>
 						
-						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

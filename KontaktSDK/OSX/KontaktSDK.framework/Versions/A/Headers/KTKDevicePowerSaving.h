@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.0.1
+//  Version: 3.0.4
 //
 //  Copyright © 2016 Kontakt.io. All rights reserved.
 //
@@ -12,30 +12,32 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Power saving features.
  */
-typedef NS_OPTIONS(NSInteger, KTKDevicePowerSavingFeatures) {
+typedef NS_ENUM(NSInteger, KTKDevicePowerSavingMode) {
+    
+    KTKDevicePowerSavingModeUnknown = -1,
     /**
      *  Power saving turned Off.
      */
-    KTKDevicePowerSavingFeaturesOff    = 1 << 0,
+    KTKDevicePowerSavingModeOff     = 0,
     /**
      *  Power saving based on motion sensor.
      */
-    KTKDevicePowerSavingFeaturesMotion = 1 << 1,
+    KTKDevicePowerSavingModeMotion  = 1,
     /**
      *  Power saving based on light sensor.
      */
-    KTKDevicePowerSavingFeaturesLight  = 1 << 2,
+    KTKDevicePowerSavingModeLight   = 2,
     /**
      *  Power saving based on real time clock.
      */
-    KTKDevicePowerSavingFeaturesRTC    = 1 << 3,
+    KTKDevicePowerSavingModeRTC     = 3,
     /**
      *  Burst mode Power Saving.
      *
      *  Beacon by default advertises continuously.
      *  When `Burst Mode` is enabled Beacon periodically advertises all configured frames for set amount seconds, then it sleeps.
      */
-    KTKDevicePowerSavingFeaturesBurst  = 1 << 5,
+    KTKDevicePowerSavingModeBurst   = 5,
 };
 
 #pragma mark - KTKDevicePowerSaving (Interface)
@@ -46,7 +48,7 @@ typedef NS_OPTIONS(NSInteger, KTKDevicePowerSavingFeatures) {
 /// @name General Properties
 ///--------------------------------------------------------------------
 
-@property (nonatomic, assign, readwrite) KTKDevicePowerSavingFeatures features;
+@property (nonatomic, assign, readwrite) KTKDevicePowerSavingMode mode;
 
 #pragma mark - Light Sensor Properties
 ///--------------------------------------------------------------------

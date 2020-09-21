@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.0.1
+//  Version: 3.0.4
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
@@ -104,6 +104,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  Saturates on 65535 (0xFFFF) value. 65535 (0xFFFF) default value when Doubletap is disabled.
  */
 @property (nonatomic, readonly, copy) NSNumber * _Nullable lastThreshold;
+
+/**
+ *  Index of current event. Wraps around. Used to identify each threshold event
+ */
+@property (nonatomic, readonly, copy) NSNumber * _Nullable movementID;
 
 #pragma mark - Button
 ///--------------------------------------------------------------------

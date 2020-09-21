@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		gJldfEL/5kRpKuATCqjVJooS8qs=
+		t1sBzoGmuL+UAZYp7tS2aiqfdQc=
 		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
@@ -160,11 +160,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oPX9No1NJJ8LIurxwgL5ftIc8UE=
+			decOoxnWqWaf2Vy8+MR5+YNS6h0=
 			</data>
 			<key>hash2</key>
 			<data>
-			m90rjBE6HD/+kOsRyXIDjyzmL/dY5NKuIq+qydzAizU=
+			SzH3e7mXOzowDJOHI+4IPD5a8f9jO0yidu6nC6WQFgs=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceGatewayConfiguration.h</key>
@@ -204,11 +204,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TCwf6ypJJl/fGRexBqEBWcCruRU=
+			vyPKg0LOEvxHT5rgDkN6KzfUPCo=
 			</data>
 			<key>hash2</key>
 			<data>
-			uAsSuofkG5a+s7D8G0Ldcj8B4WZ50nL0jGMkDfCfSEM=
+			av7K2mYjZgx1bohKJ9pBFZvApJBW6ueALKcXNkE+koY=
 			</data>
 		</dict>
 		<key>Headers/KTKDevicesManager.h</key>
@@ -347,11 +347,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gbLRkovnhhz0Xt2hKuPsWxV20PI=
+			kR0OFgd/ieWsCsBazwy/T1zA1lc=
 			</data>
 			<key>hash2</key>
 			<data>
-			WZdjtkCiiYzQnMCLLHcZSwwLne5PPHFTrepHJ5jZ9iw=
+			hW+Z5Gui1x9CpdmQXcm5AnoFr3YcAdqKZY9GJJLQGMs=
 			</data>
 		</dict>
 		<key>Headers/KTKSecureEddystoneRegion.h</key>
@@ -468,11 +468,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gJldfEL/5kRpKuATCqjVJooS8qs=
+			t1sBzoGmuL+UAZYp7tS2aiqfdQc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y4Sfsui923/eGLXsw58L179qOzllEzGkLvYfIlH5zH8=
+			1KYbXmK+ueHcDr7UDDKLeYfNfCdLSGGucfQrJeLNNVA=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Localizable.strings</key>

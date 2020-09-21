@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.0.1
+//  Version: 3.0.4
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -140,6 +140,10 @@ typedef NS_OPTIONS(NSInteger, KTKDeviceAdvertisingPackets) {
      */
     KTKDeviceAdvertisingPacketsIBeaconButton   = 1 << 9,
     /**
+     *  Kontakt Location packet.
+     */
+    KTKDeviceAdvertisingPacketsKontaktLocation = 1 << 10,
+    /**
      *  All supprted Eddystone packets.
      */
     KTKDeviceAdvertisingPacketsEddystoneAll    = (NSInteger)0b00000000000000000000000000011100,
@@ -253,6 +257,46 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
      *  Card Beacon 2
      */
     KTKDeviceModelCardBeacon2 = 11,
+    /**
+     *  Minew E5
+     */
+    KTKDeviceModelMinewE5 = 20,
+    /**
+     *  Minew E7
+     */
+    KTKDeviceModelMinewE7 = 21,
+    /**
+     *  Minew E8
+     */
+    KTKDeviceModelMinewE8 = 22,
+    /**
+     *  Minew i3
+     */
+    KTKDeviceModelMinewI3 = 23,
+    /**
+     *  Minew i7
+     */
+    KTKDeviceModelMinewI7 = 24,
+    /**
+     *  Minew S1
+     */
+    KTKDeviceModelMinewS1 = 25,
+    /**
+     *  Lanyard Tag
+     */
+    KTKDeviceModelLanyardTag = 26,
+    /**
+     *  Nano Tag
+     */
+    KTKDeviceModelNanoTag = 27,
+    /**
+     *  Puck Beacon
+     */
+    KTKDeviceModelPuckBeacon = 28,
+    /**
+     *  Portal Light
+     */
+    KTKDeviceModelPortalLight= 29,
 };
 
 /**
@@ -276,6 +320,18 @@ typedef NS_ENUM(NSInteger, KTKDeviceSymbol) {
     KTKDeviceSymbolSB18_3H,
     KTKDeviceSymbolTB18_2,
     KTKDeviceSymbolBT18_3,
+    KTKDeviceSymbolUT19_1,
+    KTKDeviceSymbolBT19_4,
+    KTKDeviceSymbolM_E5 = 20,
+    KTKDeviceSymbolM_E7 = 21,
+    KTKDeviceSymbolM_E8 = 22,
+    KTKDeviceSymbolM_I3 = 23,
+    KTKDeviceSymbolM_I7 = 24,
+    KTKDeviceSymbolM_S1 = 25,
+    KTKDeviceSymbolLB20_1 = 26,
+    KTKDeviceSymbolBT20_1 = 27,
+    KTKDeviceSymbolPB20_1 = 28,
+    KTKDeviceSymbolGW20_1 = 29,
 };
 
 /**
