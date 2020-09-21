@@ -68,11 +68,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKEddystoneProximity</h3>
+                    <h3 class="subsubtitle method-title">KTKDevicePowerSavingMode</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Represents the current proximity of an entity.</p>
+                        <p>Power saving features.</p>
 					</div>
 					
 					
@@ -80,15 +80,19 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, KTKEddystoneProximity ) {<br>
+                        <code>typedef NS_ENUM(NSInteger, KTKDevicePowerSavingMode ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKEddystoneProximityUnknown</a>,<br>
+                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeUnknown</a> = -1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKEddystoneProximityImmediate</a>,<br>
+                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeOff</a> = 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKEddystoneProximityNear</a>,<br>
+                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeMotion</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKEddystoneProximityFar</a>,<br>
+                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeLight</a> = 2,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeRTC</a> = 3,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeBurst</a> = 5,<br>
                             
                             };</code>
                     
@@ -98,11 +102,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKEddystoneProximityUnknown"></a><code>KTKEddystoneProximityUnknown</code></dt>
+                            <dt><a name="" title="KTKDevicePowerSavingModeUnknown"></a><code>KTKDevicePowerSavingModeUnknown</code></dt>
 <dd>
 
 
-<p>Proximity Unknown</p>
+<p>Power saving features.</p>
 
 
 
@@ -110,16 +114,16 @@
 
     
 	<p>
-		 <code class="declared-in-ref">KTKEddystone.h</code>.
+		 <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneProximityImmediate"></a><code>KTKEddystoneProximityImmediate</code></dt>
+                            <dt><a name="" title="KTKDevicePowerSavingModeOff"></a><code>KTKDevicePowerSavingModeOff</code></dt>
 <dd>
 
 
-<p>Proximity Immediate (± 0-1 meter range)</p>
+<p>Power saving turned Off.</p>
 
 
 
@@ -127,16 +131,16 @@
 
     
 	<p>
-		 <code class="declared-in-ref">KTKEddystone.h</code>.
+		 <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneProximityNear"></a><code>KTKEddystoneProximityNear</code></dt>
+                            <dt><a name="" title="KTKDevicePowerSavingModeMotion"></a><code>KTKDevicePowerSavingModeMotion</code></dt>
 <dd>
 
 
-<p>Proximity Near (± 1-8 meters range)</p>
+<p>Power saving based on motion sensor.</p>
 
 
 
@@ -144,16 +148,16 @@
 
     
 	<p>
-		 <code class="declared-in-ref">KTKEddystone.h</code>.
+		 <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneProximityFar"></a><code>KTKEddystoneProximityFar</code></dt>
+                            <dt><a name="" title="KTKDevicePowerSavingModeLight"></a><code>KTKDevicePowerSavingModeLight</code></dt>
 <dd>
 
 
-<p>Proximity Far (± 8 and more meters range)</p>
+<p>Power saving based on light sensor.</p>
 
 
 
@@ -161,7 +165,41 @@
 
     
 	<p>
-		 <code class="declared-in-ref">KTKEddystone.h</code>.
+		 <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDevicePowerSavingModeRTC"></a><code>KTKDevicePowerSavingModeRTC</code></dt>
+<dd>
+
+
+<p>Power saving based on real time clock.</p>
+
+
+
+
+
+    
+	<p>
+		 <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDevicePowerSavingModeBurst"></a><code>KTKDevicePowerSavingModeBurst</code></dt>
+<dd>
+
+
+<p>Burst mode Power Saving.</p>
+
+
+
+
+
+    
+	<p>
+		 <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
 	</p>
 	
 </dd>
@@ -178,7 +216,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle"></h4>
-                        <p><code class="declared-in-ref">KTKEddystone.h</code></p>
+                        <p><code class="declared-in-ref">KTKDevicePowerSaving.h</code></p>
                     </div>
                     
                     
