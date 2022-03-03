@@ -1,5 +1,41 @@
 ## Changelog
 
+### v3.0.4 - 21 Sep 2020
+- Added support for new devices
+
+### v3.0.1 - 29 Jan 2019
+- Added support for new devices
+- New naming convention for devices
+- Bug fixes
+
+### v2.0.1 - 30 Jul 2018
+- Fixing GPS location cache
+- Support longer unique IDs
+- Fixing Gateway configuration
+- Fixing TLM packet for Gateway devices
+
+### v2.0.0 - 20 Jul 2018
+- Dropping support for devices with firmware <4.0
+- SDK will now support all new devices like HD or Tag
+- Full support for Kontakt Telemetry Frame
+- Optimizing many of SDK's operations for better performance
+- Many small Bug Fixes
+
+### v1.5.1 - 29 Sep 2017
+- Added option to set CBCentralManagerOptionShowPowerAlertKey
+
+### v1.5.0 - 29 Sep 2017
+- Added Gateway Support
+- Added Gateway WiFi configuration
+- Changed Devices Manager nullability of delegate methods
+- Kontakt Telemetry Support
+- Better Errors Reporting
+- Many Bug Fixes
+
+### v1.4.4 - 29 March 2017
+- Turning Off Power Saving
+- Bug fixes and other improvements
+
 ### v1.4.3 - 21 March 2017
 - Secure regions fixes for large deployments
 - New API models for Kontakt.io Triggers
