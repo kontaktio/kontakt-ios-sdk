@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDevicePowerSavingMode Constants Reference</title>
+	<title>KTKDeviceOccupancyModel Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDevicePowerSavingMode Constants Reference</h1>
+					<h1 class="title">KTKDeviceOccupancyModel Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKDevicePowerSaving.h</td>
+	<td>KTKDeviceDefinitions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,31 +75,23 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKDevicePowerSavingMode</h3>
+                    <h3 class="subsubtitle method-title">KTKDeviceOccupancyModel</h3>
                     
-					
-					<div class="section section-overview">
-                        <p>Power saving features.</p>
-					</div>
-					
-					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, KTKDevicePowerSavingMode ) {<br>
+                        <code>typedef NS_ENUM(NSInteger, KTKDeviceOccupancyModel ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeUnknown</a> = -1,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceOccupancyModeInvalid</a> = -1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeOff</a> = 0,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceOccupancyModeOccupancy1</a> = 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeMotion</a> = 1,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceOccupancyModeOccupancy2</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeLight</a> = 2,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceOccupancyModeFootfallDoor</a> = 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeRTC</a> = 3,<br>
-                            
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeBurst</a> = 5,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceOccupancyModeFootfallCorridor</a> = 3,<br>
                             
                             };</code>
                     
@@ -109,11 +101,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKDevicePowerSavingModeUnknown"></a><code>KTKDevicePowerSavingModeUnknown</code></dt>
+                            <dt><a name="" title="KTKDeviceOccupancyModeInvalid"></a><code>KTKDeviceOccupancyModeInvalid</code></dt>
 <dd>
 
 
-<p>Power saving features.</p>
+<p>Invalid mode.</p>
 
 
 
@@ -121,16 +113,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDevicePowerSavingModeOff"></a><code>KTKDevicePowerSavingModeOff</code></dt>
+                            <dt><a name="" title="KTKDeviceOccupancyModeOccupancy1"></a><code>KTKDeviceOccupancyModeOccupancy1</code></dt>
 <dd>
 
 
-<p>Power saving turned Off.</p>
+<p>Occupancy Mode is occupancy 1.</p>
 
 
 
@@ -138,16 +130,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDevicePowerSavingModeMotion"></a><code>KTKDevicePowerSavingModeMotion</code></dt>
+                            <dt><a name="" title="KTKDeviceOccupancyModeOccupancy2"></a><code>KTKDeviceOccupancyModeOccupancy2</code></dt>
 <dd>
 
 
-<p>Power saving based on motion sensor.</p>
+<p>Occupancy Mode is occupancy 2.</p>
 
 
 
@@ -155,16 +147,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDevicePowerSavingModeLight"></a><code>KTKDevicePowerSavingModeLight</code></dt>
+                            <dt><a name="" title="KTKDeviceOccupancyModeFootfallDoor"></a><code>KTKDeviceOccupancyModeFootfallDoor</code></dt>
 <dd>
 
 
-<p>Power saving based on light sensor.</p>
+<p>MOccupancy Mode is footfall door.</p>
 
 
 
@@ -172,16 +164,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDevicePowerSavingModeRTC"></a><code>KTKDevicePowerSavingModeRTC</code></dt>
+                            <dt><a name="" title="KTKDeviceOccupancyModeFootfallCorridor"></a><code>KTKDeviceOccupancyModeFootfallCorridor</code></dt>
 <dd>
 
 
-<p>Power saving based on real time clock.</p>
+<p>Occupancy Mode is footfall corridor.</p>
 
 
 
@@ -189,24 +181,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDevicePowerSavingModeBurst"></a><code>KTKDevicePowerSavingModeBurst</code></dt>
-<dd>
-
-
-<p>Burst mode Power Saving.</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
@@ -215,17 +190,6 @@
                     </div>
                     
 
-                    
-                    
-
-                    
-
-                    
-                    <div class="method-subsection declared-in-section">
-                        <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKDevicePowerSaving.h</code></p>
-                    </div>
-                    
                     
                     
                     

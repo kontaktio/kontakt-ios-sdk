@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceConfigurationGPIO Class Reference</title>
+	<title>KTKDeviceKontaktRecognitionBox Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -54,21 +54,27 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/pin">pin</option>
+		<option value="//api/name/height">height</option>
 		
-		<option value="//api/name/state">state</option>
+		<option value="//api/name/score">score</option>
 		
-	</optgroup>
-	
-
-	
-	<optgroup label="Class Methods">
+		<option value="//api/name/width">width</option>
 		
-		<option value="//api/name/pin:state:">+ pin:state:</option>
+		<option value="//api/name/x">x</option>
+		
+		<option value="//api/name/y">y</option>
 		
 	</optgroup>
 	
 
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithData:">- initWithData:</option>
+		
+	</optgroup>
 	
 	
 </select>
@@ -83,7 +89,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceConfigurationGPIO Class Reference</h1>
+					<h1 class="title">KTKDeviceKontaktRecognitionBox Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -91,8 +97,11 @@
 	<th>Inherits from</th>
 	<td>NSObject</td>
 </tr><tr>
+	<th>Conforms to</th>
+	<td>NSCopying</td>
+</tr><tr>
 	<th>Declared in</th>
-	<td>KTKDeviceConfigurationGPIO.h</td>
+	<td>KTKDeviceKontaktRecognitionBox.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -110,8 +119,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/pin:state:" title="pin:state:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pin:state:">+&nbsp;pin:state:</a></code>
+	<a name="//api/name/score" title="score"></a>
+	<h3 class="method-title"><code><a href="#//api/name/score">&nbsp;&nbsp;score</a></code>
 </h3>
 
 	<div class="method-info">
@@ -120,14 +129,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>+ (instancetype)pin:(int8_t)<em>pin</em> state:(KTKGPIOState)<em>state</em></code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger score</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/pin" title="pin"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pin">&nbsp;&nbsp;pin</a></code>
+	<a name="//api/name/x" title="x"></a>
+	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
 </h3>
 
 	<div class="method-info">
@@ -136,14 +145,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, assign) int8_t pin</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger x</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/state" title="state"></a>
-	<h3 class="method-title"><code><a href="#//api/name/state">&nbsp;&nbsp;state</a></code>
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
 </h3>
 
 	<div class="method-info">
@@ -152,7 +161,55 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, assign) KTKGPIOState state</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger y</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/width" title="width"></a>
+	<h3 class="method-title"><code><a href="#//api/name/width">&nbsp;&nbsp;width</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger width</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/height" title="height"></a>
+	<h3 class="method-title"><code><a href="#//api/name/height">&nbsp;&nbsp;height</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger height</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithData:" title="initWithData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithData:">&ndash;&nbsp;initWithData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (nullable instancetype)initWithData:(NSData *_Nullable)<em>data</em></code></div>
 
 		    
 		</div>

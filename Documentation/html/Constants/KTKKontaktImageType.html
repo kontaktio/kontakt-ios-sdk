@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDevicePowerSavingMode Constants Reference</title>
+	<title>KTKKontaktImageType Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDevicePowerSavingMode Constants Reference</h1>
+					<h1 class="title">KTKKontaktImageType Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKDevicePowerSaving.h</td>
+	<td>KTKDeviceDefinitions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,11 +75,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKDevicePowerSavingMode</h3>
+                    <h3 class="subsubtitle method-title">KTKKontaktImageType</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Power saving features.</p>
+                        <p>A Kontakt image type.</p>
 					</div>
 					
 					
@@ -87,19 +87,15 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, KTKDevicePowerSavingMode ) {<br>
+                        <code>typedef NS_ENUM(uint16_t, KTKKontaktImageType ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeUnknown</a> = -1,<br>
+                            &nbsp;&nbsp; <a href="">KTKKontaktImageRAW</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeOff</a> = 0,<br>
+                            &nbsp;&nbsp; <a href="">KTKKontaktImageRAWContinuous</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeMotion</a> = 1,<br>
+                            &nbsp;&nbsp; <a href="">KTKKontaktImageCalibration</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeLight</a> = 2,<br>
-                            
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeRTC</a> = 3,<br>
-                            
-                            &nbsp;&nbsp; <a href="">KTKDevicePowerSavingModeBurst</a> = 5,<br>
+                            &nbsp;&nbsp; <a href="">KTKKontaktImageRecalibration</a>,<br>
                             
                             };</code>
                     
@@ -109,11 +105,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKDevicePowerSavingModeUnknown"></a><code>KTKDevicePowerSavingModeUnknown</code></dt>
+                            <dt><a name="" title="KTKKontaktImageRAW"></a><code>KTKKontaktImageRAW</code></dt>
 <dd>
 
 
-<p>Power saving features.</p>
+<p>A Kontakt image type.</p>
 
 
 
@@ -121,16 +117,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDevicePowerSavingModeOff"></a><code>KTKDevicePowerSavingModeOff</code></dt>
+                            <dt><a name="" title="KTKKontaktImageRAWContinuous"></a><code>KTKKontaktImageRAWContinuous</code></dt>
 <dd>
 
 
-<p>Power saving turned Off.</p>
+<p>A Kontakt image type.</p>
 
 
 
@@ -138,16 +134,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDevicePowerSavingModeMotion"></a><code>KTKDevicePowerSavingModeMotion</code></dt>
+                            <dt><a name="" title="KTKKontaktImageCalibration"></a><code>KTKKontaktImageCalibration</code></dt>
 <dd>
 
 
-<p>Power saving based on motion sensor.</p>
+<p>A Kontakt image type.</p>
 
 
 
@@ -155,16 +151,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDevicePowerSavingModeLight"></a><code>KTKDevicePowerSavingModeLight</code></dt>
+                            <dt><a name="" title="KTKKontaktImageRecalibration"></a><code>KTKKontaktImageRecalibration</code></dt>
 <dd>
 
 
-<p>Power saving based on light sensor.</p>
+<p>A Kontakt image type.</p>
 
 
 
@@ -172,41 +168,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDevicePowerSavingModeRTC"></a><code>KTKDevicePowerSavingModeRTC</code></dt>
-<dd>
-
-
-<p>Power saving based on real time clock.</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDevicePowerSavingModeBurst"></a><code>KTKDevicePowerSavingModeBurst</code></dt>
-<dd>
-
-
-<p>Burst mode Power Saving.</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDevicePowerSaving.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
@@ -223,7 +185,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKDevicePowerSaving.h</code></p>
+                        <p><code class="declared-in-ref">KTKDeviceDefinitions.h</code></p>
                     </div>
                     
                     

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKCloudModel Protocol Reference</title>
+	<title>KTKPersonPosition Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -52,17 +52,23 @@
 
 	
 	
-
-	
-	<optgroup label="Class Methods">
+	<optgroup label="Properties">
 		
-		<option value="//api/name/availableRequests">+ availableRequests</option>
+		<option value="//api/name/x">x</option>
 		
-		<option value="//api/name/primaryKey">+ primaryKey</option>
+		<option value="//api/name/y">y</option>
 		
 	</optgroup>
 	
 
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithData:">- initWithData:</option>
+		
+	</optgroup>
 	
 	
 </select>
@@ -77,16 +83,19 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKCloudModel Protocol Reference</h1>
+					<h1 class="title">KTKPersonPosition Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
 	<th>Conforms to</th>
-	<td>NSCopying<br />NSObject<br />NSSecureCoding</td>
+	<td>NSCopying</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>KTKCloudModel.h</td>
+	<td>KTKPersonPosition.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -104,105 +113,51 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/primaryKey" title="primaryKey"></a>
-	<h3 class="method-title"><code><a href="#//api/name/primaryKey">+&nbsp;primaryKey</a></code>
-<span class="task-item-suffix">required method</span></h3>
+	<a name="//api/name/x" title="x"></a>
+	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
+</h3>
 
 	<div class="method-info">
 		<div class="pointy-thing"></div>
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>Returns a key path for the object&rsquo;s primary key.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSString *)primaryKey</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger x</code></div>
 
 		    
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>A key path string object.</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns a key path for the object&rsquo;s primary key.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKCloudModel.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/availableRequests" title="availableRequests"></a>
-	<h3 class="method-title"><code><a href="#//api/name/availableRequests">+&nbsp;availableRequests</a></code>
-<span class="task-item-suffix">required method</span></h3>
+	<a name="//api/name/y" title="y"></a>
+	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
+</h3>
 
 	<div class="method-info">
 		<div class="pointy-thing"></div>
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>Returns the allowed actions options.</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>+ (KTKCloudModelRequests)availableRequests</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger y</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithData:" title="initWithData:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithData:">&ndash;&nbsp;initWithData:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>An allowed actions options.</p>
-			</div>
-			
+			<div class="method-subsection method-declaration"><code>- (nullable instancetype)initWithData:(NSData *_Nullable)<em>data</em></code></div>
 
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Returns the allowed actions options.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKCloudModel.h</code></p>
-			</div>
-			
-			
+		    
 		</div>
 	</div>
 </div>
