@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.0.22
+//  Version: 3.0.23
 //
 //  Copyright © 2015 Kontakt.io. All rights reserved.
 //
