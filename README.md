@@ -1,4 +1,4 @@
-# iOS/tvOS/macOS SDK Quickstart
+# iOS SDK Quickstart
 
 ## Important Note
 Please make sure before updating to SDK `3.0.0` that you don't need to support devices with firmware **`< 4.0`**. 
