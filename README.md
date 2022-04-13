@@ -1,12 +1,12 @@
 # iOS/tvOS/macOS SDK Quickstart
 
 ## Important Note
-Please make sure before updating to SDK `2.0.0` that you don't need to support devices with firmware **`< 4.0`**. 
-As of version `2.0.0` only devices with firmware **`4.0`** or higher will be supported. 
+Please make sure before updating to SDK `3.0.0` that you don't need to support devices with firmware **`< 4.0`**. 
+As of version `3.0.0` only devices with firmware **`4.0`** or higher will be supported. 
 
 ## Administration App
 
-To configure Kontakt.io Devices please use our new [iOS Administration App](https://itunes.apple.com/pl/app/kontakt.io-administration/id1067320511).
+To configure Kontakt.io Devices please use our new [iOS Administration App](https://itunes.apple.com/pl/app/kontakt.io-administration/id1067320511) or [iOS Kio Gateway Installer](https://apps.apple.com/gb/app/kio-gateway-installer/id1540964088).
 
 ![screen](https://kontakt-mobile.s3.amazonaws.com/stich.png?4)
 
@@ -19,9 +19,9 @@ This document shows you a quick way to start using the Kontakt.io SDK in locatio
 
 You can find more detailed information in the [Appledocs](http://developer.kontakt.io/ios-sdk/appledocs/).
 
-## Installing the iOS/tvOS/macOS SDK
+## Installing the iOS SDK
 
-To use the Kontakt.io SDK in your project, the minimum deployment target must be iOS 8.0 or macOS 10.9 or tvOS 9.0.
+To use the Kontakt.io SDK in your project, the minimum deployment target must be iOS 9.0.
 
 ### CocoaPods
 
@@ -31,13 +31,13 @@ To use the Kontakt.io SDK in your project, the minimum deployment target must be
 $ gem install cocoapods
 ```
 
-To integrate the Kontakt.io iOS/tvOS/macOS SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate the Kontakt.io iOS SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ``` ruby
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
-pod 'KontaktSDK', '~> 2.0'
+pod 'KontaktSDK', '~> 3.0'
 ```
 
 Then, run the following command:
@@ -45,57 +45,6 @@ Then, run the following command:
 ``` bash
 $ pod install
 ```
-
----
-
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-``` bash
-$ brew update
-$ brew install carthage
-```
-
-1. To integrate Kontakt.io SDK into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-  ``` bash
-  github "kontaktio/kontakt-ios-sdk" ~> 2.0
-  ```
-
-2. Run `carthage update` to build the framework.
-3. On your application targets `General` settings tab, in the `Linked Frameworks and Libraries` section, drag the `KontaktSDK.framework` from the `Carthage/Build/(iOS/tvOS/Mac)` folder on disk.
-4. On your application targets’ `Build Phases` settings tab, click the `+` icon and choose `New Run Script Phase`. Create a Run Script with the following contents:
-
-  ```sh
-  /usr/local/bin/carthage copy-frameworks
-  ```
-
-  and add the paths to the frameworks you want to use under `Input Files`, e.g.:
-
-  ```
-  $(SRCROOT)/Carthage/Build/iOS/KontaktSDK.framework
-  ```
-  
-  or 
-  
-  ```
-  $(SRCROOT)/Carthage/Build/tvOS/KontaktSDK.framework
-  ```
-  
-  or 
-  
-  ```
-  $(SRCROOT)/Carthage/Build/Mac/KontaktSDK.framework
-  ```
-  
-  This script works around an [App Store submission bug](http://www.openradar.me/radar?id=6409498411401216) triggered by universal binaries and ensures that necessary bitcode-related files and dSYMs are copied when archiving.
-
-With the debug information copied into the built products directory, Xcode will be able to symbolicate the stack trace whenever you stop at a breakpoint. This will also enable you to step through third-party code in the debugger.
-
-When archiving your application for submission to the App Store or TestFlight, Xcode will also copy these files into the dSYMs subdirectory of your application’s `.xcarchive` bundle.
 
 ---
 
@@ -137,7 +86,7 @@ bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/KontaktSDK.framework/strip
 
 #### Generics and Nullability
 
-Our SDK uses nullability and generics annotations added in Xcode 7 which means that the Kontakt.io iOS SDK is very easy to use with swift.
+Our SDK uses nullability and generics annotations added in Xcode 13 which means that the Kontakt.io iOS SDK is very easy to use with swift.
 
 #### Bridging Header
 Create a new header file from the **File** menu and name it **<i>YourProjectName</i>-Bridging-Header.h**.

@@ -1,5 +1,13 @@
 ## Changelog
 
+### v3.0.33 - 13 Apr 2022
+- Refactor code
+- Update documentation
+
+### v3.0.33 - 12 Apr 2022
+- Added support for new devices
+- Added support for XCFramework
+
 ### v3.0.4 - 21 Sep 2020
 - Added support for new devices
 
