@@ -1,8 +1,8 @@
 BCSymbolMap Version: 2.0
 Apple clang version 13.1.6 (clang-1316.0.21.2)
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.4.sdk
-iPhoneSimulator15.4.sdk
-/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/Build/Intermediates.noindex/ArchiveIntermediates/KontaktSDK-iOS/IntermediateBuildFilesPath/KontaktSDK.build/Release-iphonesimulator/KontaktSDK-iOS.build/DerivedSources/KontaktSDK_vers.c
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk
+iPhoneOS15.4.sdk
+/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/Build/Intermediates.noindex/ArchiveIntermediates/KontaktSDK-iOS/IntermediateBuildFilesPath/KontaktSDK.build/Release-iphoneos/KontaktSDK-iOS.build/DerivedSources/KontaktSDK_vers.c
 /Users/jack/Development/ios-app/KontaktSDK/KontaktSDK
 -[KTKTriggerContext description]
 -[KTKTriggerContext copyWithZone:]
@@ -237,7 +237,7 @@ __copy_helper_block_e8_32b40s48s
 __42-[KTKVenue venueCoverImageWithCompletion:]_block_invoke_2
 __42-[KTKVenue venueCoverImageWithCompletion:]_block_invoke
 dispatch_get_main_queue
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.4.sdk/usr/include/dispatch/queue.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/usr/include/dispatch/queue.h
 -[KTKDeviceDataLoggerReadSectorOperation setDevice:]
 -[KTKDeviceDataLoggerReadSectorOperation createOperations]
 ___Block_byref_object_copy_
@@ -254,41 +254,41 @@ ___destroy_helper_block_e8_32r40r48r56w
 -[KTKDeviceDataLoggerReadSectorOperation data]
 -[KTKDeviceDataLoggerReadSectorOperation setData:]
 -[KTKDeviceDataLoggerReadSectorOperation .cxx_destruct]
-_OBJC_SELECTOR_REFERENCES_.116
-_OBJC_SELECTOR_REFERENCES_.118
-_OBJC_SELECTOR_REFERENCES_.120
 _OBJC_SELECTOR_REFERENCES_.122
-_OBJC_CLASSLIST_REFERENCES_$_.123
-_OBJC_CLASSLIST_REFERENCES_$_.124
-_kDataLoggerStartCommand
+_OBJC_SELECTOR_REFERENCES_.124
 _OBJC_SELECTOR_REFERENCES_.126
 _OBJC_SELECTOR_REFERENCES_.128
-_OBJC_SELECTOR_REFERENCES_.130
-_OBJC_CLASSLIST_REFERENCES_$_.131
-_OBJC_SELECTOR_REFERENCES_.133
-_OBJC_CLASSLIST_REFERENCES_$_.134
+_OBJC_CLASSLIST_REFERENCES_$_.129
+_OBJC_CLASSLIST_REFERENCES_$_.130
+_kDataLoggerStartCommand
+_OBJC_SELECTOR_REFERENCES_.132
+_OBJC_SELECTOR_REFERENCES_.134
 _OBJC_SELECTOR_REFERENCES_.136
 _OBJC_CLASSLIST_REFERENCES_$_.137
 _OBJC_SELECTOR_REFERENCES_.139
-_OBJC_SELECTOR_REFERENCES_.141
-_OBJC_SELECTOR_REFERENCES_.143
+_OBJC_CLASSLIST_REFERENCES_$_.140
+_OBJC_SELECTOR_REFERENCES_.142
+_OBJC_CLASSLIST_REFERENCES_$_.143
 _OBJC_SELECTOR_REFERENCES_.145
 _OBJC_SELECTOR_REFERENCES_.147
 _OBJC_SELECTOR_REFERENCES_.149
 _OBJC_SELECTOR_REFERENCES_.151
 _OBJC_SELECTOR_REFERENCES_.153
+_OBJC_SELECTOR_REFERENCES_.155
+_OBJC_SELECTOR_REFERENCES_.157
+_OBJC_SELECTOR_REFERENCES_.159
 ___block_descriptor_64_e8_32r40r48r56w_e12_v24?08^B16l
-_OBJC_SELECTOR_REFERENCES_.156
-_OBJC_SELECTOR_REFERENCES_.158
-_OBJC_SELECTOR_REFERENCES_.160
 _OBJC_SELECTOR_REFERENCES_.162
 _OBJC_SELECTOR_REFERENCES_.164
-_OBJC_CLASSLIST_REFERENCES_$_.165
-_OBJC_SELECTOR_REFERENCES_.169
-_OBJC_CLASSLIST_REFERENCES_$_.170
-_OBJC_SELECTOR_REFERENCES_.172
-_OBJC_SELECTOR_REFERENCES_.174
-_OBJC_SELECTOR_REFERENCES_.176
+_OBJC_SELECTOR_REFERENCES_.166
+_OBJC_SELECTOR_REFERENCES_.168
+_OBJC_SELECTOR_REFERENCES_.170
+_OBJC_CLASSLIST_REFERENCES_$_.171
+_OBJC_SELECTOR_REFERENCES_.175
+_OBJC_CLASSLIST_REFERENCES_$_.176
+_OBJC_SELECTOR_REFERENCES_.178
+_OBJC_SELECTOR_REFERENCES_.180
+_OBJC_SELECTOR_REFERENCES_.182
 _OBJC_IVAR_$_KTKDeviceDataLoggerReadSectorOperation._readSectorCompletion
 _OBJC_IVAR_$_KTKDeviceDataLoggerReadSectorOperation._header
 _OBJC_IVAR_$_KTKDeviceDataLoggerReadSectorOperation._data
@@ -366,9 +366,15 @@ __OBJC_CLASS_RO_$_DFUOperationsDetails
 KontaktSDK/Vendor/Nordic/KTKNordicDFUOperationsDetails.m
 KontaktSDK/Vendor/Nordic/KTKNordicDFUOperationsDetails.h
 NSMakeRange
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
 +[NSString(BinaryRepresentation) binaryRepresentationOfInt:numberOfBits:chunkLength:]
++[NSString(BinaryRepresentation) binaryRepresentationOfHexString:]
++[NSString(BinaryRepresentation) hexToBinary:]
 _OBJC_CLASSLIST_REFERENCES_$_.3
+_OBJC_SELECTOR_REFERENCES_.13
+_OBJC_SELECTOR_REFERENCES_.15
+_OBJC_SELECTOR_REFERENCES_.17
+_OBJC_SELECTOR_REFERENCES_.19
 __OBJC_$_CATEGORY_CLASS_METHODS_NSString_$_BinaryRepresentation
 __OBJC_$_CATEGORY_NSString_$_BinaryRepresentation
 /Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Extension/NSString+BinaryRepresentation.m
@@ -451,8 +457,6 @@ _ktk_central_manager_queue
 ___ktk_central_manager_queue_block_invoke
 __sharedManager
 _OBJC_CLASSLIST_REFERENCES_$_.7
-_OBJC_SELECTOR_REFERENCES_.13
-_OBJC_SELECTOR_REFERENCES_.15
 _OBJC_CLASSLIST_REFERENCES_$_.16
 ___block_descriptor_40_e8_32s_e5_v8?0l
 ___block_descriptor_48_e8_32s40s_e5_v8?0l
@@ -489,16 +493,18 @@ _OBJC_CLASSLIST_REFERENCES_$_.108
 _OBJC_SELECTOR_REFERENCES_.110
 _OBJC_SELECTOR_REFERENCES_.112
 _OBJC_SELECTOR_REFERENCES_.114
+_OBJC_SELECTOR_REFERENCES_.116
+_OBJC_SELECTOR_REFERENCES_.118
+_OBJC_SELECTOR_REFERENCES_.120
 ___block_descriptor_48_e8_32s40s_e42_v32?0"<KTKCentralManagerClient>"8Q16^B24l
+_OBJC_CLASSLIST_REFERENCES_$_.123
 _OBJC_SELECTOR_REFERENCES_.125
 _OBJC_SELECTOR_REFERENCES_.129
 ___block_descriptor_56_e8_32s40s48s_e5_v8?0l
 _OBJC_SELECTOR_REFERENCES_.131
 _OBJC_CLASSLIST_REFERENCES_$_.132
-_OBJC_SELECTOR_REFERENCES_.134
 ___block_descriptor_64_e8_32s40s48r56r_e5_v8?0l
 ___block_descriptor_48_e8_32s40s_e38_v32?0?<v?"CBPeripheral"^B>8Q16^B24l
-_OBJC_SELECTOR_REFERENCES_.142
 _OBJC_SELECTOR_REFERENCES_.144
 ___block_descriptor_72_e8_32s40s48s56s64s_e5_v8?0l
 ___block_descriptor_72_e8_32s40s48s56s64s_e42_v32?0"<KTKCentralManagerClient>"8Q16^B24l
@@ -536,7 +542,7 @@ ___block_literal_global.256
 __ktk_central_manager_queue_block_invoke
 KontaktSDK/Device/KTKCentralManager.m
 ktk_central_manager_queue
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.4.sdk/usr/include/dispatch/once.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/usr/include/dispatch/once.h
 __ktk_central_manager_clients_queue_block_invoke
 ktk_central_manager_clients_queue
 KontaktSDK/Device/KTKCentralManager.h
@@ -589,21 +595,22 @@ ___47-[KTKDeviceBootloaderSecureOperation finished:]_block_invoke
 -[KTKDeviceBootloaderSecureOperation command]
 -[KTKDeviceBootloaderSecureOperation setCommand:]
 -[KTKDeviceBootloaderSecureOperation .cxx_destruct]
-_OBJC_SELECTOR_REFERENCES_.124
-_OBJC_CLASSLIST_REFERENCES_$_.135
-_OBJC_CLASSLIST_REFERENCES_$_.138
-_OBJC_SELECTOR_REFERENCES_.140
-_OBJC_CLASSLIST_REFERENCES_$_.143
-_OBJC_SELECTOR_REFERENCES_.155
-_OBJC_CLASSLIST_REFERENCES_$_.156
-_OBJC_SELECTOR_REFERENCES_.166
+_OBJC_SELECTOR_REFERENCES_.130
+_OBJC_CLASSLIST_REFERENCES_$_.141
+_OBJC_SELECTOR_REFERENCES_.143
+_OBJC_CLASSLIST_REFERENCES_$_.144
+_OBJC_SELECTOR_REFERENCES_.146
+_OBJC_CLASSLIST_REFERENCES_$_.149
+_OBJC_SELECTOR_REFERENCES_.161
+_OBJC_CLASSLIST_REFERENCES_$_.162
+_OBJC_SELECTOR_REFERENCES_.172
 ___block_descriptor_48_e8_32s40w_e40_v24?0"KTKKontaktResponse"8"NSError"16l
-_OBJC_SELECTOR_REFERENCES_.171
-_OBJC_SELECTOR_REFERENCES_.173
-_OBJC_SELECTOR_REFERENCES_.175
 _OBJC_SELECTOR_REFERENCES_.177
-_OBJC_CLASSLIST_REFERENCES_$_.178
-_OBJC_SELECTOR_REFERENCES_.182
+_OBJC_SELECTOR_REFERENCES_.179
+_OBJC_SELECTOR_REFERENCES_.181
+_OBJC_SELECTOR_REFERENCES_.183
+_OBJC_CLASSLIST_REFERENCES_$_.184
+_OBJC_SELECTOR_REFERENCES_.188
 _OBJC_IVAR_$_KTKDeviceBootloaderSecureOperation._command
 __OBJC_METACLASS_RO_$_KTKDeviceBootloaderSecureOperation
 __OBJC_$_INSTANCE_METHODS_KTKDeviceBootloaderSecureOperation
@@ -692,12 +699,18 @@ _OBJC_SELECTOR_REFERENCES_.102
 _OBJC_SELECTOR_REFERENCES_.104
 _OBJC_CLASSLIST_REFERENCES_$_.105
 _OBJC_CLASSLIST_REFERENCES_$_.114
+_OBJC_SELECTOR_REFERENCES_.133
 ___block_descriptor_32_e40_v24?0"KTKKontaktResponse"8"NSError"16l
+_OBJC_SELECTOR_REFERENCES_.140
 ___block_literal_global.149
 _OBJC_CLASSLIST_REFERENCES_$_.154
+_OBJC_SELECTOR_REFERENCES_.156
+_OBJC_SELECTOR_REFERENCES_.160
 ___block_descriptor_48_e8_32s40r_e34_v24?0"KTKCloudReportDevice"8^B16l
 _OBJC_SELECTOR_REFERENCES_.165
 ___block_literal_global.169
+_OBJC_SELECTOR_REFERENCES_.171
+_OBJC_SELECTOR_REFERENCES_.173
 __OBJC_$_CLASS_METHODS_KTKCloudReportsManager
 __OBJC_$_PROTOCOL_REFS_CLLocationManagerDelegate
 __OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_CLLocationManagerDelegate
@@ -749,7 +762,6 @@ _OBJC_CLASSLIST_REFERENCES_$_.1
 _OBJC_SELECTOR_REFERENCES_.3
 _OBJC_CLASSLIST_REFERENCES_$_.4
 _OBJC_CLASSLIST_REFERENCES_$_.17
-_OBJC_SELECTOR_REFERENCES_.19
 _OBJC_SELECTOR_REFERENCES_.21
 _OBJC_CLASSLIST_REFERENCES_$_.24
 __OBJC_$_CLASS_METHODS_KTKRssiCalibrationValueTransformer
@@ -762,7 +774,6 @@ KontaktSDK/Transformers/KTKRssiCalibrationValueTransformer.m
 -[KTKAdvertisingIntervalValueTransformer transformedValue:]
 -[KTKAdvertisingIntervalValueTransformer reverseTransformedValue:]
 _OBJC_CLASSLIST_REFERENCES_$_.15
-_OBJC_SELECTOR_REFERENCES_.17
 __OBJC_METACLASS_RO_$_KTKAdvertisingIntervalValueTransformer
 __OBJC_$_INSTANCE_METHODS_KTKAdvertisingIntervalValueTransformer
 __OBJC_CLASS_RO_$_KTKAdvertisingIntervalValueTransformer
@@ -817,17 +828,15 @@ __49+[KTKPushNotifications registerToken:completion:]_block_invoke
 -[KTKDeviceReadOperation startedAt]
 -[KTKDeviceReadOperation setStartedAt:]
 -[KTKDeviceReadOperation .cxx_destruct]
-_OBJC_SELECTOR_REFERENCES_.132
 _OBJC_SELECTOR_REFERENCES_.138
-_OBJC_CLASSLIST_REFERENCES_$_.139
-_OBJC_CLASSLIST_REFERENCES_$_.142
-_OBJC_SELECTOR_REFERENCES_.146
-_OBJC_SELECTOR_REFERENCES_.148
+_OBJC_CLASSLIST_REFERENCES_$_.145
+_OBJC_CLASSLIST_REFERENCES_$_.148
 _OBJC_SELECTOR_REFERENCES_.150
 _OBJC_SELECTOR_REFERENCES_.152
 _OBJC_SELECTOR_REFERENCES_.154
-_OBJC_SELECTOR_REFERENCES_.168
-_OBJC_CLASSLIST_REFERENCES_$_.171
+_OBJC_SELECTOR_REFERENCES_.158
+_OBJC_SELECTOR_REFERENCES_.174
+_OBJC_CLASSLIST_REFERENCES_$_.177
 _OBJC_IVAR_$_KTKDeviceReadOperation._readUntilPayloadValue
 _OBJC_IVAR_$_KTKDeviceReadOperation._readUntilPayloadTimeout
 _OBJC_IVAR_$_KTKDeviceReadOperation._startedAt
@@ -1041,10 +1050,10 @@ KontaktSDK/Vendor/Nordic/NSData+Intel.m
 -[KTKDeviceDataLoggerClearOperation operationDidFinish:errors:]
 -[KTKDeviceDataLoggerClearOperation finished:]
 ___46-[KTKDeviceDataLoggerClearOperation finished:]_block_invoke
-_OBJC_CLASSLIST_REFERENCES_$_.119
+_OBJC_CLASSLIST_REFERENCES_$_.125
 _kDataLoggerEraseCommand
-_OBJC_SELECTOR_REFERENCES_.121
-_OBJC_SELECTOR_REFERENCES_.123
+_OBJC_SELECTOR_REFERENCES_.141
+_OBJC_SELECTOR_REFERENCES_.148
 __OBJC_METACLASS_RO_$_KTKDeviceDataLoggerClearOperation
 __OBJC_$_INSTANCE_METHODS_KTKDeviceDataLoggerClearOperation
 __OBJC_CLASS_RO_$_KTKDeviceDataLoggerClearOperation
@@ -1224,9 +1233,11 @@ _OBJC_CLASSLIST_REFERENCES_$_.45
 _OBJC_CLASSLIST_REFERENCES_$_.54
 _OBJC_CLASSLIST_REFERENCES_$_.57
 _OBJC_SELECTOR_REFERENCES_.119
-_OBJC_SELECTOR_REFERENCES_.159
+_OBJC_SELECTOR_REFERENCES_.121
+_OBJC_SELECTOR_REFERENCES_.123
 _OBJC_SELECTOR_REFERENCES_.163
 _OBJC_SELECTOR_REFERENCES_.167
+_OBJC_SELECTOR_REFERENCES_.169
 __OBJC_$_CLASS_METHODS_KTKFirmware
 __OBJC_CLASS_PROTOCOLS_$_KTKFirmware
 __OBJC_$_CLASS_PROP_LIST_KTKFirmware
@@ -1544,7 +1555,7 @@ KTKNullToNil
 ___44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke
 ___copy_helper_block_e8_32r
 ___destroy_helper_block_e8_32r
-___44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke.331
+___44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke.337
 +[KTKDeviceConfiguration availableRequests]
 +[KTKDeviceConfiguration requestBasePath]
 +[KTKDeviceConfiguration primaryKeyQueryKey]
@@ -1595,6 +1606,14 @@ ___44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke.331
 -[KTKDeviceConfiguration setTemperatureOffset:]
 -[KTKDeviceConfiguration footfallLine]
 -[KTKDeviceConfiguration setFootfallLine:]
+-[KTKDeviceConfiguration blinkInterval]
+-[KTKDeviceConfiguration setBlinkInterval:]
+-[KTKDeviceConfiguration irDetectionInterval]
+-[KTKDeviceConfiguration setIrDetectionInterval:]
+-[KTKDeviceConfiguration irDetectionDuration]
+-[KTKDeviceConfiguration setIrDetectionDuration:]
+-[KTKDeviceConfiguration irDetectionSleep]
+-[KTKDeviceConfiguration setIrDetectionSleep:]
 -[KTKDeviceConfiguration bleScanInterval]
 -[KTKDeviceConfiguration setBleScanInterval:]
 -[KTKDeviceConfiguration bleScanDuration]
@@ -1634,21 +1653,16 @@ _OBJC_CLASSLIST_REFERENCES_$_.39
 _OBJC_CLASSLIST_REFERENCES_$_.55
 _OBJC_CLASSLIST_REFERENCES_$_.94
 _OBJC_CLASSLIST_REFERENCES_$_.103
-_OBJC_SELECTOR_REFERENCES_.157
-_OBJC_SELECTOR_REFERENCES_.161
-_OBJC_SELECTOR_REFERENCES_.179
-_OBJC_SELECTOR_REFERENCES_.183
-_OBJC_SELECTOR_REFERENCES_.189
+_OBJC_SELECTOR_REFERENCES_.187
 _OBJC_SELECTOR_REFERENCES_.193
 _OBJC_SELECTOR_REFERENCES_.197
 _OBJC_SELECTOR_REFERENCES_.201
 _OBJC_SELECTOR_REFERENCES_.205
-_OBJC_SELECTOR_REFERENCES_.207
-_OBJC_CLASSLIST_REFERENCES_$_.212
-_OBJC_SELECTOR_REFERENCES_.216
-_OBJC_CLASSLIST_REFERENCES_$_.223
-_OBJC_SELECTOR_REFERENCES_.225
-_OBJC_SELECTOR_REFERENCES_.227
+_OBJC_SELECTOR_REFERENCES_.209
+_OBJC_SELECTOR_REFERENCES_.211
+_OBJC_CLASSLIST_REFERENCES_$_.216
+_OBJC_SELECTOR_REFERENCES_.220
+_OBJC_CLASSLIST_REFERENCES_$_.227
 _OBJC_SELECTOR_REFERENCES_.229
 _OBJC_SELECTOR_REFERENCES_.231
 _OBJC_SELECTOR_REFERENCES_.233
@@ -1658,62 +1672,71 @@ _OBJC_SELECTOR_REFERENCES_.239
 _OBJC_SELECTOR_REFERENCES_.241
 _OBJC_SELECTOR_REFERENCES_.243
 _OBJC_SELECTOR_REFERENCES_.245
-_OBJC_CLASSLIST_REFERENCES_$_.246
-_OBJC_CLASSLIST_REFERENCES_$_.247
+_OBJC_SELECTOR_REFERENCES_.247
 _OBJC_SELECTOR_REFERENCES_.249
-_OBJC_SELECTOR_REFERENCES_.251
+_OBJC_CLASSLIST_REFERENCES_$_.250
+_OBJC_CLASSLIST_REFERENCES_$_.251
+_OBJC_SELECTOR_REFERENCES_.253
 _OBJC_SELECTOR_REFERENCES_.255
-_OBJC_SELECTOR_REFERENCES_.265
-_OBJC_SELECTOR_REFERENCES_.267
+_OBJC_SELECTOR_REFERENCES_.259
 _OBJC_SELECTOR_REFERENCES_.269
 _OBJC_SELECTOR_REFERENCES_.271
+_OBJC_SELECTOR_REFERENCES_.273
 _OBJC_SELECTOR_REFERENCES_.275
-_OBJC_SELECTOR_REFERENCES_.277
 _OBJC_SELECTOR_REFERENCES_.279
 _OBJC_SELECTOR_REFERENCES_.281
 _OBJC_SELECTOR_REFERENCES_.283
 _OBJC_SELECTOR_REFERENCES_.285
 _OBJC_SELECTOR_REFERENCES_.287
+_OBJC_SELECTOR_REFERENCES_.289
 _OBJC_SELECTOR_REFERENCES_.291
 _OBJC_SELECTOR_REFERENCES_.295
-_OBJC_SELECTOR_REFERENCES_.297
 _OBJC_SELECTOR_REFERENCES_.299
 _OBJC_SELECTOR_REFERENCES_.301
+_OBJC_SELECTOR_REFERENCES_.303
 _OBJC_SELECTOR_REFERENCES_.305
-_OBJC_SELECTOR_REFERENCES_.309
-_OBJC_SELECTOR_REFERENCES_.313
-_OBJC_SELECTOR_REFERENCES_.317
+_OBJC_SELECTOR_REFERENCES_.307
+_OBJC_SELECTOR_REFERENCES_.311
+_OBJC_SELECTOR_REFERENCES_.315
 _OBJC_SELECTOR_REFERENCES_.319
-_OBJC_SELECTOR_REFERENCES_.321
 _OBJC_SELECTOR_REFERENCES_.323
+_OBJC_SELECTOR_REFERENCES_.325
+_OBJC_SELECTOR_REFERENCES_.327
+_OBJC_SELECTOR_REFERENCES_.329
 ___block_descriptor_40_e8_32r_e33_v32?0"NSString"8"NSData"16^B24l
-_OBJC_SELECTOR_REFERENCES_.328
-_OBJC_SELECTOR_REFERENCES_.330
-_OBJC_CLASSLIST_REFERENCES_$_.332
 _OBJC_SELECTOR_REFERENCES_.334
 _OBJC_SELECTOR_REFERENCES_.336
-___block_descriptor_40_e8_32r_e25_v32?0"NSString"816^B24l
-_OBJC_SELECTOR_REFERENCES_.339
-_OBJC_CLASSLIST_REFERENCES_$_.340
+_OBJC_CLASSLIST_REFERENCES_$_.338
+_OBJC_SELECTOR_REFERENCES_.340
 _OBJC_SELECTOR_REFERENCES_.342
-_OBJC_SELECTOR_REFERENCES_.344
-_OBJC_SELECTOR_REFERENCES_.368
-_OBJC_SELECTOR_REFERENCES_.372
+___block_descriptor_40_e8_32r_e25_v32?0"NSString"816^B24l
+_OBJC_SELECTOR_REFERENCES_.345
+_OBJC_CLASSLIST_REFERENCES_$_.346
+_OBJC_SELECTOR_REFERENCES_.348
+_OBJC_SELECTOR_REFERENCES_.350
+_OBJC_SELECTOR_REFERENCES_.370
+_OBJC_SELECTOR_REFERENCES_.374
 _OBJC_SELECTOR_REFERENCES_.378
-_OBJC_SELECTOR_REFERENCES_.390
+_OBJC_SELECTOR_REFERENCES_.388
 _OBJC_SELECTOR_REFERENCES_.392
-_OBJC_SELECTOR_REFERENCES_.394
-_OBJC_SELECTOR_REFERENCES_.396
 _OBJC_SELECTOR_REFERENCES_.398
-_OBJC_SELECTOR_REFERENCES_.400
-_OBJC_SELECTOR_REFERENCES_.402
-_OBJC_SELECTOR_REFERENCES_.404
-_OBJC_SELECTOR_REFERENCES_.406
-_OBJC_SELECTOR_REFERENCES_.408
 _OBJC_SELECTOR_REFERENCES_.410
+_OBJC_SELECTOR_REFERENCES_.412
+_OBJC_SELECTOR_REFERENCES_.414
 _OBJC_SELECTOR_REFERENCES_.416
 _OBJC_SELECTOR_REFERENCES_.418
 _OBJC_SELECTOR_REFERENCES_.420
+_OBJC_SELECTOR_REFERENCES_.422
+_OBJC_SELECTOR_REFERENCES_.424
+_OBJC_SELECTOR_REFERENCES_.426
+_OBJC_SELECTOR_REFERENCES_.428
+_OBJC_SELECTOR_REFERENCES_.430
+_OBJC_SELECTOR_REFERENCES_.432
+_OBJC_SELECTOR_REFERENCES_.434
+_OBJC_SELECTOR_REFERENCES_.436
+_OBJC_SELECTOR_REFERENCES_.442
+_OBJC_SELECTOR_REFERENCES_.444
+_OBJC_SELECTOR_REFERENCES_.446
 __OBJC_$_CLASS_METHODS_KTKDeviceConfiguration
 __OBJC_CLASS_PROTOCOLS_$_KTKDeviceConfiguration
 __OBJC_$_CLASS_PROP_LIST_KTKDeviceConfiguration
@@ -1741,6 +1764,10 @@ _OBJC_IVAR_$_KTKDeviceConfiguration._URL
 _OBJC_IVAR_$_KTKDeviceConfiguration._rssiAt0Meter
 _OBJC_IVAR_$_KTKDeviceConfiguration._temperatureOffset
 _OBJC_IVAR_$_KTKDeviceConfiguration._footfallLine
+_OBJC_IVAR_$_KTKDeviceConfiguration._blinkInterval
+_OBJC_IVAR_$_KTKDeviceConfiguration._irDetectionInterval
+_OBJC_IVAR_$_KTKDeviceConfiguration._irDetectionDuration
+_OBJC_IVAR_$_KTKDeviceConfiguration._irDetectionSleep
 _OBJC_IVAR_$_KTKDeviceConfiguration._bleScanInterval
 _OBJC_IVAR_$_KTKDeviceConfiguration._bleScanDuration
 _OBJC_IVAR_$_KTKDeviceConfiguration._irRoomNumber
@@ -1761,24 +1788,24 @@ __OBJC_$_PROP_LIST_KTKDeviceConfiguration
 __OBJC_CLASS_RO_$_KTKDeviceConfiguration
 _kKTKDevicePowerSavingMappings._KTKDevicePowerSavingMappings
 _kKTKDevicePowerSavingMappings.onceToken
-_OBJC_SELECTOR_REFERENCES_.625
-_OBJC_SELECTOR_REFERENCES_.627
-_OBJC_SELECTOR_REFERENCES_.629
-_OBJC_SELECTOR_REFERENCES_.631
-_OBJC_SELECTOR_REFERENCES_.633
-_OBJC_SELECTOR_REFERENCES_.635
-_OBJC_SELECTOR_REFERENCES_.637
-_OBJC_SELECTOR_REFERENCES_.642
-_OBJC_SELECTOR_REFERENCES_.724
+_OBJC_SELECTOR_REFERENCES_.663
+_OBJC_SELECTOR_REFERENCES_.665
+_OBJC_SELECTOR_REFERENCES_.667
+_OBJC_SELECTOR_REFERENCES_.669
+_OBJC_SELECTOR_REFERENCES_.671
+_OBJC_SELECTOR_REFERENCES_.673
+_OBJC_SELECTOR_REFERENCES_.675
+_OBJC_SELECTOR_REFERENCES_.680
+_OBJC_SELECTOR_REFERENCES_.764
 ___block_descriptor_40_e8_32r_e25_v32?08"NSString"16^B24l
-_OBJC_SELECTOR_REFERENCES_.727
+_OBJC_SELECTOR_REFERENCES_.767
 /Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Model/KTKDeviceConfiguration.m
 __KTKDeviceRawPropertiesFromDictionary_block_invoke
 KontaktSDK/Cloud/Model/KTKDeviceConfiguration.m
 __kKTKDevicePowerSavingMappings_block_invoke
 KontaktSDK/Cloud/Model/KTKDeviceConfiguration+Protected.h
 KontaktSDK/Cloud/Model/KTKDeviceConfiguration.h
-__44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke.331
+__44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke.337
 __destroy_helper_block_e8_32r
 __copy_helper_block_e8_32r
 __44-[KTKDeviceConfiguration JSONRepresentation]_block_invoke
@@ -1919,10 +1946,10 @@ ___57+[KTKDeviceGATTOperation characteristicValueTransformers]_block_invoke
 _OBJC_IVAR_$_KTKDeviceGATTOperation._characteristic
 _OBJC_IVAR_$_KTKDeviceGATTOperation._characteristicUUID
 _OBJC_IVAR_$_KTKDeviceGATTOperation._serviceUUID
-_OBJC_CLASSLIST_REFERENCES_$_.151
+_OBJC_CLASSLIST_REFERENCES_$_.157
 _characteristicValueTransformers._dictionary
 _characteristicValueTransformers.onceToken
-_OBJC_CLASSLIST_REFERENCES_$_.155
+_OBJC_CLASSLIST_REFERENCES_$_.161
 _OBJC_IVAR_$_KTKDeviceGATTOperation._delegate
 _OBJC_IVAR_$_KTKDeviceGATTOperation._verified
 _OBJC_IVAR_$_KTKDeviceGATTOperation._payload
@@ -2043,27 +2070,26 @@ ___block_descriptor_64_e8_32s40s48bs56s_e5_v8?0l
 ___block_descriptor_48_e8_32bs40w_e40_v24?0"KTKKontaktResponse"8"NSError"16l
 _OBJC_CLASSLIST_REFERENCES_$_.41
 _OBJC_CLASSLIST_REFERENCES_$_.150
-_OBJC_CLASSLIST_REFERENCES_$_.157
 _OBJC_CLASSLIST_REFERENCES_$_.160
 _OBJC_CLASSLIST_REFERENCES_$_.163
 _OBJC_CLASSLIST_REFERENCES_$_.174
-_OBJC_SELECTOR_REFERENCES_.178
-_OBJC_SELECTOR_REFERENCES_.180
+_OBJC_SELECTOR_REFERENCES_.176
 _OBJC_CLASSLIST_REFERENCES_$_.183
 _OBJC_SELECTOR_REFERENCES_.185
-_OBJC_SELECTOR_REFERENCES_.187
+_OBJC_SELECTOR_REFERENCES_.189
 _OBJC_SELECTOR_REFERENCES_.191
 _OBJC_SELECTOR_REFERENCES_.195
 _OBJC_SELECTOR_REFERENCES_.199
 _OBJC_SELECTOR_REFERENCES_.203
-_OBJC_SELECTOR_REFERENCES_.209
-_OBJC_SELECTOR_REFERENCES_.211
+_OBJC_SELECTOR_REFERENCES_.207
 _OBJC_SELECTOR_REFERENCES_.213
 _OBJC_SELECTOR_REFERENCES_.215
 _OBJC_SELECTOR_REFERENCES_.217
 _OBJC_SELECTOR_REFERENCES_.219
 _OBJC_SELECTOR_REFERENCES_.221
-_OBJC_SELECTOR_REFERENCES_.253
+_OBJC_SELECTOR_REFERENCES_.225
+_OBJC_SELECTOR_REFERENCES_.227
+_OBJC_SELECTOR_REFERENCES_.251
 __OBJC_$_CLASS_METHODS_KTKDevice
 __OBJC_CLASS_PROTOCOLS_$_KTKDevice
 __OBJC_$_CLASS_PROP_LIST_KTKDevice
@@ -2390,6 +2416,7 @@ _OBJC_CLASSLIST_REFERENCES_$_.93
 _OBJC_CLASSLIST_REFERENCES_$_.109
 _OBJC_CLASSLIST_REFERENCES_$_.120
 ___block_descriptor_48_e8_32s_e5_v8?0l
+_OBJC_CLASSLIST_REFERENCES_$_.135
 _OBJC_IVAR_$_KTKDeviceNordicDFUOperation._device
 _OBJC_IVAR_$_KTKDeviceNordicDFUOperation._updateProgressBlock
 _OBJC_IVAR_$_KTKDeviceNordicDFUOperation._updateCompletionBlock
@@ -2430,6 +2457,7 @@ __38-[KTKDeviceNordicDFUOperation execute]_block_invoke.38
 __38-[KTKDeviceNordicDFUOperation execute]_block_invoke
 __43-[KTKDeviceNordicDFUOperation setFirmware:]_block_invoke
 -[KTKPersonPosition initWithData:]
+-[KTKPersonPosition init::]
 -[KTKPersonPosition description]
 -[KTKPersonPosition copyWithZone:]
 -[KTKPersonPosition x]
@@ -2494,6 +2522,10 @@ ___28+[KTKValueTransformers load]_block_invoke
 +[KTKValueTransformers registerTransformerGATTChar]
 +[KTKValueTransformers registerTransformerGATTIrRoomNumber]
 +[KTKValueTransformers registerTransformerGATTBleScanInterval]
++[KTKValueTransformers registerTransformerGATTBlinkInterval]
++[KTKValueTransformers registerTransformerGATTIrDetectionInterval]
++[KTKValueTransformers registerTransformerGATTIrDetectionDuration]
++[KTKValueTransformers registerTransformerGATTIrDetectionSleep]
 +[KTKValueTransformers registerTransformerGATTBleScanDuration]
 +[KTKValueTransformers registerTransformerGATTOccupancyModel]
 +[KTKValueTransformers registerTransformerConfigProfilePackets]
@@ -2505,13 +2537,12 @@ ___28+[KTKValueTransformers load]_block_invoke
 +[KTKValueTransformers registerTransformerGATTSamplingInterval]
 +[KTKValueTransformers registerTransformerGATTWiFiNetworkDetails]
 _load.onceToken
-_OBJC_CLASSLIST_REFERENCES_$_.106
-_OBJC_CLASSLIST_REFERENCES_$_.112
-_OBJC_CLASSLIST_REFERENCES_$_.113
-_OBJC_CLASSLIST_REFERENCES_$_.125
-_OBJC_CLASSLIST_REFERENCES_$_.126
+_OBJC_CLASSLIST_REFERENCES_$_.122
 _OBJC_CLASSLIST_REFERENCES_$_.128
-_OBJC_CLASSLIST_REFERENCES_$_.136
+_OBJC_CLASSLIST_REFERENCES_$_.139
+_OBJC_CLASSLIST_REFERENCES_$_.142
+_OBJC_CLASSLIST_REFERENCES_$_.147
+_OBJC_CLASSLIST_REFERENCES_$_.152
 __OBJC_$_CLASS_METHODS_KTKValueTransformers
 __OBJC_METACLASS_RO_$_KTKValueTransformers
 __OBJC_CLASS_RO_$_KTKValueTransformers
@@ -2579,6 +2610,7 @@ __60-[KTKSecureBeaconRegion ktk_underlyingRegionWithCompletion:]_block_invoke
 -[KTKDeviceGatewayWiFiNetwork initWithName:]
 -[KTKDeviceGatewayWiFiNetwork isSecure]
 -[KTKDeviceGatewayWiFiNetwork isEnterprise]
+-[KTKDeviceGatewayWiFiNetwork updateData:]
 -[KTKDeviceGatewayWiFiNetwork configuration]
 -[KTKDeviceGatewayWiFiNetwork copyWithZone:]
 -[KTKDeviceGatewayWiFiNetwork description]
@@ -2597,7 +2629,7 @@ __60-[KTKSecureBeaconRegion ktk_underlyingRegionWithCompletion:]_block_invoke
 -[KTKDeviceGatewayWiFiNetwork setSecure:]
 -[KTKDeviceGatewayWiFiNetwork setEnterprise:]
 -[KTKDeviceGatewayWiFiNetwork .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.50
+_OBJC_CLASSLIST_REFERENCES_$_.69
 __OBJC_CLASS_PROTOCOLS_$_KTKDeviceGatewayWiFiNetwork
 __OBJC_METACLASS_RO_$_KTKDeviceGatewayWiFiNetwork
 __OBJC_$_INSTANCE_METHODS_KTKDeviceGatewayWiFiNetwork
@@ -2611,10 +2643,10 @@ _OBJC_IVAR_$_KTKDeviceGatewayWiFiNetwork._password
 __OBJC_$_INSTANCE_VARIABLES_KTKDeviceGatewayWiFiNetwork
 __OBJC_$_PROP_LIST_KTKDeviceGatewayWiFiNetwork
 __OBJC_CLASS_RO_$_KTKDeviceGatewayWiFiNetwork
-/Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Model/KTKDeviceGatewayWiFiNetwork.m
-KontaktSDK/Device/Connection/Model/KTKDeviceGatewayWiFiNetwork.m
-KontaktSDK/Device/Connection/Model/KTKDeviceGatewayWiFiNetwork+Protected.h
-KontaktSDK/Device/Connection/Model/KTKDeviceGatewayWiFiNetwork.h
+/Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Gateway/Model/KTKDeviceGatewayWiFiNetwork.m
+KontaktSDK/Device/Connection/Operations/Gateway/Model/KTKDeviceGatewayWiFiNetwork.m
+KontaktSDK/Device/Connection/Operations/Gateway/Model/KTKDeviceGatewayWiFiNetwork+Protected.h
+KontaktSDK/Device/Connection/Operations/Gateway/Model/KTKDeviceGatewayWiFiNetwork.h
 -[KTKNordicBLEOperations initWithDelegate:]
 -[KTKNordicBLEOperations connectDevice:]
 ___40-[KTKNordicBLEOperations connectDevice:]_block_invoke
@@ -2748,7 +2780,7 @@ __KTKShuffleSubdomainsSetFromBeaconFutureIDs_block_invoke
 KTKShuffleSubdomainsSetFromBeaconFutureIDs
 KTKShuffleSubdomainFromInstanceID
 CFSwapInt32
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.4.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h
 KTKShuffleSubdomainFromMajorMinor
 KTKShuffleDomainTypeQueryKey
 -[KTKNearbyDevice init]
@@ -2839,7 +2871,8 @@ ___45-[KTKDeviceReadMACDetailsOperation finished:]_block_invoke
 -[KTKDeviceReadMACDetailsOperation mac]
 -[KTKDeviceReadMACDetailsOperation setMac:]
 -[KTKDeviceReadMACDetailsOperation .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.145
+_OBJC_CLASSLIST_REFERENCES_$_.151
+_OBJC_CLASSLIST_REFERENCES_$_.156
 _OBJC_IVAR_$_KTKDeviceReadMACDetailsOperation._mac
 __OBJC_METACLASS_RO_$_KTKDeviceReadMACDetailsOperation
 __OBJC_$_INSTANCE_METHODS_KTKDeviceReadMACDetailsOperation
@@ -2862,11 +2895,11 @@ ___39-[KTKBeaconManager addMonitoredRegion:]_block_invoke
 ___42-[KTKBeaconManager removeMonitoredRegion:]_block_invoke
 -[KTKBeaconManager processRegionStateForKontaktRegion:completion:]
 ___66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke
-___66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke.81
+___66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke.92
 ___66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke_2
 ___copy_helper_block_e8_32s40s48w
-___66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke.92
-___66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke_2.97
+___66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke.103
+___66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke_2.108
 ___66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke_3
 -[KTKBeaconManager shuffleManager]
 -[KTKBeaconManager requestLocationAlwaysAuthorization]
@@ -2886,7 +2919,7 @@ ___42-[KTKBeaconManager requestStateForRegion:]_block_invoke
 +[KTKBeaconManager isRangingAvailable]
 -[KTKBeaconManager startRangingBeaconsInRegion:]
 ___48-[KTKBeaconManager startRangingBeaconsInRegion:]_block_invoke
-___48-[KTKBeaconManager startRangingBeaconsInRegion:]_block_invoke.139
+___48-[KTKBeaconManager startRangingBeaconsInRegion:]_block_invoke.150
 ___48-[KTKBeaconManager startRangingBeaconsInRegion:]_block_invoke_2
 ___copy_helper_block_e8_32s40s48r56w
 ___destroy_helper_block_e8_32s40s48r56w
@@ -2929,16 +2962,25 @@ ___ktk_beacon_manager_queue_block_invoke
 ___clang_at_available_requires_core_foundation_framework
 _KTKKontaktProximityUUID._KTKKontaktProximityUUID
 _KTKKontaktProximityUUID.onceToken
+_OBJC_CLASSLIST_REFERENCES_$_.46
+_OBJC_CLASSLIST_REFERENCES_$_.53
+_OBJC_CLASSLIST_REFERENCES_$_.56
 ___block_descriptor_40_e8_32s_e29_v24?0"KTKBeaconRegion"8^B16l
 ___block_descriptor_56_e8_32s40s48w_e5_v8?0l
 ___block_descriptor_41_e8_32bs_e5_v8?0l
 ___block_descriptor_40_e8_32bs_e8_v12?0B8l
+_OBJC_CLASSLIST_REFERENCES_$_.112
 ___block_descriptor_40_e8_32s_e22_v24?0"CLRegion"8^B16l
 ___block_descriptor_64_e8_32s40s48r56w_e17_v16?0"NSError"8l
 ___block_descriptor_48_e8_32s40w_e8_v12?0B8l
+_OBJC_SELECTOR_REFERENCES_.184
 ___block_descriptor_56_e8_32s40s48w_e8_v12?0B8l
-_OBJC_CLASSLIST_REFERENCES_$_.180
+_OBJC_SELECTOR_REFERENCES_.186
+_OBJC_SELECTOR_REFERENCES_.190
+_OBJC_CLASSLIST_REFERENCES_$_.191
 ___block_descriptor_48_e8_32s40w_e17_v16?0"NSArray"8l
+_OBJC_SELECTOR_REFERENCES_.194
+_OBJC_SELECTOR_REFERENCES_.196
 __OBJC_$_CLASS_METHODS_KTKBeaconManager
 __OBJC_$_PROTOCOL_REFS_KTKShuffleManagerDelegate
 __OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_KTKShuffleManagerDelegate
@@ -2961,7 +3003,7 @@ __OBJC_$_PROP_LIST_KTKBeaconManager
 __OBJC_CLASS_RO_$_KTKBeaconManager
 _ktk_beacon_manager_queue._ktk_beacon_manager_queue
 _ktk_beacon_manager_queue.onceToken
-___block_literal_global.311
+___block_literal_global.322
 /Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Proximity/iBeacon/KTKBeaconManager.m
 __ktk_beacon_manager_queue_block_invoke
 KontaktSDK/Proximity/iBeacon/KTKBeaconManager.m
@@ -2981,7 +3023,7 @@ __47-[KTKBeaconManager stopRangingBeaconsInRegion:]_block_invoke
 __destroy_helper_block_e8_32s40s48r56w
 __copy_helper_block_e8_32s40s48r56w
 __48-[KTKBeaconManager startRangingBeaconsInRegion:]_block_invoke_2
-__48-[KTKBeaconManager startRangingBeaconsInRegion:]_block_invoke.139
+__48-[KTKBeaconManager startRangingBeaconsInRegion:]_block_invoke.150
 __48-[KTKBeaconManager startRangingBeaconsInRegion:]_block_invoke
 __42-[KTKBeaconManager requestStateForRegion:]_block_invoke
 __47-[KTKBeaconManager stopMonitoringForAllRegions]_block_invoke_2
@@ -2990,11 +3032,11 @@ __44-[KTKBeaconManager stopMonitoringForRegion:]_block_invoke
 __45-[KTKBeaconManager startMonitoringForRegion:]_block_invoke_2
 __45-[KTKBeaconManager startMonitoringForRegion:]_block_invoke
 __66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke_3
-__66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke_2.97
-__66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke.92
+__66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke_2.108
+__66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke.103
 __copy_helper_block_e8_32s40s48w
 __66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke_2
-__66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke.81
+__66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke.92
 __66-[KTKBeaconManager processRegionStateForKontaktRegion:completion:]_block_invoke
 __42-[KTKBeaconManager removeMonitoredRegion:]_block_invoke
 __39-[KTKBeaconManager addMonitoredRegion:]_block_invoke
@@ -3133,10 +3175,13 @@ _KTKConfigProfileWpaEapPropertyValue
 _KTKConfigProfileWpaPskPropertyValue
 _KTKConfigProfileEmptyPropertyValue
 ___block_descriptor_40_e8_32s_e33_v32?0"NSString"8"NSData"16^B24l
-_OBJC_SELECTOR_REFERENCES_.170
-_OBJC_SELECTOR_REFERENCES_.184
-_OBJC_SELECTOR_REFERENCES_.186
-_OBJC_CLASSLIST_REFERENCES_$_.187
+_OBJC_CLASSLIST_REFERENCES_$_.111
+_OBJC_SELECTOR_REFERENCES_.192
+_OBJC_SELECTOR_REFERENCES_.198
+_OBJC_SELECTOR_REFERENCES_.200
+_OBJC_SELECTOR_REFERENCES_.202
+_OBJC_CLASSLIST_REFERENCES_$_.203
+_OBJC_SELECTOR_REFERENCES_.223
 __OBJC_$_CLASS_METHODS_KTKConfigProfileConverter
 __OBJC_METACLASS_RO_$_KTKConfigProfileConverter
 __OBJC_CLASS_RO_$_KTKConfigProfileConverter
@@ -3156,6 +3201,38 @@ __OBJC_METACLASS_RO_$_KTKConfigProfilePayloadCipher
 __OBJC_CLASS_RO_$_KTKConfigProfilePayloadCipher
 /Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/ConfigProfile/KTKConfigProfilePayloadCipher.m
 KontaktSDK/ConfigProfile/KTKConfigProfilePayloadCipher.m
+-[KTKDeviceGatewayDiagnosticDetailsOperation initWithCommand:]
+-[KTKDeviceGatewayDiagnosticDetailsOperation setDevice:]
+-[KTKDeviceGatewayDiagnosticDetailsOperation createOperationsWithCommand:]
+___74-[KTKDeviceGatewayDiagnosticDetailsOperation createOperationsWithCommand:]_block_invoke
+___copy_helper_block_e8_32s40r48r56w
+___destroy_helper_block_e8_32s40r48r56w
+-[KTKDeviceGatewayDiagnosticDetailsOperation operationDidFinish:errors:]
+-[KTKDeviceGatewayDiagnosticDetailsOperation finished:]
+___55-[KTKDeviceGatewayDiagnosticDetailsOperation finished:]_block_invoke
+-[KTKDeviceGatewayDiagnosticDetailsOperation readDiagnosticCompletion]
+-[KTKDeviceGatewayDiagnosticDetailsOperation setReadDiagnosticCompletion:]
+-[KTKDeviceGatewayDiagnosticDetailsOperation gatewayDiagnostic]
+-[KTKDeviceGatewayDiagnosticDetailsOperation setGatewayDiagnostic:]
+-[KTKDeviceGatewayDiagnosticDetailsOperation .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.131
+_OBJC_CLASSLIST_REFERENCES_$_.136
+___block_descriptor_64_e8_32s40r48r56w_e12_v24?08^B16l
+_OBJC_CLASSLIST_REFERENCES_$_.179
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnosticDetailsOperation._readDiagnosticCompletion
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnosticDetailsOperation._gatewayDiagnostic
+__OBJC_METACLASS_RO_$_KTKDeviceGatewayDiagnosticDetailsOperation
+__OBJC_$_INSTANCE_METHODS_KTKDeviceGatewayDiagnosticDetailsOperation
+__OBJC_$_INSTANCE_VARIABLES_KTKDeviceGatewayDiagnosticDetailsOperation
+__OBJC_$_PROP_LIST_KTKDeviceGatewayDiagnosticDetailsOperation
+__OBJC_CLASS_RO_$_KTKDeviceGatewayDiagnosticDetailsOperation
+/Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Gateway/KTKDeviceGatewayDiagnosticDetailsOperation.m
+KontaktSDK/Device/Connection/Operations/Gateway/KTKDeviceGatewayDiagnosticDetailsOperation.m
+KontaktSDK/Device/Connection/Operations/Gateway/KTKDeviceGatewayDiagnosticDetailsOperation.h
+__55-[KTKDeviceGatewayDiagnosticDetailsOperation finished:]_block_invoke
+__destroy_helper_block_e8_32s40r48r56w
+__copy_helper_block_e8_32s40r48r56w
+__74-[KTKDeviceGatewayDiagnosticDetailsOperation createOperationsWithCommand:]_block_invoke
 -[KTKDeviceConnectionOperation init]
 -[KTKDeviceConnectionOperation execute]
 ___39-[KTKDeviceConnectionOperation execute]_block_invoke
@@ -3196,33 +3273,26 @@ ___86-[KTKDeviceConnectionOperation peripheral:didDiscoverCharacteristicsForServ
 -[KTKDeviceConnectionOperation operationsGATT]
 -[KTKDeviceConnectionOperation setOperationsGATT:]
 -[KTKDeviceConnectionOperation .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.149
-_OBJC_SELECTOR_REFERENCES_.181
-_OBJC_CLASSLIST_REFERENCES_$_.182
-_OBJC_SELECTOR_REFERENCES_.188
-_OBJC_SELECTOR_REFERENCES_.190
-_OBJC_SELECTOR_REFERENCES_.192
-_OBJC_SELECTOR_REFERENCES_.194
-_OBJC_SELECTOR_REFERENCES_.196
-_OBJC_SELECTOR_REFERENCES_.198
-_OBJC_SELECTOR_REFERENCES_.200
-_OBJC_SELECTOR_REFERENCES_.202
+_OBJC_CLASSLIST_REFERENCES_$_.155
+_OBJC_CLASSLIST_REFERENCES_$_.188
 _OBJC_SELECTOR_REFERENCES_.204
+_OBJC_SELECTOR_REFERENCES_.206
+_OBJC_SELECTOR_REFERENCES_.208
+_OBJC_SELECTOR_REFERENCES_.210
 ___block_descriptor_40_e8_32s_e39_v32?0"KTKDeviceGATTOperation"8Q16^B24l
 ___block_descriptor_48_e8_32s40s_e33_v32?0"CBCharacteristic"8Q16^B24l
-_OBJC_SELECTOR_REFERENCES_.210
+_OBJC_SELECTOR_REFERENCES_.216
 ___block_descriptor_40_e8_32s_e26_v32?0"CBService"8Q16^B24l
-_OBJC_SELECTOR_REFERENCES_.223
 ___block_descriptor_49_e8_32s40w_e5_v8?0l
-_OBJC_CLASSLIST_REFERENCES_$_.230
-_OBJC_SELECTOR_REFERENCES_.234
-_OBJC_SELECTOR_REFERENCES_.236
-_OBJC_SELECTOR_REFERENCES_.238
+_OBJC_CLASSLIST_REFERENCES_$_.236
 _OBJC_SELECTOR_REFERENCES_.240
 _OBJC_SELECTOR_REFERENCES_.242
 _OBJC_SELECTOR_REFERENCES_.244
 _OBJC_SELECTOR_REFERENCES_.246
 _OBJC_SELECTOR_REFERENCES_.248
+_OBJC_SELECTOR_REFERENCES_.250
+_OBJC_SELECTOR_REFERENCES_.252
+_OBJC_SELECTOR_REFERENCES_.254
 ___block_descriptor_48_e8_32s40s_e26_v32?0"CBService"8Q16^B24l
 _OBJC_IVAR_$_KTKDeviceConnectionOperation._device
 _OBJC_IVAR_$_KTKDeviceConnectionOperation._delegate
@@ -3345,6 +3415,7 @@ KontaktSDK/Proximity/Eddystone/Model/Frames/KTKEddystoneTLM.m
 KontaktSDK/Proximity/Eddystone/Model/Frames/KTKEddystoneTLM.h
 -[KTKNearbyDeviceTelemetry updateWithData:]
 -[KTKNearbyDeviceTelemetry updateVendorWithData:]
+-[KTKNearbyDeviceTelemetry chunksString:forSize:]
 -[KTKNearbyDeviceTelemetry description]
 -[KTKNearbyDeviceTelemetry copyWithZone:]
 -[KTKNearbyDeviceTelemetry uniqueID]
@@ -3415,19 +3486,67 @@ KontaktSDK/Proximity/Eddystone/Model/Frames/KTKEddystoneTLM.h
 -[KTKNearbyDeviceTelemetry setPirDetection:]
 -[KTKNearbyDeviceTelemetry airQuality]
 -[KTKNearbyDeviceTelemetry setAirQuality:]
+-[KTKNearbyDeviceTelemetry distance]
+-[KTKNearbyDeviceTelemetry setDistance:]
+-[KTKNearbyDeviceTelemetry accuracy]
+-[KTKNearbyDeviceTelemetry setAccuracy:]
+-[KTKNearbyDeviceTelemetry gasTypeFields]
+-[KTKNearbyDeviceTelemetry setGasTypeFields:]
+-[KTKNearbyDeviceTelemetry gasPPM]
+-[KTKNearbyDeviceTelemetry setGasPPM:]
+-[KTKNearbyDeviceTelemetry lightLevelLux]
+-[KTKNearbyDeviceTelemetry setLightLevelLux:]
+-[KTKNearbyDeviceTelemetry serialNumber]
+-[KTKNearbyDeviceTelemetry setSerialNumber:]
+-[KTKNearbyDeviceTelemetry charge]
+-[KTKNearbyDeviceTelemetry setCharge:]
+-[KTKNearbyDeviceTelemetry activationsCount]
+-[KTKNearbyDeviceTelemetry setActivationsCount:]
+-[KTKNearbyDeviceTelemetry activationsKontakt]
+-[KTKNearbyDeviceTelemetry setActivationsKontakt:]
+-[KTKNearbyDeviceTelemetry refills]
+-[KTKNearbyDeviceTelemetry setRefills:]
+-[KTKNearbyDeviceTelemetry statusSoap]
+-[KTKNearbyDeviceTelemetry statusSoapFields]
+-[KTKNearbyDeviceTelemetry setStatusSoapFields:]
+-[KTKNearbyDeviceTelemetry configSoap]
+-[KTKNearbyDeviceTelemetry setConfigSoap:]
+-[KTKNearbyDeviceTelemetry distributor]
+-[KTKNearbyDeviceTelemetry setDistributor:]
 -[KTKNearbyDeviceTelemetry bleScans]
 -[KTKNearbyDeviceTelemetry setBleScans:]
 -[KTKNearbyDeviceTelemetry bleDevices]
 -[KTKNearbyDeviceTelemetry setBleDevices:]
 -[KTKNearbyDeviceTelemetry wifiScans]
 -[KTKNearbyDeviceTelemetry setWifiScans:]
+-[KTKNearbyDeviceTelemetry scanID]
+-[KTKNearbyDeviceTelemetry setScanID:]
+-[KTKNearbyDeviceTelemetry mac]
+-[KTKNearbyDeviceTelemetry setMac:]
+-[KTKNearbyDeviceTelemetry rssiValues]
+-[KTKNearbyDeviceTelemetry setRssiValues:]
 -[KTKNearbyDeviceTelemetry dataLoggerStatus]
 -[KTKNearbyDeviceTelemetry setDataLoggerStatus:]
 -[KTKNearbyDeviceTelemetry .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.104
+_OBJC_SELECTOR_REFERENCES_.212
+_OBJC_SELECTOR_REFERENCES_.214
+_OBJC_SELECTOR_REFERENCES_.218
+_OBJC_SELECTOR_REFERENCES_.222
+_OBJC_SELECTOR_REFERENCES_.224
+_OBJC_SELECTOR_REFERENCES_.226
+_OBJC_SELECTOR_REFERENCES_.228
+_OBJC_SELECTOR_REFERENCES_.230
+_OBJC_SELECTOR_REFERENCES_.232
+_OBJC_SELECTOR_REFERENCES_.234
+_OBJC_SELECTOR_REFERENCES_.236
+_OBJC_SELECTOR_REFERENCES_.238
 __OBJC_CLASS_PROTOCOLS_$_KTKNearbyDeviceTelemetry
 __OBJC_METACLASS_RO_$_KTKNearbyDeviceTelemetry
 __OBJC_$_INSTANCE_METHODS_KTKNearbyDeviceTelemetry
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._moving
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._gasTypeFields
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._statusSoapFields
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._dataLoggerStatus
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._errors
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._acceleration
@@ -3462,9 +3581,24 @@ _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._GPIOStates
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._airPressuer
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._pirDetection
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._airQuality
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._distance
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._accuracy
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._gasPPM
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._lightLevelLux
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._serialNumber
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._charge
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._activationsCount
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._activationsKontakt
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._refills
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._statusSoap
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._configSoap
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._distributor
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._bleScans
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._bleDevices
 _OBJC_IVAR_$_KTKNearbyDeviceTelemetry._wifiScans
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._scanID
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._mac
+_OBJC_IVAR_$_KTKNearbyDeviceTelemetry._rssiValues
 __OBJC_$_INSTANCE_VARIABLES_KTKNearbyDeviceTelemetry
 __OBJC_$_PROP_LIST_KTKNearbyDeviceTelemetry
 __OBJC_CLASS_RO_$_KTKNearbyDeviceTelemetry
@@ -3510,7 +3644,8 @@ __50-[KTKSecureEddystoneRegion resolveWithCompletion:]_block_invoke
 -[KTKDeviceKontaktDFUCommandOperation operationDidFinish:errors:]
 -[KTKDeviceKontaktDFUCommandOperation finished:]
 ___48-[KTKDeviceKontaktDFUCommandOperation finished:]_block_invoke
-_OBJC_CLASSLIST_REFERENCES_$_.162
+_OBJC_CLASSLIST_REFERENCES_$_.138
+_OBJC_CLASSLIST_REFERENCES_$_.168
 __OBJC_METACLASS_RO_$_KTKDeviceKontaktDFUCommandOperation
 __OBJC_$_INSTANCE_METHODS_KTKDeviceKontaktDFUCommandOperation
 __OBJC_CLASS_RO_$_KTKDeviceKontaktDFUCommandOperation
@@ -3633,7 +3768,6 @@ ___25-[DFUOperations onError:]_block_invoke
 -[DFUOperations .cxx_destruct]
 _OBJC_CLASSLIST_REFERENCES_$_.22
 _OBJC_CLASSLIST_REFERENCES_$_.99
-_OBJC_SELECTOR_REFERENCES_.247
 __OBJC_$_PROTOCOL_REFS_KTKNordicFileOperationsDelegate
 __OBJC_$_PROTOCOL_INSTANCE_METHODS_KTKNordicFileOperationsDelegate
 __OBJC_$_PROTOCOL_METHOD_TYPES_KTKNordicFileOperationsDelegate
@@ -3712,6 +3846,7 @@ ___50-[KTKDeviceGatewayWiFiNetworksOperation finished:]_block_invoke
 -[KTKDeviceGatewayWiFiNetworksOperation setNetworkCount:]
 -[KTKDeviceGatewayWiFiNetworksOperation .cxx_destruct]
 _OBJC_IVAR_$_KTKDeviceGatewayWiFiNetworksOperation._device
+_OBJC_CLASSLIST_REFERENCES_$_.133
 ___block_descriptor_40_e8_32w_e52_v28?0B8"KTKDeviceGatewayWiFiNetwork"12"NSArray"20l
 _OBJC_IVAR_$_KTKDeviceGatewayWiFiNetworksOperation._connectionCompletion
 _OBJC_IVAR_$_KTKDeviceGatewayWiFiNetworksOperation._networkList
@@ -3739,8 +3874,7 @@ ___44-[KTKDeviceWriteFeaturesOperation finished:]_block_invoke
 -[KTKDeviceWriteFeaturesOperation isSynchronized]
 -[KTKDeviceWriteFeaturesOperation setSynchronized:]
 -[KTKDeviceWriteFeaturesOperation .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.133
-_OBJC_CLASSLIST_REFERENCES_$_.152
+_OBJC_CLASSLIST_REFERENCES_$_.158
 _OBJC_IVAR_$_KTKDeviceWriteFeaturesOperation._configuration
 _OBJC_IVAR_$_KTKDeviceWriteFeaturesOperation._synchronized
 __OBJC_METACLASS_RO_$_KTKDeviceWriteFeaturesOperation
@@ -3773,22 +3907,15 @@ ___55-[KTKDeviceWriteSecureConfigurationOperation finished:]_block_invoke
 -[KTKDeviceWriteSecureConfigurationOperation responseOperation]
 -[KTKDeviceWriteSecureConfigurationOperation setResponseOperation:]
 -[KTKDeviceWriteSecureConfigurationOperation .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.147
-_OBJC_CLASSLIST_REFERENCES_$_.159
+_OBJC_CLASSLIST_REFERENCES_$_.153
+_OBJC_CLASSLIST_REFERENCES_$_.165
 ___block_descriptor_40_e8_32w_e27_v16?0"KTKBlockOperation"8l
-_OBJC_CLASSLIST_REFERENCES_$_.169
-_OBJC_CLASSLIST_REFERENCES_$_.172
-_OBJC_CLASSLIST_REFERENCES_$_.185
-_OBJC_CLASSLIST_REFERENCES_$_.194
+_OBJC_CLASSLIST_REFERENCES_$_.175
+_OBJC_CLASSLIST_REFERENCES_$_.178
+_OBJC_CLASSLIST_REFERENCES_$_.200
 ___block_descriptor_56_e8_32s40s48w_e40_v24?0"KTKKontaktResponse"8"NSError"16l
-_OBJC_CLASSLIST_REFERENCES_$_.218
-_OBJC_SELECTOR_REFERENCES_.220
-_OBJC_SELECTOR_REFERENCES_.222
-_OBJC_SELECTOR_REFERENCES_.224
-_OBJC_SELECTOR_REFERENCES_.228
-_OBJC_SELECTOR_REFERENCES_.230
-_OBJC_SELECTOR_REFERENCES_.232
-_OBJC_SELECTOR_REFERENCES_.250
+_OBJC_CLASSLIST_REFERENCES_$_.224
+_OBJC_SELECTOR_REFERENCES_.256
 _OBJC_IVAR_$_KTKDeviceWriteSecureConfigurationOperation._configuration
 _OBJC_IVAR_$_KTKDeviceWriteSecureConfigurationOperation._synchronized
 _OBJC_IVAR_$_KTKDeviceWriteSecureConfigurationOperation._responseConfiguration
@@ -3836,6 +3963,8 @@ __62-[KTKDeviceWriteSecureConfigurationOperation createOperations]_block_invoke
 -[KTKManager setRole:]
 -[KTKManager subscriptionPlan]
 -[KTKManager setSubscriptionPlan:]
+-[KTKManager deviceCount]
+-[KTKManager setDeviceCount:]
 -[KTKManager .cxx_destruct]
 __OBJC_$_CLASS_METHODS_KTKManager
 __OBJC_CLASS_PROTOCOLS_$_KTKManager
@@ -3851,13 +3980,15 @@ _OBJC_IVAR_$_KTKManager._email
 _OBJC_IVAR_$_KTKManager._apiKey
 _OBJC_IVAR_$_KTKManager._role
 _OBJC_IVAR_$_KTKManager._subscriptionPlan
+_OBJC_IVAR_$_KTKManager._deviceCount
 __OBJC_$_INSTANCE_VARIABLES_KTKManager
 __OBJC_$_PROP_LIST_KTKManager
 __OBJC_CLASS_RO_$_KTKManager
-_OBJC_SELECTOR_REFERENCES_.218
+_OBJC_CLASSLIST_REFERENCES_$_.252
 /Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Cloud/Model/KTKManager.m
 KontaktSDK/Cloud/Model/KTKManager.m
 KontaktSDK/Cloud/Model/KTKManager.h
+KTKManagerDevicesCountFromDictionary
 KTKManagerSubscriptionPlanFromArray
 KTKManagerRoleFromString
 -[KTKQueryStringPair initWithField:value:]
@@ -3914,7 +4045,7 @@ ___52-[KTKDeviceKontaktDFUTransactionOperation finished:]_block_invoke
 -[KTKDeviceKontaktDFUTransactionOperation .cxx_destruct]
 _kStartTransaction
 _kFinalizeTransaction
-_OBJC_CLASSLIST_REFERENCES_$_.166
+_OBJC_CLASSLIST_REFERENCES_$_.172
 _OBJC_IVAR_$_KTKDeviceKontaktDFUTransactionOperation._transactionCompletion
 __OBJC_METACLASS_RO_$_KTKDeviceKontaktDFUTransactionOperation
 __OBJC_$_INSTANCE_METHODS_KTKDeviceKontaktDFUTransactionOperation
@@ -3935,6 +4066,57 @@ __OBJC_CLASS_RO_$_KTKTXPowerValueTransformer
 KontaktSDK/Transformers/KTKTXPowerValueTransformer.m
 KTKDeviceTransmissionValueFromPower
 KTKDeviceTransmissionPowerFromValue
+-[KTKDeviceGatewayDiagnostic init]
+-[KTKDeviceGatewayDiagnostic updateDiagnosticData:]
+-[KTKDeviceGatewayDiagnostic copyWithZone:]
+-[KTKDeviceGatewayDiagnostic description]
+-[KTKDeviceGatewayDiagnostic isAPIConnection]
+-[KTKDeviceGatewayDiagnostic setAPIConnection:]
+-[KTKDeviceGatewayDiagnostic isEventCollectConnection]
+-[KTKDeviceGatewayDiagnostic setEventCollectConnection:]
+-[KTKDeviceGatewayDiagnostic iPAddress]
+-[KTKDeviceGatewayDiagnostic setIPAddress:]
+-[KTKDeviceGatewayDiagnostic isTimeSynchronization]
+-[KTKDeviceGatewayDiagnostic setTimeSynchronization:]
+-[KTKDeviceGatewayDiagnostic isConnectedToWiFi]
+-[KTKDeviceGatewayDiagnostic setConnectedToWiFi:]
+-[KTKDeviceGatewayDiagnostic isFallbackNetworkConnected]
+-[KTKDeviceGatewayDiagnostic setFallbackNetworkConnected:]
+-[KTKDeviceGatewayDiagnostic isMainNetworkVisible]
+-[KTKDeviceGatewayDiagnostic setMainNetworkVisible:]
+-[KTKDeviceGatewayDiagnostic mainNetworkRSSI]
+-[KTKDeviceGatewayDiagnostic setMainNetworkRSSI:]
+-[KTKDeviceGatewayDiagnostic isFallbackNetworkVisible]
+-[KTKDeviceGatewayDiagnostic setFallbackNetworkVisible:]
+-[KTKDeviceGatewayDiagnostic fallbackNetworkRSSI]
+-[KTKDeviceGatewayDiagnostic setFallbackNetworkRSSI:]
+-[KTKDeviceGatewayDiagnostic isNearbyNetworks]
+-[KTKDeviceGatewayDiagnostic setNearbyNetworks:]
+-[KTKDeviceGatewayDiagnostic isProvision]
+-[KTKDeviceGatewayDiagnostic setProvision:]
+-[KTKDeviceGatewayDiagnostic .cxx_destruct]
+__OBJC_CLASS_PROTOCOLS_$_KTKDeviceGatewayDiagnostic
+__OBJC_METACLASS_RO_$_KTKDeviceGatewayDiagnostic
+__OBJC_$_INSTANCE_METHODS_KTKDeviceGatewayDiagnostic
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._aPIConnection
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._eventCollectConnection
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._timeSynchronization
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._connectedToWiFi
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._fallbackNetworkConnected
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._mainNetworkVisible
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._fallbackNetworkVisible
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._nearbyNetworks
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._provision
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._iPAddress
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._mainNetworkRSSI
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnostic._fallbackNetworkRSSI
+__OBJC_$_INSTANCE_VARIABLES_KTKDeviceGatewayDiagnostic
+__OBJC_$_PROP_LIST_KTKDeviceGatewayDiagnostic
+__OBJC_CLASS_RO_$_KTKDeviceGatewayDiagnostic
+/Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Gateway/Model/KTKDeviceGatewayDiagnostic.m
+KontaktSDK/Device/Connection/Operations/Gateway/Model/KTKDeviceGatewayDiagnostic.m
+KontaktSDK/Device/Connection/Operations/Gateway/Model/KTKDeviceGatewayDiagnostic+Protected.h
+KontaktSDK/Device/Connection/Operations/Gateway/Model/KTKDeviceGatewayDiagnostic.h
 -[KTKDeviceListenOperation execute]
 -[KTKDeviceListenOperation setPayload:]
 -[KTKDeviceListenOperation listeningBlock]
@@ -4126,8 +4308,7 @@ ___block_descriptor_56_e8_32s40r_e37_B32?0"NSUUID"8"KTKEddystone"16^B24l
 ___block_descriptor_64_e8_32s40r48r_e5_v8?0l
 ___block_descriptor_40_e8_32s_e29_v32?0"KTKEddystone"8Q16^B24l
 ___block_descriptor_40_e8_32s_e42_B32?0"KTKEddystone"8"NSHashTable"16^B24l
-_OBJC_CLASSLIST_REFERENCES_$_.161
-_OBJC_CLASSLIST_REFERENCES_$_.177
+_OBJC_CLASSLIST_REFERENCES_$_.166
 _OBJC_CLASSLIST_REFERENCES_$_.190
 ___block_descriptor_41_e8_32s_e25_B24?08"NSDictionary"16l
 ___block_descriptor_40_e8_32s_e25_B24?08"NSDictionary"16l
@@ -4218,6 +4399,36 @@ __55-[KTKEddystoneManager startEddystoneDiscoveryInRegion:]_block_invoke_3
 __55-[KTKEddystoneManager startEddystoneDiscoveryInRegion:]_block_invoke_2
 __55-[KTKEddystoneManager startEddystoneDiscoveryInRegion:]_block_invoke.32
 __55-[KTKEddystoneManager startEddystoneDiscoveryInRegion:]_block_invoke
+-[KTKDeviceGatewayDiagnosticWiFiOperation initWithCommand:]
+-[KTKDeviceGatewayDiagnosticWiFiOperation setDevice:]
+-[KTKDeviceGatewayDiagnosticWiFiOperation createOperationsWithCommand:]
+___71-[KTKDeviceGatewayDiagnosticWiFiOperation createOperationsWithCommand:]_block_invoke
+-[KTKDeviceGatewayDiagnosticWiFiOperation operationDidFinish:errors:]
+-[KTKDeviceGatewayDiagnosticWiFiOperation finished:]
+___52-[KTKDeviceGatewayDiagnosticWiFiOperation finished:]_block_invoke
+-[KTKDeviceGatewayDiagnosticWiFiOperation connectionWiFiCompletion]
+-[KTKDeviceGatewayDiagnosticWiFiOperation setConnectionWiFiCompletion:]
+-[KTKDeviceGatewayDiagnosticWiFiOperation networkList]
+-[KTKDeviceGatewayDiagnosticWiFiOperation setNetworkList:]
+-[KTKDeviceGatewayDiagnosticWiFiOperation networkCount]
+-[KTKDeviceGatewayDiagnosticWiFiOperation setNetworkCount:]
+-[KTKDeviceGatewayDiagnosticWiFiOperation .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.146
+___block_descriptor_56_e8_32s40r48w_e12_v24?08^B16l
+_OBJC_CLASSLIST_REFERENCES_$_.173
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnosticWiFiOperation._connectionWiFiCompletion
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnosticWiFiOperation._networkList
+_OBJC_IVAR_$_KTKDeviceGatewayDiagnosticWiFiOperation._networkCount
+__OBJC_METACLASS_RO_$_KTKDeviceGatewayDiagnosticWiFiOperation
+__OBJC_$_INSTANCE_METHODS_KTKDeviceGatewayDiagnosticWiFiOperation
+__OBJC_$_INSTANCE_VARIABLES_KTKDeviceGatewayDiagnosticWiFiOperation
+__OBJC_$_PROP_LIST_KTKDeviceGatewayDiagnosticWiFiOperation
+__OBJC_CLASS_RO_$_KTKDeviceGatewayDiagnosticWiFiOperation
+/Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Gateway/KTKDeviceGatewayDiagnosticWiFIOperation.m
+KontaktSDK/Device/Connection/Operations/Gateway/KTKDeviceGatewayDiagnosticWiFIOperation.m
+KontaktSDK/Device/Connection/Operations/Gateway/KTKDeviceGatewayDiagnosticWiFiOperation.h
+__52-[KTKDeviceGatewayDiagnosticWiFiOperation finished:]_block_invoke
+__71-[KTKDeviceGatewayDiagnosticWiFiOperation createOperationsWithCommand:]_block_invoke
 +[KTKDeviceKontaktDFUOperation hasBootloader]
 -[KTKDeviceKontaktDFUOperation init]
 -[KTKDeviceKontaktDFUOperation setFirmware:]
@@ -4256,13 +4467,11 @@ ___44-[KTKDeviceKontaktDFUOperation updateDevice]_block_invoke
 -[KTKDeviceKontaktDFUOperation setSynchronized:]
 -[KTKDeviceKontaktDFUOperation .cxx_destruct]
 _OBJC_IVAR_$_KTKDeviceKontaktDFUOperation._firmware
-_OBJC_CLASSLIST_REFERENCES_$_.130
 ___block_descriptor_40_e8_32w_e23_v28?0B812"NSArray"20l
 ___block_descriptor_48_e8_32s40w_e20_v20?0I8"NSArray"12l
-_OBJC_CLASSLIST_REFERENCES_$_.193
-_OBJC_CLASSLIST_REFERENCES_$_.204
-_OBJC_SELECTOR_REFERENCES_.206
-_OBJC_SELECTOR_REFERENCES_.208
+_OBJC_CLASSLIST_REFERENCES_$_.189
+_OBJC_CLASSLIST_REFERENCES_$_.199
+_OBJC_CLASSLIST_REFERENCES_$_.210
 _OBJC_IVAR_$_KTKDeviceKontaktDFUOperation._device
 _OBJC_IVAR_$_KTKDeviceKontaktDFUOperation._updateProgressBlock
 _OBJC_IVAR_$_KTKDeviceKontaktDFUOperation._updateCompletionBlock
@@ -4390,9 +4599,9 @@ ___43-[KTKDeviceKontaktImageOperation finished:]_block_invoke
 -[KTKDeviceKontaktImageOperation data]
 -[KTKDeviceKontaktImageOperation setData:]
 -[KTKDeviceKontaktImageOperation .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.140
-_OBJC_CLASSLIST_REFERENCES_$_.158
+_OBJC_CLASSLIST_REFERENCES_$_.164
 ___block_descriptor_56_e8_32r40r48w_e12_v24?08^B16l
+_OBJC_CLASSLIST_REFERENCES_$_.193
 _OBJC_IVAR_$_KTKDeviceKontaktImageOperation._readSectorCompletion
 _OBJC_IVAR_$_KTKDeviceKontaktImageOperation._configuration
 _OBJC_IVAR_$_KTKDeviceKontaktImageOperation._response
@@ -4461,7 +4670,6 @@ KontaktSDK/Device/Nearby/KTKNearbyDeviceLegacyParser.m
 -[KTKTrigger executor]
 -[KTKTrigger setExecutor:]
 -[KTKTrigger .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.53
 _OBJC_CLASSLIST_REFERENCES_$_.76
 __OBJC_$_CLASS_METHODS_KTKTrigger
 __OBJC_CLASS_PROTOCOLS_$_KTKTrigger
@@ -4512,15 +4720,11 @@ ___45-[KTKDeviceDataLoggerReadOperation finished:]_block_invoke_3
 -[KTKDeviceDataLoggerReadOperation .cxx_destruct]
 _ktk_device_data_logger_read_queue
 ___ktk_device_data_logger_read_queue_block_invoke
-_OBJC_CLASSLIST_REFERENCES_$_.121
-_OBJC_CLASSLIST_REFERENCES_$_.122
 _OBJC_IVAR_$_KTKDeviceDataLoggerReadOperation._device
-_OBJC_CLASSLIST_REFERENCES_$_.146
 ___block_descriptor_40_e8_32w_e58_v32?0"KTKDeviceDataLoggerHeader"8"NSData"16"NSArray"24l
-_OBJC_CLASSLIST_REFERENCES_$_.184
-_OBJC_CLASSLIST_REFERENCES_$_.189
-___block_descriptor_32_e67_q24?0"KTKDeviceDataLoggerReading"8"KTKDeviceDataLoggerReading"16l
 _OBJC_CLASSLIST_REFERENCES_$_.195
+___block_descriptor_32_e67_q24?0"KTKDeviceDataLoggerReading"8"KTKDeviceDataLoggerReading"16l
+_OBJC_CLASSLIST_REFERENCES_$_.201
 _OBJC_IVAR_$_KTKDeviceDataLoggerReadOperation._deviceDate
 _OBJC_IVAR_$_KTKDeviceDataLoggerReadOperation._configuration
 _OBJC_IVAR_$_KTKDeviceDataLoggerReadOperation._progress
@@ -4536,7 +4740,7 @@ __OBJC_$_PROP_LIST_KTKDeviceDataLoggerReadOperation
 __OBJC_CLASS_RO_$_KTKDeviceDataLoggerReadOperation
 _ktk_device_data_logger_read_queue.ktk_device_data_logger_read_queue
 _ktk_device_data_logger_read_queue.onceToken
-___block_literal_global.299
+___block_literal_global.305
 /Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/Operations/Logger/KTKDeviceDataLoggerReadOperation.m
 __ktk_device_data_logger_read_queue_block_invoke
 KontaktSDK/Device/Connection/Operations/Logger/KTKDeviceDataLoggerReadOperation.m
@@ -4641,7 +4845,6 @@ ___block_descriptor_48_e8_32bs40r_e5_v8?0l
 ___block_descriptor_56_e8_32bs40r48r_e5_v8?0l
 ___block_descriptor_80_e8_32s40bs48r56r64w_e5_v8?0l
 ___block_descriptor_72_e8_32s40s48s56r64r_e25_v32?0"CLBeacon"8Q16^B24l
-_OBJC_CLASSLIST_REFERENCES_$_.69
 ___block_descriptor_64_e8_32s40s48s56s_e43_v32?0"NSString"8"KTKShuffleObject"16^B24l
 ___block_descriptor_32_e17_v16?0"NSError"8l
 ___block_descriptor_72_e8_32s40s48s56s64bs_e34_v24?0"NSDictionary"8"NSError"16l
@@ -4710,7 +4913,6 @@ __58-[KTKShuffleManager batchResolveBeacons:limit:completion:]_block_invoke
 -[KTKDeviceWriteOperation setVerified:]
 -[KTKDeviceWriteOperation withoutResponse]
 -[KTKDeviceWriteOperation setWithoutResponse:]
-_OBJC_CLASSLIST_REFERENCES_$_.173
 _OBJC_IVAR_$_KTKDeviceWriteOperation._withoutResponse
 __OBJC_METACLASS_RO_$_KTKDeviceWriteOperation
 __OBJC_$_INSTANCE_METHODS_KTKDeviceWriteOperation
@@ -4781,6 +4983,7 @@ _KTKDeviceSymbolFromSecureProfileModel
 +[KTKNearbyDeviceSecureProfileParser updateDevice:deviceLocationData:]
 +[KTKNearbyDeviceSecureProfileParser updateDevice:deviceNanoTagData:]
 +[KTKNearbyDeviceSecureProfileParser updateDevice:devicePeopleDetectionFrame:]
+_OBJC_CLASSLIST_REFERENCES_$_.106
 __OBJC_$_CLASS_METHODS_KTKNearbyDeviceSecureProfileParser
 __OBJC_CLASS_PROTOCOLS_$_KTKNearbyDeviceSecureProfileParser
 __OBJC_METACLASS_RO_$_KTKNearbyDeviceSecureProfileParser
@@ -4793,10 +4996,10 @@ KTKDeviceModelFromSecureProfileModel
 -[KTKDeviceDataLoggerConnection observeValueForKeyPath:ofObject:change:context:]
 -[KTKDeviceDataLoggerConnection dataLoggerReadUntil:completion:]
 ___64-[KTKDeviceDataLoggerConnection dataLoggerReadUntil:completion:]_block_invoke
-___64-[KTKDeviceDataLoggerConnection dataLoggerReadUntil:completion:]_block_invoke.132
+___64-[KTKDeviceDataLoggerConnection dataLoggerReadUntil:completion:]_block_invoke.138
 -[KTKDeviceDataLoggerConnection dataLoggerClearWithCompletion:]
 ___63-[KTKDeviceDataLoggerConnection dataLoggerClearWithCompletion:]_block_invoke
-___63-[KTKDeviceDataLoggerConnection dataLoggerClearWithCompletion:]_block_invoke.154
+___63-[KTKDeviceDataLoggerConnection dataLoggerClearWithCompletion:]_block_invoke.160
 _ProgressObserverContext
 ___block_descriptor_40_e8_32bs_e56_v32?0"KTKDeviceConfiguration"8"NSArray"16"NSArray"24l
 ___block_descriptor_57_e8_32s40bs48w_e44_v24?0"KTKDeviceConfiguration"8"NSError"16l
@@ -4807,9 +5010,9 @@ __OBJC_$_INSTANCE_METHODS_KTKDeviceDataLoggerConnection
 __OBJC_CLASS_RO_$_KTKDeviceDataLoggerConnection
 /Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/KTKDeviceDataLoggerConnection.m
 KontaktSDK/Device/Connection/KTKDeviceDataLoggerConnection.m
-__63-[KTKDeviceDataLoggerConnection dataLoggerClearWithCompletion:]_block_invoke.154
+__63-[KTKDeviceDataLoggerConnection dataLoggerClearWithCompletion:]_block_invoke.160
 __63-[KTKDeviceDataLoggerConnection dataLoggerClearWithCompletion:]_block_invoke
-__64-[KTKDeviceDataLoggerConnection dataLoggerReadUntil:completion:]_block_invoke.132
+__64-[KTKDeviceDataLoggerConnection dataLoggerReadUntil:completion:]_block_invoke.138
 __64-[KTKDeviceDataLoggerConnection dataLoggerReadUntil:completion:]_block_invoke
 -[KTKDeviceConnection dealloc]
 -[KTKDeviceConnection initWithNearbyDevice:]
@@ -4820,13 +5023,13 @@ __64-[KTKDeviceDataLoggerConnection dataLoggerReadUntil:completion:]_block_invok
 +[KTKDeviceConnection cancelAllOperations]
 -[KTKDeviceConnection writeConfiguration:completion:]
 ___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke
-___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.173
-___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.184
+___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.179
+___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.190
 ___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke_2
 ___copy_helper_block_e8_32s40b
-___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.196
-___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke_2.199
-___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.206
+___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.202
+___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke_2.205
+___53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.212
 -[KTKDeviceConnection readConfigurationWithCompletion:]
 ___55-[KTKDeviceConnection readConfigurationWithCompletion:]_block_invoke
 -[KTKDeviceConnection synchDeviceConfigurationWithCompletion:]
@@ -4844,33 +5047,33 @@ ___62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke
 ___copy_helper_block_e8_32b40s48s56b64w
 -[KTKDeviceConnection getImage:completion:]
 ___43-[KTKDeviceConnection getImage:completion:]_block_invoke
-___43-[KTKDeviceConnection getImage:completion:]_block_invoke.273
 ___43-[KTKDeviceConnection getImage:completion:]_block_invoke.279
+___43-[KTKDeviceConnection getImage:completion:]_block_invoke.285
 ___copy_helper_block_e8_32b40s48r56w
 -[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]
 ___71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke
 ___71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke_2
-___71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke.290
-___71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke_2.291
+___71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke.296
+___71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke_2.297
 -[KTKDeviceConnection cancel]
 ___29-[KTKDeviceConnection cancel]_block_invoke
 -[KTKDeviceConnection isExecuting]
 -[KTKDeviceConnection scheduleSessionOperation:]
 ___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke
 ___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke_2
-___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.321
-___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.328
+___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.327
+___48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.334
 -[KTKDeviceConnection startConnectionWithTimeout:]
 ___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke
 ___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.342
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.348
 ___copy_helper_block_e8_32w40w
 ___destroy_helper_block_e8_32w40w
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.349
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2.354
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.355
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2.360
 ___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_3
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.359
-___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.363
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.365
+___50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.369
 -[KTKDeviceConnection cancelConnection]
 -[KTKDeviceConnection connectionOperation:progress:]
 ___52-[KTKDeviceConnection connectionOperation:progress:]_block_invoke
@@ -4911,62 +5114,61 @@ _ktk_device_connection_operation_queue
 ___ktk_device_connection_operation_queue_block_invoke
 _ktk_device_connections_hashtable
 ___ktk_device_connections_hashtable_block_invoke
-_OBJC_CLASSLIST_REFERENCES_$_.176
-_OBJC_CLASSLIST_REFERENCES_$_.181
+_OBJC_CLASSLIST_REFERENCES_$_.169
+_OBJC_CLASSLIST_REFERENCES_$_.182
+_OBJC_CLASSLIST_REFERENCES_$_.187
 ___block_descriptor_57_e8_32bs40s48s_e44_v24?0"KTKDeviceConfiguration"8"NSError"16l
 ___block_descriptor_48_e8_32s40bs_e23_v28?0B812"NSArray"20l
 ___block_descriptor_65_e8_32s40s48s56w_e44_v24?0"KTKDeviceConfiguration"8"NSError"16l
 ___block_descriptor_40_e8_32bs_e44_v24?0"KTKDeviceConfiguration"8"NSError"16l
-_OBJC_CLASSLIST_REFERENCES_$_.211
+_OBJC_CLASSLIST_REFERENCES_$_.217
 ___block_descriptor_48_e8_32bs40w_e63_v44?0B8q12"NSString"20"KTKDeviceConfiguration"28"NSArray"36l
 ___block_descriptor_48_e8_32s40bs_e42_v24?0"KTKDeviceCredentials"8"NSError"16l
-_OBJC_CLASSLIST_REFERENCES_$_.229
-_OBJC_SELECTOR_REFERENCES_.252
-_OBJC_CLASSLIST_REFERENCES_$_.253
-_OBJC_SELECTOR_REFERENCES_.257
-_OBJC_SELECTOR_REFERENCES_.259
+_OBJC_SELECTOR_REFERENCES_.258
+_OBJC_CLASSLIST_REFERENCES_$_.259
 _OBJC_SELECTOR_REFERENCES_.261
 _OBJC_SELECTOR_REFERENCES_.263
+_OBJC_SELECTOR_REFERENCES_.265
+_OBJC_SELECTOR_REFERENCES_.267
 ___block_descriptor_48_e8_32bs40w_e20_v20?0B8"NSError"12l
-_OBJC_SELECTOR_REFERENCES_.266
-___block_descriptor_72_e8_32bs40s48s56bs64w_e44_v24?0"KTKDeviceConfiguration"8"NSError"16l
-_OBJC_CLASSLIST_REFERENCES_$_.269
-_OBJC_CLASSLIST_REFERENCES_$_.270
 _OBJC_SELECTOR_REFERENCES_.272
-___block_descriptor_48_e8_32bs40r_e40_v32?0"NSData"8"NSArray"16"NSArray"24l
+___block_descriptor_72_e8_32bs40s48s56bs64w_e44_v24?0"KTKDeviceConfiguration"8"NSError"16l
+_OBJC_CLASSLIST_REFERENCES_$_.275
+_OBJC_CLASSLIST_REFERENCES_$_.276
 _OBJC_SELECTOR_REFERENCES_.278
+___block_descriptor_48_e8_32bs40r_e40_v32?0"NSData"8"NSArray"16"NSArray"24l
+_OBJC_SELECTOR_REFERENCES_.284
 ___block_descriptor_65_e8_32bs40s48r56w_e44_v24?0"KTKDeviceConfiguration"8"NSError"16l
-_OBJC_CLASSLIST_REFERENCES_$_.284
-_OBJC_SELECTOR_REFERENCES_.286
-_OBJC_SELECTOR_REFERENCES_.288
-_OBJC_CLASSLIST_REFERENCES_$_.289
-_OBJC_SELECTOR_REFERENCES_.293
-_OBJC_SELECTOR_REFERENCES_.303
-_OBJC_SELECTOR_REFERENCES_.307
-_OBJC_CLASSLIST_REFERENCES_$_.310
-_OBJC_SELECTOR_REFERENCES_.312
-_OBJC_SELECTOR_REFERENCES_.314
-_OBJC_SELECTOR_REFERENCES_.316
+_OBJC_CLASSLIST_REFERENCES_$_.290
+_OBJC_SELECTOR_REFERENCES_.292
+_OBJC_SELECTOR_REFERENCES_.294
+_OBJC_CLASSLIST_REFERENCES_$_.295
+_OBJC_SELECTOR_REFERENCES_.309
+_OBJC_SELECTOR_REFERENCES_.313
+_OBJC_CLASSLIST_REFERENCES_$_.316
+_OBJC_SELECTOR_REFERENCES_.318
+_OBJC_SELECTOR_REFERENCES_.320
+_OBJC_SELECTOR_REFERENCES_.322
 ___block_descriptor_40_e8_32w_e17_v16?0"NSArray"8l
-_OBJC_CLASSLIST_REFERENCES_$_.320
-_OBJC_SELECTOR_REFERENCES_.324
-_OBJC_SELECTOR_REFERENCES_.326
-_OBJC_CLASSLIST_REFERENCES_$_.327
+_OBJC_CLASSLIST_REFERENCES_$_.326
+_OBJC_SELECTOR_REFERENCES_.330
 _OBJC_SELECTOR_REFERENCES_.332
-_OBJC_CLASSLIST_REFERENCES_$_.337
-_OBJC_SELECTOR_REFERENCES_.341
-_OBJC_SELECTOR_REFERENCES_.346
+_OBJC_CLASSLIST_REFERENCES_$_.333
+_OBJC_SELECTOR_REFERENCES_.338
+_OBJC_CLASSLIST_REFERENCES_$_.343
+_OBJC_SELECTOR_REFERENCES_.347
+_OBJC_SELECTOR_REFERENCES_.352
 ___block_descriptor_48_e8_32w40w_e5_v8?0l
-_OBJC_SELECTOR_REFERENCES_.351
-_OBJC_SELECTOR_REFERENCES_.353
-_OBJC_SELECTOR_REFERENCES_.356
-_OBJC_SELECTOR_REFERENCES_.358
-___block_descriptor_48_e8_32w_e17_v16?0"NSError"8l
+_OBJC_SELECTOR_REFERENCES_.357
+_OBJC_SELECTOR_REFERENCES_.359
 _OBJC_SELECTOR_REFERENCES_.362
-_OBJC_SELECTOR_REFERENCES_.367
-_OBJC_SELECTOR_REFERENCES_.369
-_OBJC_SELECTOR_REFERENCES_.371
+_OBJC_SELECTOR_REFERENCES_.364
+___block_descriptor_48_e8_32w_e17_v16?0"NSError"8l
+_OBJC_SELECTOR_REFERENCES_.368
 _OBJC_SELECTOR_REFERENCES_.373
+_OBJC_SELECTOR_REFERENCES_.375
+_OBJC_SELECTOR_REFERENCES_.377
+_OBJC_SELECTOR_REFERENCES_.379
 ___block_descriptor_56_e8_32s40w_e5_v8?0l
 __OBJC_$_CLASS_METHODS_KTKDeviceConnection
 __OBJC_$_PROTOCOL_REFS_KTKDeviceConnectionOperationDelegate
@@ -4998,13 +5200,13 @@ __OBJC_$_PROP_LIST_KTKDeviceConnection
 __OBJC_CLASS_RO_$_KTKDeviceConnection
 _ktk_device_connection_operation_queue.ktk_device_connection_operation_queue
 _ktk_device_connection_operation_queue.onceToken
-_OBJC_CLASSLIST_REFERENCES_$_.506
-_OBJC_SELECTOR_REFERENCES_.508
+_OBJC_CLASSLIST_REFERENCES_$_.512
+_OBJC_SELECTOR_REFERENCES_.514
 _ktk_device_connections_hashtable.ktk_device_connections_hashtable
 _ktk_device_connections_hashtable.onceToken
-___block_literal_global.509
-_OBJC_CLASSLIST_REFERENCES_$_.510
-_OBJC_SELECTOR_REFERENCES_.512
+___block_literal_global.515
+_OBJC_CLASSLIST_REFERENCES_$_.516
+_OBJC_SELECTOR_REFERENCES_.518
 /Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/KTKDeviceConnection.m
 __ktk_device_connections_hashtable_block_invoke
 KontaktSDK/Device/Connection/KTKDeviceConnection.m
@@ -5013,28 +5215,28 @@ __ktk_device_connection_operation_queue_block_invoke
 ktk_device_connection_operation_queue
 KontaktSDK/Device/Connection/KTKDeviceConnection.h
 __52-[KTKDeviceConnection connectionOperation:progress:]_block_invoke
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.363
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.359
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.369
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.365
 __50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_3
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2.354
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.349
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2.360
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.355
 __destroy_helper_block_e8_32w40w
 __copy_helper_block_e8_32w40w
-__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.342
+__50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke.348
 __50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke_2
 __50-[KTKDeviceConnection startConnectionWithTimeout:]_block_invoke
-__48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.328
-__48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.321
+__48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.334
+__48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke.327
 __48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke_2
 __48-[KTKDeviceConnection scheduleSessionOperation:]_block_invoke
 __29-[KTKDeviceConnection cancel]_block_invoke
-__71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke_2.291
-__71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke.290
+__71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke_2.297
+__71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke.296
 __71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke_2
 __71-[KTKDeviceConnection updateLegacyDFUWithFirmware:progress:completion:]_block_invoke
 __copy_helper_block_e8_32b40s48r56w
+__43-[KTKDeviceConnection getImage:completion:]_block_invoke.285
 __43-[KTKDeviceConnection getImage:completion:]_block_invoke.279
-__43-[KTKDeviceConnection getImage:completion:]_block_invoke.273
 __43-[KTKDeviceConnection getImage:completion:]_block_invoke
 __copy_helper_block_e8_32b40s48s56b64w
 __62-[KTKDeviceConnection updateWithFirmware:progress:completion:]_block_invoke_4
@@ -5047,13 +5249,13 @@ __62-[KTKDeviceConnection synchDeviceConfigurationWithCompletion:]_block_invoke_
 __62-[KTKDeviceConnection synchDeviceConfigurationWithCompletion:]_block_invoke_2
 __62-[KTKDeviceConnection synchDeviceConfigurationWithCompletion:]_block_invoke
 __55-[KTKDeviceConnection readConfigurationWithCompletion:]_block_invoke
-__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.206
-__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke_2.199
-__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.196
+__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.212
+__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke_2.205
+__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.202
 __copy_helper_block_e8_32s40b
 __53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke_2
-__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.184
-__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.173
+__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.190
+__53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke.179
 __53-[KTKDeviceConnection writeConfiguration:completion:]_block_invoke
 -[KTKDevicesManager initWithDelegate:]
 -[KTKDevicesManager dealloc]
@@ -5123,7 +5325,6 @@ ___block_descriptor_40_e40_B32?0"NSUUID"8"KTKNearbyDevice"16^B24l
 ___block_descriptor_72_e8_32s40r48r_e5_v8?0l
 ___block_descriptor_56_e8_32s40r48r_e5_v8?0l
 ___block_descriptor_48_e8_32r40w_e5_v8?0l
-_OBJC_CLASSLIST_REFERENCES_$_.104
 _OBJC_CLASSLIST_REFERENCES_$_.117
 __OBJC_$_CLASS_METHODS_KTKDevicesManager
 __OBJC_METACLASS_RO_$_KTKDevicesManager
@@ -5170,7 +5371,7 @@ __41-[KTKDevicesManager stopDevicesDiscovery]_block_invoke
 __42-[KTKDevicesManager startDevicesDiscovery]_block_invoke
 -[KTKDeviceGatewayConnection readConfigurationWithCompletion:]
 ___62-[KTKDeviceGatewayConnection readConfigurationWithCompletion:]_block_invoke
-___62-[KTKDeviceGatewayConnection readConfigurationWithCompletion:]_block_invoke.136
+___62-[KTKDeviceGatewayConnection readConfigurationWithCompletion:]_block_invoke.142
 -[KTKDeviceGatewayConnection writeConfiguration:completion:]
 ___60-[KTKDeviceGatewayConnection writeConfiguration:completion:]_block_invoke
 ___60-[KTKDeviceGatewayConnection writeConfiguration:completion:]_block_invoke_2
@@ -5181,20 +5382,33 @@ ___70-[KTKDeviceGatewayConnection writeUsingCloudConfiguration:completion:]_bloc
 -[KTKDeviceGatewayConnection getWiFiNetworks:]
 ___46-[KTKDeviceGatewayConnection getWiFiNetworks:]_block_invoke
 ___46-[KTKDeviceGatewayConnection getWiFiNetworks:]_block_invoke_2
+___46-[KTKDeviceGatewayConnection getWiFiNetworks:]_block_invoke.173
+___46-[KTKDeviceGatewayConnection getWiFiNetworks:]_block_invoke_2.179
 -[KTKDeviceGatewayConnection getMacDevice:]
 ___43-[KTKDeviceGatewayConnection getMacDevice:]_block_invoke
+-[KTKDeviceGatewayConnection getDiagnosticDevice:]
+___50-[KTKDeviceGatewayConnection getDiagnosticDevice:]_block_invoke
+___50-[KTKDeviceGatewayConnection getDiagnosticDevice:]_block_invoke_2
+_OBJC_CLASSLIST_REFERENCES_$_.134
 ___block_descriptor_56_e8_32bs40s48w_e40_v24?0"KTKKontaktResponse"8"NSError"16l
 ___block_descriptor_64_e8_32bs40s48s56w_e40_v24?0"KTKKontaktResponse"8"NSError"16l
 ___block_descriptor_48_e8_32bs40s_e27_v24?0"NSSet"8"NSArray"16l
 ___block_descriptor_49_e8_32bs40w_e51_v24?0"KTKDeviceGatewayConfiguration"8"NSError"16l
-_OBJC_CLASSLIST_REFERENCES_$_.167
-___block_descriptor_48_e8_32bs40w_e33_v28?0B8"NSString"12"NSArray"20l
+_OBJC_CLASSLIST_REFERENCES_$_.186
+___block_descriptor_40_e8_32bs_e33_v28?0B8"NSString"12"NSArray"20l
+_OBJC_CLASSLIST_REFERENCES_$_.194
+___block_descriptor_40_e8_32bs_e48_v24?0"KTKDeviceGatewayDiagnostic"8"NSArray"16l
+___block_descriptor_57_e8_32s40bs48w_e51_v24?0"KTKDeviceGatewayConfiguration"8"NSError"16l
 __OBJC_METACLASS_RO_$_KTKDeviceGatewayConnection
 __OBJC_$_INSTANCE_METHODS_KTKDeviceGatewayConnection
 __OBJC_CLASS_RO_$_KTKDeviceGatewayConnection
 /Users/jack/Development/ios-app/KontaktSDK/KontaktSDK/KontaktSDK/Device/Connection/KTKDeviceGatewayConnection.m
-__43-[KTKDeviceGatewayConnection getMacDevice:]_block_invoke
 KontaktSDK/Device/Connection/KTKDeviceGatewayConnection.m
+__50-[KTKDeviceGatewayConnection getDiagnosticDevice:]_block_invoke_2
+__50-[KTKDeviceGatewayConnection getDiagnosticDevice:]_block_invoke
+__43-[KTKDeviceGatewayConnection getMacDevice:]_block_invoke
+__46-[KTKDeviceGatewayConnection getWiFiNetworks:]_block_invoke_2.179
+__46-[KTKDeviceGatewayConnection getWiFiNetworks:]_block_invoke.173
 __46-[KTKDeviceGatewayConnection getWiFiNetworks:]_block_invoke_2
 __46-[KTKDeviceGatewayConnection getWiFiNetworks:]_block_invoke
 __70-[KTKDeviceGatewayConnection writeUsingCloudConfiguration:completion:]_block_invoke_2
@@ -5202,7 +5416,7 @@ __70-[KTKDeviceGatewayConnection writeUsingCloudConfiguration:completion:]_block
 __copy_helper_block_e8_32b40s48s56w
 __60-[KTKDeviceGatewayConnection writeConfiguration:completion:]_block_invoke_2
 __60-[KTKDeviceGatewayConnection writeConfiguration:completion:]_block_invoke
-__62-[KTKDeviceGatewayConnection readConfigurationWithCompletion:]_block_invoke.136
+__62-[KTKDeviceGatewayConnection readConfigurationWithCompletion:]_block_invoke.142
 __62-[KTKDeviceGatewayConnection readConfigurationWithCompletion:]_block_invoke
 -[KTKEddystoneURL init]
 +[KTKEddystoneURL eddystoneURLFromData:]
@@ -5244,8 +5458,7 @@ ___82-[KTKDeviceReadSecureConfigurationOperationOffline synchToceknDeviceConfigu
 -[KTKDeviceReadSecureConfigurationOperationOffline credentials]
 -[KTKDeviceReadSecureConfigurationOperationOffline setCredentials:]
 -[KTKDeviceReadSecureConfigurationOperationOffline .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.144
-_OBJC_CLASSLIST_REFERENCES_$_.205
+_OBJC_CLASSLIST_REFERENCES_$_.211
 _OBJC_IVAR_$_KTKDeviceReadSecureConfigurationOperationOffline._credentials
 __OBJC_METACLASS_RO_$_KTKDeviceReadSecureConfigurationOperationOffline
 __OBJC_$_INSTANCE_METHODS_KTKDeviceReadSecureConfigurationOperationOffline
@@ -5356,10 +5569,8 @@ ___54-[KTKCloudClient JSONTelemetry:parameters:completion:]_block_invoke_2
 -[KTKCloudClient sessionConfiguration]
 -[KTKCloudClient setSessionConfiguration:]
 -[KTKCloudClient .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.38
-_OBJC_CLASSLIST_REFERENCES_$_.95
-_OBJC_CLASSLIST_REFERENCES_$_.102
-_OBJC_CLASSLIST_REFERENCES_$_.111
+_OBJC_CLASSLIST_REFERENCES_$_.42
+_OBJC_CLASSLIST_REFERENCES_$_.115
 ___block_descriptor_40_e8_32bs_e20_v24?08"NSError"16l
 __OBJC_$_CLASS_METHODS_KTKCloudClient
 __OBJC_CLASS_PROTOCOLS_$_KTKCloudClient
@@ -5407,8 +5618,7 @@ ___62-[KTKDeviceWriteSecureConfigurationOperationOffline finished:]_block_invoke
 -[KTKDeviceWriteSecureConfigurationOperationOffline response]
 -[KTKDeviceWriteSecureConfigurationOperationOffline setResponse:]
 -[KTKDeviceWriteSecureConfigurationOperationOffline .cxx_destruct]
-_OBJC_CLASSLIST_REFERENCES_$_.168
-_OBJC_SELECTOR_REFERENCES_.214
+_OBJC_CLASSLIST_REFERENCES_$_.218
 _OBJC_IVAR_$_KTKDeviceWriteSecureConfigurationOperationOffline._configuration
 _OBJC_IVAR_$_KTKDeviceWriteSecureConfigurationOperationOffline._credentials
 _OBJC_IVAR_$_KTKDeviceWriteSecureConfigurationOperationOffline._response
@@ -5456,7 +5666,7 @@ KontaktSDK/Cloud/Model/KTKDeviceGatewayConfiguration.h
 -[KTKDeviceReadSecureConfigurationOperation type]
 -[KTKDeviceReadSecureConfigurationOperation createOperations]
 ___61-[KTKDeviceReadSecureConfigurationOperation createOperations]_block_invoke
-___61-[KTKDeviceReadSecureConfigurationOperation createOperations]_block_invoke.156
+___61-[KTKDeviceReadSecureConfigurationOperation createOperations]_block_invoke.162
 -[KTKDeviceReadSecureConfigurationOperation encryptReadAllCommand]
 ___66-[KTKDeviceReadSecureConfigurationOperation encryptReadAllCommand]_block_invoke
 -[KTKDeviceReadSecureConfigurationOperation decryptDeviceConfiguration]
@@ -5480,12 +5690,11 @@ ___54-[KTKDeviceReadSecureConfigurationOperation finished:]_block_invoke
 -[KTKDeviceReadSecureConfigurationOperation setConfiguration:]
 -[KTKDeviceReadSecureConfigurationOperation .cxx_destruct]
 _OBJC_IVAR_$_KTKDeviceReadSecureConfigurationOperation._otherReadings
-_OBJC_CLASSLIST_REFERENCES_$_.164
-_OBJC_CLASSLIST_REFERENCES_$_.210
-_OBJC_SELECTOR_REFERENCES_.212
-_OBJC_SELECTOR_REFERENCES_.226
-_OBJC_CLASSLIST_REFERENCES_$_.249
-_OBJC_SELECTOR_REFERENCES_.273
+_OBJC_CLASSLIST_REFERENCES_$_.167
+_OBJC_CLASSLIST_REFERENCES_$_.170
+_OBJC_CLASSLIST_REFERENCES_$_.255
+_OBJC_SELECTOR_REFERENCES_.257
+_OBJC_SELECTOR_REFERENCES_.277
 _OBJC_IVAR_$_KTKDeviceReadSecureConfigurationOperation._mtu
 _OBJC_IVAR_$_KTKDeviceReadSecureConfigurationOperation._command
 _OBJC_IVAR_$_KTKDeviceReadSecureConfigurationOperation._response
@@ -5504,5 +5713,841 @@ __54-[KTKDeviceReadSecureConfigurationOperation finished:]_block_invoke
 __71-[KTKDeviceReadSecureConfigurationOperation decryptDeviceConfiguration]_block_invoke_2
 __71-[KTKDeviceReadSecureConfigurationOperation decryptDeviceConfiguration]_block_invoke
 __66-[KTKDeviceReadSecureConfigurationOperation encryptReadAllCommand]_block_invoke
-__61-[KTKDeviceReadSecureConfigurationOperation createOperations]_block_invoke.156
+__61-[KTKDeviceReadSecureConfigurationOperation createOperations]_block_invoke.162
 __61-[KTKDeviceReadSecureConfigurationOperation createOperations]_block_invoke
++[NSURLSessionConfiguration(HTTPStubsSupport) load]
+_HTTPStubs_defaultSessionConfiguration
+_HTTPStubs_ephemeralSessionConfiguration
+_orig_defaultSessionConfiguration
+_orig_ephemeralSessionConfiguration
+__OBJC_$_CATEGORY_CLASS_METHODS_NSURLSessionConfiguration_$_HTTPStubsSupport
+__OBJC_$_CATEGORY_NSURLSessionConfiguration_$_HTTPStubsSupport
+/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/SourcePackages/checkouts/OHHTTPStubs/Sources/OHHTTPStubs/HTTPStubs+NSURLSessionConfiguration.m
+/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/SourcePackages/checkouts/OHHTTPStubs
+HTTPStubs_ephemeralSessionConfiguration
+Sources/OHHTTPStubs/HTTPStubs+NSURLSessionConfiguration.m
+HTTPStubs_defaultSessionConfiguration
++[HTTPStubsDescriptor stubDescriptorWithTestBlock:responseBlock:]
+-[HTTPStubsDescriptor description]
+-[HTTPStubsDescriptor name]
+-[HTTPStubsDescriptor setName:]
+-[HTTPStubsDescriptor testBlock]
+-[HTTPStubsDescriptor setTestBlock:]
+-[HTTPStubsDescriptor responseBlock]
+-[HTTPStubsDescriptor setResponseBlock:]
+-[HTTPStubsDescriptor .cxx_destruct]
++[HTTPStubs sharedInstance]
+___27+[HTTPStubs sharedInstance]_block_invoke
++[HTTPStubs initialize]
+-[HTTPStubs init]
+-[HTTPStubs dealloc]
++[HTTPStubs stubRequestsPassingTest:withStubResponse:]
++[HTTPStubs removeStub:]
++[HTTPStubs removeAllStubs]
++[HTTPStubs _setEnable:]
++[HTTPStubs setEnabled:]
++[HTTPStubs isEnabled]
++[HTTPStubs setEnabled:forSessionConfiguration:]
++[HTTPStubs isEnabledForSessionConfiguration:]
++[HTTPStubs allStubs]
++[HTTPStubs onStubActivation:]
++[HTTPStubs onStubRedirectResponse:]
++[HTTPStubs afterStubFinish:]
++[HTTPStubs onStubMissing:]
+-[HTTPStubs isEnabled]
+-[HTTPStubs setEnabled:]
+-[HTTPStubs addStub:]
+-[HTTPStubs removeStub:]
+-[HTTPStubs removeAllStubs]
+-[HTTPStubs firstStubPassingTestForRequest:]
+-[HTTPStubs stubDescriptors]
+-[HTTPStubs setStubDescriptors:]
+-[HTTPStubs enabledState]
+-[HTTPStubs setEnabledState:]
+-[HTTPStubs onStubActivationBlock]
+-[HTTPStubs setOnStubActivationBlock:]
+-[HTTPStubs onStubRedirectBlock]
+-[HTTPStubs setOnStubRedirectBlock:]
+-[HTTPStubs afterStubFinishBlock]
+-[HTTPStubs setAfterStubFinishBlock:]
+-[HTTPStubs onStubMissingBlock]
+-[HTTPStubs setOnStubMissingBlock:]
+-[HTTPStubs .cxx_destruct]
++[HTTPStubsProtocol canInitWithRequest:]
+-[HTTPStubsProtocol initWithRequest:cachedResponse:client:]
++[HTTPStubsProtocol canonicalRequestForRequest:]
+-[HTTPStubsProtocol cachedResponse]
+-[HTTPStubsProtocol clearAuthHeadersForRequest:]
+-[HTTPStubsProtocol startLoading]
+___33-[HTTPStubsProtocol startLoading]_block_invoke
+___33-[HTTPStubsProtocol startLoading]_block_invoke_2
+___copy_helper_block_e8_32s40s48s56s64s72s
+___33-[HTTPStubsProtocol startLoading]_block_invoke.301
+-[HTTPStubsProtocol stopLoading]
+-[HTTPStubsProtocol streamDataForClient:withStubResponse:completion:]
+___69-[HTTPStubsProtocol streamDataForClient:withStubResponse:completion:]_block_invoke
+-[HTTPStubsProtocol streamDataForClient:fromStream:timingInfo:completion:]
+___74-[HTTPStubsProtocol streamDataForClient:fromStream:timingInfo:completion:]_block_invoke
+___74-[HTTPStubsProtocol streamDataForClient:fromStream:timingInfo:completion:]_block_invoke.326
+-[HTTPStubsProtocol executeOnClientRunLoopAfterDelay:block:]
+___60-[HTTPStubsProtocol executeOnClientRunLoopAfterDelay:block:]_block_invoke
+-[HTTPStubsProtocol stopped]
+-[HTTPStubsProtocol setStopped:]
+-[HTTPStubsProtocol stub]
+-[HTTPStubsProtocol setStub:]
+-[HTTPStubsProtocol clientRunLoop]
+-[HTTPStubsProtocol setClientRunLoop:]
+-[HTTPStubsProtocol .cxx_destruct]
+__OBJC_$_CLASS_METHODS_HTTPStubsDescriptor
+__OBJC_$_PROTOCOL_REFS_HTTPStubsDescriptor
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_HTTPStubsDescriptor
+__OBJC_$_PROP_LIST_HTTPStubsDescriptor
+__OBJC_$_PROTOCOL_METHOD_TYPES_HTTPStubsDescriptor
+__OBJC_PROTOCOL_$_HTTPStubsDescriptor
+__OBJC_LABEL_PROTOCOL_$_HTTPStubsDescriptor
+__OBJC_CLASS_PROTOCOLS_$_HTTPStubsDescriptor
+__OBJC_METACLASS_RO_$_HTTPStubsDescriptor
+__OBJC_$_INSTANCE_METHODS_HTTPStubsDescriptor
+_OBJC_IVAR_$_HTTPStubsDescriptor._name
+_OBJC_IVAR_$_HTTPStubsDescriptor._testBlock
+_OBJC_IVAR_$_HTTPStubsDescriptor._responseBlock
+__OBJC_$_INSTANCE_VARIABLES_HTTPStubsDescriptor
+__OBJC_$_PROP_LIST_HTTPStubsDescriptor.75
+__OBJC_CLASS_RO_$_HTTPStubsDescriptor
+_sharedInstance.sharedInstance
+_sharedInstance.predicate
+_OBJC_CLASSLIST_REFERENCES_$_.98
+__OBJC_$_CLASS_METHODS_HTTPStubs
+__OBJC_METACLASS_RO_$_HTTPStubs
+__OBJC_$_INSTANCE_METHODS_HTTPStubs
+_OBJC_IVAR_$_HTTPStubs._enabledState
+_OBJC_IVAR_$_HTTPStubs._stubDescriptors
+_OBJC_IVAR_$_HTTPStubs._onStubActivationBlock
+_OBJC_IVAR_$_HTTPStubs._onStubRedirectBlock
+_OBJC_IVAR_$_HTTPStubs._afterStubFinishBlock
+_OBJC_IVAR_$_HTTPStubs._onStubMissingBlock
+__OBJC_$_INSTANCE_VARIABLES_HTTPStubs
+__OBJC_$_PROP_LIST_HTTPStubs
+__OBJC_CLASS_RO_$_HTTPStubs
+_OBJC_CLASSLIST_REFERENCES_$_.202
+_OBJC_CLASSLIST_REFERENCES_$_.215
+_OBJC_CLASSLIST_REFERENCES_$_.247
+_OBJC_SELECTOR_REFERENCES_.260
+_OBJC_CLASSLIST_REFERENCES_$_.261
+_OBJC_SELECTOR_REFERENCES_.280
+_OBJC_SELECTOR_REFERENCES_.293
+___block_descriptor_64_e8_32s40s48s56s_e17_v16?0"NSError"8l
+_OBJC_SELECTOR_REFERENCES_.296
+___block_descriptor_80_e8_32s40s48s56s64s72s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.298
+_OBJC_SELECTOR_REFERENCES_.300
+___block_descriptor_64_e8_32s40s48s56s_e5_v8?0l
+_OBJC_CLASSLIST_REFERENCES_$_.310
+_OBJC_SELECTOR_REFERENCES_.312
+___block_descriptor_88_e8_32s40s48s56bs_e5_v8?0l
+_OBJC_CLASSLIST_REFERENCES_$_.323
+_OBJC_SELECTOR_REFERENCES_.328
+___block_descriptor_96_e8_32s40s48s56s64bs_e5_v8?0l
+___block_descriptor_48_e8_32s40bs_e5_v8?0l
+_OBJC_IVAR_$_HTTPStubsProtocol._stopped
+_OBJC_IVAR_$_HTTPStubsProtocol._stub
+_OBJC_IVAR_$_HTTPStubsProtocol._clientRunLoop
+__OBJC_$_CLASS_METHODS_HTTPStubsProtocol
+__OBJC_METACLASS_RO_$_HTTPStubsProtocol
+__OBJC_$_INSTANCE_METHODS_HTTPStubsProtocol
+__OBJC_$_INSTANCE_VARIABLES_HTTPStubsProtocol
+__OBJC_$_PROP_LIST_HTTPStubsProtocol
+__OBJC_CLASS_RO_$_HTTPStubsProtocol
+/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/SourcePackages/checkouts/OHHTTPStubs/Sources/OHHTTPStubs/HTTPStubs.m
+Sources/OHHTTPStubs/HTTPStubs.m
+__60-[HTTPStubsProtocol executeOnClientRunLoopAfterDelay:block:]_block_invoke
+__74-[HTTPStubsProtocol streamDataForClient:fromStream:timingInfo:completion:]_block_invoke.326
+__74-[HTTPStubsProtocol streamDataForClient:fromStream:timingInfo:completion:]_block_invoke
+__69-[HTTPStubsProtocol streamDataForClient:withStubResponse:completion:]_block_invoke
+__33-[HTTPStubsProtocol startLoading]_block_invoke.301
+__copy_helper_block_e8_32s40s48s56s64s72s
+__33-[HTTPStubsProtocol startLoading]_block_invoke_2
+__33-[HTTPStubsProtocol startLoading]_block_invoke
+__27+[HTTPStubs sharedInstance]_block_invoke
+/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/SourcePackages/checkouts/OHHTTPStubs/Sources/OHHTTPStubs/HTTPStubsMethodSwizzling.m
+HTTPStubsReplaceMethod
+Sources/OHHTTPStubs/HTTPStubsMethodSwizzling.m
+/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/SourcePackages/checkouts/OHHTTPStubs/Sources/OHHTTPStubs/HTTPStubsPathHelpers.m
+OHResourceBundle
+Sources/OHHTTPStubs/HTTPStubsPathHelpers.m
+OHPathForFileInDocumentsDir
+OHPathForFileInBundle
+OHPathForFile
++[HTTPStubsResponse(JSON) responseWithJSONObject:statusCode:headers:]
+__OBJC_$_CATEGORY_CLASS_METHODS_HTTPStubsResponse_$_JSON
+__OBJC_$_CATEGORY_HTTPStubsResponse_$_JSON
+/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/SourcePackages/checkouts/OHHTTPStubs/Sources/OHHTTPStubs/HTTPStubsResponse+JSON.m
+Sources/OHHTTPStubs/HTTPStubsResponse+JSON.m
++[HTTPStubsResponse responseWithData:statusCode:headers:]
++[HTTPStubsResponse responseWithFileAtPath:statusCode:headers:]
++[HTTPStubsResponse responseWithFileURL:statusCode:headers:]
++[HTTPStubsResponse responseWithError:]
+-[HTTPStubsResponse responseTime:]
+-[HTTPStubsResponse requestTime:responseTime:]
+-[HTTPStubsResponse init]
+-[HTTPStubsResponse initWithInputStream:dataSize:statusCode:headers:]
+-[HTTPStubsResponse initWithFileAtPath:statusCode:headers:]
+-[HTTPStubsResponse initWithFileURL:statusCode:headers:]
+-[HTTPStubsResponse initWithData:statusCode:headers:]
+-[HTTPStubsResponse initWithError:]
+-[HTTPStubsResponse debugDescription]
+-[HTTPStubsResponse setRequestTime:]
+-[HTTPStubsResponse httpHeaders]
+-[HTTPStubsResponse setHttpHeaders:]
+-[HTTPStubsResponse statusCode]
+-[HTTPStubsResponse setStatusCode:]
+-[HTTPStubsResponse inputStream]
+-[HTTPStubsResponse setInputStream:]
+-[HTTPStubsResponse dataSize]
+-[HTTPStubsResponse setDataSize:]
+-[HTTPStubsResponse requestTime]
+-[HTTPStubsResponse responseTime]
+-[HTTPStubsResponse setResponseTime:]
+-[HTTPStubsResponse error]
+-[HTTPStubsResponse setError:]
+-[HTTPStubsResponse .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.38
+__OBJC_$_CLASS_METHODS_HTTPStubsResponse
+__OBJC_METACLASS_RO_$_HTTPStubsResponse
+__OBJC_$_INSTANCE_METHODS_HTTPStubsResponse
+_OBJC_IVAR_$_HTTPStubsResponse._statusCode
+_OBJC_IVAR_$_HTTPStubsResponse._httpHeaders
+_OBJC_IVAR_$_HTTPStubsResponse._inputStream
+_OBJC_IVAR_$_HTTPStubsResponse._dataSize
+_OBJC_IVAR_$_HTTPStubsResponse._requestTime
+_OBJC_IVAR_$_HTTPStubsResponse._responseTime
+_OBJC_IVAR_$_HTTPStubsResponse._error
+__OBJC_$_INSTANCE_VARIABLES_HTTPStubsResponse
+__OBJC_$_PROP_LIST_HTTPStubsResponse
+__OBJC_CLASS_RO_$_HTTPStubsResponse
+/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/SourcePackages/checkouts/OHHTTPStubs/Sources/OHHTTPStubs/HTTPStubsResponse.m
+Sources/OHHTTPStubs/HTTPStubsResponse.m
+Sources/OHHTTPStubs/include/HTTPStubsResponse.h
+-[NSURLRequest(HTTPBodyTesting) OHHTTPStubs_HTTPBody]
++[NSMutableURLRequest(HTTPBodyTesting) load]
+_OHHTTPStubs_setHTTPBody
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSURLRequest_$_HTTPBodyTesting
+__OBJC_$_CATEGORY_NSURLRequest_$_HTTPBodyTesting
+_orig_setHTTPBody
+__OBJC_$_CATEGORY_CLASS_METHODS_NSMutableURLRequest_$_HTTPBodyTesting
+__OBJC_$_CATEGORY_NSMutableURLRequest_$_HTTPBodyTesting
+/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/SourcePackages/checkouts/OHHTTPStubs/Sources/OHHTTPStubs/NSURLRequest+HTTPBodyTesting.m
+OHHTTPStubs_setHTTPBody
+Sources/OHHTTPStubs/NSURLRequest+HTTPBodyTesting.m
+_$s10Foundation10URLRequestVSbIegnd_So12NSURLRequestCSbIeyByd_TR
+_block_copy_helper
+_block_destroy_helper
+_$s10Foundation10URLRequestVSo17HTTPStubsResponseCIegno_So12NSURLRequestCAEIeyBya_TR
+_$s16OHHTTPStubsSwift11isMethodGETSb10Foundation10URLRequestVcyFSbAEcfU_
+_$s16OHHTTPStubsSwift12isMethodPOSTSb10Foundation10URLRequestVcyFSbAEcfU_
+_$s16OHHTTPStubsSwift11isMethodPUTSb10Foundation10URLRequestVcyFSbAEcfU_
+_$s16OHHTTPStubsSwift13isMethodPATCHSb10Foundation10URLRequestVcyFSbAEcfU_
+_$s16OHHTTPStubsSwift14isMethodDELETESb10Foundation10URLRequestVcyFSbAEcfU_
+_$s16OHHTTPStubsSwift12isMethodHEADSb10Foundation10URLRequestVcyFSbAEcfU_
+_$s16OHHTTPStubsSwift19isAbsoluteURLStringySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+_$sS2SSysWl
+_$s16OHHTTPStubsSwift8isSchemeySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+_$s16OHHTTPStubsSwift8isSchemeySb10Foundation10URLRequestVcSSFSbAEcfU_Tm
+_$s16OHHTTPStubsSwift6isHostySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+_$s16OHHTTPStubsSwift19isAbsoluteURLStringySb10Foundation10URLRequestVcSSFSbAEcfU_Tm
+_$s16OHHTTPStubsSwift6isPathySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+_$s16OHHTTPStubsSwift14pathStartsWithySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+_$s16OHHTTPStubsSwift14pathStartsWithySb10Foundation10URLRequestVcSSFSbAEcfU_Tm
+_$s16OHHTTPStubsSwift12pathEndsWithySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+_$s16OHHTTPStubsSwift11pathMatchesySb10Foundation10URLRequestVcSo19NSRegularExpressionCFSbAEcfU_
+_$s16OHHTTPStubsSwift11pathMatchesySb10Foundation10URLRequestVcSo19NSRegularExpressionCFSbAEcfU_TA
+_$s16OHHTTPStubsSwift11pathMatches_7optionsSb10Foundation10URLRequestVcSS_So26NSRegularExpressionOptionsVtFSbAFcfU_
+_$s16OHHTTPStubsSwift11isExtensionySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+_$s16OHHTTPStubsSwift19containsQueryParamsySb10Foundation10URLRequestVcSDyS2SSgGFSbAEcfU_
+_$s16OHHTTPStubsSwift19containsQueryParamsySb10Foundation10URLRequestVcSDyS2SSgGFSbAEcfU_TA
+_$s16OHHTTPStubsSwift14hasHeaderNamedySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+_$s16OHHTTPStubsSwift14hasHeaderNamed_5valueSb10Foundation10URLRequestVcSS_SStFSbAFcfU_TA
+_$s10Foundation4DataV15_RepresentationOWOe
+_$s16OHHTTPStubsSwift7hasBodyySb10Foundation10URLRequestVcAC4DataVFSbAEcfU_TA
+_$s10Foundation4DataV15_RepresentationOWOy
+_$s16OHHTTPStubsSwift11hasJsonBodyySb10Foundation10URLRequestVcSDys11AnyHashableVypGFSbAEcfU_TA
+_$sSlsE3mapySayqd__Gqd__7ElementQzKXEKlFSDyS2SSgG_10Foundation12URLQueryItemVTg5076$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSDyS2SSgGFAC12dE13VSSh_AFhtcfu_Tf1cn_n
+_$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSayAC12URLQueryItemVGFSbAEcfU_
+_$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSayAC12URLQueryItemVGFSbAEcfU_TA
+_$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSayAC12URLQueryItemVGFSbAEcfU_SbAG_AGtXEfU0_
+_$s16OHHTTPStubsSwift2oooiySb10Foundation10URLRequestVcSbAEc_SbAEctFSbAEcfU_
+_objectdestroy.36Tm
+_$s16OHHTTPStubsSwift2oooiySb10Foundation10URLRequestVcSbAEc_SbAEctFSbAEcfU_TA
+_$s16OHHTTPStubsSwift2aaoiySb10Foundation10URLRequestVcSbAEc_SbAEctFSbAEcfU_
+_$s16OHHTTPStubsSwift2aaoiySb10Foundation10URLRequestVcSbAEc_SbAEctFSbAEcfU_TA
+_$s16OHHTTPStubsSwift2oooiySb10Foundation10URLRequestVcSbAEc_SbAEctFSbAEcfU_TATm
+_$s16OHHTTPStubsSwift1nopySb10Foundation10URLRequestVcSbAEcFSbAEcfU_TA
+__swift_FORCE_LOAD_$_swiftCompatibility50
+__swift_FORCE_LOAD_$_swiftCompatibility51
+__swift_FORCE_LOAD_$_swiftCompatibilityDynamicReplacements
+__swift_FORCE_LOAD_$_swiftCompatibilityConcurrency
+_$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF10Foundation12URLQueryItemV_Tg5
+_$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF10Foundation12URLQueryItemV_Tg5
+_$sSMsSkRzrlE4sort2byySb7ElementSTQz_ADtKXE_tKFs15ContiguousArrayVy10Foundation12URLQueryItemVG_Tg5
+_$sSr15_stableSortImpl2byySbx_xtKXE_tKF10Foundation12URLQueryItemV_Tg5
+_$sSr15_stableSortImpl2byySbx_xtKXE_tKFySryxGz_SiztKXEfU_10Foundation12URLQueryItemV_Tg5
+_$sSMsSKRzrlE14_insertionSort6within9sortedEnd2byySny5IndexSlQzG_AFSb7ElementSTQz_AItKXEtKFSry10Foundation12URLQueryItemVG_Tg5
+_$sSr13_mergeTopRuns_6buffer2bySbSaySnySiGGz_SpyxGSbx_xtKXEtKF10Foundation12URLQueryItemV_Tg5
+_$ss6_merge3low3mid4high6buffer2bySbSpyxG_A3GSbx_xtKXEtKlF10Foundation12URLQueryItemV_Tg5
+_$ss12_ArrayBufferV20_consumeAndCreateNewAByxGyFSnySiG_Tgq5
+_$ss12_ArrayBufferV20_consumeAndCreateNewAByxGyFSnySiG_Tg5
+_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSnySiG_Tg5
+_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSnySiG_Tgq5
+_$s10Foundation4DataV2eeoiySbAC_ACtFZSbSWXEfU_
+_$ss22_ContiguousArrayBufferV20_consumeAndCreateNewAByxGyF10Foundation12URLQueryItemV_Tg5
+_$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC10Foundation12URLQueryItemV_Tg5Tf4nnd_n
+_$ss14_ArrayProtocolPsE6filterySay7ElementQzGSbAEKXEKFSay10Foundation12URLQueryItemVG_Tg5094$s16OHHTTPStubsSwift19containsQueryParamsySb10Foundation10URLRequestVcSDyS2SSgGFSbAEcfU_SbAC12fG6VXEfU_S2SSgTf1cn_nTf4ggg_n
+_$s10Foundation4DataV2eeoiySbAC_ACtFZTf4nnd_n
+_$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSnySiG_Tg5Tf4nnd_n
+_$sSasSQRzlE2eeoiySbSayxG_ABtFZ10Foundation12URLQueryItemV_Tg5Tf4nnd_n
+_$s10Foundation12URLQueryItemVACSQAAWl
+___swift_instantiateConcreteTypeFromMangledName
+__swift_stdlib_malloc_size
+_$sypSgWOh
+_$s10Foundation4DataVSgWOe
+_$s10Foundation4DataVSgWOy
+_$s10Foundation3URLVSgWOh
+_$sypSgWOhTm
+_block_copy_helper.1
+_block_destroy_helper.2
+_$s16OHHTTPStubsSwift11pathMatchesySb10Foundation10URLRequestVcSo19NSRegularExpressionCFSbAEcfU_TA.25
+_$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSayAC12URLQueryItemVGFSbAEcfU_TA.50
+_$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSayAC12URLQueryItemVGFSbAEcfU_TA.54
+_$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSayAC12URLQueryItemVGFSbAEcfU_SbAG_AGtXEfU1_
+_block_descriptor
+_block_descriptor.3
+_symbolic SS
+_$sS2SSysWL
+_symbolic So19NSRegularExpressionC
+_symbolic SDyS2SSgG
+_symbolic _____ 10Foundation4DataV
+_symbolic SDy_____ypG s11AnyHashableV
+_symbolic Say_____G 10Foundation12URLQueryItemV
+_symbolic _____SbIegnd_ 10Foundation10URLRequestV
+__swift_FORCE_LOAD_$_swiftFoundation_$_OHHTTPStubsSwift
+__swift_FORCE_LOAD_$_swiftObjectiveC_$_OHHTTPStubsSwift
+__swift_FORCE_LOAD_$_swiftDarwin_$_OHHTTPStubsSwift
+__swift_FORCE_LOAD_$_swiftCoreFoundation_$_OHHTTPStubsSwift
+__swift_FORCE_LOAD_$_swiftDispatch_$_OHHTTPStubsSwift
+__swift_FORCE_LOAD_$_swiftCoreGraphics_$_OHHTTPStubsSwift
+__swift_FORCE_LOAD_$_swiftCompatibility50_$_OHHTTPStubsSwift
+__swift_FORCE_LOAD_$_swiftCompatibility51_$_OHHTTPStubsSwift
+__swift_FORCE_LOAD_$_swiftCompatibilityDynamicReplacements_$_OHHTTPStubsSwift
+__swift_FORCE_LOAD_$_swiftCompatibilityConcurrency_$_OHHTTPStubsSwift
+_$s10Foundation12URLQueryItemVACSQAAWL
+_symbolic SnySiG
+_$sSnySiGMD
+_symbolic _____ySnySiGG s23_ContiguousArrayStorageC
+_$ss23_ContiguousArrayStorageCySnySiGGMD
+_symbolic _____y_____G s23_ContiguousArrayStorageC 10Foundation12URLQueryItemV
+_$ss23_ContiguousArrayStorageCy10Foundation12URLQueryItemVGMD
+_symbolic ypSg
+_$sypSgMD
+_$sSDys11AnyHashableVypGMD
+_symbolic _____Sg 10Foundation3URLV
+_$s10Foundation3URLVSgMD
+___swift_reflection_version
+Apple clang version 13.1.6 (clang-1316.0.20.8)
+-private-discriminator _F62B97D2CC4AB5D7E1A316E0FAC69CD1
+<swift-imported-modules>
+Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+/Users/jack/Library/Developer/Xcode/DerivedData/KontaktSDK-cquoncktkuhcmufdhnvbzrocljgs/SourcePackages/checkouts/OHHTTPStubs/Sources/OHHTTPStubsSwift/OHHTTPStubsSwift.swift
+$sypSgWOh
+<compiler-generated>
+_swift_stdlib_malloc_size
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/usr/lib/swift/shims/LibcShims.h
+__swift_instantiateConcreteTypeFromMangledName
+$s10Foundation12URLQueryItemVACSQAAWl
+==
+$sSayxSicig10Foundation12URLQueryItemV_Tg5
+$sSa15_checkSubscript_20wasNativeTypeCheckeds16_DependenceTokenVSi_SbtF10Foundation12URLQueryItemV_Tg5
+$ss12_ArrayBufferV37_checkInoutAndNativeTypeCheckedBounds_03wasfgH0ySi_SbtF10Foundation12URLQueryItemV_Tg5
+Swift runtime failure: Index out of range
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtF10Foundation12URLQueryItemV_Tg5
+$ss12_ArrayBufferV8identitySVvg10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV8identitySVvg10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvg10Foundation12URLQueryItemV_Tg5
+count.get
+$sSa9_getCountSiyF10Foundation12URLQueryItemV_Tg5
+$ss12_ArrayBufferV14immutableCountSivg10Foundation12URLQueryItemV_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvg10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSnySiG_Tg5Tf4nnd_n
+$ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitFSnySiG_Tg5
+$ss22_ContiguousArrayBufferVAByxGycfCSnySiG_Tg5
+$s10Foundation4DataV2eeoiySbAC_ACtFZTf4nnd_n
+Swift runtime failure: arithmetic overflow
+$s10Foundation4DataV15withUnsafeBytesyxxSWKXEKlFSb_Tgq5
+$s10Foundation13__DataStorageC15withUnsafeBytes2in5applyxSnySiG_xSWKXEtKlFSb_Tgq5
+Swift runtime failure: Range requires lowerBound <= upperBound
+$sSWSbs5Error_pIgydzo_SWSbsAA_pIegyrzo_TR
+$s10Foundation4DataV06InlineB0V15withUnsafeBytesyxxSWKXEKlFSb_Tgq5
+filter
+$ss16IndexingIteratorVyxGStsSt4next7ElementQzSgyFTWSay10Foundation12URLQueryItemVG_Tg5
+$ss16IndexingIteratorV4next7ElementQzSgyFSay10Foundation12URLQueryItemVG_Tg5
+$sSayxGSlsSly7ElementQz5IndexQzcirTW10Foundation12URLQueryItemV_Tg5
+$sSayxSicir10Foundation12URLQueryItemV_Tg5
+$sSiSQsSQ2eeoiySbx_xtFZTW
+$ss15ContiguousArrayV6appendyyxnF10Foundation12URLQueryItemV_Tg5
+$ss15ContiguousArrayV37_appendElementAssumeUniqueAndCapacity_03newD0ySi_xntF10Foundation12URLQueryItemV_Tg5
+$sSp10initialize2toyx_tF10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvg10Foundation12URLQueryItemV_Tg5
+$ss15ContiguousArrayV36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tF10Foundation12URLQueryItemV_Tg5
+$ss15ContiguousArrayV034_makeUniqueAndReserveCapacityIfNotD0yyF10Foundation12URLQueryItemV_Tg5
+$ss15ContiguousArrayV5countSivg10Foundation12URLQueryItemV_Tg5
+$ss15ContiguousArrayV9_getCountSiyF10Foundation12URLQueryItemV_Tg5
+$s16OHHTTPStubsSwift19containsQueryParamsySb10Foundation10URLRequestVcSDyS2SSgGFSbAEcfU_SbAC12URLQueryItemVXEfU_
+$ss22_ContiguousArrayBufferV16beginCOWMutationSbyF10Foundation12URLQueryItemV_Tg5
+$ss14_stringCompare__9expectingSbs11_StringGutsV_ADs01_D16ComparisonResultOtF
+$sSSSQsSQ2eeoiySbx_xtFZTW
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTW10Foundation12URLQueryItemV_Tg5
+$sSa9formIndex5afterySiz_tF10Foundation12URLQueryItemV_Tg5
+$sSayxGSlsSl8endIndex0B0QzvgTW10Foundation12URLQueryItemV_Tg5
+$sSa8endIndexSivg10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC10Foundation12URLQueryItemV_Tg5Tf4nnd_n
+Swift runtime failure: Division results in an overflow
+Swift runtime failure: Division by zero
+$ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitF10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferVAByxGycfC10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV20_consumeAndCreateNewAByxGyF10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV5countSivg10Foundation12URLQueryItemV_Tg5
+$s10Foundation4DataV2eeoiySbAC_ACtFZSbSWXEfU_
+Swift runtime failure: Unexpectedly found nil while unwrapping an Optional value
+$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSnySiG_Tgq5
+$sSp14moveInitialize4from5countySpyxG_SitFSnySiG_Tgq5
+$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFAG_Tgq5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSnySiG_Tgq5
+$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSnySiG_Tg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfCSnySiG_Tg5
+$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFAG_Tg5
+$ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFAG_Tg5
+$sSp10initialize4from5countySPyxG_SitFSnySiG_Tg5
+$sSp14moveInitialize4from5countySpyxG_SitFSnySiG_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvgSnySiG_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSnySiG_Tg5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSnySiG_Tg5
+$ss22_ContiguousArrayBufferV5countSivgSnySiG_Tg5
+$ss12_ArrayBufferV8capacitySivgSnySiG_Tg5
+$ss22_ContiguousArrayBufferV8capacitySivgSnySiG_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSnySiG_Tg5
+$ss12_ArrayBufferV20_consumeAndCreateNewAByxGyFSnySiG_Tg5
+$ss12_ArrayBufferV20_consumeAndCreateNewAByxGyFSnySiG_Tgq5
+$ss6_merge3low3mid4high6buffer2bySbSpyxG_A3GSbx_xtKXEtKlF10Foundation12URLQueryItemV_Tg5
+$sSp14moveInitialize4from5countySpyxG_SitF10Foundation12URLQueryItemV_Tg5
+$sSLsE1goiySbx_xtFZSpy10Foundation12URLQueryItemVG_Tg5
+$sSpyxGSLsSL1loiySbx_xtFZTW10Foundation12URLQueryItemV_Tg5
+$ss6_merge3low3mid4high6buffer2bySbSpyxG_A3GSbx_xtKXEtKlF6$deferL_yylF10Foundation12URLQueryItemV_Tg5
+$sSLsE2geoiySbx_xtFZSpy10Foundation12URLQueryItemVG_Tg5
+$sSr13_mergeTopRuns_6buffer2bySbSaySnySiGGz_SpyxGSbx_xtKXEtKF10Foundation12URLQueryItemV_Tg5
+$sSlsE5countSivgSnySiG_Tg5
+$sSnyxGSlsSxRzSZ6StrideRpzrlSl8distance4from2toSi5IndexQz_AHtFTWSi_Tg5
+$sSnsSxRzSZ6StrideRpzrlE8distance4from2toSix_xtFSi_Tg5
+$sSiSxsSx8distance2to6StrideQzx_tFTW
+$sSayxSicigSnySiG_Tg5
+$sSa15_checkSubscript_20wasNativeTypeCheckeds16_DependenceTokenVSi_SbtFSnySiG_Tg5
+$ss12_ArrayBufferV37_checkInoutAndNativeTypeCheckedBounds_03wasfgH0ySi_SbtFSnySiG_Tg5
+$sSr10_mergeRuns_2at6buffer2bySbSaySnySiGGz_SiSpyxGSbx_xtKXEtKF10Foundation12URLQueryItemV_Tg5
+$sSa24_checkSubscript_mutatingyySiFSnySiG_Tgq5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSnySiG_Tg5
+$sSa9_getCountSiyFSnySiG_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSnySiG_Tg5
+$sSa6remove2atxSi_tFSnySiG_Tg5
+$ss12_ArrayBufferV26mutableFirstElementAddressSpyxGvgSnySiG_Tg5
+$sSa21_makeMutableAndUniqueyyFSnySiG_Tg5
+$ss12_ArrayBufferV16beginCOWMutationSbyFSnySiG_Tg5
+$sSa12_endMutationyyFSnySiG_Tgq5
+$sSa21_makeMutableAndUniqueyyFSnySiG_Tgq5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSnySiG_Tgq5
+$sSMsSKRzrlE14_insertionSort6within9sortedEnd2byySny5IndexSlQzG_AFSb7ElementSTQz_AItKXEtKFSry10Foundation12URLQueryItemVG_Tg5
+$sSryxGSMsSM6swapAtyy5IndexQz_ADtFTW10Foundation12URLQueryItemV_Tg5
+$sSr6swapAtyySi_SitF10Foundation12URLQueryItemV_Tg5
+$sSryxGSlsSl9formIndex5aftery0B0Qzz_tFTW10Foundation12URLQueryItemV_Tg5
+$sSr9formIndex5afterySiz_tF10Foundation12URLQueryItemV_Tg5
+$sSryxGSKsSK5index6before5IndexQzAE_tFTW10Foundation12URLQueryItemV_Tg5
+$sSr5index6beforeS2i_tF10Foundation12URLQueryItemV_Tg5
+$sSp4movexyF10Foundation12URLQueryItemV_Tg5
+$sSryxGSlsSly7ElementQz5IndexQzcirTW10Foundation12URLQueryItemV_Tg5
+$sSryxSicir10Foundation12URLQueryItemV_Tg5
+$sSryxSicig10Foundation12URLQueryItemV_Tg5
+$sSr15_stableSortImpl2byySbx_xtKXE_tKFySryxGz_SiztKXEfU_10Foundation12URLQueryItemV_Tg5
+$sSMsSKRzrlE8_reverse6withinySny5IndexSlQzG_tFSry10Foundation12URLQueryItemVG_Tg5
+$sSr13_finalizeRuns_6buffer2bySbSaySnySiGGz_SpyxGSbx_xtKXEtKF10Foundation12URLQueryItemV_Tg5
+$sSa12_endMutationyyFSnySiG_Tg5
+$sSa9_getCountSiyFSnySiG_Tgq5
+$sSa6appendyyxnFSnySiG_Tg5
+$sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntFSnySiG_Tg5
+$sSp10initialize2toyx_tFSnySiG_Tg5
+$sSa36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSnySiG_Tg5
+$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSnySiG_Tg5
+$ss12_ArrayBufferV15mutableCapacitySivgSnySiG_Tg5
+$sSa034_makeUniqueAndReserveCapacityIfNotB0yyFSnySiG_Tg5
+$sSiSLsSL1loiySbx_xtFZTW
+$sSryxGSKsSK9formIndex6beforey0B0Qzz_tFTW10Foundation12URLQueryItemV_Tg5
+$sSr9formIndex6beforeySiz_tF10Foundation12URLQueryItemV_Tg5
+$ss12_findNextRun2in4from2by5IndexQz3end_Sb10descendingtx_AFSb7ElementQz_AJtKXEtKSkRzlFSry10Foundation12URLQueryItemVG_Tg5
+$sSryxGSlsSl5index5after5IndexQzAE_tFTW10Foundation12URLQueryItemV_Tg5
+$sSr5index5afterS2i_tF10Foundation12URLQueryItemV_Tg5
+$sSr15_stableSortImpl2byySbx_xtKXE_tKF10Foundation12URLQueryItemV_Tg5
+$sSa28_unsafeUninitializedCapacity16initializingWithSayxGSi_ySryxGz_SiztKXEtKcfC10Foundation12URLQueryItemV_Tg5
+$sSa28_unsafeUninitializedCapacity16initializingWithSayxGSi_ySryxGz_SiztKXEtKcfc6$deferL_yylF10Foundation12URLQueryItemV_Tg5
+Swift runtime failure: Can't reassign buffer in Array(unsafeUninitializedCapacity:initializingWith:)
+Swift runtime failure: Initialized count set to greater than specified capacity.
+$sSa22_allocateUninitializedySayxG_SpyxGtSiFZ10Foundation12URLQueryItemV_Tg5
+$sSa19_uninitializedCountSayxGSi_tcfC10Foundation12URLQueryItemV_Tg5
+Swift runtime failure: Can't construct Array with count < 0
+$sSMsSKRzrlE14_insertionSort6within2byySny5IndexSlQzG_Sb7ElementSTQz_AHtKXEtKFSry10Foundation12URLQueryItemVG_Tg5
+$sSpyxGSQsSQ2eeoiySbx_xtFZTW10Foundation12URLQueryItemV_Tg5
+$ss12_ArrayBufferV19firstElementAddressSpyxGvg10Foundation12URLQueryItemV_Tg5
+$sSMsSkRzrlE4sort2byySb7ElementSTQz_ADtKXE_tKFs15ContiguousArrayVy10Foundation12URLQueryItemVG_Tg5
+$ss15ContiguousArrayVyxGSMsSM04withA25MutableStorageIfAvailableyqd__Sgqd__Sry7ElementQzGzKXEKlFTW10Foundation12URLQueryItemV_ytTg5
+$ss15ContiguousArrayV04withA25MutableStorageIfAvailableyqd__Sgqd__SryxGzKXEKlF10Foundation12URLQueryItemV_ytTg5
+$ss15ContiguousArrayV30withUnsafeMutableBufferPointeryqd__qd__SryxGzKXEKlF10Foundation12URLQueryItemV_ytTg5
+$ss15ContiguousArrayV30withUnsafeMutableBufferPointeryqd__qd__SryxGzKXEKlF6$deferL_yyr__lF10Foundation12URLQueryItemV_ytTg5
+Swift runtime failure: ContiguousArray withUnsafeMutableBufferPointer: replacing the buffer is not allowed
+$ss15ContiguousArrayV12_endMutationyyF10Foundation12URLQueryItemV_Tg5
+$ss15ContiguousArrayV04withA25MutableStorageIfAvailableyqd__Sgqd__SryxGzKXEKlFqd__AEzKXEfU_10Foundation12URLQueryItemV_ytTg5
+$sSMsSkRzrlE4sort2byySb7ElementSTQz_ADtKXE_tKFySryADGzKXEfU_s15ContiguousArrayVy10Foundation12URLQueryItemVG_Tg5
+$ss15ContiguousArrayV21_makeMutableAndUniqueyyF10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF10Foundation12URLQueryItemV_Tg5
+$sSp10initialize4from5countySPyxG_SitF10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC10Foundation12URLQueryItemV_Tg5
+$ss22_ContiguousArrayBufferV8capacitySivg10Foundation12URLQueryItemV_Tg5
+$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF10Foundation12URLQueryItemV_Tg5
+$s16OHHTTPStubsSwift1nopySb10Foundation10URLRequestVcSbAEcFSbAEcfU_TA
+$s16OHHTTPStubsSwift1nopySb10Foundation10URLRequestVcSbAEcFSbAEcfU_
+objectdestroy.62
+!
+$s16OHHTTPStubsSwift2oooiySb10Foundation10URLRequestVcSbAEc_SbAEctFSbAEcfU_TA
+$s16OHHTTPStubsSwift2aaoiySb10Foundation10URLRequestVcSbAEc_SbAEctFSbAEcfU_
+&&
+objectdestroy.36
+$s16OHHTTPStubsSwift2oooiySb10Foundation10URLRequestVcSbAEc_SbAEctFSbAEcfU_
+||
+hasFormBody
+$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSayAC12URLQueryItemVGFSbAEcfU_SbAG_AGtXEfU0_
+<
+$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSayAC12URLQueryItemVGFSbAEcfU_TA
+$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSayAC12URLQueryItemVGFSbAEcfU_
+sorted
+$sSaySayxGqd__c7ElementQyd__RszSTRd__lufC10Foundation12URLQueryItemV_s15ContiguousArrayVyAFGTg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfC10Foundation12URLQueryItemV_Tg5
+$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSayAC12URLQueryItemVGFSbAEcfU_AHyXEfU_
+_allocateUninitializedArray
+ohhttpStubs_httpBody.get
+map
+$sSDyxq_GSlsSl9formIndex5aftery0B0Qzz_tFTWSS_SSSgTg5
+$sSD9formIndex5afterySD0B0Vyxq__Gz_tFSS_SSSgTg5
+$sSD8_VariantV9formIndex5afterySD0C0Vyxq__Gz_tFSS_SSSgTg5
+$ss17_NativeDictionaryV5index5afterSD5IndexVyxq__GAG_tFSS_SSSgTg5
+Swift runtime failure: Attempting to access Dictionary elements using an invalid index
+$sSDyxq_GSlsSly7ElementQz5IndexQzcirTWSS_SSSgTg5
+$sSDyx3key_q_5valuetSD5IndexVyxq__GcirSS_SSSgTg5
+$sSDyx3key_q_5valuetSD5IndexVyxq__GcigSS_SSSgTg5
+Swift runtime failure: Out of bounds: index >= endIndex
+$ss10_HashTableV14occupiedBucket5afterAB0D0VAF_tF
+$sS2SSg10Foundation12URLQueryItemVs5Error_pIgggrzo_SS3key_AA5valuetADsAE_pIegnrzo_TR
+$s16OHHTTPStubsSwift11hasFormBodyySb10Foundation10URLRequestVcSDyS2SSgGFAC12URLQueryItemVSSh_AFhtcfu_
+$ss17_NativeDictionaryV7_valuesSpyq_GvgSS_SSSgTg5
+$ss17_NativeDictionaryV5_keysSpyxGvgSS_SSSgTg5
+$sSDyxq_GSlsSl10startIndex0B0QzvgTWSS_SSSgTg5
+$sSD10startIndexSD0B0Vyxq__GvgSS_SSSgTg5
+$sSD8_VariantV10startIndexSD0C0Vyxq__GvgSS_SSSgTg5
+$ss17_NativeDictionaryV10startIndexSD0D0Vyxq__GvgSS_SSSgTg5
+$ss15ContiguousArrayV15reserveCapacityyySiF10Foundation12URLQueryItemV_Tg5
+$ss15ContiguousArrayV20_reserveCapacityImpl07minimumD013growForAppendySi_SbtF10Foundation12URLQueryItemV_Tg5
+$sSDyxq_GSlsSl5countSivgTWSS_SSSgTg5
+$sSD5countSivgSS_SSSgTg5
+$s16OHHTTPStubsSwift11hasJsonBodyySb10Foundation10URLRequestVcSDys11AnyHashableVypGFSbAEcfU_TA
+$s16OHHTTPStubsSwift11hasJsonBodyySb10Foundation10URLRequestVcSDys11AnyHashableVypGFSbAEcfU_
+init
+hasJsonBody
+$s16OHHTTPStubsSwift7hasBodyySb10Foundation10URLRequestVcAC4DataVFSbAEcfU_TA
+$s16OHHTTPStubsSwift7hasBodyySb10Foundation10URLRequestVcAC4DataVFSbAEcfU_
+$s10Foundation4DataVSQAASQ2eeoiySbx_xtFZTW
+$s10Foundation4DataV2eeoiySbAC_ACtFZ
+objectdestroy.39
+hasBody
+$s16OHHTTPStubsSwift14hasHeaderNamed_5valueSb10Foundation10URLRequestVcSS_SStFSbAFcfU_TA
+$s16OHHTTPStubsSwift14hasHeaderNamed_5valueSb10Foundation10URLRequestVcSS_SStFSbAFcfU_
+hasHeaderNamed
+$s16OHHTTPStubsSwift14hasHeaderNamedySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+$s16OHHTTPStubsSwift14hasHeaderNamedySb10Foundation10URLRequestVcSSFSbAEcfU_
+$s16OHHTTPStubsSwift19containsQueryParamsySb10Foundation10URLRequestVcSDyS2SSgGFSbAEcfU_TA
+objectdestroy.30
+$s16OHHTTPStubsSwift19containsQueryParamsySb10Foundation10URLRequestVcSDyS2SSgGFSbAEcfU_
+$sSD8IteratorV4nextx3key_q_5valuetSgyFSS_SSSgTg5
+$ss17_NativeDictionaryV12uncheckedKey2atxs10_HashTableV6BucketV_tF6$deferL_yySHRzr0_lFSS_SSSgTg5
+$ss13_UnsafeBitsetV4WordV4nextSiSgyF
+$sSD12makeIteratorSD0B0Vyxq__GyFSS_SSSgTg5
+$ss17_NativeDictionaryV12makeIteratorAB0D0Vyxq__GyFSS_SSSgTg5
+containsQueryParams
+$s16OHHTTPStubsSwift11isExtensionySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+isExtension
+$s16OHHTTPStubsSwift11pathMatches_7optionsSb10Foundation10URLRequestVcSS_So26NSRegularExpressionOptionsVtFSbAFcfU_
+pathMatches
+$s16OHHTTPStubsSwift11pathMatchesySb10Foundation10URLRequestVcSo19NSRegularExpressionCFSbAEcfU_TA
+objectdestroy.20
+$s16OHHTTPStubsSwift11pathMatchesySb10Foundation10URLRequestVcSo19NSRegularExpressionCFSbAEcfU_
+getPath
+$s16OHHTTPStubsSwift12pathEndsWithySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+$s16OHHTTPStubsSwift14pathStartsWithySb10Foundation10URLRequestVcSSFSbAEcfU_
+pathEndsWith
+$s16OHHTTPStubsSwift14pathStartsWithySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+pathStartsWith
+$s16OHHTTPStubsSwift6isPathySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+$s16OHHTTPStubsSwift19isAbsoluteURLStringySb10Foundation10URLRequestVcSSFSbAEcfU_
+isPath
+$s16OHHTTPStubsSwift6isHostySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+$s16OHHTTPStubsSwift8isSchemeySb10Foundation10URLRequestVcSSFSbAEcfU_
+isHost
+Swift runtime failure: precondition failure
+$s16OHHTTPStubsSwift8isSchemeySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+$sS2SSysWl
+isScheme
+$s16OHHTTPStubsSwift19isAbsoluteURLStringySb10Foundation10URLRequestVcSSFSbAEcfU_TA
+objectdestroy
+isAbsoluteURLString
+$s16OHHTTPStubsSwift12isMethodHEADSb10Foundation10URLRequestVcyFSbAEcfU_
+isMethodHEAD
+$s16OHHTTPStubsSwift14isMethodDELETESb10Foundation10URLRequestVcyFSbAEcfU_
+isMethodDELETE
+$s16OHHTTPStubsSwift13isMethodPATCHSb10Foundation10URLRequestVcyFSbAEcfU_
+isMethodPATCH
+$s16OHHTTPStubsSwift11isMethodPUTSb10Foundation10URLRequestVcyFSbAEcfU_
+isMethodPUT
+$s16OHHTTPStubsSwift12isMethodPOSTSb10Foundation10URLRequestVcyFSbAEcfU_
+isMethodPOST
+$s16OHHTTPStubsSwift11isMethodGETSb10Foundation10URLRequestVcyFSbAEcfU_
+isMethodGET
+$s10Foundation10URLRequestVSo17HTTPStubsResponseCIegno_So12NSURLRequestCAEIeyBya_TR
+block_destroy_helper
+block_copy_helper
+$s10Foundation10URLRequestVSbIegnd_So12NSURLRequestCSbIeyByd_TR
+stub
+fixture
+__ZL24registerAddImageCallbackPv
+__ZL16addImageCallbackPK11mach_headerl
+__ZZN5swift34swift50override_conformsToProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEPFPKNS_18TargetWitnessTableIS1_EES4_S8_EE5token
+__ZL27ProtocolConformancesSection
+_DummyTargetContextDescriptor
+Apple clang version 13.1.6 (clang-1316.0.21.1)
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility50 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility50 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Werror=c++98-compat-extra-semi -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility50 -fembed-bitcode=all -D SWIFT_RUNTIME --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_STDLIB_HAS_DLADDR -D SWIFT_STDLIB_HAS_DARWIN_LIBMALLOC=1 -D SWIFT_STDLIB_HAS_STDIN -D SWIFT_STDLIB_HAS_ENVIRON -D SWIFT_RUNTIME_OS_VERSIONING -D SWIFT_STDLIB_SHORT_MANGLING_LOOKUPS -std=c++14 -MD -MT stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o -MF stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o.d -o stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+enableAggressiveVLAFolding -Xclang -clang-vendor-feature=+revert09abecef7bbf -Xclang -clang-vendor-feature=+thisNoAlignAttr -Xclang -clang-vendor-feature=+thisNoNullAttr -mlinker-version=762 -stdlib=libc++
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/swift-macosx-x86_64
+addImageCallback
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs
+llvm.loop.mustprogress
+_getTypeDescriptorLocation
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include/swift/ABI/Metadata.h
+get
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include/swift/Basic/RelativePointer.h
+getTypeKind
+getTypeReferenceKind
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include/swift/ABI/MetadataValues.h
+applyRelativeOffset<const swift::RelativeDirectPointerImpl<swift::TargetProtocolConformanceDescriptor<swift::InProcess>, false, int>, int>
+registerAddImageCallback
+swift50override_conformsToProtocol
+Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/usr/include/dispatch/once.h
+/AppleInternal/BuildRoot
+__ZL29installGetClassHook_untrustedv
+__ZL35getObjCClassByMangledName_untrustedPKcPP10objc_class
+__ZL15OldGetClassHook
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility50 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility50 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Werror=c++98-compat-extra-semi -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility50 -fembed-bitcode=all -D SWIFT_RUNTIME --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_STDLIB_HAS_DLADDR -D SWIFT_STDLIB_HAS_DARWIN_LIBMALLOC=1 -D SWIFT_STDLIB_HAS_STDIN -D SWIFT_STDLIB_HAS_ENVIRON -D SWIFT_RUNTIME_OS_VERSIONING -D SWIFT_STDLIB_SHORT_MANGLING_LOOKUPS -std=c++14 -MD -MT stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o -MF stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o.d -o stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility50/Overrides.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+enableAggressiveVLAFolding -Xclang -clang-vendor-feature=+revert09abecef7bbf -Xclang -clang-vendor-feature=+thisNoAlignAttr -Xclang -clang-vendor-feature=+thisNoNullAttr -mlinker-version=762 -stdlib=libc++
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility50/Overrides.cpp
+getObjCClassByMangledName_untrusted
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility50/Overrides.cpp
+installGetClassHook_untrusted
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility51 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility51 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Werror=c++98-compat-extra-semi -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility51 -fembed-bitcode=all -D SWIFT_RUNTIME --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_STDLIB_HAS_DLADDR -D SWIFT_STDLIB_HAS_DARWIN_LIBMALLOC=1 -D SWIFT_STDLIB_HAS_STDIN -D SWIFT_STDLIB_HAS_ENVIRON -D SWIFT_RUNTIME_OS_VERSIONING -D SWIFT_STDLIB_SHORT_MANGLING_LOOKUPS -std=c++14 -MD -MT stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/Overrides.cpp.o -MF stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/Overrides.cpp.o.d -o stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/Overrides.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility51/Overrides.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+enableAggressiveVLAFolding -Xclang -clang-vendor-feature=+revert09abecef7bbf -Xclang -clang-vendor-feature=+thisNoAlignAttr -Xclang -clang-vendor-feature=+thisNoNullAttr -mlinker-version=762 -stdlib=libc++
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility51/Overrides.cpp
+__ZN5swift17getRootSuperclassEv
+__ZN5swift4LazyIN12_GLOBAL__N_116ConformanceStateEE19defaultInitCallbackEPv
+__ZN12_GLOBAL__N_124searchInConformanceCacheEPKN5swift14TargetMetadataINS0_9InProcessEEEPKNS0_24TargetProtocolDescriptorIS2_EE
+__ZN12_GLOBAL__N_116ConformanceState12cacheFailureEPKvPKN5swift24TargetProtocolDescriptorINS3_9InProcessEEEm
+__ZZZL20getObjCClassMetadataPKN5swift19TargetClassMetadataINS_9InProcessEEEENK3$_1clEvENUlPvE_8__invokeES6_
+__ZZZN5swift17getRootSuperclassEvENK3$_0clEvENUlPvE_8__invokeES1_
+__ZZZL24getTypeContextDescriptorPKN5swift14TargetMetadataINS_9InProcessEEEENK3$_2clEvENUlPvE_8__invokeES6_
+__ZL17swift_unreachablePKc
+__ZZZL26getExistentialTypeMetadataN5swift23ProtocolClassConstraintEPKNS_14TargetMetadataINS_9InProcessEEEmPKNS_27TargetProtocolDescriptorRefIS2_EEENK3$_3clEvENUlPvE_8__invokeESB_
+__ZN12_GLOBAL__N_122override_equalContextsEPKN5swift23TargetContextDescriptorINS0_9InProcessEEES5_
+__ZN12_GLOBAL__N_116addImageCallbackEPK11mach_header
+__ZN12_GLOBAL__N_116addImageCallbackEPK11mach_headerl
+__ZN12_GLOBAL__N_112ConformancesE
+__ZZZL20getObjCClassMetadataPKN5swift19TargetClassMetadataINS_9InProcessEEEENK3$_1clEvE7TheLazy
+__ZZZN5swift17getRootSuperclassEvENK3$_0clEvE7TheLazy
+__ZZZL24getTypeContextDescriptorPKN5swift14TargetMetadataINS_9InProcessEEEENK3$_2clEvE7TheLazy
+__ZZZL26getExistentialTypeMetadataN5swift23ProtocolClassConstraintEPKNS_14TargetMetadataINS_9InProcessEEEmPKNS_27TargetProtocolDescriptorRefIS2_EEENK3$_3clEvE7TheLazy
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility51 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility51 -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Werror=c++98-compat-extra-semi -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility51 -fembed-bitcode=all -D SWIFT_RUNTIME --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_STDLIB_HAS_DLADDR -D SWIFT_STDLIB_HAS_DARWIN_LIBMALLOC=1 -D SWIFT_STDLIB_HAS_STDIN -D SWIFT_STDLIB_HAS_ENVIRON -D SWIFT_RUNTIME_OS_VERSIONING -D SWIFT_STDLIB_SHORT_MANGLING_LOOKUPS -std=c++14 -MD -MT stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/ProtocolConformance.cpp.o -MF stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/ProtocolConformance.cpp.o.d -o stdlib/toolchain/Compatibility51/CMakeFiles/swiftCompatibility51-iphoneos-arm64.dir/ProtocolConformance.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility51/ProtocolConformance.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+enableAggressiveVLAFolding -Xclang -clang-vendor-feature=+revert09abecef7bbf -Xclang -clang-vendor-feature=+thisNoAlignAttr -Xclang -clang-vendor-feature=+thisNoNullAttr -mlinker-version=762 -stdlib=libc++
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility51/ProtocolConformance.cpp
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility51/ProtocolConformance.cpp
+push_back
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility51/Concurrent.h
+~scope_exit
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/include/llvm/ADT/ScopeExit.h
+operator()
+deallocateFreeList
+clear_and_shrink_to_fit
+deallocate
+operator unsigned long
+Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/usr/include/c++/v1/atomic
+load
+__cxx_atomic_load<unsigned long>
+end
+begin
+store
+__cxx_atomic_store<unsigned long>
+data
+__cxx_atomic_store<swift::overrides::ConcurrentReadableArray<(anonymous namespace)::ConformanceSection>::Storage *>
+copy<(anonymous namespace)::ConformanceSection *, (anonymous namespace)::ConformanceSection *>
+Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/usr/include/c++/v1/__algorithm/copy.h
+__copy<(anonymous namespace)::ConformanceSection, (anonymous namespace)::ConformanceSection>
+allocate
+max<unsigned long>
+Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/usr/include/c++/v1/__algorithm/max.h
+max<unsigned long, std::__1::__less<unsigned long, unsigned long> >
+Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/usr/include/c++/v1/__algorithm/comp.h
+__cxx_atomic_load<swift::overrides::ConcurrentReadableArray<(anonymous namespace)::ConformanceSection>::Storage *>
+override_equalContexts
+operator==
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/include/llvm/ADT/StringRef.h
+equals
+compareMemory
+getTypeContextIdentity
+empty
+StringRef
+strLen
+operator[]
+hasImportInfo
+getFlag<2U>
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include/swift/Basic/FlagSet.h
+applyRelativeOffset<const swift::RelativeDirectPointerImpl<const char, false, int>, int>
+applyRelativeOffset<const swift::RelativeIndirectablePointer<const swift::TargetContextDescriptor<swift::InProcess>, true, int, swift::TargetContextDescriptor<swift::InProcess> *>, int>
+isUnique
+__invoke
+swift_unreachable
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include/swift/Basic/Unreachable.h
+cacheFailure
+updateFailureGeneration
+getOrInsert<(anonymous namespace)::ConformanceCacheKey, const swift::TargetProtocolConformanceDescriptor<swift::InProcess> *, unsigned long &>
+__cxx_atomic_store<swift::overrides::ConcurrentMapBase<(anonymous namespace)::ConformanceCacheEntry, false>::Node *>
+atomic_compare_exchange_strong_explicit<swift::overrides::ConcurrentMapBase<(anonymous namespace)::ConformanceCacheEntry, false>::Node *>
+compare_exchange_strong
+__cxx_atomic_compare_exchange_strong<swift::overrides::ConcurrentMapBase<(anonymous namespace)::ConformanceCacheEntry, false>::Node *>
+Node<(anonymous namespace)::ConformanceCacheKey &, const swift::TargetProtocolConformanceDescriptor<swift::InProcess> *, unsigned long &>
+ConformanceCacheEntry
+atomic
+__atomic_base
+__cxx_atomic_impl
+__cxx_atomic_base_impl
+destroyNode
+compareWithKey
+__cxx_atomic_load<swift::overrides::ConcurrentMapBase<(anonymous namespace)::ConformanceCacheEntry, false>::Node *>
+searchInConformanceCache
+cacheMiss
+cachedFailure
+_swiftoverride_class_getSuperclass
+dyn_cast<swift::TargetForeignClassMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> >
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/include/llvm/Support/Casting.h
+isa<swift::TargetForeignClassMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> *>
+doit
+classof
+getKind
+getEnumeratedMetadataKind
+getObjCClassMetadata
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include/swift/Basic/Lazy.h
+classHasSuperclass
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/Compatibility51/../../public/runtime/Private.h
+getClassObject
+cachedSuccess
+getDescription
+__cxx_atomic_load<const swift::TargetProtocolConformanceDescriptor<swift::InProcess> *>
+isSuccessful
+findCached
+find<(anonymous namespace)::ConformanceCacheKey>
+getConformanceCacheTypeKey
+getTypeContextDescriptor
+~Snapshot
+decrementReaders
+fetch_sub
+__cxx_atomic_fetch_sub<unsigned long>
+snapshot
+incrementReaders
+fetch_add
+__cxx_atomic_fetch_add<unsigned long>
+getFailureGeneration
+defaultInitCallback
+ConformanceState
+initializeProtocolConformanceLookup
+ConcurrentReadableArray
+MiniVector
+swift51override_conformsToSwiftProtocol
+cacheSuccess
+makeSuccessful
+__cxx_atomic_store<const swift::TargetProtocolConformanceDescriptor<swift::InProcess> *>
+getOrInsert<(anonymous namespace)::ConformanceCacheKey, const swift::TargetProtocolConformanceDescriptor<swift::InProcess> *&, int>
+Node<(anonymous namespace)::ConformanceCacheKey &, const swift::TargetProtocolConformanceDescriptor<swift::InProcess> *&, int>
+getConformingTypeAsMetadata
+getMatchingType
+matches
+getContextDescriptor
+getSwiftProtocol
+isObjC
+getSuperclassConstraint
+getTrailingObjects<const swift::TargetMetadata<swift::InProcess> *>
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include/swift/ABI/TrailingObjects.h
+getTrailingObjectsImpl
+hasSuperclassConstraint
+getProtocols
+getTrailingObjects<swift::TargetProtocolDescriptorRef<swift::InProcess> >
+callNumTrailingObjects<const swift::TargetMetadata<swift::InProcess> *>
+numTrailingObjects
+dyn_cast<swift::TargetExistentialTypeMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> >
+isa<swift::TargetExistentialTypeMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> *>
+ConformanceCandidate
+override_getCanonicalTypeMetadata
+getExistentialTypeMetadata
+getClassConstraint
+getField<0U, 1U, swift::ProtocolClassConstraint>
+getProtocolContextDescriptorFlags
+getKindSpecificFlags
+forSwift
+dyn_cast<swift::TargetProtocolDescriptor<swift::InProcess>, const swift::TargetContextDescriptor<swift::InProcess> >
+isa<swift::TargetProtocolDescriptor<swift::InProcess>, const swift::TargetContextDescriptor<swift::InProcess> *>
+operator bool
+getAccessFunction
+isGeneric
+dyn_cast<swift::TargetTypeContextDescriptor<swift::InProcess>, const swift::TargetContextDescriptor<swift::InProcess> >
+isa<swift::TargetTypeContextDescriptor<swift::InProcess>, const swift::TargetContextDescriptor<swift::InProcess> *>
+getTypeDescriptor
+operator swift::TargetContextDescriptor<swift::InProcess> **
+operator swift::TargetContextDescriptor<swift::InProcess> *
+getDirectObjCClassName
+getIndirectObjCClass
+getProtocol
+operator const swift::TargetProtocolDescriptor<swift::InProcess> *
+applyRelativeOffset<const swift::RelativeIndirectablePointer<const swift::TargetProtocolDescriptor<swift::InProcess>, true, int, swift::TargetProtocolDescriptor<swift::InProcess> *>, int>
+Snapshot
+getRootSuperclass
+_swift_getFunctionReplacement50
+_swift_getOrigOfReplaceable50
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/CompatibilityDynamicReplacements -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/CompatibilityDynamicReplacements -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Werror=c++98-compat-extra-semi -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibilityDynamicReplacements -fembed-bitcode=all -D SWIFT_RUNTIME --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_STDLIB_HAS_DLADDR -D SWIFT_STDLIB_HAS_DARWIN_LIBMALLOC=1 -D SWIFT_STDLIB_HAS_STDIN -D SWIFT_STDLIB_HAS_ENVIRON -D SWIFT_RUNTIME_OS_VERSIONING -D SWIFT_STDLIB_SHORT_MANGLING_LOOKUPS -std=c++14 -MD -MT stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o -MF stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o.d -o stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+enableAggressiveVLAFolding -Xclang -clang-vendor-feature=+revert09abecef7bbf -Xclang -clang-vendor-feature=+thisNoAlignAttr -Xclang -clang-vendor-feature=+thisNoNullAttr -mlinker-version=762 -stdlib=libc++
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp
+swift_getOrigOfReplaceable50
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp
+swift_getFunctionReplacement50
+_swift_getFunctionTypeMetadataGlobalActorBackDeploy
+___swift_getFunctionTypeMetadataGlobalActorBackDeploy_block_invoke
+__ZZ50swift_getFunctionTypeMetadataGlobalActorBackDeployE9builderFn
+__ZZ50swift_getFunctionTypeMetadataGlobalActorBackDeployE12builderToken
+___block_descriptor_tmp
+/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D SWIFT_INLINE_NAMESPACE=__runtime -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/CompatibilityConcurrency -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/CompatibilityConcurrency -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/include -I include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/llvm/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/llvm-project/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/llvm-macosx-x86_64/tools/clang/include -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/cmark/src -I /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_Xcode/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wsuggest-override -Wstring-conversion -Wmisleading-indentation -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -arch arm64 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fno-exceptions -funwind-tables -fno-rtti -Werror=gnu -Werror=c++98-compat-extra-semi -Wall -Wglobal-constructors -Wexit-time-destructors -D SWIFT_COMPATIBILITY_LIBRARY=1 -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibilityConcurrency -fembed-bitcode=all -D SWIFT_RUNTIME --target=arm64-apple-ios7.0 -isysroot /AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk -arch arm64 -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/Library/Frameworks -F/AppleInternal/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/../../../Developer/AppleInternal/Library/Frameworks -O2 -g -D NDEBUG -D SWIFT_LIBRARY_EVOLUTION=0 -D SWIFT_STDLIB_HAS_DLADDR -D SWIFT_STDLIB_HAS_DARWIN_LIBMALLOC=1 -D SWIFT_STDLIB_HAS_STDIN -D SWIFT_STDLIB_HAS_ENVIRON -D SWIFT_RUNTIME_OS_VERSIONING -D SWIFT_STDLIB_SHORT_MANGLING_LOOKUPS -std=c++14 -MD -MT stdlib/toolchain/CompatibilityConcurrency/CMakeFiles/swiftCompatibilityConcurrency-iphoneos-arm64.dir/CompatibilityConcurrency.cpp.o -MF stdlib/toolchain/CompatibilityConcurrency/CMakeFiles/swiftCompatibilityConcurrency-iphoneos-arm64.dir/CompatibilityConcurrency.cpp.o.d -o stdlib/toolchain/CompatibilityConcurrency/CMakeFiles/swiftCompatibilityConcurrency-iphoneos-arm64.dir/CompatibilityConcurrency.cpp.o -c /AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/CompatibilityConcurrency/CompatibilityConcurrency.cpp -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -Wno-objc-load-method -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+enableAggressiveVLAFolding -Xclang -clang-vendor-feature=+revert09abecef7bbf -Xclang -clang-vendor-feature=+thisNoAlignAttr -Xclang -clang-vendor-feature=+thisNoNullAttr -mlinker-version=762 -stdlib=libc++
+/AppleInternal/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/CompatibilityConcurrency/CompatibilityConcurrency.cpp
+__swift_getFunctionTypeMetadataGlobalActorBackDeploy_block_invoke
+Sources/swiftlang/swiftlang-5.6.0.323.62/swift/stdlib/toolchain/CompatibilityConcurrency/CompatibilityConcurrency.cpp
+swift_getFunctionTypeMetadataGlobalActorBackDeploy

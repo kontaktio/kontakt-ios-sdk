@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/KTKDeviceConfiguration.h</key>
 		<data>
-		FnaNMyl4DcdwQBZr7xxFu7baeA0=
+		vryGC4JBT4wqTKW77RS5Z5uuBCU=
 		</data>
 		<key>Headers/KTKDeviceConfigurationGPIO.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Headers/KTKDeviceDefinitions.h</key>
 		<data>
-		S9oidJ+Lh9NywetySafAYh32XFM=
+		nkCKSSobJXsMiUCQXZOrLEnywqU=
 		</data>
 		<key>Headers/KTKDeviceGatewayConfiguration.h</key>
 		<data>
@@ -78,11 +78,15 @@
 		</data>
 		<key>Headers/KTKDeviceGatewayConnection.h</key>
 		<data>
-		6XjzXxbEG6Qq//ZAIZU6d2x4vJo=
+		Fdt9ixJmRqZlNBKtX+4XJh9yguo=
+		</data>
+		<key>Headers/KTKDeviceGatewayDiagnostic.h</key>
+		<data>
+		AHbF69bGkNyaJ8BWzD18blFd8OA=
 		</data>
 		<key>Headers/KTKDeviceGatewayWiFiNetwork.h</key>
 		<data>
-		Ot1AI/k4BYvQ9cILxdHThFYhL5U=
+		7t493BFMjzR8CICBRqZ5CLzf0Lo=
 		</data>
 		<key>Headers/KTKDeviceKontaktRecognitionBox.h</key>
 		<data>
@@ -134,7 +138,7 @@
 		</data>
 		<key>Headers/KTKManager.h</key>
 		<data>
-		0Dj0/EW349HN6sL307Ld472MrfY=
+		xpNsaOiMKi3SR1ytxYRNaWp/QFc=
 		</data>
 		<key>Headers/KTKNearbyDevice.h</key>
 		<data>
@@ -142,11 +146,11 @@
 		</data>
 		<key>Headers/KTKNearbyDeviceTelemetry.h</key>
 		<data>
-		6CXngxklHMCRdIlnuCoDWJ+ix6M=
+		5BvMPiEgRXOkNXqVWrt+uP2dPzc=
 		</data>
 		<key>Headers/KTKPersonPosition.h</key>
 		<data>
-		p2dGt0UIsf1CUlq5hoy5Pyx8x24=
+		UE99cHIsa7pfyHrz9ilB68BTLeE=
 		</data>
 		<key>Headers/KTKSecureBeaconRegion.h</key>
 		<data>
@@ -318,11 +322,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FnaNMyl4DcdwQBZr7xxFu7baeA0=
+			vryGC4JBT4wqTKW77RS5Z5uuBCU=
 			</data>
 			<key>hash2</key>
 			<data>
-			+IjZCerIvar6GfTIOrwNx5mrKBe4Ow5cZV5KcW7zeFc=
+			wpjFuuyR4Nlq6cQIsz3KMHBXs6Sy5z/a5n90/6e9oZE=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceConfigurationGPIO.h</key>
@@ -384,11 +388,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S9oidJ+Lh9NywetySafAYh32XFM=
+			nkCKSSobJXsMiUCQXZOrLEnywqU=
 			</data>
 			<key>hash2</key>
 			<data>
-			eDTgzk7N25lsKaxSbOzvlWbaw2XhKRnB3S9ASbpBZgE=
+			XX9ACKEZy/OyiGBle9t2jrZPGjYfIifnHzw1THhjA0I=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceGatewayConfiguration.h</key>
@@ -406,22 +410,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6XjzXxbEG6Qq//ZAIZU6d2x4vJo=
+			Fdt9ixJmRqZlNBKtX+4XJh9yguo=
 			</data>
 			<key>hash2</key>
 			<data>
-			VwSeOmpywju6/2QEgBF/yBsT5LgjoXZwUYr9GHWxm2A=
+			OMKqL0Tl99h27OIsqZ3hq+OkqwkK8UEJ0F077j72t1A=
+			</data>
+		</dict>
+		<key>Headers/KTKDeviceGatewayDiagnostic.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AHbF69bGkNyaJ8BWzD18blFd8OA=
+			</data>
+			<key>hash2</key>
+			<data>
+			ub1hHqJPOUJz9UWRAWuqGS2FxxPtYwKF/RmQItjJ8q0=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceGatewayWiFiNetwork.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ot1AI/k4BYvQ9cILxdHThFYhL5U=
+			7t493BFMjzR8CICBRqZ5CLzf0Lo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Hq22N/k/ycnUmQp7xirl9XAJ4ByH3uXCLJNx00MLjtA=
+			PvN19GGAOTzRyU4E4Ubc9kyDhc4gSV3Uuudle7Q5NU8=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceKontaktRecognitionBox.h</key>
@@ -560,11 +575,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0Dj0/EW349HN6sL307Ld472MrfY=
+			xpNsaOiMKi3SR1ytxYRNaWp/QFc=
 			</data>
 			<key>hash2</key>
 			<data>
-			oBD9hW2nP0/YRSHJZi68QlkxZ3/RW9oAmNDDw25yFek=
+			ymeYAiwM8PgxqprtA7DJ2MOiCKX+g2tvVx+fCOUjnnw=
 			</data>
 		</dict>
 		<key>Headers/KTKNearbyDevice.h</key>
@@ -582,22 +597,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6CXngxklHMCRdIlnuCoDWJ+ix6M=
+			5BvMPiEgRXOkNXqVWrt+uP2dPzc=
 			</data>
 			<key>hash2</key>
 			<data>
-			IgTNSDRo21VNvqaCg92YMKK8b1Py7W+WvbvDto1iH3g=
+			cO2eXYkFZRw3IzXvEwh3bGEQ0OhmxrknoK/aXKWrnpQ=
 			</data>
 		</dict>
 		<key>Headers/KTKPersonPosition.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			p2dGt0UIsf1CUlq5hoy5Pyx8x24=
+			UE99cHIsa7pfyHrz9ilB68BTLeE=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y2ZSfE4pqtIwtBy/QksVceL2LWguk3NlHKXvh0BCMVs=
+			mf1BSF8LyujGfgQ2pB1b+qpyiaZ11Duiwifgan/Zl2A=
 			</data>
 		</dict>
 		<key>Headers/KTKSecureBeaconRegion.h</key>

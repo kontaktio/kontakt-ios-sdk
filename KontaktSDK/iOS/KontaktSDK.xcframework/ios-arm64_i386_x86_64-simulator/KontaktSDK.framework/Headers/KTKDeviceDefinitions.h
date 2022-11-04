@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.0.25
+//  Version: 3.0.26
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -308,6 +308,11 @@ typedef NS_OPTIONS(NSInteger, KTKDeviceTelemetryFields) {
     KTKDeviceTelemetryFieldsPeopleDetection                 = 1 << 29,
     
     /**
+     *  RSSI Scan.
+     */
+    KTKDeviceTelemetryFieldsRSSIScan                        = 1 << 30,
+    
+    /**
      *  All supprted packets.
      */
     KTKDeviceTelemetryFieldsAll                             = (NSInteger)0b111111111111111111111111
@@ -501,6 +506,18 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
      *  Anchor Beacon
      */
     KTKDeviceModelAnchorBeacon2 = 34,
+    /**
+     *  Mini Beam
+     */
+    KTKDeviceModelMiniBeam = 35,
+    /**
+     *  Portal Beam IR
+     */
+    KTKDeviceModelPortalBeamIR = 36,
+    /**
+     *  Dispenser Beacon
+     */
+    KTKDeviceModelDispenserBeacon = 37,
     
     /**
      *  Partner provided name
@@ -547,6 +564,9 @@ typedef NS_ENUM(NSInteger, KTKDeviceSymbol) {
     KTKDeviceSymbolNASE_1 = 32,
     KTKDeviceSymbolAST_2 = 33,
     KTKDeviceSymbolANB_2 = 34,
+    KTKDeviceSymbolMB = 35,
+    KTKDeviceSymbolPB_IR = 36,
+    KTKDeviceSymbolDB = 37,
     
     KTKDeviceSymbolPD = 128
 };
@@ -670,7 +690,6 @@ typedef NS_ENUM(NSInteger, KTKDeviceOccupancyModel) {
      */
     KTKDeviceOccupancyModeFootfallCorridor    = 3
 };
-
 
 /**
  *  A device data logger fields.

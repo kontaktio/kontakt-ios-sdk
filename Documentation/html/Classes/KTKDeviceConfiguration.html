@@ -64,6 +64,8 @@
 		
 		<option value="//api/name/bleScanInterval">bleScanInterval</option>
 		
+		<option value="//api/name/blinkInterval">blinkInterval</option>
+		
 		<option value="//api/name/dataLoggerFields">dataLoggerFields</option>
 		
 		<option value="//api/name/dataLoggerSamplingInterval">dataLoggerSamplingInterval</option>
@@ -77,6 +79,12 @@
 		<option value="//api/name/inclusions">inclusions</option>
 		
 		<option value="//api/name/instanceID">instanceID</option>
+		
+		<option value="//api/name/irDetectionDuration">irDetectionDuration</option>
+		
+		<option value="//api/name/irDetectionInterval">irDetectionInterval</option>
+		
+		<option value="//api/name/irDetectionSleep">irDetectionSleep</option>
 		
 		<option value="//api/name/irRoomNumber">irRoomNumber</option>
 		
@@ -1229,6 +1237,198 @@ You should only use it to change the device&rsquo;s password.</p>
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/blinkInterval" title="blinkInterval"></a>
+	<h3 class="method-title"><code><a href="#//api/name/blinkInterval">&nbsp;&nbsp;blinkInterval</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Bluetooth blink Interval value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readwrite) NSNumber *blinkInterval</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Bluetooth blink Interval value.</p>
+
+<p>This property can be used Blink time for IR emitter, in seconds. 0 - disabled. Default: 2 (s)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/irDetectionInterval" title="irDetectionInterval"></a>
+	<h3 class="method-title"><code><a href="#//api/name/irDetectionInterval">&nbsp;&nbsp;irDetectionInterval</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Bluetooth ir detection interval value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readwrite) NSNumber *irDetectionInterval</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Bluetooth ir detection interval value.</p>
+
+<p>This property can be used to set seconds to sleep between detection attempts. Default: 5 (s)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/irDetectionDuration" title="irDetectionDuration"></a>
+	<h3 class="method-title"><code><a href="#//api/name/irDetectionDuration">&nbsp;&nbsp;irDetectionDuration</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Bluetooth ir detection duration value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readwrite) NSNumber *irDetectionDuration</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Bluetooth ir detection duration value.</p>
+
+<p>This property can be used to set seconds to try and detect the IR signal, before going to sleep again. Default: 2 (s)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/irDetectionSleep" title="irDetectionSleep"></a>
+	<h3 class="method-title"><code><a href="#//api/name/irDetectionSleep">&nbsp;&nbsp;irDetectionSleep</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Bluetooth  ir detection sleep value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readwrite) NSNumber *irDetectionSleep</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Bluetooth  ir detection sleep value.</p>
+
+<p>This property can be used to set seconds 0: disabled, 1: enabled. Default: 1</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConfiguration.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/bleScanInterval" title="bleScanInterval"></a>
 	<h3 class="method-title"><code><a href="#//api/name/bleScanInterval">&nbsp;&nbsp;bleScanInterval</a></code>
 </h3>
@@ -2005,7 +2205,7 @@ This is represented in the Cloud API as <code>customConfiguration</code>.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 Kontakt.io. All rights reserved. Updated: 2022-04-28</p>
+						<p class="copyright">Copyright &copy; 2022 Kontakt.io. All rights reserved. Updated: 2022-11-04</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
