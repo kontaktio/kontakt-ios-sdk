@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = "KontaktSDK"
-  s.version                 = "3.0.25"
+  s.version                 = "3.0.26"
   s.license                 = { :type => 'CC-ND', :file => 'LICENSE' }
   s.summary                 = "Kontakt.io SDK for iOS"
   s.homepage                = "http://kontakt.io"
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
     :flatten => true
   }
 
-  s.ios.vendored_frameworks = "Cocoapods/iOS/KontaktSDK.xcframework"
+  s.ios.vendored_frameworks = "Cocoapods/KontaktSDK/iOS/KontaktSDK.xcframework"
 
   # s.tvos.vendored_frameworks = "Cocoapods/tvOS/KontaktSDK.framework"
 
