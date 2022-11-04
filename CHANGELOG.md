@@ -1,5 +1,14 @@
 ## Changelog
 
+### v3.0.26 - 4 Nov 2022
+- Added support for new devices
+- Added Diagnostic service for portal Beam
+- Added device count
+- Added RSSI scan telemetry files
+- Added new UK enviroment
+- Fix telemetry logic
+- Added config for Portal Beam IR
+
 ### v3.0.23 - 13 Apr 2022
 - Refactor code
 - Update documentation
