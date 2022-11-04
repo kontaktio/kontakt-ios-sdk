@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceDataLoggerConnectionReadBlock Block Reference</title>
+	<title>KTKDeviceGatewayConnectionGetDiagnosticBlock Block Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceDataLoggerConnectionReadBlock Block Reference</h1>
+					<h1 class="title">KTKDeviceGatewayConnectionGetDiagnosticBlock Block Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKDeviceDataLoggerConnection.h</td>
+	<td>KTKDeviceGatewayConnection.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -79,22 +79,22 @@
           
           <a title="Block Definition" name="instance_methods"></a>
           <h4 class="method-subtitle parameter-title">Block Definition</h4>
-          <h3 class="subsubtitle method-title">KTKDeviceDataLoggerConnectionReadBlock</h3>
+          <h3 class="subsubtitle method-title">KTKDeviceGatewayConnectionGetDiagnosticBlock</h3>
 
 
 <div class="method-subsection brief-description">
-  <p>A completion block object to be executed when the data logger reading operation finishes.</p>
+  <p>A completion block object to be executed when the reading diagnostic networks operation finishes.</p>
 </div>
 
 
 
-<code>typedef void (^KTKDeviceDataLoggerConnectionReadBlock) (KTKDeviceConfiguration *_Nullable, configuration , NSArray <, KTKDeviceDataLoggerReading *>, * _Nullable, readings , NSError *_Nullable, error )</code>
+<code>typedef void (^KTKDeviceGatewayConnectionGetDiagnosticBlock) (KTKDeviceGatewayDiagnostic *_Nullable, gatewayDiagnostic , NSError *_Nullable, error )</code>
   
   
   
   <div class="method-subsection discussion-section">
   <h4 class="method-subtitle">Discussion</h4>
-  <p>A completion block object to be executed when the data logger reading operation finishes.</p>
+  <p>A completion block object to be executed when the reading diagnostic networks operation finishes.</p>
   </div>
   
   
@@ -107,7 +107,7 @@
   
   <div class="method-subsection declared-in-section">
   <h4 class="method-subtitle">Declared In</h4>
-  <code class="declared-in-ref">KTKDeviceDataLoggerConnection.h</code><br />
+  <code class="declared-in-ref">KTKDeviceGatewayConnection.h</code><br />
   </div>
   
   

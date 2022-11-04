@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceDataLoggerFields Constants Reference</title>
+	<title>KTKDeviceGasTypFields Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceDataLoggerFields Constants Reference</h1>
+					<h1 class="title">KTKDeviceGasTypFields Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKDeviceDefinitions.h</td>
+	<td>KTKNearbyDeviceTelemetry.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,11 +75,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKDeviceDataLoggerFields</h3>
+                    <h3 class="subsubtitle method-title">KTKDeviceGasTypFields</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>A device data logger fields.</p>
+                        <p>A device gas typ fields.</p>
 					</div>
 					
 					
@@ -87,23 +87,25 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_OPTIONS(uint32_t, KTKDeviceDataLoggerFields ) {<br>
+                        <code>typedef NS_OPTIONS(uint8_t, KTKDeviceGasTypFields ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceDataLoggerFieldsTemperature8</a> = 1 &lt; &lt; 0,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceGasTypGenericPPM</a> = 0 x00,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceDataLoggerFieldsTemperature16</a> = 1 &lt; &lt; 1,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceGasTypCarbonMonoxide</a> = 0 x01,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceDataLoggerFieldsHumidity</a> = 1 &lt; &lt; 2,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceGasTypEthanol</a> = 0 x02,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceDataLoggerFieldsLightLevel</a> = 1 &lt; &lt; 3,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceGasTypVolatileOrganicCompounds</a> = 0 x03,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceDataLoggerFieldsAccelerometer</a> = 1 &lt; &lt; 4,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceGasTypPM1_0</a> = 0 x04,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceDataLoggerFieldsDebugCounter</a> = 1 &lt; &lt; 5,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceGasTypPM2_5</a> = 0 x05,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceDataLoggerFieldsTimestamp</a> = 1 &lt; &lt; 6,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceGasTypPM10_0</a> = 0 x06,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceDataLoggerFieldsBattery</a> = 1 &lt; &lt; 7,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceGasTypCarbonDioxide</a> = 0 x07,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceGasTypGasResistance</a> = 0 x08,<br>
                             
                             };</code>
                     
@@ -113,11 +115,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKDeviceDataLoggerFieldsTemperature8"></a><code>KTKDeviceDataLoggerFieldsTemperature8</code></dt>
+                            <dt><a name="" title="KTKDeviceGasTypGenericPPM"></a><code>KTKDeviceGasTypGenericPPM</code></dt>
 <dd>
 
 
-<p>A device data logger fields.</p>
+<p>A device gas typ fields.</p>
 
 
 
@@ -125,16 +127,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceDataLoggerFieldsTemperature16"></a><code>KTKDeviceDataLoggerFieldsTemperature16</code></dt>
+                            <dt><a name="" title="KTKDeviceGasTypCarbonMonoxide"></a><code>KTKDeviceGasTypCarbonMonoxide</code></dt>
 <dd>
 
 
-<p>A device data logger fields.</p>
+<p>A device gas typ fields.</p>
 
 
 
@@ -142,16 +144,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceDataLoggerFieldsHumidity"></a><code>KTKDeviceDataLoggerFieldsHumidity</code></dt>
+                            <dt><a name="" title="KTKDeviceGasTypEthanol"></a><code>KTKDeviceGasTypEthanol</code></dt>
 <dd>
 
 
-<p>A device data logger fields.</p>
+<p>A device gas typ fields.</p>
 
 
 
@@ -159,16 +161,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceDataLoggerFieldsLightLevel"></a><code>KTKDeviceDataLoggerFieldsLightLevel</code></dt>
+                            <dt><a name="" title="KTKDeviceGasTypVolatileOrganicCompounds"></a><code>KTKDeviceGasTypVolatileOrganicCompounds</code></dt>
 <dd>
 
 
-<p>A device data logger fields.</p>
+<p>A device gas typ fields.</p>
 
 
 
@@ -176,16 +178,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceDataLoggerFieldsAccelerometer"></a><code>KTKDeviceDataLoggerFieldsAccelerometer</code></dt>
+                            <dt><a name="" title="KTKDeviceGasTypPM1_0"></a><code>KTKDeviceGasTypPM1_0</code></dt>
 <dd>
 
 
-<p>A device data logger fields.</p>
+<p>A device gas typ fields.</p>
 
 
 
@@ -193,16 +195,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceDataLoggerFieldsDebugCounter"></a><code>KTKDeviceDataLoggerFieldsDebugCounter</code></dt>
+                            <dt><a name="" title="KTKDeviceGasTypPM2_5"></a><code>KTKDeviceGasTypPM2_5</code></dt>
 <dd>
 
 
-<p>A device data logger fields.</p>
+<p>A device gas typ fields.</p>
 
 
 
@@ -210,16 +212,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceDataLoggerFieldsTimestamp"></a><code>KTKDeviceDataLoggerFieldsTimestamp</code></dt>
+                            <dt><a name="" title="KTKDeviceGasTypPM10_0"></a><code>KTKDeviceGasTypPM10_0</code></dt>
 <dd>
 
 
-<p>A device data logger fields.</p>
+<p>A device gas typ fields.</p>
 
 
 
@@ -227,16 +229,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceDataLoggerFieldsBattery"></a><code>KTKDeviceDataLoggerFieldsBattery</code></dt>
+                            <dt><a name="" title="KTKDeviceGasTypCarbonDioxide"></a><code>KTKDeviceGasTypCarbonDioxide</code></dt>
 <dd>
 
 
-<p>A device data logger fields.</p>
+<p>A device gas typ fields.</p>
 
 
 
@@ -244,7 +246,24 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceGasTypGasResistance"></a><code>KTKDeviceGasTypGasResistance</code></dt>
+<dd>
+
+
+<p>A device gas typ fields.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
 	</p>
 	
 </dd>
@@ -261,7 +280,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKDeviceDefinitions.h</code></p>
+                        <p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
                     </div>
                     
                     

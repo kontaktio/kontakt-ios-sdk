@@ -60,6 +60,12 @@
 		
 		<option value="//api/name/acceleration">acceleration</option>
 		
+		<option value="//api/name/accuracy">accuracy</option>
+		
+		<option value="//api/name/activationsCount">activationsCount</option>
+		
+		<option value="//api/name/activationsKontakt">activationsKontakt</option>
+		
 		<option value="//api/name/airPressuer">airPressuer</option>
 		
 		<option value="//api/name/airQuality">airQuality</option>
@@ -72,9 +78,13 @@
 		
 		<option value="//api/name/channel">channel</option>
 		
+		<option value="//api/name/charge">charge</option>
+		
 		<option value="//api/name/clickId1Count">clickId1Count</option>
 		
 		<option value="//api/name/clickId2Count">clickId2Count</option>
+		
+		<option value="//api/name/configSoap">configSoap</option>
 		
 		<option value="//api/name/dataLoggerStatus">dataLoggerStatus</option>
 		
@@ -84,9 +94,17 @@
 		
 		<option value="//api/name/detectionTimePDF">detectionTimePDF</option>
 		
+		<option value="//api/name/distance">distance</option>
+		
+		<option value="//api/name/distributor">distributor</option>
+		
 		<option value="//api/name/errors">errors</option>
 		
 		<option value="//api/name/frameCount">frameCount</option>
+		
+		<option value="//api/name/gasPPM">gasPPM</option>
+		
+		<option value="//api/name/gasTypeFields">gasTypeFields</option>
 		
 		<option value="//api/name/humidity">humidity</option>
 		
@@ -98,7 +116,11 @@
 		
 		<option value="//api/name/lastThreshold">lastThreshold</option>
 		
+		<option value="//api/name/lightLevelLux">lightLevelLux</option>
+		
 		<option value="//api/name/lightSensor">lightSensor</option>
+		
+		<option value="//api/name/mac">mac</option>
 		
 		<option value="//api/name/movementID">movementID</option>
 		
@@ -114,11 +136,23 @@
 		
 		<option value="//api/name/pirDetection">pirDetection</option>
 		
+		<option value="//api/name/refills">refills</option>
+		
 		<option value="//api/name/roomNumber">roomNumber</option>
+		
+		<option value="//api/name/rssiValues">rssiValues</option>
+		
+		<option value="//api/name/scanID">scanID</option>
 		
 		<option value="//api/name/sensitivity">sensitivity</option>
 		
+		<option value="//api/name/serialNumber">serialNumber</option>
+		
 		<option value="//api/name/singleClickCount">singleClickCount</option>
+		
+		<option value="//api/name/statusSoap">statusSoap</option>
+		
+		<option value="//api/name/statusSoapFields">statusSoapFields</option>
 		
 		<option value="//api/name/systemLoad">systemLoad</option>
 		
@@ -1739,6 +1773,660 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/distance" title="distance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/distance">&nbsp;&nbsp;distance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Measured distance in [cm]. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *distance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Measured distance in [cm]. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/accuracy" title="accuracy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/accuracy">&nbsp;&nbsp;accuracy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Accurancy 0-100%. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *accuracy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Accurancy 0-100%. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/gasTypeFields" title="gasTypeFields"></a>
+	<h3 class="method-title"><code><a href="#//api/name/gasTypeFields">&nbsp;&nbsp;gasTypeFields</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gas type. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, assign) KTKDeviceGasTypFields gasTypeFields</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Gas type. (read-only)</p>
+
+<p>0x00 Generic ppm
+0x01 Carbon Monoxide ppm
+0x02 Ethanol Monoxide ppm
+0x03 Volatile Organic Compounds ppm
+0x04 PM 1.0 ug/m3
+0x05 PM 2.5 ug/m3
+0x06 PM 10.0 ug/m3
+0x07 Carbon Dioxide ppm
+0x08 Gas resistance kOhm</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/gasPPM" title="gasPPM"></a>
+	<h3 class="method-title"><code><a href="#//api/name/gasPPM">&nbsp;&nbsp;gasPPM</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Signed, 16-bit PPM concentration, can be a positive PPM, or a difference from baseline. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *gasPPM</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Signed, 16-bit PPM concentration, can be a positive PPM, or a difference from baseline. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lightLevelLux" title="lightLevelLux"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lightLevelLux">&nbsp;&nbsp;lightLevelLux</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Unsigned, 16-bit light level measured in lux. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *lightLevelLux</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Unsigned, 16-bit light level measured in lux. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/serialNumber" title="serialNumber"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serialNumber">&nbsp;&nbsp;serialNumber</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Serial number</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *serialNumber</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Serial number</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/charge" title="charge"></a>
+	<h3 class="method-title"><code><a href="#//api/name/charge">&nbsp;&nbsp;charge</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Charge</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *charge</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Charge</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/activationsCount" title="activationsCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/activationsCount">&nbsp;&nbsp;activationsCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Activations (/1k)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *activationsCount</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Activations (/1k)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/activationsKontakt" title="activationsKontakt"></a>
+	<h3 class="method-title"><code><a href="#//api/name/activationsKontakt">&nbsp;&nbsp;activationsKontakt</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Activations (kontakt)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *activationsKontakt</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Activations (kontakt)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/refills" title="refills"></a>
+	<h3 class="method-title"><code><a href="#//api/name/refills">&nbsp;&nbsp;refills</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Refills</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *refills</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Refills</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/statusSoap" title="statusSoap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/statusSoap">&nbsp;&nbsp;statusSoap</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Status</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *statusSoap</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Status</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/statusSoapFields" title="statusSoapFields"></a>
+	<h3 class="method-title"><code><a href="#//api/name/statusSoapFields">&nbsp;&nbsp;statusSoapFields</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Status Soap Fields (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, assign) KTKDeviceStatusSoapFields statusSoapFields</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Status Soap Fields (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/configSoap" title="configSoap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/configSoap">&nbsp;&nbsp;configSoap</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Config</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *configSoap</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Config</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/distributor" title="distributor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/distributor">&nbsp;&nbsp;distributor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Distributor</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *distributor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Distributor</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/bleScans" title="bleScans"></a>
 	<h3 class="method-title"><code><a href="#//api/name/bleScans">&nbsp;&nbsp;bleScans</a></code>
 </h3>
@@ -1880,6 +2568,152 @@
 						</div>
 						
 
+						<a title="RSSI scan" name="task_RSSI scan"></a>
+						<h2 class="task-title">RSSI scan</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/scanID" title="scanID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/scanID">&nbsp;&nbsp;scanID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Scan ID - counter that identifies the current scan from the previous ones. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *scanID</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Scan ID - counter that identifies the current scan from the previous ones. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mac" title="mac"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mac">&nbsp;&nbsp;mac</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>MAC address. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *mac</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>MAC address. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rssiValues" title="rssiValues"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rssiValues">&nbsp;&nbsp;rssiValues</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>RSSI values. Zero (0x00) if not present. The values are in chronological order, as they are scanned. Above 6 values, they are discarded.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSArray&lt;NSNumber*&gt; *rssiValues</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>RSSI values. Zero (0x00) if not present. The values are in chronological order, as they are scanned. Above 6 values, they are discarded.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
 						<a title="Data Logger" name="task_Data Logger"></a>
 						<h2 class="task-title">Data Logger</h2>
 
@@ -1945,7 +2779,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 Kontakt.io. All rights reserved. Updated: 2022-04-28</p>
+						<p class="copyright">Copyright &copy; 2022 Kontakt.io. All rights reserved. Updated: 2022-11-04</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
