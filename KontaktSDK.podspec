@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   # s.osx.frameworks          = "AppKit", "Foundation", "SystemConfiguration", "CoreServices", "CoreBluetooth"
 
   s.source = {
-    :http    => "http://omg.kontakt.io.s3.amazonaws.com/ios/builds/kontakt-ios-sdk-#{s.version.to_s}.zip",
+    :http    => "http://github.com/kontaktio/kontakt-ios-sdk/archive/refs/tags/v#{s.version.to_s}.zip",
     :flatten => true
   }
 
