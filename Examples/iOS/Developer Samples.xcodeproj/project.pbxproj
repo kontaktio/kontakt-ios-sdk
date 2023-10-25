@@ -51,7 +51,6 @@
 		0D6557701E6579FF00A21FCE /* UIColor+Kontakt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Kontakt.swift"; sourceTree = "<group>"; };
 		0D6557721E657A3100A21FCE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0D6557731E657A3100A21FCE /* SamplesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplesTableViewController.swift; sourceTree = "<group>"; };
-		0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		A30813871E0955BD00DA7841 /* InfiniteScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScanViewController.swift; sourceTree = "<group>"; };
 		A30813891E0955EE00DA7841 /* InfiniteScan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfiniteScan.storyboard; sourceTree = "<group>"; };
 		A31E99421E38BB56005E73E7 /* LaunchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchButton.swift; sourceTree = "<group>"; };
@@ -121,7 +120,6 @@
 				A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */,
 				A322BB9E1DFEA7C400C847AF /* Assets.xcassets */,
 				A322BBA31DFEA7C400C847AF /* Info.plist */,
-				0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */,
 			);
 			path = "Developer Samples";
 			sourceTree = "<group>";
@@ -394,7 +392,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "Developer Samples/BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,7 +449,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "Developer Samples/BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
