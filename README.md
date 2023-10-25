@@ -29,7 +29,7 @@ You can add Kontakt.io SDK to an Xcode project by adding it as a package depende
 
 1. From the File menu, select Add Packages...
 2. Enter "https://github.com/kontaktio/kontakt-ios-sdk" into the package repository URL text field
-3. Add ComposableArchitecture directly to your application.
+3. Add KontaktSDK directly to your application.
 
 ---
 
