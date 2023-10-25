@@ -21,30 +21,15 @@ You can find more detailed information in the [Appledocs](http://developer.konta
 
 ## Installing the iOS SDK
 
-To use the Kontakt.io SDK in your project, the minimum deployment target must be iOS 9.0.
+To use the Kontakt.io SDK in your project, the minimum deployment target must be iOS 12.0.
 
-### CocoaPods
+### SPM
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+You can add Kontakt.io SDK to an Xcode project by adding it as a package dependency.
 
-``` bash
-$ gem install cocoapods
-```
-
-To integrate the Kontakt.io iOS SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-``` ruby
-platform :ios, '9.0'
-use_frameworks!
-
-pod 'KontaktSDK', '~> 3.0'
-```
-
-Then, run the following command:
-
-``` bash
-$ pod install
-```
+1. From the File menu, select Add Packages...
+2. Enter "https://github.com/kontaktio/kontakt-ios-sdk" into the package repository URL text field
+3. Add ComposableArchitecture directly to your application.
 
 ---
 

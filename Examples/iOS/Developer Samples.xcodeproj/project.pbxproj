@@ -3,15 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0D6557711E6579FF00A21FCE /* UIColor+Kontakt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557701E6579FF00A21FCE /* UIColor+Kontakt.swift */; };
 		0D6557741E657A3100A21FCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557721E657A3100A21FCE /* Constants.swift */; };
 		0D6557751E657A3100A21FCE /* SamplesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557731E657A3100A21FCE /* SamplesTableViewController.swift */; };
-		0D6557841E6584E600A21FCE /* KontaktSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6557761E657DA400A21FCE /* KontaktSDK.framework */; };
-		0D6557851E6584E600A21FCE /* KontaktSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6557761E657DA400A21FCE /* KontaktSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A30813881E0955BD00DA7841 /* InfiniteScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30813871E0955BD00DA7841 /* InfiniteScanViewController.swift */; };
 		A308138A1E0955EE00DA7841 /* InfiniteScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30813891E0955EE00DA7841 /* InfiniteScan.storyboard */; };
 		A31E99431E38BB56005E73E7 /* LaunchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31E99421E38BB56005E73E7 /* LaunchButton.swift */; };
@@ -33,6 +31,7 @@
 		A39B0CEC1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B0CEB1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift */; };
 		A3A4A35F1E07E9D6005E15A1 /* RangingBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4A35E1E07E9D6005E15A1 /* RangingBeaconsViewController.swift */; };
 		A3A4A3621E07EEB8005E15A1 /* RangingBeacons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A4A3611E07EEB8005E15A1 /* RangingBeacons.storyboard */; };
+		E51DD23A2AE9087B00F31BBB /* kontakt-ios-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = E51DD2392AE9087B00F31BBB /* kontakt-ios-sdk */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,7 +41,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0D6557851E6584E600A21FCE /* KontaktSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,7 +51,6 @@
 		0D6557701E6579FF00A21FCE /* UIColor+Kontakt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Kontakt.swift"; sourceTree = "<group>"; };
 		0D6557721E657A3100A21FCE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0D6557731E657A3100A21FCE /* SamplesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplesTableViewController.swift; sourceTree = "<group>"; };
-		0D6557761E657DA400A21FCE /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KontaktSDK.framework; path = ../../KontaktSDK/iOS/KontaktSDK.framework; sourceTree = "<group>"; };
 		0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		A30813871E0955BD00DA7841 /* InfiniteScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScanViewController.swift; sourceTree = "<group>"; };
 		A30813891E0955EE00DA7841 /* InfiniteScan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfiniteScan.storyboard; sourceTree = "<group>"; };
@@ -85,26 +82,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D6557841E6584E600A21FCE /* KontaktSDK.framework in Frameworks */,
+				E51DD23A2AE9087B00F31BBB /* kontakt-ios-sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FC20239CADD742496626DDD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0D6557761E657DA400A21FCE /* KontaktSDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		A322BB8B1DFEA7C400C847AF = {
 			isa = PBXGroup;
 			children = (
 				A322BB961DFEA7C400C847AF /* Developer Samples */,
-				1FC20239CADD742496626DDD /* Frameworks */,
 				A322BB951DFEA7C400C847AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -231,6 +219,9 @@
 			dependencies = (
 			);
 			name = "Developer Samples";
+			packageProductDependencies = (
+				E51DD2392AE9087B00F31BBB /* kontakt-ios-sdk */,
+			);
 			productName = "Developer Samples";
 			productReference = A322BB941DFEA7C400C847AF /* Developer Samples.app */;
 			productType = "com.apple.product-type.application";
@@ -241,8 +232,9 @@
 		A322BB8C1DFEA7C400C847AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = kontakt.io;
 				TargetAttributes = {
 					A322BB931DFEA7C400C847AF = {
@@ -260,14 +252,16 @@
 			};
 			buildConfigurationList = A322BB8F1DFEA7C400C847AF /* Build configuration list for PBXProject "Developer Samples" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
 			mainGroup = A322BB8B1DFEA7C400C847AF;
+			packageReferences = (
+				E51DD2382AE9087B00F31BBB /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */,
+			);
 			productRefGroup = A322BB951DFEA7C400C847AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -345,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -366,6 +361,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -377,6 +373,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../KontaktSDK/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -392,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -407,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -428,6 +426,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -439,6 +438,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../KontaktSDK/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -448,11 +448,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "Developer Samples/BridgingHeader.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -464,8 +465,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7DNS7SBDH9;
 				INFOPLIST_FILE = "Developer Samples/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.kontakt.Developer-Samples";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -478,8 +482,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7DNS7SBDH9;
 				INFOPLIST_FILE = "Developer Samples/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.kontakt.Developer-Samples";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -508,6 +515,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E51DD2382AE9087B00F31BBB /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kontaktio/kontakt-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.26;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E51DD2392AE9087B00F31BBB /* kontakt-ios-sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E51DD2382AE9087B00F31BBB /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */;
+			productName = "kontakt-ios-sdk";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A322BB8C1DFEA7C400C847AF /* Project object */;
 }
