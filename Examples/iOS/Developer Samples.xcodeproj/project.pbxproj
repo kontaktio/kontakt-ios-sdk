@@ -31,7 +31,7 @@
 		A39B0CEC1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B0CEB1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift */; };
 		A3A4A35F1E07E9D6005E15A1 /* RangingBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4A35E1E07E9D6005E15A1 /* RangingBeaconsViewController.swift */; };
 		A3A4A3621E07EEB8005E15A1 /* RangingBeacons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A4A3611E07EEB8005E15A1 /* RangingBeacons.storyboard */; };
-		E51DD23A2AE9087B00F31BBB /* kontakt-ios-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = E51DD2392AE9087B00F31BBB /* kontakt-ios-sdk */; };
+		E598DBF62AEB04AA00C5AF6A /* KontaktSDK in Frameworks */ = {isa = PBXBuildFile; productRef = E598DBF52AEB04AA00C5AF6A /* KontaktSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E51DD23A2AE9087B00F31BBB /* kontakt-ios-sdk in Frameworks */,
+				E598DBF62AEB04AA00C5AF6A /* KontaktSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +218,7 @@
 			);
 			name = "Developer Samples";
 			packageProductDependencies = (
-				E51DD2392AE9087B00F31BBB /* kontakt-ios-sdk */,
+				E598DBF52AEB04AA00C5AF6A /* KontaktSDK */,
 			);
 			productName = "Developer Samples";
 			productReference = A322BB941DFEA7C400C847AF /* Developer Samples.app */;
@@ -258,7 +258,7 @@
 			);
 			mainGroup = A322BB8B1DFEA7C400C847AF;
 			packageReferences = (
-				E51DD2382AE9087B00F31BBB /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */,
+				E598DBF42AEB04AA00C5AF6A /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */,
 			);
 			productRefGroup = A322BB951DFEA7C400C847AF /* Products */;
 			projectDirPath = "";
@@ -513,7 +513,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E51DD2382AE9087B00F31BBB /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */ = {
+		E598DBF42AEB04AA00C5AF6A /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kontaktio/kontakt-ios-sdk";
 			requirement = {
@@ -524,10 +524,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E51DD2392AE9087B00F31BBB /* kontakt-ios-sdk */ = {
+		E598DBF52AEB04AA00C5AF6A /* KontaktSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E51DD2382AE9087B00F31BBB /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */;
-			productName = "kontakt-ios-sdk";
+			package = E598DBF42AEB04AA00C5AF6A /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */;
+			productName = KontaktSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
