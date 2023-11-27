@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKEddystoneFrameType Constants Reference</title>
+	<title>KTKDeviceFilteringClass Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKEddystoneFrameType Constants Reference</h1>
+					<h1 class="title">KTKDeviceFilteringClass Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKEddystoneFrame.h</td>
+	<td>KTKDeviceDefinitions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,11 +75,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKEddystoneFrameType</h3>
+                    <h3 class="subsubtitle method-title">KTKDeviceFilteringClass</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Eddystone Frame type.</p>
+                        <p>A kontakt device filtering Class.</p>
 					</div>
 					
 					
@@ -87,13 +87,15 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSUInteger, KTKEddystoneFrameType ) {<br>
+                        <code>typedef NS_ENUM(NSInteger, KTKDeviceFilteringClass ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKEddystoneFrameTypeUID</a> = 0 x00,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceFilteringClassUknown</a> = -1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKEddystoneFrameTypeURL</a> = 0 x10,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceFilteringClassKtk</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKEddystoneFrameTypeTLM</a> = 0 x20,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceFilteringClassIbEidKtk</a> = 7,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceFilteringClassALL</a> = 15,<br>
                             
                             };</code>
                     
@@ -103,11 +105,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKEddystoneFrameTypeUID"></a><code>KTKEddystoneFrameTypeUID</code></dt>
+                            <dt><a name="" title="KTKDeviceFilteringClassUknown"></a><code>KTKDeviceFilteringClassUknown</code></dt>
 <dd>
 
 
-<p>UID Frame type.</p>
+<p>Class is unknown.</p>
 
 
 
@@ -115,16 +117,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystoneFrame.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneFrameTypeURL"></a><code>KTKEddystoneFrameTypeURL</code></dt>
+                            <dt><a name="" title="KTKDeviceFilteringClassKtk"></a><code>KTKDeviceFilteringClassKtk</code></dt>
 <dd>
 
 
-<p>URL Frame type.</p>
+<p>Device status flitering class  Kontakt.</p>
 
 
 
@@ -132,16 +134,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystoneFrame.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneFrameTypeTLM"></a><code>KTKEddystoneFrameTypeTLM</code></dt>
+                            <dt><a name="" title="KTKDeviceFilteringClassIbEidKtk"></a><code>KTKDeviceFilteringClassIbEidKtk</code></dt>
 <dd>
 
 
-<p>TLM (Telemetry) Frame type.</p>
+<p>Device status flitering class  iBeacon, Eddystone, Kontakt .</p>
 
 
 
@@ -149,7 +151,24 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystoneFrame.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceFilteringClassALL"></a><code>KTKDeviceFilteringClassALL</code></dt>
+<dd>
+
+
+<p>Device supported all classes.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
@@ -166,7 +185,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKEddystoneFrame.h</code></p>
+                        <p><code class="declared-in-ref">KTKDeviceDefinitions.h</code></p>
                     </div>
                     
                     

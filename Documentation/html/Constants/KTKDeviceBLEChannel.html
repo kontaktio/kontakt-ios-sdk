@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKEddystoneFrameType Constants Reference</title>
+	<title>KTKDeviceBLEChannel Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKEddystoneFrameType Constants Reference</h1>
+					<h1 class="title">KTKDeviceBLEChannel Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKEddystoneFrame.h</td>
+	<td>KTKDeviceDefinitions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,11 +75,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKEddystoneFrameType</h3>
+                    <h3 class="subsubtitle method-title">KTKDeviceBLEChannel</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Eddystone Frame type.</p>
+                        <p>A kontakt device channels status.</p>
 					</div>
 					
 					
@@ -87,13 +87,17 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSUInteger, KTKEddystoneFrameType ) {<br>
+                        <code>typedef NS_ENUM(NSInteger, KTKDeviceBLEChannel ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKEddystoneFrameTypeUID</a> = 0 x00,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceBLEChannelUknown</a> = -1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKEddystoneFrameTypeURL</a> = 0 x10,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceBLEChannelALL</a> = 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKEddystoneFrameTypeTLM</a> = 0 x20,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceBLEChannel37</a> = 37,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceBLEChannel38</a> = 38,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceBLEChannel39</a> = 39,<br>
                             
                             };</code>
                     
@@ -103,11 +107,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKEddystoneFrameTypeUID"></a><code>KTKEddystoneFrameTypeUID</code></dt>
+                            <dt><a name="" title="KTKDeviceBLEChannelUknown"></a><code>KTKDeviceBLEChannelUknown</code></dt>
 <dd>
 
 
-<p>UID Frame type.</p>
+<p>Channel is unknown.</p>
 
 
 
@@ -115,16 +119,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystoneFrame.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneFrameTypeURL"></a><code>KTKEddystoneFrameTypeURL</code></dt>
+                            <dt><a name="" title="KTKDeviceBLEChannelALL"></a><code>KTKDeviceBLEChannelALL</code></dt>
 <dd>
 
 
-<p>URL Frame type.</p>
+<p>Device supported all channels.</p>
 
 
 
@@ -132,16 +136,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystoneFrame.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="KTKEddystoneFrameTypeTLM"></a><code>KTKEddystoneFrameTypeTLM</code></dt>
+                            <dt><a name="" title="KTKDeviceBLEChannel37"></a><code>KTKDeviceBLEChannel37</code></dt>
 <dd>
 
 
-<p>TLM (Telemetry) Frame type.</p>
+<p>Device status is channel 37.</p>
 
 
 
@@ -149,7 +153,41 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">KTKEddystoneFrame.h</code>.
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceBLEChannel38"></a><code>KTKDeviceBLEChannel38</code></dt>
+<dd>
+
+
+<p>Device status is channel 38.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceBLEChannel39"></a><code>KTKDeviceBLEChannel39</code></dt>
+<dd>
+
+
+<p>Device status is channel 39.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
 	</p>
 	
 </dd>
@@ -166,7 +204,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">KTKEddystoneFrame.h</code></p>
+                        <p><code class="declared-in-ref">KTKDeviceDefinitions.h</code></p>
                     </div>
                     
                     
