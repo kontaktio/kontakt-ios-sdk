@@ -1,6 +1,0 @@
-framework module KontaktSDK {
-  umbrella header "KontaktSDK.h"
-
-  export *
-  module * { export * }
-}
