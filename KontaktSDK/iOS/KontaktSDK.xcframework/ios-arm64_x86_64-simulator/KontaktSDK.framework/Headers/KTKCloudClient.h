@@ -1,15 +1,12 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
 
 @import Foundation;
-
-#if TARGET_OS_IOS || TARGET_OS_TV
 @import UIKit;
-#endif
 
 #import "KTKKontaktResponse.h"
 

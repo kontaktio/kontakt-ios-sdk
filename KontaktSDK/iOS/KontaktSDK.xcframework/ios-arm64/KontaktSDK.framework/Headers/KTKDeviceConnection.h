@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -15,6 +15,8 @@
 #import "KTKDeviceConfiguration.h"
 #import "KTKDeviceDataLoggerReading.h"
 #import "KTKDeviceKontaktRecognitionBox.h"
+
+@class KTKOperationQueue;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -68,7 +70,6 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
 /**
 *  A nearby device of this connection instance.
 */
-
 @property (nonatomic, strong, readonly) KTKNearbyDevice *nearbyDevice;
 
 /**
@@ -85,6 +86,16 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  *  The delegate object that will receive events.
  */
 @property (nonatomic, weak, readwrite) id<KTKDeviceConnectionDelegate> delegate;
+
+/**
+ *  Queue used for connection operations.
+ */
+@property (nonatomic, weak, readonly) KTKOperationQueue *sharedQueue;
+
+/**
+*  Most recently read configuration from connected device.
+*/
+@property (nonatomic, strong, readonly, nullable) KTKDeviceConfiguration *lastReadConfiguration;
 
 #pragma mark - Configuration Profile Properties
 ///--------------------------------------------------------------------
@@ -191,6 +202,13 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  *  @param completion A block object to be executed when the write operation finishes.
  */
 - (void)syncTimeWithCompletion: (void (^)(NSError * _Nullable))completion;
+
+/**
+ *  Synchronize beacon state, including time.
+ *
+ *  @param completion A block object to be executed when the read operation finishes.
+ */
+- (void)synchronizeInternalStateWithCompletion: (void (^)(__kindof KTKDeviceConfiguration * _Nullable, NSString *firmware, NSError * _Nullable))completion;
 
 /**
  *  Synch the token from the connection device.

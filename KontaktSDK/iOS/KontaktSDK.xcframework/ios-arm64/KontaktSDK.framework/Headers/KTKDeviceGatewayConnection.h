@@ -1,14 +1,15 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
 
 #import "KTKDeviceConnection.h"
 #import "KTKDeviceGatewayWiFiNetwork.h"
-#import "KTKDeviceGatewayConfiguration.h"
+#import "KTKDeviceConfiguration.h"
 #import "KTKDeviceGatewayDiagnostic.h"
+#import "KTKDeviceGatewayLogsOperationDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param configuration The configuration object. Result of the read operation.
  *  @param error         An error object containing the error that indicates why the operation failed.
  */
-typedef void (^KTKDeviceGatewayConnectionGetWiFiBlock)(NSSet <KTKDeviceGatewayWiFiNetwork *>* _Nullable networks, __kindof KTKDeviceGatewayConfiguration * _Nullable configuration, NSError * _Nullable error);
+typedef void (^KTKDeviceGatewayConnectionGetWiFiBlock)(NSSet <KTKDeviceGatewayWiFiNetwork *>* _Nullable networks, __kindof KTKDeviceConfiguration * _Nullable configuration, NSError * _Nullable error);
 
 /**
  *  A completion block object to be executed when the reading mac networks operation finishes.
@@ -41,6 +42,14 @@ typedef void (^KTKDeviceGatewayConnectionGetMACBlock)(NSString * _Nullable mac, 
  */
 typedef void (^KTKDeviceGatewayConnectionGetDiagnosticBlock)(KTKDeviceGatewayDiagnostic * _Nullable gatewayDiagnostic, NSError * _Nullable error);
 
+/**
+ *  A handler block object executed when a log message is received from the device.
+ *
+ *  @param logsMessage A message receviced from the Gateway device.
+ *  @param error An error object containing the error that indicates why the operation failed.
+ *  @param stop Set to @c true to stop the operation.
+ */
+typedef void (^KTKDeviceGatewayConnectionBLELogsHandlerBlock)(NSString* _Nullable logsMessage, NSError* _Nullable, BOOL* _Nullable stop);
 
 #pragma mark - KTKDeviceGatewayConnection (Interface)
 @interface KTKDeviceGatewayConnection : KTKDeviceConnection
@@ -66,19 +75,33 @@ typedef void (^KTKDeviceGatewayConnectionGetDiagnosticBlock)(KTKDeviceGatewayDia
  */
 - (void)getMacDevice:(KTKDeviceGatewayConnectionGetMACBlock)completion;
 
-
 /**
  *  Blink device
  *
  *  @param completion A block object to be executed when the read operation finishes.
  */
 - (void)getBlinkDevice:(KTKDeviceGatewayConnectionGetMACBlock)completion;
+
 /**
  *  Reads the configuration from the connection device using MAC.
  *
  *  @param completion A block object to be executed when the read operation finishes.
  */
 - (void)getDiagnosticDevice:(KTKDeviceGatewayConnectionGetDiagnosticBlock)completion;
+
+/**
+ *  Starts BLE logging mode in the device and delegates all events to provided delegate object.
+ *
+ *  @param delegate A delegate object responsible for receiving log messages and stopping logging mode.
+ */
+- (void)startBLEDeviceLogging:(id<KTKDeviceGatewayLogsOperationDelegate>)delegate;
+
+/**
+ *  Reboot the device.
+ *
+ *  @param completion A block object to be executed when write operation finishes.
+ */
+- (void)rebootDevice:(void (^)(NSError * _Nullable error))completion;
 
 @end
 

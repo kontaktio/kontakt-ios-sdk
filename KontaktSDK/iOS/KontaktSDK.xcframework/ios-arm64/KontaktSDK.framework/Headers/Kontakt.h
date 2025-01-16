@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -43,6 +43,13 @@ typedef NS_OPTIONS(NSUInteger, KTKMonitoringOptions) {
  */
 extern double KTKCalculateDistanceFrom(int TXPower, double RSSI);
 
+/**
+ *  A block that takes 2 parameters:
+ *  @param urlSession A `URLSession` object.
+ *  @param completion Completion block that takes a dictionary object as parameter.
+ */
+typedef void (^_Nullable AuthHeadersProviderBlock)(NSURLSession *_Nonnull, void(^_Nonnull)(NSDictionary *_Nullable));
+
 #pragma mark - Kontakt
 @interface Kontakt : NSObject
 
@@ -58,7 +65,7 @@ extern double KTKCalculateDistanceFrom(int TXPower, double RSSI);
  *
  *  @see APIKey
  */
-+ (void)setAPIKey:(NSString*)key;
++ (void)setAPIKey:(NSString *_Nullable)key;
 
 /**
  *  Returns a string value of the Cloud API Key.
@@ -67,7 +74,23 @@ extern double KTKCalculateDistanceFrom(int TXPower, double RSSI);
  *
  *  @see setAPIKey:
  */
-+ (NSString*)APIKey;
++ (NSString *_Nullable)APIKey;
+
+/**
+ *  Sets authorization provider block used to inject authorization parameters into requests made by the SDK.
+ *  The block has a completion handler parameter that should return a dictionary of request header parameters necessary for authorizing the request.
+ *  @b IMPORTANT Calling this method with a non-nil value will disable `APIKey` value.
+ *
+ *  @param headersProvider A block called before each HTTP request with `URLSession` parameter used to send the request.
+ */
++ (void)setAuthHeadersProvider:(AuthHeadersProviderBlock)headersProvider;
+
+/**
+ *  Returns authorization headers provider block.
+ *
+ *  @return A block value to be called with a `URLSession` object.
+ */
++ (AuthHeadersProviderBlock)AuthHeadersProvider;
 
 /**
  *  Removes caches created by the SDK.

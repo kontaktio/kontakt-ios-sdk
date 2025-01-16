@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -52,7 +52,7 @@ typedef NS_ENUM(NSInteger, KTKConfigProfileGenerator) {
      *  Generate using Cloud Only API Key required.
      */
     KTKConfigProfileGeneratorUsingCloud       = 1,
-    
+
     /**
      *  Generate using KTKDeviceCredentails.
      */
@@ -79,7 +79,7 @@ typedef NS_ENUM(NSInteger, KTKDeviceType) {
      *  Gateway device type.
      */
     KTKDeviceTypeGateway = 3
-    
+
 };
 
 /**
@@ -89,7 +89,7 @@ typedef NS_ENUM(uint16_t, KTKKontaktImageType) {
     KTKKontaktImageRAW                     ,
     KTKKontaktImageRAWContinuous           ,
     KTKKontaktImageCalibration             ,
-    KTKKontaktImageRecalibration           
+    KTKKontaktImageRecalibration
 };
 
 /**
@@ -276,42 +276,42 @@ typedef NS_OPTIONS(NSInteger, KTKDeviceTelemetryFields) {
      *  BLE scan result.
      */
     KTKDeviceTelemetryFieldsBLEScanResult                   = 1 << 23,
-    
+
     /**
      *  Proximity report.
      */
     KTKDeviceTelemetryFieldsProximityReport                 = 1 << 24,
-    
+
     /**
      *  Gas Sensor.
      */
     KTKDeviceTelemetryFieldsGasSensor                       = 1 << 25,
-    
+
     /**
      *  Light level lux.
      */
     KTKDeviceTelemetryFieldsLightLevelLux                   = 1 << 26,
-    
+
     /**
      *  Inout counter.
      */
     KTKDeviceTelemetryFieldsInOutCount                      = 1 << 27,
-    
+
     /**
      *  Soap dispenser.
      */
     KTKDeviceTelemetryFieldsSoapDispenser                   = 1 << 28,
-    
+
     /**
      *  People Detection.
      */
     KTKDeviceTelemetryFieldsPeopleDetection                 = 1 << 29,
-    
+
     /**
      *  RSSI Scan.
      */
     KTKDeviceTelemetryFieldsRSSIScan                        = 1 << 30,
-    
+
     /**
      *  All supprted packets.
      */
@@ -363,127 +363,139 @@ typedef NS_ENUM(NSInteger, KTKDeviceSpecification) {
 };
 
 /**
- *  A kontakt device models.
+ *  Known device models. For legacy devices, symbol is included in parenthesis
  */
 typedef NS_ENUM(NSInteger, KTKDeviceModel) {
     /**
-     *  Invalid value.
+     *  Invalid value / unsupported, outdated model
      */
     KTKDeviceModelInvalid  = -1,
     /**
-     *  Unknown model.
+     *  Cloud Beacon (GW14-1)
+     */
+    KTKDeviceModelCloudBeacon = -1,
+    /**
+     *  Unknown model
      */
     KTKDeviceModelUnknown  = 0,
     /**
-     *  Smart Beacon
+     *  Smart Beacon (SB16-2)
      */
     KTKDeviceModelSmartBeacon = 1,
     /**
-     *  USB Beacon
+     *  Tough Beacon, Mini Tag (TB15-1)
      */
-    KTKDeviceModelUSBBeacon = 2,
+    KTKDeviceModelToughBeacon = 1,
     /**
-     *  Sensor Beacon
+     *  Smart Sensor Beacon, Accelerometer Beacon for Blueanker (SB13-1, AB15-1)
      */
-    KTKDeviceModelSensorBeacon = 3,
+    KTKDeviceModelSmartSensorBeacon = 2,
     /**
-     *  Cloud Beacon
+     *  USB Beacon (UB16-2)
      */
-    KTKDeviceModelCloudBeacon = 4,
+    KTKDeviceModelUSBBeacon = 3,
     /**
-     *  Card Beacon
+     *  Card Tag (CT16-2)
      */
-    KTKDeviceModelCardBeacon = 5,
+    KTKDeviceModelCardBeacon = 4,
     /**
-     *  Pro Beacon
+     *  Gateway (GW16-2)
+     */
+    KTKDeviceModelGateway = 5,
+    /**
+     *  Beacon Pro (BP16-3)
      */
     KTKDeviceModelProBeacon = 6,
     /**
-     *  Gateway
+     *  Probe
      */
-    KTKDeviceModelGateway = 7,
+    KTKDeviceModelProbe = 7,
     /**
-     *  Tag Beacon
+     *  Asset Tag, Tag Beacon (S18-3)
      */
-    KTKDeviceModelTagBeacon = 8,
+    KTKDeviceModelAssetTag = 8,
     /**
-     *  Smart Beacon 3 (Retrofit)
+     *  Anchor Beacon, Smart Beacon 3 (SB18-3)
      */
-    KTKDeviceModelSmartBeacon3 = 9,
+    KTKDeviceModelAnchorBeacon = 9,
     /**
-     *  Heavy Duty Beacon
+     *  Heavy Duty Beacon (HD18-3)
      */
     KTKDeviceModelHeavyDutyBeacon = 10,
     /**
-     *  Card Beacon 2
+     *  Card Tag, Card Beacon 2 (CT18-3)
      */
     KTKDeviceModelCardBeacon2 = 11,
     /**
-     *  Coin Tag
+     *  Coin Tag, Coin Beacon (C18-3)
      */
     KTKDeviceModelCoinTag = 12,
     /**
-     *  Humidity Beacon
+     *  Humidity Beacon, Smart Beacon 3H (SB18-3H)
      */
     KTKDeviceModelSmartBeacon3H = 13,
     /**
-     * Tough Beacon 2
+     * Tough Beacon 2 (TB18-2)
      */
     KTKDeviceModelToughBeacon2 = 14,
     /**
-     *  Bracelet Tag
+     *  Bracelet Tag (BT18-3)
      */
     KTKDeviceModelBraceletTag = 15,
     /**
-     *  Universal Tag
+     *  Universal Tag (UT19-1)
      */
     KTKDeviceModelUniversalTag = 16,
     /**
-     *  Bracelet Tag 2
+     *  Bracelet Tag 2 (BT19-4)
      */
     KTKDeviceModelBraceletTag2 = 17,
     /**
-     *  Minew E5
+     *  Mobile devices (emulated beacon)
+     */
+    KTKDeviceModelMobileDevices = 18,
+    /**
+     *  TT Beacon, Custom Beacon, Puck Beacon (TT20-1)
      */
     KTKDeviceModelTT20 = 19,
     /**
-     *  Beacon TT 20
+     *  Minew E5 (M-E5)
      */
     KTKDeviceModelMinewE5 = 20,
     /**
-     *  Minew E7
+     *  Minew E7 (M-E7)
      */
     KTKDeviceModelMinewE7 = 21,
     /**
-     *  Minew E8
+     *  Minew E8 (M-E8)
      */
     KTKDeviceModelMinewE8 = 22,
     /**
-     *  Minew i3
+     *  Minew i3 (M-i3)
      */
     KTKDeviceModelMinewI3 = 23,
     /**
-     *  Minew i7
+     *  Minew i7 (M-i7)
      */
     KTKDeviceModelMinewI7 = 24,
     /**
-     *  Minew S1
+     *  Minew S1 (M-S1)
      */
     KTKDeviceModelMinewS1 = 25,
     /**
-     *  Lanyard Tag
+     *  Lanyard Tag (LB20-1)
      */
     KTKDeviceModelLanyardTag = 26,
     /**
-     *  Nano Tag
+     *  Nano Tag, Wristband Tag (BT20-1)
      */
     KTKDeviceModelNanoTag = 27,
     /**
-     *  Puck Beacon
+     *  Puck Beacon, Puck Tag (PB20-1)
      */
     KTKDeviceModelPuckBeacon = 28,
     /**
-     *  Portal Light
+     *  Portal Light (GW20-1)
      */
     KTKDeviceModelPortalLight = 29,
     /**
@@ -503,11 +515,11 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
      */
     KTKDeviceModelAssetTag2 = 33,
     /**
-     *  Anchor Beacon
+     *  Anchor Beacon 2
      */
     KTKDeviceModelAnchorBeacon2 = 34,
     /**
-     *  Mini Beam
+     *  Beam Mini
      */
     KTKDeviceModelMiniBeam = 35,
     /**
@@ -519,7 +531,7 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
      */
     KTKDeviceModelDispenserBeacon = 37,
     /**
-     *  Portal Light 2S
+     *  Portal Light 2 IR
      */
     KTKDeviceModelPortalLight2S = 38,
     /**
@@ -530,60 +542,39 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
      *  Asset Tag 2 Mini
      */
     KTKDeviceModelAssetTag2Mini = 40,
-    
     /**
-     *  Partner provided name
+     *  Blueberry dongle
+     */
+    KTKDeviceModelBlueberryDongle = 41,
+    /**
+     *  Sticker Tag
+     */
+    KTKDeviceModelStickerTag = 42,
+    /**
+     * Nano Tag IR
+     */
+    KTKDeviceModelNanoTagIR = 43,
+    /**
+     * Autoclave beacon
+     */
+    KTKDeviceModelAutoclaveBeacon = 44,
+    /**
+     *  Nano Tag 2
+     */
+    KTKDeviceModelNanoTag2 = 45,
+    /**
+     *  Beam Mini 2
+     */
+    KTKDeviceModelMiniBeam2 = 46,
+    /**
+     *  Temperature Monitor Mini 2
+     */
+    KTKDeviceModelTemperatureMonitor = 47,
+
+    /**
+     *  Partner devices
      */
     KTKDeviceModelPartnerDevice = 128
-};
-
-/**
- *  A kontakt device symbols.
- */
-typedef NS_ENUM(NSInteger, KTKDeviceSymbol) {
-    KTKDeviceSymbolInvalid  = -1,
-    KTKDeviceSymbolUnknown,
-    KTKDeviceSymbolSB16_2,
-    KTKDeviceSymbolTB15_1,
-    KTKDeviceSymbolGW14_1,
-    KTKDeviceSymbolUB16_2,
-    KTKDeviceSymbolCT16_2,
-    KTKDeviceSymbolGW16_2,
-    KTKDeviceSymbolBP16_3,
-    KTKDeviceSymbolS18_3,
-    KTKDeviceSymbolSB18_3,
-    KTKDeviceSymbolHD18_3,
-    KTKDeviceSymbolCT18_3,
-    KTKDeviceSymbolC18_3,
-    KTKDeviceSymbolSB18_3H,
-    KTKDeviceSymbolTB18_2,
-    KTKDeviceSymbolBT18_3,
-    KTKDeviceSymbolUT19_1,
-    KTKDeviceSymbolBT19_4,
-    KTKDeviceSymbolTT20_1 = 19,
-    KTKDeviceSymbolM_E5 = 20,
-    KTKDeviceSymbolM_E7 = 21,
-    KTKDeviceSymbolM_E8 = 22,
-    KTKDeviceSymbolM_I3 = 23,
-    KTKDeviceSymbolM_I7 = 24,
-    KTKDeviceSymbolM_S1 = 25,
-    KTKDeviceSymbolLB20_1 = 26,
-    KTKDeviceSymbolBT20_1 = 27,
-    KTKDeviceSymbolPB20_1 = 28,
-    KTKDeviceSymbolGW20_1 = 29,
-    KTKDeviceSymbolSMBA_1 = 30,
-    KTKDeviceSymbolPOBE_1 = 31,
-    KTKDeviceSymbolNASE_1 = 32,
-    KTKDeviceSymbolAST_2 = 33,
-    KTKDeviceSymbolANB_2 = 34,
-    KTKDeviceSymbolMB = 35,
-    KTKDeviceSymbolPB_IR = 36,
-    KTKDeviceSymbolDB = 37,
-    KTKDeviceSymbolPL_2S = 38,
-    KTKDeviceSymbolPL_2 = 39,
-    KTKDeviceSymbolAST_2_M = 40,
-    
-    KTKDeviceSymbolPD = 128
 };
 
 /**
@@ -593,7 +584,7 @@ typedef NS_ENUM(NSInteger, KTKDeviceBLEChannel) {
     /**
      *  Channel is unknown.
      */
-    KTKDeviceBLEChannelUknown        = -1,
+    KTKDeviceBLEChannelUnknown        = -1,
     /**
      *  Device supported all channels.
      */
@@ -606,7 +597,7 @@ typedef NS_ENUM(NSInteger, KTKDeviceBLEChannel) {
      *  Device status is channel 38.
      */
     KTKDeviceBLEChannel38            = 38,
-    
+
     /**
      *  Device status is channel 39.
      */
@@ -620,7 +611,7 @@ typedef NS_ENUM(NSInteger, KTKDeviceFilteringClass) {
     /**
      *  Class is unknown.
      */
-    KTKDeviceFilteringClassUknown        = -1,
+    KTKDeviceFilteringClassUnknown        = -1,
     /**
      *  Device status flitering class  Kontakt.
      */
@@ -642,7 +633,7 @@ typedef NS_ENUM(NSInteger, KTKDeviceShuffleStatus) {
     /**
      *  Status is unknown.
      */
-    KTKDeviceShuffleStatusUknown        = -1,
+    KTKDeviceShuffleStatusUnknown        = -1,
     /**
      *  Device shuffle is not supported.
      */
@@ -715,9 +706,9 @@ typedef NS_ENUM(NSInteger, KTKDeviceMotionDetectionMode) {
     KTKDeviceMotionDetectionModeOff      = 0,
     /**
      *  Motion detection is set in counting mode.
-     * 
+     *
      *  You can access counter value by reading device configuration.
-     *  
+     *
      *  @see [KTKDeviceConfiguration motionCounter]
      */
     KTKDeviceMotionDetectionModeCounting = 1,
@@ -742,12 +733,12 @@ typedef NS_ENUM(NSInteger, KTKDeviceOccupancyModel) {
     /**
      *  Occupancy Mode is occupancy 2.
      */
-    
+
     KTKDeviceOccupancyModeOccupancy2    =  1,
     /**
      *  MOccupancy Mode is footfall door.
      */
-    
+
     KTKDeviceOccupancyModeFootfallDoor = 2,
     /**
      *  Occupancy Mode is footfall corridor.

@@ -1,12 +1,12 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
 
 @import Foundation;
-#import "KTKDeviceGatewayConfiguration.h"
+#import "KTKDeviceGatewayConfigurationType.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -69,7 +69,7 @@ typedef NS_ENUM(uint8_t, KTKDeviceGatewayWiFiNetworkCommand) {
 /// @name Helper Methods
 ///--------------------------------------------------------------------
 
-- (KTKDeviceGatewayConfiguration* _Nullable)configuration;
+- (id<KTKDeviceGatewayConfigurationType>_Nullable)configuration;
 
 @end
 

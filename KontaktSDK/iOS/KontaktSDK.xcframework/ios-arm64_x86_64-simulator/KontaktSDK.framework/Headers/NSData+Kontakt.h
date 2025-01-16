@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -43,6 +43,32 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSData *)ktk_dataSwapInt32;
 
 - (uint16_t)CRC16Modbus;
+
+/**
+ *  Adds payload type and data length as a header.
+ *
+ *  Payload type - @b u8 equal to 1
+ *
+ *  Payload size - @b u16be
+ *
+ *  @return Header + original data.
+ */
+- (NSData *)bleFrameFormat;
+
+/**
+ *  Extracts payload type from BLE frame.
+ *
+ *  @return Payload type as UInt8 value.
+ */
+- (char)bleFramePayloadType;
+
+/**
+ *  Extracts BLE frame's payload size.
+ *
+ *  @return Payload size/length as UInt16 value.
+ */
+- (uint16_t)bleFramePayloadLength;
+
 
 #pragma mark - Extracting Primitives
 ///--------------------------------------------------------------------

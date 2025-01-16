@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -115,11 +115,6 @@ typedef NS_OPTIONS(NSUInteger, KTKManagerSubscriptionPlan) {
  *  @see KTKManagerSubscriptionPlan
  */
 @property (nonatomic, assign, readonly) KTKManagerSubscriptionPlan subscriptionPlan;
-
-/**
- *  An devices count. (read-only)
- */
-@property (nonatomic, strong, readonly) NSNumber *deviceCount;
 
 @end
 

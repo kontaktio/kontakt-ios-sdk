@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -9,11 +9,12 @@
 #import "KTKCloudModel.h"
 #import "KTKDevicePowerSaving.h"
 #import "KTKDeviceConfigurationGPIO.h"
+#import "KTKDeviceGatewayConfigurationType.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - KTKDeviceConfiguration (Interface)
-@interface KTKDeviceConfiguration : NSObject <KTKCloudModel>
+@interface KTKDeviceConfiguration : NSObject <KTKCloudModel, KTKDeviceGatewayConfigurationType>
 
 #pragma mark - General Properties
 ///--------------------------------------------------------------------
@@ -275,11 +276,11 @@ __attribute__((deprecated("Please use `packets` property instead")));
 @property (nonatomic, strong, readwrite) NSDictionary<NSString *, NSData *> * _Nullable rawProperties;
 
 /**
- *  A response data object.
+ *  A request data object.
  *
- *  Response object contains data recieved from the device after configuration.
+ *  Request object contains data sent to the device during configuration.
  */
-@property (nonatomic, strong, readonly) NSData * _Nullable secureRequest;
+@property (nonatomic, strong, readwrite) NSData * _Nullable secureRequest;
 
 /**
  *  A response data object.

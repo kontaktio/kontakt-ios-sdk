@@ -1,12 +1,12 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright © 2021 Kontakt.io. All rights reserved.
 //
 
 @import Foundation;
-#import "KTKDeviceGatewayConfiguration.h"
+#import "KTKDeviceConfiguration.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -79,7 +79,7 @@
                     
 					
 					<div class="section section-overview">
-                        <p>A kontakt device models.</p>
+                        <p>Known device models. For legacy devices, symbol is included in parenthesis</p>
 					</div>
 					
 					
@@ -91,25 +91,29 @@
                             
                             &nbsp;&nbsp; <a href="">KTKDeviceModelInvalid</a> = -1,<br>
                             
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelCloudBeacon</a> = -1,<br>
+                            
                             &nbsp;&nbsp; <a href="">KTKDeviceModelUnknown</a> = 0,<br>
                             
                             &nbsp;&nbsp; <a href="">KTKDeviceModelSmartBeacon</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceModelUSBBeacon</a> = 2,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelToughBeacon</a> = 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceModelSensorBeacon</a> = 3,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelSmartSensorBeacon</a> = 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceModelCloudBeacon</a> = 4,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelUSBBeacon</a> = 3,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceModelCardBeacon</a> = 5,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelCardBeacon</a> = 4,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelGateway</a> = 5,<br>
                             
                             &nbsp;&nbsp; <a href="">KTKDeviceModelProBeacon</a> = 6,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceModelGateway</a> = 7,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelProbe</a> = 7,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceModelTagBeacon</a> = 8,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelAssetTag</a> = 8,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceModelSmartBeacon3</a> = 9,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelAnchorBeacon</a> = 9,<br>
                             
                             &nbsp;&nbsp; <a href="">KTKDeviceModelHeavyDutyBeacon</a> = 10,<br>
                             
@@ -126,6 +130,8 @@
                             &nbsp;&nbsp; <a href="">KTKDeviceModelUniversalTag</a> = 16,<br>
                             
                             &nbsp;&nbsp; <a href="">KTKDeviceModelBraceletTag2</a> = 17,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelMobileDevices</a> = 18,<br>
                             
                             &nbsp;&nbsp; <a href="">KTKDeviceModelTT20</a> = 19,<br>
                             
@@ -171,6 +177,20 @@
                             
                             &nbsp;&nbsp; <a href="">KTKDeviceModelAssetTag2Mini</a> = 40,<br>
                             
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelBlueberryDongle</a> = 41,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelStickerTag</a> = 42,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelNanoTagIR</a> = 43,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelAutoclaveBeacon</a> = 44,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelNanoTag2</a> = 45,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelMiniBeam2</a> = 46,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceModelTemperatureMonitor</a> = 47,<br>
+                            
                             &nbsp;&nbsp; <a href="">KTKDeviceModelPartnerDevice</a> = 128,<br>
                             
                             };</code>
@@ -185,75 +205,7 @@
 <dd>
 
 
-<p>Invalid value.</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDeviceModelUnknown"></a><code>KTKDeviceModelUnknown</code></dt>
-<dd>
-
-
-<p>Unknown model.</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDeviceModelSmartBeacon"></a><code>KTKDeviceModelSmartBeacon</code></dt>
-<dd>
-
-
-<p>Smart Beacon</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDeviceModelUSBBeacon"></a><code>KTKDeviceModelUSBBeacon</code></dt>
-<dd>
-
-
-<p>USB Beacon</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDeviceModelSensorBeacon"></a><code>KTKDeviceModelSensorBeacon</code></dt>
-<dd>
-
-
-<p>Sensor Beacon</p>
+<p>Invalid value / unsupported, outdated model</p>
 
 
 
@@ -270,7 +222,92 @@
 <dd>
 
 
-<p>Cloud Beacon</p>
+<p>Cloud Beacon (GW14-1)</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelUnknown"></a><code>KTKDeviceModelUnknown</code></dt>
+<dd>
+
+
+<p>Unknown model</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelSmartBeacon"></a><code>KTKDeviceModelSmartBeacon</code></dt>
+<dd>
+
+
+<p>Smart Beacon (SB16-2)</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelToughBeacon"></a><code>KTKDeviceModelToughBeacon</code></dt>
+<dd>
+
+
+<p>Tough Beacon, Mini Tag (TB15-1)</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelSmartSensorBeacon"></a><code>KTKDeviceModelSmartSensorBeacon</code></dt>
+<dd>
+
+
+<p>Smart Sensor Beacon, Accelerometer Beacon for Blueanker (SB13-1, AB15-1)</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelUSBBeacon"></a><code>KTKDeviceModelUSBBeacon</code></dt>
+<dd>
+
+
+<p>USB Beacon (UB16-2)</p>
 
 
 
@@ -287,24 +324,7 @@
 <dd>
 
 
-<p>Card Beacon</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDeviceModelProBeacon"></a><code>KTKDeviceModelProBeacon</code></dt>
-<dd>
-
-
-<p>Pro Beacon</p>
+<p>Card Tag (CT16-2)</p>
 
 
 
@@ -321,7 +341,7 @@
 <dd>
 
 
-<p>Gateway</p>
+<p>Gateway (GW16-2)</p>
 
 
 
@@ -334,11 +354,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelTagBeacon"></a><code>KTKDeviceModelTagBeacon</code></dt>
+                            <dt><a name="" title="KTKDeviceModelProBeacon"></a><code>KTKDeviceModelProBeacon</code></dt>
 <dd>
 
 
-<p>Tag Beacon</p>
+<p>Beacon Pro (BP16-3)</p>
 
 
 
@@ -351,11 +371,45 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceModelSmartBeacon3"></a><code>KTKDeviceModelSmartBeacon3</code></dt>
+                            <dt><a name="" title="KTKDeviceModelProbe"></a><code>KTKDeviceModelProbe</code></dt>
 <dd>
 
 
-<p>Smart Beacon 3 (Retrofit)</p>
+<p>Probe</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelAssetTag"></a><code>KTKDeviceModelAssetTag</code></dt>
+<dd>
+
+
+<p>Asset Tag, Tag Beacon (S18-3)</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelAnchorBeacon"></a><code>KTKDeviceModelAnchorBeacon</code></dt>
+<dd>
+
+
+<p>Anchor Beacon, Smart Beacon 3 (SB18-3)</p>
 
 
 
@@ -372,7 +426,7 @@
 <dd>
 
 
-<p>Heavy Duty Beacon</p>
+<p>Heavy Duty Beacon (HD18-3)</p>
 
 
 
@@ -389,7 +443,7 @@
 <dd>
 
 
-<p>Card Beacon 2</p>
+<p>Card Tag, Card Beacon 2 (CT18-3)</p>
 
 
 
@@ -406,7 +460,7 @@
 <dd>
 
 
-<p>Coin Tag</p>
+<p>Coin Tag, Coin Beacon (C18-3)</p>
 
 
 
@@ -423,7 +477,7 @@
 <dd>
 
 
-<p>Humidity Beacon</p>
+<p>Humidity Beacon, Smart Beacon 3H (SB18-3H)</p>
 
 
 
@@ -440,7 +494,7 @@
 <dd>
 
 
-<p>Tough Beacon 2</p>
+<p>Tough Beacon 2 (TB18-2)</p>
 
 
 
@@ -457,7 +511,7 @@
 <dd>
 
 
-<p>Bracelet Tag</p>
+<p>Bracelet Tag (BT18-3)</p>
 
 
 
@@ -474,7 +528,7 @@
 <dd>
 
 
-<p>Universal Tag</p>
+<p>Universal Tag (UT19-1)</p>
 
 
 
@@ -491,7 +545,24 @@
 <dd>
 
 
-<p>Bracelet Tag 2</p>
+<p>Bracelet Tag 2 (BT19-4)</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelMobileDevices"></a><code>KTKDeviceModelMobileDevices</code></dt>
+<dd>
+
+
+<p>Mobile devices (emulated beacon)</p>
 
 
 
@@ -508,7 +579,7 @@
 <dd>
 
 
-<p>Minew E5</p>
+<p>TT Beacon, Custom Beacon, Puck Beacon (TT20-1)</p>
 
 
 
@@ -525,7 +596,7 @@
 <dd>
 
 
-<p>Beacon TT 20</p>
+<p>Minew E5 (M-E5)</p>
 
 
 
@@ -542,7 +613,7 @@
 <dd>
 
 
-<p>Minew E7</p>
+<p>Minew E7 (M-E7)</p>
 
 
 
@@ -559,7 +630,7 @@
 <dd>
 
 
-<p>Minew E8</p>
+<p>Minew E8 (M-E8)</p>
 
 
 
@@ -576,7 +647,7 @@
 <dd>
 
 
-<p>Minew i3</p>
+<p>Minew i3 (M-i3)</p>
 
 
 
@@ -593,7 +664,7 @@
 <dd>
 
 
-<p>Minew i7</p>
+<p>Minew i7 (M-i7)</p>
 
 
 
@@ -610,7 +681,7 @@
 <dd>
 
 
-<p>Minew S1</p>
+<p>Minew S1 (M-S1)</p>
 
 
 
@@ -627,7 +698,7 @@
 <dd>
 
 
-<p>Lanyard Tag</p>
+<p>Lanyard Tag (LB20-1)</p>
 
 
 
@@ -644,7 +715,7 @@
 <dd>
 
 
-<p>Nano Tag</p>
+<p>Nano Tag, Wristband Tag (BT20-1)</p>
 
 
 
@@ -661,7 +732,7 @@
 <dd>
 
 
-<p>Puck Beacon</p>
+<p>Puck Beacon, Puck Tag (PB20-1)</p>
 
 
 
@@ -678,7 +749,7 @@
 <dd>
 
 
-<p>Portal Light</p>
+<p>Portal Light (GW20-1)</p>
 
 
 
@@ -763,7 +834,7 @@
 <dd>
 
 
-<p>Anchor Beacon</p>
+<p>Anchor Beacon 2</p>
 
 
 
@@ -780,7 +851,7 @@
 <dd>
 
 
-<p>Mini Beam</p>
+<p>Beam Mini</p>
 
 
 
@@ -831,7 +902,7 @@
 <dd>
 
 
-<p>Portal Light 2S</p>
+<p>Portal Light 2 IR</p>
 
 
 
@@ -878,11 +949,130 @@
 	
 </dd>
                             
+                            <dt><a name="" title="KTKDeviceModelBlueberryDongle"></a><code>KTKDeviceModelBlueberryDongle</code></dt>
+<dd>
+
+
+<p>Blueberry dongle</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelStickerTag"></a><code>KTKDeviceModelStickerTag</code></dt>
+<dd>
+
+
+<p>Sticker Tag</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelNanoTagIR"></a><code>KTKDeviceModelNanoTagIR</code></dt>
+<dd>
+
+
+<p>Nano Tag IR</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelAutoclaveBeacon"></a><code>KTKDeviceModelAutoclaveBeacon</code></dt>
+<dd>
+
+
+<p>Autoclave beacon</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelNanoTag2"></a><code>KTKDeviceModelNanoTag2</code></dt>
+<dd>
+
+
+<p>Nano Tag 2</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelMiniBeam2"></a><code>KTKDeviceModelMiniBeam2</code></dt>
+<dd>
+
+
+<p>Beam Mini 2</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceModelTemperatureMonitor"></a><code>KTKDeviceModelTemperatureMonitor</code></dt>
+<dd>
+
+
+<p>Temperature Monitor Mini 2</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
                             <dt><a name="" title="KTKDeviceModelPartnerDevice"></a><code>KTKDeviceModelPartnerDevice</code></dt>
 <dd>
 
 
-<p>Partner provided name</p>
+<p>Partner devices</p>
 
 
 
@@ -919,7 +1109,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2023 Kontakt.io. All rights reserved. Updated: 2023-11-27</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-01-16</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

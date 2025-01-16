@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -11,6 +11,8 @@
 #import "KTKDeviceCredentials.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+extern KTKDeviceModel KTKDeviceModelFromString(NSString *string);
 
 #pragma mark - KTKDevice (Interface)
 @interface KTKDevice : NSObject <KTKCloudModel>
@@ -118,14 +120,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) KTKDeviceModel model;
 
 /**
- *  Device symbol. (read-only)
- *
- *  @see KTKDeviceSymbol
- */
-@property (nonatomic, assign, readonly) KTKDeviceSymbol symbol;
-
-
-/**
  *  Device manager's ID. (read-only)
  */
 @property (nonatomic, strong, readonly) NSUUID *managerID;
@@ -179,7 +173,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return An initialized device object.
  */
-- (instancetype)initWithUniqueID:(NSString *)uniqueID deviceType:(int)type;
+- (instancetype)initWithUniqueID:(NSString *)uniqueID deviceType:(NSInteger)type;
 
 #pragma mark - Model Methods
 ///--------------------------------------------------------------------

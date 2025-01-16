@@ -68,7 +68,11 @@
 		
 		<option value="//api/name/keepAlive">keepAlive</option>
 		
+		<option value="//api/name/lastReadConfiguration">lastReadConfiguration</option>
+		
 		<option value="//api/name/nearbyDevice">nearbyDevice</option>
+		
+		<option value="//api/name/sharedQueue">sharedQueue</option>
 		
 		<option value="//api/name/updateTimeAutomatically">updateTimeAutomatically</option>
 		
@@ -103,6 +107,8 @@
 		<option value="//api/name/syncTimeWithCompletion:">- syncTimeWithCompletion:</option>
 		
 		<option value="//api/name/synchDeviceConfigurationWithCompletion:">- synchDeviceConfigurationWithCompletion:</option>
+		
+		<option value="//api/name/synchronizeInternalStateWithCompletion:">- synchronizeInternalStateWithCompletion:</option>
 		
 		<option value="//api/name/updateWithFirmware:progress:completion:">- updateWithFirmware:progress:completion:</option>
 		
@@ -317,6 +323,98 @@
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
 				<p>The delegate object that will receive events.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sharedQueue" title="sharedQueue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedQueue">&nbsp;&nbsp;sharedQueue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Queue used for connection operations.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak, readonly) KTKOperationQueue *sharedQueue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Queue used for connection operations.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lastReadConfiguration" title="lastReadConfiguration"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lastReadConfiguration">&nbsp;&nbsp;lastReadConfiguration</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Most recently read configuration from connected device.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly, nullable) KTKDeviceConfiguration *lastReadConfiguration</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Most recently read configuration from connected device.</p>
 			</div>
 			
 
@@ -955,6 +1053,64 @@ To close the connection you have to either call <code>cancel</code> method or ch
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/synchronizeInternalStateWithCompletion:" title="synchronizeInternalStateWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/synchronizeInternalStateWithCompletion:">&ndash;&nbsp;synchronizeInternalStateWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Synchronize beacon state, including time.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)synchronizeInternalStateWithCompletion:(void ( ^ ) ( __kindof KTKDeviceConfiguration *_Nullable , NSString *firmware , NSError *_Nullable ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A block object to be executed when the read operation finishes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Synchronize beacon state, including time.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/synchDeviceConfigurationWithCompletion:" title="synchDeviceConfigurationWithCompletion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/synchDeviceConfigurationWithCompletion:">&ndash;&nbsp;synchDeviceConfigurationWithCompletion:</a></code>
 </h3>
@@ -1313,7 +1469,7 @@ To close the connection you have to either call <code>cancel</code> method or ch
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2023 Kontakt.io. All rights reserved. Updated: 2023-11-27</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-01-16</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

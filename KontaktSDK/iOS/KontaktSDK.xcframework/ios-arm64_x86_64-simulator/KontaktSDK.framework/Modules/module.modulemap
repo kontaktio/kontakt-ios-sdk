@@ -4,3 +4,8 @@ framework module KontaktSDK {
 
   module * { export * }
 }
+
+module KontaktSDK.Swift {
+  header "KontaktSDK-Swift.h"
+  requires objc
+}

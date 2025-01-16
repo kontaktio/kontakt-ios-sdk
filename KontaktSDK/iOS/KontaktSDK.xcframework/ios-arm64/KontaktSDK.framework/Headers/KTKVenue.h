@@ -1,19 +1,13 @@
 //
 //  KontaktSDK
-//  Version: 3.1.0
+//  Version: 4.0.0
 //
 //  Copyright © 2015 Kontakt.io. All rights reserved.
 //
 
 #import "KTKCloudModel.h"
-
-#if TARGET_OS_IOS || TARGET_OS_TV
 #import <UIKit/UIImage.h>
 typedef UIImage KTKImage;
-#elif TARGET_OS_MAC
-#import <AppKit/NSImage.h>
-typedef NSImage KTKImage;
-#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
