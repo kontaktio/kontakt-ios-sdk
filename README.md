@@ -1,14 +1,21 @@
 # iOS SDK Quickstart
 
 ## Important Note
-Please make sure before updating to SDK `3.0.0` that you don't need to support devices with firmware **`< 4.0`**. 
-As of version `3.0.0` only devices with firmware **`4.0`** or higher will be supported. 
+
+### 4.0.0
+* Version `4.0.0` removes support for `tvOS` and `macOS`.
+* `KTKDeviceSymbol` has been removed. `KTKDeviceModel` should be used instead.
+* `KTKDeviceGatewayConfiguration` code has been merged with its superclass - `KTKDeviceConfiguration`. Gateway specific properties and methods are declared in `KTKDeviceGatewayConfigurationType.h`.
+* `KTKConfigProfileGeneratorUsingCloud` is now a default value in device connection operations.
+
+### 3.0.0
+This version doesn't support older devices with firmware **`< 4.0`**. Newer devices with new firmware might generate a false negative error `This firmware version does not yet support (...) operation`. To avoid issues consider upgrading the SDK to version 4.x.x.
 
 ## Administration App
 
-To configure Kontakt.io Devices please use our new [iOS Administration App](https://itunes.apple.com/pl/app/kontakt.io-administration/id1067320511) or [iOS Kio Gateway Installer](https://apps.apple.com/gb/app/kio-gateway-installer/id1540964088).
+To configure Kontakt.io Devices we recommend using our [Kio Setup Manager App](https://apps.apple.com/pl/app/kio-setup-manager/id1067320511).
 
-![screen](https://kontakt-mobile.s3.amazonaws.com/stich.png?4)
+![screen](https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/53/f8/3a/53f83a32-8d35-dc02-8195-fbb8d235e2d1/f37e9edd-62f7-4fb7-a994-c1e295d7e36f_IMG_0334.PNG/460x0w.webp)
 
 ## Sample Code
 You can find our demos and sample code in [Examples folder](https://github.com/kontaktio/kontakt-ios-sdk/tree/master/Examples).
@@ -47,7 +54,7 @@ $ git init
 $ git submodule add https://github.com/kontaktio/kontakt-ios-sdk.git
 ```
 
-- Open the new `kontakt-ios-sdk` folder, and drag the `KontaktSDK.framework` into the Project Navigator of your application's Xcode project.
+- Open the new `kontakt-ios-sdk` folder, and drag the `KontaktSDK.xcframework` into the Project Navigator of your application's Xcode project.
 
     * Make sure your target is checked in `Add to targets` section.
 
@@ -55,12 +62,12 @@ $ git submodule add https://github.com/kontaktio/kontakt-ios-sdk.git
 - In the tab bar at the top of that window, open the "General" panel.
 - Click on the `+` button under the "Embedded Binaries" section.
     
-- Select the `KontaktSDK.framework` and click `Add` button.
+- Select the `KontaktSDK.xcframework` and click `Add` button.
 
-- In the Build Phases tab, click the + button at the top and select “New Run Script Phase”. Enter the following code into the script text field:
+- (OPTIONAL) In the Build Phases tab, click the + button at the top and select “New Run Script Phase”. Enter the following code into the script text field:
 
 ```bash
-bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/KontaktSDK.framework/strip-frameworks.sh"
+bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/KontaktSDK.xcframework/ios-arm64/KontaktSDK.framework/strip-frameworks.sh"
 ```
 
 (The last step, courtesy of [Realm](https://github.com/realm/realm-cocoa/), is required for working around an [iOS App Store bug](http://www.openradar.me/radar?id=6409498411401216) when archiving universal binaries.)
@@ -114,7 +121,13 @@ New SDK requires API Key to be specified. You can get it by registering a free a
 
 	// Set API Key
 	[Kontakt setAPIKey:@"Your API Key"];
-	
+
+    // OR set Auth headers provider
+    [Kontakt setAuthHeadersProvider:^(NSURLSession * _Nonnull urlSession, void (^ _Nonnull completion)(NSDictionary * _Nullable)) {
+        NSDictionary *headers = @{@"Authorization": @"Bearer <accessToken>"};
+        completion(headers);
+    }];
+
     return YES;
 }
 ```
@@ -130,6 +143,12 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 	
 	// Set API Key
 	Kontakt.setAPIKey("Your API Key")
+
+    // OR set Auth headers provider
+    Kontakt.setAuthHeadersProvider { urlSession, completion in
+        var headers = ["Authorization": "Bearer <accessToken>"]
+        completion(headers as [AnyHashable: Any])
+    }
 	
 	return true
 }
@@ -175,6 +194,12 @@ We will use `application:didFinishLaunchingWithOptions:` to initiate beacon mana
 
 	// Set API Key
 	[Kontakt setAPIKey:@"Your API Key"];
+
+    // OR set Auth headers provider
+    [Kontakt setAuthHeadersProvider:^(NSURLSession * _Nonnull urlSession, void (^ _Nonnull completion)(NSDictionary * _Nullable)) {
+        NSDictionary *headers = @{@"Authorization": @"Bearer <accessToken>"};
+        completion(headers);
+    }];
 	
 	// Initiate Beacon Manager
 	self.beaconManager = [[KTKBeaconManager alloc] initWithDelegate:self];
@@ -301,6 +326,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Set API Key
         Kontakt.setAPIKey("API Key")
+
+        // OR set Auth headers provider
+        Kontakt.setAuthHeadersProvider { urlSession, completion in
+            var headers = ["Authorization": "Bearer <accessToken>"]
+            completion(headers as [AnyHashable: Any])
+        }
         
         // Initiate Beacon Manager
         beaconManager = KTKBeaconManager(delegate: self)
@@ -459,6 +490,15 @@ API Key must be provided before calling any method from `KTKCloudClient`.
 ```
 
 [Get your API key](/rest-api/stable/quickstart#get-your-api-key)
+
+Alternatively, if you use other authentication method like SSO, you can set a block in `Konktat.setAuthHeadersProvider` that obtains up-to-date token and calls `completion` with a dictionary containing HTTP headers that will be uses in each request made by `KTKCloudClient`.
+
+``` Objective-C
+[Kontakt setAuthHeadersProvider:^(NSURLSession * _Nonnull urlSession, void (^ _Nonnull completion)(NSDictionary * _Nullable)) {
+    NSDictionary *headers = @{@"Authorization": @"Bearer <accessToken>"};
+    completion(headers);
+}];
+```
 
 ### Using KTKCloudClient
 
