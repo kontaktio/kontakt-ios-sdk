@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKNearbyDeviceTelemetryError Constants Reference</title>
+	<title>KTKDeviceGatewayConnectionBLELogsHandlerBlock Block Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKNearbyDeviceTelemetryError Constants Reference</h1>
+					<h1 class="title">KTKDeviceGatewayConnectionBLELogsHandlerBlock Block Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>KTKNearbyDeviceTelemetry.h</td>
+	<td>KTKDeviceGatewayConnection.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,48 +75,42 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKNearbyDeviceTelemetryError</h3>
                     
-                    <div class="section">
-                        <!-- display enum values -->
-                        
-                        <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_OPTIONS(uint16_t, KTKNearbyDeviceTelemetryError ) {<br>
-                            
-                            &nbsp;&nbsp; <a href="">KTKNearbyDeviceTelemetryErrorNoInternet</a> = 1 &lt; &lt; 15,<br>
-                            
-                            };</code>
-                    
-                    </div>
-                    
-                    <div class="section section-methods">
-                        <h4 class="method-subtitle">Constants</h4>
-                        <dl class="termdef">
-                            
-                            <dt><a name="" title="KTKNearbyDeviceTelemetryErrorNoInternet"></a><code>KTKNearbyDeviceTelemetryErrorNoInternet</code></dt>
-<dd>
+          
+          <a title="Block Definition" name="instance_methods"></a>
+          <h4 class="method-subtitle parameter-title">Block Definition</h4>
+          <h3 class="subsubtitle method-title">KTKDeviceGatewayConnectionBLELogsHandlerBlock</h3>
 
 
-<p>No Internet Connection</p>
+<div class="method-subsection brief-description">
+  <p>A handler block object executed when a log message is received from the device.</p>
+</div>
 
 
 
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKNearbyDeviceTelemetry.h</code>.
-	</p>
-	
-</dd>
-                            
-                        </dl>
-                    </div>
-                    
-
-                    
-                    
-                    
+<code>typedef void (^KTKDeviceGatewayConnectionBLELogsHandlerBlock) (NSString *_Nullable, logsMessage , NSError *_Nullable, BOOL *_Nullable, stop )</code>
+  
+  
+  
+  <div class="method-subsection discussion-section">
+  <h4 class="method-subtitle">Discussion</h4>
+  <p>A handler block object executed when a log message is received from the device.</p>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="method-subsection declared-in-section">
+  <h4 class="method-subtitle">Declared In</h4>
+  <code class="declared-in-ref">KTKDeviceGatewayConnection.h</code><br />
+  </div>
+  
+  
           
 				</main>
 

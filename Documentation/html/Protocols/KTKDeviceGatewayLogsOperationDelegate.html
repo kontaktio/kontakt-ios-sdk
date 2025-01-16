@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKPersonPosition Class Reference</title>
+	<title>KTKDeviceGatewayLogsOperationDelegate Protocol Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -54,9 +54,7 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/x">x</option>
-		
-		<option value="//api/name/y">y</option>
+		<option value="//api/name/shouldStopLogging">shouldStopLogging</option>
 		
 	</optgroup>
 	
@@ -66,9 +64,11 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/init:::">- init:::</option>
+		<option value="//api/name/gatewayDeviceDidFinishReceivingLogs:">- gatewayDeviceDidFinishReceivingLogs:</option>
 		
-		<option value="//api/name/initWithData:">- initWithData:</option>
+		<option value="//api/name/gatewayDeviceDidReceiveLogs:">- gatewayDeviceDidReceiveLogs:</option>
+		
+		<option value="//api/name/gatewayDeviceDidStartReceivingLogs">- gatewayDeviceDidStartReceivingLogs</option>
 		
 	</optgroup>
 	
@@ -85,19 +85,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKPersonPosition Class Reference</h1>
+					<h1 class="title">KTKDeviceGatewayLogsOperationDelegate Protocol Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<th>Inherits from</th>
+	<th>Conforms to</th>
 	<td>NSObject</td>
 </tr><tr>
-	<th>Conforms to</th>
-	<td>NSCopying</td>
-</tr><tr>
 	<th>Declared in</th>
-	<td>KTKPersonPosition.h</td>
+	<td>KTKDeviceGatewayLogsOperationDelegate.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -115,9 +112,9 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/x" title="x"></a>
-	<h3 class="method-title"><code><a href="#//api/name/x">&nbsp;&nbsp;x</a></code>
-</h3>
+	<a name="//api/name/shouldStopLogging" title="shouldStopLogging"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldStopLogging">&nbsp;&nbsp;shouldStopLogging</a></code>
+<span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
 		<div class="pointy-thing"></div>
@@ -125,15 +122,15 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger x</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL shouldStopLogging</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/y" title="y"></a>
-	<h3 class="method-title"><code><a href="#//api/name/y">&nbsp;&nbsp;y</a></code>
-</h3>
+	<a name="//api/name/gatewayDeviceDidStartReceivingLogs" title="gatewayDeviceDidStartReceivingLogs"></a>
+	<h3 class="method-title"><code><a href="#//api/name/gatewayDeviceDidStartReceivingLogs">&ndash;&nbsp;gatewayDeviceDidStartReceivingLogs</a></code>
+<span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
 		<div class="pointy-thing"></div>
@@ -141,15 +138,15 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger y</code></div>
+			<div class="method-subsection method-declaration"><code>- (void)gatewayDeviceDidStartReceivingLogs</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/initWithData:" title="initWithData:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/initWithData:">&ndash;&nbsp;initWithData:</a></code>
-</h3>
+	<a name="//api/name/gatewayDeviceDidFinishReceivingLogs:" title="gatewayDeviceDidFinishReceivingLogs:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/gatewayDeviceDidFinishReceivingLogs:">&ndash;&nbsp;gatewayDeviceDidFinishReceivingLogs:</a></code>
+<span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
 		<div class="pointy-thing"></div>
@@ -157,15 +154,15 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (nullable instancetype)initWithData:(NSData *_Nullable)<em>data</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)gatewayDeviceDidFinishReceivingLogs:(NSArray&lt;NSError*&gt; *_Nullable)<em>errors</em></code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/init:::" title="init:::"></a>
-	<h3 class="method-title"><code><a href="#//api/name/init:::">&ndash;&nbsp;init:::</a></code>
-</h3>
+	<a name="//api/name/gatewayDeviceDidReceiveLogs:" title="gatewayDeviceDidReceiveLogs:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/gatewayDeviceDidReceiveLogs:">&ndash;&nbsp;gatewayDeviceDidReceiveLogs:</a></code>
+<span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
 		<div class="pointy-thing"></div>
@@ -173,7 +170,7 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (nullable instancetype)init:(NSUInteger)<em>y</em> :</code></div>
+			<div class="method-subsection method-declaration"><code>- (void)gatewayDeviceDidReceiveLogs:(NSString *_Nonnull)<em>message</em></code></div>
 
 		    
 		</div>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKEddystoneURL Class Reference</title>
+	<title>DeviceGatewayLogsGenericResponse Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -54,9 +54,13 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/machineToMachine">machineToMachine</option>
+		<option value="//api/name/message">message</option>
 		
-		<option value="//api/name/url">url</option>
+		<option value="//api/name/requestId">requestId</option>
+		
+		<option value="//api/name/returnCode">returnCode</option>
+		
+		<option value="//api/name/timestampMilliseconds">timestampMilliseconds</option>
 		
 	</optgroup>
 	
@@ -77,7 +81,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKEddystoneURL Class Reference</h1>
+					<h1 class="title">DeviceGatewayLogsGenericResponse Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -85,11 +89,8 @@
 	<th>Inherits from</th>
 	<td>NSObject</td>
 </tr><tr>
-	<th>Conforms to</th>
-	<td><a href="../Protocols/KTKEddystoneFrame.html">KTKEddystoneFrame</a><br />NSCopying<br />NSSecureCoding</td>
-</tr><tr>
 	<th>Declared in</th>
-	<td>KTKEddystoneURL.h</td>
+	<td>KontaktSDK-Swift.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -102,13 +103,13 @@
 						<a title="Tasks" name="tasks"></a>
 						
 
-						<a title="URL Frame Properties" name="task_URL Frame Properties"></a>
 						
-<h2 class="task-title">URL Frame Properties</h2>
+						
+
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/machineToMachine" title="machineToMachine"></a>
-	<h3 class="method-title"><code><a href="#//api/name/machineToMachine">&nbsp;&nbsp;machineToMachine</a></code>
+	<a name="//api/name/requestId" title="requestId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestId">&nbsp;&nbsp;requestId</a></code>
 </h3>
 
 	<div class="method-info">
@@ -116,45 +117,15 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>Machine to machine flag. (read-only)</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly, getter=isMachineToMachine) BOOL machineToMachine</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) uint16_t requestId</code></div>
 
 		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Machine to machine flag. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKEddystoneURL.h</code></p>
-			</div>
-			
-			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/url" title="url"></a>
-	<h3 class="method-title"><code><a href="#//api/name/url">&nbsp;&nbsp;url</a></code>
+	<a name="//api/name/timestampMilliseconds" title="timestampMilliseconds"></a>
+	<h3 class="method-title"><code><a href="#//api/name/timestampMilliseconds">&nbsp;&nbsp;timestampMilliseconds</a></code>
 </h3>
 
 	<div class="method-info">
@@ -162,40 +133,42 @@
 
 		<div class="method-info-container">
 			
-			
-			<div class="method-subsection brief-description">
-				<p>URL object. (read-only)</p>
-			</div>
-			
-		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSURL *url</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) uint64_t timestampMilliseconds</code></div>
 
 		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/returnCode" title="returnCode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/returnCode">&nbsp;&nbsp;returnCode</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) int32_t returnCode</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/message" title="message"></a>
+	<h3 class="method-title"><code><a href="#//api/name/message">&nbsp;&nbsp;message</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
 			
 
-			
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *message</code></div>
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>URL object. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKEddystoneURL.h</code></p>
-			</div>
-			
-			
+		    
 		</div>
 	</div>
 </div>
