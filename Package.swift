@@ -10,12 +10,21 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "KontaktSDK",
-            targets: ["KontaktSDK"]
+            targets: ["KontaktSDKWrapper"]
         ),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/SomeRandomiOSDev/CBORCoding.git", from: "1.4.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
+        .target(
+            name: "KontaktSDKWrapper",
+            dependencies: [
+                .target(name: "KontaktSDK"),
+                .product(name: "CBORCoding", package: "CBORCoding"),
+            ]),
         .binaryTarget(
             name: "KontaktSDK",
             path: "KontaktSDK/iOS/KontaktSDK.xcframework"

@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0D6557711E6579FF00A21FCE /* UIColor+Kontakt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557701E6579FF00A21FCE /* UIColor+Kontakt.swift */; };
 		0D6557741E657A3100A21FCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557721E657A3100A21FCE /* Constants.swift */; };
 		0D6557751E657A3100A21FCE /* SamplesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557731E657A3100A21FCE /* SamplesTableViewController.swift */; };
+		123D6AE02D389C6A00B41B11 /* KontaktSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 123D6ADF2D389C6A00B41B11 /* KontaktSDK */; };
 		A30813881E0955BD00DA7841 /* InfiniteScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30813871E0955BD00DA7841 /* InfiniteScanViewController.swift */; };
 		A308138A1E0955EE00DA7841 /* InfiniteScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30813891E0955EE00DA7841 /* InfiniteScan.storyboard */; };
 		A31E99431E38BB56005E73E7 /* LaunchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31E99421E38BB56005E73E7 /* LaunchButton.swift */; };
@@ -31,7 +32,6 @@
 		A39B0CEC1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B0CEB1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift */; };
 		A3A4A35F1E07E9D6005E15A1 /* RangingBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4A35E1E07E9D6005E15A1 /* RangingBeaconsViewController.swift */; };
 		A3A4A3621E07EEB8005E15A1 /* RangingBeacons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A4A3611E07EEB8005E15A1 /* RangingBeacons.storyboard */; };
-		E598DBF62AEB04AA00C5AF6A /* KontaktSDK in Frameworks */ = {isa = PBXBuildFile; productRef = E598DBF52AEB04AA00C5AF6A /* KontaktSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,17 +81,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E598DBF62AEB04AA00C5AF6A /* KontaktSDK in Frameworks */,
+				123D6AE02D389C6A00B41B11 /* KontaktSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123D6ADE2D389C6A00B41B11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A322BB8B1DFEA7C400C847AF = {
 			isa = PBXGroup;
 			children = (
 				A322BB961DFEA7C400C847AF /* Developer Samples */,
+				123D6ADE2D389C6A00B41B11 /* Frameworks */,
 				A322BB951DFEA7C400C847AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -218,7 +226,7 @@
 			);
 			name = "Developer Samples";
 			packageProductDependencies = (
-				E598DBF52AEB04AA00C5AF6A /* KontaktSDK */,
+				123D6ADF2D389C6A00B41B11 /* KontaktSDK */,
 			);
 			productName = "Developer Samples";
 			productReference = A322BB941DFEA7C400C847AF /* Developer Samples.app */;
@@ -258,7 +266,7 @@
 			);
 			mainGroup = A322BB8B1DFEA7C400C847AF;
 			packageReferences = (
-				E598DBF42AEB04AA00C5AF6A /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */,
+				12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../../KontaktSDK" */,
 			);
 			productRefGroup = A322BB951DFEA7C400C847AF /* Products */;
 			projectDirPath = "";
@@ -512,21 +520,17 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		E598DBF42AEB04AA00C5AF6A /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kontaktio/kontakt-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.26;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../../KontaktSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../KontaktSDK;
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E598DBF52AEB04AA00C5AF6A /* KontaktSDK */ = {
+		123D6ADF2D389C6A00B41B11 /* KontaktSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E598DBF42AEB04AA00C5AF6A /* XCRemoteSwiftPackageReference "kontakt-ios-sdk" */;
+			package = 12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../../KontaktSDK" */;
 			productName = KontaktSDK;
 		};
 /* End XCSwiftPackageProductDependency section */

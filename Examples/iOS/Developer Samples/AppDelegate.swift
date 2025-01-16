@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Set your API key
-        Kontakt.setAPIKey(<#T##key: String!##String!#>)
+        Kontakt.setAPIKey("")
 
         // Register User Notifications
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
