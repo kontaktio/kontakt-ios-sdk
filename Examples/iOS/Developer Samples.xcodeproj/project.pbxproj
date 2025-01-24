@@ -266,7 +266,7 @@
 			);
 			mainGroup = A322BB8B1DFEA7C400C847AF;
 			packageReferences = (
-				12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../../KontaktSDK" */,
+				12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../" */,
 			);
 			productRefGroup = A322BB951DFEA7C400C847AF /* Products */;
 			projectDirPath = "";
@@ -344,7 +344,6 @@
 		A322BBA41DFEA7C400C847AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -380,7 +379,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../KontaktSDK/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -408,7 +406,6 @@
 		A322BBA51DFEA7C400C847AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -444,7 +441,6 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../KontaktSDK/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -521,16 +517,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../../KontaktSDK" */ = {
+		12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../KontaktSDK;
+			relativePath = ../../;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		123D6ADF2D389C6A00B41B11 /* KontaktSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../../KontaktSDK" */;
+			package = 12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../" */;
 			productName = KontaktSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
