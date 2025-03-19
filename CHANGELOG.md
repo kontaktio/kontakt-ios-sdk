@@ -1,5 +1,16 @@
 ## Changelog
 
+### v4.0.0 - 16 Jan 2025
+- Added support for new devices
+- Fixed device identification
+- Added option to inject HTTP headers (SSO token support)
+- Added gateway bluetooth logging
+- Added gateway reboot command
+- Removed `KTKDeviceSymbol`
+- Removed tvOS and macOS support
+- Fixed sync internal state operation
+- Using online secure profile generation by default
+
 ### v3.0.26 - 4 Nov 2022
 - Added support for new devices
 - Added Diagnostic service for Portal Light
