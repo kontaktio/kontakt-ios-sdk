@@ -1,0 +1,11 @@
+framework module KontaktSDK {
+  umbrella header "KontaktSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module KontaktSDK.Swift {
+  header "KontaktSDK-Swift.h"
+  requires objc
+}

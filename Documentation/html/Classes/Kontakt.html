@@ -43,8 +43,6 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
-	<option value="overview">Overview</option>
-	
 
 	
 	
@@ -60,11 +58,15 @@
 		
 		<option value="//api/name/APIKey">+ APIKey</option>
 		
+		<option value="//api/name/AuthHeadersProvider">+ AuthHeadersProvider</option>
+		
 		<option value="//api/name/monitoringOptions">+ monitoringOptions</option>
 		
 		<option value="//api/name/removeCaches">+ removeCaches</option>
 		
 		<option value="//api/name/setAPIKey:">+ setAPIKey:</option>
+		
+		<option value="//api/name/setAuthHeadersProvider:">+ setAuthHeadersProvider:</option>
 		
 		<option value="//api/name/setCentralManagerPowerAlert:">+ setCentralManagerPowerAlert:</option>
 		
@@ -102,14 +104,6 @@
 					
 
                     
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Calculates distance to device from specified TX Power and RSSI.</p>
-					</div>
-					
-					
 
 					
 					
@@ -138,7 +132,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (void)setAPIKey:(NSString *)<em>key</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (void)setAPIKey:(NSString *_Nullable)<em>key</em></code></div>
 
 		    
 			
@@ -205,7 +199,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (NSString *)APIKey</code></div>
+			<div class="method-subsection method-declaration"><code>+ (NSString *_Nullable)APIKey</code></div>
 
 		    
 			
@@ -237,6 +231,119 @@
 					
 				</ul>
 			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setAuthHeadersProvider:" title="setAuthHeadersProvider:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setAuthHeadersProvider:">+&nbsp;setAuthHeadersProvider:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets authorization provider block used to inject authorization parameters into requests made by the SDK.
+The block has a completion handler parameter that should return a dictionary of request header parameters necessary for authorizing the request.
+@b IMPORTANT Calling this method with a non-nil value will disable <code>APIKey</code> value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setAuthHeadersProvider:(AuthHeadersProviderBlock)<em>headersProvider</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>headersProvider</code></th>
+						<td><p>A block called before each HTTP request with <code>URLSession</code> parameter used to send the request.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets authorization provider block used to inject authorization parameters into requests made by the SDK.
+The block has a completion handler parameter that should return a dictionary of request header parameters necessary for authorizing the request.
+@b IMPORTANT Calling this method with a non-nil value will disable <code>APIKey</code> value.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/AuthHeadersProvider" title="AuthHeadersProvider"></a>
+	<h3 class="method-title"><code><a href="#//api/name/AuthHeadersProvider">+&nbsp;AuthHeadersProvider</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns authorization headers provider block.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (AuthHeadersProviderBlock)AuthHeadersProvider</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A block value to be called with a <code>URLSession</code> object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns authorization headers provider block.</p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -480,7 +587,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 Kontakt.io. All rights reserved. Updated: 2022-11-04</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-03-21</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

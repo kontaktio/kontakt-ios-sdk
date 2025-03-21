@@ -72,6 +72,20 @@
 		
 		<option value="//api/name/UInt8">- UInt8</option>
 		
+		<option value="//api/name/bleFrameFlags">- bleFrameFlags</option>
+		
+		<option value="//api/name/bleFrameOperation">- bleFrameOperation</option>
+		
+		<option value="//api/name/bleFramePayloadLength">- bleFramePayloadLength</option>
+		
+		<option value="//api/name/bleFrameProtocolVersion">- bleFrameProtocolVersion</option>
+		
+		<option value="//api/name/cborFrameFormat">- cborFrameFormat</option>
+		
+		<option value="//api/name/cborFramePayloadLength">- cborFramePayloadLength</option>
+		
+		<option value="//api/name/cborFramePayloadType">- cborFramePayloadType</option>
+		
 		<option value="//api/name/ktk_dataSwapInt16">- ktk_dataSwapInt16</option>
 		
 		<option value="//api/name/ktk_dataSwapInt32">- ktk_dataSwapInt32</option>
@@ -286,6 +300,367 @@
 		    
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/cborFrameFormat" title="cborFrameFormat"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cborFrameFormat">&ndash;&nbsp;cborFrameFormat</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns data with payload type and data length as a header.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSData *)cborFrameFormat</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Header + original data.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns data with payload type and data length as a header.</p>
+
+<p>Payload type - @b u8 equal to 1</p>
+
+<p>Payload size - @b u16be</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSData+Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bleFrameProtocolVersion" title="bleFrameProtocolVersion"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bleFrameProtocolVersion">&ndash;&nbsp;bleFrameProtocolVersion</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Extracts protocol version (revision) from BLE frame.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (char)bleFrameProtocolVersion</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Payload type as Int8 value.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Extracts protocol version (revision) from BLE frame.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSData+Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bleFrameFlags" title="bleFrameFlags"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bleFrameFlags">&ndash;&nbsp;bleFrameFlags</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Extracts flags value from BLE frame.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (char)bleFrameFlags</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Flags value as binary mask.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Extracts flags value from BLE frame.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSData+Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bleFrameOperation" title="bleFrameOperation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bleFrameOperation">&ndash;&nbsp;bleFrameOperation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Extracts operation type from BLE frame.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (char)bleFrameOperation</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Operation type as Int8 value.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Extracts operation type from BLE frame.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSData+Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bleFramePayloadLength" title="bleFramePayloadLength"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bleFramePayloadLength">&ndash;&nbsp;bleFramePayloadLength</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Extracts payload size from BLE frame.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (uint16_t)bleFramePayloadLength</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Payload size/length as UInt16 value.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Extracts payload size from BLE frame.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSData+Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cborFramePayloadType" title="cborFramePayloadType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cborFramePayloadType">&ndash;&nbsp;cborFramePayloadType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Extracts payload type from CBOR payload.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (char)cborFramePayloadType</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Payload type as Int8 value.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Extracts payload type from CBOR payload.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSData+Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cborFramePayloadLength" title="cborFramePayloadLength"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cborFramePayloadLength">&ndash;&nbsp;cborFramePayloadLength</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Extracts payload size from CBOR payload.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (uint16_t)cborFramePayloadLength</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Payload size/length as UInt16 value.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Extracts payload size from CBOR payload.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSData+Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -357,7 +732,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 Kontakt.io. All rights reserved. Updated: 2022-11-04</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-03-21</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

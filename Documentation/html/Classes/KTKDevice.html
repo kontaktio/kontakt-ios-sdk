@@ -62,7 +62,11 @@
 		
 		<option value="//api/name/batteryLevel">batteryLevel</option>
 		
+		<option value="//api/name/bleScanChannel">bleScanChannel</option>
+		
 		<option value="//api/name/configuration">configuration</option>
+		
+		<option value="//api/name/filtrationMask">filtrationMask</option>
 		
 		<option value="//api/name/firmwareVersion">firmwareVersion</option>
 		
@@ -88,8 +92,6 @@
 		
 		<option value="//api/name/specification">specification</option>
 		
-		<option value="//api/name/symbol">symbol</option>
-		
 		<option value="//api/name/tags">tags</option>
 		
 		<option value="//api/name/type">type</option>
@@ -98,6 +100,8 @@
 		
 		<option value="//api/name/venueID">venueID</option>
 		
+		<option value="//api/name/wifiSSID">wifiSSID</option>
+		
 	</optgroup>
 	
 
@@ -105,8 +109,6 @@
 
 	
 	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/getCredentialsWithCompletion:">- getCredentialsWithCompletion:</option>
 		
 		<option value="//api/name/initWithUniqueID:">- initWithUniqueID:</option>
 		
@@ -709,6 +711,144 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/filtrationMask" title="filtrationMask"></a>
+	<h3 class="method-title"><code><a href="#//api/name/filtrationMask">&nbsp;&nbsp;filtrationMask</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Filtration Mask of the device. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) KTKDeviceFilteringClass filtrationMask</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Filtration Mask of the device. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/bleScanChannel" title="bleScanChannel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/bleScanChannel">&nbsp;&nbsp;bleScanChannel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Ble Scan Channel of the device. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) KTKDeviceBLEChannel bleScanChannel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Ble Scan Channel of the device. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/wifiSSID" title="wifiSSID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/wifiSSID">&nbsp;&nbsp;wifiSSID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>WIFI SSID of the device. (read-only)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *wifiSSID</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>WIFI SSID of the device. (read-only)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDevice.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/type" title="type"></a>
 	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
 </h3>
@@ -859,61 +999,6 @@
 				<ul>
 					
 					<li><code><p><a href="../Constants/KTKDeviceModel.html">KTKDeviceModel</a></p></code></li>
-					
-				</ul>
-			</div>
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKDevice.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/symbol" title="symbol"></a>
-	<h3 class="method-title"><code><a href="#//api/name/symbol">&nbsp;&nbsp;symbol</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Device symbol. (read-only)</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) KTKDeviceSymbol symbol</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Device symbol. (read-only)</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="../Constants/KTKDeviceSymbol.html">KTKDeviceSymbol</a></p></code></li>
 					
 				</ul>
 			</div>
@@ -1301,7 +1386,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (instancetype)initWithUniqueID:(NSString *)<em>uniqueID</em> deviceType:(int)<em>type</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithUniqueID:(NSString *)<em>uniqueID</em> deviceType:(NSInteger)<em>type</em></code></div>
 
 		    
 			
@@ -1355,72 +1440,6 @@
 </div>
 						</div>
 						
-
-						<a title="Model Methods" name="task_Model Methods"></a>
-						<h2 class="task-title">Model Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/getCredentialsWithCompletion:" title="getCredentialsWithCompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getCredentialsWithCompletion:">&ndash;&nbsp;getCredentialsWithCompletion:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Gets device credentails from the Cloud API.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)getCredentialsWithCompletion:(void ( ^ ) ( KTKDeviceCredentials *_Nullable , NSError *_Nullable ))<em>completion</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>completion</code></th>
-						<td><p>A block object to be executed when the request finishes.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Gets device credentails from the Cloud API.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKDevice.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
 					</div>
 					
 					
@@ -1433,7 +1452,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2022 Kontakt.io. All rights reserved. Updated: 2022-11-04</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-03-21</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

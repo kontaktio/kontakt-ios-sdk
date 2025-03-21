@@ -1,0 +1,73 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name KontaktSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import CBORCoding
+import Foundation
+@_exported import KontaktSDK
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc extension Foundation.NSString {
+  @objc public enum VersionOperator : Swift.Int {
+    case greaterThan
+    case lessThan
+    case greaterThanOrEqualTo
+    case lessThanOrEqualTo
+    case equalTo
+    case notEqualTo
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc dynamic public func compareVersion(_ otherVersion: Foundation.NSString, operator: Foundation.NSString.VersionOperator) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @objc final public class DeviceGatewayLogsCoder : ObjectiveC.NSObject {
+  @objc public static func encode(request: KontaktSDK.DeviceGatewayLogsRequest) throws -> Foundation.Data
+  @objc public static func decodeGenericResponse(_ responseData: Foundation.Data) throws -> KontaktSDK.DeviceGatewayLogsGenericResponse
+  @objc public static func decodeLogsEvent(_ responseData: Foundation.Data) throws -> KontaktSDK.DeviceGatewayLogsEvent
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct FirmwareVersion : Swift.Comparable {
+  public let major: Swift.UInt
+  public let minor: Swift.UInt
+  public let patch: Swift.UInt
+  public let preReleaseId: Swift.String?
+  public init?(versionString: Swift.String)
+  public init(major: Swift.UInt, minor: Swift.UInt, patch: Swift.UInt, preReleaseId: Swift.String? = nil)
+  public static func < (lhs: KontaktSDK.FirmwareVersion, rhs: KontaktSDK.FirmwareVersion) -> Swift.Bool
+  public static func == (a: KontaktSDK.FirmwareVersion, b: KontaktSDK.FirmwareVersion) -> Swift.Bool
+}
+@objc final public class DeviceGatewayLogsRequest : ObjectiveC.NSObject, Swift.Encodable {
+  @objc public init(messageId: Swift.UInt16, requestId: Swift.UInt16, levelId: Swift.UInt8)
+  @objc public init(messageId: Swift.UInt16, requestId: Swift.UInt16)
+  @objc deinit
+  final public func encode(to encoder: any Swift.Encoder) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ISO8601MicrosecondsDateFormatter : Foundation.DateFormatter {
+  @objc override dynamic public init()
+  @objc override final public func string(from date: Foundation.Date) -> Swift.String
+  @objc deinit
+}
+@objc final public class DeviceGatewayLogsGenericResponse : ObjectiveC.NSObject, Swift.Decodable {
+  @objc final public let requestId: Swift.UInt16
+  @objc final public let timestampMilliseconds: Swift.UInt64
+  @objc final public let returnCode: Swift.Int32
+  @objc final public let message: Swift.String?
+  @objc deinit
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc final public class DeviceGatewayLogsEvent : ObjectiveC.NSObject, Swift.Decodable {
+  @objc final public let timestampMicroseconds: Swift.UInt64
+  @objc final public let message: Swift.String
+  @objc final public let level: Swift.UInt8
+  @objc deinit
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension Foundation.NSString.VersionOperator : Swift.Equatable {}
+extension Foundation.NSString.VersionOperator : Swift.Hashable {}
+extension Foundation.NSString.VersionOperator : Swift.RawRepresentable {}

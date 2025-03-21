@@ -7,15 +7,12 @@ let package = Package(
     name: "kontakt-ios-sdk",
     platforms: [.iOS(.v12)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "KontaktSDK",
             targets: ["KontaktSDK"]
         ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .binaryTarget(
             name: "KontaktSDK",
             path: "KontaktSDK/iOS/KontaktSDK.xcframework"
