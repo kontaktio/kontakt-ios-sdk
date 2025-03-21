@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 4.0.0
+//  Version: 5.0.0
 //
 //  Copyright © 2015 Kontakt.io. All rights reserved.
 //
@@ -42,11 +42,6 @@ typedef NS_ENUM(NSInteger, KTKFirmwareType) {
  *  An array of firmware versions which can be updated to this firmware version.
  */
 @property (nonatomic, strong, readonly) NSArray <NSString*> *validVersions;
-
-/**
- *  An array of devices unique IDs which can be updated to this firmware version.
- */
-@property (nonatomic, strong, readonly) NSArray <NSString*> * _Nullable validDevicesUniqueID __attribute__((deprecated("Please use `devicesUniqueID` property instead")));
 
 /**
  *  An array of devices unique IDs which can be updated to this firmware version.

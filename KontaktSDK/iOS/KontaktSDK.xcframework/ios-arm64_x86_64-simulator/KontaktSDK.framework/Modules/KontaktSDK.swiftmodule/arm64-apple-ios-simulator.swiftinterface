@@ -9,12 +9,38 @@ import Swift
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@objc extension Foundation.NSString {
+  @objc public enum VersionOperator : Swift.Int {
+    case greaterThan
+    case lessThan
+    case greaterThanOrEqualTo
+    case lessThanOrEqualTo
+    case equalTo
+    case notEqualTo
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc dynamic public func compareVersion(_ otherVersion: Foundation.NSString, operator: Foundation.NSString.VersionOperator) -> Swift.Bool
+}
 @_inheritsConvenienceInitializers @objc final public class DeviceGatewayLogsCoder : ObjectiveC.NSObject {
   @objc public static func encode(request: KontaktSDK.DeviceGatewayLogsRequest) throws -> Foundation.Data
   @objc public static func decodeGenericResponse(_ responseData: Foundation.Data) throws -> KontaktSDK.DeviceGatewayLogsGenericResponse
   @objc public static func decodeLogsEvent(_ responseData: Foundation.Data) throws -> KontaktSDK.DeviceGatewayLogsEvent
   @objc override dynamic public init()
   @objc deinit
+}
+public struct FirmwareVersion : Swift.Comparable {
+  public let major: Swift.UInt
+  public let minor: Swift.UInt
+  public let patch: Swift.UInt
+  public let preReleaseId: Swift.String?
+  public init?(versionString: Swift.String)
+  public init(major: Swift.UInt, minor: Swift.UInt, patch: Swift.UInt, preReleaseId: Swift.String? = nil)
+  public static func < (lhs: KontaktSDK.FirmwareVersion, rhs: KontaktSDK.FirmwareVersion) -> Swift.Bool
+  public static func == (a: KontaktSDK.FirmwareVersion, b: KontaktSDK.FirmwareVersion) -> Swift.Bool
 }
 @objc final public class DeviceGatewayLogsRequest : ObjectiveC.NSObject, Swift.Encodable {
   @objc public init(messageId: Swift.UInt16, requestId: Swift.UInt16, levelId: Swift.UInt8)
@@ -42,3 +68,6 @@ import _SwiftConcurrencyShims
   @objc deinit
   public init(from decoder: any Swift.Decoder) throws
 }
+extension Foundation.NSString.VersionOperator : Swift.Equatable {}
+extension Foundation.NSString.VersionOperator : Swift.Hashable {}
+extension Foundation.NSString.VersionOperator : Swift.RawRepresentable {}

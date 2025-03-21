@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 4.0.0
+//  Version: 5.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -87,6 +87,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, strong) KTKNearbyDeviceTelemetry * _Nullable telemetry;
 
 /**
+ *  Block called when new telemetry is set.
+ */
+@property (nonatomic, copy, nullable) void (^onTelemetryChange)(KTKNearbyDeviceTelemetry *newTelemetry);
+
+
+/**
  *  Current advertising profile. (read-only)
  *
  *  @warning *Important:* advertisingProfile property is not compatible with firmware 4.1 as devices can advertise multiple packets at the same time.
@@ -121,13 +127,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  Last discovery update timestamp. (read-only) 
  */
 @property (nonatomic, readonly, assign) double updatedAt;
-
-
-/**
- *  Updates force a nearby device object with the specified advertisement dictionary.
- *
- */
-- (void)setUpdatedForceCompletion:(KTKKontaktResponseCompletionBlock)completion;
 
 @end
 

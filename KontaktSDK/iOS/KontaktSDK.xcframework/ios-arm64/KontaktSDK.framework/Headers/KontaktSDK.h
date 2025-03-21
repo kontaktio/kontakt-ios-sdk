@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 4.0.0
+//  Version: 5.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -18,7 +18,6 @@ FOUNDATION_EXPORT const unsigned char KontaktSDKVersionString[];
 #import "NSString+Kontakt.h"
 #import "KTKCloudClient.h"
 #import "KTKDevice.h"
-#import "KTKDeviceCredentials.h"
 #import "KTKDeviceConfiguration.h"
 #import "KTKDeviceGatewayConfigurationType.h"
 #import "KTKFirmware.h"
@@ -33,4 +32,5 @@ FOUNDATION_EXPORT const unsigned char KontaktSDKVersionString[];
 #import "KTKDeviceGatewayConnection.h"
 #import "KTKTrigger.h"
 #import "KTKDeviceGatewayLogsOperationDelegate.h"
+#import "KTKEddystoneURLValueTransformer.h"
 

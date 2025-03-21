@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 4.0.0
+//  Version: 5.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -45,18 +45,17 @@ typedef NS_ENUM(NSInteger, KTKDeviceConnectionOperationType) {
 };
 
 /**
- *  Configuration Profile Generator Types
+ *  Method for writing/reading Secure Configuration Profile.
  */
-typedef NS_ENUM(NSInteger, KTKConfigProfileGenerator) {
+typedef NS_ENUM(NSInteger, KTKConfigProfileReadWriteMethod) {
     /**
-     *  Generate using Cloud Only API Key required.
+     *  Default method that uses stream characteristic.
      */
-    KTKConfigProfileGeneratorUsingCloud       = 1,
-
+    KTKConfigProfileReadWriteMethodStreaming = 1,
     /**
-     *  Generate using KTKDeviceCredentails.
+     *  Legacy method for devices that don't support (or have problem with) stream characteristic.
      */
-    KTKConfigProfileGeneratorUsingCredentials = 2
+    KTKConfigProfileReadWriteMethodLegacy = 2
 };
 
 /**
@@ -570,6 +569,10 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
      *  Temperature Monitor Mini 2
      */
     KTKDeviceModelTemperatureMonitor = 47,
+    /**
+     *  Smart Badge 3 Mini
+     */
+    KTKDeviceModelSmartBadge3Mini = 48,
 
     /**
      *  Partner devices
@@ -785,3 +788,34 @@ typedef struct {
     int8_t y;
     int8_t z;
 } KTKDeviceAcceleration;
+
+/**
+ *  Gateway properties bitmask
+ */
+typedef NS_OPTIONS(uint16_t, KTKGatewayProperties) {
+    KTKGatewayPropertyWiFi        = 1 << 0,
+    KTKGatewayPropertyIP          = 1 << 1,
+    KTKGatewayPropertyNTP         = 1 << 2,
+    KTKGatewayPropertyProvisioned = 1 << 3,
+    KTKGatewayPropertyDMConn      = 1 << 4,
+    KTKGatewayPropertyDataConn    = 1 << 5,
+    KTKGatewayPropertyFallback    = 1 << 6,
+    KTKGatewayPropertyOTA         = 1 << 7,
+    KTKGatewayPropertyError       = 1 << 8,
+    KTKGatewayPropertyBusy        = 1 << 9
+};
+
+/**
+ *  Gateway info frame
+ */
+typedef struct {
+    int8_t bleRSSIMin;
+    int8_t bleRSSIAvg;
+    int8_t bleRSSIMax;
+    uint8_t bleInRate;
+    int8_t wifiRSSI;
+    uint8_t wifiChannel;
+    KTKGatewayProperties gwProperties;
+    uint8_t uptime;
+    uint8_t noConnTime;
+} KTKGatewayInfo;

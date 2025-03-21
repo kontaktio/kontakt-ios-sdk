@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 4.0.0
+//  Version: 5.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (uint16_t)CRC16Modbus;
 
 /**
- *  Adds payload type and data length as a header.
+ *  Returns data with payload type and data length as a header.
  *
  *  Payload type - @b u8 equal to 1
  *
@@ -53,21 +53,49 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return Header + original data.
  */
-- (NSData *)bleFrameFormat;
+- (NSData *)cborFrameFormat;
 
 /**
- *  Extracts payload type from BLE frame.
+ *  Extracts protocol version (revision) from BLE frame.
  *
- *  @return Payload type as UInt8 value.
+ *  @return Payload type as Int8 value.
  */
-- (char)bleFramePayloadType;
+- (char)bleFrameProtocolVersion;
 
 /**
- *  Extracts BLE frame's payload size.
+ *  Extracts flags value from BLE frame.
+ *
+ *  @return Flags value as binary mask.
+ */
+- (char)bleFrameFlags;
+
+/**
+ *  Extracts operation type from BLE frame.
+ *
+ *  @return Operation type as Int8 value.
+ */
+- (char)bleFrameOperation;
+
+/**
+ *  Extracts payload size from BLE frame.
  *
  *  @return Payload size/length as UInt16 value.
  */
 - (uint16_t)bleFramePayloadLength;
+
+/**
+ *  Extracts payload type from CBOR payload.
+ *
+ *  @return Payload type as Int8 value.
+ */
+- (char)cborFramePayloadType;
+
+/**
+ *  Extracts payload size from CBOR payload.
+ *
+ *  @return Payload size/length as UInt16 value.
+ */
+- (uint16_t)cborFramePayloadLength;
 
 
 #pragma mark - Extracting Primitives

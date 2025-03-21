@@ -353,6 +353,21 @@ SWIFT_CLASS("_TtC10KontaktSDK32ISO8601MicrosecondsDateFormatter")
 - (NSString * _Nonnull)stringFromDate:(NSDate * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
 @end
 
+enum VersionOperator : NSInteger;
+
+@interface NSString (SWIFT_EXTENSION(KontaktSDK))
+- (BOOL)compareVersion:(NSString * _Nonnull)otherVersion operator:(enum VersionOperator)operator_ SWIFT_WARN_UNUSED_RESULT;
+@end
+
+typedef SWIFT_ENUM(NSInteger, VersionOperator, open) {
+  VersionOperatorGreaterThan = 0,
+  VersionOperatorLessThan = 1,
+  VersionOperatorGreaterThanOrEqualTo = 2,
+  VersionOperatorLessThanOrEqualTo = 3,
+  VersionOperatorEqualTo = 4,
+  VersionOperatorNotEqualTo = 5,
+};
+
 #endif
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

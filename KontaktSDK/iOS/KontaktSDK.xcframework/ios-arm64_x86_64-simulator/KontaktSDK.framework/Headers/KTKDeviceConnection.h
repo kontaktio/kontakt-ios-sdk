@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 4.0.0
+//  Version: 5.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -11,7 +11,6 @@
 
 #import "KTKNearbyDevice.h"
 #import "KTKFirmware.h"
-#import "KTKDeviceCredentials.h"
 #import "KTKDeviceConfiguration.h"
 #import "KTKDeviceDataLoggerReading.h"
 #import "KTKDeviceKontaktRecognitionBox.h"
@@ -103,24 +102,10 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
 ///--------------------------------------------------------------------
 
 /**
- *  A credentails object to be forced over Cloud API credentials.
- *
- *  This property should be only used to connect to legacy devices (fw < 4.0) while offline or when using Credentials Config Profile Generator.
- *  In general devices with firmware >= 4.0 are not using password for the connection so this property will be ignored 
- *  unless you set `configProfileGenerator` property to `KTKConfigProfileGeneratorUsingCredentials`.
- *  By default credentials are automatically fetched from the Cloud API just before the connection opertation.
- *  If connection to the device while offline is not required this property should be ignored.
- *
- *  If password is changed through <code>KTKDeviceConfiguration</code> on the device while in offline it must be stored
- *  and then synchronized to the cloud API when possible.
- *
+ *  Preferred method for reading and writing Secure Configuration Profile.
+ *  The actual method is selected based on device model and firmware version.
  */
-@property (nonatomic, copy, readwrite) KTKDeviceCredentials *credentials;
-
-/**
- *  A preferred configuration profile packets generator.
- */
-@property (nonatomic, assign, readwrite) KTKConfigProfileGenerator configProfileGenerator;
+@property (nonatomic, assign) KTKConfigProfileReadWriteMethod preferredConfigProfileReadWriteMethod;
 
 #pragma mark - Other Properties
 ///--------------------------------------------------------------------
@@ -211,26 +196,6 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
 - (void)synchronizeInternalStateWithCompletion: (void (^)(__kindof KTKDeviceConfiguration * _Nullable, NSString *firmware, NSError * _Nullable))completion;
 
 /**
- *  Synch the token from the connection device.
- *
- *  @param firmware   The version firmware object for update device
- *  @param completion A block object to be executed when the read operation finishes.
- */
-- (void)synchDeviceConfigurationWithCompletion: (void (^)(__kindof KTKDeviceConfiguration * _Nullable, NSString *firmware, NSError * _Nullable))completion;
-
-/**
- *  Listens for sensors updates from the connection device.
- *
- *  @param updateBlock A block object to be executed when the sensors values are update.
- */
-- (void)sensorsUpdatesWithBlock:(KTKDeviceConnectionSensorsUpdate)updateBlock __attribute__((deprecated("Please use [KTKNearbyDevice telemetry] property instead")));
-
-/**
- *  Stops listening for sensors updates.
- */
-- (void)stopSensorsUpdates __attribute__((deprecated("Please use [KTKNearbyDevice telemetry] property instead")));
-
-/**
  *  Updates a device to the latest available firmware.
  *
  *  @param firmware   The firmware object you want to update device to. <code>Has to be equal or grater than current firmware version.</code>
@@ -246,6 +211,13 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  *  @param completion A block object to be executed when the update operation finishes download configuration, image and error.
  */
 - (void)getImage:(KTKKontaktImageType)type completion:(void (^)(NSData * _Nullable, NSArray<KTKDeviceKontaktRecognitionBox *> * _Nullable, KTKDeviceConfiguration * _Nullable configuration, NSError * _Nullable))completion;
+
+/**
+ *  Blink device
+ *
+ *  @param completion A block object to be executed when the operation finishes.
+ */
+- (void)getBlinkDevice:(void (^)(NSError * _Nullable error))completion;
 
 /**
  *  Cancels all operations on this connection.

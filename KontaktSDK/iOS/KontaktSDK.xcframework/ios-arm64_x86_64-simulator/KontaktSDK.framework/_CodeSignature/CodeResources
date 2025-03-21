@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/Localizable.strings</key>
 		<data>
-		RAwIRHNMgi0ice9hqOg4hxTD4as=
+		Xi0RDgM8LjOK08WzabO+lXxUOqo=
 		</data>
 		<key>Headers/CLBeacon+Kontakt.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/KTKDevice.h</key>
 		<data>
-		c/UmMInxAUm22KkuQ04JAckgno0=
+		DAZ9BIht3cjzQgDgB7XvBAmmKbs=
 		</data>
 		<key>Headers/KTKDeviceConfiguration.h</key>
 		<data>
@@ -54,11 +54,7 @@
 		</data>
 		<key>Headers/KTKDeviceConnection.h</key>
 		<data>
-		lazEGTZD2ZOrCPBIr72vveusdDk=
-		</data>
-		<key>Headers/KTKDeviceCredentials.h</key>
-		<data>
-		VS6inBeEphkaR834stBsnrQ9aZI=
+		qe9bdWBDYaEVEmQpC/jQf9Nuxww=
 		</data>
 		<key>Headers/KTKDeviceDataLoggerConnection.h</key>
 		<data>
@@ -70,7 +66,7 @@
 		</data>
 		<key>Headers/KTKDeviceDefinitions.h</key>
 		<data>
-		I7nBmCi+s6tNFHCRJI11JSL25IU=
+		qrIM6Mm29HpU7ZwVvWYehf3EJ68=
 		</data>
 		<key>Headers/KTKDeviceGatewayConfigurationType.h</key>
 		<data>
@@ -78,7 +74,7 @@
 		</data>
 		<key>Headers/KTKDeviceGatewayConnection.h</key>
 		<data>
-		jykzpwcLS+3vmGJxZn8R3CWVBSA=
+		aA/QzncH2bnxYCTCpBu95ypoC6E=
 		</data>
 		<key>Headers/KTKDeviceGatewayDiagnostic.h</key>
 		<data>
@@ -132,9 +128,13 @@
 		<data>
 		Ord42YQmWp++XB2ncaPfWyImEPQ=
 		</data>
+		<key>Headers/KTKEddystoneURLValueTransformer.h</key>
+		<data>
+		fRR9CioKo2bXNSNJ/XA0XNYZWaw=
+		</data>
 		<key>Headers/KTKFirmware.h</key>
 		<data>
-		sUcDojC+bzvDQwFj4uCE/BB7+9c=
+		ZFcp2HVBTRj0udXDijUFwU337wk=
 		</data>
 		<key>Headers/KTKKontaktResponse.h</key>
 		<data>
@@ -146,11 +146,11 @@
 		</data>
 		<key>Headers/KTKNearbyDevice.h</key>
 		<data>
-		REAGJAIxBPmqVBbnClU2ARp5xaI=
+		+ohfolAU7mlKDSOs7a2oiAOVdKY=
 		</data>
 		<key>Headers/KTKNearbyDeviceTelemetry.h</key>
 		<data>
-		5BvMPiEgRXOkNXqVWrt+uP2dPzc=
+		miIE/ZpbQ87B4W5zaDGG0vYGeBY=
 		</data>
 		<key>Headers/KTKPersonPosition.h</key>
 		<data>
@@ -182,63 +182,63 @@
 		</data>
 		<key>Headers/KontaktSDK-Swift.h</key>
 		<data>
-		Fyi3JNJKoICwI9Q0AgRndZKp+Mw=
+		k0Ej2j/7lzZZvLfdtNmdACnVJt8=
 		</data>
 		<key>Headers/KontaktSDK.h</key>
 		<data>
-		BKXcHzbhlK/Jp5I2wBk2M8HxvKU=
+		kbY2++FWHttqVH+qQnwLnHY2Lvc=
 		</data>
 		<key>Headers/NSData+Kontakt.h</key>
 		<data>
-		lK/tl3rAlcfd5SR1QPaXjtdDB+s=
+		LgJIyrasjnPFdAnHs4C90wmL9Ng=
 		</data>
 		<key>Headers/NSString+Kontakt.h</key>
 		<data>
-		jbEKImuGKwEFAwg1ukMQLt1WYJc=
+		AH8BfFndLwgKN/x9XDC1KP0RR68=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DQb7PAqeBodlfqfS4E50Aj06IA0=
+		lMgILF2qWzovBcnTCe+v4yZ3fkA=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		TUgvd1t9nB5AJebnAKFg0VMIQJk=
+		16a2hta0xXvAmXmKskkV+swlevI=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		GJGkDIZty9jnfI4UtiWrNNdu6ko=
+		+9fkmeqsEFvFmTCXT+xTk8laz2A=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		4LOw2aywGlyDrRHYmqpyuslS4yw=
+		khSozQR4hWtoENptSLSlmY4xqtg=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		GJGkDIZty9jnfI4UtiWrNNdu6ko=
+		+9fkmeqsEFvFmTCXT+xTk8laz2A=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		528QkFqdncXbH9F7LN9fHaCgIE0=
+		edvCfeHT/kdtYngBgdKQ5gB2SYM=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		TUgvd1t9nB5AJebnAKFg0VMIQJk=
+		16a2hta0xXvAmXmKskkV+swlevI=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		6llU0Nb//ZrptKDuqGOESVBS78g=
+		QCcalbfYzdN/qQeOmDM+Nk05Y7o=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MQRwVT5Q78cXcawMv5ZB6ptcRiY=
+		PBYEgL1hVtDSnqrO2zlXjxa3VoA=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6llU0Nb//ZrptKDuqGOESVBS78g=
+		QCcalbfYzdN/qQeOmDM+Nk05Y7o=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		KiUmC3Qh7XB+kMAyhmVnT89fcdI=
+		G+uTgEdzmiaz5XYORKJhwy9NEWs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -251,7 +251,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			n2aQwMWLzsF2FC0u98wIEXzQQj/qzmoBfBnD2Zl6z1s=
+			0jmyY6noqzVuXeq/xLOLv7yUioUobpOT6BEJHeup3Kg=
 			</data>
 		</dict>
 		<key>Headers/CLBeacon+Kontakt.h</key>
@@ -314,7 +314,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PHDuqkXeIv4pbKkJcTtgDybn0xzO2LLmFF4Irkn2uv8=
+			QYcM4Ulna4pP2KaJ6a4xZAp9UbHZC2VfFdgtMqcqYPc=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceConfiguration.h</key>
@@ -335,14 +335,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8dGMx2ovlczykThrdLUno0N/Tchb93N8/nWh/u9/k0o=
-			</data>
-		</dict>
-		<key>Headers/KTKDeviceCredentials.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aIpx4awutSqA5uuMyH3Ysc3bBUkgkA0biR0Zk0IV1/I=
+			MhiiQG26X2Ezv78wJ21e7ncdx3HHOSDLady7DrCRHns=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceDataLoggerConnection.h</key>
@@ -363,7 +356,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9tOCLStBDRtN1wppOitentUzLaAkT7ycF2M3/AESti8=
+			TloZDMsmeEWzLX/LogRx9OVVO8aRGL93E9gK6goFZHQ=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceGatewayConfigurationType.h</key>
@@ -377,7 +370,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ahjb/06BX+EDgBOHKzLDbqpe6EVec1R8dSe48VU5WDA=
+			/AayRTd9xVxDi13TJHzhAg+i6hqjwkgS/bImMXW+zEo=
 			</data>
 		</dict>
 		<key>Headers/KTKDeviceGatewayDiagnostic.h</key>
@@ -471,11 +464,18 @@
 			1oTA6mS5DF5T52zPcVqaTaKjGrXCX/W8lefflfV/KBg=
 			</data>
 		</dict>
+		<key>Headers/KTKEddystoneURLValueTransformer.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7tunhaFqpdnFCEebjixtvoD7RT+6XEb5MEUjJjUaPt8=
+			</data>
+		</dict>
 		<key>Headers/KTKFirmware.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KfEuW1SXB7YvbjUw6iCqSw3eMO1skTbZ6I1l2xF4+eA=
+			I5t9GAbHrVCx0M5CjgIhpvvNZ2Ki2G7NtIAHmt9d/zI=
 			</data>
 		</dict>
 		<key>Headers/KTKKontaktResponse.h</key>
@@ -496,14 +496,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5tQXrUOTUaUQA0NEuSejzw6ucwM2IO8Lop2aMPFK/tk=
+			QTkiBrEjAZDeRHniyyrOZ5mU1tocEv/WGR4EnPT7haI=
 			</data>
 		</dict>
 		<key>Headers/KTKNearbyDeviceTelemetry.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cO2eXYkFZRw3IzXvEwh3bGEQ0OhmxrknoK/aXKWrnpQ=
+			f/m9laZM5OlhahCRAI+0wyFLlWOSo8+f0Ff09/gxBls=
 			</data>
 		</dict>
 		<key>Headers/KTKPersonPosition.h</key>
@@ -559,98 +559,98 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rxdDdzogIIkbmRrsGeLGjooD6gCQihlpb85gUlYSSQQ=
+			Y6sgDfrmVYMoiE3ZFefRUwuNEsC+2zWxd1Ppe5CKhKU=
 			</data>
 		</dict>
 		<key>Headers/KontaktSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fMB1Bk+K7Jgw0wXI3ayXJujpJ4/ANHeV+Bqp/mIfnCo=
+			WfjpIp/LoikSCJVFUNtTWMZbdzR0JEbwYT96JbA+6OQ=
 			</data>
 		</dict>
 		<key>Headers/NSData+Kontakt.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OxygZzl7BwJUbLI8LAgKoVJojfWvY7Y6D6/Z39u5Rhs=
+			NHIUPE48QJTUW+loNGUo6cQLmiPKNpG1CtAXXMQ4018=
 			</data>
 		</dict>
 		<key>Headers/NSString+Kontakt.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KdZgTM3Qby/IZFWlduh2vW0ersIHJIFAyFy/fYNhnxQ=
+			gFGTP2ZMPQOVzuBQTCDR4UeMN2zpCGHEgqXXBXWqUMc=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			He9YzFSW1o9ZDVHSeJwPrTlWQWNzlZ2EPpK6+fCj/1s=
+			H6ci0EXRiKz6s5sQZnr6NOxsXeUeJB+TLh1dYja9z20=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jx0lOlHDByocpkxybwd0XvqUQyhJ+kQEFeH+7LjdR+Y=
+			d6GOcUUwhSJRJjdyY5dHpWqiBaFeWFxIZXkKbo3jkTE=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7kSKMcCYw7RNycPs2MnY7AusAPSWIW76g5l6yoHarC8=
+			LU1hMc1dsP4j/0BXDou2yBPjd/6ZhmWRW+qFdjUjLU0=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jx0lOlHDByocpkxybwd0XvqUQyhJ+kQEFeH+7LjdR+Y=
+			d6GOcUUwhSJRJjdyY5dHpWqiBaFeWFxIZXkKbo3jkTE=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VYZWHArHrI8ax3I2cRfAojc2W2lPgTo65y7lh3Kg0As=
+			k+5ft645NEKLmwSAIZG5eCjuajbNL1f8U7du16hw7aA=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			He9YzFSW1o9ZDVHSeJwPrTlWQWNzlZ2EPpK6+fCj/1s=
+			H6ci0EXRiKz6s5sQZnr6NOxsXeUeJB+TLh1dYja9z20=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SubVWVPS3ZwsQiQvx9MVEUxIxZ+Rzv34uf2Spa1F/dc=
+			oyFwjJP+Gjjn5qzlQybuOUEY2BPS7/rt0c5NTSpXNw8=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aDukhQbtYGX/BS7X4zycYnDT3TgO8YPfi8rBPAzeIe0=
+			sL/r/PlGjls817QTvWz6I+H9wzgayK449jgHluCp4yQ=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SubVWVPS3ZwsQiQvx9MVEUxIxZ+Rzv34uf2Spa1F/dc=
+			oyFwjJP+Gjjn5qzlQybuOUEY2BPS7/rt0c5NTSpXNw8=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DKUFTvrf/3ZlRBvCoR51S8yQg6Sag80bXhLlCYdlltI=
+			irbMw/Pj46DyDlsBtmmRKF/d5619mro18tjvXZH9yBo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

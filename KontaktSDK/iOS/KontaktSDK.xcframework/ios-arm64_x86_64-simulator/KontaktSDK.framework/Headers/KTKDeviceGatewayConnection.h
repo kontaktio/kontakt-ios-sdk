@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 4.0.0
+//  Version: 5.0.0
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
@@ -74,13 +74,6 @@ typedef void (^KTKDeviceGatewayConnectionBLELogsHandlerBlock)(NSString* _Nullabl
  *  @param completion A block object to be executed when the read operation finishes.
  */
 - (void)getMacDevice:(KTKDeviceGatewayConnectionGetMACBlock)completion;
-
-/**
- *  Blink device
- *
- *  @param completion A block object to be executed when the read operation finishes.
- */
-- (void)getBlinkDevice:(KTKDeviceGatewayConnectionGetMACBlock)completion;
 
 /**
  *  Reads the configuration from the connection device using MAC.

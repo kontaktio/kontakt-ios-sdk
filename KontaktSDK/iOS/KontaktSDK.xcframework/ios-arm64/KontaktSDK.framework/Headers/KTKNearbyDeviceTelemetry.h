@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 4.0.0
+//  Version: 5.0.0
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
@@ -67,6 +67,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @property (nonatomic, readonly, copy) NSNumber * _Nullable channel;
+
+@property (nonatomic, readonly, copy) NSData * _Nullable rawData;
 
 #pragma mark - Basic System Health
 ///--------------------------------------------------------------------
@@ -399,7 +401,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly, copy) NSArray <NSNumber*>  * _Nullable rssiValues;
 
+///--------------------------------------------------------------------
+/// @name Gateway info
+///--------------------------------------------------------------------
 
+@property (nonatomic, readonly, assign) KTKGatewayInfo gwInfo;
 
 #pragma mark - Data Logger
 ///--------------------------------------------------------------------

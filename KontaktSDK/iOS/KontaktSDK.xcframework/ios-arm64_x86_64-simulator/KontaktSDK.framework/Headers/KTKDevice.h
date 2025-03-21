@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 4.0.0
+//  Version: 5.0.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -8,7 +8,6 @@
 #import "KTKCloudModel.h"
 #import "KTKDeviceDefinitions.h"
 #import "KTKDeviceConfiguration.h"
-#import "KTKDeviceCredentials.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -174,18 +173,6 @@ extern KTKDeviceModel KTKDeviceModelFromString(NSString *string);
  *  @return An initialized device object.
  */
 - (instancetype)initWithUniqueID:(NSString *)uniqueID deviceType:(NSInteger)type;
-
-#pragma mark - Model Methods
-///--------------------------------------------------------------------
-/// @name Model Methods
-///--------------------------------------------------------------------
-
-/**
- *  Gets device credentails from the Cloud API.
- *
- *  @param completion A block object to be executed when the request finishes.
- */
-- (void)getCredentialsWithCompletion:(void(^)(KTKDeviceCredentials * _Nullable, NSError * _Nullable))completion;
 
 @end
 
