@@ -1,5 +1,20 @@
 ## Changelog
 
+### v5.0.0 - 21 Mar 2025
+- Added support for streaming secure config
+- Added support for Gateway info telemetry frame
+- Added `rawData` field to device telemetry
+- Made `getBlinkDevice` function available for all devices
+- Removed `KTKDeviceCredentials` and code related to offline configuration
+- Removed deprecated functions
+- Deleted unnecesary API requests
+- Removed telemetry reports related to an obsolete endpoint
+- Fixed errors in `KTKDeviceConfiguration` JSON parsing
+- Fixed crashes
+- Fixed and updated DFU process
+- Fixed race condition in sync and write config operations
+- Fixed an issue with writing configuration to gateways
+
 ### v4.0.0 - 16 Jan 2025
 - Added support for new devices
 - Fixed device identification

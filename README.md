@@ -2,6 +2,11 @@
 
 ## Important Note
 
+### 5.0.0
+* This version removes `KTKDeviceCredentials` and all code related to 'offline' configuration. All operations are set to use `KTKConfigProfileGeneratorUsingCloud` - this value cannot be changed anymore.
+* Added support for streaming secure config (for both read and write config operations). Streaming method will be used as default for Portal Light v3.0.0+, Portal Light 2 v0.6.0+ (excluding v1.2.0), non-legacy beacon devices with firmware 2.11.0+.<br/>
+This feature can be turned off by setting `preferredConfigProfileReadWriteMethod` property to `KTKConfigProfileReadWriteMethodLegacy` in `KTKDeviceConnection`.
+
 ### 4.0.0
 * Version `4.0.0` removes support for `tvOS` and `macOS`.
 * `KTKDeviceSymbol` has been removed. `KTKDeviceModel` should be used instead.
