@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>KTKDeviceConnectionOperationType Constants Reference</title>
+	<title>KTKGatewayProperties Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,7 +59,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">KTKDeviceConnectionOperationType Constants Reference</h1>
+					<h1 class="title">KTKGatewayProperties Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -75,11 +75,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">KTKDeviceConnectionOperationType</h3>
+                    <h3 class="subsubtitle method-title">KTKGatewayProperties</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>Device Connection Operation Types</p>
+                        <p>Gateway properties bitmask</p>
 					</div>
 					
 					
@@ -87,17 +87,27 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, KTKDeviceConnectionOperationType ) {<br>
+                        <code>typedef NS_OPTIONS(uint16_t, KTKGatewayProperties ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceConnectionOperationTypeUnknown</a> = -1,<br>
+                            &nbsp;&nbsp; <a href="">KTKGatewayPropertyWiFi</a> = 1 &lt; &lt; 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceConnectionOperationTypeRead</a> = 1,<br>
+                            &nbsp;&nbsp; <a href="">KTKGatewayPropertyIP</a> = 1 &lt; &lt; 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceConnectionOperationTypeWrite</a> = 2,<br>
+                            &nbsp;&nbsp; <a href="">KTKGatewayPropertyNTP</a> = 1 &lt; &lt; 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceConnectionOperationTypeDFU</a> = 3,<br>
+                            &nbsp;&nbsp; <a href="">KTKGatewayPropertyProvisioned</a> = 1 &lt; &lt; 3,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceConnectionOperationTypeNotify</a> = 4,<br>
+                            &nbsp;&nbsp; <a href="">KTKGatewayPropertyDMConn</a> = 1 &lt; &lt; 4,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKGatewayPropertyDataConn</a> = 1 &lt; &lt; 5,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKGatewayPropertyFallback</a> = 1 &lt; &lt; 6,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKGatewayPropertyOTA</a> = 1 &lt; &lt; 7,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKGatewayPropertyError</a> = 1 &lt; &lt; 8,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKGatewayPropertyBusy</a> = 1 &lt; &lt; 9,<br>
                             
                             };</code>
                     
@@ -107,11 +117,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="KTKDeviceConnectionOperationTypeUnknown"></a><code>KTKDeviceConnectionOperationTypeUnknown</code></dt>
+                            <dt><a name="" title="KTKGatewayPropertyWiFi"></a><code>KTKGatewayPropertyWiFi</code></dt>
 <dd>
 
 
-<p>Type Unknown.</p>
+<p>Gateway properties bitmask</p>
 
 
 
@@ -124,11 +134,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceConnectionOperationTypeRead"></a><code>KTKDeviceConnectionOperationTypeRead</code></dt>
+                            <dt><a name="" title="KTKGatewayPropertyIP"></a><code>KTKGatewayPropertyIP</code></dt>
 <dd>
 
 
-<p>Read Operation.</p>
+<p>Gateway properties bitmask</p>
 
 
 
@@ -141,11 +151,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceConnectionOperationTypeWrite"></a><code>KTKDeviceConnectionOperationTypeWrite</code></dt>
+                            <dt><a name="" title="KTKGatewayPropertyNTP"></a><code>KTKGatewayPropertyNTP</code></dt>
 <dd>
 
 
-<p>Write Operation.</p>
+<p>Gateway properties bitmask</p>
 
 
 
@@ -158,11 +168,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceConnectionOperationTypeDFU"></a><code>KTKDeviceConnectionOperationTypeDFU</code></dt>
+                            <dt><a name="" title="KTKGatewayPropertyProvisioned"></a><code>KTKGatewayPropertyProvisioned</code></dt>
 <dd>
 
 
-<p>DFU Operation.</p>
+<p>Gateway properties bitmask</p>
 
 
 
@@ -175,11 +185,96 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceConnectionOperationTypeNotify"></a><code>KTKDeviceConnectionOperationTypeNotify</code></dt>
+                            <dt><a name="" title="KTKGatewayPropertyDMConn"></a><code>KTKGatewayPropertyDMConn</code></dt>
 <dd>
 
 
-<p>Notification Operation.</p>
+<p>Gateway properties bitmask</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKGatewayPropertyDataConn"></a><code>KTKGatewayPropertyDataConn</code></dt>
+<dd>
+
+
+<p>Gateway properties bitmask</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKGatewayPropertyFallback"></a><code>KTKGatewayPropertyFallback</code></dt>
+<dd>
+
+
+<p>Gateway properties bitmask</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKGatewayPropertyOTA"></a><code>KTKGatewayPropertyOTA</code></dt>
+<dd>
+
+
+<p>Gateway properties bitmask</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKGatewayPropertyError"></a><code>KTKGatewayPropertyError</code></dt>
+<dd>
+
+
+<p>Gateway properties bitmask</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKGatewayPropertyBusy"></a><code>KTKGatewayPropertyBusy</code></dt>
+<dd>
+
+
+<p>Gateway properties bitmask</p>
 
 
 

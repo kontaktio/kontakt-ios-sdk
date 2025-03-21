@@ -54,13 +54,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/configProfileGenerator">configProfileGenerator</option>
-		
 		<option value="//api/name/connectionAttempts">connectionAttempts</option>
 		
 		<option value="//api/name/connectionTimeout">connectionTimeout</option>
-		
-		<option value="//api/name/credentials">credentials</option>
 		
 		<option value="//api/name/delegate">delegate</option>
 		
@@ -71,6 +67,8 @@
 		<option value="//api/name/lastReadConfiguration">lastReadConfiguration</option>
 		
 		<option value="//api/name/nearbyDevice">nearbyDevice</option>
+		
+		<option value="//api/name/preferredConfigProfileReadWriteMethod">preferredConfigProfileReadWriteMethod</option>
 		
 		<option value="//api/name/sharedQueue">sharedQueue</option>
 		
@@ -94,19 +92,15 @@
 		
 		<option value="//api/name/cancel">- cancel</option>
 		
+		<option value="//api/name/getBlinkDevice:">- getBlinkDevice:</option>
+		
 		<option value="//api/name/getImage:completion:">- getImage:completion:</option>
 		
 		<option value="//api/name/initWithNearbyDevice:">- initWithNearbyDevice:</option>
 		
 		<option value="//api/name/readConfigurationWithCompletion:">- readConfigurationWithCompletion:</option>
 		
-		<option value="//api/name/sensorsUpdatesWithBlock:">- sensorsUpdatesWithBlock:</option>
-		
-		<option value="//api/name/stopSensorsUpdates">- stopSensorsUpdates</option>
-		
 		<option value="//api/name/syncTimeWithCompletion:">- syncTimeWithCompletion:</option>
-		
-		<option value="//api/name/synchDeviceConfigurationWithCompletion:">- synchDeviceConfigurationWithCompletion:</option>
 		
 		<option value="//api/name/synchronizeInternalStateWithCompletion:">- synchronizeInternalStateWithCompletion:</option>
 		
@@ -440,8 +434,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/credentials" title="credentials"></a>
-	<h3 class="method-title"><code><a href="#//api/name/credentials">&nbsp;&nbsp;credentials</a></code>
+	<a name="//api/name/preferredConfigProfileReadWriteMethod" title="preferredConfigProfileReadWriteMethod"></a>
+	<h3 class="method-title"><code><a href="#//api/name/preferredConfigProfileReadWriteMethod">&nbsp;&nbsp;preferredConfigProfileReadWriteMethod</a></code>
 </h3>
 
 	<div class="method-info">
@@ -451,12 +445,13 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A credentails object to be forced over Cloud API credentials.</p>
+				<p>Preferred method for reading and writing Secure Configuration Profile.
+The actual method is selected based on device model and firmware version.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readwrite) KTKDeviceCredentials *credentials</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) KTKConfigProfileReadWriteMethod preferredConfigProfileReadWriteMethod</code></div>
 
 		    
 			
@@ -468,62 +463,8 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>A credentails object to be forced over Cloud API credentials.</p>
-
-<p>This property should be only used to connect to legacy devices (fw &lt; 4.0) while offline or when using Credentials Config Profile Generator.
-In general devices with firmware >= 4.0 are not using password for the connection so this property will be ignored
-unless you set <code>configProfileGenerator</code> property to <code>KTKConfigProfileGeneratorUsingCredentials</code>.
-By default credentials are automatically fetched from the Cloud API just before the connection opertation.
-If connection to the device while offline is not required this property should be ignored.</p>
-
-<p>If password is changed through <code>KTKDeviceConfiguration</code> on the device while in offline it must be stored
-and then synchronized to the cloud API when possible.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/configProfileGenerator" title="configProfileGenerator"></a>
-	<h3 class="method-title"><code><a href="#//api/name/configProfileGenerator">&nbsp;&nbsp;configProfileGenerator</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>A preferred configuration profile packets generator.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readwrite) KTKConfigProfileGenerator configProfileGenerator</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>A preferred configuration profile packets generator.</p>
+				<p>Preferred method for reading and writing Secure Configuration Profile.
+The actual method is selected based on device model and firmware version.</p>
 			</div>
 			
 
@@ -1111,173 +1052,6 @@ To close the connection you have to either call <code>cancel</code> method or ch
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/synchDeviceConfigurationWithCompletion:" title="synchDeviceConfigurationWithCompletion:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/synchDeviceConfigurationWithCompletion:">&ndash;&nbsp;synchDeviceConfigurationWithCompletion:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Synch the token from the connection device.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)synchDeviceConfigurationWithCompletion:(void ( ^ ) ( __kindof KTKDeviceConfiguration *_Nullable , NSString *firmware , NSError *_Nullable ))<em>completion</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>firmware</code></th>
-						<td><p>The version firmware object for update device</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>completion</code></th>
-						<td><p>A block object to be executed when the read operation finishes.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Synch the token from the connection device.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sensorsUpdatesWithBlock:" title="sensorsUpdatesWithBlock:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sensorsUpdatesWithBlock:">&ndash;&nbsp;sensorsUpdatesWithBlock:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Listens for sensors updates from the connection device.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sensorsUpdatesWithBlock:(KTKDeviceConnectionSensorsUpdate)<em>updateBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>updateBlock</code></th>
-						<td><p>A block object to be executed when the sensors values are update.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Listens for sensors updates from the connection device.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/stopSensorsUpdates" title="stopSensorsUpdates"></a>
-	<h3 class="method-title"><code><a href="#//api/name/stopSensorsUpdates">&ndash;&nbsp;stopSensorsUpdates</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Stops listening for sensors updates.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)stopSensorsUpdates</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Stops listening for sensors updates.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/updateWithFirmware:progress:completion:" title="updateWithFirmware:progress:completion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/updateWithFirmware:progress:completion:">&ndash;&nbsp;updateWithFirmware:progress:completion:</a></code>
 </h3>
@@ -1409,6 +1183,64 @@ To close the connection you have to either call <code>cancel</code> method or ch
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/getBlinkDevice:" title="getBlinkDevice:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getBlinkDevice:">&ndash;&nbsp;getBlinkDevice:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Blink device</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getBlinkDevice:(void ( ^ ) ( NSError *_Nullable error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A block object to be executed when the operation finishes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Blink device</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/cancel" title="cancel"></a>
 	<h3 class="method-title"><code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
 </h3>
@@ -1469,7 +1301,7 @@ To close the connection you have to either call <code>cancel</code> method or ch
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-01-16</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-03-21</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
