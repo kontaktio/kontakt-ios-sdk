@@ -1,5 +1,8 @@
 ## Changelog
 
+### v5.0.1 - 24 Mar 2025
+- Fixed crash in `KTKNearbyDeviceLegacyParser`
+
 ### v5.0.0 - 21 Mar 2025
 - Added support for streaming secure config
 - Added support for Gateway info telemetry frame
