@@ -182,7 +182,7 @@
 		</data>
 		<key>Headers/KontaktSDK-Swift.h</key>
 		<data>
-		k0Ej2j/7lzZZvLfdtNmdACnVJt8=
+		HumJc9Tpyz5ZaGY01ra2zsNK3Ow=
 		</data>
 		<key>Headers/KontaktSDK.h</key>
 		<data>
@@ -198,7 +198,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qTmML6OyEn1pVVBd8kI4gjforeU=
+		0TbkTU7YDXoM/DxAJbVXw85RuRU=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -206,19 +206,19 @@
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		+9fkmeqsEFvFmTCXT+xTk8laz2A=
+		jM17ivI56pNG97GVuyarUEftFJY=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		khSozQR4hWtoENptSLSlmY4xqtg=
+		2A5z/oE5aiEWAOUdf0D8lEu9iKk=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		+9fkmeqsEFvFmTCXT+xTk8laz2A=
+		jM17ivI56pNG97GVuyarUEftFJY=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		edvCfeHT/kdtYngBgdKQ5gB2SYM=
+		o6Lf7soRvTZPPZZjT5vp7igpF3o=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -226,19 +226,19 @@
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		QCcalbfYzdN/qQeOmDM+Nk05Y7o=
+		pXTzXLnOH3ikZxm7PIVvqltUdFo=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		PBYEgL1hVtDSnqrO2zlXjxa3VoA=
+		HZ4ETkK+8NGSMzTgzdK2S4cjmWw=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		QCcalbfYzdN/qQeOmDM+Nk05Y7o=
+		pXTzXLnOH3ikZxm7PIVvqltUdFo=
 		</data>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		G+uTgEdzmiaz5XYORKJhwy9NEWs=
+		NJk/aCpR+flKJwQG96EcXlhUNVM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -559,7 +559,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y6sgDfrmVYMoiE3ZFefRUwuNEsC+2zWxd1Ppe5CKhKU=
+			JXAmJSy08UHcOZTyrwI6eUT6iKstqpdagmEP7rRwBUA=
 			</data>
 		</dict>
 		<key>Headers/KontaktSDK.h</key>
@@ -594,28 +594,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			d6GOcUUwhSJRJjdyY5dHpWqiBaFeWFxIZXkKbo3jkTE=
+			JfHXctMPwQxd+6uk5l6c8Yuw+n4+4D0GKnfpCv3KQgM=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LU1hMc1dsP4j/0BXDou2yBPjd/6ZhmWRW+qFdjUjLU0=
+			Rnh4ijXJ9AM4spP9owMzKJJOhxouNQDjS55Pxj9ih/o=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			d6GOcUUwhSJRJjdyY5dHpWqiBaFeWFxIZXkKbo3jkTE=
+			JfHXctMPwQxd+6uk5l6c8Yuw+n4+4D0GKnfpCv3KQgM=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k+5ft645NEKLmwSAIZG5eCjuajbNL1f8U7du16hw7aA=
+			2vNZC8xAtyXDEppdDpAPPHsje7EQjOJdVp/HQUNktYI=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -629,28 +629,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oyFwjJP+Gjjn5qzlQybuOUEY2BPS7/rt0c5NTSpXNw8=
+			o1NxamAh2GsnjpPk+vKqB9N6qIr7RGVfZen5eQvDJG0=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sL/r/PlGjls817QTvWz6I+H9wzgayK449jgHluCp4yQ=
+			eAu6PrfwiIN2Gw9k0dwK8TS8WdlYiQo9mlFUs44RfCM=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oyFwjJP+Gjjn5qzlQybuOUEY2BPS7/rt0c5NTSpXNw8=
+			o1NxamAh2GsnjpPk+vKqB9N6qIr7RGVfZen5eQvDJG0=
 			</data>
 		</dict>
 		<key>Modules/KontaktSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			irbMw/Pj46DyDlsBtmmRKF/d5619mro18tjvXZH9yBo=
+			En/W2p7MYlpDLoMDkPMtCzBCsPpOBnXqzqMeYzYVtQo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
