@@ -1,5 +1,8 @@
 ## Changelog
 
+### v5.0.2 - 11 Jun 2025
+- Recompiled binary to work with Xcode 16.4
+
 ### v5.0.1 - 24 Mar 2025
 - Fixed crash in `KTKNearbyDeviceLegacyParser`
 
