@@ -92,13 +92,19 @@
 		
 		<option value="//api/name/cancel">- cancel</option>
 		
+		<option value="//api/name/fetchMonitorStorageDataFrom:to:withCompletion:">- fetchMonitorStorageDataFrom:to:withCompletion:</option>
+		
 		<option value="//api/name/getBlinkDevice:">- getBlinkDevice:</option>
 		
 		<option value="//api/name/getImage:completion:">- getImage:completion:</option>
 		
+		<option value="//api/name/getProbesStatusWithCompletion:">- getProbesStatusWithCompletion:</option>
+		
 		<option value="//api/name/initWithNearbyDevice:">- initWithNearbyDevice:</option>
 		
 		<option value="//api/name/readConfigurationWithCompletion:">- readConfigurationWithCompletion:</option>
+		
+		<option value="//api/name/readEncryptedConfigurationWithFirmware:completion:">- readEncryptedConfigurationWithFirmware:completion:</option>
 		
 		<option value="//api/name/syncTimeWithCompletion:">- syncTimeWithCompletion:</option>
 		
@@ -107,6 +113,8 @@
 		<option value="//api/name/updateWithFirmware:progress:completion:">- updateWithFirmware:progress:completion:</option>
 		
 		<option value="//api/name/writeConfiguration:completion:">- writeConfiguration:completion:</option>
+		
+		<option value="//api/name/writeEncryptedConfiguration:withFirmware:completion:">- writeEncryptedConfiguration:withFirmware:completion:</option>
 		
 	</optgroup>
 	
@@ -878,6 +886,75 @@ To close the connection you have to either call <code>cancel</code> method or ch
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/writeEncryptedConfiguration:withFirmware:completion:" title="writeEncryptedConfiguration:withFirmware:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/writeEncryptedConfiguration:withFirmware:completion:">&ndash;&nbsp;writeEncryptedConfiguration:withFirmware:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Writes encrypted configuration directly to the connection device.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)writeEncryptedConfiguration:(NSData *)<em>encryptedConfig</em> withFirmware:(nullable NSString *)<em>firmware</em> completion:(KTKDeviceConnectionWriteEncryptedCompletion)<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>encryptedConfig</code></th>
+						<td><p>Encrypted configuration data.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>firmware</code></th>
+						<td><p>Firmware version of the connected device.
+Can be <code>nil</code> if <code>nearbyDevice</code> reference has already firmware version set.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A block object to be executed when the write operation finishes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Writes encrypted configuration directly to the connection device.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/readConfigurationWithCompletion:" title="readConfigurationWithCompletion:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/readConfigurationWithCompletion:">&ndash;&nbsp;readConfigurationWithCompletion:</a></code>
 </h3>
@@ -895,6 +972,64 @@ To close the connection you have to either call <code>cancel</code> method or ch
 		    
 
 			<div class="method-subsection method-declaration"><code>- (void)readConfigurationWithCompletion:(KTKDeviceConnectionReadCompletion)<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A block object to be executed when the read operation finishes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Reads the configuration from the connection device.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readEncryptedConfigurationWithFirmware:completion:" title="readEncryptedConfigurationWithFirmware:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readEncryptedConfigurationWithFirmware:completion:">&ndash;&nbsp;readEncryptedConfigurationWithFirmware:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Reads the configuration from the connection device.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)readEncryptedConfigurationWithFirmware:(NSString *)<em>firmware</em> completion:(void ( ^ ) ( NSData *_Nullable , NSError *_Nullable ))<em>completion</em></code></div>
 
 		    
 			
@@ -1010,7 +1145,7 @@ To close the connection you have to either call <code>cancel</code> method or ch
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)synchronizeInternalStateWithCompletion:(void ( ^ ) ( __kindof KTKDeviceConfiguration *_Nullable , NSString *firmware , NSError *_Nullable ))<em>completion</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)synchronizeInternalStateWithCompletion:(void ( ^ ) ( __kindof KTKDeviceConfiguration *_Nullable , NSString *firmware , BOOL isTimeSynced , NSError *_Nullable ))<em>completion</em></code></div>
 
 		    
 			
@@ -1241,6 +1376,132 @@ To close the connection you have to either call <code>cancel</code> method or ch
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/getProbesStatusWithCompletion:" title="getProbesStatusWithCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getProbesStatusWithCompletion:">&ndash;&nbsp;getProbesStatusWithCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Request Temperature Monitor probes status.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getProbesStatusWithCompletion:(void ( ^ ) ( DeviceCCSlotStateResponse *_Nullable , NSError *_Nullable ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A block object to be executed when the operation finishes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Request Temperature Monitor probes status.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchMonitorStorageDataFrom:to:withCompletion:" title="fetchMonitorStorageDataFrom:to:withCompletion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchMonitorStorageDataFrom:to:withCompletion:">&ndash;&nbsp;fetchMonitorStorageDataFrom:to:withCompletion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Request Temperature Monitor storage data from the provided time period.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)fetchMonitorStorageDataFrom:(NSTimeInterval)<em>from</em> to:(NSTimeInterval)<em>to</em> withCompletion:(KTKDeviceConnectionFetchMonitorStorageDataCompletion)<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>from</code></th>
+						<td><p>Data will be read from this date (in seconds).</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>to</code></th>
+						<td><p>Data will be read up to, but excluding, this date (in seconds).</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A block object to be executed when the operation finishes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Request Temperature Monitor storage data from the provided time period.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/cancel" title="cancel"></a>
 	<h3 class="method-title"><code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
 </h3>
@@ -1301,7 +1562,7 @@ To close the connection you have to either call <code>cancel</code> method or ch
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-06-11</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-11</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>DeviceGatewayLogsCoder Class Reference</title>
+	<title>KTKSensorState Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -52,25 +52,25 @@
 
 	
 	
-
-	
-	<optgroup label="Class Methods">
+	<optgroup label="Properties">
 		
-		<option value="//api/name/decodeGenericResponse:error:">+ decodeGenericResponse:error:</option>
+		<option value="//api/name/ageSeconds">ageSeconds</option>
 		
-		<option value="//api/name/decodeLogsEvent:error:">+ decodeLogsEvent:error:</option>
+		<option value="//api/name/componentCode">componentCode</option>
 		
-		<option value="//api/name/encodeWithRequest:error:">+ encodeWithRequest:error:</option>
+		<option value="//api/name/error">error</option>
 		
-	</optgroup>
-	
-
-	
-	<optgroup label="Instance Methods">
+		<option value="//api/name/errorCode">errorCode</option>
 		
-		<option value="//api/name/init">- init</option>
+		<option value="//api/name/sensorId">sensorId</option>
+		
+		<option value="//api/name/value">value</option>
 		
 	</optgroup>
+	
+
+	
+
 	
 	
 </select>
@@ -85,7 +85,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">DeviceGatewayLogsCoder Class Reference</h1>
+					<h1 class="title">KTKSensorState Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -93,8 +93,11 @@
 	<th>Inherits from</th>
 	<td>NSObject</td>
 </tr><tr>
+	<th>Conforms to</th>
+	<td>NSCopying</td>
+</tr><tr>
 	<th>Declared in</th>
-	<td>KontaktSDK-Swift.h</td>
+	<td>KTKNearbyDeviceTelemetry.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,8 +115,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/encodeWithRequest:error:" title="encodeWithRequest:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/encodeWithRequest:error:">+&nbsp;encodeWithRequest:error:</a></code>
+	<a name="//api/name/ageSeconds" title="ageSeconds"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ageSeconds">&nbsp;&nbsp;ageSeconds</a></code>
 </h3>
 
 	<div class="method-info">
@@ -122,14 +125,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>+ (NSData *_Nullable)encodeWithRequest:(DeviceGatewayLogsRequest *_Nonnull)<em>request</em> error:(NSError *_Nullable *_Nullable)<em>error</em></code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *ageSeconds</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/decodeGenericResponse:error:" title="decodeGenericResponse:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/decodeGenericResponse:error:">+&nbsp;decodeGenericResponse:error:</a></code>
+	<a name="//api/name/error" title="error"></a>
+	<h3 class="method-title"><code><a href="#//api/name/error">&nbsp;&nbsp;error</a></code>
 </h3>
 
 	<div class="method-info">
@@ -138,14 +141,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>+ (DeviceGatewayLogsGenericResponse *_Nullable)decodeGenericResponse:(NSData *_Nonnull)<em>responseData</em> error:(NSError *_Nullable *_Nullable)<em>error</em></code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, assign) BOOL error</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/decodeLogsEvent:error:" title="decodeLogsEvent:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/decodeLogsEvent:error:">+&nbsp;decodeLogsEvent:error:</a></code>
+	<a name="//api/name/sensorId" title="sensorId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sensorId">&nbsp;&nbsp;sensorId</a></code>
 </h3>
 
 	<div class="method-info">
@@ -154,14 +157,14 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>+ (DeviceGatewayLogsEvent *_Nullable)decodeLogsEvent:(NSData *_Nonnull)<em>responseData</em> error:(NSError *_Nullable *_Nullable)<em>error</em></code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *sensorId</code></div>
 
 		    
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/init" title="init"></a>
-	<h3 class="method-title"><code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+	<a name="//api/name/errorCode" title="errorCode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/errorCode">&nbsp;&nbsp;errorCode</a></code>
 </h3>
 
 	<div class="method-info">
@@ -170,7 +173,39 @@
 		<div class="method-info-container">
 			
 
-			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)init</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, assign) KTKSensorStateError errorCode</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/componentCode" title="componentCode"></a>
+	<h3 class="method-title"><code><a href="#//api/name/componentCode">&nbsp;&nbsp;componentCode</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, assign) KTKHardwareComponentCode componentCode</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/value" title="value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSNumber *value</code></div>
 
 		    
 		</div>
@@ -190,7 +225,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-06-11</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-11</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
