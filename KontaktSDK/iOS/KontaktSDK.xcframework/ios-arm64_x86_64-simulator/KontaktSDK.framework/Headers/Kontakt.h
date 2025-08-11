@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 5.0.2
+//  Version: 5.1.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -49,6 +49,24 @@ extern double KTKCalculateDistanceFrom(int TXPower, double RSSI);
  *  @param completion Completion block that takes a dictionary object as parameter.
  */
 typedef void (^_Nullable AuthHeadersProviderBlock)(NSURLSession *_Nonnull, void(^_Nonnull)(NSDictionary *_Nullable));
+
+/**
+ *  A block that takes 4 parameters:
+ *  @param logMessage The log message.
+ *  @param fileName Name of the file from which log message was sent.
+ *  @param functionName Name of the function from which log message was sent.
+ *  @param lineNumber Line number that contains log function.
+ */
+typedef void (^_Nullable DebugLogsProxyBlock)(NSString *_Nonnull, NSString *_Nonnull, NSString *_Nonnull, NSInteger);
+
+/**
+ *  A block that takes 4 parameters:
+ *  @param response Received URL response.
+ *  @param data Received response data (can be `nil` or empty).
+ *  @param request Sent URL request.
+ *  @param duration Duration of the request.
+ */
+typedef void (^_Nullable NetworkEventHandlerBlock)(NSURLResponse *_Nullable, NSData *_Nullable, NSURLRequest *_Nonnull, NSTimeInterval);
 
 #pragma mark - Kontakt
 @interface Kontakt : NSObject
@@ -121,5 +139,49 @@ typedef void (^_Nullable AuthHeadersProviderBlock)(NSURLSession *_Nonnull, void(
  *  @param alert A Boolean value that specifies whether the system should display a warning dialog to the user if Bluetooth is powered off when the central manager is instantiated.
  */
 + (void)setCentralManagerPowerAlert:(BOOL)alert;
+
+/**
+ *  Sets debug logs proxy block.
+ *  Can be used to intercept debug log messages and send them to your bug tracker (i.e. Instabug).
+ *
+ *  @param logsProxy A block called when external debug log is received.
+ */
++ (void)setDebugLogsProxy:(DebugLogsProxyBlock)logsProxy;
+
+/**
+ *  A block value called automatically when using `DebugLog` function.
+ *
+ *  @return A debug logs proxy block.
+ */
++ (DebugLogsProxyBlock)DebugLogsProxy;
+
+/**
+ *  Sets error logs proxy block.
+ *  Can be used to intercept error log messages and send them to your bug tracker (i.e. Instabug).
+ *
+ *  @param logsProxy A block called when external error log is received.
+ */
++ (void)setErrorLogsProxy:(DebugLogsProxyBlock)errorLogsProxy;
+
+/**
+ *  A block value called automatically when using `ErrorLog` function.
+ *
+ *  @return An error logs proxy block.
+ */
++ (DebugLogsProxyBlock)ErrorLogsProxy;
+
+/**
+ *  Sets network event handler block.
+ *
+ *  @param networkEventHandler A block which is called when URL response is received.
+ */
++ (void)setNetworkEventHandler:(NetworkEventHandlerBlock)networkEventHandler;
+
+/**
+ *  A block value to be called when URL response is received.
+ *
+ *  @return A network event handler block.
+ */
++ (NetworkEventHandlerBlock)NetworkEventHandler;
 
 @end

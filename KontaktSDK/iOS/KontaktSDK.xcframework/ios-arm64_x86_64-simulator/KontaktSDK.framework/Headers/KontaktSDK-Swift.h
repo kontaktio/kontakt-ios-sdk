@@ -285,6 +285,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import ObjectiveC;
 #endif
 
+#import <KontaktSDK/KontaktSDK.h>
+
 #endif
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
@@ -305,38 +307,177 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
-@class DeviceGatewayLogsRequest;
+@class DeviceCCRequest;
 @class NSData;
-@class DeviceGatewayLogsGenericResponse;
-@class DeviceGatewayLogsEvent;
-SWIFT_CLASS("_TtC10KontaktSDK22DeviceGatewayLogsCoder")
-@interface DeviceGatewayLogsCoder : NSObject
-+ (NSData * _Nullable)encodeWithRequest:(DeviceGatewayLogsRequest * _Nonnull)request error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-+ (DeviceGatewayLogsGenericResponse * _Nullable)decodeGenericResponse:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-+ (DeviceGatewayLogsEvent * _Nullable)decodeLogsEvent:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@class DeviceCCStorageReadRequest;
+@class DeviceCCGenericResponse;
+@class DeviceCCLogEvent;
+@class DeviceCCSlotStateResponse;
+@class DeviceCCStorageReadResponse;
+SWIFT_CLASS("_TtC10KontaktSDK17DeviceCCDataCoder")
+@interface DeviceCCDataCoder : NSObject
++ (NSData * _Nullable)encodeWithRequest:(DeviceCCRequest * _Nonnull)request error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (NSData * _Nullable)encodeWithStorageReadRequest:(DeviceCCStorageReadRequest * _Nonnull)request error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (DeviceCCGenericResponse * _Nullable)decodeGenericResponse:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (DeviceCCLogEvent * _Nullable)decodeLogsEvent:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (DeviceCCSlotStateResponse * _Nullable)decodeSlotStateResponse:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (DeviceCCStorageReadResponse * _Nullable)decodeStorageDataReadResponse:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSString;
-SWIFT_CLASS("_TtC10KontaktSDK22DeviceGatewayLogsEvent")
-@interface DeviceGatewayLogsEvent : NSObject
-@property (nonatomic, readonly) uint64_t timestampMicroseconds;
-@property (nonatomic, readonly, copy) NSString * _Nonnull message;
-@property (nonatomic, readonly) uint8_t level;
-@end
-
-SWIFT_CLASS("_TtC10KontaktSDK32DeviceGatewayLogsGenericResponse")
-@interface DeviceGatewayLogsGenericResponse : NSObject
+SWIFT_CLASS("_TtC10KontaktSDK23DeviceCCGenericResponse")
+@interface DeviceCCGenericResponse : NSObject
 @property (nonatomic, readonly) uint16_t requestId;
 @property (nonatomic, readonly) uint64_t timestampMilliseconds;
 @property (nonatomic, readonly) int32_t returnCode;
 @property (nonatomic, readonly, copy) NSString * _Nullable message;
 @end
 
-SWIFT_CLASS("_TtC10KontaktSDK24DeviceGatewayLogsRequest")
-@interface DeviceGatewayLogsRequest : NSObject
+enum LogLevel : uint8_t;
+SWIFT_CLASS("_TtC10KontaktSDK16DeviceCCLogEvent")
+@interface DeviceCCLogEvent : NSObject
+@property (nonatomic, readonly) uint64_t timestampMicroseconds;
+@property (nonatomic, readonly, copy) NSString * _Nonnull message;
+@property (nonatomic, readonly) enum LogLevel level;
+@property (nonatomic, readonly, copy) NSString * _Nonnull levelDescription;
+@end
+
+typedef SWIFT_ENUM(uint8_t, LogLevel, open) {
+  LogLevelDebug = 0,
+  LogLevelInfo = 1,
+  LogLevelNotice = 2,
+  LogLevelWarning = 3,
+  LogLevelError = 4,
+};
+
+SWIFT_CLASS("_TtC10KontaktSDK15DeviceCCRequest")
+@interface DeviceCCRequest : NSObject
 - (nonnull instancetype)initWithMessageId:(uint16_t)messageId requestId:(uint16_t)requestId levelId:(uint8_t)levelId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithMessageId:(uint16_t)messageId requestId:(uint16_t)requestId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithMessageId:(uint16_t)messageId;
+- (nonnull instancetype)initWithMessageId:(uint16_t)messageId levelId:(uint8_t)levelId;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class Slots;
+SWIFT_CLASS("_TtC10KontaktSDK25DeviceCCSlotStateResponse")
+@interface DeviceCCSlotStateResponse : NSObject
+@property (nonatomic, readonly) uint16_t requestId;
+@property (nonatomic, readonly) uint64_t timestampMilliseconds;
+@property (nonatomic, readonly) int32_t returnCode;
+@property (nonatomic, readonly, strong) Slots * _Nonnull slots;
+@end
+
+@class SlotState;
+SWIFT_CLASS("_TtCC10KontaktSDK25DeviceCCSlotStateResponse5Slots")
+@interface Slots : NSObject
+@property (nonatomic, readonly, strong) SlotState * _Nullable one;
+@property (nonatomic, readonly, strong) SlotState * _Nullable two;
+@end
+
+@interface DeviceCCSlotStateResponse (SWIFT_EXTENSION(KontaktSDK))
+@end
+
+enum SlotDetection : NSInteger;
+@class NSNumber;
+SWIFT_CLASS("_TtCC10KontaktSDK25DeviceCCSlotStateResponse9SlotState")
+@interface SlotState : NSObject
+@property (nonatomic, readonly) enum SlotDetection detection;
+@property (nonatomic, readonly) KTKSensorStateError error;
+@property (nonatomic, readonly, strong) NSNumber * _Nullable value;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, SlotDetection, open) {
+  SlotDetectionEmpty = 0,
+  SlotDetectionDigital = 1,
+  SlotDetectionAnalog = 2,
+};
+
+@class ElementFormat;
+@class ElementData;
+SWIFT_CLASS("_TtC10KontaktSDK25DeviceCCStorageDataParser")
+@interface DeviceCCStorageDataParser : NSObject
++ (NSArray<NSArray<ElementData *> *> * _Nullable)parseRawData:(NSData * _Nonnull)rawData dataFormat:(NSArray<ElementFormat *> * _Nonnull)dataFormat error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+typedef SWIFT_ENUM(NSInteger, DeviceCCStorageDataParserError, open) {
+  DeviceCCStorageDataParserErrorUnexpectedDataFormat = 0,
+};
+static NSString * _Nonnull const DeviceCCStorageDataParserErrorDomain = @"KontaktSDK.DeviceCCStorageDataParserError";
+
+SWIFT_CLASS("_TtC10KontaktSDK26DeviceCCStorageReadRequest")
+@interface DeviceCCStorageReadRequest : NSObject
+- (nonnull instancetype)initWithMessageId:(uint16_t)messageId requestId:(uint16_t)requestId readFrom:(uint64_t)readFrom readTo:(uint64_t)readTo token:(NSInteger)token maxSize:(NSInteger)maxSize OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithMessageId:(uint16_t)messageId readFrom:(uint64_t)readFrom readTo:(uint64_t)readTo;
+- (nonnull instancetype)initWithMessageId:(uint16_t)messageId readFrom:(uint64_t)readFrom readTo:(uint64_t)readTo token:(NSInteger)token;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC10KontaktSDK27DeviceCCStorageReadResponse")
+@interface DeviceCCStorageReadResponse : NSObject
+@property (nonatomic, readonly) uint16_t requestId;
+@property (nonatomic, readonly, copy) NSData * _Nullable rawData;
+@property (nonatomic, readonly) int32_t returnCode;
+@property (nonatomic, readonly) uint64_t readFrom;
+@property (nonatomic, readonly) uint64_t readTo;
+@property (nonatomic, readonly) uint64_t dataReadTo;
+@property (nonatomic, readonly) NSInteger token;
+@property (nonatomic, readonly, copy) NSArray<ElementFormat *> * _Nullable dataFormat;
+@property (nonatomic, readonly, copy) NSData * _Nullable rawDataFormat;
+@property (nonatomic, readonly) BOOL isFinalResponse;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface DeviceCCStorageReadResponse (SWIFT_EXTENSION(KontaktSDK))
+@end
+
+enum ElementId : NSInteger;
+enum EncodingId : NSInteger;
+SWIFT_CLASS("_TtCC10KontaktSDK27DeviceCCStorageReadResponse13ElementFormat")
+@interface ElementFormat : NSObject
+@property (nonatomic, readonly) enum ElementId elementId;
+@property (nonatomic, readonly) enum EncodingId encodingId;
+- (nonnull instancetype)initWithElementId:(enum ElementId)elementId encodingId:(enum EncodingId)encodingId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithElementIdRaw:(NSInteger)elementIdRaw encodingIdRaw:(NSInteger)encodingIdRaw;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, ElementId, open) {
+  ElementIdInvalid = -1,
+  ElementIdTimestamp = 0,
+  ElementIdTemperatureSensor0 = 1,
+  ElementIdTemperatureSensor1 = 2,
+  ElementIdTemperatureSensor2 = 3,
+  ElementIdHumidity0 = 4,
+  ElementIdPressure = 5,
+  ElementIdDoorSensor = 6,
+  ElementIdSensorOobAlarms = 9,
+  ElementIdSensorErrAlarms = 10,
+  ElementIdErrors = 11,
+  ElementIdChecksum = 12,
+};
+
+typedef SWIFT_ENUM(NSInteger, EncodingId, open) {
+  EncodingIdInvalid = -1,
+  EncodingIdU32 = 0,
+  EncodingIdU16 = 1,
+  EncodingIdU8 = 2,
+  EncodingIdQ9_7 = 3,
+};
+
+SWIFT_CLASS("_TtCC10KontaktSDK27DeviceCCStorageReadResponse11ElementData")
+@interface ElementData : NSObject
+@property (nonatomic, readonly, strong) ElementFormat * _Nonnull format;
+@property (nonatomic, readonly, strong) NSNumber * _Nonnull value;
+@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -348,6 +489,32 @@ SWIFT_CLASS("_TtC10KontaktSDK32ISO8601MicrosecondsDateFormatter")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (NSString * _Nonnull)stringFromDate:(NSDate * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class KTKTelemetryEventPacket;
+@interface KTKCloudClient (SWIFT_EXTENSION(KontaktSDK))
+- (void)collectTelemetry:(KTKTelemetryEventPacket * _Nonnull)packet;
+@end
+
+SWIFT_CLASS("_TtC10KontaktSDK17KTKTelemetryEvent")
+@interface KTKTelemetryEvent : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull deviceAddress;
+@property (nonatomic, readonly) NSInteger rssi;
+@property (nonatomic, readonly, copy) NSData * _Nonnull data;
+- (nonnull instancetype)initWithDeviceAddress:(NSString * _Nonnull)deviceAddress rssi:(NSInteger)rssi data:(NSData * _Nonnull)data OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC10KontaktSDK23KTKTelemetryEventPacket")
+@interface KTKTelemetryEventPacket : NSObject
+@property (nonatomic, readonly) NSInteger version;
+@property (nonatomic, readonly, copy) NSString * _Nonnull sourceId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull sourceType;
+@property (nonatomic, readonly, copy) NSArray<KTKTelemetryEvent *> * _Nonnull events;
+- (nonnull instancetype)initWithVersion:(NSInteger)version sourceId:(NSString * _Nonnull)sourceId sourceType:(NSString * _Nonnull)sourceType events:(NSArray<KTKTelemetryEvent *> * _Nonnull)events OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 enum VersionOperator : NSInteger;
@@ -362,6 +529,30 @@ typedef SWIFT_ENUM(NSInteger, VersionOperator, open) {
   VersionOperatorLessThanOrEqualTo = 3,
   VersionOperatorEqualTo = 4,
   VersionOperatorNotEqualTo = 5,
+};
+
+typedef SWIFT_ENUM(NSInteger, SensorErrAlarm, open) {
+  SensorErrAlarmInvalid = -1,
+  SensorErrAlarmInactive = 0x0,
+  SensorErrAlarmActive = 0x1,
+  SensorErrAlarmAcked = 0x2,
+  SensorErrAlarmResolved = 0x3,
+};
+
+typedef SWIFT_ENUM(NSInteger, SensorError, open) {
+  SensorErrorInvalid = -1,
+  SensorErrorNoError = 0x0,
+  SensorErrorNoMeasurementOrBusError = 0x1,
+  SensorErrorProbeDisconnected = 0x2,
+  SensorErrorOther = 0x3,
+};
+
+typedef SWIFT_ENUM(NSInteger, SensorOobAlarm, open) {
+  SensorOobAlarmInvalid = -1,
+  SensorOobAlarmInactive = 0x0,
+  SensorOobAlarmActive = 0x1,
+  SensorOobAlarmAcked = 0x2,
+  SensorOobAlarmResolved = 0x3,
 };
 
 #endif
@@ -659,6 +850,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import ObjectiveC;
 #endif
 
+#import <KontaktSDK/KontaktSDK.h>
+
 #endif
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
@@ -679,38 +872,177 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
-@class DeviceGatewayLogsRequest;
+@class DeviceCCRequest;
 @class NSData;
-@class DeviceGatewayLogsGenericResponse;
-@class DeviceGatewayLogsEvent;
-SWIFT_CLASS("_TtC10KontaktSDK22DeviceGatewayLogsCoder")
-@interface DeviceGatewayLogsCoder : NSObject
-+ (NSData * _Nullable)encodeWithRequest:(DeviceGatewayLogsRequest * _Nonnull)request error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-+ (DeviceGatewayLogsGenericResponse * _Nullable)decodeGenericResponse:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-+ (DeviceGatewayLogsEvent * _Nullable)decodeLogsEvent:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@class DeviceCCStorageReadRequest;
+@class DeviceCCGenericResponse;
+@class DeviceCCLogEvent;
+@class DeviceCCSlotStateResponse;
+@class DeviceCCStorageReadResponse;
+SWIFT_CLASS("_TtC10KontaktSDK17DeviceCCDataCoder")
+@interface DeviceCCDataCoder : NSObject
++ (NSData * _Nullable)encodeWithRequest:(DeviceCCRequest * _Nonnull)request error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (NSData * _Nullable)encodeWithStorageReadRequest:(DeviceCCStorageReadRequest * _Nonnull)request error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (DeviceCCGenericResponse * _Nullable)decodeGenericResponse:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (DeviceCCLogEvent * _Nullable)decodeLogsEvent:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (DeviceCCSlotStateResponse * _Nullable)decodeSlotStateResponse:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
++ (DeviceCCStorageReadResponse * _Nullable)decodeStorageDataReadResponse:(NSData * _Nonnull)responseData error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSString;
-SWIFT_CLASS("_TtC10KontaktSDK22DeviceGatewayLogsEvent")
-@interface DeviceGatewayLogsEvent : NSObject
-@property (nonatomic, readonly) uint64_t timestampMicroseconds;
-@property (nonatomic, readonly, copy) NSString * _Nonnull message;
-@property (nonatomic, readonly) uint8_t level;
-@end
-
-SWIFT_CLASS("_TtC10KontaktSDK32DeviceGatewayLogsGenericResponse")
-@interface DeviceGatewayLogsGenericResponse : NSObject
+SWIFT_CLASS("_TtC10KontaktSDK23DeviceCCGenericResponse")
+@interface DeviceCCGenericResponse : NSObject
 @property (nonatomic, readonly) uint16_t requestId;
 @property (nonatomic, readonly) uint64_t timestampMilliseconds;
 @property (nonatomic, readonly) int32_t returnCode;
 @property (nonatomic, readonly, copy) NSString * _Nullable message;
 @end
 
-SWIFT_CLASS("_TtC10KontaktSDK24DeviceGatewayLogsRequest")
-@interface DeviceGatewayLogsRequest : NSObject
+enum LogLevel : uint8_t;
+SWIFT_CLASS("_TtC10KontaktSDK16DeviceCCLogEvent")
+@interface DeviceCCLogEvent : NSObject
+@property (nonatomic, readonly) uint64_t timestampMicroseconds;
+@property (nonatomic, readonly, copy) NSString * _Nonnull message;
+@property (nonatomic, readonly) enum LogLevel level;
+@property (nonatomic, readonly, copy) NSString * _Nonnull levelDescription;
+@end
+
+typedef SWIFT_ENUM(uint8_t, LogLevel, open) {
+  LogLevelDebug = 0,
+  LogLevelInfo = 1,
+  LogLevelNotice = 2,
+  LogLevelWarning = 3,
+  LogLevelError = 4,
+};
+
+SWIFT_CLASS("_TtC10KontaktSDK15DeviceCCRequest")
+@interface DeviceCCRequest : NSObject
 - (nonnull instancetype)initWithMessageId:(uint16_t)messageId requestId:(uint16_t)requestId levelId:(uint8_t)levelId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithMessageId:(uint16_t)messageId requestId:(uint16_t)requestId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithMessageId:(uint16_t)messageId;
+- (nonnull instancetype)initWithMessageId:(uint16_t)messageId levelId:(uint8_t)levelId;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class Slots;
+SWIFT_CLASS("_TtC10KontaktSDK25DeviceCCSlotStateResponse")
+@interface DeviceCCSlotStateResponse : NSObject
+@property (nonatomic, readonly) uint16_t requestId;
+@property (nonatomic, readonly) uint64_t timestampMilliseconds;
+@property (nonatomic, readonly) int32_t returnCode;
+@property (nonatomic, readonly, strong) Slots * _Nonnull slots;
+@end
+
+@class SlotState;
+SWIFT_CLASS("_TtCC10KontaktSDK25DeviceCCSlotStateResponse5Slots")
+@interface Slots : NSObject
+@property (nonatomic, readonly, strong) SlotState * _Nullable one;
+@property (nonatomic, readonly, strong) SlotState * _Nullable two;
+@end
+
+@interface DeviceCCSlotStateResponse (SWIFT_EXTENSION(KontaktSDK))
+@end
+
+enum SlotDetection : NSInteger;
+@class NSNumber;
+SWIFT_CLASS("_TtCC10KontaktSDK25DeviceCCSlotStateResponse9SlotState")
+@interface SlotState : NSObject
+@property (nonatomic, readonly) enum SlotDetection detection;
+@property (nonatomic, readonly) KTKSensorStateError error;
+@property (nonatomic, readonly, strong) NSNumber * _Nullable value;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, SlotDetection, open) {
+  SlotDetectionEmpty = 0,
+  SlotDetectionDigital = 1,
+  SlotDetectionAnalog = 2,
+};
+
+@class ElementFormat;
+@class ElementData;
+SWIFT_CLASS("_TtC10KontaktSDK25DeviceCCStorageDataParser")
+@interface DeviceCCStorageDataParser : NSObject
++ (NSArray<NSArray<ElementData *> *> * _Nullable)parseRawData:(NSData * _Nonnull)rawData dataFormat:(NSArray<ElementFormat *> * _Nonnull)dataFormat error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+typedef SWIFT_ENUM(NSInteger, DeviceCCStorageDataParserError, open) {
+  DeviceCCStorageDataParserErrorUnexpectedDataFormat = 0,
+};
+static NSString * _Nonnull const DeviceCCStorageDataParserErrorDomain = @"KontaktSDK.DeviceCCStorageDataParserError";
+
+SWIFT_CLASS("_TtC10KontaktSDK26DeviceCCStorageReadRequest")
+@interface DeviceCCStorageReadRequest : NSObject
+- (nonnull instancetype)initWithMessageId:(uint16_t)messageId requestId:(uint16_t)requestId readFrom:(uint64_t)readFrom readTo:(uint64_t)readTo token:(NSInteger)token maxSize:(NSInteger)maxSize OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithMessageId:(uint16_t)messageId readFrom:(uint64_t)readFrom readTo:(uint64_t)readTo;
+- (nonnull instancetype)initWithMessageId:(uint16_t)messageId readFrom:(uint64_t)readFrom readTo:(uint64_t)readTo token:(NSInteger)token;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC10KontaktSDK27DeviceCCStorageReadResponse")
+@interface DeviceCCStorageReadResponse : NSObject
+@property (nonatomic, readonly) uint16_t requestId;
+@property (nonatomic, readonly, copy) NSData * _Nullable rawData;
+@property (nonatomic, readonly) int32_t returnCode;
+@property (nonatomic, readonly) uint64_t readFrom;
+@property (nonatomic, readonly) uint64_t readTo;
+@property (nonatomic, readonly) uint64_t dataReadTo;
+@property (nonatomic, readonly) NSInteger token;
+@property (nonatomic, readonly, copy) NSArray<ElementFormat *> * _Nullable dataFormat;
+@property (nonatomic, readonly, copy) NSData * _Nullable rawDataFormat;
+@property (nonatomic, readonly) BOOL isFinalResponse;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface DeviceCCStorageReadResponse (SWIFT_EXTENSION(KontaktSDK))
+@end
+
+enum ElementId : NSInteger;
+enum EncodingId : NSInteger;
+SWIFT_CLASS("_TtCC10KontaktSDK27DeviceCCStorageReadResponse13ElementFormat")
+@interface ElementFormat : NSObject
+@property (nonatomic, readonly) enum ElementId elementId;
+@property (nonatomic, readonly) enum EncodingId encodingId;
+- (nonnull instancetype)initWithElementId:(enum ElementId)elementId encodingId:(enum EncodingId)encodingId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithElementIdRaw:(NSInteger)elementIdRaw encodingIdRaw:(NSInteger)encodingIdRaw;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, ElementId, open) {
+  ElementIdInvalid = -1,
+  ElementIdTimestamp = 0,
+  ElementIdTemperatureSensor0 = 1,
+  ElementIdTemperatureSensor1 = 2,
+  ElementIdTemperatureSensor2 = 3,
+  ElementIdHumidity0 = 4,
+  ElementIdPressure = 5,
+  ElementIdDoorSensor = 6,
+  ElementIdSensorOobAlarms = 9,
+  ElementIdSensorErrAlarms = 10,
+  ElementIdErrors = 11,
+  ElementIdChecksum = 12,
+};
+
+typedef SWIFT_ENUM(NSInteger, EncodingId, open) {
+  EncodingIdInvalid = -1,
+  EncodingIdU32 = 0,
+  EncodingIdU16 = 1,
+  EncodingIdU8 = 2,
+  EncodingIdQ9_7 = 3,
+};
+
+SWIFT_CLASS("_TtCC10KontaktSDK27DeviceCCStorageReadResponse11ElementData")
+@interface ElementData : NSObject
+@property (nonatomic, readonly, strong) ElementFormat * _Nonnull format;
+@property (nonatomic, readonly, strong) NSNumber * _Nonnull value;
+@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -722,6 +1054,32 @@ SWIFT_CLASS("_TtC10KontaktSDK32ISO8601MicrosecondsDateFormatter")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (NSString * _Nonnull)stringFromDate:(NSDate * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class KTKTelemetryEventPacket;
+@interface KTKCloudClient (SWIFT_EXTENSION(KontaktSDK))
+- (void)collectTelemetry:(KTKTelemetryEventPacket * _Nonnull)packet;
+@end
+
+SWIFT_CLASS("_TtC10KontaktSDK17KTKTelemetryEvent")
+@interface KTKTelemetryEvent : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull deviceAddress;
+@property (nonatomic, readonly) NSInteger rssi;
+@property (nonatomic, readonly, copy) NSData * _Nonnull data;
+- (nonnull instancetype)initWithDeviceAddress:(NSString * _Nonnull)deviceAddress rssi:(NSInteger)rssi data:(NSData * _Nonnull)data OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC10KontaktSDK23KTKTelemetryEventPacket")
+@interface KTKTelemetryEventPacket : NSObject
+@property (nonatomic, readonly) NSInteger version;
+@property (nonatomic, readonly, copy) NSString * _Nonnull sourceId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull sourceType;
+@property (nonatomic, readonly, copy) NSArray<KTKTelemetryEvent *> * _Nonnull events;
+- (nonnull instancetype)initWithVersion:(NSInteger)version sourceId:(NSString * _Nonnull)sourceId sourceType:(NSString * _Nonnull)sourceType events:(NSArray<KTKTelemetryEvent *> * _Nonnull)events OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 enum VersionOperator : NSInteger;
@@ -736,6 +1094,30 @@ typedef SWIFT_ENUM(NSInteger, VersionOperator, open) {
   VersionOperatorLessThanOrEqualTo = 3,
   VersionOperatorEqualTo = 4,
   VersionOperatorNotEqualTo = 5,
+};
+
+typedef SWIFT_ENUM(NSInteger, SensorErrAlarm, open) {
+  SensorErrAlarmInvalid = -1,
+  SensorErrAlarmInactive = 0x0,
+  SensorErrAlarmActive = 0x1,
+  SensorErrAlarmAcked = 0x2,
+  SensorErrAlarmResolved = 0x3,
+};
+
+typedef SWIFT_ENUM(NSInteger, SensorError, open) {
+  SensorErrorInvalid = -1,
+  SensorErrorNoError = 0x0,
+  SensorErrorNoMeasurementOrBusError = 0x1,
+  SensorErrorProbeDisconnected = 0x2,
+  SensorErrorOther = 0x3,
+};
+
+typedef SWIFT_ENUM(NSInteger, SensorOobAlarm, open) {
+  SensorOobAlarmInvalid = -1,
+  SensorOobAlarmInactive = 0x0,
+  SensorOobAlarmActive = 0x1,
+  SensorOobAlarmAcked = 0x2,
+  SensorOobAlarmResolved = 0x3,
 };
 
 #endif

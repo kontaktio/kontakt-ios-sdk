@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 5.0.2
+//  Version: 5.1.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -63,6 +63,8 @@ typedef NS_ENUM(NSUInteger, KTKDevicesManagerDiscoveryMode) {
  *  The delegate object that will receive events.
  */
 @property (nonatomic, weak, readonly) id<KTKDevicesManagerDelegate> _Nullable delegate;
+
+@property (nonatomic, assign, readwrite, getter=isUploadingTelemetry) BOOL uploadingTelemetry;
 
 #pragma mark - Initialization Methods
 ///--------------------------------------------------------------------
