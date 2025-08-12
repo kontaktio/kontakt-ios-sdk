@@ -1,5 +1,21 @@
 ## Changelog
 
+### v6.0.0 - 12 Aug 2025
+- Added automatic telemetry upload
+- Improved gateway logs formatting
+- Refactored C&C operations
+- Fixed secure streaming writes (MTU check)
+- Added forwarding debug and error logs to external handler
+- Added support for IR stats telemetry field
+- Added `SMART_BADGE_3_MINI` string model
+- Added operations to write and read encrypted config directly to/from the device
+- Added support and data operations for Temperature Monitor devices
+- Added support for optional operations (e.g. time sync)
+- Other fixes and improvements
+
+### v5.1.0 - 11 Aug 2025
+- Same as 6.0.0 but with a wrong version number
+
 ### v5.0.2 - 11 Jun 2025
 - Recompiled binary to work with Xcode 16.4
 

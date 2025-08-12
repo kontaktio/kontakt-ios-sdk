@@ -1,12 +1,14 @@
 # iOS SDK Quickstart
 
-## Important Note
+## Breaking changes notes
+
+### 6.0.0 (5.1.0)
+* `writeConfiguration` and `synchronizeInternalState` connection methods now have additional completion paramater `isTimeSynced`.
+* `KTKDeviceGatewayLogsOperation` has been renamed to `KTKDeviceCCOperation` with `mode` parameter set to `KTKDeviceCCOperationModeGatewayLogs`.
+* Removed unused `KTKDeviceConnectionSensorsUpdate` block type.
 
 ### 5.1.0
-* Add auomatic telemetry upload.
-
-### 5.0.2
-* Recompiled binary to work with Xcode 16.4
+This version has been re-released as 6.0.0 beacuse it contains breaking changes. To ensure API stability please use 5.0.2 version.
 
 ### 5.0.0
 * This version removes `KTKDeviceCredentials` and all code related to 'offline' configuration. All operations are set to use `KTKConfigProfileGeneratorUsingCloud` - this value cannot be changed anymore.
