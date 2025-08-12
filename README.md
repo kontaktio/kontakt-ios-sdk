@@ -2,10 +2,11 @@
 
 ## Breaking changes notes
 
-### 6.0.0 (5.1.0)
+### 6.0.0
 * `writeConfiguration` and `synchronizeInternalState` connection methods now have additional completion paramater `isTimeSynced`.
 * `KTKDeviceGatewayLogsOperation` has been renamed to `KTKDeviceCCOperation` with `mode` parameter set to `KTKDeviceCCOperationModeGatewayLogs`.
 * Removed unused `KTKDeviceConnectionSensorsUpdate` block type.
+* Changed minimum iOS version requirement from 12.0 to 13.0
 
 ### 5.1.0
 This version has been re-released as 6.0.0 beacuse it contains breaking changes. To ensure API stability please use 5.0.2 version.
@@ -41,7 +42,8 @@ You can find more detailed information in the [Appledocs](http://developer.konta
 
 ## Installing the iOS SDK
 
-To use the Kontakt.io SDK in your project, the minimum deployment target must be iOS 12.0.
+To use the Kontakt.io SDK in your project, the minimum deployment target must be iOS 13.0.
+You must also manually integrate [CBORCoding dependency](https://github.com/SomeRandomiOSDev/CBORCoding.git) v1.4.0 to fix linking errors.
 
 ### SPM
 
