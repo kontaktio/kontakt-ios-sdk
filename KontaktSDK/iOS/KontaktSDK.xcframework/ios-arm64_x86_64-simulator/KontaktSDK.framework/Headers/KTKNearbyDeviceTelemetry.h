@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 5.0.2
+//  Version: 5.1.0
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
@@ -52,8 +52,70 @@ typedef NS_OPTIONS(uint8_t, KTKDeviceStatusSoapFields) {
     KTKDeviceStatusSoapFieldsLockoutStatus          = 1 << 7,
 };
 
+/**
+ *  Sensor error codes
+ */
+typedef NS_ENUM(uint8_t, KTKSensorStateError) {
+    KTKSensorStateErrorNoError = 0,
+    KTKSensorStateErrorNoMeasurement,
+    KTKSensorStateErrorProbeDisconnected
+};
+
+/**
+ *  Hardware component codes for hardware error
+ */
+typedef NS_ENUM(uint8_t, KTKHardwareComponentCode) {
+    KTKHardwareComponentCodeFlashMemory = 0x80,
+    KTKHardwareComponentCodeDisplay = 0x81,
+    KTKHardwareComponentCodeDataStorage = 0x82
+};
+
+/**
+ *  Sensor alarm type
+ */
+typedef NS_ENUM(uint8_t, KTKSensorAlarmType) {
+    KTKSensorAlarmTypeInvalid = 0x00,
+    KTKSensorAlarmTypeOOB = 0x01,
+    KTKSensorAlarmTypeSensorError = 0x02,
+    KTKSensorAlarmTypeHardwareError = 0x03
+};
+
+/**
+ *  Sensor alarm state
+ */
+typedef NS_ENUM(uint8_t, KTKSensorAlarmState) {
+    KTKSensorAlarmStateInactive = 0x00,
+    KTKSensorAlarmStateActive = 0x10,
+    KTKSensorAlarmStateAcknowledged = 0x20,
+    KTKSensorAlarmStateResolved = 0x30
+};
 
 NS_ASSUME_NONNULL_BEGIN
+
+#pragma mark - KTKSensorState (Interface)
+@interface KTKSensorState : NSObject <NSCopying>
+
+@property (nonatomic, readonly, copy) NSNumber * ageSeconds;
+@property (nonatomic, readonly, assign) BOOL error;
+@property (nonatomic, readonly, copy) NSNumber * sensorId;
+@property (nonatomic, readonly, assign) KTKSensorStateError errorCode;
+@property (nonatomic, readonly, assign) KTKHardwareComponentCode componentCode;
+@property (nonatomic, readonly, copy) NSNumber * _Nullable value;
+
+@end
+
+
+#pragma mark - KTKSensorAlarm (Interface)
+@interface KTKSensorAlarm : NSObject <NSCopying>
+
+@property (nonatomic, readonly, assign) KTKSensorAlarmState state;
+@property (nonatomic, readonly, assign) KTKSensorAlarmType type;
+@property (nonatomic, readonly, copy) NSNumber * sensorId;
+@property (nonatomic, readonly, copy) NSNumber * counter;
+@property (nonatomic, readonly, copy) NSNumber * ageSeconds;
+
+@end
+
 
 #pragma mark - KTKNearbyDeviceTelemetry (Interface)
 @interface KTKNearbyDeviceTelemetry : NSObject <NSCopying>
@@ -217,6 +279,13 @@ NS_ASSUME_NONNULL_BEGIN
  * A number of Click events. Click event is specified in Button Specification Behavior. (read-only)
  */
 @property (nonatomic, readonly, copy) NSNumber * _Nullable singleClickCount;
+
+/**
+ * Seconds since the last double click event. Double click event is specified in Button Specification Behavior. (read-only)
+ *
+ *  Saturates on 65535 (0xFFFF) value. 65535 (0xFFFF) default value when button click is disabled.
+ */
+@property (nonatomic, readonly, copy) NSNumber * _Nullable lastDoubleClick;
 
 /**
  * A number of Click events. Click event is specified in Button id 1. (read-only)
@@ -406,6 +475,16 @@ NS_ASSUME_NONNULL_BEGIN
 ///--------------------------------------------------------------------
 
 @property (nonatomic, readonly, assign) KTKGatewayInfo gwInfo;
+
+/**
+ *  Sensors state report (read-only)
+ */
+@property (nonatomic, readonly, copy) NSArray<KTKSensorState *> * _Nullable sensorsState;
+
+/**
+ *  Sensor alarm report (read-only)
+ */
+@property (nonatomic, readonly, copy) KTKSensorAlarm * _Nullable sensorAlarm;
 
 #pragma mark - Data Logger
 ///--------------------------------------------------------------------

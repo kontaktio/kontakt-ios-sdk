@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 5.0.2
+//  Version: 5.1.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -12,10 +12,11 @@
 #import "KTKNearbyDevice.h"
 #import "KTKFirmware.h"
 #import "KTKDeviceConfiguration.h"
-#import "KTKDeviceDataLoggerReading.h"
 #import "KTKDeviceKontaktRecognitionBox.h"
 
 @class KTKOperationQueue;
+@class DeviceCCSlotStateResponse;
+@class ElementData;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,9 +28,19 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param configuration The configuration object containing write operation details. Please not that configuration object will be nil for devices with firmware < 4.0.
  *                       If <code>synchronized</code> is false you have to keep copy of the configuration and synchronize it with the cloud when possible.
  *                       When the device firmware is 4.0 or higher configuration object will contain <code>secureResponse</code> and <code>secureResponseTime</code>.
+ *  @param isTimeSynced  A Boolean indicating whether the device's time was set successfully.
  *  @param error         An error object containing the error that indicates why the operation failed.
  */
-typedef void (^KTKDeviceConnectionWriteCompletion)(BOOL synchronized, KTKDeviceConfiguration * _Nullable configuration, NSError * _Nullable error);
+typedef void (^KTKDeviceConnectionWriteCompletion)(BOOL synchronized, KTKDeviceConfiguration * _Nullable configuration, BOOL isTimeSynced, NSError * _Nullable error);
+
+/**
+ *  A completion block object to be executed when the write operation finishes.
+ *
+ *  @param synchronized  A Boolean indicating whether the configuration was synchronized to the Cloud API.
+ *  @param isTimeSynced  A Boolean indicating whether the device's time was set successfully.
+ *  @param error         An error object containing the error that indicates why the operation failed.
+ */
+typedef void (^KTKDeviceConnectionWriteEncryptedCompletion)(BOOL synchronized, BOOL isTimeSynced, NSError * _Nullable error);
 
 /**
  *  A completion block object to be executed when the read operation finishes.
@@ -40,13 +51,12 @@ typedef void (^KTKDeviceConnectionWriteCompletion)(BOOL synchronized, KTKDeviceC
 typedef void (^KTKDeviceConnectionReadCompletion)(__kindof KTKDeviceConfiguration * _Nullable configuration, NSError * _Nullable error);
 
 /**
- *  A block object to be executed when the sensors readings are updated.
+ *  A completion block object to be executed when the read operation finishes.
  *
- *  @param reading  A sensors reading object. Result of the operation.
- *  @param error    An error object containing the error that indicates why the operation failed.
- *  @param stop     A reference to a Boolean value. The block can set the value to YES to stop further updates of the sensors readings otherwise connection and updates will be running indefinitely. The stop argument is an out-only argument. You should only ever set this Boolean to YES within the block.
+ *  @param configuration The configuration encrypted data. Result of the read operation.
+ *  @param error         An error object containing the error that indicates why the operation failed.
  */
-typedef void (^KTKDeviceConnectionSensorsUpdate)(KTKDeviceDataLoggerReading * _Nullable reading, NSError * _Nullable error, BOOL * _Nonnull stop);
+typedef void (^KTKDeviceConnectionReadEncryptedCompletion)(__kindof NSData * _Nullable configuration, NSError * _Nullable error);
 
 /**
  *  A completion block object to be executed when the update operation finishes.
@@ -55,6 +65,17 @@ typedef void (^KTKDeviceConnectionSensorsUpdate)(KTKDeviceDataLoggerReading * _N
  *  @param error        An error object containing the error that indicates why the operation failed.
  */
 typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError * _Nullable error);
+
+/**
+ *  A completion block object to be executed when temperature monitor storage data fetch operation finishes.
+ *
+ *  @param storageData           A collection of data entry structures as a result of parsing raw data.
+ *  @param storageRawData        A collection of raw data from each response.
+ *  @param storageRawDataFormat  A collection of raw data formats matching each element in `storageRawData`.
+ *  @param error                 An error object containing the error that indicates why the operation failed.
+ */
+typedef void (^KTKDeviceConnectionFetchMonitorStorageDataCompletion)(NSArray<NSArray<ElementData*>*> * _Nullable storageData, NSArray<NSData*> * _Nullable storageRawData, NSArray<NSData*> * _Nullable storageRawDataFormat, NSError * _Nullable error);
+
 
 @protocol KTKDeviceConnectionDelegate;
 
@@ -175,11 +196,31 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
 - (void)writeConfiguration:(KTKDeviceConfiguration*)configuration completion:(KTKDeviceConnectionWriteCompletion)completion;
 
 /**
+ *  Writes encrypted configuration directly to the connection device.
+ *
+ *  @param encryptedConfig  Encrypted configuration data.
+ *  @param firmware         Firmware version of the connected device.
+ *                        Can be `nil` if `nearbyDevice` reference has already firmware version set.
+ *  @param completion       A block object to be executed when the write operation finishes.
+ */
+- (void)writeEncryptedConfiguration:(NSData *)encryptedConfig
+                       withFirmware:(nullable NSString *)firmware
+                         completion:(KTKDeviceConnectionWriteEncryptedCompletion)completion;
+
+/**
  *  Reads the configuration from the connection device.
  *
  *  @param completion A block object to be executed when the read operation finishes.
  */
 - (void)readConfigurationWithCompletion:(KTKDeviceConnectionReadCompletion)completion;
+
+/**
+ *  Reads the configuration from the connection device.
+ *
+ *  @param completion A block object to be executed when the read operation finishes.
+ */
+- (void)readEncryptedConfigurationWithFirmware: (NSString *)firmware
+                                    completion: (void (^)(NSData * _Nullable, NSError * _Nullable))completion;
 
 /**
  *  Send the current time to the connected device.
@@ -193,7 +234,7 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  *
  *  @param completion A block object to be executed when the read operation finishes.
  */
-- (void)synchronizeInternalStateWithCompletion: (void (^)(__kindof KTKDeviceConfiguration * _Nullable, NSString *firmware, NSError * _Nullable))completion;
+- (void)synchronizeInternalStateWithCompletion: (void (^)(__kindof KTKDeviceConfiguration * _Nullable, NSString *firmware, BOOL isTimeSynced, NSError * _Nullable))completion;
 
 /**
  *  Updates a device to the latest available firmware.
@@ -219,6 +260,23 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  */
 - (void)getBlinkDevice:(void (^)(NSError * _Nullable error))completion;
 
+/**
+ *  Request Temperature Monitor probes status.
+ *
+ *  @param completion A block object to be executed when the operation finishes.
+ */
+- (void)getProbesStatusWithCompletion:(void (^)(DeviceCCSlotStateResponse * _Nullable, NSError * _Nullable))completion;
+
+/**
+ *  Request Temperature Monitor storage data from the provided time period.
+ *
+ *  @param from Data will be read from this date (in seconds).
+ *  @param to Data will be read up to, but excluding, this date (in seconds).
+ *  @param completion A block object to be executed when the operation finishes.
+ */
+- (void)fetchMonitorStorageDataFrom:(NSTimeInterval)from
+                                 to:(NSTimeInterval)to
+                     withCompletion:(KTKDeviceConnectionFetchMonitorStorageDataCompletion)completion;
 /**
  *  Cancels all operations on this connection.
  */

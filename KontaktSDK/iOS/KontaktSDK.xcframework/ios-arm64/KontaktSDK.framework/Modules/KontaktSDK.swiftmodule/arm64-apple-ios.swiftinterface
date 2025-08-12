@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KontaktSDK
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KontaktSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import CBORCoding
 import Foundation
@@ -9,6 +9,35 @@ import Swift
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@objc final public class DeviceCCStorageReadRequest : ObjectiveC.NSObject, Swift.Encodable {
+  @objc public init(messageId: Swift.UInt16, requestId: Swift.UInt16, readFrom: Swift.UInt64, readTo: Swift.UInt64, token: Swift.Int, maxSize: Swift.Int)
+  @objc convenience public init(messageId: Swift.UInt16, readFrom: Swift.UInt64, readTo: Swift.UInt64)
+  @objc convenience public init(messageId: Swift.UInt16, readFrom: Swift.UInt64, readTo: Swift.UInt64, token: Swift.Int)
+  @objc deinit
+  final public func encode(to encoder: any Swift.Encoder) throws
+}
+@objc public class KTKTelemetryEvent : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let deviceAddress: Swift.String
+  @objc final public let rssi: Swift.Int
+  @objc final public let data: Foundation.Data
+  @objc public init(deviceAddress: Swift.String, rssi: Swift.Int, data: Foundation.Data)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class KTKTelemetryEventPacket : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let version: Swift.Int
+  @objc final public let sourceId: Swift.String
+  @objc final public let sourceType: Swift.String
+  @objc final public let events: [KontaktSDK.KTKTelemetryEvent]
+  @objc public init(version: Swift.Int, sourceId: Swift.String, sourceType: Swift.String, events: [KontaktSDK.KTKTelemetryEvent])
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc extension KontaktSDK.KTKCloudClient {
+  @objc dynamic public func collectTelemetry(_ packet: KontaktSDK.KTKTelemetryEventPacket)
+}
 @objc extension Foundation.NSString {
   @objc public enum VersionOperator : Swift.Int {
     case greaterThan
@@ -25,10 +54,137 @@ import _SwiftConcurrencyShims
   }
   @objc dynamic public func compareVersion(_ otherVersion: Foundation.NSString, operator: Foundation.NSString.VersionOperator) -> Swift.Bool
 }
-@_inheritsConvenienceInitializers @objc final public class DeviceGatewayLogsCoder : ObjectiveC.NSObject {
-  @objc public static func encode(request: KontaktSDK.DeviceGatewayLogsRequest) throws -> Foundation.Data
-  @objc public static func decodeGenericResponse(_ responseData: Foundation.Data) throws -> KontaktSDK.DeviceGatewayLogsGenericResponse
-  @objc public static func decodeLogsEvent(_ responseData: Foundation.Data) throws -> KontaktSDK.DeviceGatewayLogsEvent
+@objc final public class DeviceCCSlotStateResponse : ObjectiveC.NSObject, Swift.Decodable {
+  @objc final public class Slots : ObjectiveC.NSObject, Swift.Decodable {
+    @objc final public let one: KontaktSDK.DeviceCCSlotStateResponse.SlotState?
+    @objc final public let two: KontaktSDK.DeviceCCSlotStateResponse.SlotState?
+    @objc deinit
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @objc final public let requestId: Swift.UInt16
+  @objc final public let timestampMilliseconds: Swift.UInt64
+  @objc final public let returnCode: Swift.Int32
+  @objc final public let slots: KontaktSDK.DeviceCCSlotStateResponse.Slots
+  @objc deinit
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension KontaktSDK.DeviceCCSlotStateResponse {
+  @objc final public class SlotState : ObjectiveC.NSObject, Swift.Decodable {
+    @objc public enum SlotDetection : Swift.Int, Swift.Decodable {
+      case empty = 0
+      case digital
+      case analog
+      public init?(rawValue: Swift.Int)
+      public typealias RawValue = Swift.Int
+      public var rawValue: Swift.Int {
+        get
+      }
+    }
+    @objc final public let detection: KontaktSDK.DeviceCCSlotStateResponse.SlotState.SlotDetection
+    @objc final public let error: KontaktSDK.KTKSensorStateError
+    @objc final public let value: Foundation.NSNumber?
+    public init(from decoder: any Swift.Decoder) throws
+    @objc deinit
+  }
+}
+extension KontaktSDK.KTKSensorStateError : Swift.Decodable {
+}
+@objc final public class DeviceCCLogEvent : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public enum LogLevel : Swift.UInt8, Swift.Decodable, Swift.CustomStringConvertible {
+    case debug = 0
+    case info = 1
+    case notice = 2
+    case warning = 3
+    case error = 4
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  @objc final public let timestampMicroseconds: Swift.UInt64
+  @objc final public let message: Swift.String
+  @objc final public let level: KontaktSDK.DeviceCCLogEvent.LogLevel
+  @objc final public var levelDescription: Swift.String {
+    @objc get
+  }
+  @objc deinit
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc final public class DeviceCCStorageReadResponse : ObjectiveC.NSObject, Swift.Decodable {
+  @objc final public let requestId: Swift.UInt16
+  @objc final public let rawData: Foundation.Data?
+  @objc final public let returnCode: Swift.Int32
+  @objc final public let readFrom: Swift.UInt64
+  @objc final public let readTo: Swift.UInt64
+  @objc final public let dataReadTo: Swift.UInt64
+  @objc final public let token: Swift.Int
+  @objc final public let dataFormat: [KontaktSDK.DeviceCCStorageReadResponse.ElementFormat]?
+  @objc final public let rawDataFormat: Foundation.Data?
+  @objc final public var isFinalResponse: Swift.Bool {
+    @objc get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+extension KontaktSDK.DeviceCCStorageReadResponse {
+  @objc final public class ElementFormat : ObjectiveC.NSObject {
+    @objc public enum ElementId : Swift.Int {
+      case invalid = -1
+      case timestamp = 0
+      case temperatureSensor0 = 1
+      case temperatureSensor1 = 2
+      case temperatureSensor2 = 3
+      case humidity0 = 4
+      case pressure = 5
+      case doorSensor = 6
+      case sensorOobAlarms = 9
+      case sensorErrAlarms = 10
+      case errors = 11
+      case checksum = 12
+      public init?(rawValue: Swift.Int)
+      public typealias RawValue = Swift.Int
+      public var rawValue: Swift.Int {
+        get
+      }
+    }
+    @objc public enum EncodingId : Swift.Int {
+      case invalid = -1
+      case u32 = 0
+      case u16
+      case u8
+      case q9_7
+      public init?(rawValue: Swift.Int)
+      public typealias RawValue = Swift.Int
+      public var rawValue: Swift.Int {
+        get
+      }
+    }
+    @objc final public let elementId: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId
+    @objc final public let encodingId: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId
+    @objc public init(elementId: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId, encodingId: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId)
+    @objc convenience public init(elementIdRaw: Swift.Int, encodingIdRaw: Swift.Int)
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers @objc final public class ElementData : ObjectiveC.NSObject {
+    @objc final public let format: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat
+    @objc final public let value: Foundation.NSNumber
+    @objc override final public var debugDescription: Swift.String {
+      @objc get
+    }
+    @objc deinit
+  }
+}
+@_inheritsConvenienceInitializers @objc final public class DeviceCCDataCoder : ObjectiveC.NSObject {
+  @objc public static func encode(request: KontaktSDK.DeviceCCRequest) throws -> Foundation.Data
+  @objc(encodeWithStorageReadRequest:error:) public static func encode(request: KontaktSDK.DeviceCCStorageReadRequest) throws -> Foundation.Data
+  @objc public static func decodeGenericResponse(_ responseData: Foundation.Data) throws -> KontaktSDK.DeviceCCGenericResponse
+  @objc public static func decodeLogsEvent(_ responseData: Foundation.Data) throws -> KontaktSDK.DeviceCCLogEvent
+  @objc public static func decodeSlotStateResponse(_ responseData: Foundation.Data) throws -> KontaktSDK.DeviceCCSlotStateResponse
+  @objc public static func decodeStorageDataReadResponse(_ responseData: Foundation.Data) throws -> KontaktSDK.DeviceCCStorageReadResponse
   @objc override dynamic public init()
   @objc deinit
 }
@@ -42,9 +198,11 @@ public struct FirmwareVersion : Swift.Comparable {
   public static func < (lhs: KontaktSDK.FirmwareVersion, rhs: KontaktSDK.FirmwareVersion) -> Swift.Bool
   public static func == (a: KontaktSDK.FirmwareVersion, b: KontaktSDK.FirmwareVersion) -> Swift.Bool
 }
-@objc final public class DeviceGatewayLogsRequest : ObjectiveC.NSObject, Swift.Encodable {
+@objc final public class DeviceCCRequest : ObjectiveC.NSObject, Swift.Encodable {
   @objc public init(messageId: Swift.UInt16, requestId: Swift.UInt16, levelId: Swift.UInt8)
   @objc public init(messageId: Swift.UInt16, requestId: Swift.UInt16)
+  @objc convenience public init(messageId: Swift.UInt16)
+  @objc convenience public init(messageId: Swift.UInt16, levelId: Swift.UInt8)
   @objc deinit
   final public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -53,7 +211,7 @@ public struct FirmwareVersion : Swift.Comparable {
   @objc override final public func string(from date: Foundation.Date) -> Swift.String
   @objc deinit
 }
-@objc final public class DeviceGatewayLogsGenericResponse : ObjectiveC.NSObject, Swift.Decodable {
+@objc final public class DeviceCCGenericResponse : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let requestId: Swift.UInt16
   @objc final public let timestampMilliseconds: Swift.UInt64
   @objc final public let returnCode: Swift.Int32
@@ -61,13 +219,91 @@ public struct FirmwareVersion : Swift.Comparable {
   @objc deinit
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc final public class DeviceGatewayLogsEvent : ObjectiveC.NSObject, Swift.Decodable {
-  @objc final public let timestampMicroseconds: Swift.UInt64
-  @objc final public let message: Swift.String
-  @objc final public let level: Swift.UInt8
+@objc public enum DeviceCCStorageDataParserError : Swift.Int, Swift.Error {
+  case unexpectedDataFormat
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc final public class DeviceCCStorageDataParser : ObjectiveC.NSObject {
+  @objc public static func parseRawData(_ rawData: Foundation.Data, dataFormat: [KontaktSDK.DeviceCCStorageReadResponse.ElementFormat]) throws -> [[KontaktSDK.DeviceCCStorageReadResponse.ElementData]]
+  @objc override dynamic public init()
   @objc deinit
-  public init(from decoder: any Swift.Decoder) throws
+}
+@objc public enum SensorOobAlarm : Swift.Int, Swift.CustomStringConvertible {
+  case invalid = -1
+  case inactive = 0x0
+  case active = 0x1
+  case acked = 0x2
+  case resolved = 0x3
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SensorErrAlarm : Swift.Int, Swift.CustomStringConvertible {
+  case invalid = -1
+  case inactive = 0x0
+  case active = 0x1
+  case acked = 0x2
+  case resolved = 0x3
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SensorError : Swift.Int, Swift.CustomStringConvertible {
+  case invalid = -1
+  case noError = 0x0
+  case noMeasurementOrBusError = 0x1
+  case probeDisconnected = 0x2
+  case other = 0x3
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 extension Foundation.NSString.VersionOperator : Swift.Equatable {}
 extension Foundation.NSString.VersionOperator : Swift.Hashable {}
 extension Foundation.NSString.VersionOperator : Swift.RawRepresentable {}
+extension KontaktSDK.DeviceCCSlotStateResponse.SlotState.SlotDetection : Swift.Equatable {}
+extension KontaktSDK.DeviceCCSlotStateResponse.SlotState.SlotDetection : Swift.Hashable {}
+extension KontaktSDK.DeviceCCSlotStateResponse.SlotState.SlotDetection : Swift.RawRepresentable {}
+extension KontaktSDK.DeviceCCLogEvent.LogLevel : Swift.Equatable {}
+extension KontaktSDK.DeviceCCLogEvent.LogLevel : Swift.Hashable {}
+extension KontaktSDK.DeviceCCLogEvent.LogLevel : Swift.RawRepresentable {}
+extension KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId : Swift.Equatable {}
+extension KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId : Swift.Hashable {}
+extension KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId : Swift.RawRepresentable {}
+extension KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId : Swift.Equatable {}
+extension KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId : Swift.Hashable {}
+extension KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId : Swift.RawRepresentable {}
+extension KontaktSDK.DeviceCCStorageDataParserError : Swift.Equatable {}
+extension KontaktSDK.DeviceCCStorageDataParserError : Swift.Hashable {}
+extension KontaktSDK.DeviceCCStorageDataParserError : Swift.RawRepresentable {}
+extension KontaktSDK.SensorOobAlarm : Swift.Equatable {}
+extension KontaktSDK.SensorOobAlarm : Swift.Hashable {}
+extension KontaktSDK.SensorOobAlarm : Swift.RawRepresentable {}
+extension KontaktSDK.SensorErrAlarm : Swift.Equatable {}
+extension KontaktSDK.SensorErrAlarm : Swift.Hashable {}
+extension KontaktSDK.SensorErrAlarm : Swift.RawRepresentable {}
+extension KontaktSDK.SensorError : Swift.Equatable {}
+extension KontaktSDK.SensorError : Swift.Hashable {}
+extension KontaktSDK.SensorError : Swift.RawRepresentable {}

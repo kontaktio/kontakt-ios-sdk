@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -51,6 +53,14 @@
 	
 
 	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/authHeaders">authHeaders</option>
+		
+		<option value="//api/name/manager">manager</option>
+		
+	</optgroup>
 	
 
 	
@@ -78,6 +88,8 @@
 		
 		<option value="//api/name/POST:url:parameters:completion:">- POST:url:parameters:completion:</option>
 		
+		<option value="//api/name/collectTelemetry:">- collectTelemetry:</option>
+		
 		<option value="//api/name/createObject:completion:">- createObject:completion:</option>
 		
 		<option value="//api/name/deleteObject:completion:">- deleteObject:completion:</option>
@@ -91,6 +103,8 @@
 		<option value="//api/name/getObjects:parameters:completion:">- getObjects:parameters:completion:</option>
 		
 		<option value="//api/name/initWithSessionConfiguration:">- initWithSessionConfiguration:</option>
+		
+		<option value="//api/name/printError:">- printError:</option>
 		
 		<option value="//api/name/updateObject:completion:">- updateObject:completion:</option>
 		
@@ -124,6 +138,14 @@
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Returns the telemetry API URL string.</p>
+					</div>
+					
+					
 
 					
 					
@@ -1286,6 +1308,210 @@ Please note <code>url</code> must be withing kontakt.io domain.</p>
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/collectTelemetry:" title="collectTelemetry:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/collectTelemetry:">&ndash;&nbsp;collectTelemetry:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Collects telemetry data by sending it to the telemetry endpoint.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)collectTelemetry:(KTKTelemetryEventPacket *)<em>packet</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>packet</code></th>
+						<td><p>A telemetry event packet containing the telemetry data to be collected.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Collects telemetry data by sending it to the telemetry endpoint.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKCloudClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Telemetry Support Properties" name="task_Telemetry Support Properties"></a>
+						<h2 class="task-title">Telemetry Support Properties</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/manager" title="manager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/manager">&nbsp;&nbsp;manager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cloud Client session manager.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) KTKCloudClientSessionManager *manager</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Cloud Client session manager.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKCloudClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/authHeaders" title="authHeaders"></a>
+	<h3 class="method-title"><code><a href="#//api/name/authHeaders">&nbsp;&nbsp;authHeaders</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Authentication headers.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDictionary *authHeaders</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Authentication headers.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKCloudClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/printError:" title="printError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/printError:">&ndash;&nbsp;printError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Prints error messages for debugging.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)printError:(NSString *)<em>message</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Prints error messages for debugging.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKCloudClient.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -1301,7 +1527,7 @@ Please note <code>url</code> must be withing kontakt.io domain.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-06-11</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-11</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

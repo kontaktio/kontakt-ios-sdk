@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 5.0.2
+//  Version: 5.1.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -178,7 +178,7 @@ typedef NS_OPTIONS(NSInteger, KTKDeviceAdvertisingPackets) {
 /**
  *  A device Telemetry Fields
  */
-typedef NS_OPTIONS(NSInteger, KTKDeviceTelemetryFields) {
+typedef NS_OPTIONS(uint32_t, KTKDeviceTelemetryFields) {
     /**
      *  Raw Accelerometer.
      */
@@ -312,9 +312,14 @@ typedef NS_OPTIONS(NSInteger, KTKDeviceTelemetryFields) {
     KTKDeviceTelemetryFieldsRSSIScan                        = 1 << 30,
 
     /**
-     *  All supprted packets.
+     *  IR scan statistics.
      */
-    KTKDeviceTelemetryFieldsAll                             = (NSInteger)0b111111111111111111111111
+    KTKDeviceTelemetryFieldsIRStats                         = 1 << 31,
+
+    /**
+     *  All supported packets.
+     */
+    KTKDeviceTelemetryFieldsAll                             = 0b01111111111111111111111111111111
 };
 
 /**
@@ -566,13 +571,23 @@ typedef NS_ENUM(NSInteger, KTKDeviceModel) {
      */
     KTKDeviceModelMiniBeam2 = 46,
     /**
-     *  Temperature Monitor Mini 2
+     *  Temperature Monitor Pro
      */
-    KTKDeviceModelTemperatureMonitor = 47,
+    KTKDeviceModelTemperatureMonitorPro = 47,
     /**
      *  Smart Badge 3 Mini
      */
     KTKDeviceModelSmartBadge3Mini = 48,
+    /**
+     *  Temperature Monitor Lite
+     */
+    KTKDeviceModelTemperatureMonitorLite = 49,
+
+    /**
+     *  A special 'model' used internally to check supported models number range.
+     *  This case should always have a higher value by 1 than the last supported model.
+     */
+    KTKDeviceModelUnsupported = 50,
 
     /**
      *  Partner devices

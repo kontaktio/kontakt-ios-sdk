@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 5.0.2
+//  Version: 5.1.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -11,11 +11,20 @@
 #import "KTKKontaktResponse.h"
 
 @protocol KTKCloudModel;
+@class KTKTelemetryEventPacket;
+@class KTKCloudClientSessionManager;
 
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - External Helper
 extern NSDictionary * _Nullable KTKCloudErrorFromError(NSError * _Nullable error);
+
+/**
+ *  Returns the telemetry API URL string.
+ *
+ *  @return The telemetry API URL string.
+ */
+extern NSString * kKontaktAPITelemetryURL(void);
 
 #pragma mark - KTKCloudClient (Interface)
 @interface KTKCloudClient : NSObject
@@ -199,6 +208,33 @@ extern NSDictionary * _Nullable KTKCloudErrorFromError(NSError * _Nullable error
  *  @param completion  A block object to be executed when the request finishes.
  */
 - (void)deleteObject:(Class<KTKCloudModel>)objectClass primaryKey:(id)value completion:(KTKKontaktResponseCompletionBlock)completion;
+
+/**
+ *  Collects telemetry data by sending it to the telemetry endpoint.
+ *
+ *  @param packet A telemetry event packet containing the telemetry data to be collected.
+ */
+- (void)collectTelemetry:(KTKTelemetryEventPacket *)packet;
+
+#pragma mark - Telemetry Support Properties
+///--------------------------------------------------------------------
+/// @name Telemetry Support Properties
+///--------------------------------------------------------------------
+
+/**
+ *  Cloud Client session manager.
+ */
+@property (nonatomic, strong, readonly) KTKCloudClientSessionManager *manager;
+
+/**
+ *  Authentication headers.
+ */
+@property (nonatomic, strong, readonly) NSDictionary *authHeaders;
+
+/**
+ *  Prints error messages for debugging.
+ */
+- (void)printError:(NSString *)message;
 
 @end
 

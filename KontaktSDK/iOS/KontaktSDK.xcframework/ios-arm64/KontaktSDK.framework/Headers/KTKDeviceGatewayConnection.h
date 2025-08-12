@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 5.0.2
+//  Version: 5.1.0
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
@@ -9,7 +9,7 @@
 #import "KTKDeviceGatewayWiFiNetwork.h"
 #import "KTKDeviceConfiguration.h"
 #import "KTKDeviceGatewayDiagnostic.h"
-#import "KTKDeviceGatewayLogsOperationDelegate.h"
+#import "KTKDeviceCCOperationDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -87,7 +87,7 @@ typedef void (^KTKDeviceGatewayConnectionBLELogsHandlerBlock)(NSString* _Nullabl
  *
  *  @param delegate A delegate object responsible for receiving log messages and stopping logging mode.
  */
-- (void)startBLEDeviceLogging:(id<KTKDeviceGatewayLogsOperationDelegate>)delegate;
+- (void)startBLEDeviceLogging:(id<KTKDeviceCCOperationDelegate>)delegate;
 
 /**
  *  Reboot the device.

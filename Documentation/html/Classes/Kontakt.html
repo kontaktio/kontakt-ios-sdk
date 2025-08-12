@@ -60,6 +60,12 @@
 		
 		<option value="//api/name/AuthHeadersProvider">+ AuthHeadersProvider</option>
 		
+		<option value="//api/name/DebugLogsProxy">+ DebugLogsProxy</option>
+		
+		<option value="//api/name/ErrorLogsProxy">+ ErrorLogsProxy</option>
+		
+		<option value="//api/name/NetworkEventHandler">+ NetworkEventHandler</option>
+		
 		<option value="//api/name/monitoringOptions">+ monitoringOptions</option>
 		
 		<option value="//api/name/removeCaches">+ removeCaches</option>
@@ -70,7 +76,13 @@
 		
 		<option value="//api/name/setCentralManagerPowerAlert:">+ setCentralManagerPowerAlert:</option>
 		
+		<option value="//api/name/setDebugLogsProxy:">+ setDebugLogsProxy:</option>
+		
+		<option value="//api/name/setErrorLogsProxy:">+ setErrorLogsProxy:</option>
+		
 		<option value="//api/name/setMonitoringOptions:">+ setMonitoringOptions:</option>
+		
+		<option value="//api/name/setNetworkEventHandler:">+ setNetworkEventHandler:</option>
 		
 	</optgroup>
 	
@@ -572,6 +584,337 @@ The block has a completion handler parameter that should return a dictionary of 
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/setDebugLogsProxy:" title="setDebugLogsProxy:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDebugLogsProxy:">+&nbsp;setDebugLogsProxy:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets debug logs proxy block.
+Can be used to intercept debug log messages and send them to your bug tracker (i.e. Instabug).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setDebugLogsProxy:(DebugLogsProxyBlock)<em>logsProxy</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>logsProxy</code></th>
+						<td><p>A block called when external debug log is received.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets debug logs proxy block.
+Can be used to intercept debug log messages and send them to your bug tracker (i.e. Instabug).</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/DebugLogsProxy" title="DebugLogsProxy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/DebugLogsProxy">+&nbsp;DebugLogsProxy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A block value called automatically when using <code>DebugLog</code> function.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (DebugLogsProxyBlock)DebugLogsProxy</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A debug logs proxy block.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A block value called automatically when using <code>DebugLog</code> function.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setErrorLogsProxy:" title="setErrorLogsProxy:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setErrorLogsProxy:">+&nbsp;setErrorLogsProxy:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets error logs proxy block.
+Can be used to intercept error log messages and send them to your bug tracker (i.e. Instabug).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setErrorLogsProxy:(DebugLogsProxyBlock)<em>errorLogsProxy</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>logsProxy</code></th>
+						<td><p>A block called when external error log is received.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets error logs proxy block.
+Can be used to intercept error log messages and send them to your bug tracker (i.e. Instabug).</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ErrorLogsProxy" title="ErrorLogsProxy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ErrorLogsProxy">+&nbsp;ErrorLogsProxy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A block value called automatically when using <code>ErrorLog</code> function.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (DebugLogsProxyBlock)ErrorLogsProxy</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An error logs proxy block.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A block value called automatically when using <code>ErrorLog</code> function.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setNetworkEventHandler:" title="setNetworkEventHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setNetworkEventHandler:">+&nbsp;setNetworkEventHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets network event handler block.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setNetworkEventHandler:(NetworkEventHandlerBlock)<em>networkEventHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>networkEventHandler</code></th>
+						<td><p>A block which is called when URL response is received.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sets network event handler block.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/NetworkEventHandler" title="NetworkEventHandler"></a>
+	<h3 class="method-title"><code><a href="#//api/name/NetworkEventHandler">+&nbsp;NetworkEventHandler</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A block value to be called when URL response is received.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NetworkEventHandlerBlock)NetworkEventHandler</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A network event handler block.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A block value to be called when URL response is received.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Kontakt.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -587,7 +930,7 @@ The block has a completion handler parameter that should return a dictionary of 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-06-11</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-11</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
