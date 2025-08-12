@@ -9210,553 +9210,553 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadRequest.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadRequest.swift",
       "kind": "StringLiteral",
       "offset": 194,
       "length": 5,
       "value": "\"mid\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadRequest.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadRequest.swift",
       "kind": "StringLiteral",
       "offset": 225,
       "length": 5,
       "value": "\"rid\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadRequest.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadRequest.swift",
       "kind": "StringLiteral",
       "offset": 255,
       "length": 11,
       "value": "\"read_from\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadRequest.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadRequest.swift",
       "kind": "StringLiteral",
       "offset": 289,
       "length": 9,
       "value": "\"read_to\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadRequest.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadRequest.swift",
       "kind": "StringLiteral",
       "offset": 341,
       "length": 10,
       "value": "\"max_size\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Cloud\/Reporting\/TelemetryReporting.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Cloud\/Reporting\/TelemetryReporting.swift",
       "kind": "Dictionary",
       "offset": 1029,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Extension\/NSString+Kontakt.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Extension\/NSString+Kontakt.swift",
       "kind": "IntegerLiteral",
       "offset": 163,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Extension\/NSString+Kontakt.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Extension\/NSString+Kontakt.swift",
       "kind": "IntegerLiteral",
       "offset": 185,
       "length": 20,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Extension\/NSString+Kontakt.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Extension\/NSString+Kontakt.swift",
       "kind": "IntegerLiteral",
       "offset": 219,
       "length": 17,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Extension\/NSString+Kontakt.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Extension\/NSString+Kontakt.swift",
       "kind": "IntegerLiteral",
       "offset": 250,
       "length": 7,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Extension\/NSString+Kontakt.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Extension\/NSString+Kontakt.swift",
       "kind": "IntegerLiteral",
       "offset": 271,
       "length": 10,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "StringLiteral",
       "offset": 193,
       "length": 5,
       "value": "\"rid\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "StringLiteral",
       "offset": 236,
       "length": 7,
       "value": "\"stamp\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "StringLiteral",
       "offset": 270,
       "length": 4,
       "value": "\"rc\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "StringLiteral",
       "offset": 427,
       "length": 3,
       "value": "\"1\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "StringLiteral",
       "offset": 454,
       "length": 3,
       "value": "\"2\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 907,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 926,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 951,
       "length": 6,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "StringLiteral",
       "offset": 1043,
       "length": 5,
       "value": "\"det\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "StringLiteral",
       "offset": 1074,
       "length": 5,
       "value": "\"err\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCSlotStateResponse.swift",
       "kind": "StringLiteral",
       "offset": 1105,
       "length": 5,
       "value": "\"val\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
       "kind": "IntegerLiteral",
       "offset": 215,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
       "kind": "IntegerLiteral",
       "offset": 237,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
       "kind": "IntegerLiteral",
       "offset": 261,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
       "kind": "IntegerLiteral",
       "offset": 286,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
       "kind": "IntegerLiteral",
       "offset": 309,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
       "kind": "StringLiteral",
       "offset": 657,
       "length": 7,
       "value": "\"stamp\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
       "kind": "StringLiteral",
       "offset": 688,
       "length": 5,
       "value": "\"msg\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCLogEvent.swift",
       "kind": "StringLiteral",
       "offset": 715,
       "length": 5,
       "value": "\"lvl\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
       "offset": 195,
       "length": 5,
       "value": "\"rid\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
       "offset": 224,
       "length": 6,
       "value": "\"data\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
       "offset": 257,
       "length": 4,
       "value": "\"rc\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
       "offset": 286,
       "length": 11,
       "value": "\"read_from\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
       "offset": 320,
       "length": 9,
       "value": "\"read_to\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
       "offset": 356,
       "length": 4,
       "value": "\"to\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
       "offset": 409,
       "length": 13,
       "value": "\"data_format\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2213,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2245,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2285,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2325,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2365,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2396,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2426,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2458,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2495,
       "length": 1,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2532,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2561,
       "length": 2,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2592,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2677,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2703,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2722,
       "length": 3,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2743,
       "length": 2,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2763,
       "length": 4,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
       "offset": 3704,
       "length": 51,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
       "offset": 3744,
       "length": 1,
       "value": "\": \""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
       "offset": 3754,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCRequest.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCRequest.swift",
       "kind": "StringLiteral",
       "offset": 183,
       "length": 5,
       "value": "\"mid\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCRequest.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCRequest.swift",
       "kind": "StringLiteral",
       "offset": 214,
       "length": 5,
       "value": "\"rid\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCRequest.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCRequest.swift",
       "kind": "StringLiteral",
       "offset": 243,
       "length": 5,
       "value": "\"lvl\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCGenericResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCGenericResponse.swift",
       "kind": "StringLiteral",
       "offset": 191,
       "length": 5,
       "value": "\"rid\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCGenericResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCGenericResponse.swift",
       "kind": "StringLiteral",
       "offset": 234,
       "length": 7,
       "value": "\"stamp\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCGenericResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCGenericResponse.swift",
       "kind": "StringLiteral",
       "offset": 268,
       "length": 4,
       "value": "\"rc\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCGenericResponse.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCGenericResponse.swift",
       "kind": "StringLiteral",
       "offset": 296,
       "length": 5,
       "value": "\"msg\""
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2045,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2068,
       "length": 3,
       "value": "0x0"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2090,
       "length": 3,
       "value": "0x1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2111,
       "length": 3,
       "value": "0x2"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2135,
       "length": 3,
       "value": "0x3"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2484,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2507,
       "length": 3,
       "value": "0x0"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2529,
       "length": 3,
       "value": "0x1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2550,
       "length": 3,
       "value": "0x2"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2574,
       "length": 3,
       "value": "0x3"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2916,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2938,
       "length": 3,
       "value": "0x0"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 2977,
       "length": 3,
       "value": "0x1"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 3010,
       "length": 3,
       "value": "0x2"
     },
     {
-      "filePath": "\/Users\/darek\/Projects\/ios-app\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
       "offset": 3031,
       "length": 3,
