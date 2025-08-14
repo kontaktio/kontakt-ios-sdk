@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>KTKDeviceConnectionOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">KontaktSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Kontakt.io</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/GATTOperationsDependency">GATTOperationsDependency</option>
+		
+		<option value="//api/name/connectionCompletion">connectionCompletion</option>
+		
+		<option value="//api/name/connectionCompletionMTU">connectionCompletionMTU</option>
+		
+		<option value="//api/name/delegate">delegate</option>
+		
+		<option value="//api/name/syncTime">syncTime</option>
+		
+		<option value="//api/name/type">type</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addGATTOperation:">- addGATTOperation:</option>
+		
+		<option value="//api/name/addGATTOperation:asOptional:">- addGATTOperation:asOptional:</option>
+		
+		<option value="//api/name/createOperations">- createOperations</option>
+		
+		<option value="//api/name/registerAdHocOperation:">- registerAdHocOperation:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">KTKDeviceConnectionOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/KTKGroupOperation.html">KTKGroupOperation</a> : <a href="../Classes/KTKOperation.html">KTKOperation</a> : NSOperation</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>CBPeripheralDelegate<br /><a href="../Protocols/KTKDeviceConnectionOperationProtocol.html">KTKDeviceConnectionOperationProtocol</a><br /><a href="../Protocols/KTKDeviceGATTOperationDelegate.html">KTKDeviceGATTOperationDelegate</a></td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>KTKDeviceConnectionOperation.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Operation Properties" name="task_Operation Properties"></a>
+						<h2 class="task-title">Operation Properties</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak, readwrite) id&lt;KTKDeviceConnectionOperationDelegate&gt; _Nullable delegate</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectionCompletion" title="connectionCompletion"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectionCompletion">&nbsp;&nbsp;connectionCompletion</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readwrite) void ( ^ ) ( BOOL indicator , id _Nullable , NSArray&lt;NSError*&gt; *_Nullable ) connectionCompletion</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectionCompletionMTU" title="connectionCompletionMTU"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectionCompletionMTU">&nbsp;&nbsp;connectionCompletionMTU</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readwrite) void ( ^ ) ( BOOL indicator , NSInteger mtu , NSString *firmware , id _Nullable , NSArray&lt;NSError*&gt; *_Nullable ) connectionCompletionMTU</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/GATTOperationsDependency" title="GATTOperationsDependency"></a>
+	<h3 class="method-title"><code><a href="#//api/name/GATTOperationsDependency">&nbsp;&nbsp;GATTOperationsDependency</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak, readwrite) __kindof KTKOperation *GATTOperationsDependency</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readwrite) KTKDeviceConnectionOperationType type</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/syncTime" title="syncTime"></a>
+	<h3 class="method-title"><code><a href="#//api/name/syncTime">&nbsp;&nbsp;syncTime</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readwrite) BOOL syncTime</code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Operation Methods" name="task_Operation Methods"></a>
+						<h2 class="task-title">Operation Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/createOperations" title="createOperations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createOperations">&ndash;&nbsp;createOperations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)createOperations</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addGATTOperation:" title="addGATTOperation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addGATTOperation:">&ndash;&nbsp;addGATTOperation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)addGATTOperation:(__kindof KTKDeviceGATTOperation *)<em>operation</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addGATTOperation:asOptional:" title="addGATTOperation:asOptional:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addGATTOperation:asOptional:">&ndash;&nbsp;addGATTOperation:asOptional:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Optional operation does not cancel the connection when its characteristic couldn&rsquo;t be discovered.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addGATTOperation:(__kindof KTKDeviceGATTOperation *)<em>operation</em> asOptional:(BOOL)<em>optional</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Optional operation does not cancel the connection when its characteristic couldn&rsquo;t be discovered.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnectionOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerAdHocOperation:" title="registerAdHocOperation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerAdHocOperation:">&ndash;&nbsp;registerAdHocOperation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)registerAdHocOperation:(__kindof KTKDeviceGATTOperation *)<em>operation</em></code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-14</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

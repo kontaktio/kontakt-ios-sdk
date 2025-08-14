@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>KTKDeviceWriteOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">KontaktSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Kontakt.io</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/allowWriteInChunks">allowWriteInChunks</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithService:characteristic:payload:">- initWithService:characteristic:payload:</option>
+		
+		<option value="//api/name/initWithService:characteristic:payload:withoutResponse:">- initWithService:characteristic:payload:withoutResponse:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">KTKDeviceWriteOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/KTKDeviceGATTOperation.html">KTKDeviceGATTOperation</a> : <a href="../Classes/KTKOperation.html">KTKOperation</a> : NSOperation</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>KTKDeviceWriteOperation.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/allowWriteInChunks" title="allowWriteInChunks"></a>
+	<h3 class="method-title"><code><a href="#//api/name/allowWriteInChunks">&nbsp;&nbsp;allowWriteInChunks</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When set to <code>true</code> and when payload size is bigger than MTU, the payload will be written in multiple chunks instead of a single queued write.
+This flag is ignored when <code>withoutResponse</code> is set to <code>false</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readwrite) BOOL allowWriteInChunks</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>When set to <code>true</code> and when payload size is bigger than MTU, the payload will be written in multiple chunks instead of a single queued write.
+This flag is ignored when <code>withoutResponse</code> is set to <code>false</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceWriteOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Initialization Methods" name="task_Initialization Methods"></a>
+						<h2 class="task-title">Initialization Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithService:characteristic:payload:" title="initWithService:characteristic:payload:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithService:characteristic:payload:">&ndash;&nbsp;initWithService:characteristic:payload:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns GATT write operation with the specified service UUID string, characteristic UUID string and payload object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithService:(NSString *)<em>service</em> characteristic:(NSString *)<em>characteristic</em> payload:(id)<em>payload</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>A service UUID string object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>characteristic</code></th>
+						<td><p>A characteristic UUID string object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>payload</code></th>
+						<td><p>A payload object to be written.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized GATT write operation.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes and returns GATT write operation with the specified service UUID string, characteristic UUID string and payload object.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceWriteOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithService:characteristic:payload:withoutResponse:" title="initWithService:characteristic:payload:withoutResponse:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithService:characteristic:payload:withoutResponse:">&ndash;&nbsp;initWithService:characteristic:payload:withoutResponse:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns GATT write operation with the specified service UUID string, characteristic UUID string and payload object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithService:(NSString *)<em>service</em> characteristic:(NSString *)<em>characteristic</em> payload:(id)<em>payload</em> withoutResponse:(BOOL)<em>withoutResponse</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>A service UUID string object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>characteristic</code></th>
+						<td><p>A characteristic UUID string object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>payload</code></th>
+						<td><p>A payload object to be written.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>withoutResponse</code></th>
+						<td><p>When set to <code>true</code> the operation will be marked as verified right after writing payload.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized GATT write operation.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes and returns GATT write operation with the specified service UUID string, characteristic UUID string and payload object.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceWriteOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-14</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -102,9 +102,15 @@
 		
 		<option value="//api/name/initWithNearbyDevice:">- initWithNearbyDevice:</option>
 		
+		<option value="//api/name/readAccelerometerDataWithHandler:">- readAccelerometerDataWithHandler:</option>
+		
+		<option value="//api/name/readAccidentEventsWithHandler:">- readAccidentEventsWithHandler:</option>
+		
 		<option value="//api/name/readConfigurationWithCompletion:">- readConfigurationWithCompletion:</option>
 		
 		<option value="//api/name/readEncryptedConfigurationWithFirmware:completion:">- readEncryptedConfigurationWithFirmware:completion:</option>
+		
+		<option value="//api/name/stopCurrentListeningOperation">- stopCurrentListeningOperation</option>
 		
 		<option value="//api/name/syncTimeWithCompletion:">- syncTimeWithCompletion:</option>
 		
@@ -1502,6 +1508,168 @@ Can be <code>nil</code> if <code>nearbyDevice</code> reference has already firmw
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/readAccelerometerDataWithHandler:" title="readAccelerometerDataWithHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readAccelerometerDataWithHandler:">&ndash;&nbsp;readAccelerometerDataWithHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Reads the latest accelerometer data from a Kontakt.io device.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)readAccelerometerDataWithHandler:(KTKAccelerometerDataHandler)<em>handler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>handler</code></th>
+						<td><p>A block called every time data is received from the device.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Reads the latest accelerometer data from a Kontakt.io device.</p><div class="note"><p><strong>Note:</strong> Call @c stopCurrentListeningOperation() function to stop receiving data.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readAccidentEventsWithHandler:" title="readAccidentEventsWithHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readAccidentEventsWithHandler:">&ndash;&nbsp;readAccidentEventsWithHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Listens to the changes of accident detection from a Kontakt.io device.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)readAccidentEventsWithHandler:(KTKAccidentEventHandler)<em>handler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>handler</code></th>
+						<td><p>A block called every time data is received from the device.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Listens to the changes of accident detection from a Kontakt.io device.</p><div class="note"><p><strong>Note:</strong> Call @c stopCurrentListeningOperation() function to stop receiving data.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopCurrentListeningOperation" title="stopCurrentListeningOperation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopCurrentListeningOperation">&ndash;&nbsp;stopCurrentListeningOperation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Signals current listening operation to stop receiving more data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopCurrentListeningOperation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Signals current listening operation to stop receiving more data.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKDeviceConnection.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/cancel" title="cancel"></a>
 	<h3 class="method-title"><code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
 </h3>
@@ -1562,7 +1730,7 @@ Can be <code>nil</code> if <code>nearbyDevice</code> reference has already firmw
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-12</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-14</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
