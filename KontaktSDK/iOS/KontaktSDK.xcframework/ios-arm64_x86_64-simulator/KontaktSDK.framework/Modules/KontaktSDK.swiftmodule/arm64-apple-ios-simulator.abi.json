@@ -4166,6 +4166,47 @@
                     "fixedbinaryorder": 11
                   },
                   {
+                    "kind": "Var",
+                    "name": "monitorState",
+                    "printedName": "monitorState",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId.Type) -> KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ElementId",
+                            "printedName": "KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId",
+                            "usr": "s:10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC0G2IdO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Metatype",
+                            "printedName": "KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId.Type",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ElementId",
+                                "printedName": "KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId",
+                                "usr": "s:10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC0G2IdO"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "declKind": "EnumElement",
+                    "usr": "s:10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC0G2IdO12monitorStateyA2GmF",
+                    "mangledName": "$s10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC0G2IdO12monitorStateyA2GmF",
+                    "moduleName": "KontaktSDK",
+                    "declAttributes": [
+                      "ObjC"
+                    ],
+                    "fixedbinaryorder": 12
+                  },
+                  {
                     "kind": "Constructor",
                     "name": "init",
                     "printedName": "init(rawValue:)",
@@ -4746,9 +4787,59 @@
                 ]
               },
               {
+                "kind": "Var",
+                "name": "rawDataFormat",
+                "printedName": "rawDataFormat",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC07rawDataH010Foundation0J0Vvp",
+                "mangledName": "$s10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC07rawDataH010Foundation0J0Vvp",
+                "moduleName": "KontaktSDK",
+                "declAttributes": [
+                  "Final",
+                  "HasStorage",
+                  "AccessControl",
+                  "ObjC"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC07rawDataH010Foundation0J0Vvg",
+                    "mangledName": "$s10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC07rawDataH010Foundation0J0Vvg",
+                    "moduleName": "KontaktSDK",
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final",
+                      "ObjC"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(elementId:encodingId:)",
+                "printedName": "init(elementId:encodingId:rawDataFormat:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -4767,13 +4858,19 @@
                     "name": "EncodingId",
                     "printedName": "KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId",
                     "usr": "s:10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC10EncodingIdO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC9elementId08encodingJ0A2E0gJ0O_AE08EncodingJ0Otcfc",
-                "mangledName": "$s10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC9elementId08encodingJ0A2E0gJ0O_AE08EncodingJ0Otcfc",
+                "usr": "s:10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC9elementId08encodingJ007rawDataH0A2E0gJ0O_AE08EncodingJ0O10Foundation0M0Vtcfc",
+                "mangledName": "$s10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC9elementId08encodingJ007rawDataH0A2E0gJ0O_AE08EncodingJ0O10Foundation0M0Vtcfc",
                 "moduleName": "KontaktSDK",
-                "objc_name": "initWithElementId:encodingId:",
+                "objc_name": "initWithElementId:encodingId:rawDataFormat:",
                 "declAttributes": [
                   "AccessControl",
                   "ObjC"
@@ -4783,7 +4880,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(elementIdRaw:encodingIdRaw:)",
+                "printedName": "init(elementIdRaw:encodingIdRaw:rawDataFormat:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -4802,13 +4899,19 @@
                     "name": "Int",
                     "printedName": "Swift.Int",
                     "usr": "s:Si"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC12elementIdRaw08encodingjK0AESi_Sitcfc",
-                "mangledName": "$s10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC12elementIdRaw08encodingjK0AESi_Sitcfc",
+                "usr": "s:10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC12elementIdRaw08encodingjK007rawDataH0AESi_Si10Foundation0N0Vtcfc",
+                "mangledName": "$s10KontaktSDK27DeviceCCStorageReadResponseC13ElementFormatC12elementIdRaw08encodingjK007rawDataH0AESi_Si10Foundation0N0Vtcfc",
                 "moduleName": "KontaktSDK",
-                "objc_name": "initWithElementIdRaw:encodingIdRaw:",
+                "objc_name": "initWithElementIdRaw:encodingIdRaw:rawDataFormat:",
                 "declAttributes": [
                   "Convenience",
                   "AccessControl",
@@ -5600,6 +5703,76 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "DeviceProlongableOperation",
+        "printedName": "DeviceProlongableOperation",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "makeProlongOperation",
+            "printedName": "makeProlongOperation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KTKDeviceGATTOperation",
+                "printedName": "KontaktSDK.KTKDeviceGATTOperation",
+                "usr": "c:objc(cs)KTKDeviceGATTOperation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KontaktSDK@objc(pl)KTKDeviceProlongableOperation(im)makeProlongOperation",
+            "mangledName": "$s10KontaktSDK26DeviceProlongableOperationP011makeProlongE0So22KTKDeviceGATTOperationCyF",
+            "moduleName": "KontaktSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : KontaktSDK.DeviceProlongableOperation>",
+            "sugared_genericSig": "<Self where Self : KontaktSDK.DeviceProlongableOperation>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@KontaktSDK@objc(pl)KTKDeviceProlongableOperation",
+        "mangledName": "$s10KontaktSDK26DeviceProlongableOperationP",
+        "moduleName": "KontaktSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "objc_name": "KTKDeviceProlongableOperation",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KontaktSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -6311,6 +6484,1886 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "AccidentFrame",
+        "printedName": "AccidentFrame",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "SensitivityLevel",
+            "printedName": "SensitivityLevel",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "mg16PerUnit",
+                "printedName": "mg16PerUnit",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(KontaktSDK.AccidentFrame.SensitivityLevel.Type) -> KontaktSDK.AccidentFrame.SensitivityLevel",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SensitivityLevel",
+                        "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                        "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SensitivityLevel",
+                            "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                            "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO11mg16PerUnityA2EmF",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16SensitivityLevelO11mg16PerUnityA2EmF",
+                "moduleName": "KontaktSDK",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 0
+              },
+              {
+                "kind": "Var",
+                "name": "mg32PerUnit",
+                "printedName": "mg32PerUnit",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(KontaktSDK.AccidentFrame.SensitivityLevel.Type) -> KontaktSDK.AccidentFrame.SensitivityLevel",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SensitivityLevel",
+                        "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                        "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SensitivityLevel",
+                            "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                            "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO11mg32PerUnityA2EmF",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16SensitivityLevelO11mg32PerUnityA2EmF",
+                "moduleName": "KontaktSDK",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 1
+              },
+              {
+                "kind": "Var",
+                "name": "mg64PerUnit",
+                "printedName": "mg64PerUnit",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(KontaktSDK.AccidentFrame.SensitivityLevel.Type) -> KontaktSDK.AccidentFrame.SensitivityLevel",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SensitivityLevel",
+                        "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                        "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SensitivityLevel",
+                            "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                            "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO11mg64PerUnityA2EmF",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16SensitivityLevelO11mg64PerUnityA2EmF",
+                "moduleName": "KontaktSDK",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 2
+              },
+              {
+                "kind": "Var",
+                "name": "mg128PerUnit",
+                "printedName": "mg128PerUnit",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(KontaktSDK.AccidentFrame.SensitivityLevel.Type) -> KontaktSDK.AccidentFrame.SensitivityLevel",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SensitivityLevel",
+                        "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                        "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SensitivityLevel",
+                            "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                            "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO12mg128PerUnityA2EmF",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16SensitivityLevelO12mg128PerUnityA2EmF",
+                "moduleName": "KontaktSDK",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "fixedbinaryorder": 3
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SensitivityLevel",
+                        "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                        "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO8rawValueAESgs5UInt8V_tcfc",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16SensitivityLevelO8rawValueAESgs5UInt8V_tcfc",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO8rawValues5UInt8Vvp",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16SensitivityLevelO8rawValues5UInt8Vvp",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt8",
+                        "printedName": "Swift.UInt8",
+                        "usr": "s:s5UInt8V"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO8rawValues5UInt8Vvg",
+                    "mangledName": "$s10KontaktSDK13AccidentFrameC16SensitivityLevelO8rawValues5UInt8Vvg",
+                    "moduleName": "KontaktSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO",
+            "mangledName": "$s10KontaktSDK13AccidentFrameC16SensitivityLevelO",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "enumRawTypeName": "UInt8",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt8",
+                        "printedName": "Swift.UInt8",
+                        "usr": "s:s5UInt8V"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "batteryLevel",
+            "printedName": "batteryLevel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(py)batteryLevel",
+            "mangledName": "$s10KontaktSDK13AccidentFrameC12batteryLevelSivp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(im)batteryLevel",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC12batteryLevelSivg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sensitivityLevel",
+            "printedName": "sensitivityLevel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SensitivityLevel",
+                "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(py)sensitivityLevel",
+            "mangledName": "$s10KontaktSDK13AccidentFrameC16sensitivityLevelAC011SensitivityF0Ovp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SensitivityLevel",
+                    "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                    "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(im)sensitivityLevel",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16sensitivityLevelAC011SensitivityF0Ovg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "alertMode",
+            "printedName": "alertMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(py)alertMode",
+            "mangledName": "$s10KontaktSDK13AccidentFrameC9alertModeSbvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(im)alertMode",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC9alertModeSbvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "accidentDetected",
+            "printedName": "accidentDetected",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(py)accidentDetected",
+            "mangledName": "$s10KontaktSDK13AccidentFrameC16accidentDetectedSbvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(im)accidentDetected",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16accidentDetectedSbvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "accidentCounter",
+            "printedName": "accidentCounter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(py)accidentCounter",
+            "mangledName": "$s10KontaktSDK13AccidentFrameC15accidentCounterSivp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(im)accidentCounter",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC15accidentCounterSivg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "accelerationData",
+            "printedName": "accelerationData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccelerationSample",
+                "printedName": "KontaktSDK.AccelerationSample",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(py)accelerationData",
+            "mangledName": "$s10KontaktSDK13AccidentFrameC16accelerationDataAA18AccelerationSampleCvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccelerationSample",
+                    "printedName": "KontaktSDK.AccelerationSample",
+                    "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(im)accelerationData",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16accelerationDataAA18AccelerationSampleCvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxMovingAverage",
+            "printedName": "maxMovingAverage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(py)maxMovingAverage",
+            "mangledName": "$s10KontaktSDK13AccidentFrameC16maxMovingAverageSdvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(im)maxMovingAverage",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16maxMovingAverageSdvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(batteryLevel:sensitivityLevel:alertMode:accidentDetected:accidentCounter:accelerationData:maxMovingAverage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccidentFrame",
+                "printedName": "KontaktSDK.AccidentFrame",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SensitivityLevel",
+                "printedName": "KontaktSDK.AccidentFrame.SensitivityLevel",
+                "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AccelerationSample",
+                "printedName": "KontaktSDK.AccelerationSample",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(im)initWithBatteryLevel:sensitivityLevel:alertMode:accidentDetected:accidentCounter:accelerationData:maxMovingAverage:",
+            "mangledName": "$s10KontaktSDK13AccidentFrameC12batteryLevel011sensitivityF09alertMode16accidentDetected0J7Counter16accelerationData16maxMovingAverageACSi_AC011SensitivityF0OS2bSiAA18AccelerationSampleCSdtcfc",
+            "moduleName": "KontaktSDK",
+            "objc_name": "initWithBatteryLevel:sensitivityLevel:alertMode:accidentDetected:accidentCounter:accelerationData:maxMovingAverage:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccidentFrame",
+                "printedName": "KontaktSDK.AccidentFrame",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(im)init",
+            "mangledName": "$s10KontaktSDK13AccidentFrameCACycfc",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame",
+        "mangledName": "$s10KontaktSDK13AccidentFrameC",
+        "moduleName": "KontaktSDK",
+        "objc_name": "KTKAccidentFrame",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KontaktSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DeviceAccidentReadDataOperation",
+        "printedName": "DeviceAccidentReadDataOperation",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "FrameDecodeError",
+            "printedName": "FrameDecodeError",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "unexpectedValue",
+                "printedName": "unexpectedValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError.Type) -> KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FrameDecodeError",
+                        "printedName": "KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError",
+                        "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FrameDecodeError",
+                            "printedName": "KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError",
+                            "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO15unexpectedValueyA2EmF",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO15unexpectedValueyA2EmF",
+                "moduleName": "KontaktSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "sizeMismatch",
+                "printedName": "sizeMismatch",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError.Type) -> KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FrameDecodeError",
+                        "printedName": "KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError",
+                        "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FrameDecodeError",
+                            "printedName": "KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError",
+                            "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO12sizeMismatchyA2EmF",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO12sizeMismatchyA2EmF",
+                "moduleName": "KontaktSDK"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FrameDecodeError",
+                    "printedName": "KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError",
+                    "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FrameDecodeError",
+                    "printedName": "KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError",
+                    "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO2eeoiySbAE_AEtFZ",
+                "moduleName": "KontaktSDK",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO9hashValueSivp",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO9hashValueSivp",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO9hashValueSivg",
+                    "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO9hashValueSivg",
+                    "moduleName": "KontaktSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO4hash4intoys6HasherVz_tF",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC16FrameDecodeErrorO",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Error",
+                "printedName": "Error",
+                "usr": "s:s5ErrorP",
+                "mangledName": "$ss5ErrorP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "handler",
+            "printedName": "handler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((KontaktSDK.AccidentFrame, Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(KontaktSDK.AccidentFrame, Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(KontaktSDK.AccidentFrame, Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AccidentFrame",
+                            "printedName": "KontaktSDK.AccidentFrame",
+                            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UnsafeMutablePointer",
+                            "printedName": "Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ObjCBool",
+                                "printedName": "ObjectiveC.ObjCBool",
+                                "usr": "s:10ObjectiveC8ObjCBoolV"
+                              }
+                            ],
+                            "usr": "s:Sp"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(py)handler",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC7handleryAA0D5FrameC_Spy10ObjectiveC8ObjCBoolVGtcSgvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((KontaktSDK.AccidentFrame, Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(KontaktSDK.AccidentFrame, Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(KontaktSDK.AccidentFrame, Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AccidentFrame",
+                                "printedName": "KontaktSDK.AccidentFrame",
+                                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UnsafeMutablePointer",
+                                "printedName": "Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ObjCBool",
+                                    "printedName": "ObjectiveC.ObjCBool",
+                                    "usr": "s:10ObjectiveC8ObjCBoolV"
+                                  }
+                                ],
+                                "usr": "s:Sp"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)handler",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC7handleryAA0D5FrameC_Spy10ObjectiveC8ObjCBoolVGtcSgvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((KontaktSDK.AccidentFrame, Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(KontaktSDK.AccidentFrame, Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(KontaktSDK.AccidentFrame, Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AccidentFrame",
+                                "printedName": "KontaktSDK.AccidentFrame",
+                                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UnsafeMutablePointer",
+                                "printedName": "Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ObjCBool",
+                                    "printedName": "ObjectiveC.ObjCBool",
+                                    "usr": "s:10ObjectiveC8ObjCBoolV"
+                                  }
+                                ],
+                                "usr": "s:Sp"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)setHandler:",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC7handleryAA0D5FrameC_Spy10ObjectiveC8ObjCBoolVGtcSgvs",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC7handleryAA0D5FrameC_Spy10ObjectiveC8ObjCBoolVGtcSgvM",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC7handleryAA0D5FrameC_Spy10ObjectiveC8ObjCBoolVGtcSgvM",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "device",
+            "printedName": "device",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "KontaktSDK.KTKNearbyDevice?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KTKNearbyDevice",
+                    "printedName": "KontaktSDK.KTKNearbyDevice",
+                    "usr": "c:objc(cs)KTKNearbyDevice"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(py)device",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC6deviceSo09KTKNearbyC0CSgvp",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "objc_name": "device",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "KontaktSDK.KTKNearbyDevice?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KTKNearbyDevice",
+                        "printedName": "KontaktSDK.KTKNearbyDevice",
+                        "usr": "c:objc(cs)KTKNearbyDevice"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)device",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC6deviceSo09KTKNearbyC0CSgvg",
+                "moduleName": "KontaktSDK",
+                "overriding": true,
+                "implicit": true,
+                "objc_name": "device",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "KontaktSDK.KTKNearbyDevice?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KTKNearbyDevice",
+                        "printedName": "KontaktSDK.KTKNearbyDevice",
+                        "usr": "c:objc(cs)KTKNearbyDevice"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)setDevice:",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC6deviceSo09KTKNearbyC0CSgvs",
+                "moduleName": "KontaktSDK",
+                "overriding": true,
+                "implicit": true,
+                "objc_name": "setDevice:",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10KontaktSDK31DeviceAccidentReadDataOperationC6deviceSo09KTKNearbyC0CSgvM",
+                "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC6deviceSo09KTKNearbyC0CSgvM",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "createOperations",
+            "printedName": "createOperations()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)createOperations",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC16createOperationsyyF",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "objc_name": "createOperations",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "operationDidFinish",
+            "printedName": "operationDidFinish(_:errors:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KTKDeviceGATTOperation",
+                "printedName": "KontaktSDK.KTKDeviceGATTOperation",
+                "usr": "c:objc(cs)KTKDeviceGATTOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[any Swift.Error]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[any Swift.Error]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)operationDidFinish:errors:",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC18operationDidFinish_6errorsySo22KTKDeviceGATTOperationC_Says5Error_pGSgtF",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "objc_name": "operationDidFinish:errors:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finished",
+            "printedName": "finished(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[any Swift.Error]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[any Swift.Error]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)finished:",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC8finishedyySays5Error_pGSgF",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "objc_name": "finished:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(operations:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceAccidentReadDataOperation",
+                "printedName": "KontaktSDK.DeviceAccidentReadDataOperation",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.Operation]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.Operation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Operation",
+                        "printedName": "Foundation.Operation",
+                        "usr": "c:objc(cs)NSOperation"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)initWithOperations:",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC10operationsACSaySo11NSOperationCGSg_tcfc",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithOperations:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(operations:maxConcurrent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceAccidentReadDataOperation",
+                "printedName": "KontaktSDK.DeviceAccidentReadDataOperation",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.Operation]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.Operation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Operation",
+                        "printedName": "Foundation.Operation",
+                        "usr": "c:objc(cs)NSOperation"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)initWithOperations:maxConcurrent:",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC10operations13maxConcurrentACSaySo11NSOperationCGSg_Sutcfc",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithOperations:maxConcurrent:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(operations:maxConcurrent:serial:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceAccidentReadDataOperation",
+                "printedName": "KontaktSDK.DeviceAccidentReadDataOperation",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.Operation]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.Operation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Operation",
+                        "printedName": "Foundation.Operation",
+                        "usr": "c:objc(cs)NSOperation"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)initWithOperations:maxConcurrent:serial:",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC10operations13maxConcurrent6serialACSaySo11NSOperationCGSg_SuSbtcfc",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithOperations:maxConcurrent:serial:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceAccidentReadDataOperation",
+                "printedName": "KontaktSDK.DeviceAccidentReadDataOperation",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)init",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationCACycfc",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "makeProlongOperation",
+            "printedName": "makeProlongOperation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KTKDeviceGATTOperation",
+                "printedName": "KontaktSDK.KTKDeviceGATTOperation",
+                "usr": "c:objc(cs)KTKDeviceGATTOperation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(im)makeProlongOperation",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC011makeProlongG0So22KTKDeviceGATTOperationCyF",
+            "moduleName": "KontaktSDK",
+            "objc_name": "makeProlongOperation",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation",
+        "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC",
+        "moduleName": "KontaktSDK",
+        "objc_name": "KTKDeviceAccidentReadDataOperation",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)KTKDeviceConnectionOperation",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "KontaktSDK.KTKDeviceConnectionOperation",
+          "KontaktSDK.KTKGroupOperation",
+          "KontaktSDK.KTKOperation",
+          "Foundation.Operation",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "DeviceProlongableOperation",
+            "printedName": "DeviceProlongableOperation",
+            "usr": "c:@M@KontaktSDK@objc(pl)KTKDeviceProlongableOperation",
+            "mangledName": "$s10KontaktSDK26DeviceProlongableOperationP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KontaktSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "ISO8601MicrosecondsDateFormatter",
         "printedName": "ISO8601MicrosecondsDateFormatter",
         "children": [
@@ -6824,8 +8877,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "unexpectedDataFormat",
-            "printedName": "unexpectedDataFormat",
+            "name": "mutableRawDataIsEmpty",
+            "printedName": "mutableRawDataIsEmpty",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -6836,7 +8889,7 @@
                     "kind": "TypeNominal",
                     "name": "DeviceCCStorageDataParserError",
                     "printedName": "KontaktSDK.DeviceCCStorageDataParserError",
-                    "usr": "c:@M@KontaktSDK@E@DeviceCCStorageDataParserError"
+                    "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO"
                   },
                   {
                     "kind": "TypeNominal",
@@ -6847,7 +8900,7 @@
                         "kind": "TypeNominal",
                         "name": "DeviceCCStorageDataParserError",
                         "printedName": "KontaktSDK.DeviceCCStorageDataParserError",
-                        "usr": "c:@M@KontaktSDK@E@DeviceCCStorageDataParserError"
+                        "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO"
                       }
                     ]
                   }
@@ -6855,109 +8908,88 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@KontaktSDK@E@DeviceCCStorageDataParserError@DeviceCCStorageDataParserErrorUnexpectedDataFormat",
-            "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO010unexpectedE6FormatyA2CmF",
-            "moduleName": "KontaktSDK",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 0
+            "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO010mutableRawE7IsEmptyyA2CmF",
+            "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO010mutableRawE7IsEmptyyA2CmF",
+            "moduleName": "KontaktSDK"
           },
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
+            "kind": "Var",
+            "name": "unexpectedDataFormat",
+            "printedName": "unexpectedDataFormat",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(KontaktSDK.DeviceCCStorageDataParserError.Type) -> (Swift.Int, Swift.Int, Foundation.Data) -> KontaktSDK.DeviceCCStorageDataParserError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, Swift.Int, Foundation.Data) -> KontaktSDK.DeviceCCStorageDataParserError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DeviceCCStorageDataParserError",
+                        "printedName": "KontaktSDK.DeviceCCStorageDataParserError",
+                        "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Int, Swift.Int, Foundation.Data)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "KontaktSDK.DeviceCCStorageDataParserError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DeviceCCStorageDataParserError",
+                        "printedName": "KontaktSDK.DeviceCCStorageDataParserError",
+                        "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO010unexpectedE6FormatyACSi_Si10Foundation0E0VtcACmF",
+            "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO010unexpectedE6FormatyACSi_Si10Foundation0E0VtcACmF",
+            "moduleName": "KontaktSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "KontaktSDK.DeviceCCStorageDataParserError?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DeviceCCStorageDataParserError",
-                    "printedName": "KontaktSDK.DeviceCCStorageDataParserError",
-                    "usr": "c:@M@KontaktSDK@E@DeviceCCStorageDataParserError"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO8rawValueACSgSi_tcfc",
-            "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO8rawValueACSgSi_tcfc",
-            "moduleName": "KontaktSDK",
-            "implicit": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO8rawValueSivp",
-            "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO8rawValueSivp",
-            "moduleName": "KontaktSDK",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO8rawValueSivg",
-                "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO8rawValueSivg",
-                "moduleName": "KontaktSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "_nsErrorDomain",
-            "printedName": "_nsErrorDomain",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO03_nsG6DomainSSvpZ",
-            "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO03_nsG6DomainSSvpZ",
-            "moduleName": "KontaktSDK",
-            "static": true,
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
+                "printedName": "Swift.String?",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6966,26 +8998,53 @@
                     "usr": "s:SS"
                   }
                 ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO16errorDescriptionSSSgvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
                 "declKind": "Accessor",
-                "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO03_nsG6DomainSSvgZ",
-                "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO03_nsG6DomainSSvgZ",
+                "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO16errorDescriptionSSSgvg",
                 "moduleName": "KontaktSDK",
-                "static": true,
-                "implicit": true,
                 "accessorKind": "get"
               }
             ]
           }
         ],
         "declKind": "Enum",
-        "usr": "c:@M@KontaktSDK@E@DeviceCCStorageDataParserError",
+        "usr": "s:10KontaktSDK30DeviceCCStorageDataParserErrorO",
         "mangledName": "$s10KontaktSDK30DeviceCCStorageDataParserErrorO",
         "moduleName": "KontaktSDK",
         "declAttributes": [
-          "AccessControl",
-          "ObjC"
+          "AccessControl"
         ],
-        "enumRawTypeName": "Int",
         "conformances": [
           {
             "kind": "Conformance",
@@ -7003,39 +9062,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
           },
           {
             "kind": "Conformance",
@@ -7046,24 +9076,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "_BridgedNSError",
-            "printedName": "_BridgedNSError",
-            "usr": "s:10Foundation15_BridgedNSErrorP",
-            "mangledName": "$s10Foundation15_BridgedNSErrorP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ObjectiveCBridgeableError",
-            "printedName": "_ObjectiveCBridgeableError",
-            "usr": "s:10Foundation26_ObjectiveCBridgeableErrorP",
-            "mangledName": "$s10Foundation26_ObjectiveCBridgeableErrorP"
           }
         ]
       },
@@ -8418,6 +10434,1960 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "MonitorState",
+        "printedName": "MonitorState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "invalid",
+            "printedName": "invalid",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(KontaktSDK.MonitorState.Type) -> KontaktSDK.MonitorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MonitorState",
+                    "printedName": "KontaktSDK.MonitorState",
+                    "usr": "c:@M@KontaktSDK@E@MonitorState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "KontaktSDK.MonitorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MonitorState",
+                        "printedName": "KontaktSDK.MonitorState",
+                        "usr": "c:@M@KontaktSDK@E@MonitorState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@KontaktSDK@E@MonitorState@MonitorStateInvalid",
+            "mangledName": "$s10KontaktSDK12MonitorStateO7invalidyA2CmF",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "sleep",
+            "printedName": "sleep",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(KontaktSDK.MonitorState.Type) -> KontaktSDK.MonitorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MonitorState",
+                    "printedName": "KontaktSDK.MonitorState",
+                    "usr": "c:@M@KontaktSDK@E@MonitorState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "KontaktSDK.MonitorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MonitorState",
+                        "printedName": "KontaktSDK.MonitorState",
+                        "usr": "c:@M@KontaktSDK@E@MonitorState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@KontaktSDK@E@MonitorState@MonitorStateSleep",
+            "mangledName": "$s10KontaktSDK12MonitorStateO5sleepyA2CmF",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "paused",
+            "printedName": "paused",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(KontaktSDK.MonitorState.Type) -> KontaktSDK.MonitorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MonitorState",
+                    "printedName": "KontaktSDK.MonitorState",
+                    "usr": "c:@M@KontaktSDK@E@MonitorState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "KontaktSDK.MonitorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MonitorState",
+                        "printedName": "KontaktSDK.MonitorState",
+                        "usr": "c:@M@KontaktSDK@E@MonitorState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@KontaktSDK@E@MonitorState@MonitorStatePaused",
+            "mangledName": "$s10KontaktSDK12MonitorStateO6pausedyA2CmF",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "arming",
+            "printedName": "arming",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(KontaktSDK.MonitorState.Type) -> KontaktSDK.MonitorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MonitorState",
+                    "printedName": "KontaktSDK.MonitorState",
+                    "usr": "c:@M@KontaktSDK@E@MonitorState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "KontaktSDK.MonitorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MonitorState",
+                        "printedName": "KontaktSDK.MonitorState",
+                        "usr": "c:@M@KontaktSDK@E@MonitorState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@KontaktSDK@E@MonitorState@MonitorStateArming",
+            "mangledName": "$s10KontaktSDK12MonitorStateO6armingyA2CmF",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "armed",
+            "printedName": "armed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(KontaktSDK.MonitorState.Type) -> KontaktSDK.MonitorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MonitorState",
+                    "printedName": "KontaktSDK.MonitorState",
+                    "usr": "c:@M@KontaktSDK@E@MonitorState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "KontaktSDK.MonitorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MonitorState",
+                        "printedName": "KontaktSDK.MonitorState",
+                        "usr": "c:@M@KontaktSDK@E@MonitorState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@KontaktSDK@E@MonitorState@MonitorStateArmed",
+            "mangledName": "$s10KontaktSDK12MonitorStateO5armedyA2CmF",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "halted",
+            "printedName": "halted",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(KontaktSDK.MonitorState.Type) -> KontaktSDK.MonitorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MonitorState",
+                    "printedName": "KontaktSDK.MonitorState",
+                    "usr": "c:@M@KontaktSDK@E@MonitorState"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "KontaktSDK.MonitorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MonitorState",
+                        "printedName": "KontaktSDK.MonitorState",
+                        "usr": "c:@M@KontaktSDK@E@MonitorState"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@KontaktSDK@E@MonitorState@MonitorStateHalted",
+            "mangledName": "$s10KontaktSDK12MonitorStateO6haltedyA2CmF",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10KontaktSDK12MonitorStateO11descriptionSSvp",
+            "mangledName": "$s10KontaktSDK12MonitorStateO11descriptionSSvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10KontaktSDK12MonitorStateO11descriptionSSvg",
+                "mangledName": "$s10KontaktSDK12MonitorStateO11descriptionSSvg",
+                "moduleName": "KontaktSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "KontaktSDK.MonitorState?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MonitorState",
+                    "printedName": "KontaktSDK.MonitorState",
+                    "usr": "c:@M@KontaktSDK@E@MonitorState"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10KontaktSDK12MonitorStateO8rawValueACSgSi_tcfc",
+            "mangledName": "$s10KontaktSDK12MonitorStateO8rawValueACSgSi_tcfc",
+            "moduleName": "KontaktSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10KontaktSDK12MonitorStateO8rawValueSivp",
+            "mangledName": "$s10KontaktSDK12MonitorStateO8rawValueSivp",
+            "moduleName": "KontaktSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10KontaktSDK12MonitorStateO8rawValueSivg",
+                "mangledName": "$s10KontaktSDK12MonitorStateO8rawValueSivg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@KontaktSDK@E@MonitorState",
+        "mangledName": "$s10KontaktSDK12MonitorStateO",
+        "moduleName": "KontaktSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KontaktSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DeviceSensorReadDataOperation",
+        "printedName": "DeviceSensorReadDataOperation",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "AccDecodeError",
+            "printedName": "AccDecodeError",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "badFrameFormat",
+                "printedName": "badFrameFormat",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError.Type) -> KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccDecodeError",
+                        "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                        "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AccDecodeError",
+                            "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                            "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO14badFrameFormatyA2EmF",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO14badFrameFormatyA2EmF",
+                "moduleName": "KontaktSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "unexpectedValue",
+                "printedName": "unexpectedValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError.Type) -> KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccDecodeError",
+                        "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                        "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AccDecodeError",
+                            "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                            "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO15unexpectedValueyA2EmF",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO15unexpectedValueyA2EmF",
+                "moduleName": "KontaktSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "sizeMismatch",
+                "printedName": "sizeMismatch",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError.Type) -> KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AccDecodeError",
+                        "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                        "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AccDecodeError",
+                            "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                            "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO12sizeMismatchyA2EmF",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO12sizeMismatchyA2EmF",
+                "moduleName": "KontaktSDK"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccDecodeError",
+                    "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                    "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AccDecodeError",
+                    "printedName": "KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError",
+                    "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO2eeoiySbAE_AEtFZ",
+                "moduleName": "KontaktSDK",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO9hashValueSivp",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO9hashValueSivp",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO9hashValueSivg",
+                    "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO9hashValueSivg",
+                    "moduleName": "KontaktSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO4hash4intoys6HasherVz_tF",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC14AccDecodeErrorO",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Error",
+                "printedName": "Error",
+                "usr": "s:s5ErrorP",
+                "mangledName": "$ss5ErrorP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "handler",
+            "printedName": "handler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(([KontaktSDK.AccelerationSample], Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([KontaktSDK.AccelerationSample], Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "([KontaktSDK.AccelerationSample], Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[KontaktSDK.AccelerationSample]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AccelerationSample",
+                                "printedName": "KontaktSDK.AccelerationSample",
+                                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UnsafeMutablePointer",
+                            "printedName": "Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ObjCBool",
+                                "printedName": "ObjectiveC.ObjCBool",
+                                "usr": "s:10ObjectiveC8ObjCBoolV"
+                              }
+                            ],
+                            "usr": "s:Sp"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(py)handler",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC7handlerySayAA18AccelerationSampleCG_Spy10ObjectiveC8ObjCBoolVGtcSgvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(([KontaktSDK.AccelerationSample], Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([KontaktSDK.AccelerationSample], Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "([KontaktSDK.AccelerationSample], Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[KontaktSDK.AccelerationSample]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "AccelerationSample",
+                                    "printedName": "KontaktSDK.AccelerationSample",
+                                    "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UnsafeMutablePointer",
+                                "printedName": "Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ObjCBool",
+                                    "printedName": "ObjectiveC.ObjCBool",
+                                    "usr": "s:10ObjectiveC8ObjCBoolV"
+                                  }
+                                ],
+                                "usr": "s:Sp"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)handler",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC7handlerySayAA18AccelerationSampleCG_Spy10ObjectiveC8ObjCBoolVGtcSgvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(([KontaktSDK.AccelerationSample], Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([KontaktSDK.AccelerationSample], Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "([KontaktSDK.AccelerationSample], Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[KontaktSDK.AccelerationSample]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "AccelerationSample",
+                                    "printedName": "KontaktSDK.AccelerationSample",
+                                    "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UnsafeMutablePointer",
+                                "printedName": "Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ObjCBool",
+                                    "printedName": "ObjectiveC.ObjCBool",
+                                    "usr": "s:10ObjectiveC8ObjCBoolV"
+                                  }
+                                ],
+                                "usr": "s:Sp"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)setHandler:",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC7handlerySayAA18AccelerationSampleCG_Spy10ObjectiveC8ObjCBoolVGtcSgvs",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC7handlerySayAA18AccelerationSampleCG_Spy10ObjectiveC8ObjCBoolVGtcSgvM",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC7handlerySayAA18AccelerationSampleCG_Spy10ObjectiveC8ObjCBoolVGtcSgvM",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "device",
+            "printedName": "device",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "KontaktSDK.KTKNearbyDevice?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KTKNearbyDevice",
+                    "printedName": "KontaktSDK.KTKNearbyDevice",
+                    "usr": "c:objc(cs)KTKNearbyDevice"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(py)device",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC6deviceSo09KTKNearbyC0CSgvp",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "objc_name": "device",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "KontaktSDK.KTKNearbyDevice?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KTKNearbyDevice",
+                        "printedName": "KontaktSDK.KTKNearbyDevice",
+                        "usr": "c:objc(cs)KTKNearbyDevice"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)device",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC6deviceSo09KTKNearbyC0CSgvg",
+                "moduleName": "KontaktSDK",
+                "overriding": true,
+                "implicit": true,
+                "objc_name": "device",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "KontaktSDK.KTKNearbyDevice?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KTKNearbyDevice",
+                        "printedName": "KontaktSDK.KTKNearbyDevice",
+                        "usr": "c:objc(cs)KTKNearbyDevice"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)setDevice:",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC6deviceSo09KTKNearbyC0CSgvs",
+                "moduleName": "KontaktSDK",
+                "overriding": true,
+                "implicit": true,
+                "objc_name": "setDevice:",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10KontaktSDK29DeviceSensorReadDataOperationC6deviceSo09KTKNearbyC0CSgvM",
+                "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC6deviceSo09KTKNearbyC0CSgvM",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "createOperations",
+            "printedName": "createOperations()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)createOperations",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC16createOperationsyyF",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "objc_name": "createOperations",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "operationDidFinish",
+            "printedName": "operationDidFinish(_:errors:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KTKDeviceGATTOperation",
+                "printedName": "KontaktSDK.KTKDeviceGATTOperation",
+                "usr": "c:objc(cs)KTKDeviceGATTOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[any Swift.Error]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[any Swift.Error]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)operationDidFinish:errors:",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC18operationDidFinish_6errorsySo22KTKDeviceGATTOperationC_Says5Error_pGSgtF",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "objc_name": "operationDidFinish:errors:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finished",
+            "printedName": "finished(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[any Swift.Error]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[any Swift.Error]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)finished:",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC8finishedyySays5Error_pGSgF",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "objc_name": "finished:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(operations:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceSensorReadDataOperation",
+                "printedName": "KontaktSDK.DeviceSensorReadDataOperation",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.Operation]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.Operation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Operation",
+                        "printedName": "Foundation.Operation",
+                        "usr": "c:objc(cs)NSOperation"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)initWithOperations:",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC10operationsACSaySo11NSOperationCGSg_tcfc",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithOperations:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(operations:maxConcurrent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceSensorReadDataOperation",
+                "printedName": "KontaktSDK.DeviceSensorReadDataOperation",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.Operation]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.Operation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Operation",
+                        "printedName": "Foundation.Operation",
+                        "usr": "c:objc(cs)NSOperation"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)initWithOperations:maxConcurrent:",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC10operations13maxConcurrentACSaySo11NSOperationCGSg_Sutcfc",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithOperations:maxConcurrent:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(operations:maxConcurrent:serial:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceSensorReadDataOperation",
+                "printedName": "KontaktSDK.DeviceSensorReadDataOperation",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.Operation]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.Operation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Operation",
+                        "printedName": "Foundation.Operation",
+                        "usr": "c:objc(cs)NSOperation"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)initWithOperations:maxConcurrent:serial:",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC10operations13maxConcurrent6serialACSaySo11NSOperationCGSg_SuSbtcfc",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithOperations:maxConcurrent:serial:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceSensorReadDataOperation",
+                "printedName": "KontaktSDK.DeviceSensorReadDataOperation",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)init",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationCACycfc",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "makeProlongOperation",
+            "printedName": "makeProlongOperation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KTKDeviceGATTOperation",
+                "printedName": "KontaktSDK.KTKDeviceGATTOperation",
+                "usr": "c:objc(cs)KTKDeviceGATTOperation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation(im)makeProlongOperation",
+            "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC011makeProlongG0So22KTKDeviceGATTOperationCyF",
+            "moduleName": "KontaktSDK",
+            "objc_name": "makeProlongOperation",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceSensorReadDataOperation",
+        "mangledName": "$s10KontaktSDK29DeviceSensorReadDataOperationC",
+        "moduleName": "KontaktSDK",
+        "objc_name": "KTKDeviceSensorReadDataOperation",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)KTKDeviceConnectionOperation",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "KontaktSDK.KTKDeviceConnectionOperation",
+          "KontaktSDK.KTKGroupOperation",
+          "KontaktSDK.KTKOperation",
+          "Foundation.Operation",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "DeviceProlongableOperation",
+            "printedName": "DeviceProlongableOperation",
+            "usr": "c:@M@KontaktSDK@objc(pl)KTKDeviceProlongableOperation",
+            "mangledName": "$s10KontaktSDK26DeviceProlongableOperationP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KontaktSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AccelerationSample",
+        "printedName": "AccelerationSample",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "xg",
+            "printedName": "xg",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(py)xg",
+            "mangledName": "$s10KontaktSDK18AccelerationSampleC2xgSdvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(im)xg",
+                "mangledName": "$s10KontaktSDK18AccelerationSampleC2xgSdvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "yg",
+            "printedName": "yg",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(py)yg",
+            "mangledName": "$s10KontaktSDK18AccelerationSampleC2ygSdvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(im)yg",
+                "mangledName": "$s10KontaktSDK18AccelerationSampleC2ygSdvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "zg",
+            "printedName": "zg",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(py)zg",
+            "mangledName": "$s10KontaktSDK18AccelerationSampleC2zgSdvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(im)zg",
+                "mangledName": "$s10KontaktSDK18AccelerationSampleC2zgSdvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(py)timestamp",
+            "mangledName": "$s10KontaktSDK18AccelerationSampleC9timestampSdvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(im)timestamp",
+                "mangledName": "$s10KontaktSDK18AccelerationSampleC9timestampSdvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(xg:yg:zg:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccelerationSample",
+                "printedName": "KontaktSDK.AccelerationSample",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(im)initWithXg:yg:zg:timestamp:",
+            "mangledName": "$s10KontaktSDK18AccelerationSampleC2xg2yg2zg9timestampACSd_S3dtcfc",
+            "moduleName": "KontaktSDK",
+            "objc_name": "initWithXg:yg:zg:timestamp:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "debugDescription",
+            "printedName": "debugDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(py)debugDescription",
+            "mangledName": "$s10KontaktSDK18AccelerationSampleC16debugDescriptionSSvp",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "objc_name": "debugDescription",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(im)debugDescription",
+                "mangledName": "$s10KontaktSDK18AccelerationSampleC16debugDescriptionSSvg",
+                "moduleName": "KontaktSDK",
+                "overriding": true,
+                "objc_name": "debugDescription",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccelerationSample",
+                "printedName": "KontaktSDK.AccelerationSample",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(im)init",
+            "mangledName": "$s10KontaktSDK18AccelerationSampleCACycfc",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample",
+        "mangledName": "$s10KontaktSDK18AccelerationSampleC",
+        "moduleName": "KontaktSDK",
+        "objc_name": "KTKAccelerationSample",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "KTKCloudClient",
         "printedName": "KTKCloudClient",
         "children": [
@@ -9471,140 +13441,147 @@
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2213,
+      "offset": 2243,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2245,
+      "offset": 2275,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2285,
+      "offset": 2315,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2325,
+      "offset": 2355,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2365,
+      "offset": 2395,
       "length": 1,
       "value": "3"
-    },
-    {
-      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2396,
-      "length": 1,
-      "value": "4"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
       "offset": 2426,
       "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2456,
+      "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2458,
+      "offset": 2488,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2495,
+      "offset": 2525,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2532,
+      "offset": 2562,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2561,
+      "offset": 2591,
       "length": 2,
       "value": "11"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2592,
+      "offset": 2622,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2677,
+      "offset": 2657,
+      "length": 2,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2742,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2703,
+      "offset": 2768,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2722,
+      "offset": 2787,
       "length": 3,
       "value": "1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2743,
+      "offset": 2808,
       "length": 2,
       "value": "2"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "IntegerLiteral",
-      "offset": 2763,
+      "offset": 2828,
       "length": 4,
       "value": "3"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3704,
+      "offset": 3949,
       "length": 51,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3744,
+      "offset": 3989,
       "length": 1,
       "value": "\": \""
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCStorageReadResponse.swift",
       "kind": "StringLiteral",
-      "offset": 3754,
+      "offset": 3999,
       "length": 1,
       "value": "\"\""
     },
@@ -9628,6 +13605,48 @@
       "offset": 243,
       "length": 5,
       "value": "\"lvl\""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "IntegerLiteral",
+      "offset": 197,
+      "length": 4,
+      "value": "0b00"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "IntegerLiteral",
+      "offset": 229,
+      "length": 4,
+      "value": "0b01"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "IntegerLiteral",
+      "offset": 261,
+      "length": 4,
+      "value": "0b10"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "IntegerLiteral",
+      "offset": 294,
+      "length": 4,
+      "value": "0b11"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/DeviceAccidentReadDataOperation.swift",
+      "kind": "Array",
+      "offset": 266,
+      "length": 12,
+      "value": "[0xe3, 0xf2]"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/DeviceAccidentReadDataOperation.swift",
+      "kind": "Array",
+      "offset": 327,
+      "length": 12,
+      "value": "[0x95, 0xaf]"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Model\/DeviceCCGenericResponse.swift",
@@ -9660,107 +13679,219 @@
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2045,
+      "offset": 2788,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2068,
+      "offset": 2811,
       "length": 3,
       "value": "0x0"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2090,
+      "offset": 2833,
       "length": 3,
       "value": "0x1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2111,
+      "offset": 2854,
       "length": 3,
       "value": "0x2"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2135,
+      "offset": 2878,
       "length": 3,
       "value": "0x3"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2484,
+      "offset": 3227,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2507,
+      "offset": 3250,
       "length": 3,
       "value": "0x0"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2529,
+      "offset": 3272,
       "length": 3,
       "value": "0x1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2550,
+      "offset": 3293,
       "length": 3,
       "value": "0x2"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2574,
+      "offset": 3317,
       "length": 3,
       "value": "0x3"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2916,
+      "offset": 3659,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2938,
+      "offset": 3681,
       "length": 3,
       "value": "0x0"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 2977,
+      "offset": 3720,
       "length": 3,
       "value": "0x1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3010,
+      "offset": 3753,
       "length": 3,
       "value": "0x2"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3031,
+      "offset": 3774,
       "length": 3,
       "value": "0x3"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4176,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4196,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4252,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4272,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4291,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4311,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/DeviceSensorReadDataOperation.swift",
+      "kind": "Array",
+      "offset": 262,
+      "length": 12,
+      "value": "[0x96, 0x01]"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/DeviceSensorReadDataOperation.swift",
+      "kind": "Array",
+      "offset": 315,
+      "length": 12,
+      "value": "[0x96, 0x02]"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/DeviceSensorReadDataOperation.swift",
+      "kind": "Array",
+      "offset": 380,
+      "length": 12,
+      "value": "[0x98, 0x01]"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/DeviceSensorReadDataOperation.swift",
+      "kind": "Array",
+      "offset": 441,
+      "length": 12,
+      "value": "[0x95, 0xaf]"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
+      "kind": "IntegerLiteral",
+      "offset": 639,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
+      "kind": "StringLiteral",
+      "offset": 809,
+      "length": 78,
+      "value": "\"AccelerationSample(xg: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
+      "kind": "StringLiteral",
+      "offset": 838,
+      "length": 1,
+      "value": "\", yg: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
+      "kind": "StringLiteral",
+      "offset": 849,
+      "length": 1,
+      "value": "\", zg: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
+      "kind": "StringLiteral",
+      "offset": 860,
+      "length": 1,
+      "value": "\", timestamp: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
+      "kind": "StringLiteral",
+      "offset": 885,
+      "length": 1,
+      "value": "\")\""
     }
   ]
 }

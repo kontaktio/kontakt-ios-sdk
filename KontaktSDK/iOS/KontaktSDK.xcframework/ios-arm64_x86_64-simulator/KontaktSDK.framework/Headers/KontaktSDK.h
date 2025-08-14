@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 6.0.0
+//  Version: 6.1.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -35,3 +35,9 @@ FOUNDATION_EXPORT const unsigned char KontaktSDKVersionString[];
 #import "KTKDeviceCCOperationDelegate.h"
 #import "KTKEddystoneURLValueTransformer.h"
 
+// Swift bridging
+#import "KTKDeviceConnectionOperation.h"
+#import "KTKDeviceNotifyOperation.h"
+#import "KTKDeviceWriteOperation.h"
+#import "KTKDeviceListenOperation.h"
+#import "NSError+Kontakt.h"

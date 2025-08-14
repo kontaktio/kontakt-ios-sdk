@@ -145,6 +145,7 @@ extension KontaktSDK.DeviceCCStorageReadResponse {
       case sensorErrAlarms = 10
       case errors = 11
       case checksum = 12
+      case monitorState = 13
       public init?(rawValue: Swift.Int)
       public typealias RawValue = Swift.Int
       public var rawValue: Swift.Int {
@@ -165,8 +166,9 @@ extension KontaktSDK.DeviceCCStorageReadResponse {
     }
     @objc final public let elementId: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId
     @objc final public let encodingId: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId
-    @objc public init(elementId: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId, encodingId: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId)
-    @objc convenience public init(elementIdRaw: Swift.Int, encodingIdRaw: Swift.Int)
+    @objc final public let rawDataFormat: Foundation.Data
+    @objc public init(elementId: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId, encodingId: KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId, rawDataFormat: Foundation.Data)
+    @objc convenience public init(elementIdRaw: Swift.Int, encodingIdRaw: Swift.Int, rawDataFormat: Foundation.Data)
     @objc deinit
   }
   @_hasMissingDesignatedInitializers @objc final public class ElementData : ObjectiveC.NSObject {
@@ -188,6 +190,9 @@ extension KontaktSDK.DeviceCCStorageReadResponse {
   @objc override dynamic public init()
   @objc deinit
 }
+@objc(KTKDeviceProlongableOperation) public protocol DeviceProlongableOperation {
+  @objc func makeProlongOperation() -> KontaktSDK.KTKDeviceGATTOperation
+}
 public struct FirmwareVersion : Swift.Comparable {
   public let major: Swift.UInt
   public let minor: Swift.UInt
@@ -206,6 +211,55 @@ public struct FirmwareVersion : Swift.Comparable {
   @objc deinit
   final public func encode(to encoder: any Swift.Encoder) throws
 }
+@objc(KTKAccidentFrame) final public class AccidentFrame : ObjectiveC.NSObject {
+  @objc public enum SensitivityLevel : Swift.UInt8 {
+    case mg16PerUnit = 0b00
+    case mg32PerUnit = 0b01
+    case mg64PerUnit = 0b10
+    case mg128PerUnit = 0b11
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  @objc final public let batteryLevel: Swift.Int
+  @objc final public let sensitivityLevel: KontaktSDK.AccidentFrame.SensitivityLevel
+  @objc final public let alertMode: Swift.Bool
+  @objc final public let accidentDetected: Swift.Bool
+  @objc final public let accidentCounter: Swift.Int
+  @objc final public let accelerationData: KontaktSDK.AccelerationSample
+  @objc final public let maxMovingAverage: Swift.Double
+  @objc public init(batteryLevel: Swift.Int, sensitivityLevel: KontaktSDK.AccidentFrame.SensitivityLevel, alertMode: Swift.Bool, accidentDetected: Swift.Bool, accidentCounter: Swift.Int, accelerationData: KontaktSDK.AccelerationSample, maxMovingAverage: Swift.Double)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(KTKDeviceAccidentReadDataOperation) final public class DeviceAccidentReadDataOperation : KontaktSDK.KTKDeviceConnectionOperation, @unchecked Swift.Sendable {
+  public enum FrameDecodeError : Swift.Error {
+    case unexpectedValue
+    case sizeMismatch
+    public static func == (a: KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError, b: KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @objc final public var handler: ((KontaktSDK.AccidentFrame, _ stop: Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> Swift.Void)?
+  @objc override final public var device: KontaktSDK.KTKNearbyDevice? {
+    @objc get
+    @objc set
+  }
+  @objc override final public func createOperations()
+  @objc override final public func operationDidFinish(_ operation: KontaktSDK.KTKDeviceGATTOperation, errors: [any Swift.Error]?)
+  @objc override final public func finished(_ errors: [any Swift.Error]?)
+  @objc override dynamic public init(operations: [Foundation.Operation]?)
+  @objc override dynamic public init(operations: [Foundation.Operation]?, maxConcurrent: Swift.UInt)
+  @objc override dynamic public init(operations: [Foundation.Operation]?, maxConcurrent: Swift.UInt, serial: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension KontaktSDK.DeviceAccidentReadDataOperation : KontaktSDK.DeviceProlongableOperation {
+  @objc final public func makeProlongOperation() -> KontaktSDK.KTKDeviceGATTOperation
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class ISO8601MicrosecondsDateFormatter : Foundation.DateFormatter {
   @objc override dynamic public init()
   @objc override final public func string(from date: Foundation.Date) -> Swift.String
@@ -219,14 +273,10 @@ public struct FirmwareVersion : Swift.Comparable {
   @objc deinit
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc public enum DeviceCCStorageDataParserError : Swift.Int, Swift.Error {
-  case unexpectedDataFormat
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public static var _nsErrorDomain: Swift.String {
-    get
-  }
-  public var rawValue: Swift.Int {
+public enum DeviceCCStorageDataParserError : Foundation.LocalizedError {
+  case mutableRawDataIsEmpty
+  case unexpectedDataFormat(Swift.Int, Swift.Int, Foundation.Data)
+  public var errorDescription: Swift.String? {
     get
   }
 }
@@ -280,6 +330,61 @@ public struct FirmwareVersion : Swift.Comparable {
     get
   }
 }
+@objc public enum MonitorState : Swift.Int, Swift.CustomStringConvertible {
+  case invalid = -1
+  case sleep = 0
+  case paused = 1
+  case arming = 2
+  case armed = 3
+  case halted = 4
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(KTKDeviceSensorReadDataOperation) final public class DeviceSensorReadDataOperation : KontaktSDK.KTKDeviceConnectionOperation, @unchecked Swift.Sendable {
+  public enum AccDecodeError : Swift.Error {
+    case badFrameFormat
+    case unexpectedValue
+    case sizeMismatch
+    public static func == (a: KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError, b: KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @objc final public var handler: (([KontaktSDK.AccelerationSample], _ stop: Swift.UnsafeMutablePointer<ObjectiveC.ObjCBool>) -> Swift.Void)?
+  @objc override final public var device: KontaktSDK.KTKNearbyDevice? {
+    @objc get
+    @objc set
+  }
+  @objc override final public func createOperations()
+  @objc override final public func operationDidFinish(_ operation: KontaktSDK.KTKDeviceGATTOperation, errors: [any Swift.Error]?)
+  @objc override final public func finished(_ errors: [any Swift.Error]?)
+  @objc override dynamic public init(operations: [Foundation.Operation]?)
+  @objc override dynamic public init(operations: [Foundation.Operation]?, maxConcurrent: Swift.UInt)
+  @objc override dynamic public init(operations: [Foundation.Operation]?, maxConcurrent: Swift.UInt, serial: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension KontaktSDK.DeviceSensorReadDataOperation : KontaktSDK.DeviceProlongableOperation {
+  @objc final public func makeProlongOperation() -> KontaktSDK.KTKDeviceGATTOperation
+}
+@objc(KTKAccelerationSample) final public class AccelerationSample : ObjectiveC.NSObject {
+  @objc final public let xg: Swift.Double
+  @objc final public let yg: Swift.Double
+  @objc final public let zg: Swift.Double
+  @objc final public let timestamp: Foundation.TimeInterval
+  @objc public init(xg: Swift.Double, yg: Swift.Double, zg: Swift.Double, timestamp: Foundation.TimeInterval = -1)
+  @objc override final public var debugDescription: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
 extension Foundation.NSString.VersionOperator : Swift.Equatable {}
 extension Foundation.NSString.VersionOperator : Swift.Hashable {}
 extension Foundation.NSString.VersionOperator : Swift.RawRepresentable {}
@@ -295,9 +400,11 @@ extension KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.ElementId : Swift
 extension KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId : Swift.Equatable {}
 extension KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId : Swift.Hashable {}
 extension KontaktSDK.DeviceCCStorageReadResponse.ElementFormat.EncodingId : Swift.RawRepresentable {}
-extension KontaktSDK.DeviceCCStorageDataParserError : Swift.Equatable {}
-extension KontaktSDK.DeviceCCStorageDataParserError : Swift.Hashable {}
-extension KontaktSDK.DeviceCCStorageDataParserError : Swift.RawRepresentable {}
+extension KontaktSDK.AccidentFrame.SensitivityLevel : Swift.Equatable {}
+extension KontaktSDK.AccidentFrame.SensitivityLevel : Swift.Hashable {}
+extension KontaktSDK.AccidentFrame.SensitivityLevel : Swift.RawRepresentable {}
+extension KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError : Swift.Equatable {}
+extension KontaktSDK.DeviceAccidentReadDataOperation.FrameDecodeError : Swift.Hashable {}
 extension KontaktSDK.SensorOobAlarm : Swift.Equatable {}
 extension KontaktSDK.SensorOobAlarm : Swift.Hashable {}
 extension KontaktSDK.SensorOobAlarm : Swift.RawRepresentable {}
@@ -307,3 +414,8 @@ extension KontaktSDK.SensorErrAlarm : Swift.RawRepresentable {}
 extension KontaktSDK.SensorError : Swift.Equatable {}
 extension KontaktSDK.SensorError : Swift.Hashable {}
 extension KontaktSDK.SensorError : Swift.RawRepresentable {}
+extension KontaktSDK.MonitorState : Swift.Equatable {}
+extension KontaktSDK.MonitorState : Swift.Hashable {}
+extension KontaktSDK.MonitorState : Swift.RawRepresentable {}
+extension KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError : Swift.Equatable {}
+extension KontaktSDK.DeviceSensorReadDataOperation.AccDecodeError : Swift.Hashable {}
