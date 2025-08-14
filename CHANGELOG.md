@@ -1,5 +1,9 @@
 ## Changelog
 
+### v6.1.0 - 14 Aug 2025
+- Added `MonitorState` to storage data parser
+- Added support for tracking live accelerometer and accident data
+
 ### v6.0.0 - 12 Aug 2025
 - Added automatic telemetry upload
 - Improved gateway logs formatting
