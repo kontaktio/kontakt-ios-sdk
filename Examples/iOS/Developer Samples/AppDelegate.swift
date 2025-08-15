@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Start scanning beacons if true
             BeaconScanningManager.sharedInstance.resumeScanning()
         }
-        
+
         return true
     }
     
