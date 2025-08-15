@@ -307,6 +307,81 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+@class NSString;
+/// Single accelerometer sample
+SWIFT_CLASS_NAMED("AccelerationSample")
+@interface KTKAccelerationSample : NSObject
+/// Acceleration value on the X-axis (in G)
+@property (nonatomic, readonly) double xg;
+/// Acceleration value on the Y-axis (in G)
+@property (nonatomic, readonly) double yg;
+/// Acceleration value on the Z-axis (in G)
+@property (nonatomic, readonly) double zg;
+/// Calculated timestamp of the sample
+/// note:
+/// This value is not available in Accident Frame
+@property (nonatomic, readonly) NSTimeInterval timestamp;
+- (nonnull instancetype)initWithXg:(double)xg yg:(double)yg zg:(double)zg timestamp:(NSTimeInterval)timestamp OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+enum SensitivityLevel : uint8_t;
+SWIFT_CLASS_NAMED("AccidentFrame")
+@interface KTKAccidentFrame : NSObject
+/// Battery level percentage
+@property (nonatomic, readonly) NSInteger batteryLevel;
+/// Sensitivility level in mg/unit
+@property (nonatomic, readonly) enum SensitivityLevel sensitivityLevel;
+/// <code>true</code> if any event crossed the 0.5g threshold
+@property (nonatomic, readonly) BOOL alertMode;
+/// Accident detected in the last 5 minutes
+@property (nonatomic, readonly) BOOL accidentDetected;
+/// Counter with the number of events detected
+@property (nonatomic, readonly) NSInteger accidentCounter;
+/// Acceleration data
+@property (nonatomic, readonly, strong) KTKAccelerationSample * _Nonnull accelerationData;
+/// Maximum of the moving average of the acceleration during the last event
+@property (nonatomic, readonly) double maxMovingAverage;
+- (nonnull instancetype)initWithBatteryLevel:(NSInteger)batteryLevel sensitivityLevel:(enum SensitivityLevel)sensitivityLevel alertMode:(BOOL)alertMode accidentDetected:(BOOL)accidentDetected accidentCounter:(NSInteger)accidentCounter accelerationData:(KTKAccelerationSample * _Nonnull)accelerationData maxMovingAverage:(double)maxMovingAverage OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(uint8_t, SensitivityLevel, open) {
+  SensitivityLevelMg16PerUnit = 0b00,
+  SensitivityLevelMg32PerUnit = 0b01,
+  SensitivityLevelMg64PerUnit = 0b10,
+  SensitivityLevelMg128PerUnit = 0b11,
+};
+
+@class KTKNearbyDevice;
+@class KTKDeviceGATTOperation;
+@class NSOperation;
+SWIFT_CLASS_NAMED("DeviceAccidentReadDataOperation")
+@interface KTKDeviceAccidentReadDataOperation : KTKDeviceConnectionOperation
+@property (nonatomic, copy) void (^ _Nullable handler)(KTKAccidentFrame * _Nonnull, BOOL * _Nonnull);
+@property (nonatomic, strong) KTKNearbyDevice * _Nullable device;
+- (void)createOperations;
+- (void)operationDidFinish:(KTKDeviceGATTOperation * _Nonnull)operation errors:(NSArray<NSError *> * _Nullable)errors;
+- (void)finished:(NSArray<NSError *> * _Nullable)errors;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations maxConcurrent:(NSUInteger)maxConcurrent OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations maxConcurrent:(NSUInteger)maxConcurrent serial:(BOOL)serial OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_PROTOCOL_NAMED("DeviceProlongableOperation")
+@protocol KTKDeviceProlongableOperation
+/// An operation to be scheduled on the connection queue to prolong connection with the device.
+- (KTKDeviceGATTOperation * _Nonnull)makeProlongOperation SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@interface KTKDeviceAccidentReadDataOperation (SWIFT_EXTENSION(KontaktSDK)) <KTKDeviceProlongableOperation>
+- (KTKDeviceGATTOperation * _Nonnull)makeProlongOperation SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class DeviceCCRequest;
 @class NSData;
 @class DeviceCCStorageReadRequest;
@@ -325,7 +400,6 @@ SWIFT_CLASS("_TtC10KontaktSDK17DeviceCCDataCoder")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSString;
 SWIFT_CLASS("_TtC10KontaktSDK23DeviceCCGenericResponse")
 @interface DeviceCCGenericResponse : NSObject
 @property (nonatomic, readonly) uint16_t requestId;
@@ -405,11 +479,6 @@ SWIFT_CLASS("_TtC10KontaktSDK25DeviceCCStorageDataParser")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-typedef SWIFT_ENUM(NSInteger, DeviceCCStorageDataParserError, open) {
-  DeviceCCStorageDataParserErrorUnexpectedDataFormat = 0,
-};
-static NSString * _Nonnull const DeviceCCStorageDataParserErrorDomain = @"KontaktSDK.DeviceCCStorageDataParserError";
-
 SWIFT_CLASS("_TtC10KontaktSDK26DeviceCCStorageReadRequest")
 @interface DeviceCCStorageReadRequest : NSObject
 - (nonnull instancetype)initWithMessageId:(uint16_t)messageId requestId:(uint16_t)requestId readFrom:(uint64_t)readFrom readTo:(uint64_t)readTo token:(NSInteger)token maxSize:(NSInteger)maxSize OBJC_DESIGNATED_INITIALIZER;
@@ -444,8 +513,9 @@ SWIFT_CLASS("_TtCC10KontaktSDK27DeviceCCStorageReadResponse13ElementFormat")
 @interface ElementFormat : NSObject
 @property (nonatomic, readonly) enum ElementId elementId;
 @property (nonatomic, readonly) enum EncodingId encodingId;
-- (nonnull instancetype)initWithElementId:(enum ElementId)elementId encodingId:(enum EncodingId)encodingId OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithElementIdRaw:(NSInteger)elementIdRaw encodingIdRaw:(NSInteger)encodingIdRaw;
+@property (nonatomic, readonly, copy) NSData * _Nonnull rawDataFormat;
+- (nonnull instancetype)initWithElementId:(enum ElementId)elementId encodingId:(enum EncodingId)encodingId rawDataFormat:(NSData * _Nonnull)rawDataFormat OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithElementIdRaw:(NSInteger)elementIdRaw encodingIdRaw:(NSInteger)encodingIdRaw rawDataFormat:(NSData * _Nonnull)rawDataFormat;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -463,6 +533,7 @@ typedef SWIFT_ENUM(NSInteger, ElementId, open) {
   ElementIdSensorErrAlarms = 10,
   ElementIdErrors = 11,
   ElementIdChecksum = 12,
+  ElementIdMonitorState = 13,
 };
 
 typedef SWIFT_ENUM(NSInteger, EncodingId, open) {
@@ -480,6 +551,23 @@ SWIFT_CLASS("_TtCC10KontaktSDK27DeviceCCStorageReadResponse11ElementData")
 @property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS_NAMED("DeviceSensorReadDataOperation")
+@interface KTKDeviceSensorReadDataOperation : KTKDeviceConnectionOperation
+@property (nonatomic, copy) void (^ _Nullable handler)(NSArray<KTKAccelerationSample *> * _Nonnull, BOOL * _Nonnull);
+@property (nonatomic, strong) KTKNearbyDevice * _Nullable device;
+- (void)createOperations;
+- (void)operationDidFinish:(KTKDeviceGATTOperation * _Nonnull)operation errors:(NSArray<NSError *> * _Nullable)errors;
+- (void)finished:(NSArray<NSError *> * _Nullable)errors;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations maxConcurrent:(NSUInteger)maxConcurrent OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations maxConcurrent:(NSUInteger)maxConcurrent serial:(BOOL)serial OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface KTKDeviceSensorReadDataOperation (SWIFT_EXTENSION(KontaktSDK)) <KTKDeviceProlongableOperation>
+- (KTKDeviceGATTOperation * _Nonnull)makeProlongOperation SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class NSCoder;
@@ -516,6 +604,15 @@ SWIFT_CLASS("_TtC10KontaktSDK23KTKTelemetryEventPacket")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+typedef SWIFT_ENUM(NSInteger, MonitorState, open) {
+  MonitorStateInvalid = -1,
+  MonitorStateSleep = 0,
+  MonitorStatePaused = 1,
+  MonitorStateArming = 2,
+  MonitorStateArmed = 3,
+  MonitorStateHalted = 4,
+};
 
 enum VersionOperator : NSInteger;
 @interface NSString (SWIFT_EXTENSION(KontaktSDK))
@@ -872,6 +969,81 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+@class NSString;
+/// Single accelerometer sample
+SWIFT_CLASS_NAMED("AccelerationSample")
+@interface KTKAccelerationSample : NSObject
+/// Acceleration value on the X-axis (in G)
+@property (nonatomic, readonly) double xg;
+/// Acceleration value on the Y-axis (in G)
+@property (nonatomic, readonly) double yg;
+/// Acceleration value on the Z-axis (in G)
+@property (nonatomic, readonly) double zg;
+/// Calculated timestamp of the sample
+/// note:
+/// This value is not available in Accident Frame
+@property (nonatomic, readonly) NSTimeInterval timestamp;
+- (nonnull instancetype)initWithXg:(double)xg yg:(double)yg zg:(double)zg timestamp:(NSTimeInterval)timestamp OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+enum SensitivityLevel : uint8_t;
+SWIFT_CLASS_NAMED("AccidentFrame")
+@interface KTKAccidentFrame : NSObject
+/// Battery level percentage
+@property (nonatomic, readonly) NSInteger batteryLevel;
+/// Sensitivility level in mg/unit
+@property (nonatomic, readonly) enum SensitivityLevel sensitivityLevel;
+/// <code>true</code> if any event crossed the 0.5g threshold
+@property (nonatomic, readonly) BOOL alertMode;
+/// Accident detected in the last 5 minutes
+@property (nonatomic, readonly) BOOL accidentDetected;
+/// Counter with the number of events detected
+@property (nonatomic, readonly) NSInteger accidentCounter;
+/// Acceleration data
+@property (nonatomic, readonly, strong) KTKAccelerationSample * _Nonnull accelerationData;
+/// Maximum of the moving average of the acceleration during the last event
+@property (nonatomic, readonly) double maxMovingAverage;
+- (nonnull instancetype)initWithBatteryLevel:(NSInteger)batteryLevel sensitivityLevel:(enum SensitivityLevel)sensitivityLevel alertMode:(BOOL)alertMode accidentDetected:(BOOL)accidentDetected accidentCounter:(NSInteger)accidentCounter accelerationData:(KTKAccelerationSample * _Nonnull)accelerationData maxMovingAverage:(double)maxMovingAverage OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(uint8_t, SensitivityLevel, open) {
+  SensitivityLevelMg16PerUnit = 0b00,
+  SensitivityLevelMg32PerUnit = 0b01,
+  SensitivityLevelMg64PerUnit = 0b10,
+  SensitivityLevelMg128PerUnit = 0b11,
+};
+
+@class KTKNearbyDevice;
+@class KTKDeviceGATTOperation;
+@class NSOperation;
+SWIFT_CLASS_NAMED("DeviceAccidentReadDataOperation")
+@interface KTKDeviceAccidentReadDataOperation : KTKDeviceConnectionOperation
+@property (nonatomic, copy) void (^ _Nullable handler)(KTKAccidentFrame * _Nonnull, BOOL * _Nonnull);
+@property (nonatomic, strong) KTKNearbyDevice * _Nullable device;
+- (void)createOperations;
+- (void)operationDidFinish:(KTKDeviceGATTOperation * _Nonnull)operation errors:(NSArray<NSError *> * _Nullable)errors;
+- (void)finished:(NSArray<NSError *> * _Nullable)errors;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations maxConcurrent:(NSUInteger)maxConcurrent OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations maxConcurrent:(NSUInteger)maxConcurrent serial:(BOOL)serial OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_PROTOCOL_NAMED("DeviceProlongableOperation")
+@protocol KTKDeviceProlongableOperation
+/// An operation to be scheduled on the connection queue to prolong connection with the device.
+- (KTKDeviceGATTOperation * _Nonnull)makeProlongOperation SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@interface KTKDeviceAccidentReadDataOperation (SWIFT_EXTENSION(KontaktSDK)) <KTKDeviceProlongableOperation>
+- (KTKDeviceGATTOperation * _Nonnull)makeProlongOperation SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class DeviceCCRequest;
 @class NSData;
 @class DeviceCCStorageReadRequest;
@@ -890,7 +1062,6 @@ SWIFT_CLASS("_TtC10KontaktSDK17DeviceCCDataCoder")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSString;
 SWIFT_CLASS("_TtC10KontaktSDK23DeviceCCGenericResponse")
 @interface DeviceCCGenericResponse : NSObject
 @property (nonatomic, readonly) uint16_t requestId;
@@ -970,11 +1141,6 @@ SWIFT_CLASS("_TtC10KontaktSDK25DeviceCCStorageDataParser")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-typedef SWIFT_ENUM(NSInteger, DeviceCCStorageDataParserError, open) {
-  DeviceCCStorageDataParserErrorUnexpectedDataFormat = 0,
-};
-static NSString * _Nonnull const DeviceCCStorageDataParserErrorDomain = @"KontaktSDK.DeviceCCStorageDataParserError";
-
 SWIFT_CLASS("_TtC10KontaktSDK26DeviceCCStorageReadRequest")
 @interface DeviceCCStorageReadRequest : NSObject
 - (nonnull instancetype)initWithMessageId:(uint16_t)messageId requestId:(uint16_t)requestId readFrom:(uint64_t)readFrom readTo:(uint64_t)readTo token:(NSInteger)token maxSize:(NSInteger)maxSize OBJC_DESIGNATED_INITIALIZER;
@@ -1009,8 +1175,9 @@ SWIFT_CLASS("_TtCC10KontaktSDK27DeviceCCStorageReadResponse13ElementFormat")
 @interface ElementFormat : NSObject
 @property (nonatomic, readonly) enum ElementId elementId;
 @property (nonatomic, readonly) enum EncodingId encodingId;
-- (nonnull instancetype)initWithElementId:(enum ElementId)elementId encodingId:(enum EncodingId)encodingId OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithElementIdRaw:(NSInteger)elementIdRaw encodingIdRaw:(NSInteger)encodingIdRaw;
+@property (nonatomic, readonly, copy) NSData * _Nonnull rawDataFormat;
+- (nonnull instancetype)initWithElementId:(enum ElementId)elementId encodingId:(enum EncodingId)encodingId rawDataFormat:(NSData * _Nonnull)rawDataFormat OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithElementIdRaw:(NSInteger)elementIdRaw encodingIdRaw:(NSInteger)encodingIdRaw rawDataFormat:(NSData * _Nonnull)rawDataFormat;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1028,6 +1195,7 @@ typedef SWIFT_ENUM(NSInteger, ElementId, open) {
   ElementIdSensorErrAlarms = 10,
   ElementIdErrors = 11,
   ElementIdChecksum = 12,
+  ElementIdMonitorState = 13,
 };
 
 typedef SWIFT_ENUM(NSInteger, EncodingId, open) {
@@ -1045,6 +1213,23 @@ SWIFT_CLASS("_TtCC10KontaktSDK27DeviceCCStorageReadResponse11ElementData")
 @property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS_NAMED("DeviceSensorReadDataOperation")
+@interface KTKDeviceSensorReadDataOperation : KTKDeviceConnectionOperation
+@property (nonatomic, copy) void (^ _Nullable handler)(NSArray<KTKAccelerationSample *> * _Nonnull, BOOL * _Nonnull);
+@property (nonatomic, strong) KTKNearbyDevice * _Nullable device;
+- (void)createOperations;
+- (void)operationDidFinish:(KTKDeviceGATTOperation * _Nonnull)operation errors:(NSArray<NSError *> * _Nullable)errors;
+- (void)finished:(NSArray<NSError *> * _Nullable)errors;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations maxConcurrent:(NSUInteger)maxConcurrent OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations maxConcurrent:(NSUInteger)maxConcurrent serial:(BOOL)serial OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface KTKDeviceSensorReadDataOperation (SWIFT_EXTENSION(KontaktSDK)) <KTKDeviceProlongableOperation>
+- (KTKDeviceGATTOperation * _Nonnull)makeProlongOperation SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class NSCoder;
@@ -1081,6 +1266,15 @@ SWIFT_CLASS("_TtC10KontaktSDK23KTKTelemetryEventPacket")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+typedef SWIFT_ENUM(NSInteger, MonitorState, open) {
+  MonitorStateInvalid = -1,
+  MonitorStateSleep = 0,
+  MonitorStatePaused = 1,
+  MonitorStateArming = 2,
+  MonitorStateArmed = 3,
+  MonitorStateHalted = 4,
+};
 
 enum VersionOperator : NSInteger;
 @interface NSString (SWIFT_EXTENSION(KontaktSDK))

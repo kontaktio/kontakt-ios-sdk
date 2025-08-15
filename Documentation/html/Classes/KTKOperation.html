@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>KTKOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">KontaktSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Kontakt.io</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/didExecute">didExecute</option>
+		
+		<option value="//api/name/state">state</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/cancelWithErrors:">- cancelWithErrors:</option>
+		
+		<option value="//api/name/execute">- execute</option>
+		
+		<option value="//api/name/finish">- finish</option>
+		
+		<option value="//api/name/finishWithError:">- finishWithError:</option>
+		
+		<option value="//api/name/finished:">- finished:</option>
+		
+		<option value="//api/name/willEnqueue">- willEnqueue</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">KTKOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSOperation</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>KTKOperation.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Operation Properties" name="task_Operation Properties"></a>
+						<h2 class="task-title">Operation Properties</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/state" title="state"></a>
+	<h3 class="method-title"><code><a href="#//api/name/state">&nbsp;&nbsp;state</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The operation state.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readwrite) KTKOperationState state</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The operation state.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/didExecute" title="didExecute"></a>
+	<h3 class="method-title"><code><a href="#//api/name/didExecute">&nbsp;&nbsp;didExecute</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A flag that tells if the operation entered <code>KTKOperationStateExecuting</code> state during its lifetime.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL didExecute</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A flag that tells if the operation entered <code>KTKOperationStateExecuting</code> state during its lifetime.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Operation Methods" name="task_Operation Methods"></a>
+						<h2 class="task-title">Operation Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/execute" title="execute"></a>
+	<h3 class="method-title"><code><a href="#//api/name/execute">&ndash;&nbsp;execute</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p><code>execute</code> is the entry point of execution for all <code>KTKOperation</code> subclasses.
+If you subclass <code>KTKOperation</code> and wish to customize its execution, you would
+do so by overriding the <code>execute</code> method.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)execute</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><code>execute</code> is the entry point of execution for all <code>KTKOperation</code> subclasses.
+If you subclass <code>KTKOperation</code> and wish to customize its execution, you would
+do so by overriding the <code>execute</code> method.</p>
+
+<p>At some point, your <code>KTKOperation</code> subclass must call one of the <code>finish</code>
+methods defined below; this is how you indicate that your operation has
+finished its execution, and that operations dependent on yours can re-evaluate
+their readiness state.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelWithErrors:" title="cancelWithErrors:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelWithErrors:">&ndash;&nbsp;cancelWithErrors:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancels execution of the operation with specified errors.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelWithErrors:(NSArray&lt;NSError*&gt; *_Nullable)<em>errors</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errors</code></th>
+						<td><p>An array of error objects.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Cancels execution of the operation with specified errors.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/finish" title="finish"></a>
+	<h3 class="method-title"><code><a href="#//api/name/finish">&ndash;&nbsp;finish</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Finishes execution of the operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)finish</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Finishes execution of the operation.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/finishWithError:" title="finishWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/finishWithError:">&ndash;&nbsp;finishWithError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Finishes execution of the operation with the specified error.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)finishWithError:(NSError *_Nullable)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>An error object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Finishes execution of the operation with the specified error.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/finished:" title="finished:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/finished:">&ndash;&nbsp;finished:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Subclasses may override <code>finished<code> if they wish to react to the operation finishing.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)finished:(NSArray&lt;NSError*&gt; *_Nullable)<em>errors</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errors</code></th>
+						<td><p>An array of error objects.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Subclasses may override <code>finished<code> if they wish to react to the operation finishing.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/willEnqueue" title="willEnqueue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/willEnqueue">&ndash;&nbsp;willEnqueue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Indicates that the operation queue will begin enqueuing the operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)willEnqueue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Indicates that the operation queue will begin enqueuing the operation.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-14</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

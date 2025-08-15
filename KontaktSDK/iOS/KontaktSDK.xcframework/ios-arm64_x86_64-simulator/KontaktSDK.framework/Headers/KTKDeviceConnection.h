@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 6.0.0
+//  Version: 6.1.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -17,6 +17,8 @@
 @class KTKOperationQueue;
 @class DeviceCCSlotStateResponse;
 @class ElementData;
+@class KTKAccelerationSample;
+@class KTKAccidentFrame;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -75,6 +77,22 @@ typedef void (^KTKDeviceConnectionUpdateCompletion)(BOOL synchronized, NSError *
  *  @param error                 An error object containing the error that indicates why the operation failed.
  */
 typedef void (^KTKDeviceConnectionFetchMonitorStorageDataCompletion)(NSArray<NSArray<ElementData*>*> * _Nullable storageData, NSArray<NSData*> * _Nullable storageRawData, NSArray<NSData*> * _Nullable storageRawDataFormat, NSError * _Nullable error);
+
+/**
+ * Handler block to be executed on every accelerometer data frame.
+ *
+ * @param samples Collected samples of accelerometer reading or `nil` in case of error.
+ * @param error An object containing error details in case of error.
+ */
+typedef void (^KTKAccelerometerDataHandler)(NSArray<KTKAccelerationSample *> * _Nullable samples, NSError * _Nullable error);
+
+/**
+ * Handler block to be executed on accident event detection.
+ *
+ * @param accidentData Data object containing current accident information.
+ * @param error An object containing error details in case of error.
+ */
+typedef void (^KTKAccidentEventHandler)(KTKAccidentFrame * _Nullable accidentData, NSError * _Nullable error);
 
 
 @protocol KTKDeviceConnectionDelegate;
@@ -277,6 +295,28 @@ typedef void (^KTKDeviceConnectionFetchMonitorStorageDataCompletion)(NSArray<NSA
 - (void)fetchMonitorStorageDataFrom:(NSTimeInterval)from
                                  to:(NSTimeInterval)to
                      withCompletion:(KTKDeviceConnectionFetchMonitorStorageDataCompletion)completion;
+
+/**
+ * Reads the latest accelerometer data from a Kontakt.io device.
+ *
+ * @note Call @c stopCurrentListeningOperation() function to stop receiving data.
+ * @param handler A block called every time data is received from the device.
+ */
+- (void)readAccelerometerDataWithHandler:(KTKAccelerometerDataHandler)handler;
+
+/**
+ * Listens to the changes of accident detection from a Kontakt.io device.
+ *
+ * @note Call @c stopCurrentListeningOperation() function to stop receiving data.
+ * @param handler A block called every time data is received from the device.
+ */
+- (void)readAccidentEventsWithHandler:(KTKAccidentEventHandler)handler;
+
+/**
+ *  Signals current listening operation to stop receiving more data.
+ */
+- (void)stopCurrentListeningOperation;
+
 /**
  *  Cancels all operations on this connection.
  */

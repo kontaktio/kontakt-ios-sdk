@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>KTKDeviceAccidentReadDataOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">KontaktSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Kontakt.io</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/_Nullable">_Nullable</option>
+		
+		<option value="//api/name/device">device</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/createOperations">- createOperations</option>
+		
+		<option value="//api/name/finished:">- finished:</option>
+		
+		<option value="//api/name/init">- init</option>
+		
+		<option value="//api/name/initWithOperations:">- initWithOperations:</option>
+		
+		<option value="//api/name/initWithOperations:maxConcurrent:">- initWithOperations:maxConcurrent:</option>
+		
+		<option value="//api/name/initWithOperations:maxConcurrent:serial:">- initWithOperations:maxConcurrent:serial:</option>
+		
+		<option value="//api/name/makeProlongOperation">- makeProlongOperation</option>
+		
+		<option value="//api/name/operationDidFinish:errors:">- operationDidFinish:errors:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">KTKDeviceAccidentReadDataOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/KTKDeviceConnectionOperation.html">KTKDeviceConnectionOperation</a> : <a href="../Classes/KTKGroupOperation.html">KTKGroupOperation</a> : <a href="../Classes/KTKOperation.html">KTKOperation</a> : NSOperation</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>KontaktSDK-Swift.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/_Nullable" title="_Nullable"></a>
+	<h3 class="method-title"><code><a href="#//api/name/_Nullable">&nbsp;&nbsp;_Nullable</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) void ( ^ handler ) ( KTKAccidentFrame *_Nonnull , BOOL *_Nonnull ) _Nullable</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/device" title="device"></a>
+	<h3 class="method-title"><code><a href="#//api/name/device">&nbsp;&nbsp;device</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) KTKNearbyDevice *device</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createOperations" title="createOperations"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createOperations">&ndash;&nbsp;createOperations</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)createOperations</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/operationDidFinish:errors:" title="operationDidFinish:errors:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/operationDidFinish:errors:">&ndash;&nbsp;operationDidFinish:errors:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)operationDidFinish:(KTKDeviceGATTOperation *_Nonnull)<em>operation</em> errors:(NSArray&lt;NSError*&gt; *_Nullable)<em>errors</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/finished:" title="finished:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/finished:">&ndash;&nbsp;finished:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Subclasses may override <code>finished<code> if they wish to react to the operation finishing.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)finished:(NSArray&lt;NSError*&gt; *_Nullable)<em>errors</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>errors</code></th>
+						<td><p>An array of error objects.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Subclasses may override <code>finished<code> if they wish to react to the operation finishing.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithOperations:" title="initWithOperations:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithOperations:">&ndash;&nbsp;initWithOperations:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns an operation object with the specified opertations group.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)initWithOperations:(NSArray&lt;NSOperation*&gt; *_Nullable)<em>operations</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>operations</code></th>
+						<td><p>The operations array to be added to the group operation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized operation object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes and returns an operation object with the specified opertations group.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKGroupOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithOperations:maxConcurrent:" title="initWithOperations:maxConcurrent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithOperations:maxConcurrent:">&ndash;&nbsp;initWithOperations:maxConcurrent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns an operation object with the specified opertations group.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)initWithOperations:(NSArray&lt;NSOperation*&gt; *_Nullable)<em>operations</em> maxConcurrent:(NSUInteger)<em>maxConcurrent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>operations</code></th>
+						<td><p>The operations array to be added to the group operation.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>maxConcurrent</code></th>
+						<td><p>The number of max concurrent operations.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized operation object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes and returns an operation object with the specified opertations group.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKGroupOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithOperations:maxConcurrent:serial:" title="initWithOperations:maxConcurrent:serial:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithOperations:maxConcurrent:serial:">&ndash;&nbsp;initWithOperations:maxConcurrent:serial:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns an operation object with the specified opertations group.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)initWithOperations:(NSArray&lt;NSOperation*&gt; *_Nullable)<em>operations</em> maxConcurrent:(NSUInteger)<em>maxConcurrent</em> serial:(BOOL)<em>serial</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>operations</code></th>
+						<td><p>The operations array to be added to the group operation.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>maxConcurrent</code></th>
+						<td><p>The number of max concurrent operations.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serial</code></th>
+						<td><p>A Boolean indicating whether the operations should be called in serial or concurrent mode.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized operation object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes and returns an operation object with the specified opertations group.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">KTKGroupOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="method-title"><code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (nonnull instancetype)init</code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="SWIFT_EXTENSION Methods" name="task_SWIFT_EXTENSION Methods"></a>
+						<h2 class="task-title">SWIFT_EXTENSION Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/makeProlongOperation" title="makeProlongOperation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/makeProlongOperation">&ndash;&nbsp;makeProlongOperation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (KTKDeviceGATTOperation *_Nonnull)makeProlongOperation</code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-14</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 6.0.0
+//  Version: 6.1.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -114,27 +114,31 @@ typedef NS_ENUM(NSInteger, KTKDeviceAdvertisingProfile) {
  */
 typedef NS_OPTIONS(NSInteger, KTKDeviceAdvertisingPackets) {
     /**
-     *  Ivalid packet.
+     *  Invalid packet.
      */
-    KTKDeviceAdvertisingPacketsInvalid         = 1 << 0,
-    /**
-     *  iBeacon packet.
-     */
-    KTKDeviceAdvertisingPacketsIBeacon         = 1 << 1,
+    KTKDeviceAdvertisingPacketsInvalid         = 0,
     /**
      *  Eddystone UID packet.
      */
-    KTKDeviceAdvertisingPacketsEddystoneUID    = 1 << 2,
+    KTKDeviceAdvertisingPacketsEddystoneUID    = 1 << 0,
     /**
      *  Eddystone URL packet.
      */
-    KTKDeviceAdvertisingPacketsEddystoneURL    = 1 << 3,
+    KTKDeviceAdvertisingPacketsEddystoneURL    = 1 << 1,
     /**
      *  Eddystone Telemetry packet.
      */
-    KTKDeviceAdvertisingPacketsEddystoneTLM    = 1 << 4,
+    KTKDeviceAdvertisingPacketsEddystoneTLM    = 1 << 2,
     /**
-     *  Eddystone Telemetry packet.
+     *  iBeacon packet.
+     */
+    KTKDeviceAdvertisingPacketsIBeacon         = 1 << 3,
+    /**
+     *  Kontakt identification packet.
+     */
+    KTKDeviceAdvertisingPacketsKontakt         = 1 << 4,
+    /**
+     *  Eddystone ID packet.
      */
     KTKDeviceAdvertisingPacketsEddystoneEID    = 1 << 5,
     /**
@@ -144,35 +148,48 @@ typedef NS_OPTIONS(NSInteger, KTKDeviceAdvertisingPackets) {
     /**
      *  Kontakt identification packet.
      */
-    KTKDeviceAdvertisingPacketsKontakt         = 1 << 7,
-    /**
-     *  Kontakt identification packet.
-     */
-    KTKDeviceAdvertisingPacketsKontaktTLM      = 1 << 8,
+    KTKDeviceAdvertisingPacketsKontaktTLM      = 1 << 7,
     /**
      *  iBeacon Button packet.
      */
-    KTKDeviceAdvertisingPacketsIBeaconButton   = 1 << 9,
+    KTKDeviceAdvertisingPacketsIBeaconButton   = 1 << 8,
     /**
      *  Kontakt Location packet.
      */
-    KTKDeviceAdvertisingPacketsKontaktLocation = 1 << 10,
+    KTKDeviceAdvertisingPacketsKontaktLocation = 1 << 9,
     /**
-     *  Kontakt Location packet.
+     *  Quuppa packet.
      */
-    KTKDeviceAdvertisingPacketsKontaktPeopleDetectionFrame   = 1 << 13,
+    KTKDeviceAdvertisingPacketsQuuppa          = 1 << 10,
+    /**
+     *  TT Frame packet.
+     */
+    KTKDeviceAdvertisingPacketsTTFrame         = 1 << 11,
+    /**
+     *  Kontakt People Detection Frame packet.
+     */
+    KTKDeviceAdvertisingPacketsKontaktPeopleDetectionFrame   = 1 << 12,
+    /**
+     *  Signify / Phillips Beacon Broadcast packet.
+     */
+    KTKDeviceAdvertisingPacketsSignifyBeacon   = 1 << 14,
+    
     /**
      *  All supprted Eddystone packets.
      */
-    KTKDeviceAdvertisingPacketsEddystoneAll    = (NSInteger)0b00000000000000000000000000011100,
+    KTKDeviceAdvertisingPacketsEddystoneAll    = KTKDeviceAdvertisingPacketsEddystoneUID | KTKDeviceAdvertisingPacketsEddystoneURL | KTKDeviceAdvertisingPacketsEddystoneTLM,
     /**
      *  All supprted Eddystone Secure (EID + ETLM).
      */
-    KTKDeviceAdvertisingPacketsEddystoneSecure = (NSInteger)0b00000000000000000000000001100000,
+    KTKDeviceAdvertisingPacketsEddystoneSecure = KTKDeviceAdvertisingPacketsEddystoneEID | KTKDeviceAdvertisingPacketsEddystoneETLM,
     /**
-     *  All supprted packets.
+     *  All Kontakt packets
      */
-    KTKDeviceAdvertisingPacketsAll             = (NSInteger)0b11111111111111111111111111111110
+    KTKDeviceAdvertisingPacketsKontaktAll = KTKDeviceAdvertisingPacketsKontakt | KTKDeviceAdvertisingPacketsKontaktLocation | KTKDeviceAdvertisingPacketsKontaktTLM,
+    /**
+     *  All supported packets.
+     */
+    KTKDeviceAdvertisingPacketsAll             = (NSInteger)0b111111111111111 // 15 flags
 };
 
 /**

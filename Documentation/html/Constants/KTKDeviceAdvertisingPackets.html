@@ -89,35 +89,43 @@
                         <h4 class="method-subtitle">Definition</h4>
                         <code>typedef NS_OPTIONS(NSInteger, KTKDeviceAdvertisingPackets ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsInvalid</a> = 1 &lt; &lt; 0,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsInvalid</a> = 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsIBeacon</a> = 1 &lt; &lt; 1,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneUID</a> = 1 &lt; &lt; 0,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneUID</a> = 1 &lt; &lt; 2,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneURL</a> = 1 &lt; &lt; 1,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneURL</a> = 1 &lt; &lt; 3,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneTLM</a> = 1 &lt; &lt; 2,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneTLM</a> = 1 &lt; &lt; 4,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsIBeacon</a> = 1 &lt; &lt; 3,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsKontakt</a> = 1 &lt; &lt; 4,<br>
                             
                             &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneEID</a> = 1 &lt; &lt; 5,<br>
                             
                             &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneETLM</a> = 1 &lt; &lt; 6,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsKontakt</a> = 1 &lt; &lt; 7,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsKontaktTLM</a> = 1 &lt; &lt; 7,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsKontaktTLM</a> = 1 &lt; &lt; 8,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsIBeaconButton</a> = 1 &lt; &lt; 8,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsIBeaconButton</a> = 1 &lt; &lt; 9,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsKontaktLocation</a> = 1 &lt; &lt; 9,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsKontaktLocation</a> = 1 &lt; &lt; 10,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsQuuppa</a> = 1 &lt; &lt; 10,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsKontaktPeopleDetectionFrame</a> = 1 &lt; &lt; 13,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsTTFrame</a> = 1 &lt; &lt; 11,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneAll</a> = ( NSInteger ) 0 b00000000000000000000000000011100,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsKontaktPeopleDetectionFrame</a> = 1 &lt; &lt; 12,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneSecure</a> = ( NSInteger ) 0 b00000000000000000000000001100000,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsSignifyBeacon</a> = 1 &lt; &lt; 14,<br>
                             
-                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsAll</a> = ( NSInteger ) 0 b11111111111111111111111111111110,<br>
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneAll</a> = KTKDeviceAdvertisingPacketsEddystoneUID | KTKDeviceAdvertisingPacketsEddystoneURL | KTKDeviceAdvertisingPacketsEddystoneTLM,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsEddystoneSecure</a> = KTKDeviceAdvertisingPacketsEddystoneEID | KTKDeviceAdvertisingPacketsEddystoneETLM,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsKontaktAll</a> = KTKDeviceAdvertisingPacketsKontakt | KTKDeviceAdvertisingPacketsKontaktLocation | KTKDeviceAdvertisingPacketsKontaktTLM,<br>
+                            
+                            &nbsp;&nbsp; <a href="">KTKDeviceAdvertisingPacketsAll</a> = ( NSInteger ) 0 b111111111111111,<br>
                             
                             };</code>
                     
@@ -131,24 +139,7 @@
 <dd>
 
 
-<p>Ivalid packet.</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDeviceAdvertisingPacketsIBeacon"></a><code>KTKDeviceAdvertisingPacketsIBeacon</code></dt>
-<dd>
-
-
-<p>iBeacon packet.</p>
+<p>Invalid packet.</p>
 
 
 
@@ -212,28 +203,11 @@
 	
 </dd>
                             
-                            <dt><a name="" title="KTKDeviceAdvertisingPacketsEddystoneEID"></a><code>KTKDeviceAdvertisingPacketsEddystoneEID</code></dt>
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsIBeacon"></a><code>KTKDeviceAdvertisingPacketsIBeacon</code></dt>
 <dd>
 
 
-<p>Eddystone Telemetry packet.</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="KTKDeviceAdvertisingPacketsEddystoneETLM"></a><code>KTKDeviceAdvertisingPacketsEddystoneETLM</code></dt>
-<dd>
-
-
-<p>Eddystone Telemetry packet.</p>
+<p>iBeacon packet.</p>
 
 
 
@@ -251,6 +225,40 @@
 
 
 <p>Kontakt identification packet.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsEddystoneEID"></a><code>KTKDeviceAdvertisingPacketsEddystoneEID</code></dt>
+<dd>
+
+
+<p>Eddystone ID packet.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsEddystoneETLM"></a><code>KTKDeviceAdvertisingPacketsEddystoneETLM</code></dt>
+<dd>
+
+
+<p>Eddystone Telemetry packet.</p>
 
 
 
@@ -314,11 +322,62 @@
 	
 </dd>
                             
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsQuuppa"></a><code>KTKDeviceAdvertisingPacketsQuuppa</code></dt>
+<dd>
+
+
+<p>Quuppa packet.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsTTFrame"></a><code>KTKDeviceAdvertisingPacketsTTFrame</code></dt>
+<dd>
+
+
+<p>TT Frame packet.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
                             <dt><a name="" title="KTKDeviceAdvertisingPacketsKontaktPeopleDetectionFrame"></a><code>KTKDeviceAdvertisingPacketsKontaktPeopleDetectionFrame</code></dt>
 <dd>
 
 
-<p>Kontakt Location packet.</p>
+<p>Kontakt People Detection Frame packet.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsSignifyBeacon"></a><code>KTKDeviceAdvertisingPacketsSignifyBeacon</code></dt>
+<dd>
+
+
+<p>Signify / Phillips Beacon Broadcast packet.</p>
 
 
 
@@ -365,11 +424,28 @@
 	
 </dd>
                             
+                            <dt><a name="" title="KTKDeviceAdvertisingPacketsKontaktAll"></a><code>KTKDeviceAdvertisingPacketsKontaktAll</code></dt>
+<dd>
+
+
+<p>All Kontakt packets</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">KTKDeviceDefinitions.h</code>.
+	</p>
+	
+</dd>
+                            
                             <dt><a name="" title="KTKDeviceAdvertisingPacketsAll"></a><code>KTKDeviceAdvertisingPacketsAll</code></dt>
 <dd>
 
 
-<p>All supprted packets.</p>
+<p>All supported packets.</p>
 
 
 
@@ -406,7 +482,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-12</p>
+						<p class="copyright">Copyright &copy; 2025 Kontakt.io. All rights reserved. Updated: 2025-08-14</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
