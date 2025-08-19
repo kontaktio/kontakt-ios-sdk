@@ -35,6 +35,7 @@ class SamplesTableViewController: UITableViewController {
         samples += [(number: 4, name: "Kontakt Cloud",              storyboardID: "KontaktCloudShowcase")]
         samples += [(number: 5, name: "Apply Config",               storyboardID: "ApplyDeviceConfig")]
         samples += [(number: 6, name: "Infinite Scan",              storyboardID: "InfiniteScan")]
+        samples += [(number: 6, name: "Accident Data",              storyboardID: "AccidentData")]
     }
 
     // =========================================================================
