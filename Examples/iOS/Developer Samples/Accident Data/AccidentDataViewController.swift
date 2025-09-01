@@ -65,32 +65,58 @@ struct AccidentDataView: View {
             }
             .padding()
 
-            // Accident Data List
+            Picker("Monitoring Mode", selection: $viewModel.monitoringMode) {
+                Text("Proximity").tag(AccidentDataViewModel.MonitoringMode.proximity)
+                Text("Accident").tag(AccidentDataViewModel.MonitoringMode.accident)
+            }
+            .pickerStyle(.segmented)
+
             VStack(spacing: 10) {
-                Text("Recent Accident Events (Last 10)")
+                Text("Accident data (telemetry)")
                     .font(.headline)
                     .padding(.horizontal)
+                Divider()
+                if let accidentEvent = viewModel.accidentEvent {
+                    AccidentEventView(event: accidentEvent)
+                } else {
+                    Text("No accident data")
+                        .foregroundColor(.secondary)
+                        .padding()
+                }
+
+                Spacer()
+
+                Text("Accelerometer samples")
+                    .font(.headline)
+                    .padding(.horizontal)
+                Divider()
 
                 ScrollView {
                     LazyVStack(spacing: 8) {
-                        ForEach(viewModel.accidentEvents, id: \.self) { event in
-                            AccidentEventRow(event: event)
+                        ForEach(viewModel.accelerometerData, id: \.self) { event in
+                            HStack {
+                                Text(event.dataString)
+                                    .font(.body)
+                                Divider()
+                                Text(event.dateString)
+                                    .font(.body)
+                            }
+                            .padding()
+                            .background(Color.gray.opacity(0.1))
+                            .cornerRadius(8)
                         }
-
-                        if viewModel.accidentEvents.isEmpty {
-                            Text("No accident events found")
+                        if viewModel.accelerometerData.isEmpty {
+                            Text("No accelerometer data")
                                 .foregroundColor(.secondary)
                                 .padding()
                         }
                     }
-                    .padding(.horizontal)
                 }
             }
 
-            // Action Buttons
             VStack(spacing: 15) {
                 if viewModel.status != .connected {
-                    Text("Press button on the device to trigger iBeacon event")
+                    Text("Trigger iBeacon event to start reading data")
                         .multilineTextAlignment(.center)
                         .font(.headline)
                         .foregroundColor(.white)
@@ -124,8 +150,7 @@ struct AccidentDataView: View {
     }
 }
 
-// MARK: - Accident Event Row View
-struct AccidentEventRow: View {
+struct AccidentEventView: View {
     let event: AccidentFrame
 
     var body: some View {
@@ -153,13 +178,24 @@ struct AccidentEventRow: View {
     }
 }
 
-extension AccidentFrame: @retroactive Identifiable {
+extension AccidentFrame {
+    var label: String {
+        "Detected: \(accidentDetected), Alert: \(alertMode)\nx: \(accelerationData.xg.f3), y: \(accelerationData.yg.f3), z: \(accelerationData.zg.f3)"
+    }
+}
+
+extension AccelerationSample: @retroactive Identifiable {
     public var id: UUID {
         UUID()
     }
 
-    var label: String {
-        "Detected: \(accidentDetected), Alert: \(alertMode)\nx: \(accelerationData.xg.f3), y: \(accelerationData.yg.f3), z: \(accelerationData.zg.f3)"
+    var dateString: String {
+        let date = Date(timeIntervalSince1970: timestamp)
+        return Formatter.dateFormatter.string(from: date)
+    }
+
+    var dataString: String {
+        "x: \(xg.f3) y: \(yg.f3) z: \(zg.f3)"
     }
 }
 
@@ -170,6 +206,14 @@ extension Formatter {
         formatter.maximumFractionDigits = 3
         formatter.roundingMode = .halfEven
         formatter.numberStyle = .decimal
+        return formatter
+    }()
+
+
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss.SSS"
+        formatter.timeZone = TimeZone.current
         return formatter
     }()
 }
