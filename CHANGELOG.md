@@ -1,5 +1,9 @@
 ## Changelog
 
+### v6.2.0 - 1 Sep 2025
+- Added parsing of accident data from telemetry
+- Minor fixes and improvements
+
 ### v6.1.0 - 14 Aug 2025
 - Added `MonitorState` to storage data parser
 - Added support for tracking live accelerometer and accident data

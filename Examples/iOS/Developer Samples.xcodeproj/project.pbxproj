@@ -11,6 +11,10 @@
 		0D6557741E657A3100A21FCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557721E657A3100A21FCE /* Constants.swift */; };
 		0D6557751E657A3100A21FCE /* SamplesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6557731E657A3100A21FCE /* SamplesTableViewController.swift */; };
 		123D6AE02D389C6A00B41B11 /* KontaktSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 123D6ADF2D389C6A00B41B11 /* KontaktSDK */; };
+		12966E5B2E4FB4F500A5F5C9 /* AccidentData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12966E5A2E4FB4F500A5F5C9 /* AccidentData.storyboard */; };
+		12966E5D2E4FB50C00A5F5C9 /* AccidentDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12966E5C2E4FB50C00A5F5C9 /* AccidentDataViewController.swift */; };
+		12966E602E53C3BB00A5F5C9 /* NearbyDevicesScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12966E5F2E53C3BB00A5F5C9 /* NearbyDevicesScanner.swift */; };
+		12966E622E53DEFF00A5F5C9 /* AccidentDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12966E612E53DEFF00A5F5C9 /* AccidentDataViewModel.swift */; };
 		A30813881E0955BD00DA7841 /* InfiniteScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30813871E0955BD00DA7841 /* InfiniteScanViewController.swift */; };
 		A308138A1E0955EE00DA7841 /* InfiniteScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30813891E0955EE00DA7841 /* InfiniteScan.storyboard */; };
 		A31E99431E38BB56005E73E7 /* LaunchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31E99421E38BB56005E73E7 /* LaunchButton.swift */; };
@@ -52,6 +56,10 @@
 		0D6557701E6579FF00A21FCE /* UIColor+Kontakt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Kontakt.swift"; sourceTree = "<group>"; };
 		0D6557721E657A3100A21FCE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0D6557731E657A3100A21FCE /* SamplesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplesTableViewController.swift; sourceTree = "<group>"; };
+		12966E5A2E4FB4F500A5F5C9 /* AccidentData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccidentData.storyboard; sourceTree = "<group>"; };
+		12966E5C2E4FB50C00A5F5C9 /* AccidentDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentDataViewController.swift; sourceTree = "<group>"; };
+		12966E5F2E53C3BB00A5F5C9 /* NearbyDevicesScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDevicesScanner.swift; sourceTree = "<group>"; };
+		12966E612E53DEFF00A5F5C9 /* AccidentDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentDataViewModel.swift; sourceTree = "<group>"; };
 		A30813871E0955BD00DA7841 /* InfiniteScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScanViewController.swift; sourceTree = "<group>"; };
 		A30813891E0955EE00DA7841 /* InfiniteScan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfiniteScan.storyboard; sourceTree = "<group>"; };
 		A31E99421E38BB56005E73E7 /* LaunchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchButton.swift; sourceTree = "<group>"; };
@@ -97,6 +105,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		12966E592E4FB0A100A5F5C9 /* Accident Data */ = {
+			isa = PBXGroup;
+			children = (
+				12966E5A2E4FB4F500A5F5C9 /* AccidentData.storyboard */,
+				12966E5C2E4FB50C00A5F5C9 /* AccidentDataViewController.swift */,
+				12966E612E53DEFF00A5F5C9 /* AccidentDataViewModel.swift */,
+			);
+			path = "Accident Data";
+			sourceTree = "<group>";
+		};
 		A322BB8B1DFEA7C400C847AF = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +135,7 @@
 		A322BB961DFEA7C400C847AF /* Developer Samples */ = {
 			isa = PBXGroup;
 			children = (
+				12966E592E4FB0A100A5F5C9 /* Accident Data */,
 				A3A4A35D1E07E9D6005E15A1 /* Ranging */,
 				A384A2551E08178900A92F6A /* Monitoring */,
 				A384A2521E08176100A92F6A /* Eddystone */,
@@ -126,6 +145,7 @@
 				A384A26B1E0827AC00A92F6A /* Infinite Scan */,
 				A331F2EA1E0A874C000E443E /* Common */,
 				A322BB971DFEA7C400C847AF /* AppDelegate.swift */,
+				12966E5F2E53C3BB00A5F5C9 /* NearbyDevicesScanner.swift */,
 				A322BB9B1DFEA7C400C847AF /* Main.storyboard */,
 				A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */,
 				A322BB9E1DFEA7C400C847AF /* Assets.xcassets */,
@@ -288,6 +308,7 @@
 			files = (
 				A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */,
 				A35DA1E31E37884600929021 /* ApplyDeviceConfig.storyboard in Resources */,
+				12966E5B2E4FB4F500A5F5C9 /* AccidentData.storyboard in Resources */,
 				A384A26A1E081AB300A92F6A /* KontaktCloudShowcase.storyboard in Resources */,
 				A3A4A3621E07EEB8005E15A1 /* RangingBeacons.storyboard in Resources */,
 				A384A2621E0819E000A92F6A /* MonitoringBeaconRegion.storyboard in Resources */,
@@ -317,8 +338,11 @@
 				0D6557711E6579FF00A21FCE /* UIColor+Kontakt.swift in Sources */,
 				A384A2541E08176100A92F6A /* ScanningEddystonesViewController.swift in Sources */,
 				0D6557751E657A3100A21FCE /* SamplesTableViewController.swift in Sources */,
+				12966E602E53C3BB00A5F5C9 /* NearbyDevicesScanner.swift in Sources */,
+				12966E622E53DEFF00A5F5C9 /* AccidentDataViewModel.swift in Sources */,
 				A384A2571E08178900A92F6A /* MonitoringBeaconRegionViewController.swift in Sources */,
 				A384A25A1E08179E00A92F6A /* NearbyDevicesScanningViewController.swift in Sources */,
+				12966E5D2E4FB50C00A5F5C9 /* AccidentDataViewController.swift in Sources */,
 				A31E99431E38BB56005E73E7 /* LaunchButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

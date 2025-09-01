@@ -182,7 +182,7 @@ extension ApplyDeviceConfigViewController: KTKDevicesManagerDelegate {
                 showInfo(info: "Applying configuration ...")
                 
                 // Write config if connected to device
-                connection.write(configuration) { synchronized, appliedConfiguration, error in
+                connection.write(configuration) { synchronized, appliedConfiguration, isTimeSynced, error in
                     // Check if config applied successfully
                     if let _ = error {
                         self.showError(error: "Error while applying configuration")
