@@ -29,6 +29,11 @@ final class NearbyDevicesScanner {
     @Published var nearbyDevices: Set<KTKNearbyDevice> = []
     var nearbyDevicesPublisher = CurrentValueSubject<Result<Set<KTKNearbyDevice>, NearbyDevicesScannerError>, Never>(.success([]))
 
+    private var privateTelemetryPublisher: PassthroughSubject<KTKNearbyDeviceTelemetry, Never> = .init()
+    var telemetryPublisher: AnyPublisher<KTKNearbyDeviceTelemetry, Never> {
+        privateTelemetryPublisher.eraseToAnyPublisher()
+    }
+
     private(set) var isScanning = false
     fileprivate let devicesManager: KTKDevicesManager
     private let devicesManagerDelegateProxy: KTKDevicesManagerDelegateProxy
@@ -107,6 +112,11 @@ final class NearbyDevicesScanner {
     @ScanningResultsActor
     private func update(with devices: Set<KTKNearbyDevice>) {
         nearbyDevices = devices
+        for device in devices where device.onTelemetryChange == nil {
+            device.onTelemetryChange = { [weak self] in
+                self?.privateTelemetryPublisher.send($0)
+            }
+        }
     }
 }
 
