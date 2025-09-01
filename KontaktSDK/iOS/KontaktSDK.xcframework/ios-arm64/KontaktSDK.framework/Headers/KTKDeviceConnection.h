@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 6.1.0
+//  Version: 6.2.0
 //
 //  Copyright (c) 2015 Kontakt.io. All rights reserved.
 //
@@ -38,11 +38,12 @@ typedef void (^KTKDeviceConnectionWriteCompletion)(BOOL synchronized, KTKDeviceC
 /**
  *  A completion block object to be executed when the write operation finishes.
  *
- *  @param synchronized  A Boolean indicating whether the configuration was synchronized to the Cloud API.
- *  @param isTimeSynced  A Boolean indicating whether the device's time was set successfully.
- *  @param error         An error object containing the error that indicates why the operation failed.
+ *  @param synchronized   A Boolean indicating whether the configuration was synchronized to the Cloud API.
+ *  @param secureResponse Secure response returned from the device.
+ *  @param isTimeSynced   A Boolean indicating whether the device's time was set successfully.
+ *  @param error          An error object containing the error that indicates why the operation failed.
  */
-typedef void (^KTKDeviceConnectionWriteEncryptedCompletion)(BOOL synchronized, BOOL isTimeSynced, NSError * _Nullable error);
+typedef void (^KTKDeviceConnectionWriteEncryptedCompletion)(BOOL synchronized, NSData * _Nullable secureResponse, BOOL isTimeSynced, NSError * _Nullable error);
 
 /**
  *  A completion block object to be executed when the read operation finishes.

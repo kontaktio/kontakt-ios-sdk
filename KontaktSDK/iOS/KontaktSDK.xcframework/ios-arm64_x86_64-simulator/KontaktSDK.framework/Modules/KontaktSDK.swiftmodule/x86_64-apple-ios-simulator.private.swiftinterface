@@ -212,11 +212,14 @@ public struct FirmwareVersion : Swift.Comparable {
   final public func encode(to encoder: any Swift.Encoder) throws
 }
 @objc(KTKAccidentFrame) final public class AccidentFrame : ObjectiveC.NSObject {
-  @objc public enum SensitivityLevel : Swift.UInt8 {
+  @objc public enum SensitivityLevel : Swift.UInt8, Swift.CustomStringConvertible {
     case mg16PerUnit = 0b00
     case mg32PerUnit = 0b01
     case mg64PerUnit = 0b10
     case mg128PerUnit = 0b11
+    public var description: Swift.String {
+      get
+    }
     public init?(rawValue: Swift.UInt8)
     public typealias RawValue = Swift.UInt8
     public var rawValue: Swift.UInt8 {
@@ -231,6 +234,9 @@ public struct FirmwareVersion : Swift.Comparable {
   @objc final public let accelerationData: KontaktSDK.AccelerationSample
   @objc final public let maxMovingAverage: Swift.Double
   @objc public init(batteryLevel: Swift.Int, sensitivityLevel: KontaktSDK.AccidentFrame.SensitivityLevel, alertMode: Swift.Bool, accidentDetected: Swift.Bool, accidentCounter: Swift.Int, accelerationData: KontaktSDK.AccelerationSample, maxMovingAverage: Swift.Double)
+  @objc override final public var debugDescription: Swift.String {
+    @objc get
+  }
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc(KTKDeviceAccidentReadDataOperation) final public class DeviceAccidentReadDataOperation : KontaktSDK.KTKDeviceConnectionOperation, @unchecked Swift.Sendable {
@@ -249,6 +255,7 @@ public struct FirmwareVersion : Swift.Comparable {
     @objc set
   }
   @objc override final public func createOperations()
+  @objc public static func decodeFrame(_ data: Foundation.Data) throws -> KontaktSDK.AccidentFrame
   @objc override final public func operationDidFinish(_ operation: KontaktSDK.KTKDeviceGATTOperation, errors: [any Swift.Error]?)
   @objc override final public func finished(_ errors: [any Swift.Error]?)
   @objc override dynamic public init(operations: [Foundation.Operation]?)
@@ -380,7 +387,7 @@ extension KontaktSDK.DeviceSensorReadDataOperation : KontaktSDK.DeviceProlongabl
   @objc final public let zg: Swift.Double
   @objc final public let timestamp: Foundation.TimeInterval
   @objc public init(xg: Swift.Double, yg: Swift.Double, zg: Swift.Double, timestamp: Foundation.TimeInterval = -1)
-  @objc override final public var debugDescription: Swift.String {
+  @objc override final public var description: Swift.String {
     @objc get
   }
   @objc deinit
