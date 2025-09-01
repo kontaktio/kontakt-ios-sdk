@@ -1,6 +1,6 @@
 //
 //  KontaktSDK
-//  Version: 6.1.0
+//  Version: 6.2.0
 //
 //  Copyright © 2017 Kontakt.io. All rights reserved.
 //
@@ -9,6 +9,8 @@
 
 #import "KTKDeviceDefinitions.h"
 #import "KTKPersonPosition.h"
+
+@class KTKAccidentFrame;
 
 typedef NS_OPTIONS(uint16_t, KTKNearbyDeviceTelemetryError) {
     /**
@@ -210,6 +212,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  A Boolean moving or not. (read-only)
  */
 @property (nonatomic, readonly, assign, getter=isMoving) BOOL moving;
+
+/**
+ *  TT Frame / Accident detection frame data (read-only)
+ */
+@property (nonatomic, readonly, retain) KTKAccidentFrame * _Nullable accidentData;
 
 #pragma mark - Vendor
 ///--------------------------------------------------------------------
@@ -475,6 +482,10 @@ NS_ASSUME_NONNULL_BEGIN
 ///--------------------------------------------------------------------
 
 @property (nonatomic, readonly, assign) KTKGatewayInfo gwInfo;
+
+///--------------------------------------------------------------------
+/// @name Temperature Monitor
+///--------------------------------------------------------------------
 
 /**
  *  Sensors state report (read-only)

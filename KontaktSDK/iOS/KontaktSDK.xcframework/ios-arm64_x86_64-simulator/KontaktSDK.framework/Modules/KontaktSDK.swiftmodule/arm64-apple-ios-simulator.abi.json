@@ -6657,6 +6657,46 @@
                 "fixedbinaryorder": 3
               },
               {
+                "kind": "Var",
+                "name": "description",
+                "printedName": "description",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO11descriptionSSvp",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16SensitivityLevelO11descriptionSSvp",
+                "moduleName": "KontaktSDK",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10KontaktSDK13AccidentFrameC16SensitivityLevelO11descriptionSSvg",
+                    "mangledName": "$s10KontaktSDK13AccidentFrameC16SensitivityLevelO11descriptionSSvg",
+                    "moduleName": "KontaktSDK",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
                 "kind": "Constructor",
                 "name": "init",
                 "printedName": "init(rawValue:)",
@@ -6788,6 +6828,13 @@
                 ],
                 "usr": "s:SY",
                 "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
               }
             ]
           },
@@ -7212,6 +7259,57 @@
               "ObjC"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "debugDescription",
+            "printedName": "debugDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(py)debugDescription",
+            "mangledName": "$s10KontaktSDK13AccidentFrameC16debugDescriptionSSvp",
+            "moduleName": "KontaktSDK",
+            "overriding": true,
+            "objc_name": "debugDescription",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame(im)debugDescription",
+                "mangledName": "$s10KontaktSDK13AccidentFrameC16debugDescriptionSSvg",
+                "moduleName": "KontaktSDK",
+                "overriding": true,
+                "objc_name": "debugDescription",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
           },
           {
             "kind": "Constructor",
@@ -7935,6 +8033,37 @@
               "Override",
               "AccessControl"
             ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decodeFrame",
+            "printedName": "decodeFrame(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AccidentFrame",
+                "printedName": "KontaktSDK.AccidentFrame",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccidentFrame"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKDeviceAccidentReadDataOperation(cm)decodeFrame:error:",
+            "mangledName": "$s10KontaktSDK31DeviceAccidentReadDataOperationC11decodeFrameyAA0dI0C10Foundation0F0VKFZ",
+            "moduleName": "KontaktSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -12229,8 +12358,8 @@
           },
           {
             "kind": "Var",
-            "name": "debugDescription",
-            "printedName": "debugDescription",
+            "name": "description",
+            "printedName": "description",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12240,11 +12369,11 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(py)debugDescription",
-            "mangledName": "$s10KontaktSDK18AccelerationSampleC16debugDescriptionSSvp",
+            "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(py)description",
+            "mangledName": "$s10KontaktSDK18AccelerationSampleC11descriptionSSvp",
             "moduleName": "KontaktSDK",
             "overriding": true,
-            "objc_name": "debugDescription",
+            "objc_name": "description",
             "declAttributes": [
               "Final",
               "ObjC",
@@ -12265,11 +12394,11 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(im)debugDescription",
-                "mangledName": "$s10KontaktSDK18AccelerationSampleC16debugDescriptionSSvg",
+                "usr": "c:@M@KontaktSDK@objc(cs)KTKAccelerationSample(im)description",
+                "mangledName": "$s10KontaktSDK18AccelerationSampleC11descriptionSSvg",
                 "moduleName": "KontaktSDK",
                 "overriding": true,
-                "objc_name": "debugDescription",
+                "objc_name": "description",
                 "declAttributes": [
                   "Final",
                   "ObjC"
@@ -13609,30 +13738,86 @@
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
       "kind": "IntegerLiteral",
-      "offset": 197,
+      "offset": 223,
       "length": 4,
       "value": "0b00"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
       "kind": "IntegerLiteral",
-      "offset": 229,
+      "offset": 255,
       "length": 4,
       "value": "0b01"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
       "kind": "IntegerLiteral",
-      "offset": 261,
+      "offset": 287,
       "length": 4,
       "value": "0b10"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
       "kind": "IntegerLiteral",
-      "offset": 294,
+      "offset": 320,
       "length": 4,
       "value": "0b11"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "StringLiteral",
+      "offset": 2163,
+      "length": 414,
+      "value": "\"AccidentFrame(\n    batteryLevel: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "StringLiteral",
+      "offset": 2231,
+      "length": 16,
+      "value": "\"\n    sensitivityLevel: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "StringLiteral",
+      "offset": 2301,
+      "length": 9,
+      "value": "\"\n    alertMode: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "StringLiteral",
+      "offset": 2337,
+      "length": 16,
+      "value": "\"\n    accidentDetected: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "StringLiteral",
+      "offset": 2387,
+      "length": 15,
+      "value": "\"\n    accidentCounter: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "StringLiteral",
+      "offset": 2435,
+      "length": 16,
+      "value": "\"\n    accelerationData: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "StringLiteral",
+      "offset": 2505,
+      "length": 16,
+      "value": "\"\n    maxMovingAverage: \""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/Model\/AccidentFrame.swift",
+      "kind": "StringLiteral",
+      "offset": 2555,
+      "length": 1,
+      "value": "\"\n)\""
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Accident\/DeviceAccidentReadDataOperation.swift",
@@ -13714,112 +13899,112 @@
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3227,
+      "offset": 3223,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3250,
+      "offset": 3246,
       "length": 3,
       "value": "0x0"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3272,
+      "offset": 3268,
       "length": 3,
       "value": "0x1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3293,
+      "offset": 3289,
       "length": 3,
       "value": "0x2"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3317,
+      "offset": 3313,
       "length": 3,
       "value": "0x3"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3659,
+      "offset": 3651,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3681,
+      "offset": 3673,
       "length": 3,
       "value": "0x0"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3720,
+      "offset": 3712,
       "length": 3,
       "value": "0x1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3753,
+      "offset": 3745,
       "length": 3,
       "value": "0x2"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3774,
+      "offset": 3766,
       "length": 3,
       "value": "0x3"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 4176,
+      "offset": 4168,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 4196,
+      "offset": 4188,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 4252,
+      "offset": 4244,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 4272,
+      "offset": 4264,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 4291,
+      "offset": 4283,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/CC\/Helpers\/DeviceCCStorageDataParser.swift",
       "kind": "IntegerLiteral",
-      "offset": 4311,
+      "offset": 4303,
       "length": 1,
       "value": "4"
     },
@@ -13861,35 +14046,35 @@
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
       "kind": "StringLiteral",
-      "offset": 809,
+      "offset": 804,
       "length": 78,
       "value": "\"AccelerationSample(xg: \""
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
       "kind": "StringLiteral",
-      "offset": 838,
+      "offset": 833,
       "length": 1,
       "value": "\", yg: \""
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
       "kind": "StringLiteral",
-      "offset": 849,
+      "offset": 844,
       "length": 1,
       "value": "\", zg: \""
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
       "kind": "StringLiteral",
-      "offset": 860,
+      "offset": 855,
       "length": 1,
       "value": "\", timestamp: \""
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
       "kind": "StringLiteral",
-      "offset": 885,
+      "offset": 880,
       "length": 1,
       "value": "\")\""
     }

@@ -322,7 +322,7 @@ SWIFT_CLASS_NAMED("AccelerationSample")
 /// This value is not available in Accident Frame
 @property (nonatomic, readonly) NSTimeInterval timestamp;
 - (nonnull instancetype)initWithXg:(double)xg yg:(double)yg zg:(double)zg timestamp:(NSTimeInterval)timestamp OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -340,11 +340,12 @@ SWIFT_CLASS_NAMED("AccidentFrame")
 @property (nonatomic, readonly) BOOL accidentDetected;
 /// Counter with the number of events detected
 @property (nonatomic, readonly) NSInteger accidentCounter;
-/// Acceleration data
+/// Max average acceleration in a time window
 @property (nonatomic, readonly, strong) KTKAccelerationSample * _Nonnull accelerationData;
 /// Maximum of the moving average of the acceleration during the last event
 @property (nonatomic, readonly) double maxMovingAverage;
 - (nonnull instancetype)initWithBatteryLevel:(NSInteger)batteryLevel sensitivityLevel:(enum SensitivityLevel)sensitivityLevel alertMode:(BOOL)alertMode accidentDetected:(BOOL)accidentDetected accidentCounter:(NSInteger)accidentCounter accelerationData:(KTKAccelerationSample * _Nonnull)accelerationData maxMovingAverage:(double)maxMovingAverage OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -357,6 +358,7 @@ typedef SWIFT_ENUM(uint8_t, SensitivityLevel, open) {
 };
 
 @class KTKNearbyDevice;
+@class NSData;
 @class KTKDeviceGATTOperation;
 @class NSOperation;
 SWIFT_CLASS_NAMED("DeviceAccidentReadDataOperation")
@@ -364,6 +366,7 @@ SWIFT_CLASS_NAMED("DeviceAccidentReadDataOperation")
 @property (nonatomic, copy) void (^ _Nullable handler)(KTKAccidentFrame * _Nonnull, BOOL * _Nonnull);
 @property (nonatomic, strong) KTKNearbyDevice * _Nullable device;
 - (void)createOperations;
++ (KTKAccidentFrame * _Nullable)decodeFrame:(NSData * _Nonnull)data error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (void)operationDidFinish:(KTKDeviceGATTOperation * _Nonnull)operation errors:(NSArray<NSError *> * _Nullable)errors;
 - (void)finished:(NSArray<NSError *> * _Nullable)errors;
 - (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations OBJC_DESIGNATED_INITIALIZER;
@@ -383,7 +386,6 @@ SWIFT_PROTOCOL_NAMED("DeviceProlongableOperation")
 @end
 
 @class DeviceCCRequest;
-@class NSData;
 @class DeviceCCStorageReadRequest;
 @class DeviceCCGenericResponse;
 @class DeviceCCLogEvent;
@@ -984,7 +986,7 @@ SWIFT_CLASS_NAMED("AccelerationSample")
 /// This value is not available in Accident Frame
 @property (nonatomic, readonly) NSTimeInterval timestamp;
 - (nonnull instancetype)initWithXg:(double)xg yg:(double)yg zg:(double)zg timestamp:(NSTimeInterval)timestamp OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1002,11 +1004,12 @@ SWIFT_CLASS_NAMED("AccidentFrame")
 @property (nonatomic, readonly) BOOL accidentDetected;
 /// Counter with the number of events detected
 @property (nonatomic, readonly) NSInteger accidentCounter;
-/// Acceleration data
+/// Max average acceleration in a time window
 @property (nonatomic, readonly, strong) KTKAccelerationSample * _Nonnull accelerationData;
 /// Maximum of the moving average of the acceleration during the last event
 @property (nonatomic, readonly) double maxMovingAverage;
 - (nonnull instancetype)initWithBatteryLevel:(NSInteger)batteryLevel sensitivityLevel:(enum SensitivityLevel)sensitivityLevel alertMode:(BOOL)alertMode accidentDetected:(BOOL)accidentDetected accidentCounter:(NSInteger)accidentCounter accelerationData:(KTKAccelerationSample * _Nonnull)accelerationData maxMovingAverage:(double)maxMovingAverage OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull debugDescription;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1019,6 +1022,7 @@ typedef SWIFT_ENUM(uint8_t, SensitivityLevel, open) {
 };
 
 @class KTKNearbyDevice;
+@class NSData;
 @class KTKDeviceGATTOperation;
 @class NSOperation;
 SWIFT_CLASS_NAMED("DeviceAccidentReadDataOperation")
@@ -1026,6 +1030,7 @@ SWIFT_CLASS_NAMED("DeviceAccidentReadDataOperation")
 @property (nonatomic, copy) void (^ _Nullable handler)(KTKAccidentFrame * _Nonnull, BOOL * _Nonnull);
 @property (nonatomic, strong) KTKNearbyDevice * _Nullable device;
 - (void)createOperations;
++ (KTKAccidentFrame * _Nullable)decodeFrame:(NSData * _Nonnull)data error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 - (void)operationDidFinish:(KTKDeviceGATTOperation * _Nonnull)operation errors:(NSArray<NSError *> * _Nullable)errors;
 - (void)finished:(NSArray<NSError *> * _Nullable)errors;
 - (nonnull instancetype)initWithOperations:(NSArray<NSOperation *> * _Nullable)operations OBJC_DESIGNATED_INITIALIZER;
@@ -1045,7 +1050,6 @@ SWIFT_PROTOCOL_NAMED("DeviceProlongableOperation")
 @end
 
 @class DeviceCCRequest;
-@class NSData;
 @class DeviceCCStorageReadRequest;
 @class DeviceCCGenericResponse;
 @class DeviceCCLogEvent;
