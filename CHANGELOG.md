@@ -1,5 +1,8 @@
 ## Changelog
 
+### v6.2.1 - 5 Sep 2025
+- Fixed Sensor Data parsing for low MTU devices
+
 ### v6.2.0 - 1 Sep 2025
 - Added parsing of accident data from telemetry
 - Minor fixes and improvements
