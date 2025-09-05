@@ -38,6 +38,11 @@ final class AccidentDataViewModel: NSObject, ObservableObject {
         }
     }
 
+    enum MonitoringMode: Equatable {
+        case proximity
+        case accident
+    }
+
     @Published var status = ConnectionState.disconnected {
         didSet {
             if status == .disconnected {
@@ -46,11 +51,18 @@ final class AccidentDataViewModel: NSObject, ObservableObject {
         }
     }
     @Published var connectedBeaconID: String?
-    @Published var accidentEvents: [AccidentFrame] = []
+    @Published var accidentEvent: AccidentFrame?
+    @Published var monitoringMode = MonitoringMode.accident {
+        didSet {
+            self.setupMonitoring(for: monitoringMode)
+        }
+    }
+    @Published var accelerometerData: [AccelerationSample] = []
 
     var beaconManager: KTKBeaconManager!
     let nearbyDevicesScanner = NearbyDevicesScanner()
-    let proximityUUID = UUID(uuidString: "F7826DA6-4FA2-4E98-8024-BC5B71E0893F")!
+    let proximityUUID = UUID(uuidString: "F7826DA6-4FA2-4E98-8024-BC5B71E0893E")!
+    let accidentUUID = UUID(uuidString: "57797061-6465-6B41-6C65-7274505A5521")!
 
     private var deviceConnection: KTKDeviceConnection?
     private var nearbyDevice: KTKNearbyDevice?
@@ -60,8 +72,18 @@ final class AccidentDataViewModel: NSObject, ObservableObject {
         super.init()
         beaconManager = KTKBeaconManager(delegate: self)
         beaconManager.requestLocationAlwaysAuthorization()
+    }
 
-        let region = KTKBeaconRegion(proximityUUID: proximityUUID, identifier: "accident-region")
+    func setupMonitoring(for mode: MonitoringMode) {
+        beaconManager.stopMonitoringForAllRegions()
+        beaconManager.stopRangingBeaconsInAllRegions()
+
+        let region = switch mode {
+        case .proximity:
+            KTKBeaconRegion(proximityUUID: proximityUUID, identifier: "proximity-region")
+        case .accident:
+            KTKBeaconRegion(proximityUUID: accidentUUID, identifier: "accident-region")
+        }
         beaconManager.startMonitoring(for: region)
     }
 
@@ -78,37 +100,17 @@ final class AccidentDataViewModel: NSObject, ObservableObject {
         deviceConnection = KTKDeviceConnection(nearbyDevice: nearbyDevice)
         deviceConnection?.delegate = self
 
-        readAccidentData()
+        readAccelerometerData()
     }
 
-    private func readAccidentData() {
-        guard let deviceConnection else {
-            print("Cannot read data: not connected to the beacon")
-            status = .disconnected
-            return
-        }
-
-        print("Reading accident data from the beacon...")
-        accidentEvents = []
-
-        deviceConnection.readAccidentEvents { [weak self] frame, error in
-            DispatchQueue.main.async {
-                if let error = error {
-                    self?.status = .error("BLE Error: \(error)")
-                    print("Error reading accident data: \(error)")
-                    return
-                }
-
-                if let frame {
-                    self?.processAccidentEvents(frame)
-                } else {
-                    print("No accident events found")
-                }
+    private func setupTelemetry(_ nearbyDevice: KTKNearbyDevice) {
+        nearbyDevice.onTelemetryChange = { telemetry in
+            DispatchQueue.main.async { [weak self] in
+                self?.accidentEvent = telemetry.accidentData
             }
         }
     }
 
-    // Alternative action after connecting to the beacon
     private func readAccelerometerData() {
         guard let deviceConnection else {
             print("Cannot read data: not connected to the beacon")
@@ -117,6 +119,7 @@ final class AccidentDataViewModel: NSObject, ObservableObject {
         }
 
         print("Reading accelerometer data from the beacon...")
+        accelerometerData = []
 
         deviceConnection.readAccelerometerData { [weak self] samples, error in
             DispatchQueue.main.async {
@@ -126,21 +129,16 @@ final class AccidentDataViewModel: NSObject, ObservableObject {
                     return
                 }
 
-                // process accelerometer samples
+                self?.accelerometerData = samples ?? []
             }
         }
     }
 
     func stopReadingData() {
-        deviceConnection?.stopCurrentListeningOperation()
         status = .disconnected
+        deviceConnection?.stopCurrentListeningOperation()
+        deviceConnection = nil
         connectedBeaconID = nil
-    }
-
-    private func processAccidentEvents(_ frame: AccidentFrame) {
-        // Keep only the last 10 events
-        accidentEvents.insert(frame, at: 0)
-        accidentEvents = Array(accidentEvents.prefix(10))
     }
 }
 
@@ -161,10 +159,13 @@ extension AccidentDataViewModel: KTKBeaconManagerDelegate {
     }
 
     func beaconManager(_ manager: KTKBeaconManager, didExitRegion region: KTKBeaconRegion) {
-        beaconManager.stopRangingBeacons(in: region)
+        beaconManager.stopRangingBeaconsInAllRegions()
     }
 
     func beaconManager(_ manager: KTKBeaconManager, didRangeBeacons beacons: [CLBeacon], in region: KTKBeaconRegion) {
+        guard region.proximityUUID == accidentUUID else {
+            return
+        }
         for beacon in beacons {
             var isCurrentlyActive = false
             if let previouslyRangedBeacon = rangedBeacons[beacon.beaconId],
@@ -200,6 +201,7 @@ extension AccidentDataViewModel: KTKBeaconManagerDelegate {
             Task {
                 for _ in 1...10 {
                     if let nearbyDevice = nearbyDevicesScanner.nearbyDevice(uniqueId: uniqueId) {
+                        setupTelemetry(nearbyDevice)
                         connectToBeacon(nearbyDevice)
                         return
                     }
@@ -243,7 +245,7 @@ extension AccidentDataViewModel: KTKDeviceConnectionDelegate {
         DispatchQueue.main.async {
             self.status = .disconnected
             self.connectedBeaconID = nil
-            self.accidentEvents = []
+            self.accelerometerData = []
         }
     }
 }
