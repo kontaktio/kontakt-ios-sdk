@@ -15,6 +15,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KontaktSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "DeviceCCStorageReadRequest",
         "printedName": "DeviceCCStorageReadRequest",
@@ -14035,6 +14045,20 @@
       "offset": 441,
       "length": 12,
       "value": "[0x95, 0xaf]"
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/DeviceSensorReadDataOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 624,
+      "length": 12,
+      "value": "\"#STARTACC#\""
+    },
+    {
+      "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/DeviceSensorReadDataOperation.swift",
+      "kind": "StringLiteral",
+      "offset": 675,
+      "length": 10,
+      "value": "\"#ENDACC#\""
     },
     {
       "filePath": "\/Users\/mkalinowski\/ios-kio\/KontaktSDK\/KontaktSDK\/KontaktSDK\/Device\/Connection\/Operations\/Sensor\/Model\/AccelerationSample.swift",
