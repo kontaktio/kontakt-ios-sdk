@@ -1,4 +1,4 @@
-# iOS SDK Quickstart
+# Kontakt iOS SDK
 
 ## Breaking changes notes
 
@@ -38,7 +38,9 @@ You can find our demos and sample code in [Examples folder](https://github.com/k
 
 This document shows you a quick way to start using the Kontakt.io SDK in location-aware apps. You will find code examples for core features and best practices that we recommend developers follow.
 
-You can find more detailed information in the [Appledocs](http://developer.kontakt.io/ios-sdk/appledocs/).
+You can find more detailed information on our [Developer Portal](https://developer.kontakt.io/docs/dev-ctr-sdks/e4ecea94e246f-what-are-kontakt-io-sd-ks).
+
+API documentation can be found on [Github Pages](http://kontaktio.github.io/kontakt-ios-sdk/)
 
 ## Installing the iOS SDK
 
@@ -52,20 +54,19 @@ You can add Kontakt.io SDK to an Xcode project by adding it as a package depende
 1. From the File menu, select Add Packages...
 2. Enter "https://github.com/kontaktio/kontakt-ios-sdk" into the package repository URL text field
 3. Add KontaktSDK directly to your application.
-
----
+4. Add `CBORCoding` dependency https://github.com/SomeRandomiOSDev/CBORCoding.git v1.4.0+
 
 ### Manually
 
 - Open up Terminal, `cd` into your top-level project directory, and run the following command *if* your project is not initialized as a git repository:
 
-``` bash
+```bash
 $ git init
 ```
 
 - Add Kontakt.io SDK as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
 
-``` bash
+```bash
 $ git submodule add https://github.com/kontaktio/kontakt-ios-sdk.git
 ```
 
@@ -79,6 +80,8 @@ $ git submodule add https://github.com/kontaktio/kontakt-ios-sdk.git
     
 - Select the `KontaktSDK.xcframework` and click `Add` button.
 
+- Add [CBORCoding](https://github.com/SomeRandomiOSDev/CBORCoding.git) dependency (either manually or using SPM) to fix linking errors.
+
 - (OPTIONAL) In the Build Phases tab, click the + button at the top and select “New Run Script Phase”. Enter the following code into the script text field:
 
 ```bash
@@ -89,55 +92,79 @@ bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/KontaktSDK.xcframework/ios
 
 ---
 
-### Swift
+### Further information
+The SDK utilizes `CoreLocation` and `CoreBluetooth` system frameworks.
+> Your project's Info.plist must contain following keys for your app to work correctly: 
 
-#### Generics and Nullability
-
-Our SDK uses nullability and generics annotations added in Xcode 13 which means that the Kontakt.io iOS SDK is very easy to use with swift.
-
-#### Bridging Header
-Create a new header file from the **File** menu and name it **<i>YourProjectName</i>-Bridging-Header.h**.
-
-Add the following import to your **<i>YourProjectName</i>-Bridging-Header.h**:
-
-``` Objective-C
-    #import <KontaktSDK/KontaktSDK.h>
+```Objective-C
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>Kontakt SDK would like to use your current location to monitor and range your devices and to update their last known location.</string>
+<key>NSBluetoothAlwaysUsageDescription</key>
+<string>Kontakt SDK would like to use bluetooth to configure and manage your devices.</string>
 ```
 
-
-###Further information
-> For your app to work correctly you have to add a new key to your project's plist file. 
-
-1.  In the project navigator, select your project. 
-2.  Select your projects **Info.plist** file 
-3.  Add the following key string pair to the file.
-
-``` Objective-C
-<key>NSLocationAlwaysUsageDescription</key>
-<string>Required for ios 8 compatibilty</string>
-```
-
-The string can be empty, the content is not important.
+Adjust the string value to your app's context.
 
 ## First steps
 
-New SDK requires API Key to be specified. You can get it by registering a free account at [https://panel.kontakt.io](http://panel.kontakt.io/signin).
+SDK requires API authorization keys/tokens that must be specified. There are two authentication methods - API Key and SSO Authentication token. We recommend using the latter as the most secure option.
 
-
+### Option 1 - API key authorization
+* Register a free account at [https://panel.kontakt.io](https://panel.kontakt.io/signin).
+* Click on your account icon in the top right corner and choose "Security"
+* Use the Server API Key value in your SDK setup code:
 
 **Objective-C**
 
-``` Objective-C
+```Objective-C
 #import <KontaktSDK/KontaktSDK.h>
 ```
 
-``` Objective-C
+```Objective-C
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 	// Set API Key
 	[Kontakt setAPIKey:@"Your API Key"];
 
-    // OR set Auth headers provider
+    return YES;
+}
+```
+
+**Swift**
+
+```Swift
+import KontaktSDK
+```
+
+```Swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+	
+	// Set API Key
+	Kontakt.setAPIKey("Your API Key")
+	
+	return true
+}
+```
+
+⚠️ Avoid hardcoding API key value directly in your code. Treat it as a secret password.
+
+### Option 2 - SSO Authentication token
+
+* Register a free account at [https://panel.kontakt.io](https://panel.kontakt.io/signin).
+* Contact our support to register your app and obtain dedicated client ID, issuer URL and redirect URL.
+* Create a new SSO session with Kio Cloud (See example below)
+* Extract authentication token from the session and use it in your SDK setup code:
+
+**Objective-C**
+
+```Objective-C
+#import <KontaktSDK/KontaktSDK.h>
+```
+
+```Objective-C
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    // Set Auth headers provider
     [Kontakt setAuthHeadersProvider:^(NSURLSession * _Nonnull urlSession, void (^ _Nonnull completion)(NSDictionary * _Nullable)) {
         NSDictionary *headers = @{@"Authorization": @"Bearer <accessToken>"};
         completion(headers);
@@ -149,26 +176,65 @@ New SDK requires API Key to be specified. You can get it by registering a free a
 
 **Swift**
 
-``` Swift
+```Swift
 import KontaktSDK
 ```
 
-``` Swift
+```Swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-	
-	// Set API Key
-	Kontakt.setAPIKey("Your API Key")
-
-    // OR set Auth headers provider
+    
+    // Set Auth headers provider
     Kontakt.setAuthHeadersProvider { urlSession, completion in
         var headers = ["Authorization": "Bearer <accessToken>"]
         completion(headers as [AnyHashable: Any])
     }
-	
-	return true
+    
+    return true
 }
 ```
 
+#### Obtaining Authentication token example
+The example code relies on [AppAuth](https://github.com/openid/AppAuth-iOS) framework.
+
+```Swift
+import AppAuth
+import Foundation
+
+func authorizeWithSSO(presenter: UIViewController) async throws -> String {
+    let issuer = "<your dedicated issuer URL>"
+
+    // discovers endpoints
+    let configuration: OIDServiceConfiguration
+    do {
+        configuration = try await OIDAuthorizationService.discoverConfiguration(forIssuer: issuer)
+    } catch {
+        throw error
+    }
+
+    // authentication request
+    let request = OIDAuthorizationRequest(
+        configuration: configuration,
+        clientId: "<your dedicated client ID>",
+        scopes: [OIDScopeOpenID, OIDScopeProfile, "offline_access"],
+        redirectURL: "<your dedicated redirect URL>",
+        responseType: OIDResponseTypeCode,
+        additionalParameters: nil
+    )
+
+    return try await withCheckedThrowingContinuation { [weak self] continuation in
+        DispatchQueue.main.async { [weak self] in
+            let authSession = OIDAuthState.authState(byPresenting: request, presenting: presenter, prefersEphemeralSession: true) { authState, error in
+                if let authState,
+                   let accessToken = authState.lastTokenResponse?.accessToken {
+                    continuation.resume(returning: accessToken)
+                } else {
+                    continuation.resume(throwing: error)
+                }
+            }
+        }
+    }
+}
+```
 
 ## Interacting with Beacons - monitoring a region
 In the following example we'll show you how to can create a simple application to monitor beacons for a specific region using the Kontakt.io SDK.
@@ -176,55 +242,45 @@ In the following example we'll show you how to can create a simple application t
 ---
 
 ### Basic Setup
-In our example, we have used the **AppDelegate.m** class for simplicity. You would probably want to create your own class in a real application. 
+In our example, we have used the **AppDelegate.swift** class for simplicity. You would probably want to create your own class in a real application. 
 
 First we'll import the Kontakt.io SDK.
 
-``` Objective-C
-#import <KontaktSDK/KontaktSDK.h>
+```Swift
+import KontaktSDK
 ```
 
-We'll add the [KTKBeaconManager](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKBeaconManager.html) object as a property. 
+We'll add the [KTKBeaconManager](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKBeaconManager.html) object as a property. 
 
 KTKBeaconManager informs its delegates when a device enters or exits a region, and when beacons are ranged.
 
-``` Objective-C
-@property KTKBeaconManager *beaconManager;
-```
-
----
-
 Make sure `AppDelegate` conforms to `KTKBeaconManagerDelegate` protocol.
-
-``` Objective-C
-@interface AppDelegate () <KTKBeaconManagerDelegate>
-```
 
 ---
 
 We will use `application:didFinishLaunchingWithOptions:` to initiate beacon manager and start monitoring for region.
 
-``` Objective-C
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+```Swift
+var beaconManager: KTKBeaconManager!
 
-	// Set API Key
-	[Kontakt setAPIKey:@"Your API Key"];
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+    // Set API Key
+    Kontakt.setAPIKey("Your API Key")
 
     // OR set Auth headers provider
-    [Kontakt setAuthHeadersProvider:^(NSURLSession * _Nonnull urlSession, void (^ _Nonnull completion)(NSDictionary * _Nullable)) {
-        NSDictionary *headers = @{@"Authorization": @"Bearer <accessToken>"};
-        completion(headers);
-    }];
-	
-	// Initiate Beacon Manager
-	self.beaconManager = [[KTKBeaconManager alloc] initWithDelegate:self];
-	
-	// Request Location Authorization
-	[self.beaconManager requestLocationAlwaysAuthorization];
-	
-	...
-	
-    return YES;
+    Kontakt.setAuthHeadersProvider { urlSession, completion in
+        var headers = ["Authorization": "Bearer <accessToken>"]
+        completion(headers as [AnyHashable: Any])
+    }
+
+    // Initiate Beacon Manager
+    self.beaconManager = KTKBeaconManager(delegate: self)
+
+    // Request Location Authorization
+    self.beaconManager.requestLocationAlwaysAuthorization()
+
+    return true
 }
 ```
 
@@ -232,16 +288,16 @@ We will use `application:didFinishLaunchingWithOptions:` to initiate beacon mana
 
 You can test if the current device is capable of monitoring beacons using:
 
-``` Objective-C
-if ([KTKBeaconManager isMonitoringAvailable]) {
+```Swift
+if KTKBeaconManager.isMonitoringAvailable {
 	
 }
 ```
 
 or check authorization status using:
 
-``` Objective-C
-if ([KTKBeaconManager locationAuthorizationStatus] == kCLAuthorizationStatusAuthorizedAlways) {
+```Swift
+if KTKBeaconManager.locationAuthorizationStatus == .authorizedAlways {
 	
 }
 ```
@@ -250,223 +306,145 @@ if ([KTKBeaconManager locationAuthorizationStatus] == kCLAuthorizationStatusAuth
 
 Now we'll start monitoring a specific region.
 
-For more information on [KTKBeaconRegion](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKBeaconRegion.html) see Appledoc.
+For more information on [KTKBeaconRegion](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKBeaconRegion.html) see Appledoc.
 
 > Regions define a set of beacons that your application is aware of, so the beacon manager will interact only with those beacons.
 
-``` Objective-C
+```Swift
 // Kontakt.io proximity UUID
-NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:@"f7826da6-4fa2-4e98-8024-bc5b71e0893e"]; 
+let proximityUUID = try! UUID(value: "f7826da6-4fa2-4e98-8024-bc5b71e0893e") // KTKKontaktProximityUUID
 
 // Create region instance
-KTKBeaconRegion *region = [[KTKBeaconRegion alloc] initWithProximityUUID: proximityUUID identifier:@"identifier"];
+let region = KTKBeaconRegion(proximityUUID: proximityUUID, identifier:"identifier")
 
 // Start Monitoring
-[self.beaconManager startMonitoringForRegion: region];
+self.beaconManager.startMonitoring(for: region)
 
 // You can also start ranging ...
-[self.beaconManager startRangingBeaconsInRegion: region];
+self.beaconManager.startRangingBeacons(in: region)
 ```
 
 ### Secure Beacon Region
 
 Secure beacon region is very similar to standard beacon region.
-For more information on [KTKSecureBeaconRegion](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKSecureBeaconRegion.html) see Appledoc.
+For more information on [KTKSecureBeaconRegion](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKSecureBeaconRegion.html) see Appledoc.
 
-Read more about security and shuffling on our [support page](https://support.kontakt.io/hc/en-gb/sections/201612029).
+Read more about security and shuffling on our [support page](https://support.kontakt.io/hc/en-gb/articles/4413258529554-About-Secure-Shuffling).
 
-> You can find your beacon's Secure Proximity UUID in Kontakt.io Web Panel (in the Security Section).
+> You can find your beacon's Secure Proximity UUID in Kontakt.io Device Management Web Panel (in the beacon's Security Tab).
 
-``` Objective-C
+```Swift
 // Your secure proximity UUID
-NSUUID *secureProximityUUID = [[NSUUID alloc] initWithUUIDString:@"00000000-0000-0000-0000-00000000"]; 
+let secureProximityUUID = try! UUID(value: "00000000-0000-0000-0000-00000000")
 
 // Create secure region instance
-KTKSecureBeaconRegion *region = [[KTKSecureBeaconRegion alloc] initWithSecureProximityUUID:secureProximityUUID identifier:@"identifier_secure"];
+let region = KTKSecureBeaconRegion(secureProximityUUID: secureProximityUUID, identifier:"identifier_secure")
 ```
 
 You can also use an unsecure proximity UUID and it will be translated to the secure proximity by calling Cloud API under the hood.
 
-``` Objective-C
+```Swift
 // Kontakt.io proximity UUID
-NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:@"f7826da6-4fa2-4e98-8024-bc5b71e0893e"]; 
+let proximityUUID = try! UUID(value: "f7826da6-4fa2-4e98-8024-bc5b71e0893e") // KTKKontaktProximityUUID
 
 // Create secure region instance with your non secure proximity 
-KTKSecureBeaconRegion *region = [[KTKSecureBeaconRegion alloc] initWithProximityUUID: proximityUUID identifier:@"identifier"];
+let region = KTKSecureBeaconRegion(proximityUUID: proximityUUID, identifier:"identifier")
 ```
 
 ### Delegate Calls
 
 Now we'll add the the delegate methods for beaconManager, and get them to log some output.
-All delegate methods can be found in [KTKBeaconManagerDelegate](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Protocols/KTKBeaconManagerDelegate.html) documentation.
+All delegate methods can be found in [KTKBeaconManagerDelegate](https://kontaktio.github.io/kontakt-ios-sdk/docs/Protocols/KTKBeaconManagerDelegate.html) documentation.
 
-``` Objective-C
-- (void)beaconManager:(KTKBeaconManager*)manager didChangeLocationAuthorizationStatus:(CLAuthorizationStatus)status;
-{
+```Swift
+func beaconManager(_ manager: KTKBeaconManager, didChangeLocationAuthorizationStatus status: CLAuthorizationStatus) {
 	// ...
 }
 
-- (void)beaconManager:(KTKBeaconManager*)manager didEnterRegion:(__kindof KTKBeaconRegion*)region
-{
-    NSLog(@"Enter region %@", region);
+func beaconManager(_ manager: KTKBeaconManager, didEnter region: KTKBeaconRegion) {
+    print("Enter region \(region)")
 }
 
-- (void)beaconManager:(KTKBeaconManager*)manager didExitRegion:(__kindof KTKBeaconRegion*)region
-{
-    NSLog(@"Exit region %@", region);
+func beaconManager(_ manager: KTKBeaconManager, didExit region: KTKBeaconRegion) {
+    print("Exit region \(region)")
 }
 
-- (void)beaconManager:(KTKBeaconManager*)manager didRangeBeacons:(NSArray <CLBeacon *>*)beacons inRegion:(__kindof KTKBeaconRegion*)region
-{
-    NSLog(@"Ranged beacons count: %lu", [beacons count]);
+func beaconManager(_ manager: KTKBeaconManager, didRangeBeacons beacons: [CLBeacon], in region: KTKBeaconRegion) {
+    print("Ranged beacons count: \(beacons.count)"
 }
 ```
 
 ---
-
-When using **Swift** the final class should look like the following:
-
-``` Swift
-import UIKit
-import KontaktSDK
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-    
-    var beaconManager: KTKBeaconManager!
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        // Set API Key
-        Kontakt.setAPIKey("API Key")
-
-        // OR set Auth headers provider
-        Kontakt.setAuthHeadersProvider { urlSession, completion in
-            var headers = ["Authorization": "Bearer <accessToken>"]
-            completion(headers as [AnyHashable: Any])
-        }
-        
-        // Initiate Beacon Manager
-        beaconManager = KTKBeaconManager(delegate: self)
-        beaconManager.requestLocationAlwaysAuthorization()
-        
-        // Region
-        let proximityUUID = NSUUID(UUIDString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
-        let region = KTKBeaconRegion(proximityUUID: proximityUUID!, identifier: "region")
-        
-        // Start Monitoring and Ranging
-        beaconManager.startMonitoringForRegion(region)
-        beaconManager.startRangingBeaconsInRegion(region)
-        
-        return true
-    }
-}
-
-extension AppDelegate: KTKBeaconManagerDelegate {
-    
-    func beaconManager(manager: KTKBeaconManager, didChangeLocationAuthorizationStatus status: CLAuthorizationStatus) {
-        
-    }
-    
-    func beaconManager(manager: KTKBeaconManager, didEnterRegion region: KTKBeaconRegion) {
-        print("Enter region \(region)")
-    }
-    
-    func beaconManager(manager: KTKBeaconManager, didExitRegion region: KTKBeaconRegion) {
-        print("Exit region \(region)")
-    }
-    
-    func beaconManager(manager: KTKBeaconManager, didRangeBeacons beacons: [CLBeacon], inRegion region: KTKBeaconRegion) {
-        print("Ranged beacons count: \(beacons.count)")
-    }
-}
-```
-
-### Run the project
-> You won't be able to run apps that use Apple Core Location services (that includes our SDK) on the Simulator, so first, you'll need to connect a physical iOS device to run your app.
-
-1.  Connect an iOS device to your Mac.
-2.  In the project navigator, choose your device from the scheme pop-up menu.
-    Xcode assumes you intend to use the selected device for development and automatically registers it for you.
-3.  Click the Run button.
-
-Check out Apple's guide to [Launching Your App on Devices](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html) for more details.
 
 ## Eddystone support
 
 **KTKEddystoneManager** is key to retrieving Eddystone format beacon information. 
 `KTKEddystoneManager` can discover nearby Eddystone format devices using regions/filters to narrow results.
 
-``` Objective-C
+```Swift
+import UIKit
+import KontaktSDK
 
-@interface ViewController () <KTKEddystoneManagerDelegate>
-
-@property KTKEddystoneManager *eddystoneManager;
-
-@property KTKEddystoneRegion *namespaceRegion;
-@property KTKEddystoneRegion *domainRegion;
-@property KTKSecureEddystoneRegion *secureNamespaceRegion;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	
-	// Eddystone Manager	        
-   	self.eddystoneManager = [[KTKEddystoneManager alloc] initWithDelegate:self];
+class ViewController: UIViewController, KTKEddystoneManagerDelegate {
+    
+    var eddystoneManager: KTKEddystoneManager!
+    
+    var namespaceRegion: KTKEddystoneRegion!
+    var domainRegion: KTKEddystoneRegion!
+    var secureNamespaceRegion: KTKSecureEddystoneRegion!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Eddystone Manager
+        eddystoneManager = KTKEddystoneManager(delegate: self)
+    }
 }
 ```
 
 ### Discover Eddystone devices
 In this example we will start discovering Eddystone devices in `viewWillAppear:` method and stop in `viewWillDisappear:`.
 
-``` Objective-C
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
- 	 	
- 	// If should scan for all nearby Eddystones
- 	// Passing nil will look for all regions
-    [self.eddystoneManager startEddystoneDiscoveryInRegion:nil];
+```Swift
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // If should scan for all nearby Eddystones
+    // Passing nil will look for all regions
+    eddystoneManager.startEddystoneDiscovery(in: nil)
     
     // Scan for Eddystones with specific namespace ID
-    self.namespaceRegion = [[KTKEddystoneRegion alloc] initWithNamespaceID:@"namespaceID"];
-    [self.eddystoneManager startEddystoneDiscoveryInRegion: self.namespaceRegion];
+    namespaceRegion = KTKEddystoneRegion(namespaceID: "namespaceID")
+    eddystoneManager.startEddystoneDiscovery(in: namespaceRegion)
     
-    // Scan for Eddystone with specific domain in url
-    self.domainRegion = [[KTKEddystoneRegion alloc] initWithURLDomain:@"github.com"];    
-    [self.eddystoneManager startEddystoneDiscoveryInRegion: self.domainRegion];
+    // Scan for Eddystone with specific domain in URL
+    domainRegion = KTKEddystoneRegion(urlDomain: "github.com")
+    eddystoneManager.startEddystoneDiscovery(in: domainRegion)
     
     // Scan for Secure Namespace Region
-    self.secureNamespaceRegion = [[KTKSecureEddystoneRegion alloc] initWithSecureNamespaceID:@"secure_namespace_id"];    
-    [self.eddystoneManager startEddystoneDiscoveryInRegion: self.secureNamespaceRegion];
+    secureNamespaceRegion = KTKSecureEddystoneRegion(secureNamespaceID: "secure_namespace_id")
+    eddystoneManager.startEddystoneDiscovery(in: secureNamespaceRegion)
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{    
-    [super viewWillDisappear:animated];
-
-    // Stop 
-    [self.eddystoneManager stopEddystoneDiscoveryInAllRegions];
+override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
     
-    // ... or you can just stop for one specific region by using
-    [self.eddystoneManager stopEddystoneDiscoveryInRegion: self.domainRegion];
+    // Stop
+    eddystoneManager.stopEddystoneDiscoveryInAllRegions()
+    
+    // ... or you can just stop for one specific region
+    eddystoneManager.stopEddystoneDiscovery(in: domainRegion)
 }
 ```
 
-Read more about security and shuffling on our [support page](https://support.kontakt.io/hc/en-gb/sections/201612029).
+Read more about security and shuffling on our [support page](https://support.kontakt.io/hc/en-gb/articles/4413258529554-About-Secure-Shuffling).
 
 ### KTKEddystoneManagerDelegate
-All delegate methods can be found in [KTKEddystoneManagerDelegate](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Protocols/KTKEddystoneManagerDelegate.html) documentation.
+All delegate methods can be found in [KTKEddystoneManagerDelegate](https://kontaktio.github.io/kontakt-ios-sdk/docs/Protocols/KTKEddystoneManagerDelegate.html) documentation.
 
-``` Objective-C
-- (void)eddystoneManager:(KTKEddystoneManager *)manager didDiscoverEddystones:(NSSet <KTKEddystone*>*)eddystones inRegion:(__kindof KTKEddystoneRegion* _Nullable)region
-{
-	if ([region isEqual:self.domainRegion]) {
+```Objective-C
+func eddystoneManager(_ manager: KTKEddystoneManager, didDiscoverEddystones eddystones: Set<KTKEddystone>, inRegion region: KTKEddystoneRegion?) {
+	if region == self.domainRegion {
 		// Eddystone discovered with URL in `github.com` domain ...
 	}
 }
@@ -476,39 +454,39 @@ All delegate methods can be found in [KTKEddystoneManagerDelegate](http://kontak
 
 ## Communicating with the Kontakt.io Rest API
 
-The [Kontakt.io Rest API](/rest-api/stable/quickstart/) provides a series of resources to query/update our cloud platform and allow you to manage your venues and beacons, and retrieve beacon actions.
+⚠️ **DEPRECATION:** All Cloud communication will be moved to a separate package in future versions.
 
-Class responsible for communication with API is [KTKCloudClient](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKCloudClient.html). 
+The [Kontakt.io Rest API](https://developer.kontakt.io/docs/dev-ctr-device-api/a09dcbf0d03de-device-management-api-introduction) provides a series of resources to query/update our cloud platform and allow you to manage your venues and beacons, and retrieve beacon actions.
+
+Class responsible for communication with API is [KTKCloudClient](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKCloudClient.html). 
 
 You can initialize it by calling ...
 
-``` Objective-C
+```Objective-C
 KTKCloudClient *client = [KTKCloudClient new];
 ```
 
 or use shared instance (singleton) used by the SDK API calls ...
 
-``` Objective-C
+```Objective-C
 KTKCloudClient *client = [KTKCloudClient sharedInstance];
 ```
 
 If specific `NSURLSessionConfiguration` configuration is required you can use:
 
-``` Objective-C
+```Objective-C
 KTKCloudClient *client = [[KTKCloudClient alloc] initWithSessionConfiguration: ...];
 ```
 
 API Key must be provided before calling any method from `KTKCloudClient`.
 
-``` Objective-C
+```Objective-C
 [Kontakt setAPIKey:@"Your API Key"];
 ```
 
-[Get your API key](/rest-api/stable/quickstart#get-your-api-key)
+Alternatively, if you use other authentication method like SSO, you can set a block in `Konktat.setAuthHeadersProvider` that obtains up-to-date token and calls `completion` with a dictionary containing HTTP headers that will be uses in each request made by `KTKCloudClient`. (See `First steps` section)
 
-Alternatively, if you use other authentication method like SSO, you can set a block in `Konktat.setAuthHeadersProvider` that obtains up-to-date token and calls `completion` with a dictionary containing HTTP headers that will be uses in each request made by `KTKCloudClient`.
-
-``` Objective-C
+```Objective-C
 [Kontakt setAuthHeadersProvider:^(NSURLSession * _Nonnull urlSession, void (^ _Nonnull completion)(NSDictionary * _Nullable)) {
     NSDictionary *headers = @{@"Authorization": @"Bearer <accessToken>"};
     completion(headers);
@@ -523,7 +501,7 @@ Getting list of devices is as simple as ...
 
 **Objective-C**
 
-``` Objective-C
+```Objective-C
 [[KTKCloudClient sharedInstance] getObjects:[KTKDevice class] completion:^(KTKKontaktResponse * _Nullable response, NSError * _Nullable error) {
 	NSLog(@"%@". [response objects]);
 }];
@@ -531,7 +509,7 @@ Getting list of devices is as simple as ...
 
 or in **Swift**
 
-``` Objective-C
+```Objective-C
 KTKCloudClient.sharedInstance().getObjects(KTKDevice.self) { response, error in
 	print(response?.objects)
 }
@@ -544,17 +522,17 @@ KTKCloudClient.sharedInstance().getObjects(KTKVenue.self) { response, error in
 
 To create, update or delete objects you can use one of provided methods:
 
-* [createObject:completion:](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKCloudClient.html#//api/name/createObject:completion:)
-* [updateObject:completion:](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKCloudClient.html#//api/name/updateObject:completion:)
-* [deleteObject:completion:](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKCloudClient.html#//api/name/deleteObject:completion:) or [deleteObject:primaryKey:completion:](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKCloudClient.html#//api/name/deleteObject:primaryKey:completion:)
+* [createObject:completion:](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKCloudClient.html#//api/name/createObject:completion:)
+* [updateObject:completion:](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKCloudClient.html#//api/name/updateObject:completion:)
+* [deleteObject:completion:](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKCloudClient.html#//api/name/deleteObject:completion:) or [deleteObject:primaryKey:completion:](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKCloudClient.html#//api/name/deleteObject:primaryKey:completion:)
 
 All classes representing objects from the API conforms to protocol `KTKCloudModel`.
 
 ### Responses from KTKCloudClient
 
-All Cloud Client responses are wrapped with [KTKKontaktResponse](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKKontaktResponse.html). `KTKKontaktResponse` provides more context for the result. You can for example get next set of the results using `nextResultsURL` property like:
+All Cloud Client responses are wrapped with [KTKKontaktResponse](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKKontaktResponse.html). `KTKKontaktResponse` provides more context for the result. You can for example get next set of the results using `nextResultsURL` property like:
 
-``` Objective-C
+```Objective-C
 // Get Device by unique ID ...
 NSDictionary *parameters = @{ @"uniqueId": @"K0nT" };
 
@@ -572,12 +550,12 @@ NSDictionary *parameters = @{ @"uniqueId": @"K0nT" };
 
 If there is a custom call you would like to make to the API you can use:
 
-* [GET:parameters:completion:](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKCloudClient.html#//api/name/GET:parameters:completion:)
-* [POST:parameters:completion:](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKCloudClient.html#//api/name/POST:parameters:completion:)
+* [GET:parameters:completion:](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKCloudClient.html#//api/name/GET:parameters:completion:)
+* [POST:parameters:completion:](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKCloudClient.html#//api/name/POST:parameters:completion:)
 
 Both methods take endpoint name parameter and HTTP parameters dictionary. 
 
-You can find more information in the Appledocs [KTKCloudClient](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKCloudClient.html) class reference.
+You can find more information in the Appledocs [KTKCloudClient](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKCloudClient.html) class reference.
 
 ---
 
@@ -585,40 +563,38 @@ You can find more information in the Appledocs [KTKCloudClient](http://kontaktio
 
 The Kontakt.io iOS SDK contains classes and methods that let you easily connect to a Kontakt.io device, read its parameters, and modify some of them. First however, you need to scan for nearby devices.
 
-``` Objective-C
-@property KTKDevicesManager *devicesManager;
-...
-self.devicesManager = [[KTKDevicesManager alloc] initWithDelegate: self];
+```Swift
+let devicesManager = KTKDevicesManager(delegate: self)
 
 // Enable automatic device telemetry uploads (optional)
-self.devicesManager.uploadingTelemetry = YES;
+devicesManager.uploadingTelemetry = true
 
-// Calling `startDevicesDiscoveryWithInterval:` will report devices every `interval` value you specify.
-[self.devicesManager startDevicesDiscoveryWithInterval:2.0];
+// Calling `startDevicesDiscovery(interval:)` will report devices every `interval` value (in seconds) you specify.
+devicesManager.startDevicesDiscovery(interval: 2.0)
 
-// Calling `startDevicesDiscovery` will report devices in real time.
-[self.devicesManager startDevicesDiscovery];
+// Calling `startDevicesDiscovery()` instead will report devices in real time.
+devicesManager.startDevicesDiscovery()
 ```
 
-[KTKDevicesManager](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKDevicesManager.html) informs its delegate about devices currently in range.
+[KTKDevicesManager](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKDevicesManager.html) informs its delegate about devices currently in range.
 
-All delegate methods can be found in [KTKDevicesManagerDelegate](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Protocols/KTKDevicesManagerDelegate.html) documentation.
+All delegate methods can be found in [KTKDevicesManagerDelegate](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKDevicesManagerDelegate.html) documentation.
 
-``` Objective-C
-#pragma mark - KTKDevicesManagerDelegate method
+```Swift
+// MARK: - KTKDevicesManagerDelegate method
 
-- (void)devicesManager:(KTKDevicesManager*)manager didDiscoverDevices:(NSArray <KTKNearbyDevice*>* _Nullable)devices;
+func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]) {
     // Do something with devices.
 }
 ```
 
-Nearby Devices discovered by [KTKDevicesManager](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKDevicesManager.html) are of [KTKNearbyDevice](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKNearbyDevice.html) class.
+Nearby Devices discovered by [KTKDevicesManager](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKDevicesManager.html) are of [KTKNearbyDevice](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKNearbyDevice.html) class.
 
-Changing [KTKNearbyDevice](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKNearbyDevice.html) configuration requires [KTKDeviceConnection](http://kontaktio.github.io/kontakt-ios-sdk/Documentation/html/Classes/KTKDeviceConnection.html) and it is as simple as:
+Changing [KTKNearbyDevice](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKNearbyDevice.html) configuration requires [KTKDeviceConnection](https://kontaktio.github.io/kontakt-ios-sdk/docs/Classes/KTKDeviceConnection.html) and it is as simple as:
 
 **Objective-C**
 
-``` Objective-C
+```Objective-C
 // Create Configuration
 KTKDeviceConfiguration *configuration = [KTKDeviceConfiguration new];
 configuration.name = @"Disco Beacon";
@@ -636,7 +612,7 @@ KTKDeviceConnection *connection = [[KTKDeviceConnection alloc] initWithNearbyDev
 
 **Swift**
 
-``` Swift
+```Swift
 // Create Configuration
 let configuration = KTKDeviceConfiguration()
         
@@ -653,7 +629,45 @@ deviceConnection.writeConfiguration(configuration) { synchronized, configuration
 }
 ```
 
-More code samples and scenarios will be covered in our sample project on [github](https://github.com/kontaktio/kontakt-ios-sdk).
+More code samples and scenarios is covered in our sample project on [github](https://github.com/kontaktio/kontakt-ios-sdk).
+
+---
+
+## Troubleshooting
+
+Kontakt SDK provides some API methods that can help troubleshoot issues related to SDK functionality. They can also be used to forward additional debug information to 3rd party bug reporting tools (like Luciq or Sentry). The following methods report SDK's interal messages and data that can provide more context for troubleshooting process. These infomation, however, should be used as a **secondary source** after inspecting errors reported by main API's callbacks and delegate methods.
+
+### Debug logs
+
+Use `Kontakt.setDebugLogsProxy` to get debug level messages from the SDK.  
+Use `Kontakt.setErrorLogsProxy` to get error level messages from the SDK.  
+
+
+```Swift
+Kontakt.setDebugLogsProxy { logMessage, fileName, functionName, lineNumber in
+    let formattedMessage = "KontaktSDK >>> [DEBUG][\(fileName)|\(lineNumber)] ➡ \(logMessage)"
+    print(formattedMessage)
+}
+Kontakt.setErrorLogsProxy { logMessage, fileName, functionName, lineNumber in
+    let formattedMessage = "KontaktSDK >>> [ERROR][\(fileName)|\(lineNumber)] ➡ \(logMessage)"
+    print(formattedMessage)
+}
+```
+
+### Cloud API events
+
+`Kontakt.setNetworkEventHandler` can be used to read requests and responses sent to Kontakt.io Cloud API by the SDK.
+
+```Swift
+Kontakt.setNetworkEventHandler { response, data, request, duration in
+    guard let httpResponse = response as? HTTPURLResponse else {
+        return
+    }
+
+    print("[\(request.httpMethod)](\(httpResponse.statusCode)) \(request.url?.absoluteString ?? "")")
+}
+
+```
 
 ## Microlocating vs Bluetooth
 

@@ -59,6 +59,11 @@
 - Fixed sync internal state operation
 - Using online secure profile generation by default
 
+### 3.1.0 - 27 Nov 2023
+- Added support for new devices
+- Added public method to synchronize time with devices
+- Fixed diagnostic service for Portal Light
+
 ### v3.0.26 - 4 Nov 2022
 - Added support for new devices
 - Added Diagnostic service for Portal Light
