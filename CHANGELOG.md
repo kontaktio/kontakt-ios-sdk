@@ -1,5 +1,35 @@
 ## Changelog
 
+### v7.0.0 - 25 Jul 2026
+- **Full rewrite of the SDK from Objective-C to Swift.** All public types dropped the `KTK` prefix (e.g. `KTKBeaconManager` → `BeaconManager`), and `DeviceConnection`/`DeviceGatewayConnection` completion-handler methods were converted to `async`/`await`. See the [Breaking changes notes](README.md#700--migration-guide-objective-c--swift-rewrite) in the README for a migration guide.
+- Objective-C support has been dropped for most of the SDK — see the migration guide for details.
+- Added Disaster Recovery (DR) Cloud US environment support
+- Added `dispenserModel` property to device configuration
+- Added new `ElementId` case and Temperature Monitor sensor-state v2 data support
+- Added support for Universal and ES10 Dispenser Beacons
+- Added support for reading probe serial numbers
+- Added retry logic to DFU command operations
+- `NetworkEventHandler` callback now includes URL configuration headers
+- Improved debug log descriptions/coverage
+- Updated DFU-related user-facing copy strings
+- Fixed `footfallLine` value transformer registered under the wrong key
+- Fixed crash from setting `DeviceConfiguration.rtcDate` with the wrong type via KVC
+- Fixed device-connection hang caused by a GATT operation overload collision
+- Fixed a race between session invalidation and task creation in the cloud client
+- Restored the authorize step in gateway diagnostic reads (regression introduced during the rewrite, fixed before release)
+- Fixed a misaligned-pointer crash in shuffle subdomain computation
+- Fixed thermal image metadata parsing
+- Fixed a crash by adding `NSCopying` conformance to accident telemetry data
+- Fixed unsigned Q9.7 temperature parsing and alarm nibble masks
+- Fixed device model parsing
+- Fixed firmware version parsing to handle build metadata
+- Fixed timestamp parsing from the location frame
+- Fixed a crash during the DFU process
+- Fixed crashes when collecting BLE logs
+- Restored missing initializers in `SecureBeaconRegion` (regression introduced during the rewrite, fixed before release)
+- Adjusted Temperature Monitor telemetry parsing for firmware changes
+- Fixed incorrect decoding type causing a cache crash
+
 ### v6.2.1 - 5 Sep 2025
 - Fixed Sensor Data parsing for low MTU devices
 
