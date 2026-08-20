@@ -1,0 +1,55 @@
+/*
+ Localizable.strings
+ KontaktSDK
+ */
+
+/* Error Descriptions */
+"device_connection_connect_timeout"                                             = "Connection Timeout";
+"device_connection_timeout_while_evaluating_gatt"                       		= "Timeout while evaluating GATT.";
+"device_connection_timeout_while_waiting_for_dfu_reconnect"             		= "Timeout while waiting for DFU to start.";
+"device_connection_connect_failed"                                      		= "Connection Failed";
+"device_connection_dfu_legacy_cancelled"                                		= "DFU operation was cancelled (Legacy Firmware).";
+"device_connection_dfu_secure_cancelled"                                		= "DFU operation was cancelled.";
+"device_connection_firmware_update_invalid_identifiers"                 		= "Firmware upgrade invalid identifiers.";
+"device_connection_firmware_update_cancelled"                           		= "Firmware upgrade was cancelled.";
+"device_connection_disconnected_from_dfu"                               		= "Disconnected from DFU.";
+"device_connection_failed_downloading_credentails"                      		= "Failed while downloading device credentails.";
+"device_connection_legacy_authorization_cancelled"                      		= "Authorization was cancelled (Legacy Firmware).";
+"device_connection_legacy_authorization_password_error"                 		= "Device password is incorrect (Legacy Firmware).";
+"device_connection_legacy_read_configuration_cancelled"                 		= "Read configuration was cancelled (Legacy Firmware).";
+"device_connection_legacy_write_configuration_cancelled"                		= "Write configuration was cancelled (Legacy Firmware).";
+"device_connection_legacy_write_configuration_acknowledge_timeout"      		= "Timeout while updating cloud API (Legacy Firmware).";
+"device_connection_secure_read_configuration_cancelled"                 		= "Read configuration was cancelled.";
+"device_connection_secure_read_configuration_missing_secure_response"   		= "Read configuration result is missing secure response.";
+"device_connection_secure_read_configuration_decrypt_timeout"           		= "Read configuration decryption timeout.";
+"device_connection_secure_write_configuration_missing_secure_response"  		= "Write configuration is missing secure response.";
+"device_connection_secure_write_configuration_missing_secure_request"   		= "Write configuration is missing secure request.";
+"device_connection_secure_write_configuration_missing_unique_id"        		= "Write configuration missing uniqueID parameter.";
+"device_connection_secure_write_configuration_cancelled"                		= "Write configuration was cancelled.";
+"device_connection_secure_write_configuration_acknowledge_timeout"      		= "Timeout while updating cloud API.";
+"device_connection_firmware_not_supported_write_operation"              		= "This firmware version does not yet support write operation.";
+"device_connection_firmware_not_supported_read_operation"               		= "This firmware version does not yet support read operation.";
+"device_connection_firmware_not_supported_update_operation"             		= "This firmware version does not yet support update operation.";
+"device_connection_kontakt_dfu_invalid_authorization"                   		= "Firmware upgrade authorization failed.";
+"device_connection_kontakt_dfu_command_cancelled"                       		= "Firmware upgrade was cancelled.";
+"device_connection_kontakt_dfu_response_error"                                  = "Firmware upgrade transaction failed.";
+"device_connection_firmware_device_is_shuffled"                             	= "Firmware upgrade is disabled for shuffled devices.";
+"device_connection_firmware_update_in_progress"									= "Firmware upgrade in progress. Cannot queue another operation.";
+"device_connection_firmware_not_available"                                      = "Couldn't fetch firmware version";
+"device_connection_secure_read_configuration_missing_credentials_or_request"	= "";
+"device_connection_secure_read_configuration_missing_configuration"				= "";
+"device_connection_secure_write_configuration_offline_shuffle_on"				= "";
+"device_connection_secure_write_configuration_offline_missing_request"			= "";
+"device_connection_kontakt_image_invalid_authorization"                         = "Get Image authorization failed.";
+"device_connection_features_write_configuration_cancelled"                      = "Write features operation was cancelled.";
+"device_connection_secure_reboot_failed"                                        = "Device reboot oparation failed.";
+"device_connection_not_supported_model"                                         = "This operation is not allowed for current device model.";
+"device_gateway_connection_read_networks_cancelled"                             = "Read WiFi networks operation was cancelled.";
+"device_gateway_connection_read_details_cancelled"                              = "Read WiFi network details operation was cancelled.";
+"device_gateway_connection_not_supported_model"                                 = "This operation is only allowed on Kontakt.io's Gateway device.";
+"device_data_logger_connection_read_sector_cancelled"                           = "Data Logger Read Sector operation was cancelled.";
+"device_data_logger_connection_read_sector_missing_header"                      = "Data Logger Read Sector operation is missing data header.";
+"device_data_logger_connection_clear_cancelled"                                 = "Data Logger Clear operation was cancelled.";
+"device_connection_accident_read_data_cancelled"                                = "Accident Data Read operation was cancelled.";
+"device_connection_sensor_read_data_cancelled"                                  = "Sensor Data Read operation was cancelled.";
+"device_connection_blink_cancelled"                                             = "Blink operation was cancelled.";
