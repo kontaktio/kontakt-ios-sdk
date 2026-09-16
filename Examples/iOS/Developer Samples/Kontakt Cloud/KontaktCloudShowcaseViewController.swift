@@ -25,7 +25,7 @@ class KontaktCloudShowcaseViewController: UIViewController {
     // =========================================================================
     // MARK: - Vars
     
-    var kontaktCloud: KTKCloudClient!
+    var kontaktCloud: CloudClient!
     
     // =========================================================================
     // MARK: - UIViewController
@@ -35,7 +35,7 @@ class KontaktCloudShowcaseViewController: UIViewController {
         setupView()
         
         // Initialize Kontakt Cloud Client
-        kontaktCloud = KTKCloudClient()
+        kontaktCloud = CloudClient()
     }
 
     // =========================================================================
@@ -43,65 +43,65 @@ class KontaktCloudShowcaseViewController: UIViewController {
     
     @IBAction func fetchDevices(_ sender: Any) {
         // Fetch devices through Kontakt Cloud API client
-        kontaktCloud.getObjects(KTKDevice.self) {
-            response, error in
-            // Title and message for alert
-            var title = "", message = ""
-            
-            // Check response
-            if let ktkError = KTKCloudErrorFromError(error) {
-                title = "Error while fetching devices"
-                message = ktkError.debugDescription
-            } else if let devices = response?.objects as? [KTKDevice] {
-                title = "Devices fetched"
-                message = "Fetched \(devices.count) device(s) from API"
+        Task { [weak self] in
+            do {
+                let response = try await self?.kontaktCloud.getObjects(Device.self)
+                if let devices = response?.objects as? [Device] {
+                    self?.showAlert(
+                        title: "Devices fetched",
+                        message: "Fetched \(devices.count) device(s) from API"
+                    )
+                }
+
+            } catch {
+                self?.showAlert(
+                    title: "Error while fetching devices",
+                    message: KTKCloudErrorFromError(error as NSError)?.debugDescription ?? error.localizedDescription
+                )
             }
-            
-            // Show alert to inform user about request result
-            self.showAlert(title: title, message: message)
         }
     }
 
     @IBAction func fetchConfigs(_ sender: Any) {
         // Fetch configs through Kontakt Cloud API client
         let parameters = ["deviceType": "beacon"]
-        kontaktCloud.getObjects(KTKDeviceConfiguration.self, parameters: parameters) {
-            response, error in
-            // Title and message for alert
-            var title = "", message = ""
-            
-            // Check response
-            if let ktkError = KTKCloudErrorFromError(error) {
-                title = "Error while fetching configs"
-                message = ktkError.debugDescription
-            } else if let configs = response?.objects as? [KTKDeviceConfiguration] {
-                title = "Configs fetched"
-                message = "Fetched \(configs.count) config(s) from API"
+        Task { [weak self] in
+            do {
+                let response = try await self?.kontaktCloud.getObjects(DeviceConfiguration.self, parameters: parameters)
+                if let configs = response?.objects as? [DeviceConfiguration] {
+                    self?.showAlert(
+                        title: "Configs fetched",
+                        message: "Fetched \(configs.count) config(s) from API"
+                    )
+                }
+
+            } catch {
+                self?.showAlert(
+                    title: "Error while fetching configs",
+                    message: KTKCloudErrorFromError(error as NSError)?.debugDescription ?? error.localizedDescription
+                )
             }
-            
-            // Show alert to inform user about request result
-            self.showAlert(title: title, message: message)
         }
     }
  
     @IBAction func fetchManagers(_ sender: Any) {
         // Fetch managers through Kontakt Cloud API client
-        kontaktCloud.getObjects(KTKManager.self) {
-            response, error in
-            // Title and message for alert
-            var title = "", message = ""
-            
-            // Check response
-            if let ktkError = KTKCloudErrorFromError(error) {
-                title = "Error while fetching managers"
-                message = ktkError.debugDescription
-            } else if let managers = response?.objects as? [KTKManager] {
-                title = "Managers fetched"
-                message = "Fetched \(managers.count) manager(s) from API"
+        Task { [weak self] in
+            do {
+                let response = try await self?.kontaktCloud.getObjects(Manager.self)
+                if let managers = response?.objects as? [Manager] {
+                    self?.showAlert(
+                        title: "Managers fetched",
+                        message: "Fetched \(managers.count) manager(s) from API"
+                    )
+                }
+
+            } catch {
+                self?.showAlert(
+                    title: "Error while fetching managers",
+                    message: KTKCloudErrorFromError(error as NSError)?.debugDescription ?? error.localizedDescription
+                )
             }
-            
-            // Show alert to inform user about request result
-            self.showAlert(title: title, message: message)
         }
     }
     

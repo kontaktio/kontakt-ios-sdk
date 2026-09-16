@@ -36,7 +36,6 @@
 		A39B0CEC1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B0CEB1E3794E900E3D3AC /* ApplyDeviceConfigViewController.swift */; };
 		A3A4A35F1E07E9D6005E15A1 /* RangingBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A4A35E1E07E9D6005E15A1 /* RangingBeaconsViewController.swift */; };
 		A3A4A3621E07EEB8005E15A1 /* RangingBeacons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A4A3611E07EEB8005E15A1 /* RangingBeacons.storyboard */; };
-		E572F9BC2E327AD9005E7E4F /* CBORCoding in Frameworks */ = {isa = PBXBuildFile; productRef = E572F9BB2E327AD9005E7E4F /* CBORCoding */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E572F9BC2E327AD9005E7E4F /* CBORCoding in Frameworks */,
 				123D6AE02D389C6A00B41B11 /* KontaktSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,7 +247,6 @@
 			name = "Developer Samples";
 			packageProductDependencies = (
 				123D6ADF2D389C6A00B41B11 /* KontaktSDK */,
-				E572F9BB2E327AD9005E7E4F /* CBORCoding */,
 			);
 			productName = "Developer Samples";
 			productReference = A322BB941DFEA7C400C847AF /* Developer Samples.app */;
@@ -263,7 +260,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 2700;
 				ORGANIZATIONNAME = kontakt.io;
 				TargetAttributes = {
 					A322BB931DFEA7C400C847AF = {
@@ -290,7 +287,6 @@
 			mainGroup = A322BB8B1DFEA7C400C847AF;
 			packageReferences = (
 				12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../" */,
-				E572F9BA2E327AD9005E7E4F /* XCRemoteSwiftPackageReference "CBORCoding" */,
 			);
 			productRefGroup = A322BB951DFEA7C400C847AF /* Products */;
 			projectDirPath = "";
@@ -404,6 +400,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7DNS7SBDH9;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -425,6 +422,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +464,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7DNS7SBDH9;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -480,6 +479,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -491,9 +491,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7DNS7SBDH9;
 				INFOPLIST_FILE = "Developer Samples/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,9 +507,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7DNS7SBDH9;
 				INFOPLIST_FILE = "Developer Samples/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -551,27 +549,11 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		E572F9BA2E327AD9005E7E4F /* XCRemoteSwiftPackageReference "CBORCoding" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SomeRandomiOSDev/CBORCoding.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
 		123D6ADF2D389C6A00B41B11 /* KontaktSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 12658FFF2D384A2800895743 /* XCLocalSwiftPackageReference "../../" */;
 			productName = KontaktSDK;
-		};
-		E572F9BB2E327AD9005E7E4F /* CBORCoding */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E572F9BA2E327AD9005E7E4F /* XCRemoteSwiftPackageReference "CBORCoding" */;
-			productName = CBORCoding;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
