@@ -22,9 +22,9 @@ class ScanningEddystonesViewController: UIViewController {
     // =========================================================================
     // MARK: - Vars
     
-    var eddystoneManager: KTKEddystoneManager!
+    var eddystoneManager: EddystoneManager!
     
-    var region: KTKEddystoneRegion!
+    var region: EddystoneRegion!
     
     var backgroundMode: Bool!
     
@@ -45,10 +45,10 @@ class ScanningEddystonesViewController: UIViewController {
         observeOnAppWorkingModes()
         
         // Initialize Eddystone Manager
-        eddystoneManager = KTKEddystoneManager(delegate: self)
+        eddystoneManager = EddystoneManager(delegate: self)
         
         // Create Eddystone Region
-        region = KTKEddystoneRegion(namespaceID: KontaktEddystoneNamespaceID)
+        region = EddystoneRegion(namespaceID: KontaktEddystoneNamespaceID)
         
         // Set URL value - if any Eddystone beacon will broadcast URL with the same value, 
         // the notification will be shown (only in case when app is in background mode)
@@ -63,7 +63,7 @@ class ScanningEddystonesViewController: UIViewController {
         if self.navigationController?.viewControllers.firstIndex(of: self) == nil {
             // Back button pressed because self is no longer in the navigation stack.
             // Stop scanning if needed
-            eddystoneManager.stopEddystoneDiscovery(in: region)
+            eddystoneManager.stopEddystoneDiscovery(inRegion: region)
             notificationAlreadySent = false
             
         }
@@ -77,10 +77,10 @@ class ScanningEddystonesViewController: UIViewController {
         // Determine action based on button state
         switch (launchButton.currentState) {
         case .Start:
-            eddystoneManager.startEddystoneDiscovery(in: region)
+            eddystoneManager.startEddystoneDiscovery(inRegion: region)
             launchButton.currentState = .Stop
         case .Stop:
-            eddystoneManager.stopEddystoneDiscovery(in: region)
+            eddystoneManager.stopEddystoneDiscovery(inRegion: region)
             launchButton.currentState = .Start
             
             // Set flag to false to show notification again when app enters background mode
@@ -140,13 +140,13 @@ class ScanningEddystonesViewController: UIViewController {
 // =========================================================================
 // MARK: - KTKEddystoneManagerDelegate
 
-extension ScanningEddystonesViewController: KTKEddystoneManagerDelegate {
+extension ScanningEddystonesViewController: EddystoneManagerDelegate {
     
-    func eddystoneManagerDidFail(toStartDiscovery manager: KTKEddystoneManager, withError error: Error?) {
+    func eddystoneManagerDidFailToStartDiscovery(_ manager: EddystoneManager, withError error: Error?) {
         print("Did fail to start discovery: \(String(describing: error))")
     }
     
-    func eddystoneManager(_ manager: KTKEddystoneManager, didDiscover eddystones: Set<KTKEddystone>, in region: KTKEddystoneRegion?) {
+    func eddystoneManager(_ manager: EddystoneManager, didDiscoverEddystones eddystones: Set<Eddystone>, inRegion region: EddystoneRegion?) {
         print("Did discover \(eddystones.count) Eddystones")
         
         // Check Eddystone URLs
@@ -169,7 +169,7 @@ extension ScanningEddystonesViewController: KTKEddystoneManagerDelegate {
         }
     }
     
-    func eddystoneManager(_ manager: KTKEddystoneManager, didUpdate eddystone: KTKEddystone, with frameType: KTKEddystoneFrameType) {
+    func eddystoneManager(_ manager: EddystoneManager, didUpdate eddystone: Eddystone, with frameType: EddystoneFrameType) {
         // Uncomment this if you want to react on Eddystone updates
         // print("Did update Eddystone: \(eddystone)")
     }

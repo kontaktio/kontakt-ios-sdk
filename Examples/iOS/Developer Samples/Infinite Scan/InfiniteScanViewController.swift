@@ -21,7 +21,7 @@ class InfiniteScanViewController: UIViewController {
     // =========================================================================
     // MARK: - Vars
     
-    var region: KTKBeaconRegion!
+    var region: BeaconRegion!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class InfiniteScanViewController: UIViewController {
         
         // Create wake-up iBeacon Region
         // When this region will be entered, the scanning process will be started
-        region = KTKBeaconRegion(proximityUUID: UUID(uuidString: KontaktProximityUUID)!, identifier: "region-identifier")
+        region = BeaconRegion(proximityUUID: UUID(uuidString: KontaktProximityUUID)!, identifier: "region-identifier")
     }
 
     // =========================================================================

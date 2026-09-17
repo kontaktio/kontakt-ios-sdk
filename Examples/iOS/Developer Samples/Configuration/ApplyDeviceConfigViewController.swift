@@ -34,9 +34,9 @@ class ApplyDeviceConfigViewController: UITableViewController {
     // =========================================================================
     // MARK: - Vars
     
-    var devicesManager: KTKDevicesManager!
+    var devicesManager: DevicesManager!
     
-    var configuration: KTKDeviceConfiguration!
+    var configuration: DeviceConfiguration!
     
     var timer: Timer!
     
@@ -48,7 +48,7 @@ class ApplyDeviceConfigViewController: UITableViewController {
         setupView()
         
         // Initialize Devices Manager
-        devicesManager = KTKDevicesManager(delegate: self)
+        devicesManager = DevicesManager(delegate: self)
     }
     
     // =========================================================================
@@ -58,7 +58,7 @@ class ApplyDeviceConfigViewController: UITableViewController {
         if validInput() {
             // Start scanning for device
             showInfo(info: "Looking for device ...")
-            devicesManager.startDevicesDiscovery(withInterval: 2.0)
+            devicesManager.startDevicesDiscovery(interval: 2.0)
             
             // Schedule timer - perform actions when device not found
             timer = Timer.scheduledTimer(timeInterval: DEVICE_NOT_FOUND_TIMEOUT,
@@ -112,7 +112,7 @@ class ApplyDeviceConfigViewController: UITableViewController {
         // Validate unique ID length
         let uniqueID = uniqueIdField.text!
         if uniqueID.count >= 4 {
-            configuration = KTKDeviceConfiguration(uniqueID: uniqueID)
+            configuration = DeviceConfiguration(uniqueID: uniqueID)
         } else {
             showError(error: "Unique ID must be 4-char length")
             return false
@@ -162,41 +162,46 @@ class ApplyDeviceConfigViewController: UITableViewController {
 // =========================================================================
 // MARK: - KTKDevicesManagerDelegate
 
-extension ApplyDeviceConfigViewController: KTKDevicesManagerDelegate {
+extension ApplyDeviceConfigViewController: DevicesManagerDelegate {
     
-    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]) {
+    func devicesManager(_ manager: DevicesManager, didDiscoverDevices devices: [NearbyDevice]) {
         
         // Filter for desired device
-        if let device = devices.filter({$0.uniqueID == configuration.uniqueID}).first {
-            // Device found - stop discovery
-            devicesManager.stopDevicesDiscovery()
-            
-            // Invalidate timer
-            timer.invalidate()
-            
-            // Try to connect with device
-            let connection: KTKDeviceConnection? = KTKDeviceConnection(nearbyDevice: device)
-            
-            // Check if connected
-            if let connection = connection {
-                showInfo(info: "Applying configuration ...")
-                
-                // Write config if connected to device
-                connection.write(configuration) { synchronized, appliedConfiguration, isTimeSynced, error in
-                    // Check if config applied successfully
-                    if let _ = error {
-                        self.showError(error: "Error while applying configuration")
-                    } else {
-                        self.showSuccessInfo(info: "Configuration applied")
-                    }
+        guard let device = devices.filter({$0.uniqueID == configuration.uniqueID}).first else {
+            return
+        }
+        // Device found - stop discovery
+        devicesManager.stopDevicesDiscovery()
+
+        // Invalidate timer
+        timer.invalidate()
+
+        // Try to connect with device
+        let connection = DeviceConnection(nearbyDevice: device)
+
+        guard let configuration else {
+            return
+        }
+
+        showInfo(info: "Applying configuration ...")
+
+        // Write config if connected to device
+        Task { [weak self] in
+            do {
+                _ = try await connection.writeConfiguration(configuration)
+                await MainActor.run {
+                    self?.showSuccessInfo(info: "Configuration applied")
+                }
+            } catch {
+                await MainActor.run {
+                    self?.showError(error: "Error while applying configuration")
                 }
             }
         }
     }
     
-    func devicesManagerDidFail(toStartDiscovery manager: KTKDevicesManager, withError error: Error) {
+    func devicesManagerDidFailToStartDiscovery(_ manager: DevicesManager, withError error: Error) {
         print("Discovery did fail with error: \(String(describing: error))")
         self.showError(error: "Device discovery did fail")
     }
-    
 }

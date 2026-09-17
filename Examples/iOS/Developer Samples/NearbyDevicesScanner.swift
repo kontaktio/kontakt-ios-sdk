@@ -26,23 +26,23 @@ enum NearbyDevicesScannerError: LocalizedError {
 final class NearbyDevicesScanner {
 
     @Published var bluetoothOff = false
-    @Published var nearbyDevices: Set<KTKNearbyDevice> = []
-    var nearbyDevicesPublisher = CurrentValueSubject<Result<Set<KTKNearbyDevice>, NearbyDevicesScannerError>, Never>(.success([]))
+    @Published var nearbyDevices: Set<NearbyDevice> = []
+    var nearbyDevicesPublisher = CurrentValueSubject<Result<Set<NearbyDevice>, NearbyDevicesScannerError>, Never>(.success([]))
 
-    private var privateTelemetryPublisher: PassthroughSubject<KTKNearbyDeviceTelemetry, Never> = .init()
-    var telemetryPublisher: AnyPublisher<KTKNearbyDeviceTelemetry, Never> {
+    private var privateTelemetryPublisher: PassthroughSubject<NearbyDeviceTelemetry, Never> = .init()
+    var telemetryPublisher: AnyPublisher<NearbyDeviceTelemetry, Never> {
         privateTelemetryPublisher.eraseToAnyPublisher()
     }
 
     private(set) var isScanning = false
-    fileprivate let devicesManager: KTKDevicesManager
+    fileprivate let devicesManager: DevicesManager
     private let devicesManagerDelegateProxy: KTKDevicesManagerDelegateProxy
     private var disappearCandidatePool: Set<String> = Set()
     private var cancellables: Set<AnyCancellable> = []
 
     init() {
         devicesManagerDelegateProxy = .init()
-        devicesManager = KTKDevicesManager(delegate: devicesManagerDelegateProxy)
+        devicesManager = DevicesManager(delegate: devicesManagerDelegateProxy)
         devicesManagerDelegateProxy.delegate = self
         $nearbyDevices.sink { [weak self] value in
             self?.nearbyDevicesPublisher.send(.success(value))
@@ -60,7 +60,7 @@ final class NearbyDevicesScanner {
 
         devicesManager.invalidationAge = 15.0
         devicesManager.isDetectingLocks = true
-        devicesManager.startDevicesDiscovery(withInterval: interval)
+        devicesManager.startDevicesDiscovery(interval: interval)
 
         isScanning = true
     }
@@ -78,7 +78,7 @@ final class NearbyDevicesScanner {
         isScanning = false
     }
 
-    func nearbyDevice(uniqueId: String) -> KTKNearbyDevice? {
+    func nearbyDevice(uniqueId: String) -> NearbyDevice? {
         guard !uniqueId.isEmpty else {
             return nil
         }
@@ -87,7 +87,7 @@ final class NearbyDevicesScanner {
     }
 
     @ScanningResultsActor
-    fileprivate func processDiscoveredDevices(_ devices: [KTKNearbyDevice]) async {
+    fileprivate func processDiscoveredDevices(_ devices: [NearbyDevice]) async {
         var nearbyDevices = self.nearbyDevices
         let newDevices = devices.filter { $0.uniqueID != nil }
 
@@ -110,7 +110,7 @@ final class NearbyDevicesScanner {
     }
 
     @ScanningResultsActor
-    private func update(with devices: Set<KTKNearbyDevice>) {
+    private func update(with devices: Set<NearbyDevice>) {
         nearbyDevices = devices
         for device in devices where device.onTelemetryChange == nil {
             device.onTelemetryChange = { [weak self] in
@@ -121,10 +121,10 @@ final class NearbyDevicesScanner {
 }
 
 // MARK: - KTKDevicesManagerDelegate
-private final class KTKDevicesManagerDelegateProxy: NSObject, KTKDevicesManagerDelegate {
+private final class KTKDevicesManagerDelegateProxy: NSObject, DevicesManagerDelegate {
     weak var delegate: NearbyDevicesScanner?
 
-    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]) {
+    func devicesManager(_ manager: DevicesManager, didDiscoverDevices devices: [NearbyDevice]) {
         print("Delivered devices by KTKDevicesManager: \(String(describing: devices.count))")
 
         if delegate?.devicesManager.centralState == .poweredOn && delegate?.bluetoothOff == true {
@@ -135,7 +135,7 @@ private final class KTKDevicesManagerDelegateProxy: NSObject, KTKDevicesManagerD
         }
     }
 
-    func devicesManagerDidFail(toStartDiscovery manager: KTKDevicesManager, withError error: Error) {
+    func devicesManagerDidFail(toStartDiscovery manager: DevicesManager, withError error: Error) {
         print("[Nearby Devices Scanner] - Error: \(error.localizedDescription)")
 
         delegate?.nearbyDevicesPublisher.send(.failure(.scanningError(sdkError: error)))
