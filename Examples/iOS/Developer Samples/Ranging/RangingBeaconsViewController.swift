@@ -21,9 +21,9 @@ class RangingBeaconsViewController: UIViewController {
     // =========================================================================
     // MARK: - Vars
     
-    var beaconManager: KTKBeaconManager!
+    var beaconManager: BeaconManager!
     
-    var region: KTKBeaconRegion!
+    var region: BeaconRegion!
     
     // =========================================================================
     // MARK: - UIViewController
@@ -33,11 +33,11 @@ class RangingBeaconsViewController: UIViewController {
         setupView()
         
         // Initialize Beacon Manager
-        beaconManager = KTKBeaconManager(delegate: self)
+        beaconManager = BeaconManager(delegate: self)
         beaconManager.requestLocationAlwaysAuthorization()
         
         // Create Beacon Region
-        region = KTKBeaconRegion(proximityUUID: UUID(uuidString: KontaktProximityUUID)!, identifier: "region-identifier")
+        region = BeaconRegion(proximityUUID: UUID(uuidString: KontaktProximityUUID)!, identifier: "region-identifier")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -79,9 +79,9 @@ class RangingBeaconsViewController: UIViewController {
 // =========================================================================
 // MARK: - KTKBeaconManagerDelegate (Ranging)
 
-extension RangingBeaconsViewController: KTKBeaconManagerDelegate {
+extension RangingBeaconsViewController: BeaconManagerDelegate {
     
-    func beaconManager(_ manager: KTKBeaconManager, didRangeBeacons beacons: [CLBeacon], in region: KTKBeaconRegion) {
+    func beaconManager(_ manager: BeaconManager, didRangeBeacons beacons: [CLBeacon], in region: BeaconRegion) {
         print("Did ranged \"\(beacons.count)\" beacons")
     }
     

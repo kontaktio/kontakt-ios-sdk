@@ -20,11 +20,11 @@ class BeaconScanningManager: NSObject {
     // =========================================================================
     // MARK: - Vars
     
-    var eddystoneRegion: KTKEddystoneRegion?
+    var eddystoneRegion: EddystoneRegion?
+
+    var beaconManager: BeaconManager!
     
-    var beaconManager: KTKBeaconManager!
-    
-    var eddystoneManager: KTKEddystoneManager!
+    var eddystoneManager: EddystoneManager!
     
     // =========================================================================
     // MARK: - Initializer
@@ -32,8 +32,8 @@ class BeaconScanningManager: NSObject {
     private override init() {
         super.init()
         
-        self.beaconManager = KTKBeaconManager(delegate: self)
-        self.eddystoneManager = KTKEddystoneManager(delegate: self)
+        self.beaconManager = BeaconManager(delegate: self)
+        self.eddystoneManager = EddystoneManager(delegate: self)
     }
     
     // =========================================================================
@@ -46,7 +46,7 @@ class BeaconScanningManager: NSObject {
         }
     }
     
-    func startScanning(forWakeUpRegion region: KTKBeaconRegion?, inEddystoneRegion eddystoneRegion: KTKEddystoneRegion?) {
+    func startScanning(forWakeUpRegion region: BeaconRegion?, inEddystoneRegion eddystoneRegion: EddystoneRegion?) {
         defer { UserDefaults.standard.synchronize() }
         if let region = region {
             // Start monitoring for wakeup iBeacon region
@@ -79,7 +79,7 @@ class BeaconScanningManager: NSObject {
         UserDefaults.standard.set(false, forKey: WakeUpRegionMonitoredKey)
     }
     
-    func stopScanning(wakeUpRegion region: KTKBeaconRegion?) {
+    func stopScanning(wakeUpRegion region: BeaconRegion?) {
         if let region = region {
             beaconManager.stopMonitoring(for: region)
             eddystoneManager.stopEddystoneDiscoveryInAllRegions()
@@ -89,26 +89,26 @@ class BeaconScanningManager: NSObject {
     // =========================================================================
     // MARK: - Private
     
-    private func restoreWakeUpRegion() -> KTKBeaconRegion? {
+    private func restoreWakeUpRegion() -> BeaconRegion? {
         // Get UUID and identifier from defaults
         let uuidString = UserDefaults.standard.string(forKey: WakeUpRegionProximityUuidKey)
         let identifier = UserDefaults.standard.string(forKey: WakeUpRegionIdentifierKey)
         
         // If not nil then create and return region, otherwise return nil
         if let uuidString = uuidString, let identifier = identifier {
-            return KTKBeaconRegion(proximityUUID: UUID(uuidString: uuidString)!, identifier: identifier)
+            return BeaconRegion(proximityUUID: UUID(uuidString: uuidString)!, identifier: identifier)
         }
         return nil
     }
     
-    private func restoreEddystoneRegion() -> KTKEddystoneRegion? {
+    private func restoreEddystoneRegion() -> EddystoneRegion? {
         // Get namespace and instance ID from defaults
         let namespaceID = UserDefaults.standard.string(forKey: EddystoneRegionNamespaceIdKey)
         let instanceID = UserDefaults.standard.string(forKey: EddystoneRegionInstanceIdKey)
         
         // If not nil then create and return region, otherwise return nil
         if let namespaceID = namespaceID {
-            return KTKEddystoneRegion(namespaceID: namespaceID, instanceID: instanceID)
+            return EddystoneRegion(namespaceID: namespaceID, instanceID: instanceID)
         }
         return nil
     }
@@ -117,25 +117,25 @@ class BeaconScanningManager: NSObject {
 // =========================================================================
 // MARK: - KTKBeaconManagerDelegate
 
-extension BeaconScanningManager: KTKBeaconManagerDelegate {
+extension BeaconScanningManager: BeaconManagerDelegate {
     
-    func beaconManager(_ manager: KTKBeaconManager, monitoringDidFailFor region: KTKBeaconRegion?, withError error: Error?) {
+    func beaconManager(_ manager: BeaconManager, monitoringDidFailFor region: BeaconRegion?, withError error: Error?) {
         print("Monitoring did fail for region: \(String(describing: region))")
         print("Error: \(String(describing: error))")
     }
     
-    func beaconManager(_ manager: KTKBeaconManager, didStartMonitoringFor region: KTKBeaconRegion) {
+    func beaconManager(_ manager: BeaconManager, didStartMonitoringFor region: BeaconRegion) {
         print("Did start monitoring for region: \(region)")
     }
     
-    func beaconManager(_ manager: KTKBeaconManager, didEnter region: KTKBeaconRegion) {
+    func beaconManager(_ manager: BeaconManager, didEnter region: BeaconRegion) {
         print("Did enter region: \(region)")
         
         // Start eddystones scanning when wake-up region entered
-        eddystoneManager.startEddystoneDiscovery(in: eddystoneRegion)
+        eddystoneManager.startEddystoneDiscovery(inRegion: eddystoneRegion)
     }
     
-    func beaconManager(_ manager: KTKBeaconManager, didExitRegion region: KTKBeaconRegion) {
+    func beaconManager(_ manager: BeaconManager, didExitRegion region: BeaconRegion) {
         print("Did exit region \(region)")
     }
     
@@ -144,25 +144,25 @@ extension BeaconScanningManager: KTKBeaconManagerDelegate {
 // =========================================================================
 // MARK: - KTKEddystoneManagerDelegate
 
-extension BeaconScanningManager: KTKEddystoneManagerDelegate {
+extension BeaconScanningManager: EddystoneManagerDelegate {
     
-    func eddystoneManagerDidFail(toStartDiscovery manager: KTKEddystoneManager, withError error: Error?) {
+    func eddystoneManagerDidFailToStartDiscovery(_ manager: EddystoneManager, withError error: Error?) {
         print("Did fail to start discovery: \(String(describing: error))")
     }
     
-    func eddystoneManager(_ manager: KTKEddystoneManager, didDiscover eddystones: Set<KTKEddystone>, in region: KTKEddystoneRegion?) {
+    func eddystoneManager(_ manager: EddystoneManager, didDiscoverEddystones eddystones: Set<Eddystone>, inRegion region: EddystoneRegion?) {
         print("Did discover \(eddystones.count) Eddystones")
     }
     
-    func eddystoneManager(_ manager: KTKEddystoneManager, didUpdate eddystone: KTKEddystone, with frameType: KTKEddystoneFrameType) {
+    func eddystoneManager(_ manager: EddystoneManager, didUpdate eddystone: Eddystone, with frameType: EddystoneFrameType) {
         sendEddystoneUpdatedNotification(updatedEddystone: eddystone)
     }
     
-    private func sendEddystoneUpdatedNotification(updatedEddystone : KTKEddystone) {
+    private func sendEddystoneUpdatedNotification(updatedEddystone : Eddystone) {
         // Create notification
         let content = UNMutableNotificationContent()
         content.title = "Scan result"
-        content.body = "Eddystone \(updatedEddystone.identifier) updated"
+        content.body = "Eddystone \(updatedEddystone.identifier?.uuidString ?? "") updated"
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = KontaktLocalNotificationCategoryID
         

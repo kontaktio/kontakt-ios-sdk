@@ -21,7 +21,7 @@ class NearbyDevicesScanningViewController: UIViewController {
     // =========================================================================
     // MARK: - Vars
     
-    var devicesManager: KTKDevicesManager!
+    var devicesManager: DevicesManager!
     
     // =========================================================================
     // MARK: - UIViewController
@@ -31,7 +31,7 @@ class NearbyDevicesScanningViewController: UIViewController {
         setupView()
         
         // Initialize Devices Manager
-        devicesManager = KTKDevicesManager(delegate: self)
+        devicesManager = DevicesManager(delegate: self)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -50,7 +50,7 @@ class NearbyDevicesScanningViewController: UIViewController {
         // Determine action based on button state
         switch (launchButton.currentState) {
         case .Start:
-            devicesManager.startDevicesDiscovery(withInterval: 2.0)
+            devicesManager.startDevicesDiscovery(interval: 2.0)
             launchButton.currentState = .Stop
         case .Stop:
             devicesManager.stopDevicesDiscovery()
@@ -73,9 +73,9 @@ class NearbyDevicesScanningViewController: UIViewController {
 // =========================================================================
 // MARK: - KTKDevicesManagerDelegate
 
-extension NearbyDevicesScanningViewController: KTKDevicesManagerDelegate {
+extension NearbyDevicesScanningViewController: DevicesManagerDelegate {
     
-    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]) {
+    func devicesManager(_ manager: DevicesManager, didDiscoverDevices devices: [NearbyDevice]) {
 
         for device in devices {
             if let uniqueID = device.uniqueID {
@@ -86,7 +86,7 @@ extension NearbyDevicesScanningViewController: KTKDevicesManagerDelegate {
         }
     }
     
-    func devicesManagerDidFail(toStartDiscovery manager: KTKDevicesManager, withError error: Error) {
+    func devicesManagerDidFailToStartDiscovery(_ manager: DevicesManager, withError error: Error) {
         print("Discovery did fail with error: \(String(describing: error))")
     }
     
