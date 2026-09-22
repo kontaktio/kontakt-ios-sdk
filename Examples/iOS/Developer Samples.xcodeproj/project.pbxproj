@@ -19,6 +19,7 @@
 		A308138A1E0955EE00DA7841 /* InfiniteScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30813891E0955EE00DA7841 /* InfiniteScan.storyboard */; };
 		A31E99431E38BB56005E73E7 /* LaunchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31E99421E38BB56005E73E7 /* LaunchButton.swift */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
+		78E4D96E93E8A2DD029D9B4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB9890D08C559895E41A74 /* SceneDelegate.swift */; };
 		A322BB9D1DFEA7C400C847AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9B1DFEA7C400C847AF /* Main.storyboard */; };
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
 		A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */; };
@@ -64,6 +65,7 @@
 		A31E99421E38BB56005E73E7 /* LaunchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchButton.swift; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* Developer Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Developer Samples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A322BB971DFEA7C400C847AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2DB9890D08C559895E41A74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A322BB9C1DFEA7C400C847AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A322BB9E1DFEA7C400C847AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A322BBA11DFEA7C400C847AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				A384A26B1E0827AC00A92F6A /* Infinite Scan */,
 				A331F2EA1E0A874C000E443E /* Common */,
 				A322BB971DFEA7C400C847AF /* AppDelegate.swift */,
+				C2DB9890D08C559895E41A74 /* SceneDelegate.swift */,
 				12966E5F2E53C3BB00A5F5C9 /* NearbyDevicesScanner.swift */,
 				A322BB9B1DFEA7C400C847AF /* Main.storyboard */,
 				A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */,
@@ -326,6 +329,7 @@
 				A384A25D1E0818B100A92F6A /* KontaktCloudShowcaseViewController.swift in Sources */,
 				A331F2EC1E0A8767000E443E /* BorderedButton.swift in Sources */,
 				A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */,
+				78E4D96E93E8A2DD029D9B4E /* SceneDelegate.swift in Sources */,
 				A3A4A35F1E07E9D6005E15A1 /* RangingBeaconsViewController.swift in Sources */,
 				A30813881E0955BD00DA7841 /* InfiniteScanViewController.swift in Sources */,
 				A384A26F1E08288300A92F6A /* BeaconScanningManager.swift in Sources */,
