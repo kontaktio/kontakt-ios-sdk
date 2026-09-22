@@ -1,5 +1,9 @@
 ## Changelog
 
+### v7.1.2 - 22 Sep 2026
+- Release 7.1.2
+- [MB-902] Fix crash on stale CoreLocation callbacks after stopping beacon ranging/monitoring
+
 ### v7.0.0 - 25 Jul 2026
 - **Full rewrite of the SDK from Objective-C to Swift.** All public types dropped the `KTK` prefix (e.g. `KTKBeaconManager` → `BeaconManager`), and `DeviceConnection`/`DeviceGatewayConnection` completion-handler methods were converted to `async`/`await`. See the [Breaking changes notes](README.md#700--migration-guide-objective-c--swift-rewrite) in the README for a migration guide.
 - Objective-C support has been dropped for most of the SDK — see the migration guide for details.

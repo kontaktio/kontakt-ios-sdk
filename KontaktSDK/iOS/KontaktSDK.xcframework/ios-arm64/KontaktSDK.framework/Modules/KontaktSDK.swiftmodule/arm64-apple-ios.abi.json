@@ -85053,91 +85053,91 @@
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14652,
+      "offset": 14642,
       "length": 10,
       "value": "\"uniqueID\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14789,
+      "offset": 14779,
       "length": 45,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14826,
+      "offset": 14816,
       "length": 1,
       "value": "\"\/create\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14848,
+      "offset": 14838,
       "length": 46,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14885,
+      "offset": 14875,
       "length": 1,
       "value": "\"\/encrypt\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14908,
+      "offset": 14898,
       "length": 46,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14945,
+      "offset": 14935,
       "length": 1,
       "value": "\"\/readall\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14968,
+      "offset": 14958,
       "length": 15,
       "value": "\"device\/update\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14997,
+      "offset": 14987,
       "length": 57,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 15034,
+      "offset": 15024,
       "length": 1,
       "value": "\"\/([a-zA-Z0-9]{4,6})\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 18922,
+      "offset": 18912,
       "length": 10,
       "value": "\"uniqueId\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 18982,
+      "offset": 18972,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 27666,
+      "offset": 27656,
       "length": 4,
       "value": "true"
     },
@@ -94140,13 +94140,13 @@
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Proximity\/iBeacon\/BeaconManager.swift",
       "kind": "StringLiteral",
       "offset": 515,
-      "length": 45,
-      "value": "\"io.kontakt.KTKCentralManager.centralManager\""
+      "length": 37,
+      "value": "\"io.kontakt.KTKBeaconManager.manager\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Proximity\/iBeacon\/BeaconManager.swift",
       "kind": "StringLiteral",
-      "offset": 606,
+      "offset": 598,
       "length": 29,
       "value": "\"KTKBeaconManager.monitoring\""
     },
@@ -94771,7 +94771,7 @@
       "kind": "StringLiteral",
       "offset": 206,
       "length": 7,
-      "value": "\"7.0.0\""
+      "value": "\"7.1.2\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Version.swift",

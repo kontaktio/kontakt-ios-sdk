@@ -37,7 +37,7 @@
 "device_connection_firmware_update_in_progress"									= "Firmware upgrade in progress. Cannot queue another operation.";
 "device_connection_firmware_not_available"                                      = "Couldn't fetch firmware version";
 "device_connection_secure_read_configuration_missing_credentials_or_request"	= "";
-"device_connection_secure_read_configuration_missing_configuration"				= "";
+"device_connection_secure_read_configuration_missing_configuration"				= "Read configuration result is missing a decrypted configuration.";
 "device_connection_secure_write_configuration_offline_shuffle_on"				= "";
 "device_connection_secure_write_configuration_offline_missing_request"			= "";
 "device_connection_kontakt_image_invalid_authorization"                         = "Get Image authorization failed.";
