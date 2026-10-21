@@ -1679,6 +1679,7 @@ public class DevicesManager : @unchecked Swift.Sendable {
     get
   }
   public var isUploadingTelemetry: Swift.Bool
+  public var telemetrySourceId: Swift.String?
   public var invalidationAge: Foundation.TimeInterval
   public var discoveryMode: KontaktSDK.DevicesManagerDiscoveryMode
   public var discoveryInterval: Swift.Double {
@@ -1808,6 +1809,9 @@ public enum KontaktImageType : Swift.UInt16 {
     set
   }
   public var hasConfigurationProfile: Swift.Bool {
+    get
+  }
+  public var supportsFirmwareUpdate: Swift.Bool {
     get
   }
   public var hasKontaktRTC: Swift.Bool {
