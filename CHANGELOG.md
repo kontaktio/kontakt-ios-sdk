@@ -1,5 +1,11 @@
 ## Changelog
 
+### v7.4.0 - 21 Oct 2026
+- Release 7.4.0
+- [MB-940] Address review: lazy firmware streams, close session after factory reset
+- [MB-940] MokoGateway: firmware downloader and Nordic Legacy DFU updater
+- [MB-940] MokoGateway: read the firmware revision, authorize with credentials, factory reset
+
 ### v7.1.2 - 22 Sep 2026
 - Release 7.1.2
 - [MB-902] Fix crash on stale CoreLocation callbacks after stopping beacon ranging/monitoring

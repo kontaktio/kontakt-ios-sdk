@@ -44,6 +44,8 @@
 "device_connection_features_write_configuration_cancelled"                      = "Write features operation was cancelled.";
 "device_connection_secure_reboot_failed"                                        = "Device reboot oparation failed.";
 "device_connection_not_supported_model"                                         = "This operation is not allowed for current device model.";
+"device_connection_firmware_update_not_supported_model"                         = "Firmware update is not supported for this device model.";
+"device_connection_image_device_is_shuffled"                                    = "Get Image is disabled for shuffled devices.";
 "device_gateway_connection_read_networks_cancelled"                             = "Read WiFi networks operation was cancelled.";
 "device_gateway_connection_read_details_cancelled"                              = "Read WiFi network details operation was cancelled.";
 "device_gateway_connection_not_supported_model"                                 = "This operation is only allowed on Kontakt.io's Gateway device.";

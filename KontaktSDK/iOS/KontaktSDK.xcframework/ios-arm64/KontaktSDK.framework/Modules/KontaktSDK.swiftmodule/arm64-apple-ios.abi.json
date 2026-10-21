@@ -54642,7 +54642,8 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -54703,6 +54704,117 @@
                 "declKind": "Accessor",
                 "usr": "s:10KontaktSDK14DevicesManagerC20isUploadingTelemetrySbvM",
                 "mangledName": "$s10KontaktSDK14DevicesManagerC20isUploadingTelemetrySbvM",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "telemetrySourceId",
+            "printedName": "telemetrySourceId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10KontaktSDK14DevicesManagerC17telemetrySourceIdSSSgvp",
+            "mangledName": "$s10KontaktSDK14DevicesManagerC17telemetrySourceIdSSSgvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10KontaktSDK14DevicesManagerC17telemetrySourceIdSSSgvg",
+                "mangledName": "$s10KontaktSDK14DevicesManagerC17telemetrySourceIdSSSgvg",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10KontaktSDK14DevicesManagerC17telemetrySourceIdSSSgvs",
+                "mangledName": "$s10KontaktSDK14DevicesManagerC17telemetrySourceIdSSSgvs",
+                "moduleName": "KontaktSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10KontaktSDK14DevicesManagerC17telemetrySourceIdSSSgvM",
+                "mangledName": "$s10KontaktSDK14DevicesManagerC17telemetrySourceIdSSSgvM",
                 "moduleName": "KontaktSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -58687,6 +58799,47 @@
                 "declKind": "Accessor",
                 "usr": "s:10KontaktSDK12NearbyDeviceC23hasConfigurationProfileSbvg",
                 "mangledName": "$s10KontaktSDK12NearbyDeviceC23hasConfigurationProfileSbvg",
+                "moduleName": "KontaktSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "supportsFirmwareUpdate",
+            "printedName": "supportsFirmwareUpdate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10KontaktSDK12NearbyDeviceC22supportsFirmwareUpdateSbvp",
+            "mangledName": "$s10KontaktSDK12NearbyDeviceC22supportsFirmwareUpdateSbvp",
+            "moduleName": "KontaktSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10KontaktSDK12NearbyDeviceC22supportsFirmwareUpdateSbvg",
+                "mangledName": "$s10KontaktSDK12NearbyDeviceC22supportsFirmwareUpdateSbvg",
                 "moduleName": "KontaktSDK",
                 "accessorKind": "get"
               }
@@ -85053,91 +85206,91 @@
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14642,
+      "offset": 14795,
       "length": 10,
       "value": "\"uniqueID\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14779,
+      "offset": 14932,
       "length": 45,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14816,
+      "offset": 14969,
       "length": 1,
       "value": "\"\/create\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14838,
+      "offset": 14991,
       "length": 46,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14875,
+      "offset": 15028,
       "length": 1,
       "value": "\"\/encrypt\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14898,
+      "offset": 15051,
       "length": 46,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14935,
+      "offset": 15088,
       "length": 1,
       "value": "\"\/readall\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14958,
+      "offset": 15111,
       "length": 15,
       "value": "\"device\/update\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 14987,
+      "offset": 15140,
       "length": 57,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 15024,
+      "offset": 15177,
       "length": 1,
       "value": "\"\/([a-zA-Z0-9]{4,6})\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 18912,
+      "offset": 19065,
       "length": 10,
       "value": "\"uniqueId\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 18972,
+      "offset": 19125,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Cloud\/Model\/DeviceConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 27656,
+      "offset": 27809,
       "length": 4,
       "value": "true"
     },
@@ -91122,42 +91275,42 @@
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/DevicesManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2986,
+      "offset": 3178,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/DevicesManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4134,
+      "offset": 4578,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/DevicesManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4077,
+      "offset": 4521,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/DevicesManager.swift",
       "kind": "Dictionary",
-      "offset": 4267,
+      "offset": 4711,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/DevicesManager.swift",
       "kind": "Dictionary",
-      "offset": 4333,
+      "offset": 4777,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/DevicesManager.swift",
       "kind": "Array",
-      "offset": 4383,
+      "offset": 4827,
       "length": 2,
       "value": "[]"
     },
@@ -91500,63 +91653,63 @@
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/Nearby\/NearbyDevice.swift",
       "kind": "BooleanLiteral",
-      "offset": 5348,
+      "offset": 6095,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/Nearby\/NearbyDevice.swift",
       "kind": "IntegerLiteral",
-      "offset": 5719,
+      "offset": 6466,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/Nearby\/NearbyDevice.swift",
       "kind": "BooleanLiteral",
-      "offset": 5930,
+      "offset": 6677,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/Nearby\/NearbyDevice.swift",
       "kind": "IntegerLiteral",
-      "offset": 6006,
+      "offset": 6753,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/Nearby\/NearbyDevice.swift",
       "kind": "IntegerLiteral",
-      "offset": 9778,
+      "offset": 10525,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/Nearby\/NearbyDevice.swift",
       "kind": "StringLiteral",
-      "offset": 9841,
+      "offset": 10588,
       "length": 113,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/Nearby\/NearbyDevice.swift",
       "kind": "StringLiteral",
-      "offset": 9862,
+      "offset": 10609,
       "length": 1,
       "value": "\" (uniqueID: \""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/Nearby\/NearbyDevice.swift",
       "kind": "StringLiteral",
-      "offset": 9905,
+      "offset": 10652,
       "length": 1,
       "value": "\", peripheral: \""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Device\/Nearby\/NearbyDevice.swift",
       "kind": "StringLiteral",
-      "offset": 9952,
+      "offset": 10699,
       "length": 1,
       "value": "\")\""
     },
@@ -93069,125 +93222,153 @@
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
       "offset": 3988,
+      "length": 55,
+      "value": "\"device_connection_firmware_update_not_supported_model\""
+    },
+    {
+      "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
+      "kind": "StringLiteral",
+      "offset": 4123,
+      "length": 39,
+      "value": "\"device_connection_not_supported_model\""
+    },
+    {
+      "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
+      "kind": "StringLiteral",
+      "offset": 4242,
+      "length": 44,
+      "value": "\"device_connection_image_device_is_shuffled\""
+    },
+    {
+      "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
+      "kind": "StringLiteral",
+      "offset": 4366,
+      "length": 40,
+      "value": "\"device_connection_secure_reboot_failed\""
+    },
+    {
+      "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
+      "kind": "StringLiteral",
+      "offset": 4479,
       "length": 42,
       "value": "\"device_connection_firmware_not_available\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 4095,
+      "offset": 4586,
       "length": 46,
       "value": "\"device_connection_kontakt_dfu_response_error\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 4214,
+      "offset": 4705,
       "length": 76,
       "value": "\"device_connection_secure_read_configuration_missing_credentials_or_request\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 4362,
+      "offset": 4853,
       "length": 67,
       "value": "\"device_connection_secure_read_configuration_missing_configuration\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 4501,
+      "offset": 4992,
       "length": 65,
       "value": "\"device_connection_secure_write_configuration_offline_shuffle_on\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 4620,
+      "offset": 5111,
       "length": 70,
       "value": "\"device_connection_secure_write_configuration_offline_missing_request\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 4744,
+      "offset": 5235,
       "length": 55,
       "value": "\"device_connection_kontakt_image_invalid_authorization\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 4885,
+      "offset": 5376,
       "length": 58,
       "value": "\"device_connection_features_write_configuration_cancelled\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 5016,
+      "offset": 5507,
       "length": 51,
       "value": "\"device_gateway_connection_read_networks_cancelled\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 5140,
+      "offset": 5631,
       "length": 50,
       "value": "\"device_gateway_connection_read_details_cancelled\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 5263,
+      "offset": 5754,
       "length": 47,
       "value": "\"device_gateway_connection_not_supported_model\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 5390,
+      "offset": 5881,
       "length": 46,
       "value": "\"device_data_logger_connection_read_cancelled\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 5509,
+      "offset": 6000,
       "length": 53,
       "value": "\"device_data_logger_connection_read_sector_cancelled\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 5635,
+      "offset": 6126,
       "length": 58,
       "value": "\"device_data_logger_connection_read_sector_missing_header\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 5766,
+      "offset": 6257,
       "length": 47,
       "value": "\"device_data_logger_connection_clear_cancelled\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 5886,
+      "offset": 6377,
       "length": 46,
       "value": "\"device_connection_sensor_read_data_cancelled\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 6005,
+      "offset": 6496,
       "length": 48,
       "value": "\"device_connection_accident_read_data_cancelled\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Extension\/NSError+Kontakt.swift",
       "kind": "StringLiteral",
-      "offset": 6126,
+      "offset": 6617,
       "length": 35,
       "value": "\"device_connection_blink_cancelled\""
     },
@@ -94771,7 +94952,7 @@
       "kind": "StringLiteral",
       "offset": 206,
       "length": 7,
-      "value": "\"7.1.2\""
+      "value": "\"7.4.0\""
     },
     {
       "filePath": "\/Users\/mobile\/actions-runner\/_work\/ios-sdk\/ios-sdk\/Sources\/KontaktSDK\/Version.swift",
